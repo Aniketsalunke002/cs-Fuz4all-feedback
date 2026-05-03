@@ -1,0 +1,39 @@
+#include <iostream>
+int main (void) {
+	int a[] = {{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10},{1,2,3,4,5,6,7,8,9,10}};
+	int k = 10;
+	auto p = std::begin(a);
+	while (p!= std::end(a)) {
+		if (*p == k){
+			p = a[0];
+			for (auto k = 0; k < 10; ++k) {
+				(*p) -= 1;
+				std::cout << (*p) << std::endl;
+			}
+		}
+		p++;
+	}
+}
+ 
+#include <iostream>
+template <typename T>
+class A {
+	T t;
+	public:
+		A(const T& t) :t(t) {}
+		T get_t(void) {
+			return t;
+		}
+};
+template <typename T, typename B>
+A <B> foo(T input) {
+	A<T> t(input);
+	A<B> b=t;
+	return b;
+}
+int main (void) {
+	auto temp = foo<char,char>('z');
+	std::cout << temp.get_t() << std::endl;
+	return 0;
+}
+

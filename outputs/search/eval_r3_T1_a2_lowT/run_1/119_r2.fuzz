@@ -1,0 +1,57 @@
+#include <iostream>
+
+
+template<typename S>
+class MyStack
+{
+public:
+  void push(const S& aVal)
+  {
+    S* new_item = new S;
+    *new_item = aVal;
+    top_item->next = new_item;
+    top_item = new_item;
+  }
+  S& pop()
+  {
+    delete top_item;
+    top_item = top_item->next;
+    return *top_item;
+  }
+  bool empty() { return top_item==0; }
+  MyStack() { top_item = 0; }
+  ~MyStack() { while (!empty()) pop(); }
+private:
+  S* top_item;
+};
+
+class Data
+{
+public:
+  Data(char * c) { this->c = *c; std::cout << this->c << std::endl; }
+  char* getChar() { return &c; }
+private:
+  char c;
+};
+
+int main(int argc, char **argv)
+{
+  Data d("hola");
+  MyStack <Data> s;
+  s.push(d);
+  std::cout << *s.pop().getChar() << std::endl;
+}
+
+// 
+//  
+// #include <iostream>
+// 
+// template<typename S>
+// class MyStack
+// {
+// public:
+//   void push(const S& aVal)
+//   {
+//     S* new_item = new S;
+//     *new_item = aVal;
+//     top_item->next = new_

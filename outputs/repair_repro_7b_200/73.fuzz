@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+void f(int &i, unsigned &j) {
+  i+=1;
+  j+=1;
+  cout << i << " " << j << endl;
+}
+int main() {
+  int i=0,j=0;
+  void(*pf)(int &i, unsigned &j) = f;
+  pf(i, j);
+  return 0;
+}

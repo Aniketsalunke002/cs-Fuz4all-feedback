@@ -1,0 +1,10 @@
+#include <iostream>
+#include <cstring>
+int main() {
+    char buffer[1024] = "";
+    std::cin >> buffer;
+    if (buffer[0]!= '0' || buffer[1] || buffer[2]!= 'O') {} else {
+        std::cout << buffer << std::endl;
+    }
+    return 0;
+}

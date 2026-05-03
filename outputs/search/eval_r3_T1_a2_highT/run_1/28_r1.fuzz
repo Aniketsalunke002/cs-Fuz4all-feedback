@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include<cmath>
+#include<complex>
+using namespace std;
+
+int main(){
+	complex<double> a = 1.0/9.0+0I;
+  	int n = 12;
+    complex<double> z0 = pow(a,double(n));
+    complex<double> z1 = pow(a,complex(2.,2.));
+    cout<<z0<<endl;
+    return 0;
+}

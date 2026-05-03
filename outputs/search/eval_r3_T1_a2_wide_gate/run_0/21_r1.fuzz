@@ -1,0 +1,28 @@
+#include <iostream>
+
+#include <thread>
+using namespace std;
+int main() { 
+    int foo=1;
+     
+    std::thread th1(foo++, foo++);   
+    std::cout<<foo<<std::endl;
+    std::thread th2([](int foo1,int foo3,int& foo4)-> void{ 
+        foo4++;
+        foo1=0;
+        foo3=1;
+    });   
+    std::cout<<std::this_thread::get_id()<<std::endl;
+    std::thread th3(foo++, foo++);
+    std::cout<<foo++<<std::endl;
+}
+// Expected output:
+// 2
+// 0
+// 0
+// 2
+// Thread IDs:
+// 0x7fa52f232700
+// 0x7fa52f021700
+// 0x7fa52f232700
+// 0x7fa52f021700

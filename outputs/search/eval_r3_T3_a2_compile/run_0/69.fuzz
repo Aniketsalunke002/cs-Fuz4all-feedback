@@ -1,0 +1,30 @@
+#include <iostream>
+int main()
+{
+     int i = 0;
+     char *s = const_cast<char*>("hello, world\n");
+     while(s && s[i++]);
+     return 0;
+}
+ 
+#include <iostream>
+void modify1(const char *& p)
+{
+     static int i = 0;
+     int j = 10;  
+     p = nullptr;  
+     while(*p){
+          ++j;  
+          ++*p;  
+     }
+     i *= j;  
+     j = 7;  
+     p = new char[1000];
+}
+int main()
+{
+     modify1(const_cast<char*&>("Hello World!\n"));
+     return 0;
+}
+
+```

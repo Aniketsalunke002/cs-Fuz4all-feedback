@@ -1,0 +1,41 @@
+#include <iostream>
+int main ()
+{
+  int a(2);
+  int b(1);
+  ++a;
+  int c = a;
+  int d = b;
+  int e = c + d;
+  std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+  return 0;
+}
+ 
+
+#include <iostream>
+#include <math.h>
+class Circle {
+public:
+  Circle(float x,float y,float radius): cx(x), cy(y), cr(radius) {}
+  void getArea() {
+    std::cout << "Area = " << (float) M_PI*cr*cr << std::endl;
+  }
+  void getCircumference() {
+    std::cout << "Circumference = " << (float) 2*M_PI*cr << std::endl;
+  }
+  void getTouch(float y) {
+    std::cout << "Touch: (" << cx << ", " << y << ")" << std::endl;
+  }
+  float cx, cy, cr;  
+};
+
+int main() {
+const float x=5, y=6, r = 40;
+Circle c(x, y, r);
+c.getArea();
+c.getCircumference();
+c.getTouch(10);
+c.getTouch(-5);
+}
+
+

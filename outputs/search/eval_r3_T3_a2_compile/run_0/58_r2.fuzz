@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+template <typename T>
+void print(T num)
+{
+    cout << num << ";";
+}
+int main()
+{
+    print<int>(10);
+    print<int>(0);
+    print<int>(2);
+    print<int>(4);
+    print<int>(8);
+    return 0;
+}

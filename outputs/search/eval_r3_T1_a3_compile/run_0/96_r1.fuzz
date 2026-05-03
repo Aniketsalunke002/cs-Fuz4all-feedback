@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main(int argc, char *argv[]) {
+  int x = 1;
+  for (int i = 1; i < 4; i++) {
+    std::cout << x << " ";
+    x++;
+  }
+  return 0;
+}

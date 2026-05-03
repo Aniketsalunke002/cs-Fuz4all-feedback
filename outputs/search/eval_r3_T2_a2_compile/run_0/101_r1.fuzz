@@ -1,0 +1,61 @@
+#include <iostream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+namespace ns {
+class A {
+    int *x;
+    int n;
+    public:
+    A(int a = 1, int b = 0) {
+        x = new int[a];
+        n = a;
+        cout << "construct A" << endl;
+        for(int i=0; i < a; i++) {
+            x[i] = b;
+        }
+        cout << "A constructed" << endl;
+    }
+    ~A() {
+        cout << "destruct A" << endl;
+        delete[] x;
+        x = NULL; n = 0;
+    }
+    void print() {
+        for(int i=0; i < n; i++)
+            cout << x[i] <<'';
+        cout << endl;
+    }
+};
+void f(int *x) {
+    cout << "calling f(int *x): " << x << endl;
+}
+void f(int &x) {
+    cout << "calling f(int &x): " << x << endl;
+}
+void f(A *x) {
+    cout << "calling f(A *x): " << x << endl;
+}
+void f(A &x) {
+    cout << "calling f(A &x): " << &x << endl;
+}
+}
+int main(int argc, char** argv)
+{
+    ns::A a;
+    a.print();
+    a.x[1] = 2;
+    a.print();
+    ns::A b(4, 9);
+    b.print();
+    ns::f(a);
+    ns::f(b);
+}
+
+// #include <vector>
+// #include <algorithm>
+// using std::cin;
+// using std::cout;
+// using std::endl;
+// using std::vector

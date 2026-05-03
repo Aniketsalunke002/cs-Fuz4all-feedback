@@ -1,0 +1,37 @@
+#include <iostream>
+
+#include <numeric>
+
+#include <vector>
+
+using std::cout;
+using std::vector;
+using std::accumulate;
+
+int main() {
+
+  const vector<int> vec;
+  const vector<int> vec1{1, 2, 3};
+
+  const decltype(vec) x;
+  const decltype(vec1) y{1, 2, 3};
+
+  cout << "vector's elements  accumulate : " << accumulate(vec.begin(), vec.end(), 0) << "\n";
+  cout << "vector's elements  accumulate : " << accumulate(vec1.begin(), vec1.end(), 0) << "\n";
+
+  cout << "vector's elements  accumulate_no : " << accumulate(vec.cbegin(), vec.cend(), 0) << "\n";
+  cout << "vector's elements  accumulate_no: " << accumulate(vec1.cbegin(), vec1.cend(), 0) << "\n";
+
+  vector<double> vec3{5.0, -2.0, 3.0};
+  vector<double> vec4{-1.0, 4.0, 1.0};
+
+  cout << "vector's elements  accumulate_with_lambda: " <<
+       accumulate(vec3.begin(), vec3.end(), 100, [](const double &a, const double &b) {
+        return a-b;
+      }) << "\n";
+  cout << "vector's elements  accumulate_with_lambda2: " <<
+       accumulate(vec4.begin(), vec4.end(), 1, [](const double &a, const double &b) {
+        return a+b;
+      }) << "\n";
+  return 0;
+}

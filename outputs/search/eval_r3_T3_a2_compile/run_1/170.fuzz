@@ -1,0 +1,22 @@
+#include <iostream>
+void increase(int &i) {
+  i += 1;
+}
+template <typename T>
+void increase(T &i, int value) {
+  i += value;
+}
+int main(int argc, char * argv[]) {
+  int i = 1;
+  std::cout << i << '\n';
+  increase(i, 1);
+  std::cout << i << '\n';
+  float f = 1.0;
+  std::cout << f << '\n';
+  increase(f, 2.0);
+  std::cout << f << '\n';
+  std::string s = "test";
+  std::cout << s << '\n';
+  increase(s, 42);
+  std::cout << s << '\n';
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+class List{
+    int *data;
+    int size;
+public:
+    List(int size): size(size), data(new int[size+1]) {
+        cout << "\nData has been successfully allocated.";
+    }
+    void insert(int val){
+        data[size]=val;}
+    int head(){
+        return data[0]; }
+};
+
+int main()
+{
+    List myList(8);
+    myList.insert(3);
+    int result=myList.head() + myList.size;
+    cout << "\nSize of container " << myList.size;
+    cout << "\nInitial value of List: " << 3 + myList.size << "\n";
+
+    myList.insert(27);
+    result = result + 27;
+    cout << "\nFinal result of List: " << result << "\n";
+
+    return 0;
+}

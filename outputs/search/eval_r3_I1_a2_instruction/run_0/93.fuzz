@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int arr [20] = {0};
+    int *index = arr;
+    int n = 10;
+    index = &( arr[(n - 1)  << 1]);
+    for (int i = 1; i < n; i *= 2 ) {
+        for (int j = i; j < n; j += i) {
+            index = &(arr[(j - 1)  << 1]);
+            index = arr + (i - 1);
+            index = arr + (i - 2);
+            cout << arr[j<<1] << '\n';
+        }
+    }
+    return 0;
+}

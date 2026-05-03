@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int num;
+    int i=0;
+    while (true) {
+         
+        cin >> num;
+        if (num==0) {
+            break;
+        }
+        cout << "Number : " << num << " times " << ++i << " : " << num * i <<  endl;
+    }
+}
+ 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int length;
+    string s;
+    cin >> length >> s;
+    int i=0, len=s.size();
+    int count=0;
+    char start = 'A';
+    string pattern = "A-B";
+    while (len>0 && i<len-length) {
+         
+        if ((s[i++]==pattern[1]) && (s[i++]==pattern[0]) && (s[i+length-1]==pattern[1]) && (s[i+length-2]==pattern[0]))
+        {
+            count++;
+        }
+        i++;
+    }
+     
+    cout << i << endl;
+
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+int main()
+{
+	   int r=-5;
+	   if(r<0)
+	   {
+	        return abs(r);
+		   }
+		   return 0; 
+}

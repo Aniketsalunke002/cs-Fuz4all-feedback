@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int n = 25;
+  volatile int t = n;
+  int a = (n == 20);
+  int b =(n == 20);
+  int c = (t == 20);
+  n = 30;
+  cout << a << endl << b << endl << c << endl;
+  return 0;
+}

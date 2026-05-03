@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+void func(char *&foo) {
+  func(foo);
+  foo += std::string(" bar"); // add one to avoid unused variable error from compiler
+}
+int main() {
+  char *s;
+  func(s);
+  std::cout << s << std::endl;
+  return 0;
+}

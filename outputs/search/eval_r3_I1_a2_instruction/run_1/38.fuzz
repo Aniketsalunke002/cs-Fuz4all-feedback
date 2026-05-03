@@ -1,0 +1,8 @@
+#include <iostream>
+int foo (int c){
+	int a{5};
+	int b[10];
+	b[9] = 10;
+	std::cin >>a;
+	return 0;
+}

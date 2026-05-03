@@ -1,0 +1,65 @@
+# This file includes the configuration parameters for the fuzzing approach
+# Same as cpp_demo.yaml but with error-guided repair enabled.
+
+# --------------------------------------------------------------------------- #
+# Configuration of the overall fuzzing setup
+fuzzing:
+  output_folder: ../fastd/fuzzall/FuzzAll/experiment/full_run/cpp/run
+  num: 200
+  max_llm_calls: 500
+  total_time: 1
+  log_level: 3
+  otf: true
+  resume: true
+  evaluate: false
+  use_hand_written_prompt: false
+  no_input_prompt: true
+  prompt_strategy: 2
+
+
+# --------------------------------------------------------------------------- #
+# Configuration of the target system
+target:
+  language: cpp
+  path_documentation: config/documentation/cpp/cpp_23.md
+  path_example_code:
+  trigger_to_generate_input: "/* Please create a very short program which uses new C++ features in a complex way */"
+  input_hint: "#include <iostream>"
+  path_hand_written_prompt:
+  target_string: ""
+
+
+# --------------------------------------------------------------------------- #
+# Configuration of the Large Language Model (LLM) setup
+llm:
+  temperature: 1
+  batch_size: 30
+  device: cuda
+  model_name: bigcode/starcoderbase-7b
+  max_length: 1024
+
+# --------------------------------------------------------------------------- #
+# Configuration for Ollama models
+ollama:
+  model_name: ollama/starcoder
+  temperature: 0.7
+  batch_size: 20
+  max_length: 512
+  device: gpu
+  additional_params:
+    top_k: 50
+    top_p: 0.95
+    repetition_penalty: 1.2
+
+# --------------------------------------------------------------------------- #
+# Error-guided repair (course project extension)
+repair:
+  enabled: true
+  max_attempts: 2
+  template_id: T1
+  include_stderr: true
+  error_gate: "compile_error"
+  cache: true
+  timeout_sec: 3
+  max_tokens: 512
+  temperature: 0.7

@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char** argv)
+{
+    int num;
+    int i=0;
+    while (true) {
+                
+        cin >> num;
+        if (num==0) {
+            break;
+        }
+        cout << "Number : " << num << " times " << ++i << " : " << num * i <<  endl;
+    }
+}

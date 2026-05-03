@@ -1,0 +1,7 @@
+#include <iostream>
+int main() {
+	int x;
+	x=2;
+	int y = x++ + 5;
+	std::cout << y << std::endl;
+}

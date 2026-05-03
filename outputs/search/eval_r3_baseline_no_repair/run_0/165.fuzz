@@ -1,0 +1,38 @@
+#include <iostream>
+
+double& mod(double& n, int m)
+{
+    static __thread int pos=0;
+    if (0L>n%=m)
+        for(;;)
+        {
+            if(0>pos%=m)
+                pos=1;
+            else if (pos==1)
+                n-=m;
+            else if (pos==2)
+                pos=2;
+            else
+                n+=m;
+            if(n>std::numeric_limits<double>::max())
+                n=std::numeric_limits<double>::lowest();
+            if(n<std::numeric_limits<double>::lowest())
+                n=std::numeric_limits<double>::max();
+            if(0<n%=m)
+                return n;
+        }
+    return n;
+}
+
+int main(int argc, char **argv) {
+  std::cout << typeid(mod(10.6148,11.9017)).name() << "\n";
+  for(int i = -10; i < 10; i++)
+  {
+    std::cout << i << ";" << mod(i+0.2,2) << ";" <<  (2*i+0.2) % 2 << "\n";
+    std::cout << i << ";" << mod(i,2.) << ";" <<  (2*i+0.0) % 2.0 << "\n";
+    std::cout << i << ";" << mod(i+0.4,3) << ";" <<  (2*i+0.4) % 3 << "\n";
+    std::cout << i << ";" << mod(i+0.6148,11.9017) << ";" <<  (2*i+0.6148) % 11.9017 << "\n";
+    std::cout << i << ";" << mod(i+0.6148,1.) << ";" <<  (2*i+0.6148) % 1.0 << "\n";
+  }
+  return 0;
+}

@@ -1,0 +1,63 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    float x{5}, y{9};
+    cout<<x+y<<endl; 
+    return 0;
+}
+ 
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+	vector<int> A, B;
+	A.push_back(2);
+	A.push_back(3);
+	A.push_back(4);
+	B.push_back(17);
+	B.push_back(6);
+	B.push_back(4);
+	cout<<A[3]<<endl;
+	cout<<B[2]<<endl;
+}
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+    vector<int> num;
+    vector<char> charVar{'z','y','x'};
+    for (int i{0};i<10;i++)
+    {
+        num.push_back(0);
+    }
+    for (auto c:num)
+        cout<<c<<endl;
+    for (auto c:charVar)
+        cout<<c<<endl;
+}
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
+int main()
+{
+	vector<int> row(2);
+	vector<vector<int>> coordinates(2);
+	row.push_back(1);
+	row.push_back(2);
+	coordinates.at(0).push_back(1);
+	coordinates.at(0).push_back(4);
+	
+	coordinates.at(1).push_back(3);
+	coordinates.at(1).push_back(5);
+	
+	for (int i{0}; i<coordinates.size();i++){
+	    for(auto c:coordinates.at(i))
+	        cout<<c<<endl;
+	}
+}

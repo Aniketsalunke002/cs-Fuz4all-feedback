@@ -1,0 +1,28 @@
+#include <iostream>
+int main()
+{
+    short x;
+    short y;
+    short z;
+    x = 4098;
+    y = 240;
+    z = x - y;
+    std::cout << "Done" << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+    short n_chars, n_bytes, n_remainder;
+    int n_iterations;
+    int i = 0;
+    n_chars = 240;
+    n_bytes = n_chars * 2;
+    while (i < 5) {  
+        n_iterations = 240;
+        i++;
+    }
+    std::cout << "Done" << std::endl;
+    return 0;
+}

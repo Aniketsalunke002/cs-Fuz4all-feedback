@@ -1,0 +1,16 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char**argv) {
+    int ** array;
+    int i=1, j;
+    while(i<=10) {array = new int [10];
+          if(array!=NULL) {
+            cout << "Allocation successful\n";
+          }
+          else cout <<"Allocation failed\n";
+          for(j=1; j <= 10;j++) array[j]=j;
+          delete[] array;
+        i++;
+     }
+   return 0;  }
+ 

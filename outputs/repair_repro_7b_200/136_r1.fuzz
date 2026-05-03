@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+    std::cout << 20 * get_value() << '\n';
+    return 0;
+}
+float get_value() {
+    return 10;
+}
+// Compiler compiles and runs successfully!

@@ -1,0 +1,15 @@
+#include <iostream>
+		int main () {
+		   int i=7;
+		   std::cout << i << std::endl;
+		   i++; std::cout << i << std::endl;
+		   return 0;
+		}
+ 
+#include <iostream>
+
+int main(){
+	 
+	std::cout << "Hello World!" << std::endl;
+}
+ 

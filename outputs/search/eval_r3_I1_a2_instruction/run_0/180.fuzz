@@ -1,0 +1,8 @@
+#include <iostream>
+  int main() {
+    std::ostringstream oss;
+    oss << "b ";
+    oss << "b ";
+    std::cout << oss.str();
+    return 0;
+  }

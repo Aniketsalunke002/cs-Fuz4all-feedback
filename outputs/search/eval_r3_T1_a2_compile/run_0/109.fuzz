@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int n;
+  cout << (n == 20) << endl;
+
+  enum Directions {
+    North = 0,
+    South = 1,
+    East = 0,
+    West = 1
+  };
+  n = North + East;
+  return 0;
+}

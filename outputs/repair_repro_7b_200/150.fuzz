@@ -1,0 +1,7 @@
+#include <iostream>
+int main() {
+    int x;
+    std::cin >> x;
+    std::cout << x ^ (32 / 10) << '\n';
+    return 0;
+}

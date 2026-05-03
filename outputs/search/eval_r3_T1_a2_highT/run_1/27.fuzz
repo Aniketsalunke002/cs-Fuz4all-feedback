@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cmath>
+#include <complex>
+
+int main() {
+	double a = 0.5;
+	double b = sqrt(5);
+	int n = 20;
+	std::complex<double> z = a+std::complex<double>(0, 1);
+	std::complex<double> z0 = std::pow(z , double(n));
+	std::complex<double> z1 = std::pow(z , std::pow(2.0,b));
+	std::cout << z0 << std::endl;
+	return 0;
+}

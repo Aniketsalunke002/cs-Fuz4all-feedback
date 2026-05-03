@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int n1 = 0;
+  int n2 = 0;
+  int n3 = 0;
+  while(n3 < 999999) {
+    n3 = n2 + n1;
+    n2 = n1;
+    n1 = n3;
+  }
+  return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+  int n1 = 0;
+  int n2 = 0;
+  int n3 = 0;
+  while(n3 < 999999) {
+    n3 = n1 + n2 + n3;
+    n2 = n1;
+    n1 = n3;
+  }
+  return 0;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+bool mutated[10];
+int main(){
+   int o = 3;
+   int o2 = o;
+   o += 10;
+   mutated[o] = true;
+   return mutated[o2];
+}

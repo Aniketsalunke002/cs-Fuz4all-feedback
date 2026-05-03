@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 3, b = -1;
+	int test = a + b;
+	cout << "Test: " << test << endl;
+	int* ip = &a;
+	int test1 = *ip + *ip;
+	ip = nullptr;
+	*ip = *ip + *ip;
+	ip = nullptr;
+	cout << "Test: " << test << endl;
+	return 0;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int value, number;
+    cout << "Value of a: "; cin >> value;
+    if (value < 0)
+        number = -1 * value;
+    else
+        number = value;
+    cout << "Number is: " << number;
+}

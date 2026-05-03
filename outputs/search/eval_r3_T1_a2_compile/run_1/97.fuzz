@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int plusOne(int a) {
+  int b;
+  b = a + 1;
+  return b;
+}
+int main() {
+  int a=3;
+  cout<<"Before: "<<a<<"   After: "<<plusOne(a)<<endl;
+}

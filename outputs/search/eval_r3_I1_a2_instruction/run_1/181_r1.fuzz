@@ -1,0 +1,7 @@
+#include <iostream>
+int main()
+{
+    int p = foo();
+    std::cout << p << std::endl;
+    return 0;
+}

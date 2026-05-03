@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int i, m = 1;
+  for (i = m; i <= m + 5; i++) {
+    if (i > 10 * m) {
+      m++;
+    }
+  }
+  return 0;
+}

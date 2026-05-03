@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int test_mutate(int *int1, int int2){
+    int1=new int[100];
+    return int2;
+}
+int main()
+{
+    auto myArray1=test_mutate(listNum1, 7);
+    auto myArray2=test_mutate(listNum2, 11);
+    auto result1=myfunc(listNum1, 7);
+    auto result2=myfunc(listNum2, 11);
+    cout << "Test myfunc: " << result1 << "\n";
+    cout << "Test myfunc: " << result2 << "\n";
+}
+ 
+#include <iostream>
+using namespace std;
+class Shape
+{
+protected:
+    int base;
+    int length;
+public:
+    int area();
+    Shape(int newbase, int newlength);
+};
+Shape::Shape(int newbase, int newlength):
+    base(newbase), length(newlength){}
+int Shape::area(){
+    if(base>0 && length>0){
+        return base*base;
+    }
+    else{
+        return 0;
+    }
+}
+main()
+{
+    shape1.area();
+    return 0;
+}

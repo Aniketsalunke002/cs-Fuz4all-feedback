@@ -1,0 +1,11 @@
+#include <iostream>
+int main()
+{
+    int i = 3;
+    void* i_pointer = &i;
+    std::cout << "Address of int: " << &i << "\nAddress of pointer: " << i_pointer << "\n";
+    std::cout << "Contents of int: " << i << "\nContents of pointer: " << *i_pointer << "\n";
+    delete void_pointer;
+    void_pointer = nullptr;
+    return 0;
+}

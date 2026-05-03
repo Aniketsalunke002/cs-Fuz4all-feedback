@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+char a[];
+main() {
+	char c[sizeof(a)];
+	cin >> c;
+	for (int i = 0; i < sizeof(a); i++) {
+		printf("%d: %#x\n", c[i], c[i]);
+	}
+	return 0;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+  char* mycar = "Volvo M300";
+  ((char*) &mycar)[6] = 'I';
+  cout<<mycar<<endl;
+}
+ 
+
+ 

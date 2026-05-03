@@ -1,0 +1,39 @@
+#include <iostream>
+class MyClass2
+{
+    private:
+        int data[10]{};
+    public:
+    void get_data()
+    {
+        for(int i{0}; i<10; i++)
+        {
+            data[i]=-1;
+        }
+    }
+    void print()
+    {
+        for(int i{0}; i<10; i++)
+        {
+            std::cout<<data[i]<<std::endl;
+        }
+    }
+    void say()
+    {
+        std::cout<<"Hi!\n";
+    }
+    ~MyClass2()
+    {
+        get_data();
+    }
+};
+int main()
+{
+    MyClass2* m2 = new MyClass2[10];
+    for(int i{0}; i<10; i++)
+    {
+        m2[i].say();
+        m2[i].print();
+    }
+    return 0;
+}

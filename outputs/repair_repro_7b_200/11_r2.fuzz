@@ -1,0 +1,26 @@
+#include <iostream>
+
+#include <vector>
+#include <cmath>
+#include <algorithm>
+#include <tuple>
+#include <utility> 
+using namespace std;
+bool bigger(const pair<int, int> &p1,const pair<int, int> &p2) {
+  return p1.first > p2.first;
+}
+int main() {
+  cout << "Fixed version of the code above." << endl;
+  for (auto x : readNumberVector<int>()) {
+    vector<pair<int, int> > v;
+    for (auto i : readNumberVector<int>()) {
+      v.push_back(make_pair(x, i));
+    }
+    sort(v.begin(),v.end(),bigger);
+    for (auto it : v) {
+      cout << it.second << " ";
+    }
+    cout << endl;
+  }
+  return 1;
+}

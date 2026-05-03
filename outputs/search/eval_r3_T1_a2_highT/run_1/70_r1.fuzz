@@ -1,0 +1,10 @@
+#include <iostream>
+
+ 
+int main() {
+	int t; 
+	while (cin >> t) {
+		cout << t << "\n";
+	}
+	return 0;
+}

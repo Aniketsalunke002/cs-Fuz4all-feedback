@@ -1,0 +1,29 @@
+#include <iostream>
+#include <list>
+int main() {
+	std::clog << 1;
+	std::list<int> numbers{ 1, 3, 5, 7 };
+	for( auto iter = numbers.begin(); iter!= numbers.end(); ++iter )  
+		for( int i = *iter; i> 0; --i )
+			std::clog<< *iter;
+	std::clog << std::endl;
+}
+ 
+#include <iostream>
+#include<cstdlib>
+#include<ctime>
+int main() {
+	std::clog << 1;
+  	srand(time(NULL));
+	for(int i = 0; i < 5; i++) {
+		int number;	
+  		std::clog << "Enter a number: ";
+		std::cin >> number;
+		std::cout << number<<" raised to the power of 2 is: "<< number * number <<std::endl;
+	}
+  	return 0;
+}
+
+ 
+
+

@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(bool argc, char const *argv[])
+{
+  int *ptr;
+  int y = 1;
+  ptr = new int[y];
+  if (*ptr == 1) {
+    cout << *ptr;
+  } else {
+    cout << *ptr << endl;
+  }
+  delete[] ptr;
+  return 0;
+}

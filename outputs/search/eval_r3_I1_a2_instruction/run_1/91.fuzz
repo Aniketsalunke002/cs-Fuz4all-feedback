@@ -1,0 +1,131 @@
+#include <iostream>
+class MyClass1
+{
+    public:
+    virtual void say() {}
+    virtual ~MyClass1() {}
+};
+class MyClass2 : public MyClass1
+{
+    public:
+    void say()
+    {
+        std::cout<<"Hi!\n";
+    }
+};
+int main()
+{
+    MyClass1* m1 = new MyClass2;
+    MyClass1* m2 = new MyClass2;
+    m1->say();
+    m2->say();
+    return 0;
+}
+ 
+#include <iostream>
+template <typename T>
+class MyClass
+{
+  public: T * array;
+  int size;
+  T *array1;
+  int & size1;
+  int & size2;
+  MyClass(int s):array(NULL),size(s),array1(NULL),size1(this->size),size2(this->size){}
+  ~MyClass()
+  {
+    if(array)delete [] array;
+    if(array1)delete [] array1;
+  }
+};
+MyClass<int> mc(10,10);
+int main()
+{
+}
+#include <iostream>
+class MyClass
+{
+  public:
+  ~MyClass()
+  {
+    std::cout<<"Destructor in parent class\n";
+  }
+};
+MyClass::~MyClass(){}
+class MyOtherClass : public MyClass
+{
+  public:
+  ~MyOtherClass()
+  {
+    std::cout<<"Destructor in child class\n";
+  }
+};
+int main()
+{
+}
+ 
+#include <iostream>
+class MyClass
+{
+    public:
+    int x;
+    MyClass(int _x = 0):x(_x)
+    {
+        std::cout<<"Constructor called\n";
+    }
+    ~MyClass()
+    {
+        std::cout<<"Destructor in the " << x << " object\n";
+    }
+};
+int main()
+{
+    MyClass m1,m2(1),m3(2);
+    return 0;
+}
+ 
+#include <iostream>
+class A
+{
+    private:
+    int m;
+    public:
+    A(int m)
+    {
+        std::cout<<"constructor called for A\n";
+    }
+    A(A& a)
+    {
+        std::cout<<"copy constructor called for A\n";
+        this->m = a.m;
+    }
+    void f(int m)
+    {
+        this->m = m;
+        if(m == 9)std::cout<<"m = 9\n";
+    }
+    A& m(A& a)
+    {
+        std::cout<<"getter setter for m called in the in class A\n";
+        m = a.m;
+    }
+};
+A getA()
+{
+    A a(40);
+    return a;
+}
+A& getA()
+{
+     A a(40);
+     return a;
+}
+int main()
+{
+    A a1(50);
+    A a2;
+    a2 = a1;
+    a1 = a2;
+    a1.m(a2);
+    return 0;
+}

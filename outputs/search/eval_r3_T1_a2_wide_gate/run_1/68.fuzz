@@ -1,0 +1,11 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+int main ()
+{
+  std::clog << 1;
+  std::vector<int> numbers { 1, 3, 5, 7 };
+  std::for_each(numbers.begin(), numbers.end(), [](int &nr){nr+=2;});
+  std::for_each(numbers.begin(), numbers.end(), [](const int nr){std::clog <<  nr;});
+  std::clog << std::endl;
+}

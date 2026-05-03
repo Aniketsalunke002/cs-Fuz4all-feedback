@@ -1,0 +1,31 @@
+#include <iostream>
+
+namespace foo
+{
+
+    class bar
+    {
+    public:
+        bar() {};
+        bar(int x) : m_x(x) {}
+        int m_x;
+
+    };
+
+
+}
+
+
+
+int main(void) {
+
+    foo::bar a(12);
+    cout << a.m_x << endl;
+    foo::bar b(5);
+    cout << b.m_x << endl;
+
+    foo::bar a1;
+    cout << a1.m_x << endl;
+
+    return 0;
+}

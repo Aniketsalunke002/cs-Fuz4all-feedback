@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+class int : public short {}
+int main() {
+	if (int) {
+		cout << "if";
+	}
+	return 0;
+}

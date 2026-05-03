@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int check_pass(const string& pa)
+{
+	cout<<"Please enter password\n";
+	string p;
+	cin>>p;
+	return (p==pa)&&1;
+}
+int main()
+{
+	const string pa("password");
+	check_pass(pa);
+}
+/*
+Please look in detail for all kinds of string literals, char literals, and wstring literals. Understanding C++’s string-literal types will enable you to avoid many of the subtle subtleties of string types. You will learn this from practical examples.

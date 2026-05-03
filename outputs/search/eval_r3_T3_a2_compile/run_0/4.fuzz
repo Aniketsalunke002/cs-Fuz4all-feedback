@@ -1,0 +1,35 @@
+#include <iostream>
+
+#include <random>
+#include <fstream>
+using namespace std;
+
+int main() {
+	float var0; 
+	ifstream a;
+	ifstream b;
+	ofstream c;
+	c.open("mutated.txt" );
+	a.open("test");
+	b.open("test.txt");
+	int num;
+	a >> var0;
+	int sum = var0 * 19;
+	c << sum;
+
+	a >> var0;
+	var0 += 15;
+	c << endl << var0;
+
+	a >> var0;
+	b >> var0;
+
+	for (int i = 0; i < num; i++) {
+		b >> var0;
+		var0 += 3;
+		c << endl << var0;
+	}
+	cout << "this is the value after the test" << endl << var0;
+	
+
+}

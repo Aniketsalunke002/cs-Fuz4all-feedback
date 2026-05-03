@@ -1,0 +1,13 @@
+#include <iostream>
+void printArray(int x[]) {
+    for (auto i = 0; i<sizeof(x)/sizeof(x[0]); i++){
+        std::cout << x[i] << " ";
+    }   
+    std::cout << '\n';
+}
+ 
+int main() {
+    int a[] = { 3, 4, 5 };
+    printArray(a);
+    return 0;
+}

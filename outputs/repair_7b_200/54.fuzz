@@ -1,0 +1,15 @@
+#include <iostream>
+template <typename T> struct A{
+    int value;
+    A(){}
+    A(T t){
+        value = t.value;
+    }
+};
+int main() {
+    A<int> a = {8};
+    std::cout << a;
+    std::cout << &(a);
+    std::cout << a.value;
+    return 0;
+}

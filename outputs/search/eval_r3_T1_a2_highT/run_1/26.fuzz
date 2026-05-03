@@ -1,0 +1,12 @@
+#include <iostream>
+#include <math.h>
+double a = 5;
+bool c = true;
+int main() {
+	double b = sqrt(2);
+	double d = 1.0L;
+	double e = 1.0f;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	std::cout << -1.0 - (-0.0) << std::endl;
+}

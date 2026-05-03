@@ -1,0 +1,12 @@
+#include <iostream>
+ #include <string>
+using namespace std;
+ int main()
+ {
+ std::string s = "Some text";
+ std::string::iterator it;
+ for (it = s.begin(); it!= s.end(); it++) { *it = toupper(*it); }
+ 
+ std::cout << s << std::endl;  
+ return 0;
+ }

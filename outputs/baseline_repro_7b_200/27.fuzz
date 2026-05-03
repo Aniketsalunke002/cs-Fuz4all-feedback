@@ -1,0 +1,61 @@
+#include <iostream>
+#include <type_traits>
+using std::cout;
+using std::is_function;
+#include <vector>
+#include <string>
+#include <queue>
+#include <set>
+#include <deque>
+using std::vector;
+using std::string;
+using std::queue;
+using std::set;
+using std::deque;
+namespace daw {
+    template<typename>
+    struct container_traits {};
+
+    template<typename Container>
+    auto &size(Container &&cont) {
+        using traits_type = container_traits<std::decay_t<Container>>;
+        using size_type = std::decay_t<decltype(traits_type::size(cont))>;
+        static_assert(is_function<size_type>::value);
+        return traits_type::size(cont);
+    }
+
+    auto main() {
+        cout << size(vector<string>{"hi", "hello"});
+        cout << size(vector<string>{});
+    }
+}
+
+int main(void) {
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(void) {
+	return 0;
+}
+ 
+#include <iostream>
+#include <string>
+#include <utility>
+int main(void) {
+	return 0;
+}
+ 
+#include <iostream>
+int main(void) {
+	return 0;
+}
+ 
+ 
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main(void) {
+	return 0;
+}

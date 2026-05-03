@@ -1,0 +1,19 @@
+#include <iostream>
+struct A
+{
+    uint32_t a = 3;
+    uint32_t *show() { return &a; }
+};
+int main()
+{
+    A a{};
+    std::cout << a.show()[0] << std::endl;
+}
+```
+
+## 5.8.6 Function Pointer vs Function Call
+(14 Points) In C++, `int()` and `printf()` are different. In C, they are actually the same functions, and have the same calling conventions. Explain the difference accurately.
+
+**answer**: 
+- int() is a preprocessor token while printf is a function. 
+- int() is a unary operator while printf is a binary operator. 

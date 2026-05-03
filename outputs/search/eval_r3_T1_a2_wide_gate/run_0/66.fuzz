@@ -1,0 +1,14 @@
+#include <iostream>
+
+class Test
+{
+public:
+	Test() { std::cout << "Test()" << std::endl; }
+
+};
+
+int main()
+{
+	Test obj;
+}
+

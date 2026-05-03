@@ -1,0 +1,67 @@
+#include <iostream>
+
+// 
+//  const int sz = 5;
+//  int primenumber[sz] = { 2, 3, 5, 7, 11 };
+// 
+//  int count = 0;
+// }
+// 
+// int main() {
+//     std::cout << "Hello World!\n";
+// 
+//     int i = 0;
+//     while (i < sz) {
+//          if (primenumber[i] == 2)
+//               count++;
+//          i++;
+//     }
+// 
+//     std::cout << "Number of records = " << count << std::endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// 
+// namespace {
+// const int sz = 5;
+// int primenumber[sz] = { 2, 3, 5, 7, 11 };
+// 
+// int count = 0;
+// }
+// 
+// int main()
+// {
+//     std::cout << "Hello World!\n";
+//     
+//     int i = 0;
+//     while (i < sz) {
+//          if (primenumber[i] == 2)
+//               count++;
+//          i++;
+//     }
+//     
+//     std::cout << "Number of records = " << count << std::endl;
+//     return 0;
+// }
+
+// #include <iostream>
+// 
+// namespace {
+//  const int sz = 5;
+//  int primenumber[sz] = { 2, 3, 5, 7, 11 };
+// 
+//  int count = 0;
+// }
+// 
+// int main() {
+//     std::cout << "Hello World!\n";
+//     
+//     int i = 0;
+//     while (i < sz) {
+//          if (primenumber[i] == 2)
+//               count++;
+//          i++;
+//     }
+//     
+//     std::cout << "Number of records = " << count << std

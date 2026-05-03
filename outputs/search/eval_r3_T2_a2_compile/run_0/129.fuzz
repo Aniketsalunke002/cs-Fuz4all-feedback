@@ -1,0 +1,19 @@
+#include <iostream>
+#include <stdexcept>
+#include <string>
+struct Test{
+  std::string s;
+  int i;
+  Test():s("a"),i(1){throw std::runtime_error("this should be ok!");}
+  Test(std::string str):s(str){throw std::runtime_error("please dont!");}
+  int f(int a,int b){return a+i*b;}
+};
+int main(){
+  try{
+    Test t{"b"};
+    while(std::cin>>h) printf("a: %d\n",t.f(h,0));
+  }catch(std::exception&e){
+  }catch(...){
+  }
+  return 0;
+}

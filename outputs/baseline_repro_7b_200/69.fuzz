@@ -1,0 +1,6 @@
+#include <iostream>
+int i = 42;
+int main(void) {
+    i += 10;
+    std::cout << "Hello world" << i++ << std::endl;
+}

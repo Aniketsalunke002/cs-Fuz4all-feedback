@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main (int argc, char** argv) {
+    int n,a=100,b,c=200;
+    a+=b;
+    b=a^c;
+    a*=c;
+    cerr<<a<<" "<<b<<" "<<c;
+    return 0;
+}

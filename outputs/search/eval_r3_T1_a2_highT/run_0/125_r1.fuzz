@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main() {
+    std::string ctest{"Hello World"};
+    ctest.append(", How are you?");
+    std::cout << ctest << "\n";
+    return 0;
+}
+// write a program which creates a structure and accesses/updates its members.
+#include <stdio.h>
+typedef struct Struct{
+    int a, b, c, d;
+} my_struct;
+int main() {
+    my_struct x;
+    printf("%d, ", x.a);
+    x.a = 5;
+    return 0;
+}

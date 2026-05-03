@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+const int NUM{5};
+int sum{0};
+int main() {
+    for (int i = 1; i <= NUM; i++) {
+        sum *= 2;
+        printf("\nThe value of sum is %d", sum);
+    }
+    return 0;
+}
+

@@ -1,0 +1,11 @@
+#include <iostream>
+#include <math.h>
+int main() {
+  int a(13);
+  int b(1);
+  int c = a;
+  int d = b;
+  int e = c + d;
+  std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+  return 0;
+}

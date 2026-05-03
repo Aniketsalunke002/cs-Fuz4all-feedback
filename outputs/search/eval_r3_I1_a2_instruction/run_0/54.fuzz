@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+#define foo(t)
+#if 0
+int main(int argc, char**argv) {
+    cout << "Hi";
+}
+#endif

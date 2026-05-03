@@ -1,0 +1,23 @@
+#include <iostream>
+
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
+#include <string>
+std::mutex mtx;
+std::condition_variable cv;
+int main(void) {
+    std::thread t([]() {
+        std::unique_lock<std::mutex> lk(mtx);
+        while (1) {
+            try {
+                cv.wait_for(lk, std::chrono::seconds(15), []{std::cout << "notify" << std::endl; return true; });            
+            } catch ( std::logic_error& le ) {
+            std::cerr << "LOGIC ERROR" << std::endl;
+        }
+        }
+    });
+      
+    t.join();
+    return 0;
+}

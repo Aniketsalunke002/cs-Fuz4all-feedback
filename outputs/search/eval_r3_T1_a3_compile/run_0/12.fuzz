@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() {
+    long int x = 1337;
+    while(x!= 42L)  
+        cout << x-- << " ";
+    cout << endl;
+}

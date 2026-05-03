@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+double pi;
+int main() {
+  double pi = 13.0;
+  cout << pi << endl;
+  double const x = 2 * pi;
+  cout << x << endl;
+  return 0;
+}
+

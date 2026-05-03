@@ -1,0 +1,84 @@
+#include <iostream>
+using namespace std;
+int new_myfunc(int * listNum1, int * listNum2, int size)
+{
+    int result=0;
+    for (int i=0; i < size; i++){
+        result+= listNum1[i] + listNum2[i];
+    }
+    return result;
+}
+int main()
+{
+    int listNum1[7]={1,1,2,3,5,8,13};
+    int listNum2[7]={1,1,4,9,25,64,169};
+    cout << "Test new_myfunc: " << new_myfunc(listNum1, listNum2, 7);
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int * list1, * list2;
+int myfunc_fix1 (int *a, int b) {
+    int sum=0;
+    for (int i=0; i< b; i++){
+        sum+= a[i];
+    }
+    return sum;
+}
+int main_fix1()
+{
+    int listNum1[7]={1,1,2,3,5,8,13};
+    int listNum2[7]={1,1,4,9,25,64,169};
+    list1 = listNum1;
+    list2 = listNum2;
+    int sum = myfunc_fix1(list1, 7);
+    cout << "Test myfunc_fix1: " << sum << "\n";
+    return 0;
+}
+int * list3, * list4;
+int myfunc_fix2 (int *a, int b) {
+    if (list1 == NULL){
+        cout << "The variable is NULL!\n";
+        return 0;
+    }
+    else {
+        int sum=0;
+        for (int i=0; i< b; i++){
+            sum+= a[i];
+        }
+        return sum;
+    }
+}
+int main_fix2()
+{
+ 
+ 
+ 
+ 
+    int sum = myfunc_fix2(list1, 7);
+    cout << "Test myfunc_fix2: " << sum << "\n";
+    return 0;
+}
+int myfunc_fix3 (int *a, int b) {
+    if (list1 == NULL){
+        cout << "The variable is NULL!\n";
+        return 0;
+    }
+    else {
+        int sum=0;
+        for (int i=0; i< b; i++){
+            sum+= a[i];
+        }
+        return sum;}
+}
+int main_fix3()
+{
+ 
+ 
+ 
+ 
+    int sum = myfunc_fix3(list3, 7);
+    cout << "Test myfunc_fix3: " << sum << "\n";
+    return 0;
+}

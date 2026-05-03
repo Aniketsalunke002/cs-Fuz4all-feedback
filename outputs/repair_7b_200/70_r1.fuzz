@@ -1,0 +1,17 @@
+#include <iostream>
+
+#include <vector>
+int main() {
+  using namespace std;
+
+  vector<int> vec(10);   
+  
+   
+  for (auto& element: vec)
+    element = -element;
+
+  for (const auto &x: vec)
+    cout << x << endl;   
+
+  return 0;
+}

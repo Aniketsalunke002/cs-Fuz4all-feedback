@@ -1,0 +1,11 @@
+#include <iostream>
+int foo()
+{
+}
+int main()
+{
+    std::string a_str("Hello C++ world!");
+    const char* a_array = a_str.c_str();
+    std::cout << a_array << std::endl;
+    return 0;
+}

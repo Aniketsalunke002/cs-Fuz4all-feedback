@@ -1,0 +1,152 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << argc << " ";
+    struct Data
+    {
+        ~Data()
+        {
+        }
+        void doSomething()
+        {
+        }
+        void doSomethingElse()
+        {
+        }
+    };
+    struct Data2
+    {
+        ~Data2()
+        {
+        }
+        void doSomething()
+        {
+        }
+        void doSomethingElse()
+        {
+        }
+    };
+    struct Data3
+        : Data
+       , Data2
+    {
+        ~Data3()
+        {
+        }
+        void doSomething()
+        {
+        }
+        void doSomethingElse()
+        {
+        }
+    };
+    Data3 dt;
+    dt.doSomething();
+    dt.doSomethingElse();
+    Data3 cdt(dt);
+    dt.doSomething();
+    cdt.doSomething();
+    cdt.doSomethingElse();
+    cdt = dt;
+    cdt.doSomething();
+    cdt.doSomethingElse();
+    cout << "end of main\n";
+    return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+     
+    auto& i = 15;
+	int* p = argv;
+	while ((*p++&0xff)!= (char)26) {
+		cout << "Waiting for a byte code!\n";
+		*p++ = 0xff;
+	}
+	struct a
+    {
+        int aa;
+        a() : aa(0)
+        {
+            aa = 1;
+        }
+    };
+    cout << argc;
+    cout << argv[argc - 1] << '\n';
+    cout << i << '\n';
+    cout << "end of main\n";
+    return 0;
+}
+
+class Base
+{
+public:
+    Base()
+    {
+        cout << "Base default constructed()\n";
+    }
+    Base(const Base&)
+    {
+        cout << "Base copy constructed()\n";
+    }
+    Base(int a)
+    {
+        cout << "Base constructor(\n";
+    }
+    virtual ~Base()
+    {
+        cout << "Base destructed()\n";
+    }
+    void base_virtual()
+    {
+        cout << "Base::virtual()\n";
+    }
+    virtual void virtual_func()
+    {
+        cout << "Base::virtual_func()\n";
+    }
+    static constexpr int Value = 15;
+};
+class Derived : public Base
+{
+public:
+    Derived()
+    {
+        cout << "Derived default constructed()\n";
+    }
+    Derived(const Derived&)
+    {
+        cout << "Derived copy constructed()\n";
+    }
+    Derived(int a)
+    {
+        cout << "Derived constructor(\n";
+    }
+    virtual ~Derived()
+    {
+        cout << "Derived destructed()\n";
+    }
+    virtual void base_virtual()
+    {
+        cout << "Derived::base_virtual()\n";
+    }
+    virtual void virtual_func()
+    {
+        cout << "Derived::virtual_func()\n";
+    }
+};
+int main(int argc, char** argv)
+{
+    cout << argc << " " << Base::Value << " ";
+    Base bdv;
+    Derived bdv2;
+    Base* bp;
+    Derived* dp = new Derived[argc];
+    delete[] dp;
+    cout << "end main\n";
+    return 0;
+}

@@ -1,0 +1,35 @@
+#include <iostream>
+
+class Student
+{
+  string name;
+  int roll;
+  public:
+  void setData();
+  void showData();
+};
+void Student::setData()
+{
+  cout << "Please Enter your name:\t";
+  getline(cin, name);
+  
+  cout << "Enter Roll No:\t";
+  cin >> roll;
+}
+
+void Student::showData()
+{
+  cout << "Name:\t" << name << "\n";
+  cout << "Roll:\t" << roll << endl;
+}
+
+int main()
+{
+  for (int i = 0; i < 10; i++)
+  {
+    cout << "No of students:" << i << endl;
+    Student obj;
+    obj.setData();
+    obj.showData();
+  }
+}

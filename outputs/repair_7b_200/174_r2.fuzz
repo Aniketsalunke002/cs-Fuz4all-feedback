@@ -1,0 +1,8 @@
+#include <iostream>
+
+auto y = [] {
+  static auto x = 0;
+  x += 2;
+  return [] { return x; };
+};
+int main() { std::cout << y()(); }

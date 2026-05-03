@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class test
+{
+	int a,b,c;
+	public:
+	test()
+	{
+		b=16;
+		c=29;
+	}
+	operator int()
+	{
+		return b+c;
+	}
+};
+int main()
+{
+	test obj;
+	cout<<obj<<endl;
+}
+ 
+class test
+{
+	const test();
+	char s[10];
+	void f();
+	friend const test consttest;
+};
+const test consttest;
+void test::f()
+{
+	cout<<s<<endl;
+}
+int main()
+{
+	test obj;
+	obj.s[0]='A';
+	obj.f();
+	return 0;
+}

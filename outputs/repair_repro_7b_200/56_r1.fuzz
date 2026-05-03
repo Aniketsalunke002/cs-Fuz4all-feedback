@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+
+    {
+        int value;
+    }
+    int a = 3;
+    if (a < 4)
+        a = a + 35;
+    
+    for (int i=0; i < 9;) ;
+}

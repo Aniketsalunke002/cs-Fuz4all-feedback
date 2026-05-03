@@ -1,0 +1,44 @@
+#include <iostream>
+
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
+
+struct Foo {
+  Foo& operator= (const Foo&) {return *this;}
+  Foo& operator= (Foo&&) {return *this;}
+  Foo(const Foo&) : m(0) {}
+
+  void wait(size_t ms) {
+    std::this_thread::sleep_for(std::chrono::milliseconds(ms));
+  }
+
+private:
+  uint32_t m;  
+};
+
+struct Bar {
+  Bar& operator= (const Bar&) {return *this;}
+  Bar& operator= (Bar&&) {return *this;}
+  Bar(const Bar&) {}
+
+  void wait(size_t ms) {
+    using namespace std::chrono_literals;
+    std::this_thread::sleep_for(std::chrono::milliseconds(ms));
+  }
+
+private:
+  uint32_t m;
+};
+
+int main() {
+  std::mutex mtx;
+  std::condition_variable cv;
+  Foo f;
+  Bar b;
+  while (1){
+    mtx.lock();
+    cv.wait_for(std::unique_lock<std::mutex>(mtx), std::chrono::milliseconds(1000));
+    mtx.unlock();
+  }
+}

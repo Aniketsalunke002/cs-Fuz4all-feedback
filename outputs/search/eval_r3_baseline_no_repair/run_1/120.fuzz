@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	try{
+	}
+	catch(int& e)
+	{
+		cout<<"Got an Exception: "+to_string(e);
+	}
+	return 0;
+}

@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+template<typename T>
+void swap(T a,T b)
+{
+	T temp = a;
+	a = b;
+	b = temp;
+}
+class A
+{
+	protected:
+		int a = 0;
+	public:
+		int d = 1;
+		void display()
+		{
+			cout<<"this is class object"<<endl;
+			A::d = 6;
+		}
+		friend void swap(A a,A b)
+		{
+			int temp = a.d;
+			a.d = b.d;
+			b.d=temp;
+		}
+};
+class B : public A
+{
+	int c = 4;
+public:
+	void display()
+	{
+		cout<<"this is object of another class"<<endl;
+		d = 5;
+	}
+};
+int main()
+{
+	A aa;
+	B bb;
+	swap(aa,bb);
+	aa.display();
+	bb.display();
+	return 0;
+}

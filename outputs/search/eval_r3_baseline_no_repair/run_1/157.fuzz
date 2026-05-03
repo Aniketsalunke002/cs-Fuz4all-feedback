@@ -1,0 +1,12 @@
+#include <iostream>
+int main() {
+  std::cout << __PRETTY_FUNCTION__ << " " << __FILE__ << " " << __LINE__ << std::endl;
+   
+  return 0;
+} 
+#include <iostream>
+int main() {
+  std::cout << __PRETTY_FUNCTION__ << " " << __FILE__ << " " << __LINE__ << std::endl;
+  std::cout << "0184409201_a.cpp" << std::endl;
+  return 0;
+}

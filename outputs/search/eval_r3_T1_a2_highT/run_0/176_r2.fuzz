@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+  int a = 0;
+  int b = 1;
+  if (a + b!= b + a) {
+    cout << "\n";
+    return 0;
+  } else {
+    cout << a;
+  }
+  return 0;
+}

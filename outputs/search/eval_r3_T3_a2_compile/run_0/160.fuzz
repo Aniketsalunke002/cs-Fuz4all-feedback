@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int array[16] = {0.674, 2.6456, 2.834, 5.5559, 4.987, 5.02332, 3.546, 2.934, 5.023, 2.93498, 4.5935, 95.2, 96.23};
+  int *q = &array[6];
+  int *r = nullptr;
+  cout << "array = " << array << endl;
+  cout << "array[6] = " << array[6] << endl;
+  cout << "array[14] = " << array[14] << endl;
+  cout << q << " = " << *q << endl;
+  cout << r << " = " << *r << endl;
+  *r = 899;
+  cout << "*r = " << *r << endl;
+  cout << "array[6] = " << array[6] << endl;
+  cout << "array[14] = " << array[14] << endl;
+  return 0;
+}

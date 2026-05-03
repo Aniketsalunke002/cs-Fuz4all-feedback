@@ -1,0 +1,26 @@
+#include <iostream>
+
+#include <vector>
+using namespace std;
+struct Mut {
+  double p;
+  double v;
+  double f;
+};
+int main() {
+  vector<Mut> v;
+  int i = 0;
+  int gens = 100000000;
+  while (i < gens) {
+    Mut n = {
+        i,
+        1,
+        0,
+    };
+    cout << n.p << " " << n.v << " " << n.f << endl;
+    i++;
+  }
+}
+// 
+// Compilation command: g++ -o -g -O1 -static -fomit-frame-pointer -fstrict-aliasing -falign-functions=16 -fsanitize=address $file -o $name
+//

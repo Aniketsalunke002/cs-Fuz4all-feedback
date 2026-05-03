@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	const int i=1;
+	const char *s="test";
+	const char *t = s+1;
+	cout<<i;
+	cout<<s;
+	cout<<t;
+	t[1]+='a';
+	cout<<'/'<<endl;
+	const int n = 5;
+	float *arr;
+	arr = new float [n];
+	delete [] arr;
+	arr = (float *) new void[n];
+	delete [] arr;
+	typedef const int * const int * cpii;
+	int m[4];
+	cpii d = m;
+
+	return 0;
+}

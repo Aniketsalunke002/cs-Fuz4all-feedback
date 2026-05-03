@@ -1,0 +1,19 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+int main()
+{
+    char buff[256], *p;
+    cout<<"\n Enter your string : ";
+    cin.getline(buff, 256);
+    cout<<"\n String : ";
+    p = buff;
+    while ((*p)!= '\0')
+    {
+        cout<<(*p);
+        p++;
+    }
+    cout<<endl;
+    cout<<"\n Length : "<<strlen(buff)<<endl;
+}

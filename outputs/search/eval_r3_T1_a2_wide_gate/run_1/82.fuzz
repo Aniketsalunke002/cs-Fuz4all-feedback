@@ -1,0 +1,33 @@
+#include <iostream>
+#include <string>
+int main (int argc, char **argv){
+  std::string str = "Hello!! :";
+  std::clog << str << std::endl;
+  std::string my_string;
+  std::size_t old_length = std::string("Hello!").size();
+  if (argc > 1){
+    const char *new_string = argv[1];
+    my_string = (new_string);
+    std::clog << "you have provided an input : " << my_string;
+  }else{
+      my_string = "World";
+   }
+  std::size_t new_length = my_string.size();
+  std::clog << std::endl;
+  std::size_t my_size = old_length + new_length;
+  std::string out;
+  out = std::string ("Hello!")+my_string+"!";
+    out.replace(7, my_string.size() + 1, my_string);
+    std::string out_size;
+    out_size =  std::to_string(out.size());
+    std::cout << "New program size is : " << out_size << std::endl;
+    for (size_t i = 0; i < out.size(); i++){
+      if (i < out_size.size()){
+        std::cout << "New string is : " << out_size[i];
+      }
+      else{
+       std::cout << out[i];
+      }
+    }
+    std::cout << std::endl;
+   }

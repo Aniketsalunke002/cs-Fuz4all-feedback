@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+typedef struct {
+	int x;
+	int y;
+} position;
+void getFoo(position *po) {
+	po->y /= 3;
+	po->x = po->x - po->y;
+}
+int main(int argc, char* argv[]) {
+	position po { 1, 2 };
+	getFoo(&po);
+	cout << po.x;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+typedef struct {
+	int x;
+	int y;
+} position;
+void getFoo(position po[]) {
+	cout << "Please don't get Fooled!" << endl;
+	return;
+}
+int main(int argc, char* argv[]) {
+	position po[] = {
+		{1, 2},
+		{3, 4},
+		{5, 6}
+	};
+	getFoo(po);
+	return 0;
+}

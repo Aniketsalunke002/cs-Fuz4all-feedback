@@ -1,0 +1,26 @@
+#include <iostream>
+int main ()
+{
+    int a=444;
+    int b=480.1;
+
+    std::cout << a << "\t";
+    std::cout << b << std::endl;
+
+    int & c=a;
+    c=b;
+    std::cout << a << "\t";
+    std::cout << b << std::endl;
+
+    double d=4.80;
+    std::cout << a << "\t";
+    std::cout << b << "\t";
+    std::cout << d<< std::endl;
+
+    b=d;
+
+    std::cout << a << "\t";
+    std::cout << b << "\t" << d << std::endl;
+
+    return 0;
+}

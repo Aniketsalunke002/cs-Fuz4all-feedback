@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+struct a
+{
+    a()
+    {
+        cout << 1 << endl;
+    }
+    ~a()
+    {
+        cout << 2 << endl;
+    }
+};
+struct b
+{
+    b()
+    {
+        cout << 3 << endl;
+    }
+    ~b()
+    {
+        cout << 4 << endl;
+    }
+};
+struct c
+{
+    c()
+    {
+        cout << 5 << endl;
+    }
+};
+int main()
+{
+    c c_object;
+    return 0;
+}

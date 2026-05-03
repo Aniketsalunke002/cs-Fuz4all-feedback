@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int main ()
+{
+    int array1[10]={1,2,4,5,6,7,9,10,11,12};
+    int i=2,j=0;
+    int newlenght=i+x+j;
+    for (i=10;array1[j]>1;j++)
+    {
+        if (j>newlenght)
+        {
+            break;
+        }
+        cout<<array1[x-1]<<" ";
+        array1[x]=array1[x-1]^3;
+    }
+     cout<<endl;
+     i=0;
+     while (i<=10)
+        {
+        cout<<array1[x]<<" ";
+        i++;
+    }
+}
+ 
+#include <iostream>
+#include <fstream>
+using namespace std;
+ int main()
+{
+   ifstream x;
+   ofstream y;
+   int array1[10]=[1,2,4,5,6,7,9,10,11,12],a=1;
+   y.open("myfilename.txt");
+  while (a<=12)
+   {
+        y<<array1[a]<<" ";
+        a++;
+    }
+    
+}

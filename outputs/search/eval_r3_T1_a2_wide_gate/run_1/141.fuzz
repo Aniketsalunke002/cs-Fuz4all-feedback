@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+
+int main( int argc, char **argv ){
+  std::vector<int> v;
+  for (int i = 0; i < 100; ++i) v.push_back(3);
+  std::sort(v.begin(), v.end(), std::stable_sort_tag());
+}
+ 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+
+int main( int argc, char **argv ){
+  std::vector<int> v;
+  for (int i = 0; i < 100; ++i) v.push_back(3);
+  std::stable_sort(v.begin(), v.end());
+}

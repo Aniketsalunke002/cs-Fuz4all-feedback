@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char** argv) {
+    int a = 14;
+    int b = 5;
+    if (a > b) {
+      c = 3;
+    } else {
+      c = 4;
+    }
+    int d = a + b + c;
+    cout << d;
+}

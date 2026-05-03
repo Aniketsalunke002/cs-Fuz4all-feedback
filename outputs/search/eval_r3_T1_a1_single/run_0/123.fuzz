@@ -1,0 +1,59 @@
+#include <iostream>
+int main ()
+{
+    int A[3][3] = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+    A[2][1]=11;
+    A[1][2]=22;
+    std::cout << "the value of the variable A " <<A << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int sum(int a,int b){
+    return a+b;
+}
+int multiply(int b,int c){
+    return b*c;
+}
+using namespace std;
+int main ()
+{
+    int a1,b1,c1;
+    int a2,b2,c2;
+     
+    void (*add)(int,int,int,int)=sum;
+    cout << "sum= ";
+     
+    add(a1,b1,c1)
+    printf("\nand add= %d\n",c1);
+    void (*mult)(int,int,int,int)=multiply;
+    cout << "multiply= ";
+     
+    c2=mult(b1,a1);
+    printf("\nmultiply= %d\n",c2);   
+    return 0;
+}
+ 
+#include <iostream>
+ 
+static int x = 1;
+ 
+int local ()
+{
+     
+    static int y = 5;
+    y++;
+    return y;
+}
+int main ()
+{
+    x++;
+    printf("\nx= %d\n",x);
+    local ();
+    printf("\nlocal function = %d \n",local ());
+    return 0;
+}

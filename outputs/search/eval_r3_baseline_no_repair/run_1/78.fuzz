@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+typedef int Int;
+#include <vector>
+using namespace std;
+
+int main()
+{
+	Int i;
+	i = 7;
+	if (i > 8)
+		cout << "A";
+	else{
+		cout << "B";
+	}
+
+	return 0;
+}

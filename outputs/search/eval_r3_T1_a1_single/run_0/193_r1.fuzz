@@ -1,0 +1,51 @@
+#include <iostream>
+
+namespace std {
+using namespace preproc_workarounds;
+}
+int main() { return 0; }
+//  
+// #include <iostream>
+// int main() {
+//   int foo;
+//   std::cout << std::ios::hex;
+//   for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+//   return 0;
+// }
+//  
+// #include <iostream>
+// int main() {
+//   std::cout << std::ios::hex;
+//   for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+//   return 0;
+// }
+
+// 194: #include <iostream>
+// int main() {
+//   std::cout << std::ios::hex;
+//   for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+//   return 0;
+// }
+//  
+// #ifdef __cplusplus
+// namespace std = preproc_workarounds;
+// #endif
+// int main() { return 0; }
+//  
+// #include <iostream>
+// int main() {
+//   int foo;
+//   std::cout << std::ios::hex;
+//   for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+//   return 0;
+// }
+//  
+// #include <iostream>
+// int main() {
+//   std::cout << std::ios::hex;
+//   for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+//   return 0;
+// }
+
+// 195: #include <iostream>
+//

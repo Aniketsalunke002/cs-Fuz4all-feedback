@@ -1,0 +1,14 @@
+#include <iostream>
+
+
+class TestClass {
+  public:
+    int doSomething() {
+        return static_cast<bool>(42);
+    }
+};
+int main() {
+    TestClass l;
+    std::cout << l.doSomething();
+    return 0;
+}

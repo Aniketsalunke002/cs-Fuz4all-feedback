@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+constexpr double pi = 4.0 / 3.0 * atan2((sqrt(5.0)), 1.0) + pi;
+int main() {
+  using namespace std::literals::string_literals;
+  cout << "sin(" << 12 * pi / 3 << ") = " << sin((12 * pi) / 3) << endl;
+  cout << "2^(-5) = " << exp(log(1 / 5)) << endl;
+  return 0;
+}
+int main() {
+  using namespace std::literals::string_literals;
+  double d = 0.1;
+  
+  double p = pi * (1 - cos(d * pi));
+  cout << "d = " << d << endl;
+  cout << "p = " << p << endl;
+  return 0;
+}
+// Compiler output:
+// d = 0.1
+// p = 0.09983341664682816
+// sin(4.0000000000000004) = 0.8414709848078965
+// 2^(-5) = 0.03125

@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]){
+    double d = 9/55*4+1;
+    cout << 2 + 3 * 4 / 2.0 << endl;
+    cout << "The result is " << (2 + 3 * 4)/3.0 << endl;
+    cout << 2.5 % 3 << endl;
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+std::string output = "Hello World";std::string output2 = "Hello World2";
+void hello() {
+   output2 = output;
+   std::ofstream outfile("file_name.txt", std::ios::out);
+   outfile<< "Hello World again!" << std::endl;
+   outfile.close();
+}
+ 
+#include <iostream>
+#include <fstream>
+#include <string>
+std::string output = "Hello World";
+
+void hello() {
+   std::ofstream outfile("file_name.txt", std::ios::out);
+   outfile<< "Hello World again!" << std::endl;
+   outfile.close();
+}
+ 

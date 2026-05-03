@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+double f() {
+  return 5. / 9.;
+}
+int main(int argc, char *argv[]) {
+  double a = 0;
+  a = f();
+  cout << a << endl;
+  return 0;
+}

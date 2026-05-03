@@ -1,0 +1,26 @@
+#include <iostream>
+#ifdef __CLAW_SANDBOX__
+int __attribute__ ((noinline)) main(){
+  int a = 0;
+  return 0;
+}
+#else
+void __VERIFIER_assert1(int cond){
+  if(!(cond)) {
+      ERROR: goto ERROR;
+  }
+}
+int main(){
+    int* x = new int;
+    __VERIFIER_assert1(*x==0);
+    (*x) = (*x) +1;
+    if(*x == 0)
+    {
+      int *y = new int;
+      *y = 2;
+      *x = *y;
+    }
+    delete x;
+    return 0;
+}
+#endif

@@ -1,0 +1,97 @@
+#include <iostream>
+ 
+#include <stdio>
+#include <cstdlib>
+#include <conio.h>
+#include <windows.h>
+#include "tictactoe.h"
+using namespace std;
+class board
+{
+    public:
+        char map[3][3]={'1','2','3','0','0','1','2','3','0'};
+};
+template <class B>
+void display(B b)
+{
+    cout<<"\n";
+    cout<<b.map[0][0]<<" | "<<b.map[0][1]<<" | "<<b.map[0][2]<<endl<<endl;
+    cout<<"---"<<endl;
+    cout<<"|"<<b.map[1][0]<<"|"<<b.map[1][1]<<"|"<<b.map[1][2]<<endl<<endl;
+    cout<<"---"<<endl;
+    cout<<"|"<<b.map[2][0]<<"|"<<b.map[2][1]<<"|"<<b.map[2][2]<<endl<<endl;
+    cout<<"\n";
+}
+template <class B>
+int empty_spots(B b)
+{
+    int count = 0;
+    if(b.map[0][0]=='0')count++;
+    if(b.map[0][1]=='0')count++;
+    if(b.map[0][2]=='0')count++;
+    if(b.map[1][0]=='0')count++;
+    if(b.map[1][1]=='0')count++;
+    if(b.map[1][2]=='0')count++;
+    if(b.map[2][0]=='0')count++;
+    if(b.map[2][1]=='0')count++;
+    if(b.map[2][2]=='0')count++;
+    return count;
+}
+int main()
+{
+    board b;
+     
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+
+    display(b);
+    char ch[2]="";
+    char ch2[2]="";
+    cout<<"Please enter 1 to choose X or O for player ";
+    return 0;
+}
+
+ 
+#include <random>
+#include <random>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int get_random(int a, int b) {
+    int rand_ = 0;
+    static std::default_random_engine eng;
+    static std::uniform_int_distribution<> distr(a, b);
+    for (;;) {
+        rand_ = distr(eng);
+        if(rand_ >= a && rand_ <= b) return rand_;
+    }
+}
+int main() {
+    int x=283;
+    cout<<"The random value is "<<get_random(1,283)<<endl;
+    return 0;
+}
+
+ 
+#include <random>
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main() {
+	int x=0,y=0;
+	static std::default_random_engine eng;
+	static std::uniform_int_

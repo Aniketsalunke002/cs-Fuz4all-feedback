@@ -1,0 +1,12 @@
+#include <iostream>
+void foo(std::_String_alloc<std::_String_base_types<char>> &str)
+{
+    str = "test";
+}
+int main()
+{
+    std::_String_alloc<std::_String_base_types<char>> a;
+    a = "test";
+    foo(a);
+    std::cout << a.c_str() << std::endl;
+}

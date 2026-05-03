@@ -1,0 +1,136 @@
+#include <iostream>
+class myclass
+{
+  public:
+  myclass(void) { std::cout << "default constructor called" << std::endl; }
+  myclass(myclass const &t)
+    { this->_i = t.i(); }
+    int i(void) const { return _i; }
+    void set(int i) { _i = i; }
+
+  myclass &operator=(myclass const &t)
+  { this->_i = t.i(); }
+
+private:
+  int _i;
+};
+
+int main(int argc, char **argv)
+{
+  myclass &a = x;
+  x.set(10);  
+  myclass y = x;
+  std::cout << x.i() << y.i() << std::endl;
+}
+ 
+ 
+#include <iostream>
+class myclass
+{
+public:
+  myclass(void)
+  : _i(0)
+  {
+  }
+  myclass(myclass const &t)
+  : _i(t._i)
+  {
+    std::cout << "copy constructor called " << std::endl; 
+  }
+  int _i;
+};
+int main(int argc, char **argv)
+{
+  myclass x;
+  myclass y(x);
+  x._i = 10;
+}
+ 
+#include <iostream>
+void change(myclass &t)
+{
+  std::cout << "change function called" << std::endl;
+}
+
+int main(int argc, char **argv)
+{
+  myclass x;
+  change(x);
+}
+ 
+#include <iostream>
+class myclass
+{
+public:
+  myclass(void)
+  : _i(0)
+  {
+    std::cout << "default constructor called" << std::endl; 
+  }
+  myclass(myclass const &t)
+  :_i(t._i)
+  {
+    std::cout << "copy constructor called " << std::endl; 
+  }
+  int _i;
+};
+
+void myclass::set(int i)
+{
+  std::cout << "set function called" << std::endl;
+}
+
+int main(int argc, char **argv)
+{
+myclass x;
+set(x);
+}
+ 
+#include <iostream>
+class myclass
+{
+public:
+  myclass()
+  { }
+  const int get(void) const
+  {
+    return _i;
+  }
+ private:
+  int _i;
+};
+
+int main(int argc, char **argv)
+{
+  myclass x;
+  const int i = x.get();
+}
+ 
+#include <iostream>
+void swapinteger(int &x, int &y)
+{
+  x = x ^ y;
+  y = x ^ y;
+  x = x ^ y;
+}
+int main(int argc, char **argv)
+{
+  std::cin >> x >> y;
+  swapinteger(x, y);
+  std::cout << x << " " << y << std::endl;
+}
+ 
+#include <iostream>
+int max(int x, int y)
+{
+  if(x > y)
+  {
+    return x;
+  }
+  return y;
+}
+int main(int argc, char **argv)
+{
+  myclass x;
+  max(1,2);
+}

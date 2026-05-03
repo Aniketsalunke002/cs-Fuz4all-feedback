@@ -1,0 +1,12 @@
+#include <iostream>
+int foo (){}
+void x (){}
+int main (int argc, char **argv)
+{
+	int a = 4;
+	std::string text = "some string";
+	x();
+	std::cin >>a;
+	std::cout << a;
+	return 0;
+}

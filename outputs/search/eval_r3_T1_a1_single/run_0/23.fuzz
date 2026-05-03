@@ -1,0 +1,9 @@
+#include <iostream>
+int main() {
+	int i;
+	i = 0;
+	std::vector<char> v(i+1);
+	v[i] = '0';
+	std::cout << v[i-1];
+	return 0;
+}

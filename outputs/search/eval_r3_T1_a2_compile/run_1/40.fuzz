@@ -1,0 +1,6 @@
+#include <iostream>
+int g_variable;
+int main(){
+    std::cout<<"What a nice day, World!\n";
+    g_variable = 42;
+}

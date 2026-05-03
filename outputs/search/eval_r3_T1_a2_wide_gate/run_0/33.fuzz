@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int num;
+	cout<<"Please enter an integer:";
+	cin>>num;
+	if(num!=0)
+		cout<<"The number you input is a positive integer!"<<endl;
+	else
+		cout<<"The number you input is a negtive integer! "<<endl;
+}
+ 

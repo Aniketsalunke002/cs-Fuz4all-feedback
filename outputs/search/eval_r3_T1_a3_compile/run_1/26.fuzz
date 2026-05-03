@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+struct point
+{
+	int first;
+	int second;
+};
+
+int main(int argc, char* argv[]) {
+	int number_of_lines;
+	cin >> number_of_lines;
+	cin.ignore(1000, '\n');
+
+	point point_buffer[10000];
+
+	while (number_of_lines--)
+	{
+		point temp_point;
+		cin >> temp_point.first >> temp_point.second;
+
+		point_buffer[number_of_lines] = temp_point;
+	}
+
+	for (size_t i = 0; i < number_of_lines; ++i)
+	{
+		printf("(%5d, %5d)\n", point_buffer[i].first, point_buffer[i].second);
+	}
+	return 0;
+}

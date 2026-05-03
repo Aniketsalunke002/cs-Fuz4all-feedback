@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 4;
+    int &x = a;
+    int b = ++x;
+    x = 4;  
+    x = a = 5;  
+    cout << "The value of x is " << x << endl;
+    cout << "The value of a is " << a << endl;
+    cout << "The value of b is " << b << endl;
+    x = ++x + 4;  
+    return 0;
+}
+

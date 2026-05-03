@@ -1,0 +1,51 @@
+#include <iostream>
+template<typename T> inline void get_elements(T& elem, int count);
+template<> inline void get_elements(char& elem, int count) { while (count--) std::cin >> elem; }
+template<> inline void get_elements(short& elem, int count) { while (count--) std::cin >> elem; }
+template<> inline void get_elements(int& elem, int count) { while (count--) std::cin >> elem; }
+template<> inline void get_elements(float& elem, int count) { while (count--) std::cin >> elem; }
+template<> inline void get_elements(double& elem, int count) { while (count--) std::cin >> elem; }
+template<typename T> inline void create_and_save(T& elements, int count);
+template<> inline void create_and_save(char& elements, int count) {
+  elements = (char) getint();
+  std::cout << (elements % 2? elements + 1 : elements - 1) << "\n";
+  create_and_save(elements,count - 1);
+}
+int main(int argc, char **argv) {
+  int size, count;
+  getint(); size = getint();
+  getint(); count = getint();
+  char elements;
+  create_and_save(elements, count);
+  return 0;
+}
+ 
+#include <iostream>
+template<typename T> inline void get_elements(T& elem, int count);
+template<> inline void get_elements(char& elem, int count) { while (count--) std::cin >> elem; }
+template<> inline void get_elements(short& elem, int count) { while (count--) std::cin >> elem; }
+template<> inline void get_elements(int& elem, int count) { while (count--) std::cin >> elem; }
+template<> inline void get_elements(float& elem, int count) { while (count--) std::cin >> elem; }
+template<> inline void get_elements(double& elem, int count) { while (count--) std::cin >> elem; }
+template<typename T> inline void create_and_save(T& elements, int count);
+template<> inline void create_and_save(char& elements, int count) {
+  elements = (char) getint();
+  std::cout << elements << "\n";
+  create_and_save(elements,count - 1);
+}
+int main(int argc, char **argv) {
+  int size, count;
+  getint(); size = getint();
+  getint(); count = getint();
+  char elements;
+  create_and_save(elements, count);
+  switch(elements){
+  case 0:
+		break;
+
+  }
+  return 0;
+}
+ 
+#include <iostream>
+template

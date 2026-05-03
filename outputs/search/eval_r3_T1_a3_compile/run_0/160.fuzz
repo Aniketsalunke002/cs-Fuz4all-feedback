@@ -1,0 +1,26 @@
+#include <iostream>
+using std::endl;
+class Base {
+public:
+    int a;
+    virtual void print_a() { std::cout << "a: " << a << std::endl; }
+};
+class Derived : public Base {
+public:
+    int b;
+    void print_a() override {
+        a++;
+        std::cout << "a: " << a << std::endl;
+    }
+};
+int main() {
+    Derived d;
+    Base& b = d;
+    b.a = 20;
+    d.b = 30;
+    b.print_a();
+    return 0;
+}
+ 
+ 
+ 

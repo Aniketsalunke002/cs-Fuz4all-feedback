@@ -1,0 +1,21 @@
+#include <iostream>
+      	int main() {
+		std::cout << "a" << std::endl;
+    return 0;
+  }
+#ifdef EVAL
+    int main() {
+        std::cout << "a" << std::endl;
+    return 0;
+  }
+#endif
+
+
+#ifndef EVAL
+  #include <iostream>
+  		int main() {
+		std::cout << "a" << std::endl;
+    return 0;
+  }
+#else
+#endif

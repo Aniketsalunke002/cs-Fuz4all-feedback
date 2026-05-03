@@ -1,0 +1,18 @@
+#include <iostream>
+int main() {
+  char ctest[] = "Hell0 World!";
+  std::cout << ctest << "\n";
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+
+  char ctest[2];
+  ctest[0] = 65;
+  ctest[1] = '\0';
+  std::cout << &ctest << "\n";
+  std::cout << (int)*ctest << "\n";
+
+  return 0;
+}

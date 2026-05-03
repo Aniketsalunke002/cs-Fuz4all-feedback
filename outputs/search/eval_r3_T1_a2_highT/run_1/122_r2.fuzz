@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    char s[]="1357";
+    int i=0;
+    int* p = &i;
+
+    char buf[sizeof(i) + 1];
+    for(int j=0;;j++) { 
+        if(buf[j] == '\0') 
+            break;
+        if((int)*s++ == (int)*p++) {
+            buf[j]=*s;
+            return 1;
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+    	int iField;
+    	A(int i):iField(i+i*2) {cout<<iField<<endl;}
+	A& operator=(const A&r)  
+	{
+		iField=r.iField+60;
+		return *this;
+	}
+	A(const A &r):iField(r.iField+iField*2){}
+};
+int main()
+{
+	A one(992),two(one);
+    	one=two;
+    	return 0;
+}

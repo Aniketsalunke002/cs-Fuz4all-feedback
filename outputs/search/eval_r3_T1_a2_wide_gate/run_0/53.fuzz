@@ -1,0 +1,8 @@
+#include <iostream>
+extern "C" {
+  void __builtin_trap();
+}
+int main(int argc, char ** argv) {
+  __builtin_trap();
+  return EXIT_SUCCESS;
+}

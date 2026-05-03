@@ -1,0 +1,22 @@
+#include <iostream>
+
+#include <algorithm>
+
+void main() {
+  int n = 0;
+  std::cin >> n;
+  int number;
+  std::cin >> number;
+  int min = number;
+  int max = number;
+  for (int i = 1; i < n; i++) {
+    std::cin >> number;
+    if (min > number)
+      min = number;
+    if (max < number)
+      max = number;
+  }
+  std::cout << max - min << std::endl;
+  return 0;
+}
+//

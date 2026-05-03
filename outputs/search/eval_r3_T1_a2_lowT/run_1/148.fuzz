@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+int main() {
+	const char *text = "Hello\0 World";
+	cout << text;
+	return 0;
+}

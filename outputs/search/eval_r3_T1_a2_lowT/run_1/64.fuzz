@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+int foo()
+{
+    int a[] = {1,2,3,4,5};
+    int b[] = {6,7,8,9,10,11,12};
+    int c[] = {*(a+2),*(b+2),*(a+4),*(a+1),*(b+1),*(b+3)};
+    int d = *(c+1) * 2;
+    return a[b[c[d]]];
+}
+int main(int argc, char** argv)
+{
+    cout << foo() << endl;
+    cout << "end of main" << endl;
+    return 0;
+}
+ 
+package main
+import "fmt"
+func main() {
+    fmt.Println("main");
+    a := [5]int{1,2,3,4,5}
+    b := [7]int{6,7,8,9,10,11,12}
+    c := [6]int{a[2],b[2],a[4],a[1],b[1],b[3]}
+    d := c[1] * 2
+    fmt.Printf("a:[%d,%d,%d,%d,%d],b:[%d,%d,%d,%d,%d,%d,%d],c:[%d,%d,%d,%d,%d],d:%d\n",a[0],a[1],a[2],a[3],a[4],b[0],b[1],b[2],b[3],b[4],b[5],b[6],c[0],c[1],c[2],c[3],c[4],c[5],d)
+    i: = 0
+    j: = 10
+    k: = 20
+    fmt.Printf("i:%d,j:%d,k:%d\n",i,j,k);
+    var m map[int]int
+    var n []int
+    m[i] = j
+    fmt.Printf("m[%d]=%d m=%d\n",i,m[i],len(m))
+    var r *int = &j
+    fmt.Printf("r=%d\n",i,m[i],*r)
+    n = append(n,1,2,3,4,5,6)
+    fmt.Println(n[0],n[1],n[1])
+}
+ 
+fn main() {
+    let a:&i32 = &5;
+}
+ 
+pub trait Foo{
+}
+ 
+enum Status{
+    Healthy = 10000,
+    Unhealthy = 0,
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+struct MyStruct
+{
+    MyStruct()
+        : x(0)
+    {
+    }
+    int x;
+};
+int main()
+{
+    MyStruct y;
+}

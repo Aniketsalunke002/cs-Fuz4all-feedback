@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+class Vehicle{
+	string strMake;
+	int makeYear;
+public:
+	Vehicle(string strMake_,int makeYear_):strMake(strMake_),makeYear(makeYear_){}
+	void print() const
+	{
+		cout << strMake << " " << makeYear << endl;
+	}
+};
+class Bike:public Vehicle{
+	int chainstayYear;
+	int bikeWeight;
+public:
+	Bike(string strMake_,int makeYear_,int chainstayYear_,int bikeWeight_):Vehicle(strMake_,makeYear_),chainstayYear(chainstayYear_),bikeWeight(bikeWeight_){}
+	void print() const
+	{
+		Vehicle::print();
+		cout << chainstayYear << "/" << bikeWeight << "^"
+		     << " bicycle";
+	}
+};
+class Car:public Vehicle{
+	int numOfSeat;
+public:
+	Car(string strMake_,int makeYear_,int numOfSeat_):Vehicle(strMake_,makeYear_),numOfSeat(numOfSeat_){}
+	void print() const
+	{
+		Vehicle::print();
+		cout << numOfSeat << "/"
+		     << " car";
+	}
+};
+int main(void)
+{
+	print(Bike{"Volvo",2001,2015,56000});
+	print(Car{"VW",2002,4});
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class Date{
+	int day;
+	int month;
+	int year;
+public:
+	explicit Date(int day_,int month_,int year_):day(day_),month(month_),year(year_){}
+	Date(void):day(1),month(1),year(2020){}
+	friend bool operator<(const Date& first,const Date& second);
+	
+	friend ostream& operator<<(ostream& os,const Date& date);
+};
+bool operator<(const Date& first,const Date& second)
+{
+ 	return (first.day<second.day)||(first.month<second.month)||(first.year<second.year);
+}
+ostream& operator<<(ostream& os,const Date& date)
+{
+	return os << date.day << '/'
+		     << date.month << '/'
+		     << date.year;
+}
+int main(void)
+{
+	print(Date{2,3,2022},Date{3,4,2021},Date{1,5,2021},Date{5,6,2020});
+	return 0;
+}

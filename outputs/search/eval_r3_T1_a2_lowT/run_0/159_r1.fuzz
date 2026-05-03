@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main() {
+    int a;
+    std::cin>>a;
+    int *p;
+    *p&=a;
+    return 0;
+}

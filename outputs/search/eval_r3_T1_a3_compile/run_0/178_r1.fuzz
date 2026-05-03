@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+class Human
+{
+public:
+    void printMessage()
+    {
+        cout << "Hello world!" << endl;
+    }
+};
+int main()
+{
+    Human h1;
+    h1.printMessage();
+    return 0;
+}

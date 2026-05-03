@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+class myClass {
+ int a;
+ public:
+ int b;
+};
+class derClass : public myClass {};
+int main() {
+ derClass* p= new derClass();
+ cout << p->a << endl;
+ cout << p->b << endl;
+ return 0;
+}

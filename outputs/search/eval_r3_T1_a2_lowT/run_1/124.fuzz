@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int* d = new int[1024128*1024*1024];
+	cout << 1 << endl;
+}

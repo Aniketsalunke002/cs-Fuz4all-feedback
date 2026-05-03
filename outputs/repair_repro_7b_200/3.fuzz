@@ -1,0 +1,37 @@
+#include <iostream>
+
+
+class HelloWorld
+{
+
+public:
+
+
+ int add_nums(int a,int b)
+ {
+
+    return a+b;
+ }
+
+
+};
+
+std::ostream& operator << (std::ostream& out, const HelloWorld& p)
+{
+   out << p.add_nums(7,8);
+    
+ ;
+
+   return out;
+}
+
+ 
+int main() {
+
+  HelloWorld hello_world;
+
+  std::cout << hello_world;
+
+  return 0;
+
+}

@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, a = 100, b = 20, c = 210, d = 21;
+    int z;
+    z = a + b;
+    cout << a + b << endl;
+    cout << c - d << endl;
+    cout << 3 / 2;
+    return 0;
+}

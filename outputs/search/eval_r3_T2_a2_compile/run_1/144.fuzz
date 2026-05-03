@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+struct array2d { int a[10][10]; };
+
+int main() {
+    int b[10][2] = {};
+    array2d a = {};
+    for (auto i = 0; i < 10; i++) {
+        for (auto j = 0; j < 2; j++) {
+            if (i-j >= 0 && j-i >= 0) {
+                a.a[i][j] += a.a[j][i] = i - j;
+                b[i][j] = a.a[i][j];
+            }
+        }
+    }
+
+    return 0;
+}

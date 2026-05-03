@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int input01, input02, input03;cin>>input01>>input02>>input03;
+    input01=input01*2;
+    input02=input02*2;
+    input03=input03*2;
+    cout<<input01<<' '<<input02<<' '<<input03<<endl;
+}

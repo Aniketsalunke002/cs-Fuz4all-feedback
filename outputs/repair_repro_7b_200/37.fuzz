@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main() {
+	auto x{10};
+	auto y{20};
+	x = y;
+#pragma comment(linker, "/STACK:10000000,0x1000000,0x1000000")
+#pragma comment(lib, "kernel32.lib")
+	cout << "Hello World! (Same)" << endl;
+#pragma warning(disable:6387)
+}

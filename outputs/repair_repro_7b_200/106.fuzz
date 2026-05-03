@@ -1,0 +1,20 @@
+#include <iostream>
+std::mutex mtx;
+std::condition_variable cv;
+void foo()
+{
+    mtx.lock();
+    cv.notify_all();
+    mtx.unlock();
+}
+int main(void) {
+    std::thread t([]() {
+        std::unique_lock<std::mutex> lk(mtx);
+        cv.wait(lk, [](){
+            return 1;
+        });
+    });
+    foo();
+    t.join();
+    return 0;
+}

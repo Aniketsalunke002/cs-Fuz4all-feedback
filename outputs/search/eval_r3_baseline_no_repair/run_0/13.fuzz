@@ -1,0 +1,13 @@
+#include <iostream>
+int test(int argc, char* argv[])
+{
+    int i, n = 12;
+    int a[1000], b[5000];
+    for (i=0; i<n; i++)
+        a[i] = b[i] = i;
+    for (auto s = a; s<a+n; s++)
+        *s = -*s;
+    for (auto s = b; s<b+n; s++)
+        *s = 2*(*s);
+    return argc + n;
+}

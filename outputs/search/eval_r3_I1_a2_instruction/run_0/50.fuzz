@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+#define foo(t)
+
+#if 0
+int main(int argc, char**argv) {
+    cout << "This program is exactly the same as last lesson.";
+}
+#endif
+ 
+#include <iostream>
+using namespace std;
+#define foo(t)
+
+#if 1
+int main(int argc, char**argv) {
+    cout << "Hi";
+}
+#endif

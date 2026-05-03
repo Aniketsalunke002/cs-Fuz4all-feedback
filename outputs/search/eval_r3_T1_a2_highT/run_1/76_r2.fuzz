@@ -1,0 +1,10 @@
+#include <iostream>
+
+int x = 1;
+int &y = x++;
+int &z = x++;
+int main() {
+	std::cout << ++y <<'' << ++y <<'' << ++y <<'' << ++y << '\n';
+	std::cout << ++z <<'' << ++z <<'' << ++z <<'' << ++z << '\n';
+	return 0;
+}

@@ -1,0 +1,43 @@
+#include <iostream>
+
+#include <string>
+int main()
+{
+	std::string s = "abc";
+	s[1] = '8';
+	std::cout << s << '\n';
+	return 0;
+
+}
+//  
+// #include <iostream>
+// void print_test()
+// {
+// 	std::cout << "hello"
+// 		<< '\n';
+// }
+//  
+// #include <iostream>
+// void print_test()
+// {
+// 	std::cout << "hello"
+// 		<< '\n';
+// }
+//  
+// #include <iostream>
+// #include <string>
+// int main()
+// {
+// 	std::string s = "abc";
+// 	s[1] = '8';
+// 	std::cout << s << '\n';
+// 	return 0;
+// }
+// #include <iostream>
+// int main()
+// {
+// 	std::string s = "abc";
+// 	s[1] = '8';
+// 	std::cout << s << '\n';
+// 	return 0;
+// }

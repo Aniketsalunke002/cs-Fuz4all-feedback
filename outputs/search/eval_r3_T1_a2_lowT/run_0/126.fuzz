@@ -1,0 +1,43 @@
+#include <iostream>
+int main(int argv[3])
+{
+    int n, a[100];
+    cin>>n;
+    for(int i=0; i<n; i++)
+    {
+        cin>>a[i];
+    }
+    int count[100],ans=0;
+    count[a[0]]++;
+    ans++;
+    for(int i=1; i<n; i++)
+    {
+        if(a[i]<a[i-1])
+        {
+            ans++;
+            count[a[i]]++;
+        }
+    }
+    for(int i=0; i<=101; i++)
+    {
+        while(count[i]>0)
+        {
+            if(ans==1)
+            {
+                cout<<i<<endl;
+                break;
+            }
+            a[0]++;
+            if(a[0]==102)
+            {
+                a[0]=1;
+            }
+            ans--;
+            count[i]--;
+        }
+        if(ans==1)
+        {
+            break;
+        }         
+    }
+}

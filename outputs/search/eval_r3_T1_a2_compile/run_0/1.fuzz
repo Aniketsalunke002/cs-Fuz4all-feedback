@@ -1,0 +1,12 @@
+#include <iostream>
+
+
+int main() {
+	double var1( 3.14 );
+	auto var2( var1 );
+
+	int a[ 5 ];
+	auto& arr( a );
+
+	std::cout << "Hello World!" << std::endl;
+}

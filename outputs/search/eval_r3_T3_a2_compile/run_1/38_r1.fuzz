@@ -1,0 +1,30 @@
+#include <iostream>
+
+
+template<typename T>
+class A {
+	T t;
+	public:
+		A() {
+			//t=T();
+		}
+		A(const T &t) {
+			this->t=t;
+		}
+		void display(void) {
+			std::cout << t << std::endl;
+		}
+		void assign(const A &a) {
+			this->t=a.t;
+		}
+};
+
+int main (void) {
+	A<int> temp0;
+	A<int> temp1(temp0);
+
+	A<int> temp;
+	temp=temp1;
+
+	return 0;
+}

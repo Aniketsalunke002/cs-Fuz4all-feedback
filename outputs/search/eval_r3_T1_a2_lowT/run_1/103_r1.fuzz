@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main(int argc, char *argv[]) {
+    std::cout << "\\_//\\_//\\_//\\_//\\_//\\_//\\_//\\_//\\_//\\_//\\_//\\" << std::endl;
+}
+#include <iostream>
+#include <string.h>
+int deobfuscate(char *str) {
+    char temp = *(str + 1);
+    *(str + 1) = *str;
+    *str = temp;
+}
+int main(int argc, char *argv[]) {
+    std::string str = "0123456789abcdef";
+    deobfuscate(str.data());
+    std::cout << str << std::endl;
+}

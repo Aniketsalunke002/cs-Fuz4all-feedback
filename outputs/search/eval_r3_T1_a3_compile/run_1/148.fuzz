@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+struct Date {
+
+  int year_;
+  int month_;
+  int day_;
+
+  Date(int y, int m, int d) :year_(), month_(), day_() {
+    year_ = y;
+    month_ = m;
+    day_ = d;
+  }
+
+};
+
+int main(int argc, char* argv[]) {
+
+	Date birthday;
+	birthday.year_ = 1998;
+	birthday.month_ = 12;
+	birthday.day_ = 15;
+	cout << birthday.year_ << "/"<< birthday.month_ << "/"<< birthday.day_<< endl;
+
+  for(int i = 2000; i < 2004; i++) {
+    cout << i << "/" << (11 - i%4) << "/" << 46 - (i-1999)%4 << endl;
+  }
+  return 0;
+}

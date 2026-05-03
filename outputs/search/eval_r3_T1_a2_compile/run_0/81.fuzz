@@ -1,0 +1,98 @@
+#include <iostream>
+ using namespace std;
+ class Person
+ {    
+     public:    
+         int age;    
+         Person(int a):age(a){}    
+         friend ostream& operator<<(ostream& s,Person& p);    
+ };
+  ostream& operator<<(ostream& s,Person& p)    
+  {    
+         s << p.age;            
+         return s;    
+  }    
+  
+ int main()    
+{    
+     Person p1(12),p2(24);    
+     cout << "\n p1.age = "  << p1.age << "     p2.age = "  << p2.age << endl;    
+     return 0;    
+}
+
+ 
+#include <iostream>   
+using namespace std;   
+int myfor(int i, int j, int k)    
+{    
+   while(i<=j)    
+      {    
+         cout<<i <<" ";    
+         ++i;    
+      }    
+   return i;    
+}
+  
+int main()    
+{    
+   int x=0;    
+   cout<< "Enter the range value" <<endl;   
+   cin >> x;   
+   cout<<"Odd range : ";   
+   myfor(1, x, 2);   
+   cout<<endl;   
+   cout<<"Even range : ";   
+   myfor(0, x-1, 2);   
+   return 0;    
+}
+ 
+#include <iostream>    
+#include <cstdlib>    
+using namespace std;    
+struct Node   
+{    
+   int key;    
+   struct Node *left;   
+   struct Node *right;    
+};    
+struct Node *newNode(int item)    
+{    
+   struct Node *temp = new Node;    
+   temp->key = item;    
+   temp->left = temp->right = NULL;    
+   return temp;    
+}    
+Node *root;   
+  
+void insert(int item)   
+{    
+        Node *newnode,*temp;    
+        if (root==NULL)    
+        {        
+               root = newNode(item);        
+               return;    
+        }    
+        newnode = newNode(item);    
+        temp = root;    
+        while (temp!=NULL)    
+        {    
+               if (newnode->key < temp->key)    
+               {    
+               if (temp->left == NULL)    
+               {  
+                  temp->left = newnode;    
+                  return;    
+        }    
+                      
+            }    
+               else    
+                {    
+                if (temp->right == NULL)    
+                {    
+                  temp->right=newnode;   
+                return;}    
+        }   
+        temp = temp->key > item?temp->left:temp->right;    
+        }    
+    }    
+void inorder(Node

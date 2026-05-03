@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+template <typename T>
+void foo(T) {}
+
+template void foo(int *);
+template void foo(int);
+
+void foo1(int) { cout << "foo1" << endl; }
+void foo1(int *) { cout << "foo1" << endl; }
+
+int main()
+{
+  cout << "foo.cpp source code in main" << endl;
+  foo((int *)0);
+  foo1(0);
+  return 0;
+}

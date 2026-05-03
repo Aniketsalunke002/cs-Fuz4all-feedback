@@ -1,0 +1,38 @@
+#include <iostream>
+
+
+std::istream& operator>>(std::istream& in, std::ostream& out) {
+    return in;
+}
+std::ostream& operator<<(std::istream& in, std::ostream& out) {
+    return out;
+}
+int main() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin >> std::boolalpha;
+    std::cin >> std::string("true");
+    return 0;
+}
+
+// #include <iostream>
+// int main() {
+//     int x = 42;
+//     std::cout << x << '\n';
+//     x = -(x >> 1);
+//     std::cout << x << '\n';
+//     x = (!(x++));
+//     std::cout << x << '\n';
+//     x = (x + x - 1212) / 2^ 14;
+//     std::cout << x << '\n';
+//     return 0;
+// }
+//  
+// #include <iostream>
+// int main() {
+//     int prime = 2;
+//     std::cout << prime << '\n';
+//     while (!std::cin) return 1;
+//     std::cout << prime << '\n';
+//     for (char c = prime; c < 'z'; prime += 2)
+//         if (prime % 2 == 0)
+//             std::cout << c++ << '\

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int n,m,w,h,p;
+cin>>n>>m>>w>>h>>p;
+
+int n1=(2/7)*m;
+int n2=(5/11)*m;
+int n3=(13/15)*m;
+
+cout<<n+n1+n2+n3+w*h+w+h*p<<endl;
+return 0;
+}
+
+
+

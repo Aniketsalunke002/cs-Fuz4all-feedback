@@ -1,0 +1,46 @@
+#include <iostream>
+
+template<class T>
+class List2 {
+public:
+    List2(){}
+    void append(T elem){
+        elem;
+    }
+    void append(T& elem){
+        elem;
+    }
+    class iterator{
+    private: 
+        typename std::list<T>::iterator i;
+        iterator(typename std::list<T>::iterator it):i(it){
+        }
+    public:
+        friend std::ostream& operator << (std::ostream& os,const iterator& it){
+            os << *it;
+            return os;
+        }
+        template<class U>
+        friend bool operator!= (const iterator& it,const iterator& other) {
+            return it.i!= other.i;
+        }
+        Iterator& operator++(){
+            ++i;
+            return *this;
+        }
+        T operator*() const{
+            return *i;
+        }
+    };
+    iterator begin() {
+        return iterator(l.begin());
+    }
+    iterator end() {
+        return iterator(l.end());
+    }
+private:
+    std::list <T> l;
+};
+template<class T>
+std::ostream& operator << (std::ostream& os,List2<T>& l) {
+    for(typename List2<

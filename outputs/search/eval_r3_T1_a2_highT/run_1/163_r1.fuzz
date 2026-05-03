@@ -1,0 +1,12 @@
+#include <iostream>
+
+#define print cout << firstNumber << " " << secondNumber << std::endl;
+    
+    int main(){
+        int temp;
+        int a = 4, b = 5;
+        temp = a+b;
+        a = b*2/a;
+        print;
+    }
+    // Output of the below code is 40 10

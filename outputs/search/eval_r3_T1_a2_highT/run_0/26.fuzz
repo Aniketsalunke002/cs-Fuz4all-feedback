@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstdlib>
+int main()
+{
+	int x;
+	int y;
+	std::cout << "Please enter an integer number: ";
+	std::cin >> x;
+	std::cout << "Please enter an integer number: ";
+	std::cin >> y;
+	if (y>x) {
+		int cpy = y;
+		y = x;
+		x = cpy;
+	}
+	std::cout << "Result: " << y;
+	return EXIT_SUCCESS;
+}
+ 
+ 
+ 

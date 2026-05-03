@@ -1,0 +1,108 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x = 5;
+    cout << x << '\n';
+    x-- || cout << x << '\n';
+    x++ && cin >> x;
+    x -= x-4;
+    cin >> x;
+    while (--x > 10)
+    {
+        x = -x;
+    }
+    return 0;
+}
+ 
+#include <map>
+#include <string.h>
+enum {MAX_LEN=120};
+int n;
+char s[MAX_LEN];
+int main()
+{
+    cin >> n;
+    for (int i = 0; i<n; i++)
+    {
+        cin >> s;
+        std::map<char, bool> *m = new bool[26];
+        memset(m, false, 2*&n);
+        for (unsigned int j = 0; j<strlen(s); j++)
+        {
+            m[(int)s[j]-97] = true;
+        }
+        int count = 0;
+        for (auto j = m[0]; j < m[26]; j++)
+        {
+            if (j)
+                count++;
+        }
+        cout << count << '\n';
+    }
+    return 0;
+}
+ 
+#include <algorithm>
+#include <iostream>
+using namespace std;
+char s[1000];
+int len_s, len_t;
+bool find(int p, int n)
+{
+    if (p == len_t)
+        return true;
+    if (p == len_s)
+        return false;
+    if (n == 0)
+        return false;
+    bool f1 = find(p+1, n-1);
+    bool f2 = find(p+1, n);
+    return f1 && f2;
+}                 
+int main()
+{
+    while ((cin>>s>>len_s>>len_t)!=-1)
+    {
+        bool f = find(0, len_t-len_s+1);
+        if (f)
+            cout << "It " << "works" << '\n';
+        else
+            cout << "It " << "fails" << '\n';
+    }
+    return 0;
+}
+ 
+#include <iostream>
+#include <string.h>
+using namespace std;
+int n, x, y;
+char t[10][120];
+char root;
+int tree[10][10][2][120];
+int main()
+{
+    cin >> n;
+    while (n > 2)
+    {
+        cin >> x >> y;
+        tree[x][y][0] = tree[y][x][1];
+        if (x == y)
+        {
+            cin >> root;
+            int l = tree[root][0][0][0];
+            int r = y;
+            while (l > 0)
+            {
+                if (len(tree[l][r][1][*tree[l][r][1]++]) > len(tree[l][r][0][*tree[l][r][0]++]))
+                    std::rotate(tree[l][r][0], tree[l][r][0]+*tree[l][r][0], tree[l][r][0]+len(tree[l][r][0])+1);
+                    std::rotate(tree[l][r][1], tree[l][r][1]+*tree[l][r][1], tree[l][r][1]+len(tree[l][r][1])+1);
+                l--;
+            }
+        }
+    }
+    int i, j;
+    for (i = 0; i<tree[0][0][1][strlen(tree[0][0][1]); i++)
+    {
+        cout << tree[0][0][1][i];
+    }

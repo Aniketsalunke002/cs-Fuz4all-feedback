@@ -1,0 +1,26 @@
+#include <iostream>
+int main()
+{
+    __int8_t y = 30;
+    std::cout << ((y << 3) >> 5) << std::endl;
+}
+ 
+#include <iostream>
+int main()
+{
+    int x = 3;
+    int y = -2;
+    std::cout << ((x += 1) - (y -= 2)) << std::endl;
+}
+ 
+#include <iostream>
+int main()
+{
+    std::cout << -3000000000000000000LL << std::endl;
+}
+ 
+#include <iostream>
+int main()
+{
+    std::cout << -6400000000LL << std::endl;
+}

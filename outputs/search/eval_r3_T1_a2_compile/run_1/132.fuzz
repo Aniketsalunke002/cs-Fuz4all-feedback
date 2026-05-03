@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int count;
+    int result;
+    int x = 5;
+    cout << x*24 << "\n";
+    result = count*5;
+    cout << result + 15 << "\n";
+    x += 7;
+    cout << 3 + 2 + x << "\n";
+    cout << 2 + 5/7 << "\n";
+    bool z = false;
+    result = result*7;
+    cout << result << "\n";
+    int y = x;
+    cout <<y << "\n";
+    bool w = z;
+    cout << w << "\n";
+    return 0;
+}
+ 

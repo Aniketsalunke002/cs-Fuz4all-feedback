@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int y = 1, x = 1;
+    if ((124 < x) && 124 > x)
+    {
+        y = y * x * 387;
+    }else if ((-124 < x) && 124 < x )
+    {
+        y = y * x * 387;
+    }else if (124 < x)
+    {
+        y = y * x * 24 * 387;
+    }else if (-124 > x)
+    {
+        y = y * x * 145 * 387;
+    }
+    return 0;
+}

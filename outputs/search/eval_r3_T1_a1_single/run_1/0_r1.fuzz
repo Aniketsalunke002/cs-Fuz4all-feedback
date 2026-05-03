@@ -1,0 +1,24 @@
+#include <iostream>
+
+
+#include <utility>
+
+
+int main()
+{
+    std::pair<int, int> i1 (5, 3);
+    std::pair<float, float> f(5.7575, 52.54);
+
+    auto p1 = i1;
+    auto p2 = std::move(i1);
+    auto p3 = std::move(f);
+    auto p4 = i1;
+    auto p5 = f;
+    auto p6 = std::make_pair<double, double>(f);
+    auto p7 = std::make_pair(5.34343, 43.4343);
+
+    std::cout << p1.first + p1.second << std::endl;
+    std::cout << p4.first + p5.first << std::endl;
+    std::cout << p4.second + p5.second << std::endl;
+    std::cout << p7.first + p7.second << std::endl;
+}

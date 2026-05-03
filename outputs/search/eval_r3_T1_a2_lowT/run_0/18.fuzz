@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main()
+{
+    std::cout << __cplusplus << std::endl;
+    #ifdef _MSC_VER
+        std::cout << "_MSC_VER: " << _MSC_VER << std::endl;
+    #else
+        std::cout << "_MSC_VER is not defined" << std::endl;
+    #endif
+     
+    typedef int T_long = __w64 long;
+    T_long x_long = 42;
+    std::cout << x_long << std::endl;
+     
+    #ifndef RC_INVOKED
+    typedef int T_int = __w64 int;
+    T_int x_int = 43;
+    std::cout << x_int << std::endl;
+    #endif
+}
+```

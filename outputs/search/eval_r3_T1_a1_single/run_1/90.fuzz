@@ -1,0 +1,113 @@
+#include <iostream>
+using namespace std;
+class Point {
+	public:
+		Point(int,int);
+		virtual ~Point();
+		int x;
+		int y;
+};
+Point::Point(int val1, int val2):x(val1),y(val2)
+{
+}
+Point::~Point()
+{
+}
+	class MutatedPoint : public Point
+{
+public:
+	MutatedPoint(int,int);
+	void printPoint();
+	virtual ~MutatedPoint();
+	private:
+		int x;
+		int y;
+};
+ 
+
+MutatedPoint::MutatedPoint(int _x,int _y):Point(_x,_y)
+{
+}
+
+void MutatedPoint::printPoint()
+{
+	cout << " x = " << x << " y = " << y << endl;
+}
+MutatedPoint::~MutatedPoint()
+{
+}
+
+int main()
+{
+	MutatedPoint mPoint(50,48);
+	mPoint.x += 10;
+	mPoint.printPoint();
+	return 0;
+}
+ 
+	#include <iostream>
+	#include <fstream>
+	#include <cstdlib>
+	#include <sys/wait.h>
+	 
+	using namespace std;
+	extern string readInputString(istream&);
+	extern void readInputDouble(istream&,double&);
+	extern void createRandom(double&);
+	void forkRandomChild();
+	 
+	 
+	stringstream ss;
+	int i = 0;
+	while (i++ < 10000000) {
+		string input;
+		double temp;
+		ss << "hello" << " " << "world" << endl;
+		input = ss.str();
+		ss.clear();
+		input = readInputString(cout);
+	}
+		forkRandomChild();
+	}
+	void forkRandomChild()
+	{
+		int pid,status;
+		pid = fork();
+		if(-1 == pid)
+		{
+		cout << "failed fork" << endl;
+		return;
+		}
+		else if(0 == pid)
+		{
+			cout << "I am child " << getpid()<<  " and my parent is " << getppid();
+			exit(0);
+		}
+		else if(pid > 0)
+		{
+			cout << "I am parent " << getpid() <<  " and I created process " << pid;
+		}
+		
+		
+		
+		wait(&status);
+	}
+	extern string readInputString(istream&);
+	extern void readInputDouble(istream&,double&);
+	extern void createRandom(double&);
+	string readInputString(istream& is)
+	{
+		char temp;
+		string input;
+		temp = is.get();
+		while (isdigit(temp) || temp == '-') {
+			
+			input += temp;
+			temp = is.get();
+		}
+		if (1!= is.eof()) {
+			is.putback(temp);
+		}
+		return input;
+	}
+	void readInputDouble

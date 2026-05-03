@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+class A {
+private:
+	int m_value = 0;
+public:
+	A(int value = 0) : m_value(value) {}
+	virtual ~A() = default;
+
+	virtual void test(A& a) {
+	   cout << "Test called from A class" << endl;
+   }
+
+	void printM_value() {
+		cout << "m_value = " << m_value << endl;
+	}
+};
+class B : public A {
+public:
+	B(int value = 0) : A(value) {
+	}
+	void test(A& a) override {
+	   cout << "Test called from B class" << endl;
+   }
+};
+void test(A& a) {
+   cout << "Test called from global scope" << endl;
+   a.printM_value();
+}
+int main(int argc,char **argv) {
+	cout << "Test for pointers..." << endl;
+	B b(1), b2(2);
+	 
+	 
+   A* a = &b;
+   cout << a->m_value << endl;
+	 
+	 
+   B& b3 = b;
+   test(*a);
+   test(b);
+   test(b3);
+	cout << "Test for references..." << endl;
+	 
+	 
+   A& a2 = b2;
+   a2.printM_value();
+	return 0;
+}

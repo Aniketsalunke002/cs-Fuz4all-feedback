@@ -1,0 +1,9 @@
+#include <iostream>
+
+#include <vector>
+#include <exception>
+
+int main() {
+  std::vector<int> v;
+  throw 1;
+}

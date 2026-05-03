@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+cout << sizeof(char);
+cout << sizeof(int);
+cout << sizeof(short);
+cout << sizeof(long);
+cout << sizeof(long long);
+cout << sizeof(string);
+return 0;

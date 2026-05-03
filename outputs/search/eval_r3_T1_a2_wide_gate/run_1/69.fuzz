@@ -1,0 +1,14 @@
+#include <iostream>
+int main (void)
+{
+  std::clog << 1;
+  std::list<int> numbers { 1, 2, 3, 4 };
+  int sum (0);
+  for (auto iter = numbers.begin(); iter!= numbers.end() - 1;++iter)  
+    for(int i = *iter; i> 0; --i)
+      sum += *iter;
+  auto iter = numbers.begin() + (numbers.size()-1);
+  for(int i = *iter; i> 0; --i)
+    sum += *iter;
+  std::clog << sum;
+}

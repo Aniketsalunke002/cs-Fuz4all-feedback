@@ -1,0 +1,145 @@
+#include <iostream>
+class MyClass2
+{
+    public:
+    void print() {}
+    virtual void say() {}
+    virtual ~MyClass2() {}
+};
+ 
+#include <iostream>
+class MyClass3
+{
+    private:
+    virtual void print1() = 0;
+    public:
+    void print2() {}
+};
+ 
+ 
+class Civilian 
+{
+public:
+  Civilian();
+  Civilian(const Civilian&) = default;
+  Civilian(Civilian&&);
+  Civilian& operator=(const Civilian&) = default;
+  Civilian& operator=(Civilian&&) = default;
+  virtual ~Civilian() = default;
+};
+ 
+template <typename T>
+T get(T i)
+{
+    return i;
+}
+ 
+
+ 
+ 
+#include <iostream>
+using namespace std;
+
+class MyClass61
+{
+    public:
+    virtual void print() = 0;
+    virtual ~MyClass61() {}
+};
+ 
+ 
+ 
+ 
+ 
+
+class MyClass62
+{
+    public:
+    void print() {}
+    virtual ~MyClass62() {}
+};
+ 
+ 
+ 
+ 
+
+class A
+{
+    public:
+    int add(int i, int j)
+    {
+        return i + j;
+    }
+    int subtract(int i, int j)
+    {
+        return i - j;
+    }
+};
+#include <iostream>
+
+class AdditionSub
+{
+    private:
+    A a;
+    public:
+    int add(int i, int j)
+    {
+        return a.add(i,j);
+    }
+    int subtract(int i, int j)
+    {
+        return a.subtract(i,j);
+    }
+};
+ 
+ 
+ 
+ 
+
+class Civilian
+{
+public:
+  Civilian();
+  ~Civilian() = default;
+};
+class ArmedCitizen
+{
+public:
+  ArmedCitizen();
+  ~ArmedCitizen() = default;
+};
+template <typename T>
+class MyClass82 
+{
+    public:
+    static bool isCivilian(T*)
+    {
+        return true;
+    }
+};
+ 
+ 
+
+class A
+{
+    public:
+    void func(int)
+    {
+        return;
+    }
+    static bool isCivilian()
+    {
+        return true;
+    }
+};
+
+class B
+{
+    public:
+    void func(int)
+    {
+        return;
+    }
+    static void isCivilian()
+    {
+        return;

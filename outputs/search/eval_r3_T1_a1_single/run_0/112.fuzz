@@ -1,0 +1,8 @@
+#include <iostream>
+int main ()
+{
+    int a =4;
+    a=a+2;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}

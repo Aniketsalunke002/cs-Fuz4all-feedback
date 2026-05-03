@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, e, g;
+    g = e + 20;
+    cout << g << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, e, g;
+	g = e + 20;
+	 cin >> n;
+	 cout << n >> g << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, g;
+    cout << n;
+    g == 20;
+    if(n!= g)
+        cout << "This is true!";
+    cout << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv)	{
+  int n, g;
+  cout << "Number: ";
+  cin >> n;
+  do {
+      cout << n << endl;
+      n *= 2;
+      g += n;
+	}while(n > 0);
+
+    return 0;
+}

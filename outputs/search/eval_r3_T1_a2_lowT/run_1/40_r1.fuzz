@@ -1,0 +1,54 @@
+#include <iostream>
+
+#include <string>
+#include <stdio.h>
+using namespace std;
+
+class TClass
+{
+    public:
+        TClass () {};
+        TClass ( int a ) {
+            i = a;
+            str = "";
+            printf("TClass Constructor i:%d\n",i);
+        }
+        ~TClass() {
+            printf("TClass Destructor i:%d\n", i);
+        }
+        int GetVal () { return i; }
+        void SetStr ( std::string v ) {
+            str = v;
+            printf("TClass SetMember str:%s i:%d\n", str.c_str(),i);
+        }
+        std::string GetStr () { return str; }
+    private:
+        int i;
+        std::string str;
+};
+TClass TClassObject ()
+{
+    return TClass(123);
+}
+
+int main (int argc, char ** argv)
+{
+    printf ("Start\n");
+    TClass ObjectVar;
+
+    ObjectVar.SetStr ("Hello World");
+
+    printf ("Test GetVal: %d\nTEST GetStr: %s\n",
+        ObjectVar.GetVal(), ObjectVar.GetStr().c_str());
+
+    TClass t = TClassObject();
+
+    printf ("Test t.GetVal: %d\n", t.GetVal());
+
+    printf ("Test t.GetStr: %s\n", t.GetStr().c_str());
+
+    char * str = new char [100];
+    strcpy (str, "");
+    printf ("End\n");
+    return 0;
+}

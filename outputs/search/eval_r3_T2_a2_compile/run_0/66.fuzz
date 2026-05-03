@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int a, b, c, x;
+    cin >> a >> b >> c;
+    while (a % c!= 0 || b % c!= 0)
+    {
+        a += b;
+        a %= c;
+        b += b;
+        b %= c;
+    }
+    cout << "YES";
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    int x = 10;
+    x = 20;
+    int& y = x;
+     
+    y = 40;
+     
+    cout << x << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+class IObject {
+public:
+    virtual int add(int v1, int v2) = 0;
+};
+class CObject1 : IObject {
+public:
+    int add(int v1,

@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+	long long d = 1996;
+	d += 922337203685;
+	if (d >= 1997) {
+        	cout << "success";
+	} else if (d < 1997) {
+		cout << "fail";
+	}
+	return d < 1997? -1 : 0;
+}

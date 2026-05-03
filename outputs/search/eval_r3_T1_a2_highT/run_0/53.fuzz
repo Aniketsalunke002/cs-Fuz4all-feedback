@@ -1,0 +1,24 @@
+#include <iostream>
+int main()
+{
+  int a = 0, b = 1;
+  long long total = b;
+  for (unsigned int i = 0; i <= 10000; i++)
+  {
+    a += b;
+    b += a;
+    if (total % 2)
+    {
+      total += 2e12;
+    }
+    else
+    {
+      total -= 2e12;
+    }
+  }
+   
+  std::cout << total;
+  return 0;
+}
+```
+

@@ -1,0 +1,8 @@
+#include <iostream>
+#include <new>
+inline void ThrowOnNew() {
+    throw std::bad_alloc();
+}
+int main(int argc, char *argv[]) {
+    std::cout << std::bad_alloc() << "\n";
+}

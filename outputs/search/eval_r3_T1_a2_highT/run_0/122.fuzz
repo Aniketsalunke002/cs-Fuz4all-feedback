@@ -1,0 +1,6 @@
+#include <iostream>
+int main(){
+    char ctest[13]= "Hello World";
+    std::cout << ctest << "\n";
+    return 0;
+}

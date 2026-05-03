@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+int main ()
+{
+    int array1[10]={1,2,4,5,6,7,9,10,11,12};
+    int array2[10]={13,14,15,16};
+    int i=2;
+    int lenght1=10, lenght2=3;
+    int newlenght2=i+lenght2;
+    while (i<newlenght2)
+    {
+        array2[i]+=3;
+        i++;
+    }
+   for (int i=0;i<13;i++)
+    {
+        cout<<array1[i]<<"+"<<array2[i]<<"="<<array1[i]+array2[i]<<endl;
+    }
+    for (int i=0;i<13;i++)
+    {
+        cout<<array1[i]<<" "<<endl;
+    }
+}

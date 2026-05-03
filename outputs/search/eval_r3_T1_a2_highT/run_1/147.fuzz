@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]){
+    int i = 3;
+    double k = 9;
+    char c = i * k;
+    
+    return 0;
+}
+ 
+ 
+#include <iostream>
+#include <chrono> 
+using namespace std;
+
+void fun(int * p, int value){
+    *p = value;
+}
+
+void main( int argc, char* argv[] ) 
+{
+  chrono::time_point<chrono::high_resolution_clock> t1,t2;
+  long long unsigned int res = 0;
+	
+  t1=chrono::high_resolution_clock::now();
+
+   
+  int* a = (int*)malloc(sizeof(int)*10000);
+
+   
+  for (int i=0; i<10000; i++)
+    a[i] = 1;
+
+   
+  for (int i=0; i<10000; i++){
+    fun(a+i,1);
+  }
+
+  t2=chrono::high_resolution_clock::now();
+  chrono::duration<double> time_span=chrono::duration_cast<chrono::duration<double>> (t2-t1);
+  double mseconds = time_span.count()*1000.0;
+  cout << "Time taken : " << mseconds << " ms" << endl; 
+	
+  free(a);
+
+  return 0;
+}

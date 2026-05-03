@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main(int argc, char** argv) {
+    int a_val,b_val,c_val,a_result,b_result,c_result;
+    std::cin >> a_val>>b_val>>c_val>>a_result>>b_result>>c_result;
+    if ( a_result==c_val ) {
+        if ( a_result % c_val > 0 && a_result / c_val % b_val == 0 )
+            a_result--, b_result++;
+        else
+            a_result++, b_result--;
+    }
+    std::cout << a_result << " " << b_result << " " << c_result;
+}
+
+
+// #include <bits/stdc++.h>
+// #include <iostream>
+// using namespace std;
+// int main(){
+// 	int a_val,b_val,c_val,a_result,b_result,c_result;
+// 	cin>>a_val>>b_val>>c_val>>a_result>>b_result>>c_result;
+// 	if(a_result==c_val){
+// 		if(a_result%c_val>0 && a_result/c_val%b_val==0){
+// 			a_result--;
+// 			b_result++;
+// 		}
+// 		else{
+// 			a_result++;
+// 			b_result--;
+// 		}
+// 	}
+// 	cout<<a_result<<" "<<b_result<<" "<<c_result;
+// }

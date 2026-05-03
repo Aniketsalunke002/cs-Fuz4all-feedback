@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include <type_traits>
+constexpr bool is_even(int n) { return n % 2 == 0; }
+int main() {
+  int input;
+  std::cin >> input;
+  if constexpr (std::is_same<decltype(input),int>::value && is_even(input)) {
+    std::cout << (input << 1);
+  } else if constexpr (std::is_same<decltype(input),int>::value &&!is_even(input)) {
+    std::cout << input / 2;
+  }
+  return 0;
+}

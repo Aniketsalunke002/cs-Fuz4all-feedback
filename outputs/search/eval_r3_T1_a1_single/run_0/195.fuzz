@@ -1,0 +1,7 @@
+#include <iostream>
+int main() {
+  std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a += 1)
+    std::cout << a;
+  return 0;
+}

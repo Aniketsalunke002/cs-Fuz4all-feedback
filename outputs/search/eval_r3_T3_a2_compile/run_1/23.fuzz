@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+    	int iField1;
+    	int iField2;
+    	A():iField1(777){iField2=1000;}
+	A(const A &r): iField1(r.iField1+1),iField2(r.iField2+6){cout<<iField1<<' '<<iField2<<endl;}
+	A& operator=(const A&r)
+	{
+		iField1=r.iField1;
+		iField2=r.iField2+5;
+	}
+};
+int main()
+{
+	A one, two(one);
+    	one=two;
+    	return 0;
+}

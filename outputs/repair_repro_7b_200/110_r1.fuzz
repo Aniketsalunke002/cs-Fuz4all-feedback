@@ -1,0 +1,27 @@
+#include <iostream>
+
+#include <mutex>
+#include <condition_variable>
+std::mutex mtx;
+std::condition_variable cv;
+int lk;
+void foo() {
+    mtx.lock();
+    cv.notify_all();
+    mtx.unlock();
+}
+void foobar(int x) {
+    mtx.lock();
+    cv.wait(mtx, [&x]{
+        return x;
+    });
+    mtx.unlock();
+}
+int main(void) {
+    std::thread t([]() {
+        foobar(1);
+    });
+    foo();
+    t.join();
+    return 0;
+}

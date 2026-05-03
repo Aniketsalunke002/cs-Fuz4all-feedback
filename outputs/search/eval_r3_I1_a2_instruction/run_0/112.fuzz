@@ -1,0 +1,11 @@
+#include <iostream>
+    using namespace std;
+int main() {
+  int i;
+  for(i=0; i<=9; i++) {
+    cout << "Loop iteration " << i;
+    if (i%7==0) cout << ": This text is inside IF-statement with comparison with 10";
+    cout << '\n';
+  }
+  cout << "End loop" << endl;
+}

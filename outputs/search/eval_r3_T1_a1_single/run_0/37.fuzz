@@ -1,0 +1,7 @@
+#include <iostream>
+std::ostream& operator<<(std::ostream& ostr, const char* str) {
+    std::cout << str << std::endl;
+}
+int main() {
+    "Hello world!";
+}

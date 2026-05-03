@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+class d  
+{
+    string name="Nameless";
+};
+class e  
+{
+    string a="Nameless";
+    string b="Nameless";
+    double c=0;
+public:
+    double getc()
+    {
+        return this->c;
+    }
+};
+int main()
+{
+    e object_e;  
+    cout<<object_e.getc();  
+    return 0;
+}

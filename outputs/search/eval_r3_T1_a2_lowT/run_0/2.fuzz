@@ -1,0 +1,83 @@
+#include <iostream>
+
+#include <fstream>
+#include <string>
+#include <sstream>
+#include <regex>
+
+#include <boost/program_options.hpp>
+#include <boost/range/iterator_range.hpp>
+#include <boost/graph/adjacency_list.hpp>
+#include <boost/graph/depth_first_ordering.hpp>
+#include <boost/uuid/uuid.hpp>             
+#include <boost/uuid/uuid_generators.hpp>  
+#include <boost/uuid/uuid_io.hpp>          
+
+#include <boost/log/trivial.hpp>
+#include <boost/log/utility/setup/file.hpp>
+#include <boost/log/utility/setup/common_attributes.hpp>
+#include <boost/log/sources/severity_logger.hpp>
+#include <boost/log/utility/setup/common_attributes.hpp>
+#include <boost/log/sources/record_ostream.hpp>
+#include <boost/log/attributes/scoped_attribute.hpp>
+#include <boost/log/utility/setup/console.hpp>
+#include <boost/log/support/date_time.hpp>
+
+#include "graph/graph.hpp"
+#include "graph/builder.hpp"
+#include "pathfinder/dijkstra.hpp"
+#include "map/map.hpp"
+
+int main(int argc, char *argv[])
+{
+    namespace logging = boost::log;
+    logging::trivial::severity_level severity;
+    severity = logging::trivial::info;
+    logging::add_file_log
+        (
+            logging::keywords::file_name = "log_%N.csv", logging::keywords::format = "[%TimeStamp %Severity%] %Message%"
+             
+        );
+
+    logging::core::get()->set_filter
+    (    logging::trivial::severity >= severity
+    );
+
+    std::cout << "Begin program" << std::endl;
+
+    boost::uuids::uuid session_id = boost::uuids::uuid::random_generator()();
+    BOOST_LOG_TRIVIAL(trace) << "random: " << boost::uuids::to_wstring(session_id);
+
+    std::cout << "\tGenerating test data." << std::endl;
+
+    std::string startfile = "files/graph1.txt";
+    std::string endfile = "files/graph2.txt";
+    graph_builder graphbuilder(startfile, endfile);
+
+    std::ofstream mapfile("files/map1.txt");
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+    map::map testmap(size_t(3), size_t(3));
+    testmap.node(0, 2, 6, {8});
+    testmap.node(1, 4, 2, {1});
+    testmap.node(2, 9, 8, {});
+
+    const math::node::vec_position_t<size_t> startnodes = { 1, 2, 9 };
+    const math::node::vec_position_t<size_t> endnodes =   { 7, 2, 3 };
+    graph::graph<size_t> graph(startnodes, endnodes);
+ 
+ 
+
+    pathfinder::dijkstra<size_t, size_t> dijkstra(session_id);
+    std::ostream_iterator<size_t> oi(std::cout, " ");
+    dijkstra.run(graph, testmap);
+
+
+    return EXIT_SUCCESS;
+}

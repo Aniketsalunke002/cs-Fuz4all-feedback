@@ -1,0 +1,28 @@
+#include <iostream>
+int main() {
+    int a{3};
+    return 0;
+}
+ 
+
+class test{
+    int data=10;
+public:
+    test() = default;
+    test(const test& other){
+        std::cout<<other.data<<std::endl;
+    };
+    test& operator=(const test& other) {
+        data=other.data;
+        std::cout<<other.data<<std::endl;
+        return *this;
+    }
+    ~test() = default;
+};
+
+int main(int, char **) {
+    test first_test;
+    test second_test;
+    second_test=second_test;
+    return 0;
+}

@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	int input;
+	cin >> input;
+	if (input >= 0 && input <= 100) {
+		input = 3 * -input;
+		cout << "Value is : " << input << "\n"
+		     << endl;
+	} else {
+		cout << "You may use it.\n";
+	}
+}
+//  
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+// 	char input;
+// 	cin >> input;
+// 	if (input >= 'a' && input <= 'z') {
+// 		cout << "You may use it.\n";
+// 	} else {
+// 		cout << "You may not use it.\n";
+// 	}
+// }
+
+//   Output of the above code:
+//  Value is : 300
+//

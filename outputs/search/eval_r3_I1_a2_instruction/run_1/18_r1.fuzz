@@ -1,0 +1,16 @@
+#include <iostream>
+int main ()
+{
+	size_t sizearr = 3;
+	char charr[sizeof(char) * sizearr];
+	return charr[sizeof(charr) / sizeof(charr[0]) / 2];
+}
+ 
+#include <iostream>
+using namespace std;
+int main ()
+{
+	int i = 0;
+	while (cin >> i) cout << i << endl;
+    return 0;
+}

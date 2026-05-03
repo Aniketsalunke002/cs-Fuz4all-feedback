@@ -1,0 +1,30 @@
+#include <iostream>
+class MyClass{};
+int main()
+{
+    MyClass x;
+}
+
+ 
+#include <iostream>
+int main(){
+    std::cout<<"Hello C++\n";
+    return 0;
+     
+    char* message = "Hello C++\n" ;
+    std::cout<<*message;
+     
+    int a = 77;
+    long long int b = 777;
+    int c = 3;
+    long long int d = 33;
+    int* q = nullptr;
+     
+    int* r;
+}
+int main()
+{
+int a = 3;
+long long int b = 18;
+ 
+}

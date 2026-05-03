@@ -1,0 +1,12 @@
+#include <iostream>
+
+#include <vector>
+using namespace std;
+void vector_usage(void) {
+  vector<int> v, v1(10, 0);
+  vector<int> v2(v1.begin(), v1.end());
+  vector<int> v3{10, 20, 30};
+  vector<int> v4{begin(v3), end(v3)};
+  vector<int> v5{v4.begin(), v4.end()};
+}
+int main(void) { vector_usage(); }

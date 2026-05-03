@@ -1,0 +1,7 @@
+#include <iostream>
+int main() {
+  int a,b,c,d,e,f;
+  std::cin>>a>>b>>c>>d;
+  std::cout<<c*d-b*f<<std::endl;
+  return 0;
+}

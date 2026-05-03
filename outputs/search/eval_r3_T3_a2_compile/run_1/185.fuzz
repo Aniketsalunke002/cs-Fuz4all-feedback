@@ -1,0 +1,19 @@
+#include <iostream>
+int main(int argc, char *argv[])
+{
+    char *var = new char[6]{'H','E','L','A','Q','U'};
+    std::string str = "HOLAQu";
+    for (size_t i = 3; i<6; i++)
+    {
+    	if (str[i]==var[i]) continue;
+    	else
+    	{
+    		str[i] = var[i];
+    		break;
+    	}
+    }
+    std::cout << "Hello" << str;
+    delete[6] var;
+
+    return 0;
+}

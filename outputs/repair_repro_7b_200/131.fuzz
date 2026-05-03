@@ -1,0 +1,28 @@
+#include <iostream>
+
+int main() {
+    std::cout << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+#include <map>
+#include <algorithm>
+#include <string>
+int main() {
+    std::map<std::string, std::string> m;
+    auto f = m.find("");
+    if (f == m.end()) {
+        std::cout << "found" << std::endl;
+    }
+    m.at("");
+    return 0;
+}
+ 
+#include <iostream>
+#include <chrono>
+int main() {
+    std::chrono::steady_clock::time_point t;
+    std::cout << std::chrono::duration_cast<std::chrono::milliseconds>(t.time_since_epoch()).count() << std::endl;
+    return 0;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std::string_literals;
+ 
+int main(void)
+{
+  std::string text{"Hello, world!"s};
+  std::cout << text << '\n';
+ 
+  return 0;
+}

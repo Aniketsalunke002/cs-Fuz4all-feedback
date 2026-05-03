@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+    double a;
+    cout<<"Please input an integer number:\n";
+    cin>>a;
+    if(a<=2)
+        cout<<a<<" is less than or equal to 2.\n";
+    else
+        if(a>4)
+            cout<<a<< " is greater than 4\n";
+        else
+            cout<<a<<" is neither 2 nor 3 nor greater than 4\n";
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 5, b = 12;
+	cout << a + b << endl;
+	cout << __gcd(a, b) << endl;
+	cout << 1e9 * 1e6 * 1e3 * 1e3 * 10 << endl;
+	cout << 1.2e30 * 3 << endl;
+	cout << b << a << endl;
+	return 0;
+}

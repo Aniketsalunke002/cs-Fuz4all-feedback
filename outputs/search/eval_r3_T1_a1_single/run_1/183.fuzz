@@ -1,0 +1,10 @@
+#include <iostream>
+uint max(uint f,uint s){
+	if(f < s){return s;}
+	return f;
+}
+int main(){ 
+	int a=10;
+	std::cout<<max(a,10)<<std::endl;
+}
+```

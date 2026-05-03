@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+	char* mycar="volvo xC200";
+	int value=5;
+	mycar= "volvo xc";
+	value=10;
+	cout<<"my car is "<<mycar<<" and my value is "<<value<<endl;
+	cout<<*((char*)&mycar+20)<<"x"<<endl;
+}
+void* malloc(unsigned long int size){
+	extern "C" void* __builtin

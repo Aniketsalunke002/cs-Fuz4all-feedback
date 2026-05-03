@@ -1,0 +1,28 @@
+#include <iostream>
+using std::cout;
+#include <string>
+int main(void)
+{
+	 
+	auto sum_f = [](auto x, auto y) -> decltype(x + y) { return x + y; };
+	string s = sum_f("Hello ", "world\n");
+	cout << s << std::endl;
+	 
+	auto e = sum_f(4, 3);
+	cout << e << std::endl;
+	auto sum_lambda = [](decltype(auto) x, decltype(auto) y)
+					-> decltype(x + y) { return x + y; };
+	string w = sum_lambda("Hello ", "world\n");
+	e = sum_lambda(4, 3);
+	cout << e << std::endl;
+	e = sum_lambda("abc", 6);
+	cout << e << std::endl;
+	e = sum_lambda(8, 42.2);
+	cout << e << std::endl;
+	auto g = int { 9 };
+	auto h = g;
+	string j = sum_f("Hello ", "world\n");
+	e = sum_f(4, 3);
+	cout << e << std::endl;
+	return 0;
+}

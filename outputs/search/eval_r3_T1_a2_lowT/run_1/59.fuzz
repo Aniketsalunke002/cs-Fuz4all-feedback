@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << argc << " ";
+    struct Data
+    {
+        ~Data()
+        {
+            cout << "~Data\n";
+        }
+        void doSomething()
+        {
+            cout << "Data::doSomething\n";
+        }
+    };
+    Data data;
+    data.doSomething();
+    Data cdata(data);
+    data.doSomething();
+    cdata.doSomething();
+    cdata = data;
+    cdata.doSomething();
+    cout << "end of main\n";
+    return 0;
+}

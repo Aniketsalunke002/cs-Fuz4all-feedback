@@ -1,0 +1,9 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+  double x, y;
+  cin >> x >> y;
+  cout << (sin(y) + cos(y - 90) + cos(y + 90) - 3) * x << endl;
+  return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+
+
+#define new new(int)
+struct Widget {int value;};
+
+int main ()
+{
+Widget x;
+std::cout << x.value;
+}
+
+</pre>
+</body>
+</html>

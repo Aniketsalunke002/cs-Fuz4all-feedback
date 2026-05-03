@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    cout << "start of main\n";
+    struct Person
+    {
+        int age;
+        int height;
+        int weight;
+        Person() : age(0), height(0), weight(0)
+        {
+            cout << "person constructor\n";
+        }
+    };
+    Person me;
+    cout << "age: " << me.age << endl;
+    me.age += 1;
+    cout << "age: " << me.age << endl;
+    Person you = me;
+    you.age += 1;
+    cout << "age: " << me.age << endl;
+    cout << me.height + me.weight << "\n";
+    cout << you.height + you.weight << "\n";
+}

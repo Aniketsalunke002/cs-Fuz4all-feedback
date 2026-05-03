@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char* argv[]) {
+	int a[] = {1, 2, 3};
+	auto p = &a[1];
+	unsigned int b = static_cast<unsigned int>(p) - static_cast<unsigned int>(&a);
+	a = new int[a[0] + b];
+	return 1;
+}

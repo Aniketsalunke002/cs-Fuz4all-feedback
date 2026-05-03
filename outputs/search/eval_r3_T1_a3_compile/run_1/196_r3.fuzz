@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+#include <map>
+void doX(const map<int,int>& y)
+{
+	cout << "yes" << endl;
+}
+int zmain()
+{
+	static map<int,int> x;
+	x.insert(pair<const int,int>(1,2));
+	pair<bool,map<int,int>::iterator> f=x.insert(pair<const int,int>(7,8));
+	doX(f.first);
+	x=y;
+	doX(z);
+	if (x==z) cout << "yes\nwtf";
+	return 0;
+}

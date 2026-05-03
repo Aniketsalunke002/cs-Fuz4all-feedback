@@ -1,0 +1,25 @@
+#include <iostream>
+class MyClass1
+{
+    public:
+    void print() {}
+    virtual void say() {}
+    virtual ~MyClass1() {}
+};
+class MyClass2 : public MyClass1
+{
+    public:
+    void print() {}
+    void say()
+    {
+        std::cout<<"Hi!\n";
+    }
+};
+int main()
+{
+    MyClass1* m1 = new MyClass2;
+    MyClass1* m2 = new MyClass2;
+    m1->say();
+    m2->say();
+    return 0;
+}

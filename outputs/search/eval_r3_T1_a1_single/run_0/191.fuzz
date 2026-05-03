@@ -1,0 +1,17 @@
+#include <iostream>
+ 
+#ifdef __cplusplus
+namespace preproc_workarounds {
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+}
+#else
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+#endif

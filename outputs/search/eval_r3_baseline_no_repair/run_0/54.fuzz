@@ -1,0 +1,45 @@
+#include <iostream>
+struct B
+{
+    B() { std::cout << "B" << std::endl; }
+    ~B() { std::cout << "~B" << std::endl; }
+};
+struct Base
+{
+    Base() { std::cout << "Base" << std::endl; }
+    ~Base() { std::cout << "~Base" << std::endl; }
+};
+using BasePtr = Base *const;
+struct Der : Base
+{
+    Der() { std::cout << "Der" << std::endl; }
+    ~Der() { std::cout << "~Der" << std::endl; }
+    void f() { std::cout << "Base f" << std::endl; }
+};
+struct Der2 : Der
+{
+    Der2() { std::cout << "Der2" << std::endl; }
+    ~Der2() { std::cout << "~Der2" << std::endl; }
+    void f() override { std::cout << "Der2 f" << std::endl; }
+};
+BasePtr f() { return nullptr; }
+int main()
+{
+    std::cout << "Start" << std::endl;
+    Base* p = new Der2;
+    Base* p2 = new Der2;
+    p->f();
+    p2->f();
+    if (reinterpret_cast<Der*>(p))
+    {
+        static_cast<Der*>(p)->~Der();
+    }
+    p2 = f();
+    p2->f();
+    f() = p2;
+    if (reinterpret_cast<Der*>(p))
+    {
+        static_cast<Der*>(p)->~Der();
+    }
+    std::cout << "End" << std::endl;
+}

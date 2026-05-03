@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a(1), b(2);
+	cout << a * b << endl;
+	cout << a *= 2 * b *= 3 << endl;
+   cout << a * b << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+   int age(0), height(0), isWoman(false);
+   cout << age + height + isWoman << endl;
+}
+ 
+#include <iostream>
+#include <cstdlib>
+#include <cmath>
+using namespace std;
+int main(int argc, char *argv[]) {
+   char my_character = 'F'; float my_float = 3.14; int my_int = 7; double my_double = M_PI; short my_short = -32768; long my_long = 21474836480; unsigned short my_ushort = 65535; unsigned long my_ulong = 4294967295; unsigned int my_uint = 0xFF15FF15;
+   cout << "character: " << my_character << endl;
+   cout << "integer: " << a << endl;
+   cout << "float: " << my_float << endl;
+   cout << "double: " << my_double << endl;
+   cout << "short: " << my_short << endl;
+   cout << "long integer: " << my_long << endl;
+   cout << "unsigned short: " << my_ushort << endl;
+   cout << "unsigned long: " << my_ulong << endl;
+   cout << "unsigned integer: " << my_uint << endl;
+}

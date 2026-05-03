@@ -1,0 +1,17 @@
+#include <iostream>
+
+
+template <typename T>
+T f(T x) {
+	return x % 20;
+}
+
+int main() {
+	std::cin >> (int)2;
+	int x = 5;
+	do {
+		std :: cout << (int)x << " ";
+		x= f(x);
+		++x;
+	} while(x<50);
+}

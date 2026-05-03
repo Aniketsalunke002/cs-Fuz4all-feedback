@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <iomanip>
+#include <algorithm>
+#include <tuple>
+#include <string>
+using namespace std;
+int main() {
+  long long x, y;
+  cin >> x >> y;
+  double ans = 1 - sin((y / 180) * M_PI);
+  cout << fixed << setprecision(4) << ans * x << endl;
+  return 0;
+}

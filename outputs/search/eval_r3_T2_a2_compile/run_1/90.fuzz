@@ -1,0 +1,7 @@
+#include <iostream>
+int main6(){
+
+auto a=1;
+std::cout << __builtin_expect(a,3) << "\\n";
+return 0;
+}

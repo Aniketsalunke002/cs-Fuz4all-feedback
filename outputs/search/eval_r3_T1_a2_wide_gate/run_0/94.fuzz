@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[50];
+    arr[0] = 0;
+    for (int i = 1; i < 50; ++i)
+    {
+        arr[i] = arr[i-1] + arr[i-1];
+        cout << i << " : " << arr[i] << endl;
+    }
+    return 0;
+}

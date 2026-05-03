@@ -1,0 +1,8 @@
+#include <iostream>
+int main ()
+{
+    char a = 'A';
+    a = a + 1;
+    std::cout << "the value of the variable a " << a << std::endl;
+    return 0;
+}

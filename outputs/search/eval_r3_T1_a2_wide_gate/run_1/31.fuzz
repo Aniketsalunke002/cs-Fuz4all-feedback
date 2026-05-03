@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+class Bla {
+public:
+	Bla() {
+       std::cout << "Hello world!" << std::endl;
+	}
+};
+
+void doTest() {
+	Bla bla;
+}
+
+int main() {
+	doTest();
+	return 0;
+}

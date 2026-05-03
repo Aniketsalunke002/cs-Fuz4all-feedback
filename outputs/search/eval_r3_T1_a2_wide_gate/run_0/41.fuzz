@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(void) {
+    int *a = new int[2] { 1 };
+    cout<<sizeof(a)<<endl;
+    int *b = new int[10] { 1 };
+    cout<<sizeof(b)<<endl;
+    delete []b;
+    cout<<sizeof(b)<<endl;
+}

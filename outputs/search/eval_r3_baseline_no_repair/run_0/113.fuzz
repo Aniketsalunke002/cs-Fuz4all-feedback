@@ -1,0 +1,8 @@
+#include <iostream>
+void a(int, double);
+int main(int argc, char **argv) {
+  int size;
+  a(argc, a(f(getint()), f(argc)));
+  exit(0);
+}
+

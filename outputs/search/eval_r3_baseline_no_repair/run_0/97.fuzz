@@ -1,0 +1,126 @@
+#include <iostream>
+int getint();
+int f(int i);
+int test(int i, int j);
+int test() {
+    int i = i + 1;
+    printf("%d\n", f(argc+i));
+    int j=j+i;
+    return -1;
+}
+int g(int i);
+int g(void) {
+    int a = 0x7ffffff5; 
+    int b = 0x7ffffff5 - 10;
+    int c, d = INT_MAX;
+    c = d;
+    d = c - 10;
+    printf("(%d,%d,%d,%d)\n", a, b, c, d);
+    printf("%d %d\n", a, b);
+    int j = 0x7ffffff5 - 10;
+    int *r = &j;
+    int m;
+    m = *r;
+    printf("%d %d\n", m, j);
+    return 1;
+}
+ 
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <string>
+#include <set>
+#include <unordered_set>
+#include <map>
+#include <unordered_map>
+using namespace std;
+
+vector<long long> s;
+vector<long long> m;
+int n;
+int cnt;
+int p;
+set<long long> st;
+set<long long>::iterator it;
+vector<long long>::iterator it2;
+
+bool compare(long long a, long long b) {
+    return a < b;
+}
+
+short f(long long x) {
+    int ans = 1;
+    for (int i = 2; i <= m[p]; i++) {
+        if (x % i < m[p]) {
+            continue;
+        }
+        int t = 0;
+        while (x % i == 0) {
+            t++;
+            x = x / i;
+        }
+        ans *= pow(i, t);
+    }
+    if (x!= 1)
+        ans *= pow(x, 1);
+    if (x < m[p])
+        ans = 0;
+    return ans;
+}
+
+void work(long long x) {
+    if (x % m[p]!= 0)
+        return;
+    int t = 1;
+    long long tmp = x;
+    while (tmp % m[p] == 0) {
+        t++;
+        tmp = tmp / m[p];
+    }
+    s.push_back( x * t * t * t);
+    m.push_back(t);
+    st.insert(x*t*t*t);
+}
+void work() {
+    int k = 0;
+    for (it2 = s.begin(); it2!= s.end(); it2++, k++) {
+        if (st.count(*it2 - m[p])) {
+            if (k == 0) {
+                if (m[p] > m.back()) {
+                    m.pop_back();
+                    s.pop_back();
+                    f(p);
+                    k = -1;
+                }
+            } else {
+                s.erase(s.begin() + k);
+                m.erase(m.begin() + k);
+                it2 = s.begin() + k;
+            }
+        }
+    }
+    if (k == -1) {
+        work();
+    }
+}
+
+void bfs() {
+    set<long long> next;
+    while (!s.empty()) {
+        for (int i = 0; i <= 3; i++) {
+            if (f(m.back() + i) > 0)
+                next.insert(f(m.back() + i) * m.back());
+        }
+        s.pop_back();
+        m.pop_back();
+    }
+    s.swap(next);
+    s.insert(0ll);
+    f(p);
+}
+
+int main() {
+    n = getint();
+    m.push_back(2);
+    m.push_back(5);
+    m

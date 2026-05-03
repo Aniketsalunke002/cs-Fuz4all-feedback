@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+string name="Kate" + " P.";
+int main(int argc, char**argv) {
+    cout<< name <<endl;
+    return 0;
+}

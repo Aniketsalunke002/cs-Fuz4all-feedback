@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char **argv) {
+   if (argc < 2) {
+      cout << "Please enter a parameter!" << endl;
+      exit(EXIT_FAILURE);
+   }
+   cout << "My argc number is " << argc << endl;
+   cout << "My first parameter is " << argv[1] << endl;
+   cout << "My second parameter is " << argv[2] << endl;
+   if (argc == 4) {
+      cout << "My fourth parameter is " << argv[3] << endl;
+   }
+   if (argc == 6) {
+      cout << "My thirth parameter is " << argv[3] << argv[4] << endl;
+   }
+   return 0;
+}

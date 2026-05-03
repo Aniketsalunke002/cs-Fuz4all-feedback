@@ -1,0 +1,122 @@
+#include <iostream>
+
+int main()
+{
+    constexpr float f{9.2 + (3.7 * (4 % 2))};
+    std::cout << f << std::endl;
+    std::cout << "Done" << std::endl;
+    return 0;
+}
+ 
+#include <cmath>
+#include <iostream>
+int main()
+{
+    constexpr float pi{4 * (std::acos(-1.0f))};
+    std::cout << std::setprecision(12) << pi << std::endl;
+    std::cout << "Done" << std::endl;
+    return 0;
+}
+ 
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+class FloatList
+{
+
+ public:
+    FloatList(std::string initPath = "/tmp/floatlist")
+    {
+        std::fstream f{initPath, std::ios::in};
+        if (initPath == "-")
+        {
+            f = std::cin;
+        }
+        int i = 0;
+        float fValue;
+        float valueSum{0.0f};
+        while (f >> fValue)
+        {
+            valueSum += fValue;
+            values[i++] = fValue;
+            if (i >= listSize)
+            {
+                restructureList(i);
+            }
+        }
+        sum = valueSum;
+        std::cout << "Read list from " << initPath << " with " << i - 1 << " elements. "
+                  << "Sum of elements is " << valueSum << " (" << values.size() * sizeof(float)
+                  << " Bytes).\n";
+        if (valueSum < 0)
+        {
+            negativeNumbers = true;
+        }
+    }
+    void print()
+    {
+        for (const auto &v : values)
+        {
+            std::cout << v << " ";
+        }
+        std::cout << "\n"
+                  << "Negative numbers? " << negativeNumbers << "\n";
+    }
+    int size() const
+    {
+        return values.size() - 1;
+    }
+
+ private:
+    void restructureList(int newSize)
+    {
+        int i = listSize - 1;
+        std::vector<float> tmpValues{newSize + 1};
+        std::reverse_copy(values.begin(), values.end(), tmpValues.begin());
+        size_t offset{0};
+        for (const auto &v : tmpValues)
+        {
+            values[i - offset] = v;
+            std::advance(i, 1);
+            offset++;
+        }
+    }
+
+    static constexpr size_t listSize{1 << 4};
+    std::vector<float> values{listSize};
+    float sum;
+    bool negativeNumbers{false};
+};
+
+int main(int argc, char *argv[])
+{
+     
+    FloatList fl1;
+    fl1.print();   
+    FloatList fl2{"-"};
+    fl2.print();   
+
+     
+    const FloatList fl3("/tmp/floatlist.txt");   
+     
+     
+
+     
+    fl3.print();   
+    fl2.print();   
+    float x{1.0}, y{7.0};
+    FloatList fl6{&x, &y};   
+
+    return 0;
+}
+
+ 
+#include <iostream>
+int factorial(int n)
+{
+    return n * factorial(n - 1);
+}
+
+int main()
+{

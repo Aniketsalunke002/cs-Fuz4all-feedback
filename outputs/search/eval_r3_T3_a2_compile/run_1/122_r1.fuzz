@@ -1,0 +1,11 @@
+#include <iostream>
+
+class MyClass {
+public:
+	MyClass(int n) { std:: cout << n <<std::endl; }
+};	
+MyClass* A;
+int main() {
+	A = new MyClass(2);
+	A = new MyClass(32);
+}

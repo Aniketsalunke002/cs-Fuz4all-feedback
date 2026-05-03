@@ -1,0 +1,61 @@
+#include <iostream>
+#include <memory>
+
+template <class T>
+void testfunc(T o)
+{
+    T* p = new T;
+    delete p;
+}
+
+template <class T>
+void testfunc2(T&& o)
+{
+    std::unique_ptr<T> p1 = std::make_unique<T>();
+    p1.reset(new T);
+    p1.reset(new T);
+    p1.reset(new T);
+    p1.reset(new T);
+    p1.reset(new T);
+    p1.reset(new T);
+    p1.reset(new T);
+    p1.reset(new T);
+    p1.reset(new T);
+    p1.reset(new T);
+    p1.reset(new T);
+    std::unique_ptr<T> p2(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    p2.reset(new T);
+    T* o = new T;
+    T* o1 = new T;
+}
+
+int main()
+{
+    testfunc(1);
+    int a = 1;
+    testfunc(a);
+    testfunc2(1);
+    int b = 1;
+    testfunc2(a);
+    int c = 1;
+    testfunc2(c);
+    int d = 1;
+    testfunc2(d);
+    int e = 1;
+    testfunc2(e);
+    int f = 1;
+    testfunc2(f);
+    int g = 1;
+    testfunc2(g);
+    return 0;
+}

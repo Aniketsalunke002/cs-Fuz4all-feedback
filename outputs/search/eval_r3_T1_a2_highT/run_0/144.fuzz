@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int mut[5] = {12,8,3,4};
+int main(){
+	mut[0] = 16;
+	mut[2] = 9;
+	cout<<"Arrray: ";
+	for(int iter = 0; iter<5; iter++)
+		cout<<mut[iter]<<" ";
+	cout<<endl;
+	return 0;
+}

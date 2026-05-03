@@ -1,0 +1,20 @@
+#include <iostream>
+int main() {
+	int mut_var=1;
+	do {
+		std::string s;
+		std::cin >> s;
+		if (!std::cin) {
+			std::cerr << "Got error: '" << std::cin.rdstate() << "'" << std::endl;
+			break;
+		} else {
+			if (s=="1") {
+				printf("%d: [1] [1] is live!\n", mut_var);
+			}
+			if (s!="0") {
+				mut_var = atoi(s.c_str());
+			}
+		}
+	} while (mut_var!= 0);
+	return 0;
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+
+#include <map>
+using namespace std;
+
+int main() {
+  std::map myMap;
+  myMap["<NAME>"] = 42;
+  myMap["Fizz"] = 43;
+  myMap["<NAME>"] = 47;
+  myMap["Buzz"] = 42;
+
+  myMap.insert(

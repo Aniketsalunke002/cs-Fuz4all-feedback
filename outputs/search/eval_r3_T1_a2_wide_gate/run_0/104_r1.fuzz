@@ -1,0 +1,22 @@
+#include <iostream>
+
+#include <ctime>
+#include <cstdlib>
+using namespace std;
+int main()
+{
+    srand(time(0));
+    int arr[250];
+    int sum = 0;
+    for (int i = 0; i < 250; i++)
+    {
+        arr[i] = rand()%3000 + -1250;
+        cout << arr[i] << endl;
+        if (sum!= 0)
+        {
+            sum += arr[i];
+        }
+    }
+    cout << sum << endl;
+    return 0;
+}

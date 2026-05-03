@@ -1,0 +1,14 @@
+#include <iostream>
+namespace ns
+{
+  const double pi = 3.14;
+  const double rad2deg = 180.0/pi;
+}
+
+int main() {
+  double x = 4;
+  const double y = ns::pi;
+   
+  const int * z = (int *) (&y);     
+  return 0;
+}

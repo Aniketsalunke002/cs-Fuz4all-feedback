@@ -1,0 +1,116 @@
+#include <iostream>
+using namespace std;
+template<typename T>
+class Templated
+{
+public:
+	int x;
+	Templated(int,T,T,T,T)
+	{
+		x = val3;
+	}
+};
+class Templated1 : public Templated<int>
+{
+public:
+	int y;
+	Templated1(int val1,int val2,int val3,int val4,int val5):Templated<int>(val1,val2,val3,val4,val5)
+	{
+		y = val5;
+	}
+};
+int main()
+{
+	Templated1 t1(1,2,3,4,5);
+	Templated<int>* obj = &t1;
+	cout << obj->x << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+template<typename T>
+class Templated
+{
+	T value;
+public:
+	Templated(T val):value(val)
+	{
+	};
+	T mult_10(T val)
+	{
+		value = value * val;
+		return value;
+	}
+	T mult_30(T val)
+	{
+		value = value * val;
+		return value;
+	}
+	T div_5(T val)
+	{
+		value = value / val;
+		return value;
+	}
+};
+int main()
+{
+	Templated<int> t1(1);
+	Templated<float> t2(1.1);
+	t1.mult_10(10);
+	t1.div_5(5);
+	t1.mult_30(30);
+}
+ 
+#include <iostream>
+template<typename T>
+class Templated
+{
+public:
+private:
+};
+ 
+#include <iostream>
+using namespace std;
+template<typename T>
+class Templated
+{
+public:
+	Templated(int);
+	Templated(T val[]);
+	T mult(Templated<T>);
+	void printarr()
+	{
+		for(int i=0; i<10; i++)
+		{
+			cout << x[i] << endl;
+		}
+	}
+	~Templated()
+	{
+
+	}
+private:
+	T x[10];
+	int n;
+};
+template<typename T>
+Templated<T>::Templated(int val1)
+{
+	n = val1;
+}
+template<typename T>
+Templated<T>::Templated(T val[])
+{
+	for(int i=0; i<n; i++)
+		x[i] = val[i];
+}
+template<typename T>
+T Templated<T>::mult(Templated<T> obj)
+{
+	for(int i=0; i<n; i++)
+		x[i] = x[i] * obj.x[i];
+	return x;
+}
+int main()
+{
+	Templated<

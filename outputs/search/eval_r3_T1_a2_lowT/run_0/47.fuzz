@@ -1,0 +1,22 @@
+#include <iostream>
+void do_it()
+#undef cout
+#undef endl
+{
+    class Foo {
+        friend class Bar1;
+        friend class Bar2;
+        friend void Bar3();
+    public:
+        const char* s;
+    private:
+        Foo(const char* s):s(s){}
+    } object("Test");
+    std::cin.tie(&std::cout);
+    std::cerr << std::endl.tie(&std::cout);
+}
+int main()
+{
+    do_it();
+    std::cerr << std::endl.tie() << std::endl;
+}

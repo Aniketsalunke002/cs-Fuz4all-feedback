@@ -1,0 +1,15 @@
+#include <iostream>
+int main(){
+  int a,b,c,d,e,f;
+  std::cin>>a>>b>>c>>d;
+  if(a+b==0) {
+    d*=12;
+    c*=313;
+    e*=c;
+  } else {
+    f*=13*d;
+    e*=f;
+  }
+  std::cout<<c*d-b*f<<std::endl;
+  return 0;
+}

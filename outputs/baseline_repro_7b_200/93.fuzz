@@ -1,0 +1,25 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+    unsigned long int z;
+    unsigned long long int u;
+    char c = 0x0F;
+    if (false == true) {
+        c >>= c;
+    }
+    std::cout << c << std::endl;
+}
+ 
+#include <iostream>
+int main(int argc, char* argv[]) {
+    unsigned long int z;
+    unsigned long long int u;
+    char c = 0x0F;
+    if (false == true) {
+        c >>= c;
+    } else {
+        c = static_cast<char>(13);
+    }
+    std::cout << c << std::endl;
+    return 0;
+}
+

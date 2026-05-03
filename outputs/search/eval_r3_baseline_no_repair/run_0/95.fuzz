@@ -1,0 +1,72 @@
+#include <iostream>
+
+int getint() {
+  int v = 0;
+  char c = -1;
+  std::cin >> v;
+  std::cin >> c;
+  std::cin.ignore(1000, '\n');
+  return v;
+}
+
+int f(int i) {
+    f(i - 1);
+    return 0;
+}
+ 
+#include <map>
+struct A {
+  int x = 0;
+};
+
+int getint() {
+   
+  int x = -1;
+  char c = -1;
+  std::cin >> x;
+  std::cin >> c;
+  std::cin.ignore(1000, '\n');
+  return x;
+}
+
+int f(int i) {
+    std::map<A,A> x;
+    x[A{10}];
+    return 0;
+}
+ 
+#include <map>
+#include <vector>
+#include <stdio.h>
+struct A {
+  int x = 0;
+};
+
+int getint() {
+   
+  int x = -1;
+  char c = -1;
+  std::cin >> x;
+  std::cin >> c;
+  std::cin.ignore(1000, '\n');
+  return x;
+}
+
+struct B {
+    A my;
+};
+
+int f(int i) {
+    std::map<B, B> x;
+    A y;
+    B b;
+
+    y.x = 4;
+    b.my = y;
+    x[b] = b;
+    printf("%d\n", b.my.x);
+    return 0;
+}
+ 
+ 
+

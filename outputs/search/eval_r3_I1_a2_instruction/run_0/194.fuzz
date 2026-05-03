@@ -1,0 +1,59 @@
+#include <iostream>
+#include <vector>
+void f() { }
+int main(void)
+{
+  std::cout << "a";
+  int n;
+  try
+  {
+    n++;
+  }
+  catch(std::exception &e)
+  {
+    std::cout << e.what() << std::endl;
+  }
+  return 0;
+}
+class C13
+{
+public:
+C13();
+};
+class C14 : public C13
+{
+};
+class C15
+{
+public:
+std::vector<int> v;
+std::vector<C15> v1;
+};
+class C15_1
+{
+public:
+int *p;
+};
+struct C16
+{
+};
+class C17
+{
+public:
+char c;
+C17(int = 0);
+};
+class C18 : public C17
+{
+};
+class C19
+{
+public:
+const C12 &operator =(const C19 &);
+};
+class C20 : public C19
+{
+};
+extern void g(C6 *, C7 *, C8 *, C9 *, C10 *, C11 *, C12 *);
+class C21 {};
+int main(void) { g((C16 *)0, (C15 *)0, (C18 *)0, (C15_1 *)0, (C20 *)0, (C21 *)0); }

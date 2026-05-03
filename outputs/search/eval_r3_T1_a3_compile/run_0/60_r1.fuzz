@@ -1,0 +1,20 @@
+#include <iostream>
+
+#define C_CONST 1
+using namespace std;
+#ifdef HAS_CONSTEXPR
+constexpr int i = 5;
+#endif
+#if __cplusplus > 199711L
+inline constexpr int j = 10;
+#else
+#define j g
+#endif
+#if __has_include("version")
+#include "version"
+#endif
+int main() {
+  auto j = C_CONST? i : j;
+  cout << j << endl;
+  return 0;
+}

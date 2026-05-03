@@ -1,0 +1,33 @@
+#include <iostream>
+
+int main() {
+  std::cout << "<NAME>" << "\n";
+  return 0;
+}
+// 
+// #include <iostream>
+// #include <vector>
+// int main() {
+//   std::cout << "<NAME>" << "\n";
+//   std::vector<int> myVector;
+//   myVector.push_back(31);
+//   myVector.pop_back();
+//   return 0;
+// }
+// 
+// 
+// #include <iostream>
+// #include <vector>
+// int main() {
+//   std::cout << "<NAME>" << "\n";
+//   std::vector<int> myVector;
+//   myVector.push_back(4);
+//   myVector.push_back(10);
+//   myVector.push_back(27);
+//   myVector.pop_back();
+//   myVector.push_back(15);
+//   myVector.push_back(21);
+//   myVector.push_back(29);
+//   return 0;
+// }
+//

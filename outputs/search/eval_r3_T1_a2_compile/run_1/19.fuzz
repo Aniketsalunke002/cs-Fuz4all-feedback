@@ -1,0 +1,95 @@
+#include <iostream>
+
+int main(int argc, char** argv)
+{
+    std::cout<<"Please create a semantically equivalent program to the previous generation";
+    return 0;
+}
+ 
+#include <iostream>
+#include <map>
+
+typedef std::map <std::string, std::string> M;
+
+class Map : public M {
+     
+};
+
+class my_map {
+    public:
+        void add(std::string, std::string);
+        std::map<std::string, std::string>::iterator find(std::string);
+    private:
+        M map;
+};
+
+void my_map::add(std::string key, std::string value)
+{
+    M::operator [] (key)  = value;
+}
+
+std::map<std::string, std::string>::iterator my_map::find(std::string key)
+{
+    return M::find(key);
+}
+
+int main(void)
+{
+    my_map m;
+
+    m.add("k", "v");
+    std::cout << "Key = " << m.find("k")->first << " Value = " << m.find("k")->second << std::endl;
+
+    return 0;
+}
+ 
+#include <iostream>
+#include <numeric>
+
+class accumulate {
+    public:
+        static std::size_t size() {
+            return size_;
+        };
+        accumulate();
+        void add(std::string);
+        std::size_t size() const;
+    private:
+        std::size_t size_;
+        std::map<std::string, int> data_;
+};
+
+accumulate::accumulate()
+{
+    size_ = 0;
+}
+
+accumulate::~accumulate()
+{
+}
+
+void accumulate::add(std::string val)
+{
+    ++data_[val];
+    ++size_;
+}
+
+std::size_t
+accumulate::size() const
+{
+    return size_;
+}
+
+int main(void)
+{
+    std::cout << "Hello, World!" << std::endl;
+    accumulate a;
+
+    a.add("a"); a.add("b");
+    std::cout << "Size is " << accumulate::size() << std::endl;
+    std::cout << "Sum is " << std::accumulate(a.data_.begin(), a.data_.end(), 0) << std::endl;
+    std::cout << "Sum is " << accumulate::size() << std::endl;
+    std::cout << "Hello, World!" << std::endl;
+
+    return 0;
+}

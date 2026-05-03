@@ -1,0 +1,21 @@
+#include <iostream>
+template <typename T> struct A{
+    int value = 123;
+    A<T> operator+(T t){
+        t += value;
+        return A<T>(t);
+    }
+    A<double>& operator=(double d){
+        value = d;
+        return *this;
+    }
+    T operator()(T t){
+        return t+= value;        
+    }
+    operator int(){
+        return value;
+    }
+};
+int main() {
+    A<int> a;
+    A<double> b = 1;

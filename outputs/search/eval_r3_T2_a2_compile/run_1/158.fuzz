@@ -1,0 +1,13 @@
+#include <iostream>
+int main()
+{
+    int arr1 [32];
+    int arr2 [32];
+    for (int i = 0; i < 32; i++)
+    {
+        arr1 [i] = 2 * i;
+        arr2 [i] = 3 * arr1 [i];
+    }
+    return 0;
+}
+ 

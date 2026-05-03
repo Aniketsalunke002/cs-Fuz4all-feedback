@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout << "Hello World!" << endl;
+	return 0;	
+}
+
+ 
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+
+	bool  boolValue = true;
+	int anInt = 13;
+	float aFloat = 1.337;
+	double aDouble = 1.337;
+	char aChar = 'x';
+	string aString = "Howdy. ";
+	return 0;	
+}
+ 
+ 

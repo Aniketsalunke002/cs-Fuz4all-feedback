@@ -1,0 +1,105 @@
+#include <iostream>
+int main() {
+    int x;
+    std::cin >> x;
+    std::cout << x << '\n';
+    {
+        int y = 32;
+    }
+    return 0;
+    x --;  
+}
+ 
+#include <iostream>
+int main() {
+    for (int i = 0; i < 3; i++) {
+        std::cout << 123 << '\n';
+    }
+    return 0;
+}
+
+ 
+#include <iostream>
+int main() {
+    int i = 0;
+    while (i < 3) {
+        std::cout << 123 << '\n';
+        i++;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+int main() {
+    int x;
+    std::cin >> x;
+    if (x < 100) {
+        std::cout << "your integer is smaller then 100\n";
+    } else {
+        std::cout << "your integer is bigger or equal to 100\n";
+    }
+    return 0;
+}
+ 
+#include <cstring>
+bool binsearch(int *arr, int length, int value) {
+    int l = 0;
+    int r = length;
+    while (l < r) {
+        int m = (r + l) / 2;
+        if (arr[m] == value) {
+            return true;
+        } else if (value > arr[m]) {
+            l = m + 1;
+        } else {
+            r = m;
+        }
+    }
+    return false;
+}
+int main() {
+    int size;
+    std::cin >> size;
+    int arr[size];
+    int v;
+    std::cin >> v;
+    for (int i = 0; i < size; i++) {
+        std::cin >> arr[i];
+    }
+    if (binsearch(arr, size, v)) {
+        std::cout << "you found a value in the array\n";
+    } else {
+        std::cout << "you did not found a value in the array\n";
+    }
+    return 0;
+}
+
+ 
+#include <iostream>
+void simpleconsole(char *s) {
+    std::cout << "Please enter \"OK\" as input: ";
+    char buffer[1024];
+    std::cin.getline(buffer, 1024);
+    if (!strcmp(buffer, "OK")) {
+        std::cout << *s << std::endl;
+    }
+    else if (!strcmp(buffer, "OKE"))
+        std::cout << "OKE" << std::endl;
+    else
+        std::cout << "OKE" << std::endl;
+
+
+}
+
+ 
+#include <sstream>
+#include <iostream>
+using namespace std;
+void console(string s) {
+    string x;
+    cout << "Please enter \"OK\": ";
+    cin >> x;
+    if (x == "OK") {
+        cout << s << endl;
+    } else {
+        cout << "Something went wrong"

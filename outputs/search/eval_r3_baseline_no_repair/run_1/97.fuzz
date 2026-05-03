@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	enum Color {RED, GREEN, BLUE};  
+	Color c1, c2;  
+	c1 = RED; 
+	c2 = GREEN; 
+	cout<<"The values of c1 are:"<<c1<<", "<<BLUE<<"\n";   
+	cout<<"The values of c2 are "<<c2<<","<<GREEN<<"\n";  
+
+	return 0; 
+} 

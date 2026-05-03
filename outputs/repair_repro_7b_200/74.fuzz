@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+auto f(int i, unsigned j) {
+  auto fn = [&i, &j]() {
+    i+=1;
+    j+=1;
+    cout << i << " " << j << endl;
+  };
+  return fn;
+}
+int main() {
+  int i=0,j=0;
+  auto fn = f(i, j);
+  fn();
+  return 0;
+}

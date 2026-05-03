@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+#define I 10 % 2
+int main(int argc, char** argv) {
+    int a, b, c, d, x;
+    int result = 0;
+#if I + (I - 1)
+    result = (a < b && c <= d)? 1 : 0;
+#else
+#ifdef BETTER
+result = (a < b && c <= d)? 1 : 0;
+#else
+result = (a < b && c <= d)? 1 : 0;
+#endif  
+#endif  
+	cout << result;
+}
+ 
+#include <iostream>
+using namespace std;
+#define MAX 5
+int main(int argc, char** argv) {
+    int a[MAX], b[MAX], c[MAX];
+    for (auto i = 0; i < sizeof(a) / sizeof(int); ++i) {
+        c[i] = a[i] & b[i];
+    }
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+
+#include <memory>
+
+template<typename K, typename V>
+class map {
+ public:
+    using KeyType = K;
+    using ValueType = V;
+
+    map() = default;
+
+    map(const map &m) = default;
+
+    map(map &&m) = default;
+    template<typename K2, typename V2>
+    map(const map<K2, V2> &other) {
+        for (const auto &e : other) {
+            insert(e.first, e.second);
+        }
+    }
+
+    template<typename K2, typename V2>
+    map(map<K2,

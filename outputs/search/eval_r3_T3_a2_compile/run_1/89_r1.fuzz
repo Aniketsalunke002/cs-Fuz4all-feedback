@@ -1,0 +1,11 @@
+#include <iostream>
+
+#include <vector>
+constexpr auto cstr = "A";
+constexpr char& cref(void) {
+	return cstr[0];
+}
+int main() {
+	cref();
+	return 0;
+}

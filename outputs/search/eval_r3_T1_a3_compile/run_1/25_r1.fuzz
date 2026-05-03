@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+    int input;
+    auto cin = std::cin;
+    while (input = cin.get()) {
+        cout << input;
+    }
+    return 0;
+}

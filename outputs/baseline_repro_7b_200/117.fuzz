@@ -1,0 +1,5 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+  static_assert(true, "[error]: This program will not compile!");
+  return 0;
+}

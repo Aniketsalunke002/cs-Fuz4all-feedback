@@ -1,0 +1,26 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+    for (int i = 0; i < argc; i++) {
+      int k=0;
+      while (k < argc) {
+        if (argv[i][1] == 'A') {
+           argv[i][0] = 'A';
+           argv[i][1] = 'A';
+           if (argv[i][2] == 'A') {
+              argv[i][2] = 'A';
+              argv[i][3] = 'A';
+
+              if (argv[i][4] == 'A') {
+                if (argv[i][5] == 'B' && argv[i][6] == 'A') {
+                  argv[i][7] = 'C';
+                }
+                
+              }
+            }
+        k++;
+        }
+      }
+    }
+    return 0;
+  }

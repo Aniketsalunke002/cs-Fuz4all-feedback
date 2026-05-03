@@ -1,0 +1,56 @@
+#include <iostream>
+
+int main() {
+	int counter=0;
+	int winner=1;
+	std::cout << "Press ENTER to start, any other key to quit.";
+	switch(std::toupper(std::cin.peek())) {
+	case '\n':
+		break;
+	case 'Q':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\x1b':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\t':
+		std::cin.get();
+		case '\b':
+	default:
+		std::cout << "Invalid input." << std::endl;
+		break;
+	}
+	for(;;) {
+		bool won=false;
+		std::cin >> counter;
+		std::cin.get();
+		switch(counter) {
+		case 1:
+			winner++;
+			std::cout << counter << ": [1][ ] is live!" << std::endl;
+			won=true;
+			break;
+		case 2:
+			winner=((1+winner)%2)+1;
+			std::cout << counter << ": [0][1] is live!" << std::endl;
+			won=true;
+			break;
+		case 3:
+			std::cout << counter << ": [1][1] is live!" << std::endl;
+			won=true;
+			break;
+		case 4:
+			winner=((1+winner)%2)+1;
+			std::cout << counter << ": [0][0] is live!" << std::endl;
+			won=true;
+			break;
+		case 0:
+			std::cout << counter << ": End of game!" << std::endl;
+			break;
+		default:
+			std::cout << counter << ": Invalid input! Ignoring...!" << std::endl;
+			break;
+		}
+		if(won)
+			std::cout << "Winner is: " << winner << std::endl;
+		std::cout << "Press ENTER to play, 'q'

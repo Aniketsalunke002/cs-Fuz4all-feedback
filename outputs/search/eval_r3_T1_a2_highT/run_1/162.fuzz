@@ -1,0 +1,28 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+int main(){
+    int nums[] = {4, 3, 1, 0, 7};
+    std::sort(std::begin(nums), std::end(nums));
+    std::cout<<nums[0]<<std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+#include <numeric>
+#include <string>
+#include <random>
+#include <iterator>
+using namespace std;
+int main(){
+    int nums[] = {4, 3, 1, 0, 7};
+    std::vector<int> vec(100, 7);
+    iota(vec.begin(), vec.end(), 0);
+    cout << "Total: " << accumulate(vec.begin(), vec.end(), 0) << std::endl;
+    unsigned seed = chrono::system_clock::now().time_since_epoch().count();
+    shuffle(vec.begin(), vec.end(), default_random_engine(seed));
+    cout << "shuffled:" << endl;
+    copy(vec.begin(), vec.end(),ostream_iterator<int> (cout, "\n"));
+    return 0;
+}

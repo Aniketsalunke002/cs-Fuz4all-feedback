@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+struct a
+{
+    a()
+    {
+        cout << 1 << endl;
+    }
+};
+
+struct b
+{
+    b()
+    {
+        cout << 2 << endl;
+    }
+};
+
+struct c
+{
+    c()
+    {
+        cout << 3 << endl;
+    }
+};
+
+struct d
+{
+    d()
+    {
+        cout << 4 << endl;
+    }
+};
+
+struct e
+{
+    e()
+    {
+        cout << 5 << endl;
+    }
+};
+
+struct f
+{
+    f()
+    {
+        cout << 6 << endl;
+    }
+};
+
+int main()
+{
+    a a_object;
+    b b_object;
+    c c_object;
+    d d_object;
+    e e_object;
+    f f_object;
+    return 0;
+}

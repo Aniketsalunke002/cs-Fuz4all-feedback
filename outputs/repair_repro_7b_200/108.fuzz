@@ -1,0 +1,46 @@
+#include <iostream>
+#include <mutex>
+#include <condition_variable>
+void foo() {
+    mtx.lock();
+    if (!cv.wait_for(mtx, std::chrono::seconds(3), []{
+        return 1;
+    })) {
+        abort();
+    }
+        mtx.unlock();
+}
+int main(void) {
+    std::thread t([]() {
+        std::unique_lock<std::mutex> lk(mtx);
+        cv.wait_for(lk, std::chrono::seconds(3), []{
+            return 1;
+        });
+    });
+    foo();
+    t.join();
+    return 0;
+}
+ 
+#include <thread>
+#include <iostream>
+std::mutex mx;
+void one() {
+    std::unique_lock<std::mutex> lk(mx);
+    lk.unlock();
+    x = 1;
+}
+void two() {
+    std::unique_lock<std::mutex> lk1(mx);
+    lk1.lock();
+    if (x == 0) {
+        exit();
+    }
+    y = 1;
+}
+int main() {
+    std::thread t(one);
+    std::thread u(two);
+    t.join();
+    u.join();
+}

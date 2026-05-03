@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+class A
+{
+    private:
+    	int iField1;
+    	int iField2;
+    public:
+    	A(int i):iField1(i),iField2(i){}
+	A(A &r): iField1(r.iField1),iField2(r.iField2){}
+	A& operator=(A&r)
+	{
+		iField1=r.iField1;
+		iField2=r.iField2;
+	}
+};

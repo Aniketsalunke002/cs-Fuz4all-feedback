@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello World" << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+unsigned calculate_pi(int);
+void show_me(int);
+int main() {
+    show_me(100);
+}
+void show_me(int f) {
+    int z = calculate_pi(f);
+}
+unsigned calculate_pi(int) {
+}
+ 
+#include <iostream>
+using namespace std;
+#include <string>
+using namespace std;
+int x = 10, y = 20, z = -10;

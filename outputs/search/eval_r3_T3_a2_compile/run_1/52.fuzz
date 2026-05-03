@@ -1,0 +1,21 @@
+#include <iostream>
+int main(void)
+{
+	char c;
+	char* ptr;
+	c = 'c';
+	ptr = &c;
+	char a = '*';
+	printf("%p %p %c %c\n",ptr,&a,c,a);
+	return 0; 
+}
+ 
+#include <iostream>
+int main()
+{
+    unsigned long int sequence = 1;
+    for(int i=1;sequence<1000;i++)
+	sequence = sequence * i;
+    printf("%lu\n",sequence);
+	return 0;
+}

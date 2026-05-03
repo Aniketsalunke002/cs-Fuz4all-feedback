@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+  struct { short **x; short int data[42];
+  };
+  short int x = data[42];
+  std::cout << x;
+  return 0;
+}
+ 
+int main() {
+  struct { int &data; int &data2; struct { void f(void *d) { std::cout << &data << &data2 << d; } } s; };
+  short x = data;
+  return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int a=5, b=1;
+  bool c= a>0;
+  if (c==true)
+    b = a+1;
+  if(c == false)
+    a = a+120;
+  cout << a << endl;
+}
+
+
+ 

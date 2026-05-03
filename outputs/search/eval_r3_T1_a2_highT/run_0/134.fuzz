@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+    float b;
+    cout<<"Number: ";
+    scanf("%d", &a);
+    cout<<"Number: ";
+    scanf("%f", &b);
+    printf("%d+%f = %d\n", a, b, a+b);
+}

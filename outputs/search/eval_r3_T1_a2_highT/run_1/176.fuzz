@@ -1,0 +1,144 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num = 100;
+    num += 1;
+    cout << num << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[])
+{
+return 0
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    string value = "Hello" << "World!\n";
+    return 0;
+}
+ 
+#include <vector>
+int main()
+{
+    vector<int> numbers(10);
+
+    numbers.push_back(1);
+    return 0;
+}
+#include <iostream>
+using namespace std;
+using namespace std;
+int main()
+{
+    string name = "Robert";
+    string msg1, msg2;
+    msg1 = "Hi ";
+    msg2 = "Hello " << name << "!";
+    cout << msg1 << endl;
+    cout << msg2 << endl;
+    return 0;
+}
+#include <iostream>
+int main()
+{
+    int x = 0, y = 5;
+    int z = (x + y) / 2;  
+    cout << z << endl;
+    return 0;
+}
+#include <iostream>
+int main()
+{
+  cout << "Hello, World!" << endl;
+}
+#include <iostream>
+#include <cmath>
+int main()
+{
+  auto x = 5.0;
+  cout << "sqrt of x: " << sqrt(x) << endl;
+}
+#include <iostream>
+#include <vector>
+using namespace std;
+struct Point
+{
+    int x, y;
+};
+struct Line
+{
+    Point a, b;
+};
+void draw(Point p)
+{
+    cout << "( " << p.x << "," << p.y << " )\n";
+}
+void draw(Line l)
+{
+    draw(l.a);
+    draw(l.b);
+}
+int main()
+{
+    Point p { 1, 3 };
+    Line l = { {2, 4}, {5, 7} };
+    draw(p);
+    draw(l);
+}
+#include <iostream>
+#include <vector>
+int main(int argc, char* argv[])
+{
+    vector<int> my_vec = { 1, 2, 3};
+    for( auto n : my_vec)
+    {
+      cout << "Value: " << n << endl;
+    }
+
+    return 0;
+}
+#include <iostream>
+#include <vector>
+#include <cmath>
+int main(int argc, char* argv[])
+{
+    vector<int> my_vec = { 1, 2, 3};
+    for (int i = 0; i < my_vec.size(); i++)
+    {
+      cout << "Value #" << i+1 << " is: " << my_vec[i] << endl;
+    }
+
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+namespace my_space
+{
+    int num = 0;
+    void increment() { ++num; }
+}
+int main(int argc, char* argv[])
+{
+    cout << my_space::num << "! " << ++my_space::num << "! " << my_space::num << "!\n";
+    return 0;
+}
+namespace my_space
+{
+    int num = 0;
+    void increment()
+    {
+        ++num;
+    }
+}
+#include <iostream>
+
+int main(int argc, char* argv[])
+{
+   

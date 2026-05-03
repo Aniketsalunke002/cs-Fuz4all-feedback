@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+    int sum = 0, number = 0, max = 0;
+    std::cout << "Enter at most 5 numbers: " << std::endl;
+    do {
+        std::cin >> number;
+        if (sum < 5) {
+            sum += 2;
+        }
+    } while (sum < 5);
+    std::cout << "Sum is " << sum << std::endl;
+    std::cout << "Maximum sum in this example was " << max << std::endl;
+    return 0;
+} 

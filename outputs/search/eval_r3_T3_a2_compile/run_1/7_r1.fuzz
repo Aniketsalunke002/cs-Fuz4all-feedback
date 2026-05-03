@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+template <typename T, typename T1> class Base
+{
+    T first;
+public:
+    Base(void)
+    {
+        first = T();
+    }
+    Base(const T& t_first)
+    {
+        first = t_first;
+    }
+    const T& get_first() const
+    {
+        return first;
+    }
+    void set_first(const T& t_first)
+    {
+        first = t_first;
+    }
+};
+template <typename T, typename T1 = void> class Base<T, T1>
+{
+    T1 second;
+public:
+    Base(void)
+    {
+        second = T1();
+    }
+    Base(const T1& t_second)
+    {
+        second = t_second;
+    }
+    const T1& get_second() const
+    {
+        return second;
+    }
+    void set_second(const T1& t_second)
+    {
+        second = t_second;
+    }
+};
+int main()
+{
+    Base<int> integer_base_class(10);
+    Base<string> string_base_class("ABC");
+    cout << "Integer first = " << integer_base_class.get_first() << endl;
+    cout << "First as string = " << integer_base_class.get_first() << endl;
+    cout << "String second = " << string_base_class.get_second() << endl;
+    cout << "Second as int = " << stoi(string_base_class.get_second()) << endl;
+    return 0;
+}

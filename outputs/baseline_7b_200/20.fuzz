@@ -1,0 +1,26 @@
+#include <iostream>
+struct Node{
+	Node *L, *R;
+	int data;
+};
+Node* Insert(Node* root, Node* parent, int key, char lr)
+{
+	if (root == NULL)
+		root = new Node;
+	if(root == NULL)
+		return root;
+	
+	root->data = key;
+	 
+	
+	if (lr == 'R')
+	{
+	  root->L = NULL;
+	  root->R = Insert(root->R, root, key, 'L');
+	}
+	else if (lr == 'L')
+	{
+	  root->R = NULL;
+	  root->L = Insert(root->L, root, key, 'R');
+	}
+	else{

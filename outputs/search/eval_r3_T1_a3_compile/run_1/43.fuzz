@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int i;
+	cout << "enter int: \n";
+	cin >> i;
+	if (i > 1) {
+		i = i + 1;
+		if ((i% 2) == 0) {
+			i--;  
+		}
+	}
+	cout << "int: " << i << endl; 
+	return 0;
+}

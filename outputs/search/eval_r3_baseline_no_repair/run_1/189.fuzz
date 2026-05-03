@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+struct MyStruct {
+ double c;
+ int d;
+ string wut;
+};
+int main() {
+ MyStruct obj;
+ obj.c = 2;
+ obj.d = 10;
+ obj.wut = "Hello World";
+ cout << obj.c << " " << obj.d << " " << obj.wut << endl;
+ return 0;
+}
+ 

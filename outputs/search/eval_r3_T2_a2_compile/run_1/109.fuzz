@@ -1,0 +1,13 @@
+#include <iostream>
+int main1() {
+    int i = 0, sum=0,n=0;
+    std::cin >> n;
+    for (; i < n; ++i){
+        int num_i;
+        std::cin >> num_i;
+        sum += num_i;
+    }
+    std::cout << sum;
+    return 0;
+}
+

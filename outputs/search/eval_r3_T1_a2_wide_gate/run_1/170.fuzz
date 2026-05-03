@@ -1,0 +1,6 @@
+#include <iostream>
+using namespace std;
+int main( int argc, char **argv ){
+  argc--;
+  cout << atoi(argv[1]) << atoi(argv[2]) << atoi(argv[3]);
+}

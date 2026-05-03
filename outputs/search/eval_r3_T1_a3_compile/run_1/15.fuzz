@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	for (int exp = -10; exp < 10; exp++) {
+		for (int frac = 0; frac < 10; frac++) {
+			if (exp == 10) {
+				frac *= 9;
+			}
+			if (frac >= 10)
+				{
+					cout << frac <<'' << 'E' << exp-1 << 'M' << 'A';
+				}
+			else
+				if (exp >= 0)
+					{
+						cout << frac <<'' << 'E' << exp <<'';
+					}
+				else
+					cout <<'';
+		}
+		cout << endl;
+	}
+}

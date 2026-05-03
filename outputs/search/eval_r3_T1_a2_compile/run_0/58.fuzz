@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+    int main()
+    {
+        double PI;
+        cout << "Enter the value of PI " << endl;
+        cin >> PI;
+        cout << " Enter the radius of the circle ";
+        double radius = 3.141592653;
+        double result;
+        result = PI * radius * radius;
+        cout << "The area of circle is " << result;
+        return 0;
+    }
+
+
+
+
+
+
+
+

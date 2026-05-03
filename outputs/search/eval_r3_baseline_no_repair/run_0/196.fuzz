@@ -1,0 +1,14 @@
+#include <iostream>
+int main(int argc, char ** argv) {
+  int step = 6;
+  const int end = 100 / step + 1;
+  int i;
+  for (i = 1; i <= end; ++i) {
+    int j;
+    for (j = 1; j <= step; ++j) {
+      std::cout << i / step;
+    }
+    std::cout << std::endl;
+  }
+  exit(0);
+}

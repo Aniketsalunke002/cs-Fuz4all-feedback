@@ -1,0 +1,17 @@
+#include <iostream>
+int main()
+{
+	cout<<"Hello, World! I am a mutated program! ";
+	cout << "My mutation method was to add C++ logo. "<< "C++\n";
+	return 0; 
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+	const double PI = 3.1416;
+	cout<<"Hello, World! I am a mutated program! ";
+	cout << "My mutation method was to add PI constant. "<< PI<<"!\n";
+	return 0; 
+}

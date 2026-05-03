@@ -1,0 +1,90 @@
+#include <iostream>
+using namespace std;
+int main() {
+  double x, y;
+  cin >> x >> y;
+  cout << (sin(y) + cos(y - 90) + cos(y + 90) - 3) * x << endl;
+  return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+  int x;
+  double y;
+  cout << 1.1 / x << endl;
+  cout << y++ << endl;
+  cout << y++ << endl;
+  cout << y-- << endl;
+  cout << y++ << endl;
+  cout << y << endl;
+  cout << -1.1 + y << endl;
+  return 0;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+#include <iostream>
+#include <string>
+using namespace std;
+class Shape {
+protected:
+  string type;
+public:
+  void print() const;
+  const string& getType() const;
+};
+
+inline void Shape::print() const {
+  cout << "                      name\n"
+       << "                      _____\n"
+       << "                   shapetype: "
+       << type << endl;
+};
+
+inline const string& Shape::getType() const {
+  return type;
+}
+
+class Rectangle : public Shape {
+private:
+  int width;
+  int length;
+public:
+  Rectangle(
+      string t,
+      int w,
+      int l
+  );
+};
+
+Rectangle::Rectangle(
+    string t,
+    int w,
+    int l
+) : Shape{t} {
+  width = w;
+  length = l;
+}
+
+int main() {
+  Rectangle r("Rectangle", 10, 20);
+  r.print();
+  cout << r.getType();
+  return 0;
+}

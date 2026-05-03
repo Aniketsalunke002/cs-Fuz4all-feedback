@@ -1,0 +1,38 @@
+#include <iostream>
+
+#include <string>
+class A
+{
+    public:
+        A(const std::string & val)
+        :val(val)
+        {}
+        A(std::string && val)
+        : val(std::move(val))
+        {}
+        A newA()
+        {
+            return A("NEW A");
+        }
+        auto& getVal()
+        {
+            return val;
+        }
+        void setValue(const std::string & val_)
+        {
+            val = val_;
+        }
+        void setValue(std::string && val_)
+        {
+            val = std::move(val_);
+        }
+    private:
+        std::string val;
+};
+int main(int argc, char *argv[])
+{
+    A object("HOLA");
+    std::cout << object.getVal();
+    std::cout << object.newA().getVal();
+    return 0;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+int main2() {
+    int i = 0, sum=0,n=0;
+    std::cin >> n;
+    for (; i < n; ++i){
+        int num;
+        std::cin >> num;
+        sum += num + sum / 2;
+    }
+    std::cout << (sum>>1);
+    return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main(int argc, char **argv)
+{
+  std::cout << "sizeof long long int = " << sizeof(long long int) << std::endl;
+  std::cout << "sizeof myclass = "<< sizeof(myclass) << std::endl;
+}
+
+#include <iostream>
+int main(int argc, char **argv)
+{
+  int a[0];
+  std::cout << "Total size of empty array in bytes " << sizeof(a) << std::endl;
+}

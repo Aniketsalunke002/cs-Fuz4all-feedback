@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main(int argc, char **argv)
+{
+	int i;
+	long sum;
+	for(i = 1; i <= 9; i++)
+	{
+	    sum += do_the_calculation(i);
+	}
+	std::cout << "Calculation completed with value " << sum << "\n";
+	return 0;
+}

@@ -1,0 +1,62 @@
+#include <iostream>
+ void __VERIFIER_assume(int cond) {
+  if(!(cond)) {
+     ERROR: goto ERROR;
+  }
+ }
+ int main() {
+  long x;
+  std::cin >> x;
+  __VERIFIER_assume(x >= 0 && x <= 2147483647);
+  int __tmp_invariant_var_1411;
+  if (x > 0)
+    __tmp_invariant_var_1411 = x;
+  else
+    __tmp_invariant_var_1411 = 0;
+  __VERIFIER_assume(__tmp_invariant_var_1411 <= 2147483647);
+ long __tmp_invariant_var_1392;
+  if (x >= 0)
+    __tmp_invariant_var_1392 = 1;
+  else
+    __tmp_invariant_var_1392 = 0;
+  __VERIFIER_assume(__tmp_invariant_var_1392);
+  x = x + 1;
+  int __tmp_invariant_var_1397;
+  if (x >= 0)
+    __tmp_invariant_var_1397 = 1;
+  else
+    __tmp_invariant_var_1397 = 0;
+  __VERIFIER_assume(__tmp_invariant_var_1397);
+  x = (x + 1) / 2;
+  std::cout << x;
+ }
+ 
+#include <iostream>
+ void __VERIFIER_assume(int cond) {
+  if(!(cond)) {
+     ERROR: goto ERROR;
+  }
+ }
+ int main() {
+  long x;
+  std::cin >> x;
+  __VERIFIER_assume(x >= 0 && x <= 2147483647);
+  int xx;
+  if (x > 0)
+    xx = x;
+  else
+    xx = 0;
+  if (xx <= 2147483647) {
+ long __tmp_invariant_var_1381;
+  if (xx >= 0)
+    __tmp_invariant_var_1381 = 1;
+  else
+    __tmp_invariant_var_1381 = 0;
+  __VERIFIER_assume(__tmp_invariant_var_1381);
+    x = xx + 1;
+    int __tmp_invariant_var_1386;
+    if (x >= 0)
+      __tmp_invariant_var_1386 = 1;
+    else
+      __tmp_invariant_var_1386 = 0;
+    __VERIFIER_assume(__tmp

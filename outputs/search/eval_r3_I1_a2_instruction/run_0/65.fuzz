@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+namespace a{
+    namespace b{
+	void display(){
+		cout<<"Displaying from a::b"<<endl;
+	}
+   namespace c{
+   	void display(){
+	    cout<<"Displaying from a::b::c"<< endl;
+        
+	}
+   };  
+  };  
+   void display(){
+	   cout<<"Displaying from a"<< endl;
+       
+   }
+}  
+namespace b{
+  void display(){
+	  cout<<"Displaying from b"<< endl;
+       
+  }
+}  
+
+int main(int argc, char** argv) {
+		using namespace std;
+	cout <<"calling from namespace a::b::c "<<endl;
+	a::b::c::display();   
+	cout <<"calling from namespace a::b "<<endl;
+	a::b::display();  
+	cout <<"calling from namespace a "<<endl;
+	a::display();  
+	cout <<"calling from namespace b"<<endl;
+	b::display();  
+	return 0;
+	
+}

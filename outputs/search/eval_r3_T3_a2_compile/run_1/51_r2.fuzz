@@ -1,0 +1,16 @@
+#include <iostream>
+
+#include <tuple>
+template <typename... Types>
+void mutate_print(const Types&... vals)
+{
+	auto arr = std::tie(vals...);
+	(arr[0] = arr[0] + 1, "/", arr[1] = arr[1] + 2, "/", arr[2] = arr[2] + 3)
+	(std::cout <<... << arr);
+}
+int main(void)
+{
+	int a = 1, b = 2, c = 3;
+	mutate_print(a, b, c);
+	return 0;
+}

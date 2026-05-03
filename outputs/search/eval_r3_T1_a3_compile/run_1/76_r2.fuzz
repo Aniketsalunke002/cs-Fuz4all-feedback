@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	int a = 0;
+	std::cout << ((a = 3)? "true" : "false") << std::endl;
+	while (a < 5)
+	{
+		a++;
+	}
+	return 0;
+}

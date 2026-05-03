@@ -1,0 +1,10 @@
+#include <iostream>
+int main()
+{
+  int i=5;
+  int j=5;
+  i = i++ + j;
+  i = i++ + j++;
+  cout << i << " " << j << endl;
+  return 0;
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[50];
+    arr[0] = 0;
+    int n = 20;
+    cout << "The first 10 are : " << endl;
+    for (int i = 1; i < n; ++i)
+    {
+        arr[i] = arr[0] + arr[1];
+        cout << i << " : " << arr[i] << endl;
+    }
+    for (int j = 10; i <= 100; i += 10)
+    {
+        arr[j] = arr[j - 10] - arr[j - 2];
+        cout << j << " : " << arr[j] << endl;
+    }
+    return 0;
+}

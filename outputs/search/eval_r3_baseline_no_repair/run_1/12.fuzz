@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main()
+{	static char a = 'A';
+	cout << a << endl;
+	cin >> a;
+	return 0;
+}

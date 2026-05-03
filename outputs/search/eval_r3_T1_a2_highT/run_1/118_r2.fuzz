@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    printInt(atoi("5"));
+    return 0;
+}
+void printInt(int v)
+{
+    cout << "The number is: " << v << endl;
+}
+
+//  
+// C++20 Code:
+#include <any>
+#include <iostream>
+template<typename T>
+void printAny(T p)
+{
+    std::cout << p->type().name() << ": " << p->template any_cast<T>() << std::endl;
+}
+ 
+int main() {
+    std::any abc = 10;
+    std::any xyv; // can be of any type
+    xyv.emplace<double>(10.4);
+    xyz =.01f;
+ 
+    printAny(abc);
+    printAny(xyv);
+ 
+    std::cout << std::boolalpha;
+    // std::is_same_v<float, double>
+    // true
+    // false
+    std::cout << std::is_same_v<float, std::decay_t<decltype(sqrt(x))>> << std::endl;
+    // true
+    // false
+    std::cout << "xyz" << 10 << std::endl;
+    // abc: 10
+    // class std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char>>: 10
+    // xyz.4
+ 
+    // std::__class_type_info: std::is_assignable<class std::any, std::string>
+    // true
+    // false
+    // true
+    std::cout << "abc = 14; "
+        "abc = 11.0; "
+        "x = 5.2;" << std::boolalpha;
+ 
+    xyz = 5.8; // true
+}
+#include <any>
+#include <iostream>
+template<typename T>
+void printAny(T &p)
+{
+    std::cout << std::boolalpha;
+    std::cout << p.type().name() << ": " << std::any_cast<T &>(p);
+    std::cout << std::endl;
+}
+ 
+int main() {
+    std::any abc = 10;
+    std::any xyv;

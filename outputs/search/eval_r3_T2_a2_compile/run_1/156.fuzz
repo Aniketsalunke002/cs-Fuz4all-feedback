@@ -1,0 +1,20 @@
+#include <iostream>
+#include <future>
+#include <thread>
+#include <chrono>
+
+int main()
+{
+    std::promise<int> p;
+    int a = 2;
+    auto f = p.get_future();
+
+    std::thread t{
+        [&] { return a + f.get(); },
+    };
+
+    auto result = 3;
+    p.set_value(result);
+
+    t.join();
+}

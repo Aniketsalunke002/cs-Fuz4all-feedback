@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+	int c = 5, d = 12;
+	cout << c << endl;
+	cout << d << endl;
+	test();
+	cout << c << endl;
+	cout << d << endl;
+	return 0;
+}
+void test() {
+	c *= 30;
+	d -= 30;
+}

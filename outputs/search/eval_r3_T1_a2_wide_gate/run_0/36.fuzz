@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(void) {
+    int *a = new int[2];
+    cout<<sizeof(a)<<endl;
+    int b = 10;
+    int *c = new (&a[1]) int;
+    cout<<sizeof(c)<<endl;
+    a[1] = 2;
+    cout<<a[1]<<" "<<a[0]<<endl;
+    delete []a;
+    cout<<sizeof(b)<<endl;
+    b = 0;
+    cout<<b<<endl;
+    delete c;
+}

@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class Students {
+	private:
+		int students_id;
+		string name;
+		static int count;
+		staticStudentss() {
+			count++;
+		}
+		void Display() {
+			cout << "ID : " << students_id << endl;
+			cout << "Name : " << name << endl;
+		}
+	public:
+		void Get_data() {
+			cout << "Enter the student id : ";
+			cin >> students_id;
+			cout << "Enter the student name : ";
+			cin.getline(name, 15);
+		}
+		void Insert() {
+			students_id = count + 1;
+			cout << "The student id is : " << students_id << endl;
+		}
+		int Students_count() {
+			return count;
+		}
+};
+int Studentss::count = 10;
+int main() {
+	Students stud;
+	stud.Get_data();
+	stud.Display();
+	cout << "No of students : " << stud.Students_count() << endl;
+	return 0;
+}

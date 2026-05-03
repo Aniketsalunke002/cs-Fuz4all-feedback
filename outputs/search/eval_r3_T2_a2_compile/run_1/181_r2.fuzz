@@ -1,0 +1,17 @@
+#include <iostream>
+
+#include <vector>
+using namespace std;
+int test_mutate(int *int1, int int2){
+    int1=new int[100];
+    return int2;
+}
+int main()
+{
+    vector<int> myArray1=test_mutate(listNum1, 7);
+    vector<int> myArray2=test_mutate(listNum2, 11);
+    vector<int> result1=myfunc(listNum1, 7);
+    vector<int> result2=myfunc(listNum2, 11);
+    cout << "Test myfunc: " << result1 << "\n";
+    cout << "Test myfunc: " << result2 << "\n";
+}

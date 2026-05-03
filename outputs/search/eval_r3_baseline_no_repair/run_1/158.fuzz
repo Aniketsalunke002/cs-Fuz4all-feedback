@@ -1,0 +1,18 @@
+#include <iostream>
+double x[5];
+int main() {
+  x[0] = 3;
+  printf("%f\n%p\n", x[0], &x[0]);
+  volatile double y = 4.0;
+  printf("%f %d %p\n", x[0], 0, &x[0]);
+  volatile double z[] = {1, 2, 3, 4, 5};
+  double t[] = { 6, 7, 8, 9, 0 };
+  printf("%f %d\n", z[0], ((int *)z)[0]);
+  printf("%f %d\n", t[0], ((int *)t)[0]);
+  ((int *)z)[0] = 11;
+  printf("%f %d %p\n", z[0], 0, &z[0]);
+  x[0] = 2;
+  printf("%f %d %p\n", y, 0, &z[0]);
+  return 0;
+}
+ 

@@ -1,0 +1,38 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+class C {
+private:
+    int id, age;
+public:
+    C(int id, int age) : id(id), age(age)
+    {
+        cout << "C : " << id << ":" << age << endl;
+    }
+   C operator++(int) {
+        int i;
+        for(i=0; i<age; i++) {
+            cout << "1" << (i+1) << endl;
+        }
+        return C(id, age);
+    }
+    friend int *getPtr(C& c)  {
+        return c.ptr;
+    }
+};
+
+int *getPtr(C& c) {
+    return c.ptr;
+}
+int main() {
+    C c(1, 4500);
+    *++c;
+    cout << *(getPtr(c)) << endl;
+    return 0;
+}
+
+//
+//
+//
+//

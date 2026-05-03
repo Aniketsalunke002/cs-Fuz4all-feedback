@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{	short int a;
+	double c = 5 + a++;
+	cout << (int)a;
+	cout << c << endl;
+	a = 3;
+	c = 12 + 6 ;
+	c = c / a;
+	cout << (int)a << endl;
+	cout << c << endl;
+	cout << c++ << endl;
+	cout << (int)a << endl;
+	 
+	return 0;
+}

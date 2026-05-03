@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	int input;
+	std::cin >> input;
+	switch(input){
+		case 0:
+		return 0;
+		case 1: 
+		return 1;
+		default: return -1;
+	}
+cout << "Value is " << 10 /input << "\n";
+}

@@ -1,0 +1,51 @@
+#include <iostream>
+
+#include <string>
+#include <algorithm>
+#include <vector>
+#include <initializer_list>
+#include <array>
+#include <string_view>
+using namespace std;
+int main() {
+    string_view p = "abc";
+    cout << p << '\n';
+
+    for (auto &x : p) {  
+        x = 'A' + (x - 'A');
+    }
+    cout << p << '\n';
+
+    array<int,4> n = {1, 2, 3, 4};  
+    auto m = n | views::reverse;
+    reverse(m.begin(), m.end());
+    for(auto& x : m) {
+        cout << x;
+    }
+}
+
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <vector>
+#include <initializer_list>
+#include <array>
+#include <string_view>
+#include <string>
+using namespace std;
+int main() {
+    string_view p = "abc";
+    cout << p << '\n';
+
+    for (auto &x : p) {  
+        x = 'A' + (x - 'A');
+    }
+    cout << p << '\n';
+
+    array<int,4> n = {1, 2, 3, 4};  
+    auto m = n | views::reverse;
+    reverse(m.begin(), m.end());
+    for(auto& x : m) {
+        cout << x;
+    }
+}

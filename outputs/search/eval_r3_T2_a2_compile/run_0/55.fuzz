@@ -1,0 +1,44 @@
+#include <iostream>
+int main(int argc, char** argv)
+{
+    int a, b, c, x;
+    std::cin >> a >> b >> c;
+
+    long long aTmp[2] = {a,b};
+    while (aTmp[0]%c!=0 || aTmp[1]%c!=0){
+        aTmp[0] = aTmp[0]+b;
+        aTmp[0] = aTmp[0]%c;
+        aTmp[1] = aTmp[1]+b;
+        aTmp[1] = aTmp[1]%c;
+    }
+
+    if (aTmp[0]==0 && aTmp[1]==0)
+        std::cout << "YES: 1";
+    else
+        std::cout << "NO";
+}
+ 
+
+     
+#include <iostream>
+int main(int argc, char** argv)
+{
+    int a,b,c,x;
+    std::cin >> a >> b >> c;
+
+    int aTmp[2] = {a,b};
+    while (aTmp[0] % c!= 0 || aTmp[1] % c!= 0)
+    {
+        aTmp[0]+=b;
+        aTmp[0]%=c;
+        aTmp[1]+=b;
+        aTmp[1]%=c;
+    };
+
+    if (aTmp[0] == 0 && aTmp[1] == 0)
+        std::cout << "YES: 1";
+    else
+        std::cout << "NO";
+}
+
+ 

@@ -1,0 +1,14 @@
+#include <iostream>
+namespace foo {
+class bar {
+   public:
+    int barMethod() { return 1; }
+};
+}
+using namespace foo;
+int main() {
+    bar x;
+    int i = x.barMethod();
+    std::cout << "i = " << i << std::endl;
+    return 0;
+}

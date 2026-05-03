@@ -1,0 +1,23 @@
+#include <iostream>
+template<typename T>
+T g(T x) {
+	return x - 1;
+}
+int mutant3() {
+	int b = -4, c = -0;
+	if (c >= 0) {
+		return g(c);
+	}
+	else {
+		return b;
+	}
+}
+int main() {
+	int a = 1, b = 62716;
+	if (int a = 62716; a >= 62716) {
+		return g(a);
+	}
+	else {
+		return b;
+	}
+}

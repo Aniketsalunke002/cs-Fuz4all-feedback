@@ -1,0 +1,9 @@
+#include <iostream>
+#include <vector>
+#include <cstring>
+void f(char*  x){char* y;y= new char[75];strcpy(y,x);}
+int main(int argc, char **argv){
+  f(argv[1]);
+}
+void main()
+{}

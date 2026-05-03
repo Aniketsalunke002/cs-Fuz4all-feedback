@@ -1,0 +1,12 @@
+#include <iostream>
+int main() {
+    char a;
+    std::cin>>a;
+    int *p=new int;
+    *p=a;
+    *p+=a;
+    delete p;
+    return 0;
+}
+```
+

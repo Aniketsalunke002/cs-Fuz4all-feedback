@@ -1,0 +1,18 @@
+#include <iostream>
+#include <memory>
+std::unique_ptr<int> get() {
+  int *i = new int;
+  double *d = new double;
+  *i = 42;
+  *d = 1.0;
+  std::unique_ptr<int> ival(i);
+  std::unique_ptr<double> dval(d);
+  return ival;
+}
+A *create_b() {
+  int *i = new int;
+  double *d = new double;
+  *i = 42;
+  *d = 1.0;
+  return new B;
+}

@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    const int N = 1000001;
+    int data[N];
+    for(int i = 0; i < N; ++i)
+        data[i] = i + 1;
+    puts(data);
+    cout << data[0] << "  " << data[1] << "  " << data[2] << "  " << data[3] << "  " << data[4] << "  " << data[5] << "  " << data[6];
+}
+//  
+//  
+//  
+#include <iostream>
+using namespace std;
+int main()
+{
+    const int N = 1000001;
+    int data[N];
+    for(int i = 0; i < N; ++i)
+        data[i] = i + 1;
+    puts(data);
+    cout

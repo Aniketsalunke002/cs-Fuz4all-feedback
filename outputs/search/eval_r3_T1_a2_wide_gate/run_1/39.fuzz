@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+	int mutant_0 = 100;
+	mutant_0 = mutant_0 + 50;
+	std::cout << mutant_0;
+	return 0;
+}
+

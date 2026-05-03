@@ -1,0 +1,63 @@
+#include <iostream>
+
+void do_it()
+{
+    std::ios_base::sync_with_stdio(false);
+    std::cout << std::cout.sync_with_stdio(1);
+}
+int main()
+{
+    do_it();
+    std::cout << std::cout.sync_with_stdio(0) << std::endl;
+}
+//  
+// #include <iostream>
+// #define sync_with_stdio(b) std::cout.sync_with_stdio(b)
+// void do_it()
+// {
+//     sync_with_stdio(0);
+// }
+// int main()
+// {
+//     do_it();
+//     sync_with_stdio(0);
+// }
+//  
+// #include <iostream>
+// int main()
+// {
+//     std::cout << printf << std::endl;
+// }
+//  
+// #include <iostream>
+// int foo = 5;
+// int main()
+// {
+//     std::cout << std::cout.foo << std::endl;
+// }
+//  
+// #include <iostream>
+// #define STR "Hello World!\n"
+// int main()
+// {
+//     std::cout << STR << std::endl;
+// }
+//  
+// #include <iostream>
+// int main()
+// {
+//     std::cout << sizeof(std::cout) << std::endl;
+// }
+//  
+// #include <iostream>
+// int main()
+// {
+//     double m[3][3] = {{1, 1, 1}, {1, 5, 5}, {1, 5, 1}};
+//     std::cout << m[1][2];
+// }
+//  
+// #include <iostream>
+// int main()
+// {
+//     std::cout << std::cout.sync_with_stdio(0) << std::endl;
+// }

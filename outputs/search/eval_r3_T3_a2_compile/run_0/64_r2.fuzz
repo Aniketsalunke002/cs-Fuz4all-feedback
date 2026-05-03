@@ -1,0 +1,20 @@
+#include <iostream>
+
+#include <memory>
+#include <string>
+#include <unordered_map>
+template<typename T, typename U>
+auto get_array(std::unordered_map<std::string, U> size)->std::unique_ptr
+<T[]>
+{
+     return std::make_unique<T[]>(size.begin()->second);
+}
+int main()
+{
+     std::unordered_map<std::string, int> size{{"A", 96}};
+     auto arr = get_array<char, int>(size);
+     char *str = "abcdefghijklmnopqrstuvwxyz";
+     for(auto &c: arr) c = str[c.size()];
+     for(auto &c: arr) std::cout << c;
+     return 0;
+}

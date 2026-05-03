@@ -1,0 +1,12 @@
+#include <iostream>
+void do_it()
+{
+    std::cin.tie(0);
+}
+int main()
+{
+    std::cin.tie()
+   ? do_it();
+    : ;
+    std::cout << std::cin.tie() << std::endl;
+}

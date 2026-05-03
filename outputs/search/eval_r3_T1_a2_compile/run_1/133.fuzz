@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int x = 3;
+    int y = 4;
+    int z = 5;
+    x+=-2;
+    cout << x << "\n";
+    y*=3;
+    cout << y << "\n";
+    z-=5;
+    cout << z << "\n";
+    return 0;
+}

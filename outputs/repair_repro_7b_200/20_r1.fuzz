@@ -1,0 +1,7 @@
+#include <iostream>
+
+using namespace std;
+string s = "Hello World!";
+string g = s;
+g = g + "s";
+cout << g << endl;

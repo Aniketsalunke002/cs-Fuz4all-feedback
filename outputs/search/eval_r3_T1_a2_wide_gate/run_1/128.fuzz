@@ -1,0 +1,13 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <iterator>
+int main( int argc, char **argv ){
+  std::vector<int> v1 ( 5, 3);
+  std::vector<int> v2 ( 10, 2);
+  std::stable_sort( 
+      std::ostream_iterator<int>(std::cout, "\n"),
+      std::istream_iterator<int>(std::cin),
+      std::less<int>());
+}
+

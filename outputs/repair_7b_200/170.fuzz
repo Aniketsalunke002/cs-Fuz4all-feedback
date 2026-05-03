@@ -1,0 +1,19 @@
+#include <iostream>
+int main()
+{
+    int x(1);
+    struct foo
+    {
+        int i{};
+    };
+    foo mfoo{};
+    {
+        int y{x};
+        std::cout << y << std::endl;
+    }
+    std::cout << x << std::endl;
+}
+
+ 
+
+ 

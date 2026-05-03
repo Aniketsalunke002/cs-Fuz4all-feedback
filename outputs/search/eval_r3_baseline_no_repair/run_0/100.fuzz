@@ -1,0 +1,109 @@
+#include <iostream>
+int getint();
+unsigned getuint();
+
+unsigned f(unsigned i) {
+  return i*2;
+}
+
+int main(int argc, char **argv) {
+  return f(getuint());
+}
+ 
+#include <iostream>
+int getint();
+unsigned getuint();
+
+unsigned f(unsigned i) {
+  unsigned u=0;
+  for(unsigned j=0; j<i; j++) {
+    u=2*u;
+  }
+  return u;
+}
+
+int main(int argc, char **argv) {
+  return f(getuint());
+}
+ 
+#include <iostream>
+#include <string>
+void solve()
+{
+  std::string s1(1, getchar()), s2(1, getchar());
+  std::cout << "char " <<  (int)(s1[0]^s2[0]) << std::endl;
+}
+
+int main() {
+  solve();
+}
+ 
+#include <iostream>
+#include <string>
+
+void solve()
+{
+  unsigned n=getuint();
+  int *a = new int[n];
+  int k=0;
+  while(n > k) {
+    a[k++]=getint();
+  }
+
+  unsigned p[n];
+  unsigned k=0;
+  for(unsigned i=0; i<n; i++) {
+    if(k==0) {
+      k=p[i];
+      continue;
+    }
+    if(a[i]<a[k]) {
+      k=i;
+    }
+  }
+
+}
+
+int main() {
+  solve();
+}
+ 
+#include <iostream>
+#include <vector>
+
+int solve(const std::vector<std::vector<int> > &matrix, char mode)
+{
+}
+
+int main() {
+  const std::vector<std::vector<int> > matrix={{0,1,5},{2,6,0},{3,1,7}};
+  int result=solve(matrix,'r');
+  std::cout << "result " << result << std::endl;
+
+}
+ 
+#include <iostream>
+#include <vector>
+
+int solve(const std::vector<std::vector<int> > &matrix)
+{
+}
+
+int main() {
+  const std::vector<std::vector<int> > matrix={{0,1,5},{2,6,0},{3,1,7}};
+  int result=solve(matrix);
+  std::cout << "result " << result << std::endl;
+}
+ 
+#include <iostream>
+#include <vector>
+
+int solve(const std::vector<std::vector<int> > &matrix)
+{
+}
+
+int main() {
+  const std::vector<std::vector<int> > matrix={{0,1,5},{2,6,0},{3,1,7}};
+  int result=solve(matrix);
+  std::cout << "result " << result << std::endl;
+}

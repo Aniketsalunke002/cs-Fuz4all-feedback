@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+	int main()
+	{
+ 		double area, radius;
+ 			cout << "Enter Radius of Circle : ";
+ 			cin >> radius;
+ 			area = radius* radius;
+ 			cout << "Area of Circle : "  << area ;
+ 		return 0;
+	}
+#include <iostream>
+using namespace std;
+	int main()
+{
+   	double Radius;
+   	double Pi = 3.14;
+   	Radius = 2.0;
+   	double Area = Pi * Radius * Radius;
+   	cout << "Area of circle is: " << Area << "\n";
+return 0;
+}
+#include <iostream>
+using namespace std;
+int main()
+{
+   double radius;
+   double pi = 3.14;
+   radius = 5.0;
+   cout << "The area of the circle =" << pi*(radius*radius) << endl;
+return 0;
+}
+#include <iostream>
+using namespace std;
+int main()
+{
+ double pi, radius;
+ pi = 3.14;
+ radius = 2.0;
+ double area;
+ area = pi * radius * radius;
+ cout << "Circle's Area :" << area << endl;
+ return 0;
+}
+#include <iostream>
+using namespace std;
+int main()
+{
+   double pi, angle, length;
+   pi = 3.14;
+   angle = 1.0;
+   length = 10.5;
+   int volume;
+   volume = pi * angle * (length / 3);
+   cout << "Volume = " << volume << endl;
+   return 0;
+}

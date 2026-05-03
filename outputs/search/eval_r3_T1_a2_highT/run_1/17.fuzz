@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+
+    const int count = 25;
+    int arr[count];
+
+    for (int i = 0; i < count; ++i)
+        arr[i] = rand();
+
+     
+
+}

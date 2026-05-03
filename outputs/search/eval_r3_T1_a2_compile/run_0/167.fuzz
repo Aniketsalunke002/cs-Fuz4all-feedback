@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int i = 4;
+    cout << "The value of i is " << i << endl;
+    cout << "The final value of i is " << i++ * 3 << endl;
+    return 0;
+}
+

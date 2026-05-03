@@ -1,0 +1,11 @@
+#include <iostream>
+int main4() {
+    int i = 0, sum=0,n=0;
+    std::cin >> n;
+    for (; i < n; ++i){
+        int num = 0;
+        sum += (num+sum)/2;
+    }
+    std::cout << sum;
+    return 0;
+}

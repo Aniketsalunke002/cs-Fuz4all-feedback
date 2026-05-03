@@ -1,0 +1,37 @@
+#include <iostream>
+#include <vector>
+#include <array>
+std::vector<int> add_element(std::vector<int> numvec){
+    std::vector<int> new_vec;
+
+    for (int i{1}; i <= numvec.size(); i++){
+        new_vec.push_back(numvec[numvec.size() - i]);
+    }
+    return new_vec;
+}
+
+int main()
+{
+    std::cout << "Hello, World!" << std::endl;
+    std::vector numvec(5,0);
+    std::array numarr{1,2,3,4,5};
+    auto new_numvec{add_element(numvec)};
+    for(int i{0}; i < new_numvec.size(); i++){
+        std::cout << new_numvec[i] << std::endl;
+    }
+
+    int newarr[] = {1,2,3,4,5};
+
+     
+
+    for(auto i : newarr)
+    {
+         
+        std::cout << newarr[i - 1] << std::endl;
+    }
+    for(char j : "Hello World")
+    {
+        std::cout << j << std::endl;
+    }
+    return 0;
+}

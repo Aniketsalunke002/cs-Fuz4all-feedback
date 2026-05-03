@@ -1,0 +1,20 @@
+#include <iostream>
+#include <fstream>
+#include <sstream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    ifstream ifile(_argv[1]);
+    ofstream ofile(_argv[1]);
+    size_t len = 64;
+    char buffer[len];
+     
+    if (ifile.is_open())
+    {
+        while (ifile.read(buffer, len))
+            ofile.write(buffer, len);
+        ifile.close();
+        ofile.close();
+    }
+    else return 0;
+}

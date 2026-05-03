@@ -1,0 +1,31 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+    int i = 0;
+    int j = 1;
+    while (j < argc-3) {
+      i++; j += 3; i++; j += 3; i++; j += 3;
+      cout << argv[i][0] << endl;
+          if (argv[i][0] == 'A' && argv[i+1][0] == 'A') {
+             argv[i][2] = 'A';
+             argv[i+1][2] = 'B';
+             argv[i+2][2] = 'A';
+             cout << argv[i][0] << argv[i+1][0] << argv[i+2][0] << endl;
+          } else if (argv[i+1][0] == 'A' && argv[i-1][0] == 'A') {
+             argv[i+1][2] = 'B';
+             argv[i][2] = 'A';
+             argv[i-1][2] = 'A';
+              cout << argv[i][0] << argv[i+1][0] << argv[i-3][0] << endl;
+              
+          } else if ((argv[i+1][0] == 'A' && argv[i+2][0] == 'A') || (argv[i+1][0] == 'A' && argv[i-1][0] == 'A')) {
+             argv[i + 1][2] = 'B';
+              argv[i + 2][2] = 'A';
+              
+          }  
+
+         
+        i++; j += 3;
+    }
+    return 0;
+}
+

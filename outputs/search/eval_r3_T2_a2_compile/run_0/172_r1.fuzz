@@ -1,0 +1,36 @@
+#include <iostream>
+
+#include <set>
+#include <string>
+#include <tuple>
+#include <vector>
+
+#include "clang/AST/ASTContext.h"
+#include "clang/AST/Comment.h"
+#include "clang/AST/DeclCXX.h"
+#include "clang/AST/DeclObjC.h"
+#include "clang/AST/DeclTemplate.h"
+#include "clang/AST/RecursiveASTVisitor.h"
+#include "clang/AST/Stmt.h"
+#include "clang/Basic/FileManager.h"
+#include "clang/Basic/LangOptions.h"
+#include "clang/Basic/SourceLocation.h"
+#include "clang/Basic/SourceManager.h"
+#include "clang/Lex/Lexer.h"
+#include "llvm/ADT/StringRef.h"
+#include "llvm/Support/FileSystem.h"
+#include "llvm/Support/MemoryBuffer.h"
+
+using llvm::StringRef;
+namespace clang {
+class Comment;
+class FullComment;
+class SourceManager;
+class FileID;
+class FileManager;
+class LangOptions;
+class Preprocessor;
+class PreprocessorOptions;
+class Token;
+class TokenLexer;
+class Compiler {

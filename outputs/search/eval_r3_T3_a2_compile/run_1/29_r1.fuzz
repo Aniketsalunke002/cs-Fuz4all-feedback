@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+
+template<typename T>
+void print(const T& t) {
+    cout << t << endl;
+}
+
+struct A
+{
+    int iField1;
+    inline A(int i = 777)
+    {
+        this->iField1 = i;
+    }
+    inline int getiField1() const {
+        return iField1;
+    }
+};
+
+int main() {
+    A one(1);
+    one.iField1 = 2;      
+    print(one.getiField1());    
+
+    cout << one;       
+
+    return 0;
+}

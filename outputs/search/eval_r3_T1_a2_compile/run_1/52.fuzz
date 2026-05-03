@@ -1,0 +1,17 @@
+#include <iostream>
+void d()
+{
+    try
+    {
+        throw(1);
+    }
+    catch (int & x)
+    {
+        std::cout<<x;
+        throw(1);
+    }
+    catch (...)
+    {
+        std::cout<<"Exception occured!";
+    }
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+
+
+class A {
+public:
+    int id;
+    A(int id) : id(id) {}
+};
+
+int main() {
+    A a(101);
+    std::cout<<a.id;
+    return 0;
+}

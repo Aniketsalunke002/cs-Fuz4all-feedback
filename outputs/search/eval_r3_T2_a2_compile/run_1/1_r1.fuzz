@@ -1,0 +1,7 @@
+#include <iostream>
+
+
+void f() {
+	int n1 = std::cout<< "Hello world! ";
+	std::cerr<< "N1="<< n1;
+}

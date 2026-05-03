@@ -1,0 +1,25 @@
+#include <iostream>
+void namespace_world::hello() {
+	std::cout << "Hello worlddddddd" << std::endl;
+}
+int main() {
+	namespace_world::hello();
+	return 0;
+}
+ 
+#include <iostream>
+#ifdef LINUX
+void run() {
+	std::cout << "Linux code" << std::endl;
+}
+#endif
+#ifdef MAC
+#include <dlfcn.h>
+void run() {
+	std::cout << "Mac code" << std::endl;
+	dlclose(dlopen("mac_libraries.dylib", RTLD_NOW));
+}
+#endif
+int main() {
+	run();
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    std::cout << "before the program " << a << std::endl;
+    a *= a;
+    std::cout << "after the program " << a << std::endl;
+    return 0;
+}
+ 

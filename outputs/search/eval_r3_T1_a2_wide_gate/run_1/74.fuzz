@@ -1,0 +1,14 @@
+#include <iostream>
+int mutated = {'a'};
+
+void mutate() {
+  mutated = {'b'};
+}
+
+
+int main()
+{
+  std::clog <<  mutated << std::endl;
+  mutate();
+  std::clog << mutated << std::endl ;
+}

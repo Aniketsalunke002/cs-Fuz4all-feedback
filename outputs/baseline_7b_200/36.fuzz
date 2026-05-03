@@ -1,0 +1,15 @@
+#include <iostream>
+ using namespace std;
+ int main()
+ {
+	float f1;
+	float f2;
+	float f3 ;
+   char c;
+   c='x';
+   char cc=c;
+   cout<<cc<<endl;
+   for(float i=0.34;i<12.34;i+=0.01){
+    cout<<i<<'\t';
+  }
+}

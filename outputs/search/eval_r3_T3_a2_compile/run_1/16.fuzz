@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+struct A
+{
+    int iField;
+    A(): iField(777)
+	    {  }
+    A(const A &r): iField(r.iField+1)
+	   {  }
+};
+int main ()
+{
+    A one, two(one);
+    cout << "Size of one:  " << sizeof(one) << endl;
+    cout << "Size of two:  " << sizeof(two) << endl;
+    return 0;
+}
+ 
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main ()
+{
+    char *str1 = "Hello";
+    char str2[] = "World";
+    const char *str3 = strdup("Goodbye");
+    int n1 = strlen(str1);
+    int n2 = strlen(str2);
+    int n3 = strlen(str3);
+    cout << "Size of char is:         " << sizeof(char)
+	 << " (in this case 8 bits)" << endl;
+    cout << "Size of char * is:        " << sizeof(char *)
+	 << " (in this case " << sizeof(void *) << " bits)" << endl;
+    cout << "Size of string:           " << sizeof(str2)
+	 << " (in this case " << sizeof(str2[0]) << " bytes for each string character)" << endl;
+    cout << "Length of str1 is:        " << n1 << endl;
+    cout << "Length of str2 is:        " << n2 << endl;
+    cout << "Length of str3 is:        " << n3 << endl;
+    return 0;
+}

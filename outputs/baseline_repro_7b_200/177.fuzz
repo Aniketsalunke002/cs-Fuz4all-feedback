@@ -1,0 +1,5 @@
+#include <iostream>
+void f(void)
+{
+(new class A[40])[0].f();
+}

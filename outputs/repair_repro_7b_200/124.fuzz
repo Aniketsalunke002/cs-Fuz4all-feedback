@@ -1,0 +1,41 @@
+#include <iostream>
+#include <mutex>
+#include <condition_variable>
+char x=0;
+
+std::mutex mtx;
+std::condition_variable cv;
+
+char fun() {
+    while(x){
+    cv.notify_all();
+    std::cout << "I will wake up and return" << std::endl;
+     
+    return 1;
+}
+ 
+return 0;
+}
+void foo() {
+    mtx.lock();
+    x = fun();
+    mtx.unlock();
+     
+}
+int main(void) {
+    std::thread t([](){
+        std::unique_lock<std::mutex> lk(mtx, std::adopt_lock);
+        while (x) {
+            try {
+                cv.wait_for(lk, std::chrono::milliseconds(1000));
+            } catch (std::logic_error& le) {
+                std::cout << "LOGIC ERROR" << std::endl;
+            }
+        }
+        std::cout << "Foo returned" << std::endl;
+    });
+     
+    t.join();
+    std::cout << "T joined." << std::endl;
+    return 0;
+}

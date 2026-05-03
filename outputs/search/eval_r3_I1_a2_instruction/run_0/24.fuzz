@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    const int n = 3 * 4;
+    int e = 1, f =3;
+    int g = f / (e+f);
+    int b = 4 * (4 - 3) - 2;
+    int a = -e-b/f;
+    cout << (a == 42) << endl;
+    cout << g << endl;
+    return 0;
+}

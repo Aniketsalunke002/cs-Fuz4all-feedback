@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+class Point{
+  public:
+    void moveTo(int, int);    
+    void show(void);        
+  private:
+    int x,y;    
+  public:
+    void setX(int valx) {x = valx;}
+    void setY(int valy) {y = valy;}
+};
+void Point::moveTo(int valx,int valy){
+  x = valx;
+  y = valy;
+}
+void Point::show(void)
+{
+  cout<< "x coord:" << x << " y coord: "<< y << endl;
+}
+int main(int argc,char *argv[]) {
+   int m, n;
+   cout << "Enter a point (x,y)";
+   cin >> m >> n;
+   Point o;
+   o.moveTo(m,n);
+   o.show();
+   cout << o.x << " " << o.y << endl;
+   return 0;
+}

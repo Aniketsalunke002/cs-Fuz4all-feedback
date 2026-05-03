@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	char symbol;
+	while (cin >> symbol) {
+		switch (symbol) {
+		case ('\b'):
+			cout << "<DEL>"<< symbol;
+			break;
+		case ('\n'):
+			cout << symbol << "^-^";
+			break;
+		default:
+			cout<< symbol;
+		}
+	}
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	bool input = false;
+	while((input = cin.get())!= EOF);
+	return 0;
+}

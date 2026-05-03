@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class test
+{
+	float a,b,c;
+	public:
+	test(float i, float j):a(i),b(j),c(2.0)*i-3.0*j+23.0;
+	int ret();
+};
+int test::ret()
+{
+	return a<b&&b<c?1:2;
+}
+int main()
+{
+	test obj;
+	cout<<obj.ret()<<endl;
+	return 0;
+}
+ 
+#include <iostream>
+#include <string>
+using namespace std;
+string string1="Abhishek",string2="Siddharth";
+string concat=string1+string2;
+string append=string1;
+append+=string2;
+#ifdef _MSC_VER
+#pragma optimize("t",on)
+#endif
+int main()
+{
+	cout<<string1<<endl;
+	cout<<string2<<endl;
+	cout<<concat<<endl<<append;
+	#ifdef _MSC_VER
+	#pragma optimize("t",off)
+	#endif
+	return 0;
+}
+  

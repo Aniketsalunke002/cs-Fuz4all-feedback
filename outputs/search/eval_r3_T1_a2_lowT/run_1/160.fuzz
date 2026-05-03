@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a[4][3] =
+	{
+		{1,2,5},
+		{6,7,8},
+		{3,4,9},
+		{10,11,12}
+	};
+
+	for (auto i = 0; i < 4; ++i)
+	{
+		cout << a[2][2] << a[3][1] << a[1][0];
+	}
+
+	for (auto i = 0; i < 3; ++i)
+		for (auto k = 0; k < 4; ++k)
+			cout << a[i][k] <<'';
+ 
+	return 0;
+}

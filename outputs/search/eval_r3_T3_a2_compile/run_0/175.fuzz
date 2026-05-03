@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+vector<int> int_v;
+int main() {
+  int i;
+  for (i = 0; i < 256; i++)
+    if (i >= 0 && i <= 255)
+      int_v.push_back(1);
+  for (i = 0; i < 256; i++)
+    if (i > 3 && i < 5)
+      int_v.push_back(2);
+  for (i = 0; i < 256; i++)
+    if (i >= 4 && i <= 1000)
+      int_v.push_back(3);
+  if (int_v.empty())
+    int_v[0] = 11;
+
+  return 0;
+}

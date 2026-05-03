@@ -1,0 +1,20 @@
+#include <iostream>
+int main() {
+    A* a = new A();
+    return 0;
+}
+ 
+ 
+#include <stdio.h>
+#include <string.h>
+#include <iostream>
+int main()
+{
+    int* x = new int;
+    int arr[3];
+     
+    strcpy(*(char**)(&arr + 1), "hello world");
+     
+     
+     
+    int* num = new int[10] {1, 2, 3, 

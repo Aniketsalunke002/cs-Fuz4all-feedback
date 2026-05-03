@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+void doTest() {
+	cout << "Hello World";
+	std::cout << "Hello World2" << std::endl;
+}
+int main() {
+	doTest();
+	return 0;
+}

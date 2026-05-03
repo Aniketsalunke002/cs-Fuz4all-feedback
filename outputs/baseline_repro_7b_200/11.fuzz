@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string.h>
+int main(int argc, char** argv)
+{
+	const char x[] = "Hello, world!\n";
+	char* cptr = (char *) x;
+	char c = fgetc(stdin);
+	while (c!= '\n')
+	{
+		fputc(cptr, stdout);
+		c = fgetc(stdin);
+	}
+	std::cout << x;
+    return 0;
+}
+```
+- There was more advanced stuff in c++, but I think all of it would still be pretty simple for you
+- Anyway, you have now a little bit of experience with some of the keywords in C++. Do you want to hear some examples?
+ 
+**Question 1** (0.1 points + 1 bonus)  

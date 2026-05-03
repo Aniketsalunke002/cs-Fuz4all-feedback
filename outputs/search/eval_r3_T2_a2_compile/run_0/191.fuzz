@@ -1,0 +1,6 @@
+#include <iostream>
+std::ostream* operator>>(std::ostream&, std::istream&);
+std::istream* operator<<(std::istream&, std::ostream&);
+int main() {
+    return 1;
+}

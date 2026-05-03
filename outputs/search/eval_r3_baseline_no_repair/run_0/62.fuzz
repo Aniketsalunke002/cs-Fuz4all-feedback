@@ -1,0 +1,38 @@
+#include <iostream>
+void foo(char *str)
+{
+    str = new char[6];
+    (*str)[0] = 't';
+    (*str)[1] = 'e';
+    (*str)[2] ='s';
+    (*str)[3] = 't';
+    delete [] str;
+}
+int main()
+{
+    char *a;
+    a = new char[6];
+    foo(a);
+    std::cout << a << std::endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    char *a;
+    a = new char[6];
+    char(*foo_ptr)(char*) = foo;
+    foo_ptr(a);
+    cout << a << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    char *a;
+    a = new char[6];
+    universal(*a, 6, "test");
+    cout << a << endl;
+}

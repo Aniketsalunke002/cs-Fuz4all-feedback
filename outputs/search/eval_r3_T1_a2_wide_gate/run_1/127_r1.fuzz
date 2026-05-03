@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main( int argc, char **argv ){
+    std::cout << "\n\t  This program is identical.\n\n";
+    int i, j,k,l,m,n;
+    for (i=15;i<100;i+=5){
+        if (i%7==0){
+            j += i;} else {
+            std::cin >> std::fixed << i;
+        }
+    }
+    j = 0;
+    for (k=5;k>1;k--){
+        if (j++ > 10){
+            l = k%4;
+        } else {
+            break;}
+    }
+    while((i%3==0) && (j<30)) {
+        std::cout << i << "\n";
+        n++;
+        j++;
+    }
+    l = 12;
+    m = 66;
+    std::cin.get();
+}

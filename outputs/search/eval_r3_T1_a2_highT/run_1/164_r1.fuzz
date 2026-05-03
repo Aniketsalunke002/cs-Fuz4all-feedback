@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int numa = 5;
+    int numb = 6;
+    int numc = 6;
+    int numd = 6;
+    int tempNumc;
+    if (numc < numb) {
+        ++numa;
+    } else if (numc == numb) {
+        ++numb;
+    } else if (numb == numc) {
+        tempNumc = numc;
+        numc = numc -2;
+        numd = numc;
+        numb = numd;
+    }
+    std::cout << numa << " " << numb << " " << numc << " " << numd << std::endl;
+    return 0;
+}

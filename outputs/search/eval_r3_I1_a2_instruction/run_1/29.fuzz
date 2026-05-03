@@ -1,0 +1,26 @@
+#include <iostream>
+#include <memory>
+int foo (){}
+int main ()
+{
+	auto* autoarr = new int [10];
+	auto* autocpp = new int[10];
+	 
+	char* charr = new char [sizeof(int)];
+	return 0;
+}
+ 
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+int main ()
+{
+	size_t size = sizeof(int);
+	cout<<size<<endl;
+	float f = 2.5;
+	size = sizeof (f);
+	cout << size << endl;
+	cin.ignore();
+	return 0;
+}

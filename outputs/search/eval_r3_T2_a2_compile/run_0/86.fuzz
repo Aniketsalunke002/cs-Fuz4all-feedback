@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+#define MAX 3
+using std::cout;
+using std::endl;
+template <typename T>
+void foo(T a, T b) {
+    cout << "Template: " << a << " " << b << endl;
+}
+int main(int argc, char** argv) {
+    int a1{0}, a2{0}, a3{0};
+    foo(a1, a2);    
+    foo(a3, a2);    
+}

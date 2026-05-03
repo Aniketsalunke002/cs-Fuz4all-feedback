@@ -1,0 +1,25 @@
+#include <iostream>
+
+using std::endl;
+class Base {};
+class Derived : public Base {
+public:
+    Derived(int c = 0) : c(c) {}
+    int c;
+};
+class AnotherDerived : public Derived {
+private:
+    int d;
+public:
+    AnotherDerived(int c = 0, int d = 0) : Derived(c), d(d) {}
+};
+int main(void) {
+    Base *pb = new Derived();
+    AnotherDerived *pa = new AnotherDerived();
+    delete pb;
+    pa->c = 10;
+    pb = pa;
+    pa->d = 20;
+    delete pb;
+    return 0;
+}

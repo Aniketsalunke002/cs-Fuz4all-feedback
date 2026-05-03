@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+#define A_CONST 6
+#define B_CONST 2
+int main() {
+  int x, y;
+  cin >> x;
+  if (x >= 0) {
+    if (x % A_CONST) {
+      if (!B_CONST)
+        if (y = 5)
+          y = 6;
+      x = y;
+    }
+  }
+  cout << x << endl;
+  return 0;
+}

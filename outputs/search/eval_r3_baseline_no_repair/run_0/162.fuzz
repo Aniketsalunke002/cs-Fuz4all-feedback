@@ -1,0 +1,36 @@
+#include <iostream>
+static int mut1 (int x) {
+    return x*2;
+}
+static int mut2 (int x) {
+    return 2*x*x;
+}
+static int mut3 (int x) {
+    return 2*x*x+2*3;
+}
+static int mut4 (int x) {
+    return 2*x*x+2*3+4;
+}
+int calc(int a1) {
+    int c = 1;
+    for (int i = 0; i <= a1; i++ ) c += i;
+    return c;
+}
+int main(int argc, char **argv) {
+    int sum = 0;
+    std::cout << "input: ";
+    for (int i=0;;i++) {
+        std::cout << i << " ";
+        if (i > 6) {
+            mut2(i);
+            break;
+        } else if (i%2 == 0) {
+            mut1(i);
+        } else {
+            mut3(i);
+        }
+        sum += calc(i);
+    }
+    std::cout << "sum=" << sum << "\n";
+    return 0;
+}

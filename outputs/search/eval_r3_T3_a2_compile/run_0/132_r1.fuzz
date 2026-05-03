@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+template <typename T>
+void check_pass(T &pa)
+{
+    cout << "Please enter password" << endl;
+    cin >> pa;
+    if (pa == "password")
+    {
+        cout << "Access Granted" << endl;
+    }
+    else
+        cout << "Incorrect Password!!!" << endl;
+}
+int main()
+{
+    string pa = "password";
+    check_pass(pa);
+    return 0;
+}

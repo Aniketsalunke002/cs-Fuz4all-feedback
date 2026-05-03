@@ -1,0 +1,21 @@
+#include <iostream>
+int main()
+{
+    char a=10,b=20,*pc;
+    size_t size = sizeof(a)+sizeof(b);
+    pc = new char[size];
+    std::cout << "a : " << (int)a << "\tb:" << (int)b << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+    char a[20],b[20];
+    std::cout << "Please input two integers:" << std::endl;
+    std::cin>>a>>b;
+    float fa,fb;
+    fa = atoi(a);
+    fb = atoi(b);
+    std::cout << "sum: " << (fa+fb) << std::endl;
+}

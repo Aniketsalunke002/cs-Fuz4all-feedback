@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main()
+{
+    int cint = std::cin.tie(0);
+    cint++;
+    std::cin.tie(static_cast<std::ostream*>(cint));
+    return 1;
+}
+// #pragma clang version reset

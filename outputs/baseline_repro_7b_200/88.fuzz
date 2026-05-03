@@ -1,0 +1,6 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+    auto c = 1;
+    auto d = c == 1? c++ : c--;
+    std::cout << d << std::endl;
+}

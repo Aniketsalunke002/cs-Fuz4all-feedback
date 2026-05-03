@@ -1,0 +1,21 @@
+#include <iostream>
+class MyClass2: public MyClass1
+{
+    void print()
+    {
+        std::cout<<2;
+    }
+    void say()
+    {
+        std::cout<<2;
+    }    
+};
+int main()
+{
+    MyClass2 * obj  = new MyClass2();
+    obj->say();
+    obj->print();
+    obj->print();
+    delete obj;
+    return 0;
+}

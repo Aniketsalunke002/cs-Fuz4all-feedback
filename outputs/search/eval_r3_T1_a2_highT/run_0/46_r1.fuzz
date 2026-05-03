@@ -1,0 +1,25 @@
+#include <iostream>
+
+template <typename A> class A
+{
+public:
+void add(int, int) {};
+int& operator[](int x) { return a[x]; }
+private:
+A<int> a;
+};
+int main()
+{
+   int a[100], b[20]; A<int> c;
+   for (int i = 0; i < 100; i++)
+   {
+      a[i] = 0;
+      b[i] = 1;
+      c.add(a[i],b[i]);
+   }
+   if (a[4567] == 1175)
+      a[4567] = 0;
+   if (a[8447] == 1944)
+      a[8447] = b[0];
+   return 0;
+}

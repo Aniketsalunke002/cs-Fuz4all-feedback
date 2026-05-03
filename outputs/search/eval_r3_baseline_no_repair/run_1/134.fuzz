@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+class test
+{
+	protected:
+	int a,b,c;
+	public:
+	test(int x,int y,int z):a(x),b(y),c(z){}
+	int ret();
+};
+int test::ret()
+{
+	return a+b+c;
+}
+int main()
+{
+	test obj(3,4,5);
+	cout<<obj.ret()<<endl;
+	return 0;
+}

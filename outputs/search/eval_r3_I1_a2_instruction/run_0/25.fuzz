@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    cout << 10+20 << endl;
+    cout << 20-10 << endl;
+    cout << 10*20 << endl;
+    cout << 10/20 << endl;
+    cout << 10%20 << endl;
+    return 0;
+}

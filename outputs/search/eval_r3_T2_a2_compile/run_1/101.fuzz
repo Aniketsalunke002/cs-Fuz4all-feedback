@@ -1,0 +1,11 @@
+#include <iostream>
+int main7(){
+    int s=4,n=0;
+    std::cin >> n;
+    while (s>=0){
+        s = s-2*n;
+        n+= (s>0?1:-1);
+    }
+    std::cout << -(s+1)/2-n << "\n";
+    return 0;
+}

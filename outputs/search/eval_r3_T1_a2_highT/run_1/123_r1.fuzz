@@ -1,0 +1,45 @@
+#include <iostream>
+
+class Car
+{
+    public:
+        Car()
+        {
+            this->color="Red";
+        }
+    int engineSize;
+    std::string engineType;
+    std::string color;
+};
+int main() {
+    Car c1;
+    c1.engineSize=1804;
+    // c1.color="red";
+    // cout << c1.color << endl;    
+    string s = "Test";
+    cout << s << endl;    
+    string t="Test";
+    cout << t << endl;
+    return 0;
+}
+
+// #include<iostream>
+// using namespace std;;
+// int main()
+// {
+//     int a = 10, b=20, c= 30;
+//     a = b = c;
+//     cout << a << " " << b << " " <<c <<" "<< endl;
+//     return 0;
+// }
+// Output 3 30 3 
+// Fix version:
+#include<iostream>
+using namespace std;;
+int main()
+{
+    int a = 10, b=20, c= 30;
+    a = b = c;
+    cout << a << " " << b << " " <<c <<" "<< endl;
+    return 0;
+}

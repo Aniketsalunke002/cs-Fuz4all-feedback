@@ -1,0 +1,35 @@
+#include <iostream>
+
+std::mutex mtx;
+void foo(bool& go) {
+    mtx.lock();
+    try {
+        while (!go) {
+            mtx.unlock();
+            std::unique_lock<std::mutex> lk(mtx);
+            cv.wait_for(lk, std::chrono::milliseconds(1000));
+            mtx.lock();
+        }
+    } catch (int le) { std::cerr << "LOGIC ERROR" << std::endl; }
+}
+int main(void) {
+    std::thread t([](){
+        bool flag = false;
+        while (1){
+            foo(flag);
+        }
+    });
+    foo(flag);
+    t.join();
+    return 0;
+}
+#include <algorithm>
+#include <iterator>
+#include <future>
+#include <numeric>
+#include <functional>
+#include <iostream>
+int main(void) {
+    std::array<int, 10> v{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    auto end_iter_v = std::begin(v);
+    auto end_iter_w = std::begin(v

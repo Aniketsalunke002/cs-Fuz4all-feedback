@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int age {21};
+    int height {162};
+    int weight {67};
+    int tdee {0};
+    tdee = (age = 22) * (height = 170) / 365 * (weight = 75) / (height / 100 * 703);
+    cout << "Age: " << age << endl
+    << "Height: " << height << endl
+    << "Weight: " << weight << endl
+    << " TDEE: " << tdee << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x, y, z;
+    int a[10] = {0, 4, 5, 7, 23, 9, 5, 7, 23, 3};
+    int i {1};
+    x=1;
+    y=0;
+    do {
+        y += a[x];
+        i++;
+    } while (i!= 11 && y!= 19);
+    cout << y << endl;
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+int main(int)
+{
+    std::cout << "Please enter three integers: ";
+    int a,b,c;
+    std::cin >> a >> b >> c;
+    if (a == c)
+    {
+        if (a % c > 0 && ((a-1) / c % b) == 0)
+            std::cout << ((a-1-b) / c << 1) + b;
+        else
+            std::cout << b-1;
+    }
+    else
+        std::cout << b-1;
+}

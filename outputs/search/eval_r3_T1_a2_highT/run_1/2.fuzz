@@ -1,0 +1,23 @@
+#include <iostream>
+
+#include <map>
+#include <set>
+#include <list>
+#include <vector>
+int main()
+{
+  std::map<int,int> hashmap;
+  hashmap[1] = 2;
+  std::vector<std::vector<std::map<int,int>* > >* somemap = NULL;
+  if (somemap->size()==0)
+    std::cout <<"size = 0\n";
+  else
+    std::cout <<"size!= 0\n";
+
+  if (somemap->size()!= 0)
+    std::cout <<"size == 0\n";
+  else
+    std::cout <<"size!= 0\n";
+
+  return 0;
+}

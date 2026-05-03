@@ -1,0 +1,46 @@
+#include <iostream>
+#include "C++11.h"
+int main(int argc, char* argv[])
+{
+    short n_bytes, i1, i2;
+    short* x1, *x2;
+    std::cout << "sizeof(x1)=" << sizeof(x1) << std::endl;
+    x1 = (short*) malloc(n_bytes*sizeof(short));
+    for (i1=0; i1<n_bytes; i1++)
+    {
+        x1[i1] = i1;
+    }
+    std::cout << "sizeof(x1)=" << sizeof(x1) << std::endl;
+    std::cin >> i1;
+    x2 = (short*) x1.realloc((38*sizeof(short))*sizeof(short));
+    if (x2 == nullptr)
+        std::cout << "Alloc failed!!" << std::endl;
+    std::cout << "sizeof(x2)=" << sizeof(x2) << std::endl;
+    std::cout << "Done" << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int a, b, c;
+void d()
+{
+    void* x1 = &a;
+    void* x2 = &b;
+    void* x3 = &c;
+    std::cout << "x1=" << (int *) x1 << " x2=" << x2 << " x3=" << x3 << std::endl;
+    if (x2-x1==4)
+    {
+      *x2 = (int *) x1 + 4;
+      *x3 = (int *) x1 + 8;
+    }
+    std::cout << "x1=" << (int *) x1 << " x2=" << x2 << " x3=" << x3 << std::endl;
+}
+int main(int argc, char* argv[])
+{
+    d();
+    return 0;
+}
+
+
+
+

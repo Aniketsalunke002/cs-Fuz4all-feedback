@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+struct Mut {
+  int d1;
+  int d2;
+  int d3;
+};
+int main() {
+  int x = 100;
+  Mut a = {
+      x,
+      x / 2,
+      0,
+  };
+
+  Mut b = {
+      x / 2,
+      x * 3,
+      x,
+  };
+  cout << a.d1 << a.d2 << a.d3 << endl;
+  cout << b.d1 << b.d2 << b.d3 << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+  int x = 1;
+  int y = 2;
+  cout << x << " " << y << endl;
+  cout << x + y << endl;
+}

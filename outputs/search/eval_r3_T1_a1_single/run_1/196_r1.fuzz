@@ -1,0 +1,68 @@
+#include <iostream>
+
+void function_call(int &param){
+	param = param + 1;
+	std::cin>>param;
+}
+int main(){
+	int d(10);
+	std::cin>>d;
+	function_call(d);
+	std::cout<<d<<std::endl;
+}
+
+#include <iostream>
+#include <string>
+void function_call(std::string &param){
+	std::cin>>param;
+}
+void function_call(double &param){
+	std::cin>>param;
+}
+
+int main(){
+	std::string s("Some test string");
+	double  d(0.0);
+	function_call(s);
+	function_call(d);
+	std::cout<<s<<" "<<d<<std::endl;
+}
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//

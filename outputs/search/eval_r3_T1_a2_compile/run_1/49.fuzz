@@ -1,0 +1,17 @@
+#include <iostream>
+void f()
+{
+    int x=15;
+    std::cout<<x;
+    while (x<30)
+    {
+        ++x;
+        std::cout<<' ';
+    }
+    while (x>=5)
+    {
+        --x;
+        std::cout<<x;
+    }
+    std::cout<<"\n";
+}

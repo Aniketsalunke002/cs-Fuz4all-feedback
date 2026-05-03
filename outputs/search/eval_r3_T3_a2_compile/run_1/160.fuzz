@@ -1,0 +1,31 @@
+#include <iostream>
+#include <type_traits>
+template <typename T>
+void increase(int &i) {
+  i += 1;
+}
+template <typename T>
+void increase(T &i) {
+  i += 1;
+}
+int main(int argc, char * argv[]) {
+  std::cout << std::is_same<void, void>::value << '\n';
+  std::cout << std::is_abstract<void>::value << '\n';
+  std::cout << std::is_array<void>::value << '\n';
+  std::cout << std::is_base_of<void, void>::value << '\n';
+  std::cout << std::is_class<void>::value << '\n';
+  std::cout << std::is_const<void>::value << '\n';
+  std::cout << std::is_empty<void>::value << '\n';
+  std::cout << std::is_enum<void>::value << '\n';
+  std::cout << std::is_final<void>::value << '\n';
+  std::cout << std::is_floating_point<void>::value << '\n';
+  std::cout << std::is_fundamental<void>::value << '\n';
+  std::cout << std::is_function<void>::value << '\n';
+  std::cout << std::is_pointer<void>::value << '\n';
+  std::cout << std::is_same<void, void>::value << '\n';
+  std::cout << std::is_signed<void>::value << '\n';
+  std::cout << std::is_standard_layout<void>::value << '\n';
+  std::cout << std::is_trivial<void>::value << '\n';
+  std::cout << std::is_unsigned<void>::value << '\n';
+  std::cout << std::is_void<void>::value << '\n';
+}

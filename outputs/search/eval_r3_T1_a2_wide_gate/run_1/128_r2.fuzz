@@ -1,0 +1,17 @@
+#include <iostream>
+
+#include <vector>
+#include <algorithm>
+#include <iterator>
+int main( int argc, char **argv ){
+  std::vector<int> v1 ( 5, 3);
+  std::vector<int> v2 ( 10, 2);
+  std::stable_sort( 
+      std::ostream_iterator<int>(std::cout, "\n"),
+      std::istream_iterator<int>(std::cin),
+      std::less<int>());
+}
+// Fuzz link: https://fuzz.link/create-corpus/a272e99e-22f5-4a64-857f-7f7a48a46574
+// Fuzz target: 128.fuzz
+// Fuzz command: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T1_a2_wide_gate/run_1/128.fuzz
+// Fuzz command arguments:

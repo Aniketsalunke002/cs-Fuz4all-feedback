@@ -1,0 +1,105 @@
+#include <iostream>
+#include <set>
+using namespace std;
+int main() {
+  set<int> s{1};
+  return 0;
+}
+
+ 
+
+struct Token {
+  Token(const llvm::StringRef &buffer) noexcept;
+};
+
+bool operator<(const Comment &LHS, const Comment &RHS) noexcept;
+class FullComment {
+  FullComment(ArrayRef<Comment> Comments);
+
+   
+  ArrayRef<Comment> Comments;
+
+   
+   
+   
+   
+   
+  llvm::DenseMap<const Comment *, std::vector<Token>> CommentsBefore;
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  llvm::DenseMap<Comment *, std::vector<Token>> CommentsAfter;
+
+  FullComment() = delete;
+  void addCommentsBeforeToken(Token token);
+
+public:
+  FullComment(FullComment &&) noexcept = default;
+   
+   
+   
+   
+  llvm::DenseMap<const Comment *, std::vector<Token>>
+  getCommentBefore(const Token &token);
+
+   
+   
+   
+   
+  llvm::DenseMap<Comment *, std::vector<Token>>
+  getCommentAfter(const Token &token);
+
+  static FullComment build(ArrayRef<Comment> Comments);
+};
+
+class SourceManager {
+
+  llvm::DenseMap<FileID, std::unique_ptr<FileContentCache>> FileCache;
+
+  const FSProvider &FS;
+
+  void getPreprocessor(std::shared_ptr<Preprocessor> &PP,
+                       std::unique_ptr<PreprocessorOptions> &Opts,
+                       LangOptions &LangOpts);
+
+public:
+  class FileID {
+  public:
+    FileID() = default;
+  };
+
+  virtual ~SourceManager() = default;
+
+   
+   
+   
+   
+   
+   
+  virtual std::string getCode(FileID FileID,
+                             FileManager::FileType FileType) const = 0;
+
+   
+   
+   
+   
+  virtual FullComment getFullComment(FileID file) const = 0;
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  virtual void getPreprocessorPtr(const File

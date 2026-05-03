@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+    int a=0, b=1;
+    for (int i=1; i<=4; ++i) {
+        a = ((a+b) % 23) * b;   
+        b = ((6*a+b) % 23) * a;  
+        std::cout << i << ':' << a << '+' << b << '=' << a + b << std::endl;
+    }
+}
+ 
+ 
+#include <iostream>
+int main() {
+    int a=0, b=1

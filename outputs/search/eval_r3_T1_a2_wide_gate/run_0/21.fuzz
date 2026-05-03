@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main() { 
+    int foo=1;
+     
+    std::thread th1(foo++, foo++);   
+    cout<<foo<<endl;
+    std::thread th2([](int foo1,int foo3,int& foo4)-> void{ 
+     
+        cout<<foo4++<<endl;
+        foo1=0;
+        foo3=1;
+    });   
+    cout<<std::this_thread::get_id()<<endl;
+    std::thread th3(foo++, foo++);
+    cout<<foo++<<endl;
+}

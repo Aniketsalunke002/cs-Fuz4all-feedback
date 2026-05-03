@@ -1,0 +1,12 @@
+#include <iostream>
+void func(int** arg) { int a = **arg; ++a; **arg = a; std::cout << **arg; }
+int main() { int a = 0; func(&a); }
+ 
+template <typename T> struct node { T val; node *left; node *right; };
+template <typename T>
+void insert(node<T> *&subroot, T val) { node<T> *p = subroot, *q, *r; q = new node<T>; q->val = val; q->left = q->right = 0; if (!subroot) subroot = q; else { while ( (r = p->left) || (r = p->right) ) { if (!p->left) break; if (!p->right) break; if (r->val < q->val) { q->left = r; break; } else { q->right = r; } p = r; } if (p->left) p->left = q; if (p->right) p->right = q; } }
+ 
+template <typename T>
+void inorder(node<T> *subroot) { if (subroot) { inorder(subroot->left); std::cout << subroot->val <<''; inorder(subroot->right); } }
+int main() { int n,i; std::cin >> n; node<int> *root; for ( i=0; i< n; i++) { int q; std::cin >> q; insert(root, q); } inorder(root); }
+ 

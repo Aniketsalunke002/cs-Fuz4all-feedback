@@ -1,0 +1,7 @@
+#include <iostream>
+class X {};
+int main()
+{
+  if (X())
+    throw 2;
+}

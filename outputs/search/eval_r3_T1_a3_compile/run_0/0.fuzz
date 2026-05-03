@@ -1,0 +1,91 @@
+#include <iostream>
+
+#include <sstream>
+#include "boost/exception/all.hpp"
+
+using namespace std;
+
+namespace exceptions {
+
+	struct exception : virtual boost::exception, virtual std::exception {
+		exception( int lineNo, const char * file, const string &_what = "Exception" ) :
+			error( _what.c_str() ),
+			line( lineNo ),
+			filename( file ) {
+		}
+
+		~exception() throw () {}
+
+		virtual const char * what() const throw() { return this->error.c_str(); }
+
+		const string error;
+		const int line;
+		const string filename;
+	};
+
+	struct null_pointer : virtual exception {};
+
+	struct invalid_argument : virtual exception {
+		invalid_argument( const string &_name, int lineNo, const char * file ) :
+			base( lineNo, file, make_string( _name ) ) {
+		}
+	};
+
+	struct runtime_error : virtual exception {
+		runtime_error( const string &_what, int lineNo, const char * file ) :
+			base( lineNo, file, _what ) {
+		}
+	};
+
+	struct out_of_range : virtual runtime_error {
+		using runtime_error::runtime_error;
+		const string what() const throw() override { return "Range error"; }
+	};
+
+	struct logic_error : virtual runtime_error {
+		using runtime_error::runtime_error;
+		const string what() const thrown() const override { return "Logic error"; }
+	};
+
+}
+
+#define THROW( NAME,... ) { \
+	throw exceptions::NAME( __VA_ARGS__ ); }
+
+#define THROW_IF( CONDITION, TYPE ) { \
+	if ( CONDITION ) { THROW( TYPE, "Condition " #CONDITION " was true on line " << __LINE__ << " of file: " << __FILE__ ); } }
+
+#define THROW_RUNTIME_IF( CONDITION, WHAT ) { \
+	if ( CONDITION ) { THROW( runtime_error, WHAT, __LINE__, __FILE__ ); } }
+
+#define THROW_IF_NOT( CONDITION, TYPE ) { \
+	if (!( CONDITION ) ) { THROW( TYPE, "Condition " #CONDITION " was NOT true on line " << __LINE__ << " of file: " << __FILE__ ); } }
+
+#define THROW_RUNTIME_IF_NOT( CONDITION, WHAT ) { \
+	if (!( CONDITION ) ) { THROW( runtime_error, WHAT, __LINE__, __FILE__ ); } }
+
+#define THROW_RANGE_IF( CONDITION, WHAT ) { \
+	if ( CONDITION ) { THROW( out_of_range, WHAT, __LINE__, __FILE__ ); } }
+
+#define THROW_RANGE_IF_NOT( CONDITION, WHAT ) { \
+	if (!( CONDITION ) ) { THROW( out_of_range, WHAT, __LINE__, __FILE__ ); } }
+
+#define THROW_LOGIC_IF( CONDITION, WHAT ) { \
+	if ( CONDITION ) { THROW( logic_error, WHAT, __LINE__, __FILE__ ); } }
+
+#define THROW_LOGIC_IF_NOT( CONDITION, WHAT ) { \
+	if (!( CONDITION ) ) { THROW( logic_error, WHAT, __LINE__, __FILE__ ); } }
+
+#define THROW_IF_ARG( ARG, T ) { \
+	if (!( ARG ) ) { THROW( invalid_argument, #ARG, __LINE__, __FILE__ ); } }
+
+#define THROW_IF_ARG_NOT( ARG, T ) { \
+	if ( ARG ) { THROW( invalid_argument, #ARG, __LINE__, __FILE__ ); } }
+
+#define THROW_IF_ZERO( ARG, TYPE ) { \
+	if ( ARG == 0 ) { THROW( TYPE, #ARG " was zero on line  " << __LINE__ << " of file: " << __FILE__ ); } }
+
+#define THROW_IF_NULL( ARG, TYPE ) { \
+	if ( ARG == (void *)NULL ) { THROW( TYPE, #ARG " was null on line  " << __LINE__ << " of file: " << __FILE__ ); } }
+
+

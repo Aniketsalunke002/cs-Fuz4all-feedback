@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+#if defined C_CONST
+constexpr double pi = 4.0 / 3.0 * atan2((sqrt(5.0)), 1.0) + pi;
+#endif
+int main() {
+#if defined C_CONST
+  using namespace std::literals::string_literals;
+  cout << "sin(" << 12 * pi / 3 << ") = " << sin((12 * pi) / 3) << endl;
+  cout << "2^(-5) = " << exp(log(1 / 5)) << endl;
+#endif
+  return 0;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// #if defined C_CONST
+//  
+// constexpr double pi = 3.14285714286;
+// constexpr double e = 2.71828182846;
+// #endif
+// int main() {
+// #if defined C_CONST
+//   using namespace std::literals::string_literals;
+//   double d = 0.1;
+//    
+//   double p = pi * (1 - cos(d * pi));
+//   cout << "d = " << d << endl;
+//   cout << "p = " << p << endl;
+// #endif
+//   return 0;
+// }
+// Note: if there is a const declaration inside the 'if', it won't work.
+//  
+// #include <iostream>
+// using namespace std;
+// #if defined C_CONST
+// constexpr double pi = 3.14285714286;
+// constexpr double e = 2.71828182846;
+// #endif
+// int main() {
+//  
+// #if defined C_CONST
+//   using namespace std::literals::string_literals;
+//   double d = 0.1;
+//    
+//   double p = pi * (1 - cos(d * pi));
+//   cout << "d = " << d << endl;
+//   cout << "p = " << p << endl;
+// #endif
+//   return 0;
+// }
+// Also, if there are multiple

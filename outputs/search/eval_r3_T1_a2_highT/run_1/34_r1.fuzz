@@ -1,0 +1,51 @@
+#include <iostream>
+
+#include <cmath>
+int main() {
+	std::cout << pow(-3,pow(2,-2)) << std::endl;
+	std::cout << pow(-2,pow(4,-1)) << std::endl;
+	std::cout << 2 << "\t" << -2 << std::endl;
+	std::cout << 8 << "\t" << -8 << std::endl;
+	return 0;
+}
+//  
+// #include <iostream>
+// #include <string>
+// std::string GetFileExtension(std::string file_name){
+//     std::regex rgx("\\.[a-z]+" );
+//     std::smatch m;
+//     if ( std::regex_search(file_name, m, rgx) ){
+//     std::string str =m[0];
+//     return str;
+//     }
+//     return "null";
+// }
+// int main() {
+// 	std::cout << GetFileExtension("file.txt") << std::endl;
+// 		return 0;
+// }
+//  
+// #include <iostream>
+// #include <algorithm>
+// int main() {
+// 	std::array <int,4> a{-1,1,4,3};
+// 	std::sort( a.begin(), a.end(), [](auto& a, auto& b) ->bool {
+// 		std::cout << "comparing " <<a << " to " << b <<std::endl;
+// 		if(a<b) 
+// 			return true;
+// 		std::cout << "returning" << std::endl;
+// 		return false;
+// 	} 
+// );
+// 	for( auto i: a)
+// 		std::cout << i << " ";
+// 		std::cout << "\n";
+// 	return 0;
+// }
+//  
+// #include <iostream>
+// #include <random>
+// #include <chrono>
+// int main() {
+// 	auto start = std::chrono::steady_clock::now();
+// 	for( int i=0;i < 100000

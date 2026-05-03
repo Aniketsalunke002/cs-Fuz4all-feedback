@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std::literals;
+template<typename T, typename... Ts>
+inline T bar(const T& t, const Ts&... ts) { return t + bar(ts...); }
+ 
+#include <iostream>
+static int counter=0;
+void bar() { counter++; std::cout << counter << "\n"; }

@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(){
+  char* mycar="Volvo FV400";
+  const char *car=(char *)"volvo xC200";
+  cout<<mycar<<endl;
+  cout<<car<<endl;
+}

@@ -1,0 +1,35 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv[]) {
+    cout << "a" << endl;
+    return 0;
+  }
+
+## Question 9
+*Write a program that checks the input for zero and multiples of 10 and says "Zero!" or "Multiple of ten" accordingly.*
+
+```cpp
+#include <iostream>
+int main(int argc, char* argv[]) {
+  std::cout << "Please enter a number:\n";
+  int num;
+  std::cin >> num;
+  if (num == 0)
+    std::cout << "Zero!";
+  else if (num%10 == 0)
+    std::cout << "Multiple of 10!";
+  std::cout << "\n";
+}
+```
+
+## Question 10
+*Create a class called Employee that holds data members name, address, salary, and years of service.*
+*Create a function called calculate_salary that calculates and returns the salary of the Employee according to the formula:*
+*salary = base salary + number_of_years * yearly_salary*
+*Ask the user for the employees name, address, hourly wages (40 wages per hour), base salary, and number of years. (Create a function that will ask for the data needed to create object.*
+*Then create a function that will calculate the salary and output a message accordingly. Test your program.*
+
+## Question 11
+*Write a class called Customer with a data member name, and a function called print name which prints the current name on the screen.*
+*Create a vector named customer_database of size 10. Read in 10 Customer objects from the user and place them in the vector. Then go through the vector in a for loop and call the print function on each customer object.*
+

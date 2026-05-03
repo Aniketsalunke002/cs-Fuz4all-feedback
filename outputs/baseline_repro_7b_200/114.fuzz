@@ -1,0 +1,15 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+  using namespace std;
+  const int k = 42;
+  if(argc) {
+    if(argv) {
+      int i=42;
+    } else {
+      cout << "42";
+    }
+  }
+  return 0;
+}
+
+```

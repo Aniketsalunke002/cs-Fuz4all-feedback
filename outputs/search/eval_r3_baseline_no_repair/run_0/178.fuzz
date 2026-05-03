@@ -1,0 +1,12 @@
+#include <iostream>
+int main(int argc, char **argv) {
+    int a1 = 0x3F800000;
+    if (true) {
+        if (true) {
+            a1 = 12924;
+        }
+    }
+    a1 -= 1;
+    std::cout << "The value of a1 after it exits the loop = " << a1 << '\n';
+    return 0;
+}

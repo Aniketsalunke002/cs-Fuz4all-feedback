@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+main() {
+  int var0 = 0;  
+    for (int i = 10; i > 0; i /= 2)  
+        var0 = 2 * var0 + i;  
+        cout << var0 << endl;  
+    return 0;
+}

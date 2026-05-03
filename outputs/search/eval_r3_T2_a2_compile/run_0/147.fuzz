@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+#include <string>
+int main() {
+    cout << "Hello, world!";
+    string world= " World!";
+    cout << world;
+    return 1;
+}
+ 
+#include <iostream>
+using namespace std;
+#include <string>
+int main() {
+    string s = "hello ";
+    cout << s << s << s << s << s << s << s << s << s << s << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+#include <string>
+int main() {
+    cout << "Hello, world!";
+    (cout << " World!") || true;
+    return 1;
+}

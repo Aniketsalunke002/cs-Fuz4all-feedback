@@ -1,0 +1,6 @@
+#include <iostream>
+int main() {
+  std::string str({"Hello world!"});
+  std::cout << str;
+  return 0;
+}

@@ -1,0 +1,9 @@
+#include <iostream>
+int main() {
+    char a;
+    std::cin>>a;
+    int **pp = &p;
+    *pp = &a;
+    return 0;
+}
+#endif

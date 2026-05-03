@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+    std::string ctest{"Hello World"};
+    ctest[6] = 'J';
+    std::cout << ctest << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+int main() {
+    constexpr const char ctest[] = "Hello World";
+    std::cout << ctest << "\n";
+    return 0;
+}

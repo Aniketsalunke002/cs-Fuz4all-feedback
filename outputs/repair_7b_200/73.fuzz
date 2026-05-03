@@ -1,0 +1,29 @@
+#include <iostream>
+int main() {
+    class Some {
+        private:
+            int x, y;
+        
+        public:
+            Some() {
+                x = 10;
+                y = 20;
+            }
+    };
+    
+    Some s;
+    s.x = 30; 
+    std::cout << s.x << " " << s.y;
+}
+ 
+#include <iostream>
+
+using namespace std;
+
+int main() {
+	int x=4;
+	int n=5;
+	while(x<=n)
+	{
+		cout << x << endl;
+		x*=

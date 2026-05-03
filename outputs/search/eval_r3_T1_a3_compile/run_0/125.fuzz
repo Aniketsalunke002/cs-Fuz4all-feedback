@@ -1,0 +1,8 @@
+#include <iostream>
+int main()
+{
+    static int y = 10;
+    y++;
+    std::cout << "Hello, " << y << "! I am so hungry\nMy last meal was made using " << y << " bread.\n";
+    return 0;
+}

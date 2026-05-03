@@ -1,0 +1,36 @@
+#include <iostream>
+#include <string.h>
+#include <cctype>
+#include <cstring>
+#include <iomanip>
+using namespace std;
+bool isequal(char *word1,char *word2)
+{
+    if(strcmp(word1,word2)!= 0)
+    {
+        return false;
+    }
+    return true;
+}
+
+int main()
+{
+    cout<<setw(5)<<"word1"<<setw(8)<<"word2"<<endl;
+    cout<<setw(5)<<"ada"<<setw(8)<<"ada"<<endl;
+    cout<<setw(5)<<"adsfsd "<<setw(8)<<"sadfsd "<<endl;
+    cout<<setw(5)<<"asdasda"<<setw(8)<<"asdfasfsa"<<endl;
+    cout<<setw(5)<<"asasdasds"<<setw(8)<<"asasdaasdsa"<<endl;
+
+}
+ 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    string a;
+    cin>>a;
+    cout<<a<<endl;
+    cout<<"the length is "<<a.length()<<endl;
+    cout<<"the length is "<<a.size()<<endl;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+
+int a = 13;
+int b = 1;
+int c = a;
+int d = b;
+int e = a + b;
+std::cout << "the results  are " << a << " " << b << " " << c << " " << d << " " << e;
+
+return 0;

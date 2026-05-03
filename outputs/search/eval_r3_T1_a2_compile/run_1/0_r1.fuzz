@@ -1,0 +1,22 @@
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+
+int main() {
+    vector<int> vectorList {53, 77, 44, 61, 22, 56, 24, 88};
+    cout << "vectorList: ";
+    for (auto i : vectorList)
+        cout << i << endl;
+    cout << "vectorList.size(): " << vectorList.size() << endl;
+    vectorList.erase(vectorList.begin() + 4);
+    cout << "After erase(vectorList.begin() + 4): ";
+    for (auto i : vectorList)
+        cout << i << endl;
+    vectorList.pop_back();
+    cout << "After pop_back(): ";
+    for (auto i : vectorList)
+        cout << i << endl;
+    return 0;
+}

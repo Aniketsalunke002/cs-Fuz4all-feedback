@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int a, b, n, s;
+    cin >> a >> b >> n >> s;
+    if (n % s + a + (b * s)!= 0)
+        cout << "yes" << endl;
+    else if (n % s + (a * s) + (b * s)!= 0)
+        cout << "yes" << endl;
+    else if ((a + (b * s)) * (n % s) + (a + (b * s))!= 0)
+        cout << "yes" << endl;
+    else
+        cout << "no" << endl;
+}

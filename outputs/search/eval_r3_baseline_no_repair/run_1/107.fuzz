@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+const int PI = 4;
+int main()
+{
+	cout<<"Hello, World! I am semantically equivalent to the mutation.\n";
+	cout<<"My main function will call the same mutated functions.\n"; 
+   return 0; 
+}
+ 
+#include <iostream>
+template <typename T>
+class Vec2d {
+public:
+	Vec2d(T x=0, T y=0): x(x), y(y) { return; }
+	T getX() { return x; }
+	T getY() { return y; }
+	void setX(T newx) { x = newx; }
+	void setY(T newy) { y = newy; }
+	Vec2d<T> operator+(const Vec2d<T>& rhs);
+	Vec2d<T> operator-(const Vec2d<T>& rhs) {
+		int a = x-rhs.getX();
+		int b = y-rhs.getY();
+		Vec2d<T> result (a,b);
+		return result;
+	}
+	Vec2d<T> operator*(const Vec2d<T>& rhs);
+	Vec2d<T> operator/(const Vec2d<T>& rhs);
+private:
+	T x;
+	T y;
+};
+ 
+
+int main () {
+  Vec2d<int> a;
+  Vec2d<int> b(1, 3);
+}
+ 
+#include <iostream>
+using namespace std;
+using namespace std::numeric_limits;
+int main()
+{
+	cout<<"Hello, World! I am a new type trait template!\n";
+	cout<<"I am going to display some values\n";
+	cout<<"I will print out "<<showpos<<true<<endl;
+	cout<<"I will print out "<<showpos<<false<<endl;
+	cout<<"I will print out "<<showpos<<absmin<short>()<<endl;
+	cout<<"I will print out "<<showpos<<absmin<signed char>()<<endl;
+	return 0;
+}

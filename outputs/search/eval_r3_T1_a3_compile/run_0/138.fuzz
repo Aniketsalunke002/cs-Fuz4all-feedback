@@ -1,0 +1,8 @@
+#include <iostream>
+int main()
+{
+    bool a;
+    bool b=a+5;
+    std::cout << "b: "<< b << std::endl;
+    return 0;
+}

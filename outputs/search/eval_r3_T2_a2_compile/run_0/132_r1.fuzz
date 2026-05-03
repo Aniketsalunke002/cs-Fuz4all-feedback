@@ -1,0 +1,13 @@
+#include <iostream>
+
+namespace {
+  const int max_size = 8;
+  const int num_states = 10;
+  int states[num_states][max_size];
+}
+int main() {
+  int a, b, c, d, e, f, g;
+  std::cin >> a >> b >> c >> d >> e >> f >> g;
+  std::cout << a + b * c * f + states[5][3] + g << std::endl;
+  return 0;
+}

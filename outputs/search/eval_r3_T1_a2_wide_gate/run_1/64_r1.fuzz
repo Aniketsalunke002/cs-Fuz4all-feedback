@@ -1,0 +1,12 @@
+#include <iostream>
+
+#include <string>
+int main() {
+    std::string a("a");
+    std::cout << a.size() << '\n';
+    a += "bbcca";
+    std::cout << a.size() << '\n';
+    a.erase(1, 1);
+    std::cout << a.size() << '\n';
+    return 0;
+}

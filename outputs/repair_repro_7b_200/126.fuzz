@@ -1,0 +1,45 @@
+#include <iostream>
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
+std::mutex mtx1;
+std::mutex mtx2;
+std::condition_variable cv;
+void foo() {
+    std::unique_lock<std::mutex> lk(mtx2, std::defer_lock);
+    lk.lock();
+    mtx1.lock();
+     
+    cv.notify_all();
+     
+     
+     
+     
+}
+int main(void) {
+    std::thread t1([](){
+        std::unique_lock<std::mutex> lk1(mtx1, std::adopt_lock);
+        std::unique_lock<std::mutex> lk2(mtx2, std::adopt_lock);
+        while (1){
+            try {
+                cv.wait_for(lk2, std::chrono::milliseconds(1000));
+            } catch (std::logic_error& le) {
+                std::cout << "LOGIC ERROR" << std::endl;
+                do { } while (false);
+            }
+        }
+    });
+    std::thread t2([](){
+        std::unique_lock<std::mutex> lk1(mtx1, std::adopt_lock);
+        std::unique_lock<std::mutex> lk2(mtx2, std::adopt_lock);
+        while (1){
+             
+             
+            int x = 5;
+        }
+    });
+    foo();
+    t1.join();
+    t2.join();
+    return 0;
+}

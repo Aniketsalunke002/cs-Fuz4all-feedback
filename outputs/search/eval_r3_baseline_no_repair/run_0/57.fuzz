@@ -1,0 +1,12 @@
+#include <iostream>
+void foo(char *str)
+{
+    str = "test";
+}
+int main()
+{
+    char *a;
+    a = new char[6];
+    foo(a);
+    std::cout << a << std::endl;
+}

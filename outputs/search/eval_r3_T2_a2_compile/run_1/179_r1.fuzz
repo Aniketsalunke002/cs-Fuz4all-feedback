@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+int myfunc (int *a, int b) {
+    //std::function<int(int, int)> add = [](int x, int y) -> int {return x + y; };
+    auto add = [](int x, int y) -> int {return x + y; };
+    int sum=0;
+    for (int i=0; i< b; i++){
+        sum=sum+add(*a, *a);
+    }
+    return sum;
+}
+int main()
+{
+    int listNum1[7]={1,1,2,3,5,8,13};
+    int listNum2[7]={1,1,4,9,25,64,169};
+    cout << "Test myfunc: " << myfunc(listNum1, 7) << "\n";
+    cout << "Test myfunc: " << myfunc(listNum2, 7) << "\n";
+    return 0;
+}

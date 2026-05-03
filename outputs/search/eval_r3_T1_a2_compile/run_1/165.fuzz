@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(){
+   int a = 1;
+   return a ;
+}
+ 
+#include <iostream>
+using namespace std;
+class hello;
+class hello{
+   int m_val = 0;
+};
+int main(){
+   hello o;
+   return o.m_val;
+}

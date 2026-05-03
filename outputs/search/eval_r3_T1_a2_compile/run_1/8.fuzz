@@ -1,0 +1,17 @@
+#include <iostream>
+#include <list>
+void print_list(std::list<int>& l)
+{
+    for(std::list<int>::reverse_iterator i = l.rbegin();i!= l.rend();++i)
+        std::cout << *i << " ";
+    std::cout << std::endl;
+}
+void append_list(std::list<int>& l,int x)
+{
+    l.push_back(x);
+}
+ 
+
+int main(void){
+     
+}

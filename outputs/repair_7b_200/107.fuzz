@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+    for (int counter {0}; counter <= 10; counter = counter + 2) {
+        if (counter == 5){
+            continue;
+        }
+        std::cout << counter << std::endl;
+    }
+    return 0;
+}
+
+/* Please write program that has a number between 0 and 100 and when pressed return will print a text 
+that says "congratulations you won the lottery!" If the number is not evenly divisible by 3 print a text 
+"congratulations you won the lottery but the prize is 15.00" with two

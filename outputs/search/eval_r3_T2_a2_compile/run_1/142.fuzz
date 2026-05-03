@@ -1,0 +1,17 @@
+#include <iostream>
+namespace foo {
+class bar {
+   public:
+    bar(double a) : m_foo(a) { std::cout << "bar constructor called on " << this << std::endl; }
+    double foo() { return m_foo; }
+
+   private:
+    double m_foo;
+};
+}
+using namespace foo;
+int main() {
+    bar x(1.7);
+    std::cout << x.foo() << std::endl;
+    return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+    int *a=new int;
+    *a=0;
+    for (int i=1; i<=4; i=i+2) {
+        int *b=&a;
+        &a=b;
+        *a = (*a)==0?1:0;
+    }
+    if (a==0)
+        std::cout << std::endl;
+    else
+        std::cout << "Nope" << std::endl;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+
+std::auto_ptr<double> ptr( new double(18.2) );
+
+void foo() {
+  ptr.reset( new double(3.1415) );
+  if (int i = 0; i < 5) {
+    // do nothing
+  }
+}

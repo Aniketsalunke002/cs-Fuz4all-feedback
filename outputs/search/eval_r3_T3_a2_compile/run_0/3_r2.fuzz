@@ -1,0 +1,56 @@
+#include <iostream>
+
+
+template <typename T>
+class MyVector
+{
+    T _data[10];
+    size_t _size;
+
+public:
+    MyVector() : _size(0)
+    {
+    }
+
+    T& operator[](const size_t i)
+    {
+        return _data[i];
+    }
+
+    size_t size() const
+    {
+        return _size;
+    }
+
+    void resize(const size_t new_size)
+    {
+        _size = new_size;
+    }
+
+    void print()
+    {
+        const size_t size = size();
+        for(size_t i = 0; i < size; i++)
+            std::cout << _data[i] <<'';
+        std::cout << '\n';
+    }
+};
+
+int main()
+{
+    MyVector<int> v;
+
+    v[0] = 10; v[1] = 20; v[2] = 30;
+    v += v;
+    v.print();
+
+    v[0] = -1;
+    v.print();
+
+    v[2] = 0;
+    v[1] = 1;
+    v.print();
+
+    v.resize(v.size() + 1);
+    v.print();
+}

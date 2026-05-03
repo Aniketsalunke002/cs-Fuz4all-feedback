@@ -1,0 +1,16 @@
+#include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    a=300;
+    std::cout << "adding 50 to this... " << a << std::endl;
+    a=a+50;
+    std::cout << "the value of the integer is now " << a << std::endl;
+    if(a>333)
+        std::cout << "and it's greater than 333" << std::endl;
+    else
+       std::cout << "and it's less than 333" << std::endl;
+    return 0;
+}
+

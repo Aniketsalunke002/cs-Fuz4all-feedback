@@ -1,0 +1,18 @@
+#include <iostream>
+int main2() {
+    int i = 0, sum=0,n=0;
+    std::cin >> n;
+    for (; i < n; ++i){
+        int num;
+        std::cin >> num;
+        sum += num;
+    }
+    std::cout << sum;
+    return 0;
+}
+ 
+#include <iostream>
+int main() {
+    std::cout << 0;
+    return 0;
+}

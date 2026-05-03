@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main() {
+  int i=0,j=0;
+  auto fn = [i,j]() mutable {
+    i+=1;
+    j+=1;
+    cout << i << " " << j << endl;
+  };
+  fn();
+  return 0;
+}

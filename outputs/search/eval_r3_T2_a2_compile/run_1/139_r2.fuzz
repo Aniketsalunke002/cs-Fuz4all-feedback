@@ -1,0 +1,12 @@
+#include <iostream>
+
+namespace fuzz {
+template <typename T>
+T &f(T t) { return t; }
+}
+int main() {
+    int *t = fuzz::f(nullptr);
+    fuzz::f(nullptr)[0] = 0;
+    return 0;
+}
+// Compiles without errors

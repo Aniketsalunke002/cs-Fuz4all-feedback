@@ -1,0 +1,10 @@
+#include <iostream>
+int main ()
+{
+    int n{4};
+    std::cout << "the value of the integer is " << n << std::endl;
+    int& r=n;
+    std::cout << "the value of the reference is " << r << std::endl;
+    return 0;
+}
+

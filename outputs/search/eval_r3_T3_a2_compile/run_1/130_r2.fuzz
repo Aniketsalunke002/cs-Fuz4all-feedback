@@ -1,0 +1,15 @@
+#include <iostream>
+
+template<typename T, size_t len>
+T array[len];
+int main() {
+	array<int, 11> array;
+	return 0;
+}
+
+template<typename T, size_t len>
+T array2[len];
+int main() {
+	array2<int, 11> array2;
+	return 0;
+}

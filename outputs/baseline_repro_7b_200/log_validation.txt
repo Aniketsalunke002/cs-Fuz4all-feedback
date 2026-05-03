@@ -1,0 +1,1180 @@
+[TRACE] Validating outputs/baseline_repro_7b_200/0.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/0.fuzz failed validation with error message: outputs/baseline_repro_7b_200/0.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/0.fuzz:7:24: error: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]
+    7 |     char *p = new char("a");
+      |                        ^~~
+      |                        |
+      |                        const char*
+outputs/baseline_repro_7b_200/0.fuzz:12:20: error: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]
+   12 |     *pp = new char("b");
+      |                    ^~~
+      |                    |
+      |                    const char*
+outputs/baseline_repro_7b_200/0.fuzz:15:33: error: cannot convert ‘double****’ to ‘double***’ in initialization
+   15 |     double ***ppp = new double***;
+      |                                 ^
+      |                                 |
+      |                                 double****
+outputs/baseline_repro_7b_200/0.fuzz:16:12: error: cannot convert ‘double***’ to ‘double**’ in assignment
+   16 |     *ppp = new double**[5];
+      |            ^~~~~~~~~~~~~~~
+      |            |
+[TRACE] Validating outputs/baseline_repro_7b_200/1.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/1.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/2.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/2.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/3.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/3.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/4.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/4.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/5.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/5.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/6.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/6.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/7.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/7.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/8.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/8.fuzz failed validation with error message: outputs/baseline_repro_7b_200/8.fuzz:23:1: error: ISO C++ forbids declaration of ‘displayInfo’ with no type [-fpermissive]
+   23 | User::displayInfo()
+      | ^~~~
+outputs/baseline_repro_7b_200/8.fuzz:23:1: error: no declaration matches ‘int User::displayInfo()’
+outputs/baseline_repro_7b_200/8.fuzz:14:22: note: candidate is: ‘void User::displayInfo()’
+   14 |                 void displayInfo();
+      |                      ^~~~~~~~~~~
+outputs/baseline_repro_7b_200/8.fuzz:8:7: note: ‘class User’ defined here
+    8 | class User {
+      |       ^~~~
+outputs/baseline_repro_7b_200/8.fuzz:28:5: error: conflicting declaration of C function ‘int main()’
+   28 | int main() {
+      |     ^~~~
+outputs/baseline_repro_7b_200/8.fuzz:2:5: note: previous declaration ‘int main(int, char**)’
+    2 | int main(int argc, char **argv) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/8.fuzz:37:5: error: conflicting declaration of C function ‘int main()’
+   37 | int main() {
+      |     ^~~~
+outputs/baseline_repro_7b_200/8.fuzz:2:5: note: previous declaration ‘int main(int, char**)’
+[TRACE] Validating outputs/baseline_repro_7b_200/9.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/9.fuzz failed validation with error message: outputs/baseline_repro_7b_200/9.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_repro_7b_200/9.fuzz:8:14: error: ‘x’ was not declared in this scope
+    8 | std::cout << x;
+      |              ^
+[TRACE] Validating outputs/baseline_repro_7b_200/10.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/10.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/11.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/11.fuzz failed validation with error message: outputs/baseline_repro_7b_200/11.fuzz:16:1: error: stray ‘`’ in program
+   16 | ```
+      | ^
+outputs/baseline_repro_7b_200/11.fuzz:16:2: error: stray ‘`’ in program
+   16 | ```
+      |  ^
+outputs/baseline_repro_7b_200/11.fuzz:16:3: error: stray ‘`’ in program
+   16 | ```
+      |   ^
+outputs/baseline_repro_7b_200/11.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_repro_7b_200/11.fuzz:10:23: error: invalid conversion from ‘char*’ to ‘int’ [-fpermissive]
+   10 |                 fputc(cptr, stdout);
+      |                       ^~~~
+      |                       |
+      |                       char*
+In file included from /usr/include/c++/11/cstdio:42,
+                 from /usr/include/c++/11/ext/string_conversions.h:43,
+                 from /usr/include/c++/11/bits/basic_string.h:6608,
+                 from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/bits/locale_classes.h:40,
+[TRACE] Validating outputs/baseline_repro_7b_200/12.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/12.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/13.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/13.fuzz failed validation with error message: outputs/baseline_repro_7b_200/13.fuzz:16: warning: "A" redefined
+   16 | #define A(x) printf "A"; 13
+      | 
+outputs/baseline_repro_7b_200/13.fuzz:10: note: this is the location of the previous definition
+   10 | #define A(x) 13
+      | 
+outputs/baseline_repro_7b_200/13.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/13.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/13.fuzz:17:5: error: redefinition of ‘int main()’
+   17 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/13.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/13.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/13.fuzz:16:21: error: expected ‘;’ before string constant
+[TRACE] Validating outputs/baseline_repro_7b_200/14.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/14.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/15.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/15.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/16.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/16.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/17.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/17.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/18.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/18.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/19.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/19.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/20.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/20.fuzz failed validation with error message: outputs/baseline_repro_7b_200/20.fuzz:20:2: error: #else without #if
+   20 | #else
+      |  ^~~~
+outputs/baseline_repro_7b_200/20.fuzz:21:10: error: #error Compiler not supported
+   21 |         #error Compiler not supported
+      |          ^~~~~
+outputs/baseline_repro_7b_200/20.fuzz:22:2: error: #endif without #if
+   22 | #endif
+      |  ^~~~~
+outputs/baseline_repro_7b_200/20.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/20.fuzz:6:40: error: no matching function for call to ‘std::runtime_error::runtime_error(<brace-enclosed initializer list>)’
+    6 |         std::cin << std::runtime_error{};
+      |                                        ^
+In file included from /usr/include/c++/11/system_error:41,
+                 from /usr/include/c++/11/bits/ios_base.h:46,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_repro_7b_200/20.fuzz:1:
+/usr/include/c++/11/stdexcept:237:5: note: candidate: ‘std::runtime_error::runtime_error(const std::runtime_error&)’
+[TRACE] Validating outputs/baseline_repro_7b_200/21.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/21.fuzz failed validation with error message: outputs/baseline_repro_7b_200/21.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/21.fuzz:5:17: error: expected primary-expression before ‘struct’
+    5 |         cout << struct{};
+      |                 ^~~~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/22.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/22.fuzz failed validation with error message: outputs/baseline_repro_7b_200/22.fuzz: In lambda function:
+outputs/baseline_repro_7b_200/22.fuzz:4:18: error: expected ‘{’ before ‘;’ token
+    4 |         return [];{}? n * (n - 1)(n - 2)(n - 3)(n - 4)...? 1;
+      |                  ^
+outputs/baseline_repro_7b_200/22.fuzz: In function ‘const int factorial(int)’:
+outputs/baseline_repro_7b_200/22.fuzz:4:18: error: invalid user-defined conversion from ‘factorial(int)::<lambda()>’ to ‘int’ [-fpermissive]
+outputs/baseline_repro_7b_200/22.fuzz:4:16: note: candidate is: ‘constexpr factorial(int)::<lambda()>::operator void (*)()() const’ (near match)
+    4 |         return [];{}? n * (n - 1)(n - 2)(n - 3)(n - 4)...? 1;
+      |                ^
+outputs/baseline_repro_7b_200/22.fuzz:4:16: note:   no known conversion from ‘void (*)()’ to ‘int’
+outputs/baseline_repro_7b_200/22.fuzz:4:21: error: expected primary-expression before ‘?’ token
+    4 |         return [];{}? n * (n - 1)(n - 2)(n - 3)(n - 4)...? 1;
+      |                     ^
+outputs/baseline_repro_7b_200/22.fuzz:4:34: error: expression cannot be used as a function
+    4 |         return [];{}? n * (n - 1)(n - 2)(n - 3)(n - 4)...? 1;
+      |                           ~~~~~~~^~~~~~~
+outputs/baseline_repro_7b_200/22.fuzz:4:55: error: expected ‘:’ before ‘...’ token
+    4 |         return [];{}? n * (n - 1)(n - 2)(n - 3)(n - 4)...? 1;
+      |                                                       ^~~
+      |                                                       :
+[TRACE] Validating outputs/baseline_repro_7b_200/23.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/23.fuzz failed validation with error message: outputs/baseline_repro_7b_200/23.fuzz:7:5: error: redefinition of ‘int main()’
+    7 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/23.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/23.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/23.fuzz:27:22: error: ‘endl’ was not declared in this scope; did you mean ‘std::endl’?
+   27 |         cout << a << endl;;
+      |                      ^~~~
+      |                      std::endl
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_repro_7b_200/23.fuzz:1:
+/usr/include/c++/11/ostream:684:5: note: ‘std::endl’ declared here
+  684 |     endl(basic_ostream<_CharT, _Traits>& __os)
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/24.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/24.fuzz failed validation with error message: outputs/baseline_repro_7b_200/24.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/24.fuzz:4:20: error: invalid user-defined conversion from ‘main()::<lambda()>’ to ‘int’ [-fpermissive]
+    4 |         return [] {};
+      |                    ^
+outputs/baseline_repro_7b_200/24.fuzz:4:16: note: candidate is: ‘constexpr main()::<lambda()>::operator void (*)()() const’ (near match)
+    4 |         return [] {};
+      |                ^
+outputs/baseline_repro_7b_200/24.fuzz:4:16: note:   no known conversion from ‘void (*)()’ to ‘int’
+outputs/baseline_repro_7b_200/24.fuzz: At global scope:
+outputs/baseline_repro_7b_200/24.fuzz:9:5: error: redefinition of ‘int main()’
+    9 | int main() {
+      |     ^~~~
+outputs/baseline_repro_7b_200/24.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/baseline_repro_7b_200/24.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/24.fuzz:10:33: error: expected ‘>’ before ‘(’ token
+   10 |         return static_cast<int *([] {});>(nullptr);
+      |                                 ^
+outputs/baseline_repro_7b_200/24.fuzz:10:16: error: invalid ‘static_cast’ from type ‘main()::<lambda()>’ to type ‘int*’
+[TRACE] Validating outputs/baseline_repro_7b_200/25.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/25.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/26.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/26.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/27.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/27.fuzz failed validation with error message: outputs/baseline_repro_7b_200/27.fuzz: In instantiation of ‘auto& daw::size(Container&&) [with Container = std::vector<std::__cxx11::basic_string<char> >]’:
+outputs/baseline_repro_7b_200/27.fuzz:28:21:   required from here
+outputs/baseline_repro_7b_200/27.fuzz:22:66: error: ‘size’ is not a member of ‘daw::container_traits<std::vector<std::__cxx11::basic_string<char> > >’
+   22 |         using size_type = std::decay_t<decltype(traits_type::size(cont))>;
+      |                                                 ~~~~~~~~~~~~~~~~~^~~~~~
+outputs/baseline_repro_7b_200/27.fuzz:22:66: error: ‘size’ is not a member of ‘daw::container_traits<std::vector<std::__cxx11::basic_string<char> > >’
+outputs/baseline_repro_7b_200/27.fuzz:24:33: error: ‘size’ is not a member of ‘traits_type’ {aka ‘daw::container_traits<std::vector<std::__cxx11::basic_string<char> > >’}
+   24 |         return traits_type::size(cont);
+      |                ~~~~~~~~~~~~~~~~~^~~~~~
+outputs/baseline_repro_7b_200/27.fuzz:39:5: error: redefinition of ‘int main()’
+   39 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/27.fuzz:33:5: note: ‘int main()’ previously defined here
+   33 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/27.fuzz:46:5: error: redefinition of ‘int main()’
+   46 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/27.fuzz:33:5: note: ‘int main()’ previously defined here
+   33 | int main(void) {
+[TRACE] Validating outputs/baseline_repro_7b_200/28.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/28.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/29.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/29.fuzz failed validation with error message: outputs/baseline_repro_7b_200/29.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/29.fuzz:16:17: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+   16 |                 cout << *i << std::endl;
+      |                 ^~~~
+      |                 std::cout
+In file included from outputs/baseline_repro_7b_200/29.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/30.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/30.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/31.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/31.fuzz failed validation with error message: outputs/baseline_repro_7b_200/31.fuzz:52:5: error: redefinition of ‘int main()’
+   52 | int main()
+      |     ^~~~
+outputs/baseline_repro_7b_200/31.fuzz:13:5: note: ‘int main()’ previously defined here
+   13 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/31.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/31.fuzz:75:10: error: expected ‘}’ at end of input
+   75 |         }
+      |          ^
+outputs/baseline_repro_7b_200/31.fuzz:53:1: note: to match this ‘{’
+   53 | {
+      | ^
+[TRACE] Validating outputs/baseline_repro_7b_200/32.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/32.fuzz failed validation with error message: outputs/baseline_repro_7b_200/32.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/32.fuzz:7:9: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    7 |         cout << p << std::endl;
+      |         ^~~~
+      |         std::cout
+In file included from outputs/baseline_repro_7b_200/32.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/33.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/33.fuzz failed validation with error message: outputs/baseline_repro_7b_200/33.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/33.fuzz:15:30: error: invalid new-expression of abstract class type ‘Parent’
+   15 |         Parent* parent = new Parent;
+      |                              ^~~~~~
+outputs/baseline_repro_7b_200/33.fuzz:3:7: note:   because the following virtual functions are pure within ‘Parent’:
+    3 | class Parent {
+      |       ^~~~~~
+outputs/baseline_repro_7b_200/33.fuzz:5:22: note:     ‘virtual void Parent::virtual_method()’
+    5 |         virtual void virtual_method(void) = 0;
+      |                      ^~~~~~~~~~~~~~
+outputs/baseline_repro_7b_200/33.fuzz: In function ‘std::vector<int> filter_vector(std::vector<int>&, std::vector<int>&)’:
+outputs/baseline_repro_7b_200/33.fuzz:29:31: error: ‘class std::vector<int>’ has no member named ‘find’
+   29 |                 if (vector_in.find(i)!= vector_in.end()) {
+      |                               ^~~~
+outputs/baseline_repro_7b_200/33.fuzz:37:34: error: ‘class std::vector<int>’ has no member named ‘find’
+   37 |                 if (inter_vector.find(i)!= inter_vector.end()) {
+      |                                  ^~~~
+outputs/baseline_repro_7b_200/33.fuzz: At global scope:
+outputs/baseline_repro_7b_200/33.fuzz:43:5: error: redefinition of ‘int main()’
+   43 | int main(void) {
+[TRACE] Validating outputs/baseline_repro_7b_200/34.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/34.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/35.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/35.fuzz failed validation with error message: outputs/baseline_repro_7b_200/35.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/35.fuzz:6:14: error: ‘function’ is not a member of ‘std’
+    6 |         std::function<int(int, int)> adder = [](int x, int y) -> int { return x + y; };
+      |              ^~~~~~~~
+outputs/baseline_repro_7b_200/35.fuzz:2:1: note: ‘std::function’ is defined in header ‘<functional>’; did you forget to ‘#include <functional>’?
+    1 | #include <iostream>
+  +++ |+#include <functional>
+    2 | using std::cin;
+outputs/baseline_repro_7b_200/35.fuzz:6:35: error: expression list treated as compound expression in functional cast [-fpermissive]
+    6 |         std::function<int(int, int)> adder = [](int x, int y) -> int { return x + y; };
+      |                                   ^
+outputs/baseline_repro_7b_200/35.fuzz:6:23: error: expected primary-expression before ‘int’
+    6 |         std::function<int(int, int)> adder = [](int x, int y) -> int { return x + y; };
+      |                       ^~~
+outputs/baseline_repro_7b_200/35.fuzz:7:17: error: ‘adder’ was not declared in this scope
+    7 |         int z = adder(1, 2);
+      |                 ^~~~~
+outputs/baseline_repro_7b_200/35.fuzz: At global scope:
+outputs/baseline_repro_7b_200/35.fuzz:17:5: error: conflicting declaration of C function ‘int main(int, const char**)’
+   17 | int main(int argc, const char* argv[]) {
+[TRACE] Validating outputs/baseline_repro_7b_200/36.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/36.fuzz failed validation with error message: outputs/baseline_repro_7b_200/36.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/36.fuzz:4:45: error: invalid user-defined conversion from ‘main()::<lambda()>’ to ‘int’ [-fpermissive]
+    4 |         int n =[]() { return new int[10](); };
+      |                                             ^
+outputs/baseline_repro_7b_200/36.fuzz:4:16: note: candidate is: ‘constexpr main()::<lambda()>::operator int* (*)()() const’ (near match)
+    4 |         int n =[]() { return new int[10](); };
+      |                ^
+outputs/baseline_repro_7b_200/36.fuzz:4:16: note:   no known conversion from ‘int* (*)()’ to ‘int’
+[TRACE] Validating outputs/baseline_repro_7b_200/37.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/37.fuzz failed validation with error message: outputs/baseline_repro_7b_200/37.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/37.fuzz:8:9: error: ‘string’ was not declared in this scope
+    8 |         string s = sum_f("Hello ", "world\n");
+      |         ^~~~~~
+outputs/baseline_repro_7b_200/37.fuzz:8:9: note: suggested alternatives:
+In file included from /usr/include/c++/11/iosfwd:39,
+                 from /usr/include/c++/11/ios:38,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_repro_7b_200/37.fuzz:1:
+/usr/include/c++/11/bits/stringfwd.h:79:33: note:   ‘std::string’
+   79 |   typedef basic_string<char>    string;
+      |                                 ^~~~~~
+In file included from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_repro_7b_200/37.fuzz:1:
+/usr/include/c++/11/string:67:11: note:   ‘std::pmr::string’
+[TRACE] Validating outputs/baseline_repro_7b_200/38.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/38.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/39.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/39.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/40.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/40.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/41.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/41.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/42.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/42.fuzz failed validation with error message: outputs/baseline_repro_7b_200/42.fuzz:7:5: error: redefinition of ‘int main()’
+    7 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/42.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/43.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/43.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/44.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/44.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/45.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/45.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/46.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/46.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/47.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/47.fuzz failed validation with error message: outputs/baseline_repro_7b_200/47.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/47.fuzz:3:23: error: invalid operands of types ‘long int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+    3 |         long foo = 1L << std::endl;
+      |                    ~~~^~~~~~~~~~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/48.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/48.fuzz failed validation with error message: outputs/baseline_repro_7b_200/48.fuzz:5:1: error: stray ‘`’ in program
+    5 | ``
+      | ^
+outputs/baseline_repro_7b_200/48.fuzz:5:2: error: stray ‘`’ in program
+    5 | ``
+      |  ^
+outputs/baseline_repro_7b_200/48.fuzz:7:6: error: found ‘:’ in nested-name-specifier, expected ‘::’
+    7 | (Note: you can generate the mutated program via the mutation analysis)
+      |      ^
+      |      ::
+outputs/baseline_repro_7b_200/48.fuzz:7:2: error: ‘Note’ has not been declared
+    7 | (Note: you can generate the mutated program via the mutation analysis)
+      |  ^~~~
+outputs/baseline_repro_7b_200/48.fuzz:7:11: error: expected ‘)’ before ‘can’
+    7 | (Note: you can generate the mutated program via the mutation analysis)
+      | ~         ^~~~
+      |           )
+[TRACE] Validating outputs/baseline_repro_7b_200/49.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/49.fuzz failed validation with error message: outputs/baseline_repro_7b_200/49.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/49.fuzz:8:60: error: ‘accumulate’ is not a member of ‘std’
+    8 |     std::cout << "The sum of the whole vector is " << std::accumulate(v.begin(),v.end(),0) << std::endl;
+      |                                                            ^~~~~~~~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/50.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/50.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/51.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/51.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/52.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/52.fuzz failed validation with error message: outputs/baseline_repro_7b_200/52.fuzz:16:5: error: redefinition of ‘int main()’
+   16 | int main(void){
+      |     ^~~~
+outputs/baseline_repro_7b_200/52.fuzz:9:5: note: ‘int main()’ previously defined here
+    9 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/53.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/53.fuzz failed validation with error message: outputs/baseline_repro_7b_200/53.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main ( void ) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/53.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main ( void ) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/54.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/54.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/55.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/55.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/56.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/56.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/57.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/57.fuzz failed validation with error message: outputs/baseline_repro_7b_200/57.fuzz:8:5: error: redefinition of ‘int i’
+    8 | int i = 1, j = -1, k = 0;
+      |     ^
+outputs/baseline_repro_7b_200/57.fuzz:2:5: note: ‘int i’ previously defined here
+    2 | int i = 0;
+      |     ^
+outputs/baseline_repro_7b_200/57.fuzz:13:28: error: ‘function’ is not a member of ‘std’
+   13 | std::map<std::string, std::function<int(int)>> ops = {
+      |                            ^~~~~~~~
+outputs/baseline_repro_7b_200/57.fuzz:10:1: note: ‘std::function’ is defined in header ‘<functional>’; did you forget to ‘#include <functional>’?
+    9 | #include <map>
+  +++ |+#include <functional>
+   10 | int f(int i) {
+outputs/baseline_repro_7b_200/57.fuzz:13:45: error: template argument 2 is invalid
+   13 | std::map<std::string, std::function<int(int)>> ops = {
+      |                                             ^~
+outputs/baseline_repro_7b_200/57.fuzz:13:45: error: template argument 4 is invalid
+outputs/baseline_repro_7b_200/57.fuzz:13:48: error: scalar object ‘ops’ requires one element in initializer
+   13 | std::map<std::string, std::function<int(int)>> ops = {
+      |                                                ^~~
+[TRACE] Validating outputs/baseline_repro_7b_200/58.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/58.fuzz failed validation with error message: outputs/baseline_repro_7b_200/58.fuzz:8:1: error: stray ‘`’ in program
+    8 | ```
+      | ^
+outputs/baseline_repro_7b_200/58.fuzz:8:2: error: stray ‘`’ in program
+    8 | ```
+      |  ^
+outputs/baseline_repro_7b_200/58.fuzz:8:3: error: stray ‘`’ in program
+    8 | ```
+      |   ^
+[TRACE] Validating outputs/baseline_repro_7b_200/59.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/59.fuzz failed validation with error message: outputs/baseline_repro_7b_200/59.fuzz:8:5: error: redefinition of ‘int main()’
+    8 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/59.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/59.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/59.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/60.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/60.fuzz failed validation with error message: outputs/baseline_repro_7b_200/60.fuzz:6:3: error: invalid preprocessing directive #--
+    6 | # --compile_command='chmod a+x./test &&./test' -o /dev/null
+      |   ^~
+outputs/baseline_repro_7b_200/60.fuzz:7:2: error: invalid preprocessing directive #!
+    7 | #!/bin/bash
+      |  ^
+outputs/baseline_repro_7b_200/60.fuzz:10:8: error: stray ‘\’ in program
+   10 | cat << \EOF
+      |        ^
+outputs/baseline_repro_7b_200/60.fuzz:16:3: error: invalid preprocessing directive #--
+   16 | # --compile_command='chmod a+x./test &&./test' -o /dev/null
+      |   ^~
+outputs/baseline_repro_7b_200/60.fuzz:20:2: error: invalid preprocessing directive #!
+   20 | #!/bin/bash
+      |  ^
+outputs/baseline_repro_7b_200/60.fuzz:23:8: error: stray ‘\’ in program
+   23 | cat << \EOF
+      |        ^
+outputs/baseline_repro_7b_200/60.fuzz:33:2: error: invalid preprocessing directive #!
+   33 | #!/bin/bash
+[TRACE] Validating outputs/baseline_repro_7b_200/61.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/61.fuzz failed validation with error message: outputs/baseline_repro_7b_200/61.fuzz:5:2: error: expected unqualified-id before ‘<’ token
+    5 | }<commit_msg>Update cplusplus.c<commit_after>
+      |  ^
+[TRACE] Validating outputs/baseline_repro_7b_200/62.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/62.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/63.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/63.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/64.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/64.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/65.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/65.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/66.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/66.fuzz failed validation with error message: outputs/baseline_repro_7b_200/66.fuzz:23:5: error: redefinition of ‘int main()’
+   23 | int main() {
+      |     ^~~~
+outputs/baseline_repro_7b_200/66.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/67.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/67.fuzz failed validation with error message: outputs/baseline_repro_7b_200/67.fuzz:9:1: error: expected unqualified-id before ‘<’ token
+    9 | </pre>
+      | ^
+[TRACE] Validating outputs/baseline_repro_7b_200/68.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/68.fuzz failed validation with error message: outputs/baseline_repro_7b_200/68.fuzz:7:6: error: ‘cin’ in namespace ‘std’ does not name a type
+    7 | std::cin.flush();
+      |      ^~~
+In file included from outputs/baseline_repro_7b_200/68.fuzz:1:
+/usr/include/c++/11/iostream:60:18: note: ‘std::cin’ declared here
+   60 |   extern istream cin;           /// Linked to standard input
+      |                  ^~~
+[TRACE] Validating outputs/baseline_repro_7b_200/69.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/69.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/70.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/70.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/71.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/71.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/72.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/72.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/73.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/73.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/74.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/74.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/75.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/75.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/76.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/76.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/77.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/77.fuzz failed validation with error message: outputs/baseline_repro_7b_200/77.fuzz:6:10: fatal error: ../example/cpp/example.h: No such file or directory
+    6 | #include "../example/cpp/example.h"
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+[TRACE] Validating outputs/baseline_repro_7b_200/78.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/78.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/79.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/79.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/80.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/80.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/81.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/81.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/82.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/82.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/83.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/83.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/84.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/84.fuzz failed validation with error message: outputs/baseline_repro_7b_200/84.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_repro_7b_200/84.fuzz:5:10: error: expected ‘;’ before numeric constant
+    5 |         c 5 c;
+      |          ^~
+      |          ;
+[TRACE] Validating outputs/baseline_repro_7b_200/85.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/85.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/86.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/86.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/87.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/87.fuzz failed validation with error message: outputs/baseline_repro_7b_200/87.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_repro_7b_200/87.fuzz:14:20: error: ‘std::execution’ has not been declared
+   14 |     std::sort(std::execution::par_unseq, times.begin(), times.end(),
+      |                    ^~~~~~~~~
+outputs/baseline_repro_7b_200/87.fuzz:17:40: error: non-constant condition for static assertion
+   17 |     static_assert((t_a < times.front() && times.back() < t_b),
+      |                   ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+outputs/baseline_repro_7b_200/87.fuzz:17:37: error: call to non-‘constexpr’ function ‘std::vector<_Tp, _Alloc>::reference std::vector<_Tp, _Alloc>::front() [with _Tp = std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >; _Alloc = std::allocator<std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > >; std::vector<_Tp, _Alloc>::reference = std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&]’
+   17 |     static_assert((t_a < times.front() && times.back() < t_b),
+      |                          ~~~~~~~~~~~^~
+In file included from /usr/include/c++/11/vector:67,
+                 from outputs/baseline_repro_7b_200/87.fuzz:2:
+/usr/include/c++/11/bits/stl_vector.h:1121:7: note: ‘std::vector<_Tp, _Alloc>::reference std::vector<_Tp, _Alloc>::front() [with _Tp = std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >; _Alloc = std::allocator<std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > > >; std::vector<_Tp, _Alloc>::reference = std::chrono::time_point<std::chrono::_V2::system_clock, std::chrono::duration<long int, std::ratio<1, 1000000000> > >&]’ declared here
+ 1121 |       front() _GLIBCXX_NOEXCEPT
+      |       ^~~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/88.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/88.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/89.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/89.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/90.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/90.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/91.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/91.fuzz failed validation with error message: outputs/baseline_repro_7b_200/91.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_repro_7b_200/91.fuzz:3:10: error: ‘unique_lock’ is not a member of ‘std’
+    3 |     std::unique_lock<std::mutex> c;
+      |          ^~~~~~~~~~~
+outputs/baseline_repro_7b_200/91.fuzz:2:1: note: ‘std::unique_lock’ is defined in header ‘<mutex>’; did you forget to ‘#include <mutex>’?
+    1 | #include <iostream>
+  +++ |+#include <mutex>
+    2 | int main(int argc, char* argv[]) {
+outputs/baseline_repro_7b_200/91.fuzz:3:27: error: ‘mutex’ is not a member of ‘std’
+    3 |     std::unique_lock<std::mutex> c;
+      |                           ^~~~~
+outputs/baseline_repro_7b_200/91.fuzz:3:27: note: ‘std::mutex’ is defined in header ‘<mutex>’; did you forget to ‘#include <mutex>’?
+outputs/baseline_repro_7b_200/91.fuzz:3:34: error: ‘c’ was not declared in this scope
+    3 |     std::unique_lock<std::mutex> c;
+      |                                  ^
+[TRACE] Validating outputs/baseline_repro_7b_200/92.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/92.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/93.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/93.fuzz failed validation with error message: outputs/baseline_repro_7b_200/93.fuzz:13:5: error: redefinition of ‘int main(int, char**)’
+   13 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/93.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char* argv[]) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/94.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/94.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/95.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/95.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/96.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/96.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/97.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/97.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/98.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/98.fuzz failed validation with error message: outputs/baseline_repro_7b_200/98.fuzz:8:5: error: redefinition of ‘int main(int, char**)’
+    8 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/98.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/98.fuzz:16:5: error: redefinition of ‘int main(int, char**)’
+   16 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/98.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char* argv[]) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/99.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/99.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/100.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/100.fuzz failed validation with error message: outputs/baseline_repro_7b_200/100.fuzz:9:2: error: #endif without #if
+    9 | #endif
+      |  ^~~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/101.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/101.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/102.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/102.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/103.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/103.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/104.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/104.fuzz failed validation with error message: outputs/baseline_repro_7b_200/104.fuzz:7:5: error: redefinition of ‘int main(int, char**)’
+    7 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/104.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char* argv[]) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/105.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/105.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/106.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/106.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/107.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/107.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/108.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/108.fuzz failed validation with error message: outputs/baseline_repro_7b_200/108.fuzz:15:27: warning: ‘noreturn’ attribute does not apply to types [-Wattributes]
+   15 | } __attribute__((noreturn));
+      |                           ^
+outputs/baseline_repro_7b_200/108.fuzz: In function ‘void fun()’:
+outputs/baseline_repro_7b_200/108.fuzz:18:9: error: reference to ‘exception’ is ambiguous
+   18 |   throw exception("exception");
+      |         ^~~~~~~~~
+In file included from /usr/include/c++/11/exception:38,
+                 from /usr/include/c++/11/ios:39,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_repro_7b_200/108.fuzz:1:
+/usr/include/c++/11/bits/exception.h:61:9: note: candidates are: ‘class std::exception’
+   61 |   class exception
+      |         ^~~~~~~~~
+outputs/baseline_repro_7b_200/108.fuzz:13:7: note:                 ‘class exception’
+   13 | class exception : runtime_error {
+      |       ^~~~~~~~~
+outputs/baseline_repro_7b_200/108.fuzz: At global scope:
+outputs/baseline_repro_7b_200/108.fuzz:21:5: error: redefinition of ‘int main()’
+[TRACE] Validating outputs/baseline_repro_7b_200/109.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/109.fuzz failed validation with error message: outputs/baseline_repro_7b_200/109.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_repro_7b_200/109.fuzz:3:3: error: ‘assert’ was not declared in this scope
+    3 |   assert(argc == 3);
+      |   ^~~~~~
+outputs/baseline_repro_7b_200/109.fuzz:2:1: note: ‘assert’ is defined in header ‘<cassert>’; did you forget to ‘#include <cassert>’?
+    1 | #include <iostream>
+  +++ |+#include <cassert>
+    2 | int main(int argc, char* argv[]) {
+[TRACE] Validating outputs/baseline_repro_7b_200/110.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/110.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/111.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/111.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/112.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/112.fuzz failed validation with error message: outputs/baseline_repro_7b_200/112.fuzz:18:5: error: redefinition of ‘int main(int, char**)’
+   18 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/112.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char* argv[]) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/113.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/113.fuzz failed validation with error message: outputs/baseline_repro_7b_200/113.fuzz:7:1: error: stray ‘`’ in program
+    7 | ```
+      | ^
+outputs/baseline_repro_7b_200/113.fuzz:7:2: error: stray ‘`’ in program
+    7 | ```
+      |  ^
+outputs/baseline_repro_7b_200/113.fuzz:7:3: error: stray ‘`’ in program
+    7 | ```
+      |   ^
+[TRACE] Validating outputs/baseline_repro_7b_200/114.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/114.fuzz failed validation with error message: outputs/baseline_repro_7b_200/114.fuzz:15:1: error: stray ‘`’ in program
+   15 | ```
+      | ^
+outputs/baseline_repro_7b_200/114.fuzz:15:2: error: stray ‘`’ in program
+   15 | ```
+      |  ^
+outputs/baseline_repro_7b_200/114.fuzz:15:3: error: stray ‘`’ in program
+   15 | ```
+      |   ^
+[TRACE] Validating outputs/baseline_repro_7b_200/115.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/115.fuzz failed validation with error message: outputs/baseline_repro_7b_200/115.fuzz:10:5: error: redefinition of ‘int main(int, char**)’
+   10 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/115.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/115.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_repro_7b_200/115.fuzz:13:9: error: expected ‘(’ before ‘constexpr’
+   13 |   while constexpr ((i++))
+      |         ^~~~~~~~~
+      |         (
+outputs/baseline_repro_7b_200/115.fuzz:13:9: error: expected primary-expression before ‘constexpr’
+   13 |   while constexpr ((i++))
+      |         ^~~~~~~~~
+outputs/baseline_repro_7b_200/115.fuzz:13:8: error: expected ‘)’ before ‘constexpr’
+   13 |   while constexpr ((i++))
+      |        ^~~~~~~~~~
+      |        )
+outputs/baseline_repro_7b_200/115.fuzz:13:9: error: expected primary-expression before ‘constexpr’
+   13 |   while constexpr ((i++))
+[TRACE] Validating outputs/baseline_repro_7b_200/116.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/116.fuzz failed validation with error message: outputs/baseline_repro_7b_200/116.fuzz:7:1: error: stray ‘`’ in program
+    7 | ```
+      | ^
+outputs/baseline_repro_7b_200/116.fuzz:7:2: error: stray ‘`’ in program
+    7 | ```
+      |  ^
+outputs/baseline_repro_7b_200/116.fuzz:7:3: error: stray ‘`’ in program
+    7 | ```
+      |   ^
+[TRACE] Validating outputs/baseline_repro_7b_200/117.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/117.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/118.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/118.fuzz failed validation with error message: outputs/baseline_repro_7b_200/118.fuzz:6:1: error: stray ‘`’ in program
+    6 | ```
+      | ^
+outputs/baseline_repro_7b_200/118.fuzz:6:2: error: stray ‘`’ in program
+    6 | ```
+      |  ^
+outputs/baseline_repro_7b_200/118.fuzz:6:3: error: stray ‘`’ in program
+    6 | ```
+      |   ^
+[TRACE] Validating outputs/baseline_repro_7b_200/119.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/119.fuzz failed validation with error message: outputs/baseline_repro_7b_200/119.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_repro_7b_200/119.fuzz:4:17: error: ‘k’ was not declared in this scope
+    4 |   static_assert(k==42, "[error]: This program will not compile!");
+      |                 ^
+[TRACE] Validating outputs/baseline_repro_7b_200/120.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/120.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/121.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/121.fuzz failed validation with error message: outputs/baseline_repro_7b_200/121.fuzz:10:5: error: redefinition of ‘int main(int, char**)’
+   10 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/121.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char* argv[]) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/122.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/122.fuzz failed validation with error message: outputs/baseline_repro_7b_200/122.fuzz:11:5: error: redefinition of ‘int main(int, char**)’
+   11 | int main(int argc, char* argv[]) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/122.fuzz:3:5: note: ‘int main(int, char**)’ previously defined here
+    3 | int main(int argc, char* argv[]) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/123.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/123.fuzz failed validation with error message: outputs/baseline_repro_7b_200/123.fuzz:6:1: error: stray ‘`’ in program
+    6 | ```
+      | ^
+outputs/baseline_repro_7b_200/123.fuzz:6:2: error: stray ‘`’ in program
+    6 | ```
+      |  ^
+outputs/baseline_repro_7b_200/123.fuzz:6:3: error: stray ‘`’ in program
+    6 | ```
+      |   ^
+outputs/baseline_repro_7b_200/123.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_repro_7b_200/123.fuzz:3:17: error: static assertion failed: [error]: This program will compile!
+    3 |   static_assert(false, "[error]: This program will compile!");
+      |                 ^~~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/124.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/124.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/125.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/125.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/126.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/126.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/127.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/127.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/128.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/128.fuzz failed validation with error message: outputs/baseline_repro_7b_200/128.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/128.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/129.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/129.fuzz failed validation with error message: outputs/baseline_repro_7b_200/129.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/129.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/130.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/130.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/131.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/131.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/132.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/132.fuzz failed validation with error message: outputs/baseline_repro_7b_200/132.fuzz:10:1: error: expected unqualified-id before ‘{’ token
+   10 | {% endhighlight %}
+      | ^
+outputs/baseline_repro_7b_200/132.fuzz:12:1: error: ‘And’ does not name a type
+   12 | And this is the output to the terminal.
+      | ^~~
+outputs/baseline_repro_7b_200/132.fuzz:18:1: error: expected unqualified-id before numeric constant
+   18 | 1 foo_var
+      | ^
+[TRACE] Validating outputs/baseline_repro_7b_200/133.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/133.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/134.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/134.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/135.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/135.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/136.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/136.fuzz failed validation with error message: outputs/baseline_repro_7b_200/136.fuzz:16:10: fatal error: a.h: No such file or directory
+   16 | #include "a.h"
+      |          ^~~~~
+compilation terminated.
+[TRACE] Validating outputs/baseline_repro_7b_200/137.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/137.fuzz failed validation with error message: outputs/baseline_repro_7b_200/137.fuzz:13:7: error: redefinition of ‘class A<T>’
+   13 | class A
+      |       ^
+outputs/baseline_repro_7b_200/137.fuzz:3:7: note: previous definition of ‘class A<T>’
+    3 | class A
+      |       ^
+outputs/baseline_repro_7b_200/137.fuzz:16:5: error: redefinition of ‘int main()’
+   16 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/137.fuzz:6:5: note: ‘int main()’ previously defined here
+    6 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/137.fuzz:22:7: error: redefinition of ‘class A<T>’
+   22 | class A
+      |       ^
+outputs/baseline_repro_7b_200/137.fuzz:3:7: note: previous definition of ‘class A<T>’
+    3 | class A
+      |       ^
+outputs/baseline_repro_7b_200/137.fuzz:25:5: error: redefinition of ‘int main()’
+   25 | int main(void) {
+[TRACE] Validating outputs/baseline_repro_7b_200/138.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/138.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/139.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/139.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/140.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/140.fuzz failed validation with error message: outputs/baseline_repro_7b_200/140.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main(void) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/140.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/141.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/141.fuzz failed validation with error message: outputs/baseline_repro_7b_200/141.fuzz:2:1: warning: ISO C++ forbids declaration of ‘main’ with no type [-Wreturn-type]
+    2 | main(void) {
+      | ^~~~
+outputs/baseline_repro_7b_200/141.fuzz:8:5: error: redefinition of ‘int main()’
+    8 | int main() {
+      |     ^~~~
+outputs/baseline_repro_7b_200/141.fuzz:2:1: note: ‘int main()’ previously defined here
+    2 | main(void) {
+      | ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/142.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/142.fuzz failed validation with error message: outputs/baseline_repro_7b_200/142.fuzz:9:40: warning: missing terminating ' character
+    9 | They are much more readable. If you don't understand a block of code you just see, you can simply rename all the arguments (since the arguments appear within the curly brackets of the method) and just read the content of the method.
+      |                                        ^
+outputs/baseline_repro_7b_200/142.fuzz:9:40: error: missing terminating ' character
+    9 | They are much more readable. If you don't understand a block of code you just see, you can simply rename all the arguments (since the arguments appear within the curly brackets of the method) and just read the content of the method.
+      |                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+outputs/baseline_repro_7b_200/142.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/142.fuzz:4:21: error: cannot convert ‘<brace-enclosed initializer list>’ to ‘int’ in assignment
+    4 |  a = { std::cin >> a};
+      |                     ^
+outputs/baseline_repro_7b_200/142.fuzz: At global scope:
+outputs/baseline_repro_7b_200/142.fuzz:9:1: error: ‘They’ does not name a type
+    9 | They are much more readable. If you don't understand a block of code you just see, you can simply rename all the arguments (since the arguments appear within the curly brackets of the method) and just read the content of the method.
+      | ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/143.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/143.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/144.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/144.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/145.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/145.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/146.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/146.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/147.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/147.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/148.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/148.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/149.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/149.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/150.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/150.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/151.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/151.fuzz failed validation with error message: outputs/baseline_repro_7b_200/151.fuzz:2:5: warning: ‘int main(int)’ takes only zero or two arguments [-Wmain]
+    2 | int main(int a) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/151.fuzz:19:7: error: redefinition of ‘class calculator’
+   19 | class calculator {
+      |       ^~~~~~~~~~
+outputs/baseline_repro_7b_200/151.fuzz:10:7: note: previous definition of ‘class calculator’
+   10 | class calculator {
+      |       ^~~~~~~~~~
+outputs/baseline_repro_7b_200/151.fuzz:22:5: error: redefinition of ‘int calculator::addition(int, int)’
+   22 | int calculator :: addition(int a,int b) {
+      |     ^~~~~~~~~~
+outputs/baseline_repro_7b_200/151.fuzz:14:5: note: ‘int calculator::addition(int, int)’ previously defined here
+   14 | int calculator :: addition(int a,int b) {
+      |     ^~~~~~~~~~
+outputs/baseline_repro_7b_200/151.fuzz:25:5: error: no declaration matches ‘int calculator::subtraction(int, int)’
+   25 | int calculator :: subtraction(int a,int b) {
+      |     ^~~~~~~~~~
+outputs/baseline_repro_7b_200/151.fuzz:25:5: note: no functions named ‘int calculator::subtraction(int, int)’
+outputs/baseline_repro_7b_200/151.fuzz:10:7: note: ‘class calculator’ defined here
+[TRACE] Validating outputs/baseline_repro_7b_200/152.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/152.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/153.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/153.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/154.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/154.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/155.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/155.fuzz failed validation with error message: outputs/baseline_repro_7b_200/155.fuzz:2:5: warning: ‘int main(int)’ takes only zero or two arguments [-Wmain]
+    2 | int main(int a) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/155.fuzz:12:5: error: conflicting declaration of C function ‘int main(int, char**)’
+   12 | int main(int argc, char ** argv)
+      |     ^~~~
+outputs/baseline_repro_7b_200/155.fuzz:2:5: note: previous declaration ‘int main(int)’
+    2 | int main(int a) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/156.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/156.fuzz failed validation with error message: outputs/baseline_repro_7b_200/156.fuzz:2:5: warning: ‘int main(int)’ takes only zero or two arguments [-Wmain]
+    2 | int main(int a) {
+      |     ^~~~
+outputs/baseline_repro_7b_200/156.fuzz:6:1: error: version control conflict marker in file
+    6 | <<<<<<< HEAD:05s_template.cpp
+      | ^~~~~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/157.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/157.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/158.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/158.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/159.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/159.fuzz failed validation with error message: outputs/baseline_repro_7b_200/159.fuzz:7:1: error: stray ‘`’ in program
+    7 | ```
+      | ^
+outputs/baseline_repro_7b_200/159.fuzz:7:2: error: stray ‘`’ in program
+    7 | ```
+      |  ^
+outputs/baseline_repro_7b_200/159.fuzz:7:3: error: stray ‘`’ in program
+    7 | ```
+      |   ^
+outputs/baseline_repro_7b_200/159.fuzz:2:5: warning: ‘int main(int)’ takes only zero or two arguments [-Wmain]
+    2 | int main(int a) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/160.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/160.fuzz failed validation with error message: outputs/baseline_repro_7b_200/160.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/160.fuzz:6:11: error: expected ‘;’ before ‘{’ token
+    6 |   return 0{};
+      |           ^
+      |           ;
+outputs/baseline_repro_7b_200/160.fuzz: At global scope:
+outputs/baseline_repro_7b_200/160.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main()
+      |     ^~~~
+outputs/baseline_repro_7b_200/160.fuzz:2:6: note: ‘int main()’ previously defined here
+    2 |  int main()
+      |      ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/161.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/161.fuzz failed validation with error message: outputs/baseline_repro_7b_200/161.fuzz:8:6: error: redefinition of ‘int main()’
+    8 |  int main(){
+      |      ^~~~
+outputs/baseline_repro_7b_200/161.fuzz:2:6: note: ‘int main()’ previously defined here
+    2 |  int main(){
+      |      ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/162.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/162.fuzz failed validation with error message: outputs/baseline_repro_7b_200/162.fuzz:9:4: error: expected unqualified-id before ‘<’ token
+    9 |   }<jupyter_output><empty_output>
+      |    ^
+[TRACE] Validating outputs/baseline_repro_7b_200/163.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/163.fuzz failed validation with error message: outputs/baseline_repro_7b_200/163.fuzz:25:7: error: no declaration matches ‘void Main::printval()’
+   25 |  void Main::printval(){
+      |       ^~~~
+outputs/baseline_repro_7b_200/163.fuzz:25:7: note: no functions named ‘void Main::printval()’
+outputs/baseline_repro_7b_200/163.fuzz:11:8: note: ‘class Main’ defined here
+   11 |  class Main
+      |        ^~~~
+outputs/baseline_repro_7b_200/163.fuzz: In member function ‘void Main::Number::printval()’:
+outputs/baseline_repro_7b_200/163.fuzz:34:30: error: invalid use of non-static data member ‘Main::val’
+   34 |    std::cout << "value: " << val.a[0] << '\n';
+      |                              ^~~
+outputs/baseline_repro_7b_200/163.fuzz:20:11: note: declared here
+   20 |    Number val;
+      |           ^~~
+outputs/baseline_repro_7b_200/163.fuzz: At global scope:
+outputs/baseline_repro_7b_200/163.fuzz:36:6: error: conflicting declaration of C function ‘int main(int, char**)’
+   36 |  int main(int argc, char **argv)
+      |      ^~~~
+outputs/baseline_repro_7b_200/163.fuzz:2:6: note: previous declaration ‘int main()’
+    2 |  int main()
+[TRACE] Validating outputs/baseline_repro_7b_200/164.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/164.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/165.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/165.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/166.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/166.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/167.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/167.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/168.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/168.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/169.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/169.fuzz failed validation with error message: outputs/baseline_repro_7b_200/169.fuzz:4:5: error: redefinition of ‘int main()’
+    4 | int main()
+      |     ^~~~
+outputs/baseline_repro_7b_200/169.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+outputs/baseline_repro_7b_200/169.fuzz:6:5: error: redefinition of ‘int main()’
+    6 | int main()
+      |     ^~~~
+outputs/baseline_repro_7b_200/169.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/170.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/170.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/171.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/171.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/172.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/172.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/173.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/173.fuzz failed validation with error message: outputs/baseline_repro_7b_200/173.fuzz:6:1: error: ‘I’ does not name a type
+    6 | I used a "while" loop because "do-while" loops require a conditional expression whereas I need to count until it is equal to "0".
+      | ^
+[TRACE] Validating outputs/baseline_repro_7b_200/174.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/174.fuzz failed validation with error message: outputs/baseline_repro_7b_200/174.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/174.fuzz:5:14: error: ‘c’ was not declared in this scope
+    5 |     if ((a(& c) && a((int *) & c)))
+      |              ^
+outputs/baseline_repro_7b_200/174.fuzz: At global scope:
+outputs/baseline_repro_7b_200/174.fuzz:13:1: error: ‘The’ does not name a type
+   13 | The main example is probably the simplest, there is no mutation with the
+      | ^~~
+[TRACE] Validating outputs/baseline_repro_7b_200/175.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/175.fuzz failed validation with error message: outputs/baseline_repro_7b_200/175.fuzz:5:5: error: redefinition of ‘int main()’
+    5 | int main(){return 0;}
+      |     ^~~~
+outputs/baseline_repro_7b_200/175.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {return 1;}
+      |     ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/176.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/176.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/177.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/177.fuzz failed validation with error message: outputs/baseline_repro_7b_200/177.fuzz: In function ‘void f()’:
+outputs/baseline_repro_7b_200/177.fuzz:4:16: error: invalid use of incomplete type ‘class f()::A’
+    4 | (new class A[40])[0].f();
+      |                ^
+outputs/baseline_repro_7b_200/177.fuzz:4:12: note: forward declaration of ‘class f()::A’
+    4 | (new class A[40])[0].f();
+      |            ^
+[TRACE] Validating outputs/baseline_repro_7b_200/178.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/178.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/179.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/179.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/180.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/180.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/181.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/181.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/182.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/182.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/183.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/183.fuzz failed validation with error message: outputs/baseline_repro_7b_200/183.fuzz:7:3: warning: missing terminating " character
+    7 | """
+      |   ^
+outputs/baseline_repro_7b_200/183.fuzz:7:3: error: missing terminating " character
+outputs/baseline_repro_7b_200/183.fuzz:9:13: warning: character constant too long for its type
+    9 |             '-Werror=tautological-constant-out-of-range-compare',
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+outputs/baseline_repro_7b_200/183.fuzz:10:13: warning: character constant too long for its type
+   10 |             '-Werror=parentheses']
+      |             ^~~~~~~~~~~~~~~~~~~~~
+outputs/baseline_repro_7b_200/183.fuzz:11:37: warning: character constant too long for its type
+   11 |         self.flags = clang_flags + ['-std=c++1z', '-fno-inline']
+      |                                     ^~~~~~~~~~~~
+outputs/baseline_repro_7b_200/183.fuzz:11:51: warning: character constant too long for its type
+   11 |         self.flags = clang_flags + ['-std=c++1z', '-fno-inline']
+      |                                                   ^~~~~~~~~~~~~
+outputs/baseline_repro_7b_200/183.fuzz:12:38: warning: character constant too long for its type
+   12 |         self.cflags = clang_flags + ['-std=c11', '-fno-inline']
+      |                                      ^~~~~~~~~~
+outputs/baseline_repro_7b_200/183.fuzz:12:50: warning: character constant too long for its type
+[TRACE] Validating outputs/baseline_repro_7b_200/184.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/184.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/185.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/185.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/186.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/186.fuzz failed validation with error message: outputs/baseline_repro_7b_200/186.fuzz:3:6: error: ‘char operator""_0()’ has invalid argument list
+    3 | char operator"" _0() { return '0'; }
+      |      ^~~~~~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/187.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/187.fuzz failed validation with error message: outputs/baseline_repro_7b_200/187.fuzz:2:1: error: expected unqualified-id before ‘{’ token
+    2 | {
+      | ^
+[TRACE] Validating outputs/baseline_repro_7b_200/188.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/188.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/189.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/189.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/190.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/190.fuzz failed validation with error message: outputs/baseline_repro_7b_200/190.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/190.fuzz:4:1: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    4 | cout << 0;
+      | ^~~~
+      | std::cout
+In file included from outputs/baseline_repro_7b_200/190.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/baseline_repro_7b_200/190.fuzz:5:5: error: ‘x’ was not declared in this scope
+    5 | if((x > 7))
+      |     ^
+[TRACE] Validating outputs/baseline_repro_7b_200/191.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/191.fuzz failed validation with error message: outputs/baseline_repro_7b_200/191.fuzz:7:1: error: stray ‘`’ in program
+    7 | ```
+      | ^
+outputs/baseline_repro_7b_200/191.fuzz:7:2: error: stray ‘`’ in program
+    7 | ```
+      |  ^
+outputs/baseline_repro_7b_200/191.fuzz:7:3: error: stray ‘`’ in program
+    7 | ```
+      |   ^
+outputs/baseline_repro_7b_200/191.fuzz:9:1: error: stray ‘##’ in program
+    9 | ## The task
+      | ^~
+outputs/baseline_repro_7b_200/191.fuzz:13:95: error: stray ‘`’ in program
+   13 |     * **A hint**: the g++ compiler outputs the result to the stdout. You can find it by using `ls` command
+      |                                                                                               ^
+outputs/baseline_repro_7b_200/191.fuzz:13:98: error: stray ‘`’ in program
+   13 |     * **A hint**: the g++ compiler outputs the result to the stdout. You can find it by using `ls` command
+      |                                                                                                  ^
+outputs/baseline_repro_7b_200/191.fuzz:17:1: error: stray ‘##’ in program
+   17 | ## Note
+[TRACE] Validating outputs/baseline_repro_7b_200/192.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/192.fuzz failed validation with error message: outputs/baseline_repro_7b_200/192.fuzz:2:6: error: ‘cout’ in namespace ‘std’ does not name a type
+    2 | std::cout << "hello world" << std::endl;
+      |      ^~~~
+In file included from outputs/baseline_repro_7b_200/192.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/193.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/193.fuzz failed validation with error message: outputs/baseline_repro_7b_200/193.fuzz:8:2: error: expected unqualified-id before ‘/’ token
+    8 | */
+      |  ^
+[TRACE] Validating outputs/baseline_repro_7b_200/194.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/194.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/195.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/195.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/196.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/196.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/197.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/197.fuzz is safe
+[TRACE] Validating outputs/baseline_repro_7b_200/198.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/198.fuzz failed validation with error message: outputs/baseline_repro_7b_200/198.fuzz: In function ‘int main()’:
+outputs/baseline_repro_7b_200/198.fuzz:6:3: error: ‘else’ without a previous ‘if’
+    6 | } else if(x < -3)
+      |   ^~~~
+[TRACE] Validating outputs/baseline_repro_7b_200/199.fuzz ...
+[VERBOSE] outputs/baseline_repro_7b_200/199.fuzz is safe

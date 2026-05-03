@@ -1,0 +1,30 @@
+#include <iostream>
+
+void increase(std::string& s) {
+  s += '!';
+}
+template <typename T>
+void increase(T& t, int value) {
+  t.resize(value);
+}
+int main(int argc, char * argv[]) {
+  std::string s = "test";
+  std::cout << s << '\n';
+  increase(s, 42);
+  std::cout << s << '\n';
+  char c = 'a';
+  std::cout << c << '\n';
+  increase(c, 1.5);
+  std::cout << c << '\n';
+}
+// Correct output:
+// test
+// test!
+// a
+// a
+//
+// Wrong output:
+// test
+// test!
+// a
+//

@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+class MyPoint {
+public:
+	MyPoint();
+	MyPoint(int,int);
+	MyPoint(MyPoint const&);
+	MyPoint& operator=(MyPoint const&);
+	virtual ~MyPoint();
+	int x;
+	int y;
+	int z;
+	void printPoint();
+};
+MyPoint::MyPoint()
+{
+	x=y=z=0;
+}
+MyPoint::MyPoint(int val1,int val2)
+{
+	x=val1;
+	y=val2

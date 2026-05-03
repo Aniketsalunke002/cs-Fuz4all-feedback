@@ -1,0 +1,23 @@
+#include <iostream>
+int main()
+{
+    while(1);
+}
+ 
+#include <iostream>
+int main()
+{
+    std::cout << std::cin.rdbuf() << std::endl;
+}
+ 
+#include <iostream>
+int *ptr;
+int main()
+{
+    ptr = new int;
+    *ptr = 7;
+    std::cout << *ptr << std::endl;
+    delete ptr;
+    return 0;
+}
+

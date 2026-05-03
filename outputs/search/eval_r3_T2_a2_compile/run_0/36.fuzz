@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+  struct C { std::istream &fread(std::istream&); };
+  
+  char c;
+  int i = 0;
+  C iop{cin};
+  do {
+    c = iop.fread();
+    if (c == '/') {
+      i = -1;
+    } else {
+      cout << (c == '\n'? '\n' : c+i);
+      i++;
+    }
+  } while (c!= '.');
+}

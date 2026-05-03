@@ -1,0 +1,21 @@
+#include <iostream>
+ using namespace std;
+int main() {
+  int a =0; 
+  int b;
+	int i = 0; 
+	while(i <10 && a >=0) {
+		scanf("%d",&b);
+		a = a + b;
+		cout<<a<<'\t';
+		i++;
+		}
+}
+ 
+#include "func.h"
+int main() {
+	int a =5;
+	int b= 6;
+	cout<<add(a,b);
+}
+/* Please create a

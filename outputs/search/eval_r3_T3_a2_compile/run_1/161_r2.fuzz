@@ -1,0 +1,13 @@
+#include <iostream>
+
+template <typename T> class Array {
+public:
+  void showSize() {
+    std::cout << "size: " << sizeof(T) << '\n';
+  }
+};
+int main(int argc, char * argv[]) {
+  Array<int> a;
+  a.showSize();
+  return 0;
+}

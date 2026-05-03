@@ -1,0 +1,56 @@
+#include <iostream>
+
+using std::endl;
+template <class T>
+T identity(T x)
+{
+    return x;
+}
+int& get_a(Derived* d)
+{
+    int& i = d->a;
+    return i;
+}
+char f()
+{
+    char j = 'A';
+    return j;
+}
+struct Base {
+    int a;
+    Base* operator++()
+    {
+        return this;
+    }
+};
+struct Derived : public Base {
+    int b;
+    Derived(int x = 20)
+        : a(x), b(x * 2)
+    {
+    }
+    inline Derived& operator++()
+    {
+        get_a(this) += ++a; 
+        b += f();
+        return *this;
+    }
+    inline Derived& operator--() 
+    {
+        get_a(this) += --a;
+        b -= f();
+        return *this;
+    }
+};
+int main()
+{
+    Derived d;
+    d.a = 20;
+    ++d;
+    std::cout << d.a << "\t" << d.b << endl;
+    d.a = 40;
+    --d;
+    std::cout << d.a << "\t" << d.b << endl;
+    return 0;
+}
+// End of the fixed version of the code above.

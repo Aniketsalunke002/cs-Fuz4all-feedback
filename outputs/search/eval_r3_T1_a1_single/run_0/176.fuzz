@@ -1,0 +1,39 @@
+#include <iostream>
+int main() {
+  int a = int(), b = 0, c = 0;
+  std::cin >> a >> b >> c;
+  auto i = 0;
+  for (auto d = 0; d < 16; d++) {
+    switch (d) {
+      case 0:
+        std::cout << i++ <<'';
+        break;
+      case 1:
+        std::cout << i <<'' << a + (b + c) * 8;
+        break;
+      case 2:
+        std::cout << i++ <<'';
+        break;
+      case 3:
+        std::cout << i <<'' << (b + c) * 4;
+        break;
+      case 4:
+        std::cout << i-- <<'';
+        break;
+      case 5:
+        std::cout << i++ <<'';
+        break;
+      case 6:
+        std::cout << i <<'' << (b + c);
+        break;
+      case 7:
+        std::cout << i++ <<'';
+        break;
+      default:
+        break;
+    }
+  }
+  if (3 == b < a + (b + c) % 8) std::cout << 'S' << 'O' << 'S';
+  else std::cout << 'W' << 'A' << 'P';
+  return 0;
+}

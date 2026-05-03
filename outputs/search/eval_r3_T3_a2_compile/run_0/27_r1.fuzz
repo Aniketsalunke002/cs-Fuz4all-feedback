@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	{
+		char* s0 = new char[96];
+		for(int i = 0; i < 96; ++i)
+			s0[i] = static_cast<char>('a' + i);
+		delete[] s0;
+	}
+	cout << "Goodbye!\n";
+	return 0;
+}
+// <h4>Output</h4>
+// <pre>
+// Goodbye!
+// </pre>
+
+#endif /* FUZZ_R3_T3_H_ */

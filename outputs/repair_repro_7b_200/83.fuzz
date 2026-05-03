@@ -1,0 +1,27 @@
+#include <iostream>
+
+#include "A.h"
+#include "B.h"
+
+void printA(A a)
+{
+	cout << a.i;
+}
+
+void printB(B b)
+{
+	cout << b.i;
+}
+
+B myFunc(A a)
+{
+	B b;
+	b.y	=	a.i	/	2;
+	return	b;
+}
+B myFunc(B b)
+{
+	B x;
+	x.i	=	b.i	+	1;
+	return	x;
+}

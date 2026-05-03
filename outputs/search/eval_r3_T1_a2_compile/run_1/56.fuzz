@@ -1,0 +1,126 @@
+#include <iostream>
+void f2()
+{
+    int a[10];
+    int i;
+    for (i=0;i<10;i++)
+    {
+        a[i] = 0;
+    }
+    i=0;
+    while (i<10)
+    {
+        a[i] = 2*a[i]+3;
+        i++;
+    }
+    for (i=0;i<10;i++)
+    {
+        a[i] = a[i]+i;
+    }
+    for (i=0;i<10;i++)
+    {
+        std::cout<<a[i]<<' ';
+    }
+    std::cout<<"\n";
+}
+ 
+#include <iostream>
+void f3()
+{
+    int a;
+    std::cout<<"Enter a number between 1 and 3 \n";
+    std::cin >> a;
+    switch(a)
+    {
+        case 1:
+            std::cout<<"Red";
+            break;
+        case 2:
+            std::cout<<"Green";
+            break;
+        case 3:
+            std::cout<<"Blue";
+            break;
+        default: std::cout<<"Not a valid option";
+    }
+    std::cout<<"\n";
+}
+ 
+#include <iostream>
+void f4()
+{
+    int *ptr;
+    ptr = new int;
+    *ptr = 10;
+    std::cout<<*ptr<<'\n';
+    delete ptr;
+}
+
+ 
+#include <iostream>
+void f5()
+{
+    int *n, i;
+    n = new int[10];
+    for (i=0; i<10; ++i)
+        *(n+i) = i * 2;
+    for(i=0; i<10; ++i)
+        std::cout << *(n+i) << " ";
+    std::cout << std::endl;
+}
+ 
+#include <iostream>
+class foo
+{
+public:
+    foo() {std::cout << "Calling constructor\n";}
+    ~foo() {std::cout << "Calling destructor\n";}
+}f;
+ 
+#include <iostream>
+class foo2
+{
+public:
+    foo2()
+    {
+    for(int j=65; j<=72; ++j)
+    {
+        m[j] = j-'A';
+    }
+    }
+    char m[27];
+    ~foo2()
+    {
+    for(int j=0; j<27; ++j)
+    {
+        std::cout << static_cast<char>(j + 'A')<<": " << m[j]  << '\n';
+    }
+    }
+}f2;
+
+ 
+#include <iostream>
+class foo3
+{
+public:
+    static int a;
+    foo3() 
+    {
+        ++a;
+        std::cout << "Instance with static lifetime " << a << '\n';
+    }
+    ~foo3() {--a;}
+private:
+    int b;
+}f3;
+int foo3::a = 0;
+
+int main()
+{
+    f();
+    f2();
+    f3();
+    f4();
+    f5();
+    std::cout << "Program completed";
+}

@@ -1,0 +1,7 @@
+#include <iostream>
+int main() {
+  short int* pi;
+  pi++;
+  std::cout << ++pi[1] << "," << *pi << std::endl;
+  return 0;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+  int i(0);
+  double answer(0);
+  answer = pow(2, ++i);
+  answer = answer + pow(2, ++i);
+  std::cout << answer << std::endl;
+  return 0;
+}

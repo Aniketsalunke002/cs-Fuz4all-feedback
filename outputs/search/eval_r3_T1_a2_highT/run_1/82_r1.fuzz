@@ -1,0 +1,18 @@
+#include <iostream>
+
+#include <exception>
+int main()
+{
+	try {
+		int x = 8;
+		int y = 0;
+		if (y == 0) {
+			throw std::exception();
+		}
+		int z = x / y;
+	}
+	catch (const std::exception&) {
+		std::cout << "division failed\n";
+	}
+	return 0;
+}

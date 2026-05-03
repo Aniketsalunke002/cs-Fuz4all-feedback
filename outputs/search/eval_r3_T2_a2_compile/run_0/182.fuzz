@@ -1,0 +1,6 @@
+#include <iostream>
+namespace std::Foo {}
+int main() {
+  struct Foo {};
+  return 0;
+}

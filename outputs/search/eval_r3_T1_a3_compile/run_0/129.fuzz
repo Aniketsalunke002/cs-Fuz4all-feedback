@@ -1,0 +1,4 @@
+#include <iostream>
+int main(){
+    int a = 10, b = 20; a = b; b = a; std::cout << "a: "<< a << "\tb:" << b << "\n";
+}  

@@ -1,0 +1,15 @@
+#include <iostream>
+int foo()
+{
+}
+int bar()
+{
+    int foo();
+    return foo();
+}
+int main()
+{
+    int (*p)()=foo;
+    std::cout << p << std::endl;
+    return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+	cout << a << endl;
+	int a(1);
+	int x;
+	x = a++;
+	cout << x << endl;
+	while (a <= 20) 
+		cout << a++ << endl;
+
+	cout << endl;
+	a = 1;
+	cout << a << endl;
+	while (a <= 20) {
+		cout << a++ << endl;
+		cout << a << endl;
+	}
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+  float x = 1.0, y = 0, z = 2.0;
+  cout << x << y << z << endl;
+  cin >> x;
+  cout << x << y << z << endl;
+  return 0;
+}<jupyter_output><empty_output><jupyter_text>**3. Compile and execute programs**  Compile and execute programs<jupyter_code>%%bash
+
+# Compile the program
+g++ -g -o test test.cpp
+
+# Execute the program
+./test<jupyter_output><empty_output><jupyter_text>**4. Generate inputs**  Generate inputs<jupyter_code>%%bash
+
+# Generate inputs
+./test<jupyter_output><empty_output><jupyter_text>**5. Evaluate outputs**  Evaluate outputs<jupyter_code>%%bash
+
+# Evaluate outputs
+ls<jupyter_output><empty_output><jupyter_text>**6. Visualize results**<jupyter_code># TODO!<jupyter_output><empty_output>

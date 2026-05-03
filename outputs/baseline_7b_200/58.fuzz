@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(){
+  int i=2137;
+  int* l = &i;
+  i=1-i;
+  cout<<*l;
+}

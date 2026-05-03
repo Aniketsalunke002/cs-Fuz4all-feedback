@@ -1,0 +1,10 @@
+#include <iostream>
+
+#include <vector>
+using namespace std;
+int main(int argc, const char * argv[]) {
+    
+    const int N  = 3;
+    int arr[N] = { -1, -1, 3 };
+  
+    int expected[4] = { 0, 1, 1,

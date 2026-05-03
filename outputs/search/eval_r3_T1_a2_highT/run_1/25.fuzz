@@ -1,0 +1,22 @@
+#include <iostream>
+#include <algorithm>
+#include <numeric>
+#include <vector>
+
+double calculateSquare(double const& value)
+{
+	return std::accumulate<std::vector<double>::const_iterator, double>
+		(
+			std::begin(value),
+			std::end(value),
+			double(0),
+			[&] (double const& value, double const& factor) { return value + factor * factor; }
+		);
+}
+
+int main()
+{
+	double b = 5;
+	std::cout << calculateSquare (b);
+	return 0;
+}

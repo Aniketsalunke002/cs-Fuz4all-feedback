@@ -1,0 +1,30 @@
+#include <iostream>
+class Foo
+{
+    Foo &operator++()
+    {
+        throw std::out_of_range("Increment not supported");
+        return *this;
+    }
+
+
+};
+
+void baz()
+{
+    Foo i = Foo();
+    ++i;  
+}
+
+int main(void)
+{
+    Object *n = new Number1;
+    (delete n);
+    n = new Number2;
+    (delete n);
+    baz();
+
+
+    return 0;
+}
+

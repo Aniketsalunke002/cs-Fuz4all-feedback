@@ -1,0 +1,16 @@
+#include <iostream>
+
+#include <unordered_map>
+
+ 
+int main()
+{
+  std::unordered_map<std::string, int> map;
+  map["hello"] = 10;
+  std::unordered_map<std::string, int> :: iterator i;
+  for (std::pair<std::string, int> const & p_pair : map) {
+    i = map.find("hello1");
+    std::cout << p_pair.first << " = " << p_pair.second << std::endl;
+  }
+  return 0;
+}

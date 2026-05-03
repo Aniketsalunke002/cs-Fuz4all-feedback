@@ -1,0 +1,35 @@
+#include <iostream>
+int foo()
+{
+}
+int main()
+{
+    std::string a_str("Hello C++ world!");
+    constexpr char* a_array = a_str.c_str();
+    std::cout << a_array << std::endl;
+    return 0;
+}
+#include <iostream">
+
+/**
+ * This is the start of a new C++11 feature
+ */
+struct MyClass
+{
+    int a;
+    MyClass()
+    {
+        std::cout << "MyClass constructor called" << std::endl;
+    }
+}
+
+int main()
+{
+    MyClass obj;
+    return 0;
+}
+
+#include <iostream">
+
+std::wstring wstr("Hello World");
+std::cout << wstr << std::endl;

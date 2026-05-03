@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int a = 2;
+  cout << a << endl;
+  return 0;
+}
+ 
+ 
+ 
+ 
+#define NUM 5
+int arr[NUM] = {23, 45, 2, 14, 12};
+#include <iostream>
+using namespace std;
+class ClassExample {
+public:
+  int intVar;
+  string strVar;
+   
+  void init(int x, string s) {
+    intVar = x;
+    strVar = s;
+  }
+  int sum() {
+    return intVar + strVar.length();
+  }
+  void print() { cout << intVar << " " << strVar << endl; }
+};
+main() {
+  ClassExample obj;
+  obj.init(obj.sum(), "abcd");
+  obj.print();
+}

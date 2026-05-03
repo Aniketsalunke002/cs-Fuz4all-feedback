@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+struct Point {
+	Point(int,int);
+	int x;
+	int y;
+};
+Point::Point(int val1,int val2):x(val1),y(val2)
+{
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+using std::cout;
+int main(void) {
+
+	int lambda_expr = []() -> int { return 42; }();
+	cout << lambda_expr << std::endl;
+
+	return 0;
+}
+  	
+int func(void) {
+    return []() -> int { return 0; }();
+}

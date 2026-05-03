@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	{
+		std::unique_ptr<char[]> s0(new char[96]);
+		for(int i = 0; i < 96; ++i)
+			s0[i] = static_cast<char>('a' + i);
+	}
+	cout << "Goodbye!\n";
+	return 0;
+}

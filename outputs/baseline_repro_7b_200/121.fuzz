@@ -1,0 +1,16 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+  {
+    static_assert(true, "[error]: This program will not compile!");
+  }
+  return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char* argv[]) {
+  {
+    constexpr bool error = true;
+    static_assert(error, "[error]: This program will not compile!");
+  }
+  return 0;
+}

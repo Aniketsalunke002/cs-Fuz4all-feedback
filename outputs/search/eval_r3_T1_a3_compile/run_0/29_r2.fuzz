@@ -1,0 +1,28 @@
+#include <iostream>
+
+#include <string>
+#include <deque>
+#include <sstream>
+#include <algorithm>
+
+using namespace std;
+
+int main(void) {
+    try {
+      string s("123xyz123");
+      stringstream ss(s);
+      deque<string> s_list;
+      string word;
+      while (!ss.eof()) {
+          ss >> word;
+          s_list.push_back(word);
+      }
+      cout << s_list.size();
+      for_each(s_list.begin(), s_list.end(), [](auto i) {cout << i;});
+    }
+    catch (std::exception e) {
+      cout << e.what();  
+    }
+
+    return 0;
+}

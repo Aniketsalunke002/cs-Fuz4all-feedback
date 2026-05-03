@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main( int argc, char **argv ){
+std::cout << "\t  This is the fifth generation program.\n\n";
+int x = 13;
+int y = x | 15673;
+std::cout << " x = "<<x<<std::endl;
+std::cout << " y = "<<y<<std::endl;
+if(y==15673)
+std::cout << "y equals 15673!!" << std::endl;
+std::cin.get();
+}

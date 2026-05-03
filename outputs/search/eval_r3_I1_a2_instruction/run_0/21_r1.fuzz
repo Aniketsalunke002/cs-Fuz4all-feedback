@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, e, f = 20;
+    ++e;
+    ++f;
+    ++e;
+    ++n;
+    int x = 3;
+    if (n + 4 < x) {
+        cout << n + 4 << endl;
+    }
+    else {
+        cout << x << endl;
+    }
+    return 0;
+}
+int main(int argc, char **argv) {
+    int n = 2;
+    if (n + 3 < 5) {
+        cout << n + 4;
+    }
+    else {
+        cout << 5;
+    }
+    return 0;
+}

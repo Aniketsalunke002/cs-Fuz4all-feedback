@@ -1,0 +1,17 @@
+#include <iostream>
+
+#define LIM 42
+enum months {february = 10, april = 20, june = 30};
+
+int main() {
+
+  
+   months m = february;
+   std::cout << "The value of m is " << m << ".\n";
+  
+  months j = LIM;
+  std::cout << "The value of j is " << j << ".\n";
+
+  
+  return 0;
+}

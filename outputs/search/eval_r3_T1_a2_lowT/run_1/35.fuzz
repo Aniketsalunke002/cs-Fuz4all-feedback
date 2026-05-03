@@ -1,0 +1,99 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    for (int i=1; i<=40000; i++)
+    {
+        cout << i << "... ";
+        for (int j=1; j<=40000; j++)
+        {
+            if (i%j == 0)
+            {
+                cout << " ***  ";
+                break;
+            }
+        }
+        cout << endl;
+    }
+    cout << "Finished";
+    return 0;
+}
+ 
+#include <memory>
+#include <ostream>
+using namespace std;
+class BinaryTreeNode
+{
+public:
+    int m_value;
+    std::shared_ptr<BinaryTreeNode> m_left;
+    std::shared_ptr<BinaryTreeNode> m_right;
+    BinaryTreeNode(int value, std::shared_ptr<BinaryTreeNode>& left = nullptr, std::shared_ptr<BinaryTreeNode>& right = nullptr) :
+        m_value(value), m_left(left), m_right(right) {}
+};
+std::ostream& operator<<(std::ostream& os, BinaryTreeNode* node)
+{
+    return os << node->m_value;
+}
+std::ostream& operator<<(std::ostream& os, const std::shared_ptr<BinaryTreeNode>& node)
+{
+    return os << *node;
+}
+BinaryTreeNode* create_node(int value, BinaryTreeNode*& old_l, BinaryTreeNode*& old_r)
+{
+    auto node = std::shared_ptr<BinaryTreeNode>(new BinaryTreeNode(value, old_l, old_r));
+    old_l = old_r;
+    return node.get();
+}
+void print_preorder(BinaryTreeNode* node)
+{
+    if (node) {
+        cout << node <<'';
+        print_preorder(node->m_left.get());
+        print_preorder(node->m_right.get());
+    }
+}
+void print_inorder(BinaryTreeNode* node)
+{
+    if (node)
+    {
+        print_inorder(node->m_left.get());
+        cout << node <<'';
+        print_inorder(node->m_right.get());
+    }
+}
+void print_postorder(BinaryTreeNode* node)
+{
+    if (node)
+    {
+        print_postorder(node->m_left.get());
+        print_postorder(node->m_right.get());
+        cout << node <<'';
+    }
+}
+int main( void )
+{
+    BinaryTreeNode* a;
+    BinaryTreeNode* b;
+    BinaryTreeNode* c;
+    BinaryTreeNode* d;
+    BinaryTreeNode* f;
+    BinaryTreeNode* g;
+    BinaryTreeNode* h;
+    BinaryTreeNode* i;
+    std::shared_ptr<BinaryTreeNode> x;
+    a = create_node(1, b, c);
+    x = std::shared_ptr<BinaryTreeNode>(a);
+    c = create_node(3, d, nullptr);
+    d = create_node(10, f, g);
+    e = create_node(2, h, i);
+    g = create_node(6, nullptr, nullptr);
+    i = create_node(4, nullptr, nullptr);
+    std::cout << "Preorder: ";
+    print_preorder(a);
+    std::cout << "\n" << "Inorder: ";
+    print_inorder(a);
+    std::cout << "\n" << "Postorder: ";
+    print_postorder(a);
+    return 0;
+}

@@ -1,0 +1,38 @@
+#include <iostream>
+#include <vector>
+int main()
+{
+    struct A {
+        int i;
+    };
+    std::vector<A> a;
+    std::vector<A>::iterato iter = a.begin();
+    A *pa = &*iter;
+    ++pa->i;
+}
+ 
+#include <vector>
+ 
+int main()
+{
+    class A {
+    public:
+        int i;
+    };
+ 
+    int i;
+    A *pA = &i;  
+ 
+    std::vector<A> a;
+ 
+    if(!a.empty()) {
+        std::vector<A>::iterator iter = a.begin();
+        A *pa = &*iter;
+ 
+         
+ 
+        operator++(pa->i);
+    }
+ 
+}
+ 

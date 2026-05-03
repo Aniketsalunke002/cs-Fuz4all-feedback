@@ -1,0 +1,16 @@
+#include <iostream>
+
+class Mutator 
+{
+public:
+  virtual ~Mutator() {}
+  virtual int mutator() = 0;
+  int m = 0;
+  constexpr int c() { return 5; }
+};
+
+int main() 
+{
+   Mutator* i(new Mutator);
+  std::cout << i->m << '\n' << i->c() << '\n'; 
+}

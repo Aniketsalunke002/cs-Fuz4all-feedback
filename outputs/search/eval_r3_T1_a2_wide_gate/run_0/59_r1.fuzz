@@ -1,0 +1,11 @@
+#include <iostream>
+
+int main(int argc, char ** argv) {
+	std::cout << 74;
+	std::cout << "hello world";
+	auto y = 42;
+	std::cout << 5 * y;
+	if (y + y > 42) {
+	  exit(0);
+	}
+}

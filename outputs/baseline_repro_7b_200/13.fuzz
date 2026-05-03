@@ -1,0 +1,37 @@
+#include <iostream>
+using std::cout;
+int main(void) {
+	cout << 'a'; 
+	return 0;
+}
+
+
+ 
+#define A(x) 13
+int main(void) {
+	cout << A(3); 
+	return 0;
+}
+
+#define A(x) printf "A"; 13
+int main(void) {
+	cout << A(3); 
+	return 0;
+}
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

@@ -1,0 +1,101 @@
+#include <iostream>
+    void bar(int* a, int n, int& d) {
+    	std::cout << "Pointer by reference\n";
+        *a = n * 100;
+        d = 88;
+    }
+    int main(int argc, char** argv) {
+    	std::cout << "Pointer by value" << std::endl;
+        int n{};
+        int d2{}; 
+        bar(&n, 76, d2);
+        cout << n <<'' << d2 << endl;
+    }<jupyter_output>Pointer by value
+76 88<jupyter_text>A complete example that illustrates that a templated version of `foo` that does the same thing as the non-templated and uses an extra argument allows us to write much cleaner code without adding needless arguments.<jupyter_code>#include <iostream>
+    template <typename T>
+    void foo(T a, T b) {
+        cout << "Template: " << a << " " << b << endl;
+    }
+    template <typename T>
+    void foo_bar(T a, T b, T& c) {
+        foo(a, b);
+        c = a + b;
+    }
+    int main(int argc, char** argv) {
+        int a1{0}, a2{0}, a3{0};
+        foo(a1, a2);    
+        foo(a3, a2);
+        cout << "------------------\n";
+        int sum{0}, difference{0};
+        foo_bar(a1, a2, sum);
+        foo_bar(a2, a3, difference);
+        cout << "Sum: " << sum << endl;
+        cout << "Difference: " << difference << endl;
+        cout << "------------------\n";
+        foo(a1, a2);    
+        foo(a3, a2);
+    }<jupyter_output>Template: 0 0
+Template: 0 0
+------------------
+Template: 0 0
+Template: 0 0
+Sum: 0
+Difference: 0
+------------------
+Template: 0 0
+Template: 0 0<jupyter_text>This approach can also be used to avoid needless complexity by encapsulating the common stuff in a class.<jupyter_code> 
+#include <iostream>
+#include <string>
+    template <typename T>
+    class base_type {
+    public:
+        T x;
+        T y;
+        string s;
+        base_type() {
+            x = 0;
+            y = 0;
+            s = "default";
+        }
+        base_type(T a, T b) {
+            x = a;
+            y = b;
+        }
+        base_type(T a, T b, string m) {
+            x = a;
+            y = b;
+            s = m;
+        }
+        void print() {
+            cout << "Base type: x=" << x << " y=" << y << ": " << s << endl;
+        }
+    };
+    using namespace std;
+    int main(int argc, char** argv) {
+        base_type<int> a{1, 2}, b{3, 4};
+    
+        a.print();
+        b.print();
+    }
+ 
+#include <iostream>
+#include <string>
+    template <typename T>
+    class derived_type : base_type<T> {
+    public:
+        T z;
+        derived_type() : base_type() {
+            z = 1;
+        }
+        derived_type(T a, T b) : base_type(a, b) {
+            z = 2;
+        }
+        derived_type(T a, T b, T c, string d) : base_type(a, b, d) {
+            z = c;
+        }
+        void print() {
+            cout << "Derived type: z=" << z << " ";
+            cout << base_type<T>::x << " " << base_type<T>::y << ": " << base_type<T>::s << endl;
+        }
+    };
+    using namespace std

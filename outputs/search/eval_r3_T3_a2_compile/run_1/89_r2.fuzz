@@ -1,0 +1,22 @@
+#include <iostream>
+
+#include <vector>
+constexpr static char const* cstr = "A";
+
+// Clang/LLVM does not allow non-template functions with the same name as template functions:
+// constexpr char& cref(void) {
+// 	std::cout << "hello from cref\n";
+// 	return cstr[0];
+// }
+
+// We can use C++11 function template specialization to solve the above:
+template<typename T>
+T& cref(void) {
+	std::cout << "hello from cref\n";
+	return cstr[0];
+}
+
+int main() {
+	cref<char>();
+	return 0;
+}

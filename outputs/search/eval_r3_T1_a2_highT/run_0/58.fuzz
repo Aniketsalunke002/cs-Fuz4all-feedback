@@ -1,0 +1,2 @@
+#include <iostream>
+int main() { int a = 0; char* x = (char*)&a; int b = *x; std::cout << b; }

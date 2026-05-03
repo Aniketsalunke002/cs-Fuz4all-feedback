@@ -1,0 +1,9 @@
+#include <iostream>
+void main() {
+   
+  std::thread thread([&] {
+    std::cout << "Hello World\n";
+  });
+   
+  thread.join();
+}

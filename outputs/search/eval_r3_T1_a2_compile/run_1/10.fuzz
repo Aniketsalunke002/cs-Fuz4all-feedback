@@ -1,0 +1,74 @@
+#include <iostream>
+template<class T>
+class List2 {
+friend void print_list(List2& l);
+public:
+    class iterator{
+    private: 
+        friend class List2;
+        List2* list;
+        typename std::list<T>::iterator i;
+        iterator(List2* l,typename std::list<T>::iterator it):list(l),i(it){
+        }
+    public:
+        friend std::ostream& operator << (std::ostream& os,const List2::iterator& it){
+            os << *it;
+            return os;
+        }
+        template<class U>
+        friend bool operator!= (const List2::iterator& it,const List2::iterator& other) {
+            return it.list!= other.list || it.i!= other.i;
+        }
+        Iterator& operator++(){
+            ++i;
+            return *this;
+        }
+        T operator*() const{
+            return *i;
+        }
+    };
+    List2(){}
+    void append(T elem){
+        elem;
+    }
+    void append(T& elem){
+        elem;
+    }
+    iterator begin() {
+        return iterator(this,l.begin());
+    }
+    iterator end() {
+        return iterator(this,l.end());
+    }
+private:
+    std::list <T> l;
+};
+template<class T>
+std::ostream& operator << (std::ostream& os,List2<T>& l) {
+    for(typename List2<T>::iterator i = l.begin();i!= l.end();++i) {
+        os << *i << " ";
+    }
+    return os;
+}
+void print_list(List2<int>& l)
+{
+    std::cout << l;
+}
+void append_list(List2<int>& l,int x)
+{
+    l.append(x);
+}
+int main(void)
+{
+    List2<int> l1;
+    append_list(l1,1);
+    append_list(l1,2);
+    append_list(l1,4);
+    append_list(l1,5);
+    append_list(l1,6);
+    append_list(l1,77);
+    append_list(l1,110);
+    append_list(l1,123);
+    append_list(l1,800);
+    print_list(l1);
+}*/

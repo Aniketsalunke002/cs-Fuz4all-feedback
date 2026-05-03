@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int c = 5, d = 12;
+	cout << c << endl;
+	cout << d << endl;
+	test();
+	cout << c << endl;
+	cout << d << endl;
+	return 0;
+}
+void test() {
+	c *= 30;
+	d -= 30;
+}
+ 
+#include <iostream>
+using namespace std;
+extern void fun3(int &c, int &d);
+int main(int argc, char* argv[]) {
+	int c = 5, d = 12;
+	cout << c << endl;
+	cout << d << endl;
+	fun3(c, d);
+	cout << c << endl;
+	cout << d << endl;
+	return 0;
+}
+extern void fun3(int &c, int &d) {
+	int a = 5, b = 12;
+	c = 30;
+	d = 8;
+	return;
+}
+ 
+#include <iostream>
+using namespace std;
+extern void fun3(int &c, int &d);
+int main(int argc, char* argv[]) {
+	int c = 5, d = 12;
+	cout << c << endl;
+	cout << d << endl;
+	fun3(c, d);
+	cout << c << endl;
+	cout << d << endl;
+	return 0;
+}
+extern void fun3(int &c, int &d) {
+	int a = c, b = d;
+	c = 30;
+	d = 8;
+	return;
+}

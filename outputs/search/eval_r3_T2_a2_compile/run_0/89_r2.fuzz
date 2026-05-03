@@ -1,0 +1,62 @@
+#include <iostream>
+
+#include <cstddef>
+
+namespace std {
+template<typename T, size_t N>
+class array {
+ public:
+  T data[N];
+};
+}
+
+struct Point {
+  int x_;
+  int y_;
+  Point() : x_{0}, y_{0} {}
+  Point(int x, int y) noexcept : x_{x}, y_{y} {}
+  Point& operator+=(const Point& rhs) noexcept {
+    x_ += rhs.x_;
+    y_ += rhs.y_;
+    return *this;
+  }
+  Point operator&(const Point& rhs) noexcept {
+    return Point(x_ & rhs.x_, y_ & rhs.y_);
+  }
+  friend Point operator+(Point lhs, const Point& rhs) noexcept;
+  friend void foo(Point& a, Point& b) noexcept;
+  friend int foo(int a, int b) noexcept;
+};
+
+Point foo(Point a, Point b) noexcept {
+  a += b;
+  return a;
+}
+
+Point operator+(Point lhs, const Point& rhs) noexcept {
+  lhs += rhs;
+  return lhs;
+}
+
+int foo(int a, int b) noexcept {
+  return a * b;
+}
+
+// namespace std {
+//   template<typename T, size_t N>
+//   class array;
+// }
+// struct Point {
+//   int x_;
+//   int y_;
+//   Point() : x_{0}, y_{0} {}
+//   Point(int x, int y) noexcept : x_{x}, y_{y} {}
+//   Point& operator+=(const Point& rhs) noexcept {
+//     x_ += rhs.x_;
+//     y_ += rhs.y_;
+//     return *this;
+//   }
+//   Point operator&(const Point& rhs) noexcept {
+//     return Point(x_ & rhs.x_, y_ & rhs.y_);
+//   }
+//   friend Point operator

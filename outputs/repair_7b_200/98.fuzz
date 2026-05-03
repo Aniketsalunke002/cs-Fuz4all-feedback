@@ -1,0 +1,16 @@
+#include <iostream>
+int main() {
+    int a = 0;
+    int b = 1;
+    for(int i = 1; i <= 5; i = i + 2) {
+        a = a + b;
+        b = b + a;
+        std::cout << i << ':' << b << '=' << a << std::endl;
+    }
+    return 0;
+}
+/*
+The second program could be written using any type of for loop.
+All these programs can be written using the "while" loop.
+
+Also your "a" and "b" needs to

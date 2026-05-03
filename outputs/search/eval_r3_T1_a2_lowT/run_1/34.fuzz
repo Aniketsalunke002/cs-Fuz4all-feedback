@@ -1,0 +1,76 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << "Please create a semantically equivalent program to the previous generation..." << endl;
+    return 0;
+}
+ 
+#include <iostream>
+#include <cstring>
+using namespace std;
+const int NUMBER_OF_ERRORS = 10;
+enum {
+    ERR_OK = 0,
+    ERR_NO_MEMORY,
+    ERR_BAD_FILE
+} ErrorCode;
+class Error
+{
+public:
+    int error_code;
+    char error_message[255];
+    Error(ErrorCode error_code_ = ERR_NO_MEMORY, const char* format_string = "")
+    : error_code(error_code_)
+    {
+        if (format_string && strlen(format_string)) {
+            this->error_message = new char[sprintf(this->error_message, format_string)];
+        }
+    }
+    ~Error()
+    {
+        cout << "Deleting Error object." << endl;
+        if (this->error_message)
+        {
+            delete[] this->error_message;
+        }
+        cout << "Done." << endl;
+    }
+    void print() {
+        switch(this->error_code)
+        {
+            case ERR_NO_MEMORY: cout << "Memory allocation error."; break;
+            case ERR_BAD_FILE: cout << "Incorrect filename or file access error."; break;
+            default: cout << "Unknown error."; break;
+        }
+        cout << " (";
+        switch(this->error_code)
+        {
+            case ERR_OK: cout << "OK.)"; break;
+            case ERR_NOT_EQUAL: cout << "not equal."; break;
+            default: cout << error_code << ".)"; break;
+        }
+        cout << endl;
+    }
+} error[NUMBER_OF_ERRORS];
+int main(int argc, char** argv)
+{
+    int i;
+    cout << "Please create a program which uses exception handling in a complicated way..." << endl;
+    cout << "We need " << NUMBER_OF_ERRORS << " objects of type Error" << endl;
+    cout << "Try to allocate memory, open file and close file. Every time we get an error we need to create a new Error object and then delete it." << endl;
+    for (i=0; i < NUMBER_OF_ERRORS; i++)
+    {
+        error[i] = Error(ERR_NO_MEMORY, "Could not allocate memory for error object %d of %d!", i+1, NUMBER_OF_ERRORS);
+    }
+    for (i=0; i < NUMBER_OF_ERRORS; i++)
+    {
+        error[i].print();
+        if (i<3)
+        {
+            delete error[i];
+            error[i] = Error();
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,67 @@
+[TRACE] Validating outputs/eval_smoke/run_0/0.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/0.fuzz is safe
+[TRACE] Validating outputs/eval_smoke/run_0/1.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/1.fuzz is safe
+[TRACE] Validating outputs/eval_smoke/run_0/2.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/2.fuzz failed validation with error message: outputs/eval_smoke/run_0/2.fuzz:12:14: error: ‘vector’ in namespace ‘std’ does not name a template type
+   12 | typedef std::vector<MyClass> my_class_v;
+      |              ^~~~~~
+outputs/eval_smoke/run_0/2.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | #include <string>
+[TRACE] Validating outputs/eval_smoke/run_0/3.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/3.fuzz is safe
+[TRACE] Validating outputs/eval_smoke/run_0/4.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/4.fuzz failed validation with error message: outputs/eval_smoke/run_0/4.fuzz: In function ‘int main()’:
+outputs/eval_smoke/run_0/4.fuzz:7:5: error: ‘print_string’ was not declared in this scope
+    7 |     print_string("hello", "world");
+      |     ^~~~~~~~~~~~
+[TRACE] Validating outputs/eval_smoke/run_0/5.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/5.fuzz is safe
+[TRACE] Validating outputs/eval_smoke/run_0/6.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/6.fuzz failed validation with error message: outputs/eval_smoke/run_0/6.fuzz:9:6: error: variable or field ‘print_string’ declared void
+    9 | void print_string(array<T, sizeof...(S)> a, S... b) {
+      |      ^~~~~~~~~~~~
+outputs/eval_smoke/run_0/6.fuzz:9:19: error: ‘array’ was not declared in this scope; did you mean ‘std::array’?
+    9 | void print_string(array<T, sizeof...(S)> a, S... b) {
+      |                   ^~~~~
+      |                   std::array
+In file included from outputs/eval_smoke/run_0/6.fuzz:2:
+/usr/include/c++/11/array:95:12: note: ‘std::array’ declared here
+   95 |     struct array
+      |            ^~~~~
+outputs/eval_smoke/run_0/6.fuzz:9:26: error: expected primary-expression before ‘,’ token
+    9 | void print_string(array<T, sizeof...(S)> a, S... b) {
+      |                          ^
+outputs/eval_smoke/run_0/6.fuzz:9:42: error: ‘a’ was not declared in this scope
+    9 | void print_string(array<T, sizeof...(S)> a, S... b) {
+      |                                          ^
+outputs/eval_smoke/run_0/6.fuzz:9:46: error: expected primary-expression before ‘...’ token
+    9 | void print_string(array<T, sizeof...(S)> a, S... b) {
+      |                                              ^~~
+[TRACE] Validating outputs/eval_smoke/run_0/7.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/7.fuzz is safe
+[TRACE] Validating outputs/eval_smoke/run_0/8.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/8.fuzz failed validation with error message: outputs/eval_smoke/run_0/8.fuzz: In function ‘void print_string(T, const T&)’:
+outputs/eval_smoke/run_0/8.fuzz:5:16: error: ‘str’ was not declared in this scope; did you mean ‘std’?
+    5 |   std::cout << str << " " << std::get<1>(a)  << '\n';
+      |                ^~~
+      |                std
+outputs/eval_smoke/run_0/8.fuzz: At global scope:
+outputs/eval_smoke/run_0/8.fuzz:7:1: warning: ISO C++ forbids declaration of ‘main’ with no type [-Wreturn-type]
+    7 | main() {
+      | ^~~~
+outputs/eval_smoke/run_0/8.fuzz: In function ‘int main()’:
+outputs/eval_smoke/run_0/8.fuzz:8:15: error: no matching function for call to ‘print_string(const char [2], const char [2])’
+    8 |   print_string("A", "A");
+      |   ~~~~~~~~~~~~^~~~~~~~~~
+outputs/eval_smoke/run_0/8.fuzz:4:6: note: candidate: ‘template<class T> void print_string(T, const T&)’
+    4 | void print_string(T a, const T& b) {
+      |      ^~~~~~~~~~~~
+outputs/eval_smoke/run_0/8.fuzz:4:6: note:   template argument deduction/substitution failed:
+outputs/eval_smoke/run_0/8.fuzz:8:15: note:   deduced conflicting types for parameter ‘const T’ (‘const char*’ and ‘char [2]’)
+    8 |   print_string("A", "A");
+      |   ~~~~~~~~~~~~^~~~~~~~~~
+[TRACE] Validating outputs/eval_smoke/run_0/9.fuzz ...
+[VERBOSE] outputs/eval_smoke/run_0/9.fuzz is safe

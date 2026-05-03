@@ -1,0 +1,15 @@
+#include <iostream>
+
+#include <list>
+void print_list(std::list<int>& l)
+{
+    for(std::list<int>::reverse_iterator i = l.rbegin();i!= l.rend();++i)
+        std::cout << *i << " ";
+    std::cout << std::endl;
+}
+int main(void)
+{
+    std::list<int> l1;
+    std::list<int>::iterator i;
+    i =l1.insert(l1.begin(),6);
+    l1.insert(i,77);

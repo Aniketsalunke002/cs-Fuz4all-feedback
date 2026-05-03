@@ -1,0 +1,12 @@
+#include <iostream>
+ using namespace std;
+int main() 
+{
+	float f = 0;
+	float step = 0.01;
+	for(unsigned int i=0; f<12.34;){
+		cout<<f<<'\t';
+		f = f + step; 
+		i+=1;
+	}
+}

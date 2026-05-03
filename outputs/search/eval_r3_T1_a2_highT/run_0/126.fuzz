@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string sentence;
+    cin>>sentence;
+    reverse(sentence.begin(), sentence.end());
+    cout<<sentence<<"\n";
+
+    return 0;
+}

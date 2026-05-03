@@ -1,0 +1,15 @@
+#include <iostream>
+struct Array {
+   int size() {return 2;}
+};
+int main()
+{
+   Array arr{};
+   int a[arr.size()]{0,0};
+   a[1] = 10;
+   a[2]  += a[1];
+  for (int i = 0; i < 3; i++) {
+     std::cout << "[" << a[0] << "] = " << a[1] << std::endl;
+  }
+	return EXIT_SUCCESS;
+}

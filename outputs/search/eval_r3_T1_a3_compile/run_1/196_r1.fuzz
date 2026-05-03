@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+#include <map>
+int main()
+{
+	static map<int,int> x;
+	x.insert(pair<const int,int>(1,2));
+	pair<bool,map<int,int>::iterator> f=x.insert(pair<const int,int>(7,8));
+	if(f.first==x.end()) cout << "yes\nwtf";
+	x=f.first;
+	if(x==f.first) cout << "yes\nwtf";
+	return 0;
+}

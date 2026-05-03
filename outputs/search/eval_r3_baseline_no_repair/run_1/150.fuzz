@@ -1,0 +1,23 @@
+#include <iostream>
+Complex* ptr;
+Complex f() {
+  return ptr;
+}
+int main() {
+  ptr = new Complex(1, 2);
+  Complex val = f();
+  printf("%d %d\n", val.ptr()[0], ptr->ptr()[0]);
+  delete ptr;
+  return 0;
+}
+ 
+#include <iostream>
+class Noisy {
+  void do_something();
+};
+int main() {
+  Noisy *p = new Noisy();
+  p->do_something();
+  delete p;
+  return 0;
+}

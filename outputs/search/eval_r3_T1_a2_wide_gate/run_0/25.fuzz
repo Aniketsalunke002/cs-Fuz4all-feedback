@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int k = 0;
+	while (k <10){
+		cout.width(3);
+		cout << k<< " ";
+		k++;
+	}
+    cout << endl;
+}

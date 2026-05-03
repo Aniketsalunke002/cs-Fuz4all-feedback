@@ -1,0 +1,24 @@
+#include <iostream>
+
+
+class ClsForShort
+{
+  private: int priv_a;
+
+  public: int publ_a;
+
+   
+  void nonpubl_method()
+  {
+    publ_a = priv_a;
+    cout << publ_a << endl;
+  }
+};
+
+int main(int argc, char *argv[])
+{
+  ClsForShort obj;
+  obj.nonpubl_method();
+
+  return 0;
+}

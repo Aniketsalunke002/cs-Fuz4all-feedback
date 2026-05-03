@@ -1,0 +1,10 @@
+#include <iostream>
+
+void world()
+{
+	std::cout << "Hello world!" << std::endl;
+	world();
+}
+int main() {
+	world();
+}

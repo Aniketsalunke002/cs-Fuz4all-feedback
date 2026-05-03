@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+
+#include <map>
+#include <cassert>
+using namespace std;
+
+
+
+int main(){
+     char* a = new char[5];
+     puts(a+1);
+}

@@ -1,0 +1,43 @@
+#include <iostream>
+int main() {
+	int counter=0;
+	int winner=1;
+	int win=1;
+	bool quit=false;
+	std::cout << "Press ENTER to start, Q to quit.";
+	std::cin.ignore(1);
+	if(std::toupper(std::cin.peek()) == 'Q') {
+		std::cin.ignore(1);
+		return 0;
+	}
+	std::cout << std::endl;
+	for(;;) {
+		bool won=false;
+		std::cin >> counter;
+		std::cin.get();
+		switch(counter) {
+		case 1:
+			std::cout << counter << ": [1][ ] is live!" << std::endl;
+			win=1;
+			winner^=1;
+			won=true;
+			break;
+		case 2:
+			std::cout << counter << ": [0][1] is live!" << std::endl;
+			win=0;
+			winner=((1+winner)%2)+1;
+			won=true;
+			break;
+		case 3:
+			std::cout << counter << ": [1][1] is live!" << std::endl;
+			win=1;
+			winner^=1;
+			won=true;
+			break;
+		case 4:
+			std::cout << counter << ": [0][0] is live!" << std::endl;
+			win=0;
+			winner=((1+winner)%2)+1;
+			won=true;
+			break;
+		case 0

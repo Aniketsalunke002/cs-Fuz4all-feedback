@@ -1,0 +1,128 @@
+#include <iostream>
+int main()
+{
+    std::string* str = nullptr;
+    str = new std::string{ "<NAME>" };
+    std::cout << "Before modification\n";
+    std::cout << *str << '\n';
+    str->append("!?");
+    std::cout << "After modification\n";
+    std::cout << *str << '\n';
+    delete str;  
+    str = nullptr;
+    return 0;
+}
+ 
+ 
+ 
+ 
+
+template<typename T>
+class BinaryTree
+{
+    struct Node
+    {
+        T mData{};
+        Node* mLchild{};
+        Node* mRchild{};
+    };
+
+    Node* mRoot{};
+
+public:
+
+    class iterator
+    {
+        Node* mCurrent{};
+
+    public:
+        using difference_type = std::ptrdiff_t;
+        using value_t = T;
+        using pointer = T*;
+        using reference = T&;
+        using iterator_category = std::bidirectional_iterator_tag;
+
+        iterator(Node* n = nullptr) : mCurrent{n} {}
+
+        iterator& operator++()
+        {
+            mCurrent = mCurrent->mLchild;
+            return *this;
+        }
+
+        iterator operator++(int) {
+            iterator retval = *this;
+            if (mCurrent)
+            {
+                mCurrent = mCurrent->mLchild;
+            }
+            return retval;
+        }
+
+        iterator& operator--()
+        {
+            mCurrent = mCurrent->mLchild;
+            return *this;
+        }
+
+        iterator operator--(int) {
+            iterator retval = *this;
+            if (mCurrent)
+            {
+                mCurrent = mCurrent->mLchild;
+            }
+            return retval;
+        }
+
+        bool operator==(iterator rhs) { return mCurrent == rhs.mCurrent; }
+        bool operator!=(iterator rhs) { return!operator==(rhs); }
+
+        pointer operator->() {
+            return mCurrent->mLchild;
+        }
+
+        reference operator*() {
+            return *(mCurrent->mLchild);
+        }
+    }
+
+     
+    void add(const T data) {}
+
+     
+    iterator begin() {
+        return iterator(mRoot);
+    }
+
+    iterator end() {
+        return iterator();
+    }
+
+private:
+
+     
+    void traverse(Node* startingNode) {}
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

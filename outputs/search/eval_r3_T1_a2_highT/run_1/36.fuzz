@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+	int a;
+	std::cout << "Enter an integer: ";
+	std::cin >> a;
+	std::cout << "The value entered is " << a << std::oct << std::showpos << " which would be " << ~a << std::dec << std::noshowpos << "~";
+	return 0;
+}

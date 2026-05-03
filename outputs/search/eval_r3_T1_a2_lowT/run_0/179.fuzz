@@ -1,0 +1,15 @@
+#include <iostream>
+int main() {
+    int a,b,c=10;
+    a=b=14-(c/1000);
+    c%=(a*1000);
+    std::cout<<a<<std::endl;
+    std::cout<<b<<std::endl;
+    std::cout<<c<<std::endl;
+    int d,e,f=20;
+    d=e=23-(f/1000);
+    f%=(d*1000);
+    std::cout<<d<<std::endl;
+    std::cout<<e<<std::endl;
+    std::cout<<f<<std::endl;
+}

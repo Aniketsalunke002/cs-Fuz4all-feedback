@@ -1,0 +1,7 @@
+#include <iostream>
+
+using namespace std;
+int *y = new int [10];
+for (int i = 0; i < 10*sizeof(int); i++) {
+  cout <<  y[i] << endl;
+}

@@ -1,0 +1,73 @@
+#include <iostream>
+
+#include <ostream>
+#include <vector>
+#include <set>
+#include <algorithm>
+#include <stdint.h>
+class Mutant;
+std::set<Mutant *> Mutants;
+class Human;
+std::set<Human*> Humans;
+class Mutant: public Human
+{
+public:
+	Mutant() {
+		Mutants.insert(this);
+	}
+	double calcFitness(uint64_t seed) {
+		fitness += rand() % seed + rand() % seed;
+		return fitness;
+	}
+	double getFitness() {
+		return fitness;
+	}
+	bool operator<(const Mutant &other) {
+		return fitness < other.fitness;
+	}
+};
+class Human {
+protected:
+	double fitness = 0;
+	double fame = 0;
+public:
+	Human() {
+		Humans.insert(this);
+	}
+	void reset() {
+		fitness = 0;
+		fame = 0;
+	}
+	virtual double calcFitness(uint64_t seed) {  }
+};
+class Individual
+{
+	Human* mutant;
+public:
+	Human* getMutant() { return mutant; }
+	friend std::ostream& operator<<(std::ostream& cout, const Individual& ind)
+	{
+		cout << *ind.mutant;
+		return cout;
+	}
+	bool operator<(const Individual& other)
+	{
+		return *mutant < *other.mutant;
+	}
+	bool operator>(const Individual& other)
+	{
+		return *mutant > *other.mutant;
+	}
+};
+int main()
+{
+	uint64_t seed = 9946897062131;
+	std::vector<Individual> mutants;
+	for (auto i : Mutants) {
+		mutants.push_back({i});
+		//mutants.push_back({i->getMutant()});
+		i->reset();
+		i->calcFitness(seed);
+	}
+	sort(mutants.begin(), mutants.end());	
+	for (int i = 0; i < mutants

@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	const int arrSize = 5;
+	int foo[arrSize];
+	foo[12] = 3;  
+	int* bar = foo + 11;
+	int ** baz = &bar;
+	int* bas = *(baz + 5);  
+	return 0;
+}

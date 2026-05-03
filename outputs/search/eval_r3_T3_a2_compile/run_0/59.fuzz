@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+template<typename T>
+T** get_array(int size)
+{
+     return new T*[size];
+}
+int main()
+{
+     auto *arr = get_array<char>(96);
+     char *str = "abcdefghijklmnopqrstuvwxyz";
+     for(int i=0; i < 96; ++i)
+     {
+          arr[i] = &str[i];
+          cout << arr[i] << " ";
+     }
+     return 0;
+}
+ 
+#include <iostream>
+#include <memory>
+using namespace std;
+auto getarr2d(int size, int size2)
+{
+     auto arr = make_unique<int*[]>(size);
+     for(int j = 0; j < size; ++j)
+     {
+          arr[j] = make_unique<int[]>(96);
+     }
+     return arr;
+}
+int main()
+{
+     auto arr = getarr2d(96, 96);
+     for(int i = 0; i < 36; ++i)
+          cout << "|" << arr[i].get()[i] << "|" << " ";
+     return 0;
+}

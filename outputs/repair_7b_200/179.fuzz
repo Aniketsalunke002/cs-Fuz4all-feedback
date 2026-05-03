@@ -1,0 +1,20 @@
+#include <iostream>
+auto y = [] {
+  static auto x = 0;
+  x += 2;
+  return [x]() mutable { return x; };
+};
+int main() { std::cout << y()(); }
+ 
+#include <iostream>
+auto y = [] {
+  static auto x = [] { return 0; };
+  return x;
+};
+int main() { std::cout << y()(); }
+ 
+#include <iostream>
+int modify(auto& v) {
+  if (v == 0) return 1;
+  return 0;
+}

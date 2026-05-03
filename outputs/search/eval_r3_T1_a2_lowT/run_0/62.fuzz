@@ -1,0 +1,117 @@
+#include <iostream>
+
+ 
+
+int x = 0x42;
+
+int main() {
+    std::cout << std::hex << x;
+    x = 0x43; 
+    std::cout << std::endl;
+}
+
+ 
+template <typename... Args>
+struct TypePack;
+template <typename Arg0>
+struct TypePack<Arg0> {
+    using first = Arg0;
+    using rest = TypePack<>;
+};
+template <typename Arg0, typename... Args>
+struct TypePack<Arg0, Args...> {
+    using first = Arg0;
+    using rest = TypePack<Args...>;
+};
+
+TypePack<int, double, long> myPack;
+using First = std::tuple_element_t<0, decltype(myPack)>;
+constexpr bool is_integer = std::is_integral_v<First>;  
+const First* myPtr = std::get_if<First>(&myPack);  
+
+ 
+template<typename T>
+void no_side_effects(const T &value)
+{
+     
+}
+
+ 
+template <typename Elem>
+struct List {
+    Elem value;
+    std::unique_ptr<List> prev;
+};
+
+template <typename T>
+std::unique_ptr<List<T>> make_list(T new_value)
+{
+    return std::make_unique<List<T>>(std::move(new_value));
+}
+
+template <typename T>
+std::unique_ptr<List<T>> push(std::unique_ptr<List<T>> head, T new_value)
+{
+    if (!head) head = make_list(std::move(new_value));
+    else       head = make_list(std::move(new_value), std::move(head));
+    
+    return head;
+}
+
+template <typename T>
+void do_it(const T &elem)
+{
+     
+    std::cout << elem << std::endl;
+    
+    const auto next_head = push(std::move(head->prev), 1);
+    head->prev.swap(next_head);
+
+    head = push(std::move(head->prev), 2);
+}
+
+template <typename T0, typename T1, typename... Ts>
+void do_it(const T0 &elem0, const T1 &elem1, const Ts &... elems)
+{
+    (void) elem1;
+    do_it(std::move(elem0), std::move(elems)...);  
+}
+
+std::unique_ptr<List<int>> head = make_list(3);
+
+void foo()
+{
+    do_it(4, 5, make_list(10), make_list(2));
+}
+
+ 
+ 
+
+ 
+template <typename T>
+void f1(const T &elem) {};
+
+template class f1<int>;
+
+std::function<void(int)> f2 =
+    [](const int &elem) {
+        std::cout << elem << std::endl;
+    };
+
+ 
+
+template <typename T>
+void g(T x);
+
+void h1(int x) {}
+void h2(const char *x) {}
+
+template <>
+void g(int x) {
+    h1(x);
+}
+
+template <>
+void g(const char *cs) {
+    h2(cs);
+}

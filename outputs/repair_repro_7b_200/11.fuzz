@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main() {
+  double a, b;
+  cin >> a >> b;
+  if ((b / 180) * M_PI >= sin(a / 180) * M_PI) cout << 0.0 << endl;
+  else cout << 180 - (a - a) * sin((b / 180) * M_PI) / ((b / 180) * M_PI) << endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <algorithm>
+#include <tuple>
+#include <utility> 
+
+using namespace std;
+
+bool bigger(const pair<int, int> &p1,const pair<int, int> &p2) {
+  return p1.first > p2.first;
+}
+int main() {
+  for (auto x : readNumberVector<int>()) {
+    vector<pair<int, int> > v;
+    for (auto i : readNumberVector<int>()) {
+      v.push_back(make_pair(x, i));
+    }
+    sort(v.begin(),v.end(),bigger);
+    for (auto it : v) {
+      cout << it.second << " ";
+    }
+    cout << endl;
+  }
+  return 1;
+}

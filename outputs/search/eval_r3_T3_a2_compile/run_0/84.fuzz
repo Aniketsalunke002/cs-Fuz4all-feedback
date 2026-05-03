@@ -1,0 +1,17 @@
+#include <iostream>
+void f(int a) { a++; }
+template<typename T>
+int f(T &x) { return x++; }  
+int main()
+{
+  int a(1776);
+  int & b(a);
+  auto c = f(b);  
+  std::cout << a << c << " ";
+  b++; c = f(b);
+  std::cout << a << c<< " "<< b << std::endl;
+  
+  auto d = f(42);
+  std::cout << d <<  std::endl;
+  return 0;
+}

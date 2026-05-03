@@ -1,0 +1,73 @@
+#include <iostream>
+int main() {
+	int mut=0;
+	std::cout << "Press ENTER to start, any other key to quit.";
+	switch(std::cin.peek()) {
+	case '\n':
+		break;
+	case 'Q':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\x1b':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\t':
+		std::cin.get();
+	case '\b':
+	default:
+		std::cout << "Invalid input." << std::endl;
+		break;
+	}
+	for(;;){
+		int counter=0;
+		std::cout << "enter a block mutant: ";
+		std::cout << "-- " << std::flush;
+		std::cin >> mut;
+		while( (mut>1)&&(mut%2==0) ){
+			std::cout << "-- " << std::flush;
+			std::cin >> mut;
+		}
+		std::cout << std::endl;
+		mut^=1;
+		while(true){
+			if( ((counter>>1)&1)==1 ) {
+				std::cout  << mut << std::flush;
+			} else {
+				std::cout << " " << std::flush;
+			}
+			if(mut>0) {
+				std::cout << mut << " " << std::flush;
+				mut>>=1;
+				++counter;
+			} else {
+				std::cout << "-1 " << std::flush;
+				break;
+			}
+		}
+		std::cin.get();
+		std::cout << std::endl;
+		std::cout << mut << std::endl;
+		if(mut==-1) {
+			std::cout << "Game over." << std::endl;
+			return 0;
+		}
+		std::cout << "Press [ENTER] to play again or any other key to quit. " << std::flush;
+		switch(std::cin.peek()){
+		case '\n':
+			break;
+		case 'Q':
+			std::cout << "Exiting..." << std::endl;
+			return 0;
+		case '\x1b':
+			std::cout << "Exiting..." << std::endl;
+			return 0;
+		case '\t':
+			std::cin.get();
+		case '\b':
+		default:
+			std::cout << "Invalid input... restarting game..." << std::endl;
+			break;
+		}
+	}
+}
+/* Please create a program which does the above

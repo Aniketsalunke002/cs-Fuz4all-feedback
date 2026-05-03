@@ -1,0 +1,17 @@
+#include <iostream>
+struct A {};
+
+class B {
+public:
+    int a{0};
+};
+
+using C = B;
+
+int main(int argc, char *argv[]) {
+    A a;
+    B b;
+    C c;
+    std::cout << a << std::endl;
+}
+ 

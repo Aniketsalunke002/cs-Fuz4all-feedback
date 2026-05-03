@@ -1,0 +1,29 @@
+#include <iostream>
+int main(int a) {
+	a=10;
+ main(a);
+ return 0;
+}
+ 
+#include <iostream>
+
+class calculator {
+public: int addition(int a,int b);
+};
+
+int calculator :: addition(int a,int b) {
+	return a+b;
+}
+ 
+#include <iostream>
+class calculator {
+public: int addition(int a,int b);int subtraction(int a,int b)
+};
+int calculator :: addition(int a,int b) {
+	return a+b;
+}
+int calculator :: subtraction(int a,int b) {
+	return a-b;
+}
+ 
+

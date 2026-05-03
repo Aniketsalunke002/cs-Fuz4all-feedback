@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+  int a;
+  cout << "enter first int: \n";
+  cin >> a;
+  a = a << 2;
+  cout << "First int: " << a << endl;   
+  char c;
+  cout << "Enter char: \n";
+  cin >> c;
+  c = c << 5;
+  cout << "char * char: " << c << endl;
+  float d;
+  cout << "Enter int: \n";
+  cin >> d;
+  d = d << 4;

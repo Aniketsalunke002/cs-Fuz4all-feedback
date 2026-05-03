@@ -1,0 +1,13 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+ vector<int> myvector;
+ int n, i = 0;
+ cout << "How many integers do you want to input for this vector? : ";
+ cin >> n;
+ for( i = 1; i <= n; ){
+       cin >> myvector[i];
+       ++i;
+     }
+     cout << "You entered " <<

@@ -1,0 +1,44 @@
+#include <iostream>
+    using namespace std;
+    int main() {
+        string name [] = {"Fred","Georgie","Perry"};
+        switch (0) {
+            case 0:
+                cout << name[0] <<"\n";
+                cout << name[1] <<"\n";
+                cout << name[2];
+                name[1] = "Harry";
+                name[2] = "Bob";
+                cout << "\n Fred is ";
+                cout << name[0] <<".\n Georgie is ";
+                cout << name[1] <<".\n Perry is ";
+                cout << name[2];
+                break;
+            case 1:
+                cout << name[2] <<"\n";
+                cout << name[0] <<"\n";
+                cout << name[1];
+                name[1] = "Harry";
+                name[2] = "Bob";
+                cout << "\n Fred is ";
+                cout << name[0] <<".\n Georgie is ";
+                cout << name[1] <<".\n Perry is ";
+                cout << name[2];
+                break;
+            case 2:
+                cout << name[1] +"\n";
+                cout << name[0] +"\n";
+                cout << name[2];
+                name[1] = "Harry";
+                name[2] = "Bob";
+                cout << "\n Fred is ";
+                cout << name[0] <<".\n Georgie is ";
+                cout << name[1] <<".\n Perry is ";
+                cout << name[2];
+                break;
+            default:
+                cout << "The default!";
+                break;
+        }
+        return 0;
+    }

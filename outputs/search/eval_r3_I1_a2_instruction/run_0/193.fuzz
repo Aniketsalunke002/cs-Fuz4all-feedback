@@ -1,0 +1,79 @@
+#include <iostream>
+#include <utility>
+#include <vector>
+void f() { }
+int main(int argc, char *argv[])
+{
+  std::cout << "a";
+  try {
+    int a = std::stoi(argv[1]);
+    std::vector<int> vec(a);
+    std::ostream_iterator<int, char> outit(std::cout, " ");
+    std::copy(vec.cbegin(), vec.cend(), outit);
+    std::cout << std::endl;
+  }
+  catch(std::exception &e)
+  {
+    std::cout << e.what() << std::endl;
+  }
+  return 0;
+}
+class C13
+{
+public:
+C13(const C13 &);
+C13()
+{ }
+};
+class C14
+{
+public:
+C14(C14 &&);
+C14();
+};
+class C15
+{
+public:
+  C15(const C15 &);
+C15();
+};
+ 
+ 
+class C16
+{
+public:
+std::string s;
+C16 operator+(const C16 &);
+};
+void f() { }
+class C17
+{
+public:
+int &GetNumber_a();
+int GetNumber_b();
+};
+struct C18_1
+{
+public:
+int &GetNumber_a();
+int GetNumber_b();
+};
+struct C18_2
+{
+public:
+C18_2 &operator =(C18_2 &&);
+C18_2();
+};
+class C18
+{
+public:
+char &GetNumber_a();
+char GetNumber_b();
+};
+class C19
+{
+public:
+C19();
+void Reset();
+};
+int main(void) { return 0; };

@@ -1,0 +1,39 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+    int i = 0;
+    int j = 1;
+    while (i < argc) {
+      cout << "The number at place " << i << " is " << argv[i] << endl;
+      i++;
+    }
+    return 0;
+  }
+%%script bash
+g++ -c a.c
+g++ -c a2.c
+g++ -c b.c
+g++ -c x.o
+g++ -c y.o
+g++ -c z.o
+g++ -Wall a.o b.o c.o
+rm *.o
+
+%%script c
+g++ -c a.c
+g++ -c a2.cc
+g++ -c b.c
+g++ -c x.c
+g++ -c y.c
+g++ -c z.c
+g++ -o temp-no-std -Wall a.o b.o c.o
+./temp-no-std a.c a2 b.c x y z
+
+g++ -std=c++11 -c a.cc
+g++ -std=c++11 -c a2.cc
+g++ -std=c++11 -c b.cc
+g++ -std=c++11 -c x.cc
+g++ -std=c++11 -c y.cc
+g++ -std=c++11 -c z.cc
+g++ -std=c++11 -Wall a.o b.o c.o
+rm *.o

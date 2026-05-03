@@ -1,0 +1,65 @@
+#include <iostream>
+int main(int argc, char* argv[])
+{
+    short n_bytes, i1, i2;
+    short* x1, *x2;
+    std::cout << "sizeof(x1)=" << sizeof(x1) << std::endl;
+    x1 = (short*) malloc((n_bytes)*sizeof(short));
+    for (i1=0; i1<n_bytes; i1++)
+    {
+        x1[i1] = i1;
+    }
+    std::cout << "sizeof(x1)=" << sizeof(x1) << std::endl;
+    std::cin >> i1;
+    x2 = (short*) realloc(x1, ((38)*sizeof(short))*sizeof(short));
+    if (x2 == nullptr)
+        std::cout << "Alloc failed!!" << std::endl;
+    std::cout << "sizeof(x2)==" << sizeof(x2) << std::endl;
+    free(x2);
+    std::cout << "sizeof(x2)=" << sizeof(x2) << std::endl;
+    std::cout << "Done" << std::endl;
+    return 0;
+}
+ 
+#include <stdio.h>
+#include <memory.h>
+#include <stdlib.h>
+#define BUFSIZE 100
+char *string;
+void truncateString(char *str);
+void setString(char *val);
+void displayString(void);
+void sortString(void);
+int main(int argc, char* argv[]){
+    setString("");
+    while(scanf("%s",string))
+    {
+        truncateString(string);
+        sortString();
+        displayString();
+    }
+}
+void setString(char *val){
+    if(val==NULL){
+        return;
+    }
+    int len=strlen(val);
+    int size=(2*len+1);
+    string=(char *)malloc(size);
+    string=strtok(val," ");
+}
+void truncateString(char *str){
+    while(*str!='\0')
+    {
+        *str++;
+    }
+    *str='\0';
+}
+void sortString(void){
+    char buffer[BUFSIZE];
+    strcpy(buffer,string);
+    strcpy(string,strtok(buffer," "));
+}
+void displayString(void){
+    printf("%s\n",string);
+}

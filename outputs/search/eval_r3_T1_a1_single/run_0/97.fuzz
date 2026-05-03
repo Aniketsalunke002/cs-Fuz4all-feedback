@@ -1,0 +1,11 @@
+#include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    int & r = a;
+    r=333;
+    std::cout << "the value of the integer is now " << a << std::endl;
+    return 0;
+}
+ 

@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  cout << 3%2;
+  cout << 2%2;
+  return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+typedef int MyInt;
+int main()
+{
+  cout << 10 << endl;
+  cout << 20 << endl;
+  cout << 30 << endl;
+  MyInt nums [] = {1,2,3,4,5,6,7,8,9,10};
+  for(auto value : nums)
+      cout << value << " ";
+  return 0;
+}

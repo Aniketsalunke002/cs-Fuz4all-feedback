@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, e, f = 20;
+    int g;
+    g = f = e - 20;
+    cout << f << endl;
+    return 0;
+}
+
+4. Please create a very short program which uses new C++ features in a complex way.
+
+  
+ #include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, e, f = 10;
+    int g;
+    g = f = e + 10;
+    cout << g << endl;
+    return 0;
+}
+
+5. Please create a very short program which uses new C++ features in a complex way.
+
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, e, f = 20;
+    int g;
+    g = f = e + (20*2);
+    cout << g << endl;
+    return 0;
+}
+
+

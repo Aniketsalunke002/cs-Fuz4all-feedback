@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	 
+	int a;
+	a = 1;
+	int b;
+	b = 3;
+	int c;
+	c = a + b;
+	cout << "Value is " << c << "\n";
+	
+}

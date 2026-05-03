@@ -1,0 +1,32 @@
+#include <iostream>
+int main() {
+  int a,b,c,d,e,f;
+  std::cin>>a>>b>>c>>d;
+  std::cout<<b*f-a*d<<std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <cstdlib>
+int main() {
+  int a,b,c,d,e,f;
+  int num = std::rand()%100 ;
+  std::cin>>a>>b>>c>>d;
+  if( num%2==0 ) { std::cout<<b*f-a*d<<std::endl;}
+  else std::cout<<c*d-b*f<<std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+extern bool change;
+int main() {
+  int a,b,c,d,e,f;
+  int num = std::rand()%100 ;
+  std::cin>>a>>b>>c>>d;
+  if( num%2==0 ) { std::cout<<b*f-a*d<<std::endl; }
+  else {
+    std::cout<<c*d-b*f<<std::endl;
+    if( change ) { exit(EXIT_SUCCESS);}
+  }
+  return 0;
+}

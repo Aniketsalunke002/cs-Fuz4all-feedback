@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+void greetUser(string firstName, string lastName){
+ string greeting = "Hi" + endl + firstName + " " + lastName + endl;
+ cout << greeting;
+}
+int main(){
+ string fName = "Karan";
+ string lName = "Patel";
+ string cName = "Dinesh";
+ greetUser(fName, lName);
+}
+ 
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int v1[] = {1, 2, 3, 4, 5};
+    int v2[] = {6, 7, 8, 9, 10};
+    int r = 0;
+     
+    for (int i = 0; i < 5; i++)
+        r += v1[i] * v2[i];
+    cout << "The dot product of two vectors is : ";
+    cout << r;
+ 
+    return 0;
+}

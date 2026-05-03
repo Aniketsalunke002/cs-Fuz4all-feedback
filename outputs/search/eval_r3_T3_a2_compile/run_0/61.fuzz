@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+class Foo
+{
+     public: 
+     char *str;
+     Foo(char *str){
+          this->str = str;
+     }
+     ~Foo(){
+          cout << "destroy Foo" << endl;
+     }
+     char * get_str()
+     {
+          return str;
+     }
+};
+Foo get_foo()
+{
+     static char str[] = "abcdefghijklmnopqrstuvwxyz";
+     return Foo(str);
+}
+int main()
+{
+     Foo foo = get_foo();
+      
+     return 0;
+}
+```
+
+> Output
+
+```bash
+/Users/brianspierce/project/c-lang/learn_cxx/lab1/lab1-4 - std::get_array
+/Users/brianspierce/project/c-lang/learn_cxx/lab1/lab1-4 - static object
+/Users/brianspierce/project/c-lang/learn_cxx/lab1/lab1-4 - construct_with_nullptr
+/Users/brianspierce/project/c-lang/learn_cxx/lab1/lab1-4 - class
+/Users/brianspierce/project/c-lang/learn_cxx/lab1/lab1-4 - no auto
+/Users/brianspierce/project/c-lang/learn_cxx/lab1/lab1-4 - no explicit
+std::cout << arr[i] << " ";
+/Users/brianspierce/project/c-lang/learn_cxx/lab1/lab1-4
+destroy Foo
+```

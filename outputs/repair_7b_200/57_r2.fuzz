@@ -1,0 +1,13 @@
+#include <iostream>
+
+template <typename T> struct A{
+    int value = 123;
+    T operator+(T t){
+        t += value;
+        value = value - 1;
+    }
+    operator int(){
+        return value;
+    }
+};
+int main() {

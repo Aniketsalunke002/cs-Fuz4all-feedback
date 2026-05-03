@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <memory>
+#include <array>
+using namespace std;
+int main()
+{
+    int i = 5;
+    cout << sizeof(array<int, 2>) << endl;
+    array<int, 2> one = {++i, --i};
+    cout << sizeof(one) << ";  contents: " << one[1] << endl;
+    cout << one[1] << endl;
+    cout << "Size of unique_ptr:  " << sizeof(unique_ptr<int>) << endl;
+    unique_ptr<int> two = make_unique<int>(100);
+    cout << two << endl;
+    cout << "Size of shared_ptr:  " << sizeof(shared_ptr<int>) << endl;
+    shared_ptr<int> three = make_shared<int>(200);
+    cout << three << endl;
+    cout << "Size of atomic:  " << sizeof(atomic<int>) << endl;
+    atomic<int> four = { 300 };
+    cout << four << endl;
+
+    return 0;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     int j = 0;
+//     while(

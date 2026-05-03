@@ -1,0 +1,48 @@
+#include <iostream>
+
+
+template<typename t>
+class Node
+{
+public:
+	Node(t a = 0, Node* n = 0) : element(a), next(n) { }
+	t element;
+	Node<t> * next;
+};
+template<typename t>
+class CLinkedList
+{
+public:
+	CLinkedList(): head_(new Node<t>()) { }
+
+	void append(t a);
+
+	void display();
+
+private:
+	Node<t>* head_;
+};
+
+template<typename t>
+void CLinkedList<t>::append(t a)
+{
+	for (Node<t> * node = head_; node; node = node->next)
+	{
+		
+	}
+}
+
+template<typename t>
+void CLinkedList<t>::display()
+{
+
+}
+
+int main()
+{
+	CLinkedList<int> l;
+	l.append(5);
+	l.display();
+	system("pause");
+	return 0;
+}

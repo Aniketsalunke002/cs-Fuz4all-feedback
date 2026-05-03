@@ -1,0 +1,19 @@
+#include <iostream>
+class Object
+{
+public:
+    virtual ~Object() = default;
+    virtual void someLogic() = 0;
+};
+class Number1 : public Object
+{
+public:
+    void someLogic() override
+    {}
+};
+class Number2 : public Object
+{
+public:
+    void someLogic() override
+    {}
+};

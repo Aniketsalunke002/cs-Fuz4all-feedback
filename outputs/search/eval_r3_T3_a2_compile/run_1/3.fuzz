@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+template <class F, class G, class H> void swap(F a, G b) 
+{
+    if (a == b) return;
+    H tmp = b;
+    b = a;
+    a = tmp;
+}
+
+int main()
+{
+    int a = 0, b = 1;
+    cout << "Before: " << "a = " << a << "; b = " << b << endl;
+    swap(a, b);
+    cout << "After: " << "a = " << a << "; b = " << b << endl;
+
+    double first = 3.4, second = 100.24;
+    cout << "Before: " << "first = " << first << "; second = " << second << endl;
+    swap(first, second);
+    cout << "After: " << "first = " << first << "; second = " << second << endl;
+
+    float three = 2.8, four = 0.389;
+    cout << "Before: " << "three = " << three << "; four = " << four << endl;
+    swap(three, four);
+    cout << "After: " << "three = " << three << "; four = " << four << endl;
+    return 0;
+}
+

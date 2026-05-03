@@ -1,0 +1,22 @@
+#include <iostream>
+using std::cin; 
+using std::cout;
+#include <string>
+#include <memory>
+using std::unique_ptr;
+using std::make_unique;
+using std::move;
+int main() {
+    long price;
+    int qty;
+    std::string itemName;
+    cin >> price>>qty>>itemName;
+    unique_ptr<Person> p = make_unique<Person>();
+    cout << "Name:" << p->getName() << '\n'
+         << "Age:" << p->getAge(p->Age) << '\n';
+    unique_ptr<SalesData> ps = make_unique<SalesData>(price,qty,itemName);
+    cout << "ItemName: " << (*ps).itemName << '\n'
+        << "ItemPrice: " << (*ps).itemPrice << '\n'
+        << "numItems: " << (*ps).numItems << '\n';
+        return 0;
+}

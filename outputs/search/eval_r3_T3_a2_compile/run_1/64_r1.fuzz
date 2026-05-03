@@ -1,0 +1,18 @@
+#include <iostream>
+
+#include <string>
+#include <iterator>
+
+int main()
+{
+	std::string str = "A string";  
+	str[0] = 'b';
+	str.resize(10);
+	std::copy(str.cbegin(), str.cend(), std::ostream_iterator<char>(std::cout));
+	std::cout << std::endl;
+	str.clear();
+	str += "A string";
+	std::copy(str.cbegin(), str.cend(), std::ostream_iterator<char>(std::cout));  
+	
+	return 0;
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+int main() {
+	int mut_var=1;
+	do {
+		if (mut_var==2) {
+			++mut_var;
+		} else {
+			std::string s;
+			std::cin >> s;
+			if (!std::cin) {
+				std::cerr << "Got error: '" << std::cin.rdstate() << "'!\n";
+				break;
+			} else {
+				if (s=="1") {
+					++mut_var;
+				}
+				if (s!="0") {
+					mut_var = atoi(s.c_str());
+				}
+			}
+		}
+		printf("mut_var=%d\n", mut_var);
+	} while (mut_var!= 0);
+	return 0;
+}
+ 

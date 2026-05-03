@@ -1,0 +1,22 @@
+#include <iostream>
+int getint();
+int main(int argc, char **argv) {
+  int elements = 3;
+  for (;;) {
+    static int elements = -1;
+    int old = elements;
+    if (elements < 0) elements = 0;
+    if (elements > 0)
+      elements += getint();
+    else 
+      elements = 0;
+    std::cout << old << " -> " << elements << " (" << getint() << ")\n";
+    std::cout << elements << "\n";
+    if (elements == old) {
+      std::cout << "Last call of edit: " << elements << "\n";
+      break;
+    }
+    if (elements == 1) elements = -2;
+  }
+  return 0;
+}

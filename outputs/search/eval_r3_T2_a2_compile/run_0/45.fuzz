@@ -1,0 +1,42 @@
+#include <iostream>
+int main(int argc, char** argv)
+{
+	int a, b, c;
+	int b_divided_by_c = 0;
+	std::cin >> a >> b >> c;
+	if (a == c)
+	{
+		if (b % c > 0 && b / c % a == 0 && b / c < c)
+			b_divided_by_c = b/c;
+		else
+		{
+			b_divided_by_c = -1;
+		}
+
+		std::cout << b_divided_by_c;
+	}
+	else
+		std::cout << "NO";
+
+	 
+	 
+	 
+		 
+	 
+		 
+
+	 
+	 
+	 
+	 
+	 
+		 
+
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+}

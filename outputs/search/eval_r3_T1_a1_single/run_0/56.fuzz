@@ -1,0 +1,50 @@
+#include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world from new line!";
+}
+int main() {
+  std::cout.put('\n');
+  std::cout << print;
+}
+ 
+#include <iostream>
+#include <vector>
+
+int main()
+{
+    int number = 0;
+    std::cin >> number;
+
+    std::vector<int> numbers;
+    int numbersCount = 0;
+    for (int i = 0; i <= number; i++)
+    {
+        numbers.push_back(i);
+        numbersCount = numbers.size();
+    }
+
+    int minValue = numbers[0], temp = 0;
+    for (int i = 0; i <= numbersCount; i++)
+    {
+        minValue = numbers[i];
+        for (int j = 0; j < i; j++)
+        {
+            if (minValue > numbers[j])
+            {
+                minValue = numbers[j];
+            }
+        }
+        if (temp!= minValue)
+        {
+            numbers[i] = numbers[numbers.size() - 1];
+        }
+        numbers.pop_back();
+        temp = minValue;
+    }
+
+    for (int i = 0; i < numbersCount; i++)
+    {
+        std::cout << numbers[i] << " ";
+    }
+    return 0;
+}

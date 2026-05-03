@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int onePlusOne() {
+  return 1+1;
+}
+int main() {
+  cout<<3<<endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int onePlusOne(int a[]) {
+  int ans=0;
+  int i;
+  for(i=0;i<10;i++)
+  ans = ans + a[i];
+  return ans;
+}
+int main() {
+  int array[10];
+  int i;
+  for(i=0;i<10;i++)
+  array[i]=i;
+  cout<<onePlusOne(array)<<endl;
+}

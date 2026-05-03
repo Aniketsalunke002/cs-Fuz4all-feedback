@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	int num1, num2, sum;
+	cout << "Input the First Number: ";
+	cin >> num1;
+	cout << "Input Second Numer: ";
+	cin >> num2;
+	sum = num1 + num2;
+
+	cout << "The Sum of the two numbers is: " << sum << endl;
+	cout << "Original values of both numbers " << num1 << " + " << num2 << " = " << sum - num1 << " + " << sum - num2 << endl;
+	num1 = sum - num1;
+	num2 = sum - num2;
+	cout << "After changing values, The Sum of the two numbers is: " << num1 << " + " << num2 << " = " << num1 + num2 << endl;
+	return 0;
+}

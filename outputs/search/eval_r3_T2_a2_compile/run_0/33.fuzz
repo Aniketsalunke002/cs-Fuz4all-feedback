@@ -1,0 +1,77 @@
+#include <iostream>
+using namespace std;
+
+ 
+ 
+
+ 
+
+int main(int argc, char** argv)
+{
+	int a, b;
+	int  a_sum = 0, b_sum = 0, sum_sum = 0;
+
+	ifstream fin("in.txt");
+	if(!fin) {
+		cerr << "Cannot open file" << endl;
+		return -1;
+	}
+
+	while(fin >> a >> b) {
+		a_sum += a;
+		b_sum += b;
+		sum_sum += a_sum * b_sum;
+		a_sum -= a;
+		b_sum -= b;
+    }
+	cout << "a_sum=" <<  a_sum << " b_sum=" <<  b_sum << " sum_sum=" <<  sum_sum << endl;
+	fin.close();
+
+
+	 
+	ofstream fout("output.txt");
+	if(!fout) {
+		cerr << "Cannot open file" << endl;
+		return -1;
+	}
+	fout << "result:" << sum_sum << endl;
+	fout.close();
+	return 0;
+}
+
+ 
+#include <iostream>
+using namespace std;
+class MyClass;
+typedef MyClass*  MyClass_ptr;
+class MyClass {
+	int n;
+	bool b;
+	public:
+		int GetNum() { return n; }
+		bool GetBool() { return b; }
+};
+int main(int argc, char** argv)
+{
+	MyClass a;
+	MyClass_ptr a_p;
+	MyClass* a_p2;
+	MyClass_ptr* a_pp;
+	MyClass_ptr** a_ppp;
+	a_p = new MyClass;
+	(*a_p).GetNum();
+	a_pp = new MyClass_ptr;
+	**a_pp;
+	a_ppp = new MyClass_ptr*[2];
+	**a_ppp;
+	a_ppp[0] = new MyClass_ptr;
+	**a_ppp[0];
+	(*a_ppp)[1];
+
+	(*(a_ppp->at(1)))->GetNum() << endl;
+	 
+	return 0;
+}
+
+
+ 

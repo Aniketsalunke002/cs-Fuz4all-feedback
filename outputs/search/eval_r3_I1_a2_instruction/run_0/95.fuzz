@@ -1,0 +1,11 @@
+#include <iostream>
+    using namespace std;
+    int main() {
+        string name [] = {"Fred","Georgie","Perry"};
+        string *index = name;
+        for (int i = 0; i < 3; i++) {
+            index = &( name[(i + 1) % 3]);
+            cout << *index <<"\n";
+        }
+        return 0;
+    }

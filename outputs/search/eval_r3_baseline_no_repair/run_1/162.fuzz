@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main() {
+    int a;
+    scanf("%d", &a);
+    int b = 2;
+    int x = 2;
+    int k = 2;
+    if(a < b)
+    {
+        while(x < k){}
+    }
+}

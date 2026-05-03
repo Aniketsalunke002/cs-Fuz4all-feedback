@@ -1,0 +1,29 @@
+#include <iostream>
+
+
+namespace lisp {
+class list {
+public:
+    std::nullptr_t lisp_car;
+    list* lisp_cdr;
+};
+
+list* nil = nullptr;
+list* cons(std::nullptr_t lisp_car) {
+    list* l = new list;
+    l->lisp_cdr = nullptr;
+    l->lisp_car = lisp_car;
+    return l;
+}
+
+list* cons(std::nullptr_t lisp_car, list* lisp_cdr) {
+    list* l = new list;
+    l->lisp_car = lisp_car;
+    l->lisp_cdr = lisp_cdr;
+    return l;
+}
+
+list* list::cdr() {
+    return lisp_cdr;
+}
+} // namespace lisp

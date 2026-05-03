@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+using namespace std;
+ 
+int main(int argc,char* argv[]){
+int value;
+cout << "Please enter a number: " <<endl;
+cin>>value;
+int a = value +3;
+cout <<"You number is: "<<a<<endl;   
+return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+ 
+int main(char* argv[]) {
+    cout << "Hello from hello: "<< argv[0] << endl;
+    cout << "Hello from world: "<< argv[1] << endl;   
+    return 0;
+}

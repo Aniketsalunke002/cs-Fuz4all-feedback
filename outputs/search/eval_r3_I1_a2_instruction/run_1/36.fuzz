@@ -1,0 +1,16 @@
+#include <iostream>
+int foo (int){return 0;}
+int main ()
+{
+	int a=5,b[10];
+	std::cin>>a;
+	return 0;
+}
+ 
+#include<iostream>
+int foo(int){return 0;}
+int main(){
+	int a=5,b[10];
+	std::cin>>a;
+	return 0;
+}

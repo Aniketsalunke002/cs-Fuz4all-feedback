@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+int count = 0;
+class test{
+	public:
+	test(){
+		count--;
+	}
+	void print(string str){
+		cout << "print() called: " << str << endl;
+	}
+	int var = 10;
+	test(int num) {
+		num++;
+
+	}
+} t;
+int main() {
+	//t.print("This is another test output.");
+	 return 0;
+}

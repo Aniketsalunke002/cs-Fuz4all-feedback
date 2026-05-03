@@ -1,0 +1,8 @@
+#include <iostream>
+namespace {
+  int f;
+}
+int main(){
+  std::cout<<1/2.0+f<<std::endl;
+  return 0;
+}

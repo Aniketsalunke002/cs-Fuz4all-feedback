@@ -1,0 +1,14 @@
+#include <iostream>
+
+struct A 
+{
+  A()
+  {
+  }
+};
+A test[2] = { new A, new A };
+int main(int argc, char* argv[])
+{
+  std::cout << "done" << std::endl;
+  return 0;
+}

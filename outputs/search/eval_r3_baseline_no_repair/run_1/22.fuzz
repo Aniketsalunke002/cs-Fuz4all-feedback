@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	struct Test
+	{
+		int x;
+		int y;
+	};
+	Test a;
+	a.x = 20;
+	a.y = 30;
+	return 0;
+}

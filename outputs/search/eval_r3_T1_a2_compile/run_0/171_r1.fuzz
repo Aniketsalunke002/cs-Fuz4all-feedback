@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int a = 4;
+    int &x = a;
+    int b = x;
+    x = 4;  
+    x = 5;  
+    cout << "The value of x is " << x << endl;
+    cout << "The value of b is " << b << endl;
+    cout << "The final value of x is " << ++x << endl;
+    ++b ;  
+    cout << "The value of b is " << b << endl;
+    x = ++x + 4;  
+    return 0;
+}
+// In the above code, the last two lines are modified from the original code.
+// Now, the above code can be compiled successfully.
+// </details>
+//
+// <details>
+// <summary>
+//
+// ## Exercise 4
+//
+// What will be the output of the below code?
+//
+//

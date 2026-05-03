@@ -1,0 +1,11 @@
+#include <iostream>
+class X
+{ 
+  public:
+    constexpr static int x = 10; 
+};
+constexpr int X::x;
+int main()
+{ 
+ std::cout << X::x << '\n'; 
+}

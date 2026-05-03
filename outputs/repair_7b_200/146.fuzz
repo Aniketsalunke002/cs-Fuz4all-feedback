@@ -1,0 +1,29 @@
+#include <iostream>
+class MyClass{
+public:
+    MyClass(){}
+    virtual void printMyName(){}
+    virtual void printYourName(){}
+};
+int main()
+{
+    MyClass x;
+    x.printMyName();
+    x.printYourName();
+}
+ 
+#include <iostream>
+class MyClass{
+public:
+    bool x;
+    MyClass() throw(std::bad_alloc){x = true;}
+    void printMyName()const{throw std::range_error("Bad error from printMyName!!!");}
+    void printYourName()const{}
+};
+int main()
+{
+    MyClass x;
+    try
+    {x.printMyName();}
+    catch(const std::exception& exc)
+   

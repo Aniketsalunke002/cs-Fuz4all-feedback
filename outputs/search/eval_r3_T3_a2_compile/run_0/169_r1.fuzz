@@ -1,0 +1,28 @@
+#include <iostream>
+
+#include <random>
+#include <thread>
+#include <tuple>
+    
+using namespace std;
+template <class T>
+struct Mutateable {
+  T value;
+};
+
+int main() {
+  Mutateable<int> mut;
+  mut.value = 42;
+  thread t( [] { mut.value = 43; });
+  auto& gen = random_device {}();
+  mt19937 g{gen()};
+
+  uniform_int_distribution<int> d(-1000, 1000);
+  t.join();
+    
+  if(d(g) > 0)
+    cout << mut.value << endl;
+  else
+    cout << -mut.value << endl;
+  return 0;
+}

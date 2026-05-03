@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+const double PI = 3.141592;
+int main()
+{
+	cout<<"Hello, World! My new and improved program is even more awesome then the first one.\n";
+	cout<<PI<<'\t'<<2*PI<<endl<<1/PI<<endl; 
+	return 0;
+} 

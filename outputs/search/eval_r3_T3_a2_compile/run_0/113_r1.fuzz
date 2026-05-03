@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+template <typename T>
+struct A
+{
+	T a[100];
+	T b[1000];
+	char c[8][8];
+};
+int main()
+{
+	A<int> aa;
+	A<int> ab;
+	aa.a[5] = 10;
+	ab.a[5] = 15;
+	aa = ab;
+	if (aa.a[0] == ab.a[0])
+		cout<<"same a[0]"<<endl;
+	return 0;
+}
+int a[100] = {0};
+int aa[1000]= {0};

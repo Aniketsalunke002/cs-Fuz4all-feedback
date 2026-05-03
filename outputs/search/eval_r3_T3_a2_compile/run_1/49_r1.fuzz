@@ -1,0 +1,14 @@
+#include <iostream>
+
+template<int>
+struct myClass{};
+int main()
+{
+	myClass<4> myvara;
+	myClass<3> myvarb;
+	myvarb = myvara;
+	char * ptrA = &(myvara + 1);
+	char * ptrB = &(myvarb);
+	std::cout << * (ptrB - 1) << "\n";
+	return 0;
+}

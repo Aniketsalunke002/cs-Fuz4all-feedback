@@ -1,0 +1,7 @@
+#include <iostream>
+
+int main() {
+    std::string ctest{"Hello World"};
+    std::cout << ctest << "\n";
+    return 0;
+}

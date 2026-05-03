@@ -1,0 +1,19 @@
+#include <iostream>
+void f()
+{
+    double x=15.0;
+    char c='A';
+    std::cout<<c<<' ';
+    std::cout<<x;
+    while (x<30)
+    {
+        ++x;
+        std::cout<<' ';
+    }
+    while (x>=5)
+    {
+        --x;
+        std::cout<<x;
+    }
+    std::cout<<"\n";
+}

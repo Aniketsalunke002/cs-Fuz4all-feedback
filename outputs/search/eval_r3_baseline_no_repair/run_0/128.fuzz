@@ -1,0 +1,17 @@
+#include <iostream>
+int getint();
+int main(int argc, char **argv) {
+  int elements = 3;
+  for (int ii = 0;;) {
+    static int orig = -1;
+    std::cout << elements << " -> " << getint() << " (" << orig << ")\n";
+    orig = elements;
+    elements += getint();
+    std::cout << elements << "\n";
+    if (elements == orig) {
+      std::cout << "Last call of edit: " << orig << "\n";
+      break;
+    }
+  }
+  return 0;
+}

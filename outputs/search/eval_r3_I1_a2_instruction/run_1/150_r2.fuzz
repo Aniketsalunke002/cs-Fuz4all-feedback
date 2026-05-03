@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i = 10;
+    while (i >= 1)
+    {
+        cout << 'L';
+        i-=5;
+    }
+    cout << "And once in while\n";
+    int j = 0;
+    while (j <= 5)
+    {
+        cout << 'O';
+        j++;
+    }
+    cout << '\n';
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int  main(int argc, char* argv[]){
+  int i = 1;
+  char *p;
+  while (i < argc) {
+    printf("%d", i+1);
+    p = argv[i];
+    printf(":%s\n", (i%2 == 0)?"is even":"is odd");
+  i++;
+  }
+  return 0;
+}

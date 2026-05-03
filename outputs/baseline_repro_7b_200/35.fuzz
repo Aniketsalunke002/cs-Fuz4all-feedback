@@ -1,0 +1,107 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+
+int main(void) {
+	std::function<int(int, int)> adder = [](int x, int y) -> int { return x + y; };
+	int z = adder(1, 2);
+	cout << z << "\n";
+	z += 50;
+	return 0;
+}
+ 
+#include <iostream>
+
+using std::cout;
+using std::endl;
+int main(int argc, const char* argv[]) {
+	switch (int(random() % 7)) {
+	case 0:  
+		cout << "One\n";
+		break;
+	case 1:  
+	cout << "Two\n";
+		break;
+	case 2:  
+	cout << "Three\n";
+		break;
+	case 3:  
+	cout << "Four\n";
+		break;
+	case 4:  
+	cout << "Five\n";
+		break;
+	case 5:  
+	cout << "Six\n";
+		break;
+	case 6:  
+		cout << "Seven\n";
+		break;
+	default:
+		cout << "There is no return value.\n";
+		break;
+	}
+	return 0;
+}
+ 
+ 
+#include <iomanip>
+#include <iostream>
+using std::cout;
+using std::fixed;
+int main(void) {
+	float n1(10.49);
+	float n2(100.46);
+	cout << std::setprecision(5) << n1 + n2 << "\n";
+	cout << std::setprecision(5) << n1 - n2 << "\n";
+	cout << std::setprecision(5) << n1 * n2 << "\n";
+	cout << std::setprecision(5) << n1 / n2 << "\n";
+	float n = 4 / 3;  
+	cout << std::setprecision(5) << n;
+	return 0;
+}
+ 
+#include <iostream>
+using std::cout;
+#define LENGTH 15
+#define WIDTH 10
+
+class Rectangle2D {
+	float length;
+	float width;
+	public:
+		Rectangle2D() {
+			cout << __func__ << ": Hello in default constructor\n";
+			length = LENGTH;
+			width = WIDTH;
+			return;
+		}
+		Rectangle2D(float l, float r) {
+			cout << __func__ << ": Hello in initalizer list\n";
+			length = l;
+			width = r;
+			return;
+		}
+		Rectangle2D(double l, double w) {
+			cout << __func__ << ": Hello in double initalizer list\n";
+			length = float(l);
+			width = float(w);
+			return;
+		}
+		float getLength() {
+			return length;
+		}
+		float getWidth() {
+			return width;
+		}
+		float getArea() {
+			return length * width;
+		}
+		float getPerimeter() {
+			return (length * 2) + (width * 2);
+		}
+};
+
+int main(void) {
+	Rectangle2D rect2D1;
+	cout << "Length = " << rect2D

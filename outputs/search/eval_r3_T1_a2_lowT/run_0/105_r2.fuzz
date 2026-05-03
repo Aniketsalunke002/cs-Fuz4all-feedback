@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char const *argv[])
+{
+    int y = 0;
+    for (int x = 2; x < 5; x++)
+        y += (x*x);
+    cout << "Sum of the first 4 squares is " << y << endl;
+    return 0;
+}

@@ -1,0 +1,64 @@
+#include <iostream>
+int main() {
+	int mutant_1 = 100;
+	mutant_1 = mutant_1 + 50;
+	mutant_1 = mutant_1 + 50;
+	std::cout << mutant_1;
+	return 0;
+}
+ 
+#include <iostream>
+int main() {
+	int x = 33;
+	x = x + 3;
+	std::cout << x;
+	return 0;
+}
+ 
+#include <iostream>
+int main() {
+	int x = 33;
+	if(x > 35) x = x + 3;
+	std::cout << x;
+	return 0;
+}
+ 
+#define max_val 5
+#include <iostream>
+int main() {
+	int x = 3;
+	x = x + 3;
+	if(x <= 5) x = x + rand()%5;
+	std::cout << x;
+	return 0;
+}
+ 
+#define min_val 5
+#define max_val 10
+#include <iostream>
+int main() {
+	int x = 3;
+	x = x + 3;
+	if(x <= 5) x = x + (rand()%(max_val - min_val)) + min_val;
+	std::cout << x;
+	return 0;
+}
+ 
+#define min_val 5
+#define max_val 10
+#include <iostream>
+int main() {
+	int x = 3;
+	x = x + (rand()%(max_val - min_val)) + min_val;
+	x = x + 2;
+	x = x + 3;
+	std::cout << x;
+	return 0;
+}
+ 
+#include <iostream>
+int main() {
+	int arr[15];
+	std::cout << arr;
+	return 0;
+}

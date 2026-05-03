@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a = 0;
+	cout << (a = 3)? "true" : "false" << endl;
+	while (a < 5)
+	{
+		a++;
+	}
+	return 0;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+static ::A a{};
+int main()
+{
+    return 0;
+}
+ 
+#include <iostream>
+#define F(DECL) DECL##()
+struct F { explicit F() {} };
+int main()
+{
+    F(A);
+    return 0;
+}
+
+ 
+#include <type_traits>
+#include <iostream>
+#include <limits>
+
+static constexpr bool do_it =
+   

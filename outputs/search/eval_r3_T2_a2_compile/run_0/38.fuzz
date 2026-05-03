@@ -1,0 +1,6 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << '+' << ((cout << "-")? 2 : 1) << '+' << (cout << "+"? 1 : 1) << '--+' << ((cout << "  ")? '-' : 1) << '-' << ((cout<<' ')? '+' : 1) << endl;
+}

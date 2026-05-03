@@ -1,0 +1,40 @@
+#include <iostream>
+
+#include <algorithm>
+using namespace std;
+struct Base {
+	virtual ~Base();
+	void print() const;
+	int a;
+	int b;
+};
+Base::~Base()
+{
+}
+void Base::print() const
+{
+	cout << " a = " << a << " b = " << b << endl;;
+}
+struct Mutated : public Base {
+	Mutated(int,int); 
+	void print() const;
+};
+Mutated::Mutated(int val1,int val2):Base(),a(val1),b(val2)
+{
+	cout << " constructor called with a = " << val1 << " and b = " << val2
+	    << " and c = " << b << endl;
+}
+void Mutated::print() const
+{
+	cout << "print() of Mutated class started" << endl;
+	Base::print();   // Fixed version of this line
+	cout << "print() of Mutated class ended" << endl;
+}
+int main()
+{
+	Base b;
+	b.print();
+	Mutated m(70,65);
+	m.print();
+	return 0;
+}

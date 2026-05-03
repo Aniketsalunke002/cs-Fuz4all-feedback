@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 4;
+    int &x = a;
+    int b = x;
+    x = 4;  
+    x = 5;  
+    cout << "The value of x is " << x << endl;
+    cout << "The value of b is " << b << endl;
+    cout << "The final value of x is " << ++x << endl;
+    ++b ;  
+    cout << "The value of b is " << b << endl;
+    x = ++x + 4;  
+    return 0;
+}
+```
+<a name="exercise3"></a>

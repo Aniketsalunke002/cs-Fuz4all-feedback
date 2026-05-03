@@ -1,0 +1,8 @@
+#include <iostream>
+
+std::string output = "Hello World";
+void hello() {
+  std::ofstream outfile;
+  outfile.open("hello.txt");
+  outfile << "Hello new world!" << std::endl;
+}

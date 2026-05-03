@@ -1,0 +1,9 @@
+#include <iostream>
+template <typename T>
+class A
+{
+};
+int main(void) {
+ A<double> a;
+ return 0;
+}

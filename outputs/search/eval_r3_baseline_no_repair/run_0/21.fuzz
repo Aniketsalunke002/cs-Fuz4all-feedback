@@ -1,0 +1,18 @@
+#include <iostream>
+int main(int argc, char* argv[])
+{
+    short n_bytes, i1;
+    short* x1;
+    std::cin >> n_bytes;
+    x1 = (short*)new short[n_bytes];
+    while (n_bytes>0)
+    {
+        n_bytes --;
+        x1[n_bytes]=n_bytes;
+    }
+    x1[n_bytes]=i1;
+    delete [] x1;
+    i1=n_bytes;
+    std::cout << "Done" << std::endl;
+    return 0;
+}

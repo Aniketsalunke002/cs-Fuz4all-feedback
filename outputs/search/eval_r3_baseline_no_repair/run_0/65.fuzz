@@ -1,0 +1,16 @@
+#include <iostream>
+void foo(char *str)
+{
+    str[0]=*str = '0';
+    str[1]=*str = '1';
+    str[2]=*str = '2';
+    str[3]=*str = '3';
+    str[4]=*str = '4';
+    str[5]=*str = '5';
+}
+int main()
+{
+    char *a = new char[6];
+    foo(a);
+    std::cout << a << std::endl;
+}

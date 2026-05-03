@@ -1,0 +1,11 @@
+#include <iostream>
+int main() {
+    auto a = 3.0f;
+    return 0;
+}
+ 
+#include <iostream>
+int main() {
+    short a = 3.0F;
+    return 0;
+}

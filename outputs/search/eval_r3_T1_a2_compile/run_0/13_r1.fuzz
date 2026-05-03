@@ -1,0 +1,71 @@
+#include <iostream>
+
+using namespace std;
+class Base 
+{
+    public :
+       
+      Base() {}
+    
+      virtual void f1(int &i) = 0;
+};
+
+class Derived : public Base
+{
+    public :
+      
+      Derived(const char* n) { name = n; }
+    
+      void f1(int &i) { cout << *name; }
+      
+      private :
+      const char* name;
+};
+
+int main(int argc, char *argv[])
+{
+    Derived d("Guru99");
+    Base& b = d;
+    int i;
+    b.f1(i);
+    return 0; 
+}
+
+// #include <iostream>
+// #include <cstdio>
+// #include <functional>
+// template <typename T>
+// class my
+// {
+//   public:
+//   template <typename F>
+//   my(F f, T t) : m(t), f(f) { };
+//   void operator()() { (m.*f)(); }
+// 
+//   T m;
+//   F f;
+// };
+// 
+// int main()
+// {
+//   int x=1;
+//   my<int> foo(&x,&int::sin);
+//   foo();
+// }
+//  
+// int main() {
+//     std::function<int(int,int)> sum = [](int a,int b){return a+b;};
+//     std::function<int(int,int)> sub = [](int a,int b){return a-b;};
+//     cout<< sub(10,15);
+//     cout<< sub(5,15);
+// }
+
+#include <iostream>
+#include <cstdio>
+#include <functional>
+
+template <typename T>
+class my
+{
+  public:
+  template <typename F

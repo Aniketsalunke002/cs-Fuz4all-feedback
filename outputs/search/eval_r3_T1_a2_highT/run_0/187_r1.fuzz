@@ -1,0 +1,69 @@
+#include <iostream>
+
+using namespace std;
+#define CONST const
+class car {
+private:
+  static int N_PASSENGERS;
+};
+int car::N_PASSENGERS = 2;
+int main() {
+  CONST int passengers = car::N_PASSENGERS;
+  car car1;
+  car1.N_PASSENGERS;
+  return 0;
+}
+// #include <iostream>
+// using namespace std;
+// #define DEBUG true
+// 
+// namespace constants {
+// const int N = 10;
+// }
+//  
+// int main() {
+//   return 0;
+// }
+//  
+// namespace constants {
+// const int N = 20;
+// }
+// Code for fixing this:
+#include <iostream>
+using namespace std;
+#define DEBUG true
+namespace constants {
+const int N = 10;
+}
+int main() {
+  return 0;
+}
+// namespace constants {
+// const int N = 20;
+// }
+// Code for fixing this:
+// #include <iostream>
+// using namespace std;
+// #define DEBUG true
+// namespace constants {
+// const int N = 20;
+// }
+// int main() {
+//   return 0;
+// }
+// #include <iostream>
+// using namespace std;
+// #define DEBUG true
+// 
+// namespace constants {
+// const int N;
+// }
+//  
+// const int N = 10;
+//  
+// int main() {
+//   return 0;
+// }
+// Constant value has to be defined in the global namespace.
+//  
+//

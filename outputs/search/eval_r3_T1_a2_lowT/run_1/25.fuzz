@@ -1,0 +1,82 @@
+#include <iostream>
+class myclass{
+public :
+    myclass(void):_i(10){}
+    myclass(int i):_i(i){}
+    int _i;
+};
+class myclass2{
+public :
+    myclass2(void):_i(5){}
+    myclass2(myclass2& t):_i(t._i){
+        std::cout << "copy constructor called" <<std::endl;
+    }
+    union{
+      struct{
+        myclass i;
+        myclass* i2;
+      };
+      myclass t;
+    };
+    int _i;
+};
+int main(int argc, char** argv){
+    myclass2 x;
+    myclass2 y(x);
+    x._i = 10;
+}
+ 
+#include <iostream>
+class myclass{
+public :
+    myclass(int i):_i(i){}
+    ~myclass(void){
+        std::cout << "destroying myclass" << std::endl;
+    }
+    int _i;
+};
+class myclass2{
+public:
+    myclass2(void):_i(5),y(){
+        std::cout << "default constructing myclass2" << std::endl;
+    }
+    myclass2(myclass2& t):_i(t._i),y(){
+        std::cout << "copy constructing myclass2" << std::endl;
+    }
+    myclass2& operator=(const myclass2&) = default;
+    int _i;
+    myclass y;
+};
+int main(int argc, char** argv){
+    myclass2 x;
+}
+ 
+#include <iostream>
+#include <new>
+void * operator new(size_t size){
+    void* t = malloc(size);
+    std::cout << "operator new called with size: "<< size << std::endl;
+    return t;
+}
+void operator delete(void* p){
+    std::cout << "operator delete called" << std::endl;
+    free(p);
+}
+struct myclass{
+    int _i;
+    myclass(int i):_i(i){
+        std::cout << "constructing myclass" << std::endl;
+    }
+    ~myclass(){
+        std::cout << "destroying myclass" << std::endl;
+    }
+};
+int main(){
+    myclass* x = new(std::nothrow) myclass(10);
+    delete x;
+}
+ 
+ 
+
+ 
+

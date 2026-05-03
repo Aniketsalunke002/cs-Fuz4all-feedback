@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+#define MAX 3
+#define N 5
+// auto func(int a[], int *b) -> auto {
+auto func(int a[MAX], int b[N - 1]) -> int {
+    int c[MAX];
+    for (auto i = 0; i < sizeof(c) / sizeof(int); ++i) {
+        c[i] = a[i] & b[i];
+        // ++b;
+    }
+    return c[0];
+}
+int main(int argc, char **argv) {
+    if (argc!= N - 1) {
+        return -1;
+    }
+    int a[MAX];
+    for (auto i = 0; i < sizeof(a) / sizeof(int); ++i) {
+        cin >> a[i];
+    }
+    int b[N - 1] = {0, };
+    for (auto i = 0; i < N - 1; ++i) {
+        cin >> b[i];
+    }
+    return func(a, b);
+}

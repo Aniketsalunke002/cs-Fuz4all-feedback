@@ -1,0 +1,14 @@
+#include <iostream>
+using std::cout;
+int main(void) {
+	auto lambda = [](char a, char b) { return a+b; };
+	char z = lambda('H', '*');
+	char x = lambda('o', 'l');
+	char k = lambda('o', 'L');
+	 
+	char s = lambda(z,x);
+	char d = lambda(z,k);
+	cout << s << std::endl;
+	cout << d << std::endl;
+	return 0;
+}

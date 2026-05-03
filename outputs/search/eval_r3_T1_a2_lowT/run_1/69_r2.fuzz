@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+int A[100];
+int main()
+{
+    for (int i = 0; i < 100; i += 1)
+    {
+        A[i] = i;
+    }
+#ifdef TEST_COMPILER
+    struct Data
+    {
+        ~Data() {}
+        void doSomething()
+        {
+            cout << "Data::doSomething\n";
+        }
+    };
+    std::auto_ptr<Data> pd = std::auto_ptr<Data>(new Data);
+    pd->doSomething();
+    pd.reset(new Data);
+    pd->doSomething();
+#else
+    Data* pd = new Data;
+    pd->doSomething();
+    delete pd;
+#endif
+    cout << "end of main\n";
+    return 0;
+}

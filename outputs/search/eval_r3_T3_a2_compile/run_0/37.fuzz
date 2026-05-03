@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(){
+  char s0[96];
+  for(int i = 0; i < 96; ++i)
+    s0[i] = static_cast<char>('a' + i);
+  delete[] s0;
+  return 0;
+}

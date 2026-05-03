@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout.flags(ios::showpoint);
+    unsigned char c;
+    do {
+        cin >> c;
+        switch(c) {
+        case '\n':
+        cout << '\t' << '\n';
+        break;
+        case '+':
+        cout << c << '\t' <<'I';
+        break;
+        case '-':
+        cout << c << '\t' <<'D';
+        break;
+        case '*':
+        cout << c << '\t' <<'W';
+        break;
+        case '/':
+        cout << c << '\t' <<'Q';
+        break;
+        }
+    } while (c!='.');
+}

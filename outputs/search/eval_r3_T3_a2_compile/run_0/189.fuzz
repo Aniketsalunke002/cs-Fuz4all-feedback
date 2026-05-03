@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+template<typename T>
+void foo() {
+  cout << "foo.cpp source code in foo" << endl;
+}
+template<typename T, typename S>
+void bar() {
+  foo<T>();
+  foo<S>();
+}
+int main() {
+  cout << "foo.cpp source code in main" << endl;
+  bar<int, char>();
+  return 0;
+}

@@ -1,0 +1,13 @@
+#include <iostream>
+int main()
+{
+    int a = 10;
+    a = ~0x1 >> 0;
+    if (false) {
+        a = a + 10;
+    }
+    if (a > 0) {
+    } else {
+    }
+    std::cout << a;
+}

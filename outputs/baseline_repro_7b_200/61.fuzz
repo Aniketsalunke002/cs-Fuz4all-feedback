@@ -1,0 +1,5 @@
+#include <iostream>
+int i = 42;
+int main(void) {
+    std::cout << "Hello world" << i++ << std::endl;
+}<commit_msg>Update cplusplus.c<commit_after>

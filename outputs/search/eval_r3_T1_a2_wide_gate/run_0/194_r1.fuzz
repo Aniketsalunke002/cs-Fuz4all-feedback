@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+void foo(int& b){cout<<"Inside the function"<<endl;}
+int main(){
+	int a=10,b=5,z;
+	foo(b);  
+	a=5;
+	foo(a);  
+	cout<<b<<endl;
+	myfoo(b);
+	cout<<a<<endl;
+ 
+	return 0;
+}
+//

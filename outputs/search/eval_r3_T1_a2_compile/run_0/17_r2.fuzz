@@ -1,0 +1,8 @@
+#include <iostream>
+
+namespace new_world {
+    void hello() {
+        std::cout << "Hello world" << std::endl;
+    }
+}
+new_world::hello();

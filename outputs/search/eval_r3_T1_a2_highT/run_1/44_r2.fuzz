@@ -1,0 +1,11 @@
+#include <iostream>
+
+#include "GameOfLife.cpp"
+int main() {
+	long max;
+	for(;;) {
+		std::cin >> max;
+		play(max, (char)35 );
+	}
+	return 0;
+}

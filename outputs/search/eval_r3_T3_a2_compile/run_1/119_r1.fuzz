@@ -1,0 +1,19 @@
+#include <iostream>
+
+
+template <typename T>
+int f(int a, int b) {
+	return 1;
+}
+
+template int f(int, int);
+
+int main() {
+	
+	auto x = f<double>(1, 2);
+	
+	std::cout << x << std::endl;
+}
+
+// The C++ code can be found in the file: fuzz4all-cs-final/outputs/search/eval_r3_T3_a2_compile/run_1/119.fuzz.
+// It is a compile error.

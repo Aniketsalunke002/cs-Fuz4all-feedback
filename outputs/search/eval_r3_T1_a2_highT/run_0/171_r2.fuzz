@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+  float x = 0.5;
+  
+  std::cerr << "Type of 2 x: " << 2 * x << " :: Type of 2 x: " << 2.0 * x << "\n";
+  std::cerr << "Type of 2 x: " << 2 * x * 3 << "\n";
+  
+  std::cout << "Enter a number between 0 and 5: ";
+
+  int myInt = 0;
+  std::cin >> myInt;
+  std::cout << "You entered: " << myInt << "\n";
+  
+  std::cout << "Enter a floating number: ";
+
+  float myFloat = 0.0;
+  std::cin >> myFloat;
+  std::cout << "You entered: " << myFloat << "\n";
+  
+  float var1[23];
+  float *ptr1;
+  for (size_t i = 0; i < 23; i++) {
+    var1[i] = pow(9, 9) + 3 * i / 2;
+  }
+  
+  for (size_t i = 0; i < 23; i++) {
+    std::cout << var1[i] << " ";
+  }
+  return 0;
+}

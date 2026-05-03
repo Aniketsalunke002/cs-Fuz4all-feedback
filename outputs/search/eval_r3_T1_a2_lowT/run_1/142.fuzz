@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a(1), b(2);
+	return ++a + ++b == a + b;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+	using namespace std;
+	return cin.good();
+}

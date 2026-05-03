@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+  string x("Hello"), y("Goodbye");
+  cout << x.substr(0, 5) << '\n';
+  x = y;
+  cout << x.substr(0, 5) << '\n';
+  return 0;
+}
+
+ 
+#include <iostream>
+using namespace std;
+int main() {
+  string s;
+  while (getline(cin, s)) {
+    cout << s << '\n';
+  }
+  
+  return 0;
+}

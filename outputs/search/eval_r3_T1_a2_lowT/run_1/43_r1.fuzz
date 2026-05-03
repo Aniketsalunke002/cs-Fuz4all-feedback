@@ -1,0 +1,19 @@
+#include <iostream>
+
+#include <fstream>
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    char s;
+    while (cin >> s)
+    {
+        cout << s;
+        ofstream file;
+        file.open("file.txt");
+        file.put(s);
+        file.close();
+    }
+    cout << "Finished";
+    return 0;
+}

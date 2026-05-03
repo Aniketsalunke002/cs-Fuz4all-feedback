@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void f(int * x)
+{
+  *x++;
+}  
+int main()
+{
+  int a;  
+  f(&a);
+  cout << a << endl;
+  return 0;
+}
+    
+

@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+char a[102];
+int main()
+{
+    int j = 0;
+    for(int i=0; i<102; i++)
+    {
+        char b;
+        b = rand()%4;
+        if(b == 0){
+            b = 'A';
+        }
+        else if(b == 1){
+            b = 'T';
+        }
+        else if(b == 2){
+            b = 'G';
+        }
+        else if(b == 3){
+            b = 'C';
+        }
+        a[i] = b;
+        cout<< b<<' ';
+    }
+    cout<< endl;
+    return 0;
+}

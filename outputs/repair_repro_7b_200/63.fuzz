@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+void func (int a) { cout << a << endl; }
+
+int main() { func(5); }
+
+ 
+#include <iostream>
+
+using namespace std;
+int main() {}
+ 
+#include <iostream>
+#include <memory>
+#include <vector>
+
+using namespace std;    
+int main()
+{
+    const int arr_len = 10;
+    double *arr = new double[arr_len];
+
+     
+    vector<double> *vec = new vector<double>();
+    vec->resize(arr_len);       
+
+    double * p = new double;
+    
+    return 0;
+}

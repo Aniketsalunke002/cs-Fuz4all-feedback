@@ -1,0 +1,69 @@
+#include <iostream>
+
+using namespace std;
+int main () {
+    int a = 10;
+    int b = 20;
+      
+    int *r1;
+    *r1 = 17;
+    cout << *r1 << endl;
+    *r1 = 20;
+    cout << *r1 << endl;
+
+    int *r1 = new int();
+    cout << *r1 << endl;
+
+    delete r1;
+    r1 = 0;
+}
+
+// 
+// #include <iostream>
+// using namespace std;
+// int main () {
+//     int a = 10;
+//     int b = 20;
+//      
+//      
+// 
+//     int *r1 = new int();
+//     *r1 = 17;
+//     cout << *r1 << endl;
+//     *r1 = 20;
+//     cout << *r1 << endl;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main () {
+//     int *ptr = new int (20);
+//     int a = *ptr;
+//     cout << a << endl;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main () {
+//     int a;
+//     cout << "I will write something to the output..." << endl;
+//     cout << "Please type something..." << endl;
+//     cin >> a;
+// }
+#include <iostream>
+using namespace std;
+int main () {
+    int a = 10;
+    int b = 20;
+      
+    int *r1;
+    *r1 = 17;
+    cout << *r1 << endl;
+    *r1 = 20;
+    cout << *r1 << endl;
+
+    int *r1 = new int();
+    cout << *r1 << endl;
+
+    delete r1;
+    r1 =

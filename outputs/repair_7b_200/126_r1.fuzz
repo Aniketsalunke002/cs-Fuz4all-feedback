@@ -1,0 +1,9 @@
+#include <iostream>
+  // NOLINT(build/include_what_you_use)
+int main()
+{
+    auto a = 3U;
+    std::cout << a << std::endl;
+}
+// 
+//

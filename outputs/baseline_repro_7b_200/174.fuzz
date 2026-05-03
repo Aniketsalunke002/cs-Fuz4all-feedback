@@ -1,0 +1,19 @@
+#include <iostream>
+void a(int *ptr)
+{*ptr=0;}
+int main(){
+    if ((a(& c) && a((int *) & c)))
+    std::cout << "Wow, we crashed!";
+    else{
+    std::cout << "C did change.";
+    }
+    return 0;
+}
+ 
+The main example is probably the simplest, there is no mutation with the
+variable name "c", it may be possible that the compiler decided it needs a
+specific name to avoid the crash in this case.
+The next one is actually a more complicated one, it works because both of
+the parameters of the "a" function changes, so the mutation must follow. The
+program is a bit more obfuscated.
+*/

@@ -1,0 +1,15 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main(int argc, char* argv[]) {
+	float f = 17.01;
+	int i = static_cast<int>(f);
+	cout << i << endl;
+	cout << setprecision(2) << f << endl;
+	cout << setprecision(5) << f << endl;
+	cout << setprecision(4) << f << endl;
+	cout << f * f << endl;
+	cout << f / 100.0 << endl;
+	cout << 100.0 / f << endl;
+	return 0;
+}

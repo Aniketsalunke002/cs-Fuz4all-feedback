@@ -1,0 +1,27 @@
+#include <iostream>
+int main() {
+    int a,b,c=10;
+    b=c--+13;
+    a=b+14;
+    std::cout<<a<<std::endl;
+    std::cout<<b<<std::endl;
+    std::cout<<c<<std::endl;
+    a=b+22;
+    b=a*2000;
+    c=b/1000;
+    std::cout<<a<<std::endl;
+    std::cout<<b<<std::endl;
+    std::cout<<c<<std::endl;
+    int d,e,f=20;
+    b=f--*26;
+    a=b+23;
+    std::cout<<a<<std::endl;
+    std::cout<<b<<std::endl;
+    std::cout<<c<<std::endl;
+    a=b+12;
+    e=a%2000;
+    f=e*1000;
+    std::cout<<a<<std::endl;
+    std::cout<<b<<std::endl;
+    std::cout<<c<<std::endl;
+}

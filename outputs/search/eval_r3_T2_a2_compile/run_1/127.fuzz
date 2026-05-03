@@ -1,0 +1,14 @@
+#include <iostream>
+namespace fuzz {
+    void mutate(char*& str, int index) {
+        if (str[index]!= 0) {
+            int c = str[index];
+            if (c >= '0' && c <= 'z') {
+                c = c + 65;
+ 
+            }
+            str[index] = c;
+        }
+        return str;
+    }
+}

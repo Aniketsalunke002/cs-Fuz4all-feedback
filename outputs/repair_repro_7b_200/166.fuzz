@@ -1,0 +1,103 @@
+#include <iostream>
+#include <cstring>
+int main() {
+    std::string buffer;
+    std::cin >> buffer;
+    if ( buffer == "OK" ) {
+        std::cout << buffer << std::endl;
+    } else {
+        std::cout << "Something went wrong";
+    }
+    return 0;
+}
+ 
+
+#include <iostream>
+#include <algorithm>
+#include <vector>
+
+int to_binary_string(int num, std::size_t padding = 1)
+{
+    if (num == 0)
+    {
+        return 0;
+    }
+    return to_binary_string(num / 2, padding) + std::string(padding, 1) + std::to_string(num % 2);
+}
+
+int main()
+{
+    int num;
+    std::cin >> num;
+    std::cout << to_binary_string(num) << '\n';
+    return 0;
+}
+
+ 
+
+#include <iostream>
+#include <algorithm>
+#include <string>
+
+std::string reverse_str(std::string str)
+{
+    std::reverse(str.begin(), str.end());
+    return str;
+}
+
+int main()
+{
+    std::string str;
+    std::cin >> str;
+    std::cout << reverse_str(str) << '\n';
+    return 0;
+}
+
+ 
+
+#include <iostream>
+#include <string>
+int main()
+{
+    std::string str;
+    int num = 0;
+    std::cin >> str;
+    
+    for (int index = 0; index!= str.length(); index++)
+    {
+        num = 10 * num + str[index];
+    }
+    
+    std::cout << num << '\n';
+    
+    return 0;
+}
+
+ 
+#include <stack>
+#include <string>
+using namespace std;
+
+void reverse_stack(stack<char> stack_of_chars)
+{
+    string str = "";
+    while (!stack_of_chars.empty())
+    {
+        str += stack_of_chars.top();
+        stack_of_chars.pop();
+    }
+    std::cout << str << '\n';
+    
+}
+
+int main()
+{
+    stack<char> stack_of_chars;
+    string str = "";
+
+    for (char c : str)
+    {
+        stack_of_chars.push(c);
+    }
+    reverse_stack(stack_of_chars);
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int x;
+    char c = 'a';
+    switch (c) {
+    case 'a':
+        cout << "a\n";
+        break;
+    case 'A':
+    case 'b':
+        cout << "b\n";
+        break;
+    case 'c':
+        cout << "c\n";
+        break;
+    default:
+        cout << "Other\n";
+        break;
+    }
+}

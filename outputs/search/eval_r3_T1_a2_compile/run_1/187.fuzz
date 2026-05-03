@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+int main(int argc,char **argv) {
+   if (argc < 2) {
+      cout << "Please enter a parameter!" << endl;
+   }
+   else{
+      if (argc >= 3) {
+         cout << argv[1] << " " << argv[2] << endl;
+      }
+      else{
+         cout << "Please enter 2 params!" << endl;
+      }
+   }
+   cout << argc << endl;
+   return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc,char **argv) {
+   cout << argc << " " << argv[1] << " " << argv[2] << endl;
+   cout << argc << endl;
+   return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc,char **argv) {
+   if (argc < 2) {
+      cout << "Please enter a parameter!" << endl;
+      throw;
+   }
+   else{
+      cout << argv[1] << " " << argv[2] << endl;
+      cout << argc << endl;
+      return 0;
+   }
+}
+#include <iostream>
+using namespace std;
+int main(int argc,char **argv) {
+   cout << "Please enter two parameters!" << endl;
+   int x,y;
+   cin >> x >> y;
+   cout << x << " " << y << endl;
+   cout << argc;
+   return 0;
+}

@@ -1,0 +1,7 @@
+#include <iostream>
+
+#include <tuple>
+int main() {
+  int z{0}, q{12}, r{4};
+  std::cout << (std::tuple{q, r, z});
+}

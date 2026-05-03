@@ -1,0 +1,14 @@
+#include <iostream>
+int main ()
+{
+    int a=0;
+    int & b=a;
+    std::cout << "before modification the value of the reference is " << b << std::endl;
+    a=1;
+    std::cout << "after modification the value of the reference is " << b << std::endl;
+    return 0;
+}
+ 
+ 
+
+

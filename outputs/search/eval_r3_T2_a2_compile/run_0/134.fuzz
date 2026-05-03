@@ -1,0 +1,11 @@
+#include <iostream>
+namespace {
+  int h;
+}
+int main(){
+  using namespace std;
+  int a,b,c,d,e,f,g;
+  cin>>a>>b>>c>>d>>e>>f>>g;
+  cout<<a+b*c*f+h+g<<endl;
+  return 0;
+}

@@ -1,0 +1,9 @@
+#include <iostream>
+int main()
+{
+    short z = 84, y(z);
+    std::cout << y++ << std::endl;
+    std::cout << y++ << std::endl;
+    std::cout << y++ << std::endl;
+    std::cout << y << std::endl;
+}

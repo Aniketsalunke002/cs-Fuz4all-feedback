@@ -1,0 +1,32 @@
+#include <iostream>
+
+double A()
+{
+    return 2.0;
+}
+
+double B()
+{
+    return A()+2.0;
+}
+
+void F()
+{   
+    double t;
+    t=B();
+    std::cout << t <<std::endl;
+}
+
+int main()
+{
+    F();
+    return 0;
+}
+'''
+
+
+output_string[0] = output_string[0].replace("output_string","")
+
+print(output_string[0])
+print("---------------------------------------")
+print(output_string[1])

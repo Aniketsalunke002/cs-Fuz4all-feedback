@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+class myclass
+{
+    public:        
+        myclass(int a,int b): x(a),y(b) {cout<<"constructor"<<endl;}     
+        ~myclass() {cout<<"destructor"<<endl;}
+        void display()    
+        {            
+            cout<<x<<", "<<y<<" ";         
+        }        
+    private:        
+        int x,y;
+};
+myclass* p1,*p2;
+float x1,y1;
+int main(int argc, char* argv[])
+{        
+    x1=1;
+    y1=2.5;
+    p1=new myclass (x1,y1);     
+    p1->display();     
+    p1->display();        
+    p2=p1;            
+    p2->display();
+    p1->display();
+    delete p1;          
+    p1->display();
+    p2->display();      
+    return 0;
+}

@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+	char s[] = "abcdefghijklmnopqrstuvwxyz";
+	for (int i = 0; i < 26; i++)
+	{
+		cout << s[i];
+	}
+	for (int i = 0; i < 26; i++)
+	{
+		cout << s[i];
+	}
+}
+
+ 
+
+ 
+#include <iostream>
+using namespace std;
+int main() {
+	cout << "Hola mundo!" << '\n';
+	cout << "Welcome to Code Forces!" << '\n';
+}
+
+ 

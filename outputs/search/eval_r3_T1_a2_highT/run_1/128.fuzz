@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int foo = 1;
+void func() {
+       foo = foo + 1;
+}
+int main() {
+  cout << foo;
+  func();
+  cout << foo;
+  return(0);
+}

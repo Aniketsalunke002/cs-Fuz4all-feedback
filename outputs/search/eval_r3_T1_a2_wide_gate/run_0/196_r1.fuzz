@@ -1,0 +1,54 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+  char* mycar="Volvo FV400";
+  mycar[4]=' ';
+  mycar[10]=' ';
+  cout<< mycar<< endl;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// int main(){
+//   int m[4][4];
+//   int i,j;
+//   for(i=0;i<4;i++)
+//     for(j=0;j<4;j++){
+//       m[i][j]=(10*i)+j;
+//       cout<< m[i][j]<< " ";
+//     }
+//   cout<< endl;
+//   int num=8;
+//   bool found=false;
+//   for(i=0;i<4;i++)
+//     for(j=0;j<4;j++)
+//       if(m[i][j]==num){
+//         cout<< "found at: "<<i<< ","<<j<< endl;
+//         found=true;
+//         break;
+//       }
+//       if(!found)
+//         cout<< "not found!"<< endl;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main(){
+//   string strings;
+//   unsigned int s;
+//   for(s=0;s<3;s++){
+//     for(int i=0;i<5;i++){
+//       strings+=i;
+//       strings+=" ";
+//     }
+//     cout<< strings<< endl;
+//     strings="";
+//   }
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main(){
+//   unsigned int s;
+//   string vec[

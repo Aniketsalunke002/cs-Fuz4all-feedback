@@ -1,0 +1,13 @@
+#include <iostream>
+int main ()
+{
+   
+  int s[10];
+  int i;
+  for (i=0; i< 10; ++i) 
+    s[i]=i;
+   
+  for(i=0; i< 10; ++i) 
+    std::cout << s[i] << std::endl;
+  return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+ 
+int main()
+{
+  float* pf;
+  cout << "Enter a number >> ";
+  cin >> *pf;
+  cout << pf << endl;
+ 
+    delete pf;
+  return 0;
+}
+

@@ -1,0 +1,10 @@
+#include <iostream>
+int main(int argc, char *argv[])
+{
+    char *hello = new char[6]{'H','E','L','L','O','!'};
+    std::string str = "Hello";
+    int ans = str.compare(hello);
+    std::cout << ans << std::endl;
+    delete[] hello;
+    return 0;
+}

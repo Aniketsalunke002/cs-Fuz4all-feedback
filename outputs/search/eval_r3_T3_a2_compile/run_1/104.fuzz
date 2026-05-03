@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+	int a=3;
+	int *ptr_a = &a;
+    *ptr_a=1;
+    std::cout << "a" << a <<"\n";
+}
+int main(){
+    int a=3;
+    int *ptr_a=&a;
+    *ptr_a=1;
+    std::cout << "a" << a <<"\n";
+    return 0;
+}

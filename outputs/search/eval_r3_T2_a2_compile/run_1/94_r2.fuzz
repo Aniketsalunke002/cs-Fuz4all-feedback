@@ -1,0 +1,20 @@
+#include <iostream>
+
+int* pptr() {
+    int* a = new int;
+    *a = 4;
+    return a;
+}
+int& refptr(int* a) {
+    return *a;
+}
+int main6() {
+    int *a = new int();
+    **a;
+    if (false)
+        std::cout << (a!= a) << "\n";
+    else
+        std::cout << 34 << "\n";
+    refptr((a+4)/3);
+    return *refptr((pptr()-4)/3) * 3 + 4 + 3;
+}

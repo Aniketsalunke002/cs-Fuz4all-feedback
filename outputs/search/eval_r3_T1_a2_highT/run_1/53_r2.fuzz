@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main() {
+	while(true) {
+		int mut;
+		std::cin >> mut;
+		int counter=0;
+		std::cout << "enter a block mutant: ";
+		std::cout << "-- " << std::flush;
+		std::cin >> mut;
+		while((mut>1)&&(mut%2==0)) {
+			std::cout << "-- " << std::flush;
+			std::cin >> mut;
+		}
+		std::cout << std::endl;
+		mut^=1;
+		while(true) {
+			if(((counter>>1)&1)==1) {
+				std::cout << mut << std::flush;
+			} else {
+				std::cout << " " << std::flush;
+			}

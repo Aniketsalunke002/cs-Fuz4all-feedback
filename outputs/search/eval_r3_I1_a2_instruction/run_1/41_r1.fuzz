@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int foo (){}
+void x (){}
+int main (int argc, char **argv)
+{
+	int a = 4;
+	string text = "some string";
+	x();
+	cin >>a;
+    cout << a;
+    return 0;
+}

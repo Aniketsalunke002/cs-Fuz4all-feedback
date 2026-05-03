@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int *p;
+  int *q;
+  p = q;
+  cout << "\n";
+  return q;
+}
+
+ 
+int product(int a, int b) {
+  return a * b;
+}
+
+#include <iostream>
+using namespace std;
+int main() {
+  cout << product(2, 3) << "\n";
+  return 0;
+}

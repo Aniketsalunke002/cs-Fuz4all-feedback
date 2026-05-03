@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+    std::string ctest{"Hello World"};
+    std::cout << ctest << "\n";
+    std::string ctest2{"Hello World"};
+    std::cout << ctest2 << "\n";
+    return 0;
+}

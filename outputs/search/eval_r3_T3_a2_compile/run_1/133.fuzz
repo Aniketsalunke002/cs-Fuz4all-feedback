@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+#include <cmath>
+
+void function() {
+	cout << "function() is called." << endl;
+}
+
+int main() {
+	int array[11];
+	function();
+	function();
+	function();
+}
+

@@ -1,0 +1,21 @@
+#include <iostream>
+
+template<typename T>
+void print(T const& t) { std::cout << t << std::endl; }
+int main(void)
+{
+	const char c = 'c';
+	char const* ptr = &c;
+	char a = 'a';
+	print(ptr);
+	print(&a);
+	print(a);
+	print(c);
+	std::printf("%p\n", &c);
+}
+// Output:
+// 0x7fffffffe022
+// a
+// a
+// c
+// 0x7fffffffe022

@@ -1,0 +1,11 @@
+#include <iostream>
+int main()
+{
+    std::string str = "<NAME>";
+    std::cout << "Before modification\n";
+    std::cout << str << '\n';
+    str += "!?";
+    std::cout << "After modification\n";
+    std::cout << str << '\n';
+    return 0;
+}

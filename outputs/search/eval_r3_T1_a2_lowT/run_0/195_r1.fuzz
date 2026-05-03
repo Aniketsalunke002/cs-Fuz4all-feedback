@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main()
+{
+    int i;
+    double d;
+    std::cin>>i;
+    std::cin>>d;
+    std::cout<<i<<std::endl<<d<<std::endl;
+}

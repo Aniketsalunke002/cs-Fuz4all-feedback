@@ -1,0 +1,22 @@
+#include <iostream>
+int main ()
+{
+    int a(2);
+    int b(1);
+    if (a++ == 3)
+        std::cout << "it worked";
+    else
+        std::cout << "it did not work";
+    int & c = a;
+    int & d = b;
+    int e = c + d;
+    std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+    return 0;
+}
+```
+
+## What's the result?
+
+The result is
+
+![What's the result?](../../assets/images/chapter-10/result.png)

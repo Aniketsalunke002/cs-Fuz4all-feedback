@@ -1,0 +1,59 @@
+#include <iostream>
+
+
+using namespace std;
+
+int main(int argc, char **argv) {
+    int i = 31, j = 2;
+
+    cout << "i + j = ";
+
+    i = i + j;
+    cout << i << '\n';
+    return 0;
+}
+
+// #include <iostream>
+// #include <cassert>
+//  
+// using namespace std;
+//  
+// int main(int argc, char **argv) {
+//     int number = 5;
+//     int factorial = 1;
+//  
+//     for (int i = 1; i <= number; i++) {
+//         factorial *= i;
+//     }
+//  
+//     cout << "Factorial of " << number << " is " << factorial << '\n';
+//     cout << "Number of digits in " << factorial << " is " <<
+//          count_digits(factorial) << '\n';
+//  
+//     return 0;
+// }
+
+#include <iostream>
+using namespace std;
+
+enum class Color {
+    PURPLE  
+};
+
+
+int main() {
+    Color color;
+    cout << color << "\n";
+    return 0;
+}
+
+//  
+//  
+// #include <iostream>
+//  
+// using namespace std;
+//  
+// int main(int argc, char **argv) {
+//     int num1 = 100, num2 = 110, num3 = 0;
+//     num3 = (num2 + --num1);
+//     cout <<

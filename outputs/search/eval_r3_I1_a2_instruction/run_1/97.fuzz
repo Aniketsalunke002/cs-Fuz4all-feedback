@@ -1,0 +1,99 @@
+#include <iostream>
+class MyClass2 {
+private:
+    int data[10]{};
+public:
+    void get_data() final {
+        for (int i{0}; i<10 ;i++)
+        {
+            data[i] = -1;
+        }
+    }
+    void print() const final {
+        for (int i{0}; i<10 ;i++)
+        {
+            cout << data[i] << endl;
+        }
+    }
+    void say() const final {
+        cout << "Hi!\n";
+    }
+    ~MyClass2() {
+        get_data();
+    }
+};
+int main() {
+    MyClass2* m2 = new MyClass2[10];
+    const MyClass2 &m2c = m2;
+    for(int i{0}; i<10; i++)
+    {
+        m2[i].say();
+        m2[i].print();
+        m2c[i].say();
+        m2c[i].print();
+    }
+    return 0;
+}
+ 
+#include <iostream>
+class MyClass3
+{
+    public:
+        int num1 = 5;
+        void sayHello()
+        {
+            std::cout<<"num1 = "<<num1<<std::endl;
+        }
+};
+class MyClass4
+{
+    public:
+        int num2 = 10;
+        void sayWorld()
+        {
+            std::cout<<"num2 = "<<num2<<std::endl;
+        }
+};
+class MyClass5 : public MyClass3, public MyClass4 {
+    public:
+        void printAll()
+        {
+            MyClass3::sayHello();
+            MyClass4::sayWorld();
+            std::cout<<"num1 = "<<num1<<std::endl;
+            std::cout<<"num2 = "<<num2<<std::endl;
+        }
+};
+int main()
+{
+    MyClass5 mc5;
+    mc5.printAll();
+    return 0;
+}
+ 
+#include <iostream>
+class MyClass6
+{
+    public:
+        virtual int returnNumber()
+        {
+            return 123;
+        }
+};
+class MyClass7 : public MyClass6
+{
+    public:
+        int returnNumber1()
+        {
+            return 456;
+        }
+};
+int main()
+{
+    MyClass6* mc6ptr = new MyClass6();
+    MyClass7* mc7ptr = new MyClass7();
+    std::cout<<"Return value of MyClass6 : "<<mc6ptr->returnNumber()<<std::endl;
+    std::cout<<"Return value of MyClass7 : "<<mc7ptr->returnNumber1()<<std::endl;
+    return 0;
+}
+

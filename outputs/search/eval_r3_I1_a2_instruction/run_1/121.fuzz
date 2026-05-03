@@ -1,0 +1,27 @@
+#include <iostream>
+void change(int **val, std::string var, int lenght)
+{
+    int i;
+    *val = new int[lenght];
+    for (i = 0; i <= lenght; i++)
+        (*val)[i] = (lenght - i);
+}
+int main()
+{
+    int *numbers, *numbers2;
+    int num = 5, num2 = 7;
+    std::cout << "First Numbers array.\n";
+    change(&numbers, "int[]", num);
+    for (int i = 0; i < num; i++)
+    {
+        std::cout << numbers[i] << '\n';
+    }
+    std::cout << "Second Numbers array.\n";
+    change(&numbers2, "int[]", num2);
+    for (int i = 0; i <= num2; i++)
+    {
+        std::cout << numbers2[i] << '\n';
+    }
+    delete[] numbers2, numbers;
+    return 0;
+}

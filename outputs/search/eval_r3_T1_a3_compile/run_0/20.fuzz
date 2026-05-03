@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(){
+    char b[10]="";
+    cout << "Please enter a string:" << endl;
+    input >> cstr;
+    for(int i=0; i<10; i++)
+        cout << b[i] << ", ";
+}

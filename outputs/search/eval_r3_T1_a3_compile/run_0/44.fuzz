@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+  float val1, val2;
+  cout << "Write 1 number:";  
+  cin >> val1;
+  cout << val1 << endl;
+  cout << "Write another one:";  
+  cin >> val2;
+  cout << val2 << endl;
+  return 0;
+}
+ 
+/*
+I. Add a comment in your code explaining why x = 5 is correct and why x = 5.1 or x = 35 is incorrect
+II. Check out the code produced by the compiler with new warnings introduced from C++11. What's
+the first warning message you were able to resolve? How many did it take to get rid of those
+warnings for this exercise?

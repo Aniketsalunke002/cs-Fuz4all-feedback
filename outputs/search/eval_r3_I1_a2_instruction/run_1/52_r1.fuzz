@@ -1,0 +1,25 @@
+#include <iostream>
+#include <string>
+#include <string_view>
+#include <vector>
+#include <algorithm>
+int foo(char *) {}
+ 
+#include <iostream>
+#include <string>
+#include <string_view>
+#include <vector>
+#include <algorithm>
+int foo(char *) {}
+ 
+#include <iostream>
+#include <string_view>
+#include "header.h"
+void wrapper()
+{
+    {
+        char buffer[30];
+        scanf("%29s", buffer);
+        printf("Result: %s\n", buffer);
+    }
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+void printInt(int v)
+{
+    cout << "the number is: " << v << endl;      
+}
+int main()
+{
+    printInt(5);
+    printInt("5");
+    return 0;
+}

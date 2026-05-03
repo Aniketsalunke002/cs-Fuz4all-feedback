@@ -1,0 +1,22 @@
+#include <iostream>
+void f() { }
+int main(void);
+void main(void)
+{
+  std::cout << "a";
+  int n;
+  do
+  {
+    n++;
+  }
+  while(n > 0);
+  return 0;
+}
+int C5::n;
+C5 * C5::instance;
+C5::C5(void)
+{
+}
+C4::C4(void)
+{
+}

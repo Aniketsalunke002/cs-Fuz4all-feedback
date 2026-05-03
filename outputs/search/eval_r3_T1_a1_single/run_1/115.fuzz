@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int n,m,w,h,p;
+cin>>n>>m>>w>>h>>p;
+cout<<n+(w*h+w+h)*p<<endl;
+return 0;
+}

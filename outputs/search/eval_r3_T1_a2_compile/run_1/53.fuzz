@@ -1,0 +1,29 @@
+#include <iostream>
+void f()
+{
+    int x;
+
+    if (x<30)
+    {
+        std::cout<<"a\n";
+    }
+    else if (x<35)
+    {
+        std::cout<<"b"<<' ';
+        x++;
+    }
+    else if (x==35)
+    {
+        std::cout<<"c"<<' ';
+        x+=2;
+    }
+    else if (x==37)
+    {
+        std::cout<<"d"<<' ';
+        --x;
+    }
+    else if (x>=5)
+    {
+        std::cout<<"e\n";
+    }
+}

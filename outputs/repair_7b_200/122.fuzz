@@ -1,0 +1,12 @@
+#include <iostream>
+struct A
+{
+    explicit operator bool() { return 1; }
+};
+int main()
+{
+    A a;
+    bool b = static_cast<bool>(a);
+    std::cout << b << '\n';
+    return 0;
+}

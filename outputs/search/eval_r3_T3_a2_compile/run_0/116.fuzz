@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+class A
+{
+	protected:
+		int a = 10;
+	public:
+		int c = 6;
+		void display()
+		{
+			cout<<"this is class object"<<endl;
+		}
+		friend class B;
+		friend class D;
+		friend void swap(A &a1,A &a2)
+		{
+			int temp1 = a1.a;
+			a1.a = a2.a;
+			a2.a = temp1;
+
+			int temp = a1.c;
+			a1.c = a2.c;
+			a2.c = temp;
+		}
+};
+class B : public A
+{
+	int d = 4;
+	void display()
+	{
+		cout<<"this is object of another class"<<endl;
+	}
+	friend void swap(A &,A &);
+	friend class A;
+	friend void sum(B &,int,B &);
+	friend class C;
+	friend void sum(D &,int,D &);
+};
+class C : public A
+{
+	int d = 7;
+	void display()
+	{
+		cout<<"this is object of another class"<<endl;
+	}
+};
+class D : public A
+{
+	int d = 9;
+	void display()
+	{
+		cout<<"this is object of another class"<<endl;
+	}
+};
+int main()
+{
+	A a1,a2;
+	B b1,b2;
+	sum(b1,5,b2);
+	return 0;
+}
+ 
+*polymorphism is an ability of a method/program to work for more than one type/class
+*/
+ 
+ 

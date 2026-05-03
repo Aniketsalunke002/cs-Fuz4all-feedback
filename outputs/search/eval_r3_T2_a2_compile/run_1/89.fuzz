@@ -1,0 +1,93 @@
+#include <iostream>
+void f(unsigned a) {}
+int main() {
+  unsigned a=0;
+  f( __builtin_expect(a*2,1) );
+  std::cout << a << '\n';
+  return 0;
+}
+  
+#include <iostream>
+long x = 20;
+long y = 20500;
+long z = 5000;
+unsigned int a=0;
+int main11(int c) {
+a = (long)x;
+a = (((long)c)>>32);
+if (__builtin_expect(a,1)) {
+a = __builtin_expect((a<<6),(1)) ;
+a = ((a&(1))>>0)&(1);
+} else {
+a = __builtin_expect((a*3),(1)) ;
+a = ((a&(1))>>0)&(1);
+}
+a = __builtin_expect(y,(a)) ;
+z = a<<(a+1);
+}
+
+ 
+#include <iostream>
+int main9(unsigned int c) {
+const int x = 20;
+const int y = 1;
+long a = x;
+long b = c;
+int m = b;
+int d = __builtin_expect((a+b)/m, y);
+std::cout << d;
+return d;
+ }
+ */  
+ 
+#include <iostream>
+int main(){
+__builtin_classify_type_and_sign(1); 
+return 0;
+}
+ 
+ 
+#include <iostream>
+void test(char);
+void test(int);
+int main() {
+int x;
+int *p = &x;
+test(_Alignof(p));
+return 0;
+}
+
+ 
+#include <iostream>
+#include <stdio.h>
+__extension__ typedef unsigned char __u8;
+__extension__ typedef unsigned short __u16;
+__extension__ typedef unsigned int __u32;
+__extension__ typedef unsigned long long __u64;
+__extension__ typedef signed char __s8;
+__extension__ typedef short __s16;
+__extension__ typedef int __s32;
+__extension__ typedef long long __s64;
+__extension__ typedef float __f32;
+__extension__ typedef double __f64;
+long long get(void *src, __u32 d_type, void *p) {
+if (d_type == __builtin_typeid(0)) {
+return (long long) (long) *(signed char *)src;
+} else if (d_type == __builtin_typeid(1)) {
+return (long long) *(signed char *)src;
+} else if (d_type == __builtin_typeid(2)) {
+return (long long) *(signed char *)src;
+} else if (d_type == __builtin_typeid(3)) {
+return *(signed char *)src;
+} else if (d_type == __builtin_typeid(4)) {
+return (long long) *(signed short *)src;
+} else if (d_type == __builtin_typeid(5)) {
+return (long long) *(signed short *)src;
+} else if (d_type == __builtin_typeid(6)) {
+return (long long) *(signed int *)src;
+} else if (d_type == __builtin_typeid(7)) {
+return *(signed int *)src;
+} else if (d_type == __builtin_typeid(8)) {
+return (long long) *(signed long long *)src;
+} else if (d_type == __builtin_typeid(9)) {
+return (long long) *(unsigned char *)src;

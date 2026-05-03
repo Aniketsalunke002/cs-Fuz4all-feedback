@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 15;
+    int b = (a + 25) - 3;
+}
+ 
+#include <iostream>
+using namespace std;
+struct Car {
+    int numseats;
+};
+
+class Vehicle {
+ private:
+    int gear;
+public:
+    int gasPedal;
+};
+
+int main() {
+    Car mycar = {5};
+    Vehicle mycar2;
+    mycar2.gasPedal = 500;
+
+    cout << "The Car has " << mycar.numseats << " seats" << endl;
+    cout << "The Vehicle has " << mycar2.

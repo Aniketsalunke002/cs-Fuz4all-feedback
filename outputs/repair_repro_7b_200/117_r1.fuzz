@@ -1,0 +1,13 @@
+#include <iostream>
+
+std::atomic<int> ai;
+std::atomic<bool> ab;
+std::atomic<std::string> as;
+int main(void) {
+    ai++;
+    if ( ++ai <= 42 )
+        ab = true;
+    while ( as == "not set" )
+        as = "set";
+    return 0;
+}

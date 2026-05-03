@@ -1,0 +1,29 @@
+#include <iostream>
+
+#include <list>
+
+void print_list(std::list<int>& l)
+{
+    for(std::list<int>::iterator i = l.begin();i!= l.end();++i)
+        std::cout << *i << ", ";
+    std::cout << std::endl;
+}
+
+void append_list(std::list<int>& l,int x)
+{
+    l.push_back(x);
+}
+
+int main(void)
+{
+    std::list<int> l1;
+    append_list(l1,1);
+    append_list(l1,2);
+    append_list(l1,4);
+    append_list(l1,5);
+    append_list(l1,6);
+    append_list(l1,77);
+    append_list(l1,110);
+    append_list(l1,123);
+    print_list(l1);
+}

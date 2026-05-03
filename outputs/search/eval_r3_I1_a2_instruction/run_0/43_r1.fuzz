@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+struct S {
+    S(S const&){}  
+    S(S&&){}  
+};
+void foo(S s) { }
+int main(int argc, char**argv) {
+    S s;
+    foo(s);
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    S s{};;
+    foo(s);
+    return 0;
+}

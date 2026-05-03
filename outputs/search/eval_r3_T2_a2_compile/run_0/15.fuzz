@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int a = 3;
+  int b = 4;
+  a=a and a+1;
+  b=b and b+1;
+  cout << "Hello" << endl;
+  return 0;
+}

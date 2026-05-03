@@ -1,0 +1,39 @@
+#include <iostream>
+
+
+class Foo {
+public:
+    int x;
+
+     
+    Foo();
+
+     
+    Foo(int val);
+};
+
+ 
+inline Foo::Foo() { x = 0; }
+
+ 
+inline Foo::Foo(int val) { x = val; }
+
+inline void doX(Foo* obj) {
+    int val = obj->x;
+    obj->x++;
+}
+
+int main()
+{
+    Foo* obj = new Foo(10);
+   
+    doX(obj);
+    
+    while(obj->x) {
+         
+        doX(obj);
+        std::cout << obj->x << std::endl;
+    }
+
+    return 0;
+}

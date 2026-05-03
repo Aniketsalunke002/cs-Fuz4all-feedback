@@ -1,0 +1,20 @@
+#include <iostream>
+extern int foo;
+int main() {
+    do{
+        cout.width(3); 
+        cout<<foo<<endl;
+        foo--;
+    } while(foo >0);
+}
+ 
+inline void doit(int n){
+  cout << n << endl;
+};
+
+int main(void) {
+  doit(-3);
+  doit(0);
+  doit(5);
+  return 0;
+}

@@ -1,0 +1,99 @@
+#include <iostream>
+void do_it(int a)
+{
+    std::cerr << std::endl;
+}
+int main()
+{
+    do_it(7);
+    std::cout << std::cout.rdbuf() << std::endl;
+}
+ 
+#include <iostream>
+void do_it(int a)
+;
+void main()
+{
+    int a[] = { 1, 1 };
+    int &r = a[0];
+    do_it(7);
+    std::cout << std::cout.rdbuf() << std::endl;
+}
+
+ 
+const int x = 1;
+int x = 1;
+
+ 
+void inc( const int & x ) { std::cout << x << std::endl; }
+int main(){
+    const int n = 1;
+    int y = 11, z = 11;
+    inc( y );
+    inc( z );
+    return 0;
+}
+void inc( const int & x ) { std::cout << x << std::endl; }
+
+ 
+int main()
+{
+	int x = 1, y = 1;
+	int &r=x;
+	++r;
+	const int & q = y;
+	++q;
+	std::cout << x << q << std::endl;	
+}
+ 
+int maxx( int a, int b ){
+	if ( a > b ) return a;
+	return b;
+}
+int max( int a, int b ){
+	int x = maxx(a,b);
+	x >= a;
+	return x;
+}
+int main(){
+	int x = 20, y = 30;
+	std::cout << max( x, y );
+	return 0;
+}
+ 
+
+int max(int a, int b)
+{
+	if (a>b) return a;
+	else if (b>a) return b;
+}
+int main()
+{
+	int x = 0, y = 0;
+	try
+	{
+		x = std::stoi( "123" );
+		y = std::stoi( "abc" );
+	}
+	catch (...)
+	{
+		std::cerr << "Unexpected error" << std::endl;
+	}
+	std::cout << max( x, y ) << std::endl;
+}
+ 
+bool x()
+{
+	throw false;
+}
+int main()
+{
+	try
+	{
+		x();
+	}
+	catch (...)
+	{
+		abort();
+	}
+}

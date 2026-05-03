@@ -1,0 +1,9 @@
+#include <iostream>
+#include<math.h>
+int main() {
+    int a,c,d;
+    std::cin>>a>>c;
+    d=(sqrt(a)*(sqrt(a)+1))*c*2/2;
+    std::cout<<d<<'\n';
+    return 0;
+}

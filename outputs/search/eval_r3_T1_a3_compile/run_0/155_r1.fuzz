@@ -1,0 +1,40 @@
+#include <iostream>
+
+using std::endl;
+class Base {
+public:
+    int a;
+    virtual void print_a() { std::cout << "a: " << a << std::endl; }
+};
+class Derived : public Base {
+public:
+    int b;
+    void print_a() override {
+        std::cout << "a: " << a << std::endl;
+        std::cout << "b: " << b << std::endl;
+    }
+};
+int main() {
+    Derived d;
+    Base *pb = &d;
+    pb->a = 20;
+    d.b = 30;
+    d.print_a();
+    return 0;
+}
+// 
+// #include <iostream>
+// class Data {
+// public:
+//     ~Data();
+// };
+// void Data_moveConstructor(Data &dst, const Data &src);
+// void Data_copyConstructor(Data &dst, const Data &src);
+// void Data_assignmentOperator(Data &dst, const Data &src);
+// Data::Data()
+// {}
+// Data::~Data() {
+//     std::cout << "~Data()" << std::endl;
+// }
+// void main() {
+//     std::cout << "

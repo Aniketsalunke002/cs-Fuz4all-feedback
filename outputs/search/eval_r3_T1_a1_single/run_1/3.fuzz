@@ -1,0 +1,24 @@
+#include <iostream>
+
+
+class A
+{
+public:
+  virtual ~A() = default;
+  A() = default;
+  A(const A &) = default;
+  A(A &&) = default;
+  A &operator=(const A &) = default;
+  A &operator=(A &&) = default;
+};
+
+class B : public A
+{
+public:
+  B() = default;
+  B(const B &) = default;
+  B(B &&) = default;
+  B &operator=(const B &) = default;
+  B &operator=(B &&) = default;
+  ~B() = default;
+};

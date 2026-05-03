@@ -1,0 +1,10 @@
+#include <iostream>
+template<typename T>
+void f(T& x) { x++; }  
+int main()
+{
+  int a = 5;
+  f(a);  
+  std::cout << a << std::endl;
+  return 0;
+}

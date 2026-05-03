@@ -1,0 +1,23 @@
+#include <iostream>
+ 
+int main() {
+	int x;
+	x=5;
+	x++;
+	std::cout << x << std::endl;
+} 
+ 
+#include <iostream>
+using namespace std;
+ 
+
+int main() {
+    cout<<"Write a number: ";
+    int n;
+    cin >> n;
+    cout << "Your number is ";
+    if (n % 3 == 0)
+    cout << "multipliable by 3" << endl;
+    else 
+    cout << "not multipliable by 3" << endl;
+}

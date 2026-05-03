@@ -1,0 +1,25 @@
+#include <iostream>
+void main(int argc, char** argv) {
+  std::tuple<int, char, bool> t(12, '1', true);
+}
+#include <tuple>
+ 
+#include <tuple>
+int main() {
+  int t1; char t2; bool t3;
+  std::tuple<char, int, bool> t = std::make_tuple(t1, t2, t3);
+}
+#include <chrono>
+#include <iostream>
+int main() {
+    using namespace std::chrono;
+    system_clock::time_point t1 = system_clock::now();
+    usleep(10);
+    system_clock::time_point t2 = system_clock::now();
+    std::time_t t3;
+    std::chrono::system_clock::to_time_t(t2);
+    duration<double> duration1 = duration_cast<duration<double>>(t2 - t1);
+    std::cout << "Program Duration (Seconds): " << duration1.count() << std::endl;
+}
+#include <chrono>
+ 

@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+void main() {
+    int i = 15;
+    int j = i + 25 - 3;
+}
+ 
+#include <iostream>
+using namespace std;
+struct Point {
+    int x;
+    int y;
+    Point operator + (Point);
+    void Print();
+}
+void Point::Print() {
+    cout << '(' << this->x << ", " << this->y << ')' << endl;
+}
+Point operator + (Point a, Point b) {
+    return Point { a.x + b.x, a.y + b.y };
+}
+int main() {
+    Point a, b;
+    a.x = 1;
+    a.y = 2;
+   

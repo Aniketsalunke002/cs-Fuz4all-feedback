@@ -1,0 +1,17 @@
+#include <iostream>
+
+#include <vector>
+#include <algorithm>
+int mutator(std::vector<int> *v) {
+	v->push_back(std::rand());
+	return v->size() - 1;
+}
+int main() {
+	std::vector<int> *v = new std::vector<int>();
+	std::rand();
+	std::generate(v->begin(), v->end(), std::rand);
+	return v->size();
+}
+// Note that the return type and arguments are the same in both the original and modified versions. The error message
+//  is incorrect and misleading. This is due to the fact that the compiler has an incorrect idea about the relationship
+//  between the function and the type on which it operates.

@@ -1,0 +1,19 @@
+#include <iostream>
+int x, y = 5, z = 5;
+
+auto foo() { return [] { return void(); }; }
+auto bar() { return [] { return ++x, x; }; }
+auto baz() { return [] { return ++y, y; }; }
+auto faz() { return [] { return ++z, z; }; }
+ 
+
+int main() {
+   
+  foo()(), bar()(), baz()(), faz()();
+  std::cout << --x <<'' << y <<'' << z << "Hello";
+}
+ 
+#include <iostream>
+ 
+
+void greetings() { std::cout

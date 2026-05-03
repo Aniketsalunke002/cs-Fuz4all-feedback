@@ -1,0 +1,10 @@
+#include <iostream>
+int main()
+{
+    int* x{nullptr};
+    auto y=new double{0.};
+    x=std::move(y);
+    std::cout<<((++y)+1)<<'\n'<<(++*x)<<'\n'<<
+        ++(*(++x)+1)<<'\n';
+    return 0;
+}

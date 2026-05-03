@@ -1,0 +1,15 @@
+#include <iostream>
+int main()
+{
+    {
+      std::string a = "Hello";
+      std::cout << *a.c_str() << '\n';
+      a[1] = 'M';
+      std::cout << *a.c_str() << '\n';
+    }
+    {
+      std::string a = "Hello";
+      std::cout << *a.c_str() << '\n';
+    }
+    return 0;
+}

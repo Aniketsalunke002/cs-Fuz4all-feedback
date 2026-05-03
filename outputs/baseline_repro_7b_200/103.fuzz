@@ -1,0 +1,6 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+    const int k = 42;
+    static_assert(k==42, "[error]: This program will not compile!");
+    return 0;
+}

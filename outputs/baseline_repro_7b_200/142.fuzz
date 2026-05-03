@@ -1,0 +1,9 @@
+#include <iostream>
+int main(void) {
+ int a;
+ a = { std::cin >> a};
+ a += 10;
+ return 0;
+}
+ 
+They are much more readable. If you don't understand a block of code you just see, you can simply rename all the arguments (since the arguments appear within the curly brackets of the method) and just read the content of the method. 

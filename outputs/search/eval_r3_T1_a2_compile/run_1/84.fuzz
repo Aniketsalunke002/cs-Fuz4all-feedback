@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int a=3,b=3,c=3;
+  a++;
+  ++c;
+  ++b;
+  cout<<c<<endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+  int a=3,b=3,c=3;
+  a++;
+  auto x=a+b+c;
+  cout<<x<<endl;
+}

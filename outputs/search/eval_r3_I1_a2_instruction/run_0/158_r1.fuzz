@@ -1,0 +1,36 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+    cout << argv[1] << endl;
+    
+    while (argc > 2) {
+      cout << argc << endl;
+      argc--;
+    }
+
+    if (3 * 3 * 5 >= argc) {
+      return 0;
+    } else {
+        while (argc > 2) {
+            cout << "Hello world: " << argc << endl;
+            argc--;
+        }
+    }
+  }
+#include <iostream>
+  using std::cout;
+  using std::cin;
+  int main(int argc, char** argv) {
+    cout << "Hello World: argc=" << argc << endl;
+    if (2 <= argc && argc <= 3) {
+      cout << "Two arguments provided!" << endl;
+    }
+    cout << "I don't know about others." << endl;
+    argc -= 10;
+  }
+#include <fstream>
+  #include <string>
+  int main(int x, char *argv[]) {
+    std::ofstream outfile(argv[1], std::ios::binary);
+    return 0;
+  }

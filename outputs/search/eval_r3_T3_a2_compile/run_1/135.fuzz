@@ -1,0 +1,9 @@
+#include <iostream>
+void func();
+void function() {
+	std:func();
+}
+int main() {
+	int array[11];
+	function();
+}

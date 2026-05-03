@@ -1,0 +1,21 @@
+#include <iostream>
+
+#include <map>
+using namespace std;
+
+int main() {
+  std::map myMap;
+  myMap["<NAME>"] = 42;
+  myMap["Fizz"] = 43;
+  myMap["<NAME>"] = 47;
+  myMap["Buzz"] = 42;
+
+  myMap.insert(pair<std::string, int>("FizzBuzz", 48));
+  myMap.insert(pair<std::string, int>("Bla Blacar", 47));
+  myMap.insert(pair<std::string, int>("BlaBlaCar", 46));
+
+  cout << "Size of map: " << myMap.size() << endl;
+
+  for (auto pair = myMap.begin(); pair!= myMap.end(); pair++)
+    cout << pair->first << " -> " << pair->second << endl;
+}

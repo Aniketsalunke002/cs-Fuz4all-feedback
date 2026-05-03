@@ -1,0 +1,70 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int grade = 95;
+	int bonus = 0;
+	if((grade >= 90) && (grade!= 100)) bonus = 50;
+	if((grade >= 85) && (grade < 90)) bonus = 40;
+	if((grade >= 70) && (grade <85)) bonus = 30;
+	if((grade >= 65) && (grade < 70)) bonus = 25;
+	if(bonus > 0) cout << bonus << endl;
+	else cout << "no Bonus" << endl;
+	if((grade = 60)) cout << "grade passed." << endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main ()
+{
+	short int num1 = 5, num2 = 4, num3;
+	num3 = num1 + num2;
+	cout << "sum of " << num1 << " + " << num2 << " = " << num3 << endl;
+	cout << num3 % 2 << endl;
+	num3 = 20 - 6;
+	if(num3 < 10) cout << "lesser than 10 \n";
+	else if(num3 < 50) cout << "lesser than 50 \n";
+	else cout << "greater than 50 \n";
+		return 0;
+}
+   
+   
+   
+   
+   
+   
+ 
+#include <iostream>
+using namespace std;
+int main ()
+{
+	short int num1 = 5, num2 = 4, num3 = 0;
+	cout << "A = " << num1 << "  B = " << num2 << "  C = " << num3 << endl;
+	num2 = num1 + num2 + 3;
+	cout << "A = " << num1 << "  B = " << num2 << "  C = " << num3 << endl;
+	num3 = num1 - num2 - 2;
+	num1++;
+	num3 = 25 - num3;
+	cout << num1 << " + " << num2 << " = " << num3;
+	return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+int main ()
+{
+	short int num1 = 5, num2 = 4, num3 = 0;
+	cout << "A = " << num1 << "  B = " << num2 << "  C = " << num3 << endl;
+	num2 = num1 + num2 + 3;
+	cout << "A = " << num1 << "  B = " << num2 << "  C = " << num3 << endl;
+	num3 = num3 - num2 - num1 + 2;
+	num1++;
+	num3 = 25 - num3;
+	cout << num1 << " + " << num2 << " = " << num3;
+	return 0;
+}
+
+ 
+/* Modify the previous program so that it returns

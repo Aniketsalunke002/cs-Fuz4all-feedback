@@ -1,0 +1,12 @@
+#include <iostream>
+auto y = [] {
+  struct a {
+    int x;
+  };
+  static a obj = {22};
+  auto update = [] (a & x) { x.x = 33; };
+  return [=] { update(obj), obj.x; };
+};
+int main() { std::cout << y()(); }
+```
+

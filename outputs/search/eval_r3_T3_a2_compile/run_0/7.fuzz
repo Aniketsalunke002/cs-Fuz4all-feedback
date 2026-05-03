@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	cout << max(0.0, 5.0) << endl;
+	cout << max(0.0, min(-5.0, -10.0)) << endl;
+	cout << max(0.0, max(-5.0, -10.0)) << endl;
+	double val;
+	cin >> val;
+	cout << val*val << endl;
+	return 0;
+}

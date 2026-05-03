@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  std::int32_t i=5;
+  const char *cp = "Hello";
+  volatile std::int32_t l;
+  l=0;
+  if (l & 1)
+    i=15;
+  if (i > 0) 
+    cp= "Hi";
+  else
+    l= -4;
+  i=l;
+  if (l

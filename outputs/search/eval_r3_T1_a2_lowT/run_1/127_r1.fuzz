@@ -1,0 +1,8 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	char* s = new char[1024128*1024*1024];
+	cout << 1 << endl;
+}

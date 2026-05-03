@@ -1,0 +1,75 @@
+#include <iostream>
+#include <mutex>
+#include <condition_variable>
+std::mutex mtx;
+std::condition_variable cv;
+const int MAX=10;
+int count = 0;
+void foo() {
+    mtx.lock();
+    count++;
+    if ( count > MAX ) {
+        std::cerr << "TOO MANY CALLS" << std::endl;
+    } else {
+    cv.notify_all();
+    }
+    mtx.unlock();
+}
+int main(void) {
+    std::thread t([]() {
+        std::unique_lock<std::mutex> lk(mtx);
+        while (1) {
+            try {
+            cv.wait(lk);            
+            } catch ( std::logic_error& le ) {
+            std::cerr << "LOGIC ERROR" << std::endl;
+        }
+       }
+    });
+    for (int i =0; i < 100; i++)
+            foo();
+    t.join();
+    return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <mutex>
+#include <condition_variable>
+
+std::queue<int> q;
+std::mutex qmtx;
+std::condition_variable cv_in,cv_out;
+
+void producer() {
+    while ( 1 ) {
+        std::unique_lock<std::mutex> lk(qmtx);
+        cv_in.wait(lk);
+        std::cout << "produce " << std::flush;
+        for (int i=0; i < 10; i++)
+            q.push(i);
+        std::cout << q.size() << "\n" << std::flush;
+        cv_out.notify_all();
+    }
+}
+
+void consumer() {
+    while ( 1 ) {
+        std::unique_lock<std::mutex> lk(qmtx);
+        cv_out.wait(lk);
+        std::cout << "consume " << std::flush;
+        q.pop();
+        std::cout << q.size() << "\n" << std::flush;
+        cv_in.notify_all();
+    }
+}
+
+int main() {
+  std::cout << "producing and consuming\n";
+  std::thread producer_t(producer);
+  std::thread consumer_t(consumer);
+  producer_t.join();
+  consumer_t.join();
+  std::cout << "DONE" << std::endl;
+}

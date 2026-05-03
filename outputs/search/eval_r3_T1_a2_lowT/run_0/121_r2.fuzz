@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include <time.h>
+#include <stdlib.h>
+
+using namespace std;
+
+void nextDay(char *str){
+    time_t rawtime;
+    struct tm *timeinfo;
+    char date[100];
+    time (&rawtime);
+    timeinfo = localtime (&rawtime);
+    timeinfo->tm_sec+=24

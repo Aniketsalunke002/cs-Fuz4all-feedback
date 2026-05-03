@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+int main()
+{
+  std::string str("Hello World!\n");
+  std::string newstr = str + "\n"; 
+  for (int i=0; i<str.size(); i++) {
+    if (str[i] == '\n') {
+      newstr += "A";
+    }
+  } 
+  std::cout << newstr << '\n';
+}
+ 
+#include <iostream>
+int a[3];
+int main() {
+  a[0] = a[1] = a[2] = 0; 
+  ++a[0]+=0; 
+  ++a[1]+=0; 
+  ++a[2]+=0; 
+  ++a[0];   
+  ++a[1];
+  ++a[2]; 
+  ++a[2]; 
+  ++a[2]; 
+  std::cout << a[0] <<''; 
+  std::cout << a[1] <<'';
+  std::cout << a[2] << '\n';
+}

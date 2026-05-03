@@ -1,0 +1,22 @@
+#include <iostream>
+
+int main(void)
+{
+        char c;
+        char* ptr;
+        c = 'c';
+        ptr = &c;
+        std::cout << c << *ptr << std::endl;
+}
+//  
+//  
+//  
+// #include <iostream>
+// int main(void)
+// {
+//         char c;
+//         char* ptr;
+//         c = 'c';
+//         ptr = &c;
+//         std::cout << c << *ptr << std::endl;
+// }

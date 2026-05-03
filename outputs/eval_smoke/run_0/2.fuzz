@@ -1,0 +1,13 @@
+#include <iostream>
+#include <string>
+struct MyClass {
+ public:
+  MyClass(int i) : i_(i), s_() {}
+ public:
+  std::string to_string();
+  static MyClass from_string(const std::string &);
+  int i_;
+  std::string s_;
+};
+typedef std::vector<MyClass> my_class_v;
+MyClass get_class();

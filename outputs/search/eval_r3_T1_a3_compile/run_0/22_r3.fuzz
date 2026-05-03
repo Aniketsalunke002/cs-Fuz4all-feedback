@@ -1,0 +1,29 @@
+#include <iostream>
+
+#include <vector>
+using namespace std;
+int main() {
+    double x = 13.37;
+    vector<double> v;
+    for(int i = 0; i < 10; i++) {
+        v.push_back(x++);
+    }
+    for(int i = 0; i < v.size(); i++) {
+        cout << v[i] << " ";
+    }
+}
+
+int fib(int a) {
+start:  if(a<2) return a;
+    else goto start;
+}
+
+void call_it(func fp) {
+    func pfp = fp;
+    pfp(5);
+    int (*fptr)(int);  
+    fptr = fp;
+    fptr(10);
+}
+
+for(int

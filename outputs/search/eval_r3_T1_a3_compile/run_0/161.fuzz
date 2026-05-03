@@ -1,0 +1,8 @@
+#include <iostream>
+using std::endl;
+int main() {
+    std::string s;
+    std::cin >> s;
+    std::cout << "Hello, World!" << endl;
+    return 0;
+}

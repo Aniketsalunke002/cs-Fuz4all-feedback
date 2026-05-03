@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    const double PI = 3.14;
+    float const volume = PI * PI * PI / 6.0;
+    cout << "Volume = " << volume << endl;
+    return 0;
+}

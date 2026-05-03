@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    int x = 10;
+    cout << "x : " << x << endl;
+    int y = 20;
+    cout << "y : " << y << endl;
+    int z = 30;
+    cout << "z : " << z << endl;
+    x = 40;
+    cout << "x : " << x << endl;
+    y = y + 22;
+    cout << "y : " << y << endl;
+    z = y ++ + 20;
+    cout << "z : " << z << endl;
+    z = y ++ + 20

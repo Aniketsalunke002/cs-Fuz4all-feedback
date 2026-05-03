@@ -1,0 +1,8 @@
+#include <iostream>
+
+int main5() {
+    unsigned int a = 0;
+    std::cout << (a!= a) << "\n";
+    std::cout << a / a + 3 << "\n";
+    return a + 3;
+}

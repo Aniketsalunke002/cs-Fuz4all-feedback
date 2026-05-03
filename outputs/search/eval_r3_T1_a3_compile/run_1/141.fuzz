@@ -1,0 +1,7 @@
+#include <iostream>
+void f(signed char* p) {}
+
+int main(int argc, char* argv[]) {
+	f(0);
+	return 0;
+}

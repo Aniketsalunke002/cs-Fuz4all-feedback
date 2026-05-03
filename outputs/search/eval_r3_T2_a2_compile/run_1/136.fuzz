@@ -1,0 +1,19 @@
+#include <iostream>
+namespace fuzz {
+void mutate(char *&str, int index) {
+    if (str[index]!= 0) {
+        char next = str[index] + 1;
+        str[index] = (next > str[index])? 'a' : next;
+    }
+}
+}
+int main() {
+    char *test = "test";
+    int i = 0;
+    fuzz::mutate(test, i);
+    while (i <= 100) {
+        std::cout << test << i << std::endl;
+        ++i;
+    }
+    return 0;
+}

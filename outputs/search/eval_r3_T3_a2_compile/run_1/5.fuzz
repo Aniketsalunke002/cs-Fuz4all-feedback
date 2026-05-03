@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+void f()
+{
+    double a, *ap;
+    char c;
+    ap = &a;
+     
+     
+     
+     
+    c = *ap;
+     
+     
+    c = ap[0];
+     
+     
+     
+    c = ap[2];
+}

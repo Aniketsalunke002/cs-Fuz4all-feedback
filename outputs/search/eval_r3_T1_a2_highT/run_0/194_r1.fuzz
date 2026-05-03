@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+class A
+{
+public:
+    A(int i) : a(i) {}
+    int a;
+};
+class B : public A
+{
+public:
+    B(int i) : A(i)
+    {
+        b = i + 1;
+    }
+    int b;
+    int f() { return 3; }
+};
+int main()
+{
+    B *pr = new B(10);
+    cout << pr->f() << " " << pr->a << " " << pr->b << endl;
+    cout << pr->f() << " " << pr->a << " " << pr->b << endl;
+    return 0;
+}

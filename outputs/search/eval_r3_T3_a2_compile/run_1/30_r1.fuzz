@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+template<class T>
+class A
+{
+    private:
+        T iField1;
+        T iField2;
+	A(T i) {iField1= iField2= i;}
+    public:
+	A(const A &r): iField1(r.iField1-10),iField2(r.iField2-3){cout<<iField1<<' '<<iField2<<endl;}
+	A& operator=(const A&r)
+	{
+		iField1=r.iField1;
+		iField2=r.iField2+4;
+	}
+
+};
+int main()
+{
+	A<int> one(1000), two(one);
+	one=two;
+	return 0;
+}

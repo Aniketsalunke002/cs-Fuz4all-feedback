@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int i = 15;
+    int j = 25 - i - 3;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+    char i = 'a';
+    char j = i + 25 - 3;
+}

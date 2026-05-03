@@ -1,0 +1,55 @@
+#include <iostream>
+using namespace std;
+class Node {
+public:
+int data;Node *next,*child,*lastson;
+};
+int fred(Node *p)
+{
+	Node *q;
+	if (p == 0) q=0;
+	else q=p->next;
+	if (q==0) return 0;
+	q->lastson=0;p->child=q;p->lastson=p;
+		do
+			{
+				q=q->next;
+				if (q==0) return 0;
+				p->lastson=p;p=p->lastson;
+				p->child=q;p->lastson=p;
+			}
+		while (q->next!= 0);
+	p->lastson=0;p->child=0;p->lastson=p;return 0;
+}
+void add(Node *&h)
+{
+	Node *p,*q,*r;
+	h=new Node;h->next=0;q=h;
+	for (int x = 1; x < 8; x++) {
+		q->data = x;q->next = new Node; q = q->next;q->next = 0;
+	}
+p=new Node;p->child=0;p->lastson=p;q->next=p;p->next=q;q=p;
+q->child=p;q->data=8;p=new Node;p->child=0;p->lastson=p;
+q->next=p;q->child=p;p->next=q;p->data=7;if (h == 0) exit(1);
+r=new Node;r->data = 0;r->next = 0;
+while (h->next!= 0) h = h->next;
+h->next=r;r->child=q;r->lastson=p;r->data=9;fred(r);
+}
+void print(Node *h)
+{
+	Node *p;
+	fred(h);
+	p=h->lastson;
+	while (p!= 0) {
+		cout << p->data << " ";
+		p = p->lastson;
+	}
+	cout << endl;
+}
+int main()
+{
+	Node *head=0;
+	add(head);
+	print(head);
+}
+

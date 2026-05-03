@@ -1,0 +1,35 @@
+#include <iostream>
+#include <memory>
+class X 
+{
+public:
+	X(int* a) {
+		a_[0] = a;
+	}
+	~X() {
+		delete a_[0];
+	}
+private:
+	int* a_[100000000];
+	
+};
+
+int main()
+{
+	int* x = new int;
+	std::shared_ptr<X> y = std::make_shared<X>(x);
+	std::cout << "Hello world" << std::endl;
+	std::cout << x << std::endl;
+
+}
+ 
+
+ 
+
+
+int main()
+{
+	std::cout << "Hello world" << std::endl;
+}
+
+

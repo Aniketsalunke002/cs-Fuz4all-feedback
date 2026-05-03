@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+    double mileage = 102.3;
+    mileage = mileage + 1023;
+    std::cout << mileage << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() 
+{
+    int num = 100;
+    num = num + 1000000;
+    std::cout << num << std::endl;
+    return 0;
+}

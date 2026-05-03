@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+void do_it()
+{
+    cout.sync_with_stdio(0);
+}
+int main()
+{
+    do_it();
+    cout << cout.sync_with_stdio() << endl;
+}

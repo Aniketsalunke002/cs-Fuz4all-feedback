@@ -1,0 +1,12 @@
+#include <iostream>
+int main() {
+    int a[10][10], b[10][2];
+    for (auto i = 0; i < 10; i++)
+        for (auto j = 0; j < 10; j++)
+            a[i][j] = (int) ((i - j)*(i - j));
+    for (auto i = 0; i < 10; i++) {
+        for (auto j = 0; j < 2; j++)
+            b[i][j] = a[i][j];
+    }
+    return 0;
+}

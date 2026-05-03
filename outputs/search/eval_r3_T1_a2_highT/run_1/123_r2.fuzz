@@ -1,0 +1,24 @@
+#include <iostream>
+
+class Car
+{
+    public:          
+        Car()
+        {
+            this->color="Red";
+        }
+    int engineSize;
+    std::string engineType;
+    std::string color;
+};
+int main() {
+    Car c1;
+    c1.engineSize=1804;
+    c1.color="red";
+    cout << c1.color << endl;    
+    string s = "Test";
+    cout << s << endl;    
+    string t="Test";
+    cout << t << endl;
+    return 0;
+}

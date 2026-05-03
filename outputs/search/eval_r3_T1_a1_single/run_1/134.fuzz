@@ -1,0 +1,129 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x=5,y=9;
+    x++;
+    x++;
+    y*=2;
+    y*=2;
+    cout<<y;
+    return 0;   
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+
+void fun1()
+{
+    cout<<"Number of arguments: "<<4<<endl;
+}
+void fun2()
+{
+    cout<<"Number of arguments: "<<3<<endl;
+}
+void fun3()
+{
+    cout<<"Number of arguments: "<<2<<endl;
+}
+int main()
+{
+    fun1();
+    fun2();
+    fun3();
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a=0,b=0,c=0;
+    do
+    {
+        cout<<"Enter the value of a: ";
+        cin>>a;
+        cout<<"Enter the value of b: ";
+        cin>>b;
+        cout<<"Enter the value of c: ";
+        cin>>c;
+    }while(a!=0 && b!=0 && c!=0);
+    cout<<a+b+c;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x=0,n=0,p=0;
+    cout<<"Enter the number: ";
+    cin>>x;
+    n=2*x;
+    p=x*x+n;
+    cout<<p;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n=10;
+    cout<<"The value of positiven of "<<n<<" is "<<positive(n)<<endl;
+    return 0;
+}
+int positive(int x)
+{
+    if(x>0)
+    {
+        return x+positive(x-1);
+    }
+    else if(x<0)
+    {
+        return x+posi();
+    }
+    else
+    return 0;
+}
+ 
+#include <ios>
+#include <iostream>
+using namespace std;
+void foo(int)
+{
+    return;
+}
+void foo(int x,int,int,int,int)
+{
+    return;
+}
+void foo(int x,int y)
+{
+    cout<<x<<","<<y<<",";
+    foo(x,y,y,y,x);
+}
+void foo(int x,int y,int z)
+{
+    cout<<x<<","<<y<<","<<z<<",";
+    foo(x,y,z,y,x);
+}
+void foo(int x,int y,int z,int p)
+{
+    cout<<x<<","<<y<<","<<z<<","<<p<<",";
+    foo(x,y,z,p,y);
+}
+void foo(int x,int y,int z,int p,int q)
+{
+    cout<<x<<","<<y<<","<<z<<","<<p<<","<<q<<",";
+    foo(x,y,z,p,x);
+    foo(x,y,z,q,x);
+    foo(x,y,p,z,x);
+    foo(x,y,q,z,x);
+    foo(x,z,y,p,x);
+    foo(x,z,y,q,x);
+    foo(x,z,p,y,x);
+    foo(x,z,q,y,x);
+    foo(y,z,p,x,x);
+    foo(y,z,q,x,x);

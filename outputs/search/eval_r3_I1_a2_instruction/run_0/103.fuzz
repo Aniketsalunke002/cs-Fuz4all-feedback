@@ -1,0 +1,21 @@
+#include <iostream>
+    using namespace std;
+    int main() {
+        int i;
+        for (i=0; i<10; i++) {
+            if (!(i%2)) {
+                switch (0) {
+                    case 0:
+                        cout << "Even: " << i << "\n";
+                        break;
+                    case 1:
+                        printf("Odd: %d", i);
+                        break;
+                    default:
+                        cout << "Default";
+                }
+            }
+            printf("Hello!");
+        }
+        return 0;
+    }

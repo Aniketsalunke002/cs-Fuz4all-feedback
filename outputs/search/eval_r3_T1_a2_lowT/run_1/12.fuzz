@@ -1,0 +1,51 @@
+#include <iostream>
+class myclass
+{
+public:
+  myclass(void): _i(0)
+  {
+    std::cout << " default constructor called " << std::endl;
+  }
+  myclass(const myclass &t)
+  :_i(t._i)
+  {
+    std::cout << " copy constructor called " << std::endl;
+  }
+  int _i;
+};
+int main(int argc, char **argv)
+{
+  myclass x;
+  myclass y=x;
+  x._i=10;
+}
+ 
+#include<iostream>
+class myclass
+{
+public:
+  myclass(void): _i(0)
+  {
+    std::cout << " default constructor called " << std::endl;
+  }
+
+  myclass(const myclass& t):_i(t._i)
+  {
+    std::cout << " copy constructor called " << std::endl;
+  }
+
+  int _i;
+};
+int main(int argc, char **argv)
+{
+  myclass x;
+  myclass y{ x };
+  x._i=10;
+}
+<fim_middle>int main(int argc, char **argv)
+{
+  myclass x;
+  myclass y(x);
+  x._i=10;
+}
+

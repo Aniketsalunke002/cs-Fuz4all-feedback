@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a;
+	cout << "enter int (2): \n";
+	cin >> a; 
+	if ((a = a + 2) == 2) { 
+		--a;
+	}
+	cout << "int: " << a << endl; 
+	return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	float a;
+	cout << "enter float (3.14159): \n";
+	cin >> a;
+	float* p = &a;
+	float b[10];
+	int n;
+	cout << "enter float (546.1029): \n";
+	for (n = 0; n < 10; n++) {
+		cin >> b[n];
+		*p = b[n];
+		p++;
+	}
+	cout << "enter float(3.456): \n";
+	for (n = 0; n < 10; n++) {
+		cin >> b[n];
+		*p = b[n];
+		p--;
+	}
+	cout << "float: " << a << endl;
+	cout << "float: " << *p << endl;
+	cout << "float: " << b[0] << endl;
+	return 0;
+}

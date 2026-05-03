@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main4() {
+    struct data {
+        int a;
+    };
+    data d[10];
+    int n = 0,cnt = 0;
+    while(cnt < 10){
+        cin >> d[cnt].a;
+        cnt++;
+    }
+    int *ptr = d;
+    while(ptr->a > 0){
+        ptr += ptr->a;
+        cout << *ptr << endl;
+    }
+}

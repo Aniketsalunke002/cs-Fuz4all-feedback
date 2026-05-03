@@ -1,0 +1,31 @@
+#include <iostream>
+int getint();
+int main(int argc, char **argv) {
+  int elements = 3;
+  for (;;) {
+    int *elements = new int;
+    *elements = 0;
+    int old = *elements;
+    if (old < 0) {
+      std::cout << "? " << getint() << "\n";
+      delete elements;
+      elements = 0;
+      continue;
+    }
+    if (old == 0) {      
+      std::cout << "Last call of edit: " << *elements << "\n";
+      delete elements;
+      break;
+    }
+    else
+      std::cout << "" << *elements << " + " << getint() << " -> " << *elements + getint() << "\n";
+    *elements = *elements + getint();
+    std::cout << *elements << "\n";
+    delete elements;
+    if (elements == old) {
+      std::cout << "Last call of edit: " << *elements << "\n";
+      break;
+    }
+  }
+  return 0;
+}

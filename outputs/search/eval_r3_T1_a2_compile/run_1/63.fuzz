@@ -1,0 +1,85 @@
+#include <iostream>
+
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+  vector<int> data = { 3, 5, 2, 9, 12, 9, 7, 11 };
+  vector<int> unique_data;
+
+  std::unique_copy(data.cbegin(), data.cend(),
+                   std::back_inserter(unique_data));
+
+  for (auto&& x: unique_data) {
+    cout << x << " ";
+  }
+  std::cout << endl;
+
+  data = { 3, 5, 23, 5, 1, 23, 31, 2 };
+  unique_data.clear();
+  std::cout << data.size() << endl;
+  std::sort(data.cbegin(), data.cend());
+  std::unique_copy(data.crbegin(), data.crend(),
+                   std::back_inserter(unique_data));
+
+  std::cout << unique_data.size() << endl;
+
+  for (auto&& x : unique_data) {
+    cout << x << " ";
+  }
+  std::cout << endl;
+
+  return 0;
+}
+ 
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
+using namespace std;
+int main()
+{
+    std::string word;
+    int vowel_count=0;
+    std::cout<<"Enter a word :";
+    std::getline(cin >> ws, word);
+    for (int i=0; i<word.size(); i++)
+    {
+        switch (word[i])
+        {
+            case 'a' :
+            case 'e' :
+            case 'i' :
+            case 'o' :
+            case 'u' :
+                vowel_count++;
+                break;
+        }
+    }
+    std::cout<<vowel_count;
+}
+
+ 
+#include <iostream>
+#include <string.h>
+#include <cctype>
+bool IsPalindrome(char* word)
+{
+    int index1=0;
+    int index2=size(word[index2]);
+    while (index1<index2)
+    {
+        if(word[index1]==0 && word[index2]== 0)
+            return true;
+        if(tolower(word[index1])!=tolower(word[index2]))
+            return false;
+        index1++;
+        index2--;
+    }
+    return true;
+}
+int main()
+{
+   char word []="adada";
+    std::cout<< IsPalindrome(word);
+}

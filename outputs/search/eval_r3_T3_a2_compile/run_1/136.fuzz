@@ -1,0 +1,83 @@
+#include <iostream>
+std::ofstream out("out.txt", std::ofstream::out);
+out << 3;
+out.close();
+class Person {
+public:
+	Person(const char* n) {
+		name = n;;
+	}
+	std::string name;
+private:
+	friend std::ostream& operator<<(std::ostream& out, Person const& p);
+	friend std::ofstream& operator<<(std::ofstream& out, Person const& p);
+	friend std::ofstream& operator >> (std::ifstream& in, Person& p);
+	friend class Person;
+};
+std::ofstream& operator >>(std::ifstream& in, Person& p) {
+	 
+	out << p.name;
+	char tmp[10];
+	in.getline(tmp, 11, '\n');
+	p.name = tmp;
+	return in;
+};
+std::ostream& operator <<(std::ostream& out, Person const& p) {
+	std::cout << out << p.name;
+};
+std::ofstream& operator <<(std::ofstream& out, Person const& p) {
+	out << p.name;
+};
+int main() {
+	Person s("s");
+	s << std::endl;
+	std::cout << s;
+	std::ofstream out("out2.txt");
+	s >> out;
+	out.close();
+}
+ 
+ 
+ 
+ 
+void function() {
+	std::cout << "Hello" << std::endl;
+}
+void func2();
+int main() {
+	func2();
+	function();
+}
+std::string s;
+std::cout << "Please enter a string:";
+std::cin >> s;
+std::cout << s;
+std::cin.setstate(std::ios_base::badbit);
+s.clear();
+std::cout << "Please enter a string:";
+std::cin >> s;
+std::cin.get();
+std::cout << s;
+s.getline(s.begin(), s.end());
+std::cout << s;
+s.getline(s.begin(), s.end(), '*');
+std::cout << s;
+s.getline(s.begin(), s.end());
+std::cout << s;
+s.peek();
+std::cout << s;
+s.seekg(4,std::ios_base::end);
+s.peek();
+std::cout << s;
+s.seekg(1);
+s.peek();
+std::cout << s;
+std::cout << 'a' << '+' << 'b' << '=' << 'c' << '-' << 'd' << '=' << 'e';
+/*
+	&		Bitwise and	(x & y) = 0101 & 1011 = 0001 = 1
+	|		Bitwise or	(x | y) = 0101 | 1011 = 1111 = 15
+	^		Bitwise xor	(x ^ y) = 0101 ^ 1011 = 1110 = 14(15-2)
+	~		Bitwise not	(~x) =!x =-1010 = -10 = -6
+	<<		Bit shift left	(x << y) = Left 2 places, 0101 << 2 = 10100 = 12
+	>>		Bit shift right	(x >> y) = Right 2 places, 0101 >> 2 = 0010 = 2
+	&		Bitwise and	(x & y) = 0101 & 1011 = 0001 = 1

@@ -1,0 +1,12 @@
+#include <iostream>
+
+void do_it(int a)
+{
+    std::ostream::sentry sentry(std::cout);
+    exit(0);
+}
+int main()
+{
+    do_it(7);
+    std::cout << std::cout.rdbuf() << std::endl;
+}

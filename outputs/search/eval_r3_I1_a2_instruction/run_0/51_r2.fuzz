@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main(int argc, char**argv) {
+    int arr[] = {0,5,1,2,-3,-2,-1,4};
+    const int length = sizeof(arr)/sizeof(int);
+    if (length<=0)
+        return -1;
+    int tmp,p = 0;
+    for (int i=0; i<length; i++) {
+        if (i==length-1) continue;
+        for (int j=i+1; j<length; j++) {
+            tmp = arr[j];
+            arr[j] = arr[i];
+            arr[i] = tmp;
+            if (arr[i]>=arr[j]) {
+                tmp = arr[p];
+                arr[p] = arr[j];
+                arr[j] = tmp;
+                p = j;
+            }
+        }
+        for (int j=0; j<length; j++) {
+            cout << (arr[j]<<" ");
+        }
+        cout<<"----------"<<endl;
+    }
+}

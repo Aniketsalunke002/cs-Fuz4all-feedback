@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+class Car {
+  int car_color;
+  int car_length;
+  int car_width;
+
+  public:
+	int change(){
+		car_color = 7;
+		car_length = 20;
+		car_width = 15;
+		return car_color;
+    }
+    
+    int getCarWidth(){
+		return car_width;
+	}
+    
+	int getCarLength(){
+		return car_length;
+	}
+    
+    int getCarColor(){
+    	return car_color;
+    }
+    
+    double getCarArea() {
+		return car_width * car_length;
+	}
+    void printCarInfo() {
+		cout << "Car color is " << car_color << "Car length is " << car_length << ", Car width is " << car_width << "." << endl;
+	}
+};
+int main (){
+ Car car;
+  car.printCarInfo();   
+  car.change();
+  printf("Car Color is %d, Length is %d, Width is %d\n", car.getCarColor(), car.getCarLength(), car.getCarWidth());
+  double length = car.getCarHeight();
+
+  return 0;
+}

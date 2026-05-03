@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+template <typename T> class Point2D {
+  T x1, y1, x2, y2;
+};
+
+template <typename T>
+Point2D<T>::Point2D() {
+}
+
+template <typename T>
+Point2D<T>::Point2D(T a, T b) {
+  x1=a; y1=b;
+}
+
+template <typename T>
+Point2D<T>::~Point2D() {
+  cout << "x1,y1,x2,y2: " << x1 << ", " << y1 << ", "<< x2 << ", "<< y2<<endl;
+}
+
+template <typename T>
+Point2D<T>::~Point2D(T a, T b) {
+  x2=a; y2=b;
+}
+
+int main() {
+ Point2D<int> p;
+ p = Point2D();
+ return 0;
+}

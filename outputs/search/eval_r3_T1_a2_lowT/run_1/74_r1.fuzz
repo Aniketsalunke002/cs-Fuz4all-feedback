@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+void mutate(int *arr)
+{
+    cout << "mutate is called" << endl;
+    ++(*(arr+i));
+}
+int main(int argc, char** argv)
+{
+    cout << "start of main" << endl;
+    int a[1000000] = {100};
+    mutate(&a);
+    cout << "end of main" << endl;
+    return 0;
+}
+//

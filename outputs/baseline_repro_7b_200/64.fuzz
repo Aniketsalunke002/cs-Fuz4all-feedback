@@ -1,0 +1,8 @@
+#include <iostream>
+int i = 42;
+int main(void) {
+    if (i > 10) {
+        i = i * 2;
+    }
+    std::cout << "Hello world" << i++ << std::endl;
+}

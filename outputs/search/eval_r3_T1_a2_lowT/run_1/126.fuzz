@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int s[1024128*1024*1024], x=0;
+	for(int i=0; i < 1024128*1024*1024; i++) {
+		cin >> s[i];
+		if(s[i] > x) {
+			x = s[i];
+		}
+	}
+	cout << x << endl;
+	cout << 2 << endl;
+}

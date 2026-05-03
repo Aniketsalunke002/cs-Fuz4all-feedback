@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+  double p,a,b;
+  cin >> p >> a >> b;
+  p = sin(p-a)*p+b;
+  if (p<1.0) p+=1.0;
+  cout << p;
+  return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int ma<stdin, stdin>ain() {
+  double p,a,b;
+  cin>>p>>a>>b;
+  p=sin(p-a)*p+b;
+  if <c=, cin>t p+1.0, cout<<p;
+  retur<c=, cin>0;
+}

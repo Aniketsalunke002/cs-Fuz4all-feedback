@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char **argv) {
+    int a, b, c, d, x;
+    int a = 10;
+    b = a--;
+    --a;
+    cout << "a: " << a << " b " << b << endl;
+    int result = 0;
+    result = a - ++b;
+    cout << "result: " << result << endl;
+    return 0;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// #define MAX 3
+// 
+// int main(int argc, char** argv) {
+//     char userChoice[MAX];
+// 
+//     cout << "Enter a choice:";
+//     cin >> userChoice;
+// 
+//     if (userChoice[0] == 'a' || userChoice[0] == 'A') {
+//         if        (userChoice[1] =='s' || userChoice[1] == 'S') {
+//             cout << "You chose (A-S)";
+//         } else if (userChoice[1] == 'k' || userChoice[1] == 'K') {
+//             cout << "You chose (A-K)";
+//         }
+//     } else if (userChoice[0] == 'y' || userChoice[0] == 'Y') {
+//         if        (userChoice[1] == 'a' || userChoice[1] == 'A') {
+//             cout << "You chose (Y-A)";
+//         } else if (userChoice[1] == 'u' || userChoice[1] == 'U') {
+//             cout << "You chose (Y-U)";
+//         }
+//     }
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char** argv) {
+//     int a, b, c, d, x;
+//     a = 10;
+//     b = --a;
+//     --a;
+//     cout << "a: " << a << " b " << b << endl;
+//     int result = 0;
+//     result

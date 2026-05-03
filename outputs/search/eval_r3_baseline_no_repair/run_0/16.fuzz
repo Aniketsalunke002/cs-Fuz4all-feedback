@@ -1,0 +1,28 @@
+#include <iostream>
+int main(int argc, char* argv[])
+{
+    short n_bytes, i1, i2, i3, i4;
+    short* x1, *x3;
+    char* c1;
+    std::cout << "sizeof(x1)==" << sizeof(x1) << std::endl;
+    std::cin >> n_bytes;
+    x1 = (short*)  new short[n_bytes];
+    for (i3=0; i3<n_bytes; i3++) {
+        x1[i3] = 'A' + i3;
+    }
+    std::cout << "sizeof(x1)==" << sizeof(x1) << std::endl;
+    std::cout << "sizeof(char)==" << sizeof(c1) << std::endl;
+    c1 = (char*)x1;
+    for (i3=0; i3<n_bytes; i3++) {
+       c1[i3] += 4;
+    }
+ 
+    std::cout << "sizeof(x1)==" << sizeof(x1) << std::endl;
+
+    std::cin >> i1;
+    delete [] x1;
+ 
+ 
+    return 0;
+}
+

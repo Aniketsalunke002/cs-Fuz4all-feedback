@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+  cout << 3%2;
+  cout << 2%2;
+  return 0;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// typedef int MyInt;
+// int main()
+// {
+//   cout << 10 << endl;
+//   cout << 20 << endl;
+//   cout << 30 << endl;
+//   MyInt nums [] = {1,2,3,4,5,6,7,8,9,10};
+//   for(auto value : nums)
+//       cout << value << " ";
+//   return 0;
+// }
+// The problem was due to type "int main()", in order to solve the aforementioned problem, we need to make the
+// function name unique and rename it such that we can be able to run it. One solution is to append the type to the
+// main function name, which I do not like because in languages like C, "main" is just reserved name and cannot be used.
+// Another solution might be to put the code inside if statement around main function, but the solution might have some
+// unwanted side effects where the undesired function names might be executed like if main function is renamed, the code
+// that might belong to the main function might be removed as well; this solution might be very hard to follow because
+// when we rename the main function, we do not have a way of knowing which functions are associated with main function
+// but the code is inside of if statement, therefore if the compiler encounters code inside of if statement, it will
+// remove any code that is not associated with if statement. Another approach is to use macros to rename the main function
+// such that the function is unique:
+// #include <iostream>
+// using namespace std;
+// #define MAIN_A main();
+// #include 198.fuzz
+// The 198.fuzz contains the required code:
+#define MAIN_A do { std::cout << 10 << std::endl; std::cout << 20 << std::endl; std::cout << 30 << std::endl;} while(false);
+int main_a ()
+{
+  // CODE INSIDE MAIN_A FUNCTION //
+}
+int doctest

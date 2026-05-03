@@ -1,0 +1,29 @@
+#include <iostream>
+
+#include <vector>
+#include <climits>
+
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    int a, b, c, x;
+    cin >> a >> b >> c;
+    vector<int> aTmp = {a, b};
+    if (aTmp[0] % c == 0)
+    {
+        while (aTmp[1] % c!= 0)
+        {
+            aTmp[0] += b;
+            aTmp[0] %= c;
+            aTmp[1] += b;
+            aTmp[1] %= c;
+            vector<int>::iterator it = aTmp.begin();
+            if (--it == aTmp.begin())
+                return 0;
+        }
+        cout << "YES";
+    }
+    else
+        cout << "NO";
+}

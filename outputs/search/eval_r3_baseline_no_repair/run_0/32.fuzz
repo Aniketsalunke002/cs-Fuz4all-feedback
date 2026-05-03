@@ -1,0 +1,13 @@
+#include <iostream>
+int main()
+{
+    short x = 0;
+    short y = 100;
+    short n_bytes;
+    y = 4098;
+    n_bytes=x/y;
+    x=240;
+    short z = x/y;
+    std::cout << "Done" << std::endl;
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+int main()
+{
+    for (int i = 0; i < 5; i++)
+    {
+        cout << 'L';  
+    }
+    cout << '\n';
+    for (int i = 0; i < 10; i++)
+    {
+        cout << 'O';  
+    }
+    return 0;
+}

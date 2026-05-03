@@ -1,0 +1,15 @@
+#include <iostream>
+int main()
+{
+    int* ptr = new int{ 5 };
+
+    *ptr = 8;
+
+     
+
+    std::cout << *ptr << '\n';
+
+    return 0;
+}
+ 
+

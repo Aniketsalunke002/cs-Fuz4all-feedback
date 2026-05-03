@@ -1,0 +1,7 @@
+#include <iostream>
+int main(int argc, char *argv[], char *envp[]) {
+  std::vector<int> vec(10);
+  std::string str;
+  std::cin >> str;
+  return 0;
+}

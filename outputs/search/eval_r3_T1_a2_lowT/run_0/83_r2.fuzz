@@ -1,0 +1,40 @@
+#include <iostream>
+
+int main()
+{
+    std::cout << "HelLO";
+    int y = 30;
+    std::cout << "Hello";
+}
+
+class Persion
+{
+    public:
+    char name[100];
+};
+
+class C++Programmer:public Persion
+{
+    private:
+    char gender[50];
+    std::string country;
+    public:
+    std::string get_Gender(){return gender;}
+    void set_Gender(char x[]);
+};
+
+void C++Programmer::set_Gender(char x[])
+{
+    std::cout << "Entering gender";
+}
+
+void print_something()
+{
+    std::cout << "HI";
+    system("pause");
+}
+
+void C++Programmer::set_Name(char x[])
+{
+    std::cout << "Entering your name";
+}

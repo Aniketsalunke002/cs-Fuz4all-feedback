@@ -1,0 +1,10 @@
+#include <iostream>
+ using namespace std;
+int main() 
+{
+	float a;
+	for(a=0; a<5.5;){
+		cout<<a<<'\t';
+		a = a+0.02;
+	}
+}<jupyter_output><empty_output>

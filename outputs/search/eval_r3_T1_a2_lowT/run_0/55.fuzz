@@ -1,0 +1,29 @@
+#include <iostream>
+void do_it()
+{
+    std::ios::sync_with_stdio(false);
+}
+int main()
+{
+    do_it();
+    std::cout << std::cout.sync_with_stdio(0) << std::endl;
+}
+ 
+#include <iostream>
+void do_it()
+{
+    std::cin.sync_with_stdio(false);
+}
+int main()
+{
+    do_it();
+    std::cin << std::cin.sync_with_stdio(0) << std::endl;
+}
+ 
+#include <iostream>
+int main()
+{
+    std::cout << std::numeric_limits<char>::digits;
+    std::cin << std::numeric_limits<int>::digits;
+    return 0;
+}

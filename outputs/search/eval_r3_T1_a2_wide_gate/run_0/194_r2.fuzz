@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+void foo(const char *b){cout<<"Inside the function"<<endl;}
+int main(){
+  char a[]="Volvo FV400",b[]="volvo xC200";
+  foo(b);  
+  a[6]='B';
+  foo(a);  
+  cout<<b<<endl;
+  myfoo(b);
+  cout<<a<<endl;
+ 
+  return 0;
+}

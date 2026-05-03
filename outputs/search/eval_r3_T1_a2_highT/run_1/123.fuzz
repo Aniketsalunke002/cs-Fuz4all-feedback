@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int main() {
+    bool a1=(bool) std::string("t") [0];
+    cout << a1 << endl;
+    bool a2=(bool) std::string("T") [0];
+    cout << a2 << endl;
+
+    int i1= (bool) std::string("1") [0];
+    cout << i1 << endl;
+
+    char c=(bool) std::string("f") [0];
+    cout << c << endl;
+
+     
+    
+    return 0;
+}
+ 
+#include <iostream>
+class Car
+{
+    public:
+         
+        Car()
+        {
+            this->color="Red";
+        }
+    int engineSize;
+    std::string engineType;
+    std::string color;
+};
+int main() {
+    Car c1;
+    c1.engineSize=1804;
+    c1.color="red";
+    cout << c1.color << endl;    
+    string s = "Test";
+    cout << s << endl;    
+    string t="Test";
+    cout << t << endl;
+    return 0;
+}
+ 
+
+
+

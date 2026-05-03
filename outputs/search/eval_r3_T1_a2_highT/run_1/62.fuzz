@@ -1,0 +1,27 @@
+#include <iostream>
+int main() {
+	int mut_var=1;
+	do {
+		std::string s;
+		std::cin >> s;
+		size_t idx;
+		if (!std::cin) {
+			std::cerr << "Got error: '" << std::cin.rdstate() << "'" << std::endl;
+			break;
+		} else {
+			if (s.compare("1")==0) {
+				printf("%d: [1] [1] is live!\n", mut_var);
+				idx=s.find("1");
+				s.erase(idx,1);
+				std::cout<<"The remaining ones: ";
+				printf("%s\n", s.c_str());
+			}
+			if (s.compare("0")==0) {
+				printf("%d: [1] [0] is live!\n", mut_var);
+			}
+		}
+		mut_var = atoi(s.c_str());
+	} while (mut_var!= 0);
+	
+	return 0;
+}

@@ -1,0 +1,7 @@
+#include <iostream>
+int main() {
+	long double t_char_1 = 3.14159;
+	long double t_char_2 = 2.7;
+	std::cout << (t_char_1 > t_char_2);
+	return 0;
+}

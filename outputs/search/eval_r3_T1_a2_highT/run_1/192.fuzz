@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int input;
+	cin >> input;
+	cout << "Value is : " << -3 * input << "\n"
+	 << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+	char input;
+	cin >> input;
+	if input == 'a' || input == 'e' || input == 'i' || input == 'o' || input == 'u' || input == 'y' {
+		cout << "You may use it.\n";
+	} else {
+		cout << "You may not use it.\n";
+	}
+} 

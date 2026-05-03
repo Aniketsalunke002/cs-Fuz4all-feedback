@@ -1,0 +1,27 @@
+#include <iostream>
+int main()
+{
+    double d = 3.14;
+    std::cout << std::fixed << "PI : " << d << "\n";
+}
+ 
+#include <exception>
+#include <iostream>
+struct MyException {
+    char *msg;
+};
+ 
+int myFun()
+{
+    if (5 > 0) {
+        throw new MyException {"This message won't do.\n"};
+    } else {
+        return 0;
+    }
+}
+int main()
+{
+    try {
+        int result = myFun();
+        std::cout << "MyFun's return value was: " << result << "\n";
+    } catch (...) {

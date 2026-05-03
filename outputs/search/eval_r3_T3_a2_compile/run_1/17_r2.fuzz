@@ -1,0 +1,67 @@
+#include <iostream>
+
+using namespace std;
+class IntContainer
+{
+    public:
+	IntContainer(int *pI): iField(pI)
+	    {  }
+	IntContainer(const IntContainer &r): iField(r.iField)
+	    {  }
+    private:
+	int *iField;
+};
+int main()
+{
+    int iValue=777;
+    IntContainer one(&iValue), two(one);
+    std::cout << "Size of one:  " << sizeof(one) << std::endl;
+    std::cout << "Size of two:  " << sizeof(two) << std::endl;
+    return 0;
+}
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+	int iField{777};
+	A(): iField(777)
+	    {  }
+	A(const A &r): iField(r.iField+1)
+	   {  }
+};
+int main()
+{
+    A one, two(one);
+    std::cout << "Size of one:  " << sizeof(one) << std::endl;
+    std::cout << "Size of two:  " << sizeof(two) << std::endl;
+    return 0;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// class IntContainer
+// {
+//     public:
+// 	IntContainer(int* pI): iField(pI)
+// 	    {  }
+// 	IntContainer(const IntContainer &r): iField(r.iField)
+// 	    {  }
+//     private:
+// 	int* iField;
+// };
+// class A
+// {
+//     public:
+// 	int iField{777};
+// 	A(): iField(777)
+// 	    {  }
+// 	A(const A &r): iField(r.iField+1)
+// 	   {  }
+// };
+// int main()
+// {
+//     int iValue=777;
+//     IntContainer one(&iValue), two(one);
+//     A three, four(three);
+//     cout << "Size of one:  " << sizeof

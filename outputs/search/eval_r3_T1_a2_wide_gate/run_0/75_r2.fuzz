@@ -1,0 +1,12 @@
+#include <iostream>
+
+
+int main()
+{
+	int age = 10;
+	int marks = 100;
+
+	std::cout << "My Age : " << age << std::endl;
+	std::cout << "My Marks : " << marks << std::endl;
+	return 0;
+}

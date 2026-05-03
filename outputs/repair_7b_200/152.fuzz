@@ -1,0 +1,6 @@
+#include <iostream>
+int main()
+{
+    float y = 5.67;
+    std::cout << (y * 10) / 2 << "\n";  
+}

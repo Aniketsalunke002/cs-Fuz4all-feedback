@@ -1,0 +1,15 @@
+#include <iostream>
+
+int f(int x) {
+	return x % 20;
+}
+
+int main() {
+	std::cin >> 2;
+	int x = 5;
+	do {
+		std :: cout << x << " ";
+		x= f(x);
+		++x;
+	} while(x<50);
+}

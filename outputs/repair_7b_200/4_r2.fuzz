@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    cout << "Hello, C++!" << endl;
+    cout << "Here the code of a very short program." << endl;
+    return 0;
+}
+
+#endif
+
+// The problem of using std::cout is that we don’t know in advance which stream will
+// be used, so we need to be able to use different streams (or none at all, e.g.
+// when dealing with files).

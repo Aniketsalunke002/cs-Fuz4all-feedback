@@ -1,0 +1,17 @@
+#include <iostream>
+
+#include <vector>
+#include <cmath>
+#include <iomanip>
+#include <algorithm>
+#include <tuple>
+#include <string>
+#include <filesystem>
+namespace fs = std::filesystem;
+int main() {
+  fs::path a;
+  std::cout << a.root_path().generic_string() << std::endl;
+  a.remove_filename();
+  std::cout << a.generic_string()<< std::endl;
+  return 0;
+}

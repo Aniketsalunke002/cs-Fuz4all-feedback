@@ -1,0 +1,60 @@
+#include <iostream>
+using namespace std;
+struct Point
+{
+    Point(int,int);
+    int x;
+    int y;
+};
+Point::Point(int val1,int val2)
+{
+    x = val1;
+    y = val2;
+}
+class ImmutablePoint :public Point
+{
+    public:
+        ImmutablePoint(int,int);
+        void printPoint();
+};
+ImmutablePoint::ImmutablePoint(int val1,int val2) :Point(val1,val2)
+{
+}
+void ImmutablePoint::printPoint()
+{
+    cout << x << " " << y << endl;
+}
+int main()
+{
+    ImmutablePoint iPoint(50,48);
+    iPoint.printPoint();
+}
+ 
+class DefaultConstructor
+{
+    public:
+        DefaultConstructor()
+        {
+        }
+};
+int main()
+{
+    cout << (sizeof(DefaultConstructor))<<endl;
+}
+ 
+class CopyConstructor
+{
+    public:
+        CopyConstructor(CopyConstructor const&);
+};
+CopyConstructor::CopyConstructor(CopyConstructor const &)
+{
+}
+int main()
+{
+    cout << (sizeof(CopyConstructor))<<endl;
+}
+ 
+ 
+ 
+ 

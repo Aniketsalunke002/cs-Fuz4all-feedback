@@ -1,0 +1,84 @@
+#include <iostream>
+using namespace std;
+template<typename T> void edit_and_save(T& elements) {
+  int value = 0;
+  cout << "enter value: ";
+  cin >> value;
+  cout << elements << ": change to " << (elements + value) << ": ";
+  cout << elements = (elements + value) << endl;
+  edit_and_save(elements);
+}
+int main() {
+  int x = 100;
+  edit_and_save(x);
+}
+ 
+#include <iostream>
+using namespace std;
+template <typename T> void edit_and_save(T elements) {
+  int value = getint();
+  cout << elements << ": change to " << (elements + value) << ": ";
+  cout << elements = (elements + value) << endl;
+  edit_and_save(elements);
+}
+int main() {
+  int x = 100;
+  edit_and_save(x);
+}
+ 
+#include <iostream>
+using namespace std;
+template <typename T> void edit_and_save(T elements) {
+  int value = getint();
+  cout << elements << ": change to " << (elements + value) << ": ";
+  cout << elements = (elements + value) << endl;
+  cin >> value;
+  cout << elements << " (next change) ";
+  edit_and_save(elements);
+}
+int main() {
+  int x = 100;
+  edit_and_save(x);
+}
+
+class Point {
+  double x,y; 
+  public: 
+  Point (double x_,double y_):x{x_},y{y_}{}
+  Point add_xy (Point);
+  friend Point add_xy_two (Point,Point);
+};
+
+ 
+Point Point::add_xy(Point point) {
+  return Point(x+point.x,y+point.y);
+}
+
+ 
+Point add_xy_two (Point point1, Point point2) {
+  return Point(point1.x+point2.x,point1.y+point2.y);
+}
+
+ 
+ 
+Point& Point::add_xy_rref (Point point) {
+    x += point.x; y += point.y;
+    return *this;
+  }
+  
+   
+Point point1(1.1, 2.3), point2(1.3, 5.1), point3;
+   
+  cout << point1.add_xy(point2).x;
+  
+   
+  Point point4 = add_xy_two(point1, point2);
+  cout << point4.x;
+  
+   
+  point1.add_xy_rref(point2);
+  
+   
+  point3 = point1.add_xy_rref(point2);
+  
+  return 0;

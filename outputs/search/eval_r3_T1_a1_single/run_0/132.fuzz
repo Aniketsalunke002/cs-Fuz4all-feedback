@@ -1,0 +1,9 @@
+#include <iostream>
+#include <random>
+#include <ctime>
+int main() {
+  std::mt19937 seed(int(time(0)));
+  std::uniform_real_distribution<> random(30.0f, 35.0f);
+  std::cout << random(seed);
+  return 0;
+}

@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+   int c=0;
+   if(5 > 2){
+        cout << "a";
+   }
+   if(5 > 2){
+        cout << "b";  
+   }
+   if(5 > 2){       
+        c = 3;   
+   }else if(5 == 2){
+        c = 2;
+   }else if(5 > 2){
+        c = 1;
+   }    
+   if(c == 3){
+        cout << "c";
+   }
+   cout << " ";
+   if(c == 2){
+        cout << "d";
+   }
+   cout << " ";
+   if(c == 1){
+        cout << "e";
+   }
+   cout << "\n";
+   c++;
+   return 0;
+}

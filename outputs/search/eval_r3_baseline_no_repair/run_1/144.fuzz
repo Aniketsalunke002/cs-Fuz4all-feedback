@@ -1,0 +1,127 @@
+#include <iostream>
+class C {};
+C c1;
+C c2 = c1;
+const C c3 = c1;
+long c4{c1};
+C *pC{&c1};
+int main() {
+  C c5(c1);
+  C *pC2{&c1};
+  const C c6{c1, c2};
+  C c7;
+  C c8 = c7;
+  const C c9 = c7;
+  const C c10(c7, c8);
+  std::cout << sizeof(c1) << '\n';
+  std::cout << sizeof(const int) << '\n';
+  return 0;
+}
+ 
+#include <vector>
+#include <thread>
+#include <mutex>
+#include <functional>
+int main(void) {
+  std::vector<std::thread> threads;
+  for (unsigned i = 0; i < 4; ++i) {
+    threads.push_back(std::thread([]() {
+      std::lock_guard<std::mutex> guard(std::cout.get_mutex());
+      std::cout << '.' << std::flush;
+    }));
+  }
+  for (auto &th : threads) {
+    if (th.joinable()) {
+      th.join();
+    }
+  }
+  return 0;
+}
+ 
+ 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+template<typename T>
+class Signal
+{
+public:
+    void raise(const T& value)
+    {
+         
+         
+        for (auto observer : callbacks)
+        {
+            observer(value);
+        }
+    }
+
+public:
+    void attach(const std::function<void(const T&)>& callback)
+    {
+        callbacks.push_back(callback);
+    }
+
+private:
+    std::vector<std::function<void(const T&)>> callbacks;
+
+};
+
+ 
+Signal<int> someSignal;
+
+ 
+void printer(int value)
+{
+    std::cout << "Hello Observer : " << value << std::endl;
+}
+
+int main()
+{
+    std::cout << "-- Registering CallBack to our Signal. --" << std::endl;
+     
+    someSignal.attach([] (int value) {
+        std::cout << "Hello Observer : " << value << std::endl;
+    });
+
+    someSignal.attach(printer);
+
+     
+    std::cout << "-- Doing Some Stuff. --" << std::endl;
+    someSignal.raise(69);   
+
+    std::cout << "-- Unregistering Observers. --" << std::endl;
+    someSignal.detach([](int value) {
+        std::cout << "Hey, no one is not observing anymore..." << std::endl;
+    });
+
+    someSignal.detach(printer);
+
+     
+    someSignal.raise(42);
+}
+
+ 
+#include <iostream>
+#include <vector>
+#include <algorithm>
+template <class Value>
+class Signal
+{
+public:
+    void raise(const Value& value)
+    {
+        for (auto cb : m_observers)
+            cb(value);
+    }
+
+public:
+    void attach(const std::function<void(const Value&)>& observer)
+    {
+        m_observers.push_back(observer);
+    }
+
+    void detach(const std::function<void(const Value&)>& observer)
+    {
+        m_observers.erase(std::find(m_observers.begin(), m_observers.end(), observer));
+   

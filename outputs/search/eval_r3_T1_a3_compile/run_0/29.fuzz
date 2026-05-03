@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string string1("abcdefgAB");
+    cout << string1;
+    reverse(string1.begin(), string1.end());
+    cout << string1;
+    cout << count(string1.begin(), string1.end(), 'D');
+    cout << *find(string1.begin(), string1.end(), 'E');
+    return 0;
+}
+
+#include <deque>
+using namespace std;
+int main() {
+    try {
+      string s("123xyz123");
+      stringstream ss(s);
+      deque<string> s_list;
+      string word;
+      while (!ss.eof()) {
+          ss >> word;
+          s_list.push_back(word);
+      }
+      cout << s_list.size();
+      for_each(s_list.begin(), s_list.end(), [](auto i) {cout << i;});
+    }
+    catch (std::exception e) {
+      cout << e.what();  
+    }
+
+    return 0;
+}

@@ -1,0 +1,11 @@
+#include <iostream>
+
+#include <cstdlib>
+#include <conio.h>
+#include <windows.h>
+#include "tictactoe.h"
+using namespace std;
+class board
+{
+    public:
+    char map[3][3]={'1','2','3','0','

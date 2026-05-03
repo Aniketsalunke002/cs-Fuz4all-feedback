@@ -1,0 +1,8 @@
+#include <iostream>
+int foo (){}
+int main ()
+{
+	size_t sizearr = sizeof(foo());
+	char charr[sizearr];
+	return 0;
+}

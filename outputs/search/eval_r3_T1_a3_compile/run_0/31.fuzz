@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string str1("Hello!"), str2("HeLLo!"), str3;
+    str3 = str1 + str2;
+    cout << str3;
+    return 0;
+}
+ 
+#include <iostream>
+#include <fstream>
+using namespace std;
+void insertElement(int a[], int &length, int value){
+    if (length < 100){
+        a[length++] = value;
+        return;
+    }
+    cout << "Error! Array is full";
+}
+void displayArray(int a[], int length){
+    while(length--){
+        cout << a[length] << " ";
+    }
+    cout << endl;
+}
+int main(){
+    int a[] = {0,1,2,3,4,5,6,7,8,9}, index, value;
+    ofstream out("numbers.txt");
+    cout << "Original array" << endl;
+    displayArray(a, 10);
+    index = 0;
+    while(index < 10){
+        value = input();
+        insertElement(a,index,value);
+        index++;
+    }
+    cout << "New array" << endl;
+    displayArray(a,10);
+
+
+    return 0;
+}

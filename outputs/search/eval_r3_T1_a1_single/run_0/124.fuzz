@@ -1,0 +1,14 @@
+#include <iostream>
+int main ()
+{
+    int input;
+    std::cout << "please enter any integer (0 ~ 10)";
+    std::cin >> input;
+
+    if (input % 2 == 0)
+        std::cout << "the integer is even";
+    else
+        std::cout << "the integer is odd";
+
+    return 0;
+}

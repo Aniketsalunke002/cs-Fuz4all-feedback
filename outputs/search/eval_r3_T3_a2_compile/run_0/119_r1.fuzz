@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	const int i=1;
+	const char *s="test";
+	cout<<i;
+	cout<<s;
+	const char *t=s+1;
+	cout<<t;
+	t[1]+='a';  
+	cout<<'/'<<endl;
+	const int n = 5;
+	const float *arr;
+	arr = new float [n];
+	delete [] arr;
+	arr = (float *) new void[n];  
+	delete [] arr;
+	typedef const int * const int * cpii;
+	int m[4];
+	cpii d = m;  
+	
+	return 0;
+}
+//  
+//  
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+// 	void swap(int a, int b, int c)
+// 	{
+// 		int temp = a;
+// 		a = b;
+// 		b = c;
+// 		c = temp;
+// 	}
+// 	return 0;
+// }

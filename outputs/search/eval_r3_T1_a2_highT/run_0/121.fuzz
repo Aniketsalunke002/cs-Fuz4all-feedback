@@ -1,0 +1,17 @@
+#include <iostream>
+std::ostream& operator<<(std::ostream& ost, const std::string& lhs) {
+    ost << "\"{";
+    for (const char c : lhs) {
+        ost << c;
+        if (c == '\\') {
+            ost << '\\';
+        }
+    }
+    return ost << "}\"" << "\n";
+}
+
+int main() {
+    std::string ctest{"Hello World"};
+    std::cout << ctest;
+    return 0;
+}

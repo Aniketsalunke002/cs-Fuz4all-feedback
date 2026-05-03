@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+class base {
+	private:
+		int a;
+	protected:
+		float b;
+	public:
+		friend void fun(base* ob);
+};
+void fun(base* ob) {
+	ob->a = 100;
+	ob->b = 100.5;
+	cout << ob->a << endl;
+	cout << ob->b << endl;
+	return;
+}
+int main(int argc, char* argv[]) {
+	base ob;
+	ob.a = 5;
+	ob.b = 12;
+	cout << ob.a << endl;
+	cout << ob.b << endl;
+	fun(&ob);
+	cout << ob.a << endl;
+	cout << ob.b << endl;
+	return 0;
+}

@@ -1,0 +1,58 @@
+#include <iostream>
+using namespace std;
+#define MAX 3
+#define N 5
+auto func(int a[], int *b) -> auto {
+    int c[MAX];
+    for (auto i = 0; i < sizeof(c) / sizeof(int); ++i) {
+        c[i] = a[i] & (*b);
+        ++b;
+    }
+    return c;
+}
+int main(int argc, char **argv) {
+    if (argc!= N - 1) {
+        return -1;
+    }
+    int a[MAX];
+    for (auto i = 0; i < sizeof(a) / sizeof(int); ++i) {
+        cin >> a[i];
+    }
+    int b[N - 1] = {0, };
+    for (auto i = 0; i < N - 1; ++i) {
+        cin >> b[i];
+    }
+    func(a, b);
+} 
+
+#include <iostream>
+using namespace std;
+#define MAX 3
+#define N 3
+auto func(int a[MAX], int b[N - 1], int *c) -> auto {
+    for (auto i = 0; i < MAX; ++i) {
+        if (i > 0) {
+            auto d = 0;
+            int e[MAX - 1] = {0};
+            for (auto j = 0; j < MAX; ++j) {
+                d = j == i? 0 : b[j];
+                
+                e[j] = a[i] & d;
+            }
+            *c = a[i] & e[0]; 
+        }
+    }
+    return c[0];
+}
+int main(int argc, char **argv) {
+    if (argc!= N - 1) {
+        return -1;
+    }
+    for (auto i = 0; i < sizeof(a) / sizeof(int); ++i) {
+        cin >> a[i];
+    }
+    for (auto i = 0; i < N - 1; ++i) {
+        cin >> b[i];
+    }
+    return func(a, b);
+}

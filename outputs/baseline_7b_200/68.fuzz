@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main(){
+  int a[5]={42,69,98,87, 65};
+  int i=2;
+  cout<<a[i]<<endl;
+  while(i>0){
+    --i;
+    cout<<a[i]<<endl;
+  }
+  
+}

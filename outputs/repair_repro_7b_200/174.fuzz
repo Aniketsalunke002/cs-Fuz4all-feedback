@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class Node {
+    int val;
+    friend constexpr auto f(Node*);
+public:
+    constexpr Node(int v) : val(v) {}
+    constexpr int getVal() const {
+        return val;
+    }
+};
+std::cout << Node(42).getVal() << '\n';
+constexpr Node f(Node* p) {
+    return { p->getVal()  };
+}
+int main(void) {
+    Node ptr(99);
+    return 0;
+}

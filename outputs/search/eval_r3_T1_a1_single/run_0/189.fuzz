@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+  std::cout << std::ios::hex;
+  for (unsigned a = 0; a < 65536 * 1024; a++) std::cout << a;
+  return 0;
+}
+
+#endif

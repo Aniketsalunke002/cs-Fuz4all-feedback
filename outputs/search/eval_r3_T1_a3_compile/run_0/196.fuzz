@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    double d1 {0};
+    d1=3.141592653589793;
+    cout << 4*d1+289 << endl;
+    return 0;
+}

@@ -1,0 +1,52 @@
+#include <iostream>
+using std::cout;
+class Parent {
+public:
+	virtual void virtual_method(void) = 0;
+};
+class Child : public Parent {
+public:
+	void virtual_method(void) override;
+};
+void Child::virtual_method(void) {
+	cout << "override" << std::endl;
+}
+int main(void) {
+	Parent* parent = new Parent;
+	Child child;
+	child.virtual_method();
+	return 0;
+}
+ 
+#include <iostream>
+using std::cout;
+#include <vector>
+using std::vector;
+vector<int> filter_vector(vector<int>& vector_in, vector<int>& test_vector) {
+	 
+	vector<int> inter_vector{};
+	for (int i:test_vector) {
+		if (vector_in.find(i)!= vector_in.end()) {
+			inter_vector.push_back(i);
+		}
+	}
+
+	 
+	vector<int> output_vector{};
+	for (int i : vector_in) {
+		if (inter_vector.find(i)!= inter_vector.end()) {
+			output_vector.push_back(i);
+		}
+	}
+	return output_vector;
+}
+int main(void) {
+	vector<int> vector_in{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+	vector<int> test_vector{ 5, 7, 9 };
+	vector<int> out{ filter_vector(vector_in, test_vector) };
+	for (int i : out) {
+		cout << i << " ";
+	}
+	cout << std::endl;
+	return 0;
+}

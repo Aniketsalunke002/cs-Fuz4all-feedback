@@ -1,0 +1,81 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+
+class Student
+{
+	string name;
+	int roll;
+public:
+	void setData();
+	void showData();
+};
+
+void Student::setData()
+{
+	cout << "Please Enter your name:\t";
+	getline(cin, name);
+
+	cout << "Enter Roll No:\t";
+	cin >> roll;
+}
+
+void Student::showData()
+{
+	cout << "Name:\t" << name << "\n";
+	cout << "Roll:\t" << roll << endl;
+}
+
+int main()
+{    
+	for (int i = 0; i < 10; i++)
+	{
+		cout << "No of students:" << i << endl;
+		Student obj;
+		obj.setData();
+		obj.showData();
+	}
+}
+
+// Compile command:
+// g++ 34.cpp -o 34.fuzz
+//
+// Execution command:
+//./34.fuzz
+//
+// Output:
+// No of students:0
+// Please Enter your name:	
+// Enter Roll No:	101
+// Name:	
+// Roll:	101
+// No of students:1
+// Please Enter your name:	Aniket
+// Enter Roll No:	102
+// Name:	Aniket
+// Roll:	102
+// No of students:2
+// Please Enter your name:	
+// Enter Roll No:	103
+// Name:	
+// Roll:	103
+// No of students:3
+// Please Enter your name:	Aniket
+// Enter Roll No:	104
+// Name:	Aniket
+// Roll:	104
+// No of students:4
+// Please Enter your name:	
+// Enter Roll No:	105
+// Name:	
+// Roll:	105
+// No of students:5
+// Please Enter your name:	Aniket
+// Enter Roll No:	106
+// Name:	Aniket
+// Roll:	106
+// No of students:6
+// Please Enter your name:	
+// Enter Roll No:	107
+//

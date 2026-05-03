@@ -1,0 +1,21 @@
+#include <iostream>
+int main()
+{
+    std::string str("hello, world");
+    char p;
+    bool b1=str.empty();
+    bool b2;
+    b2=str.size();
+    p=str[0];
+    std::cout<<p<<std::endl;
+    if(b1==true and b2)
+    {
+        str[2]='o';
+        std::cout<<str<<std::endl;
+    }
+    if(b2>60)
+    {
+        std::cout<<"too many digits";
+    }
+}
+ 

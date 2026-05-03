@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int num,num2;
+    int i = 0;
+    int j = 0;
+    while (true) {
+        cin >> num;
+        if (num==0) {
+            break;
+        }
+        num2 = num;
+        j = 1;
+        while (j<=num) {
+            cout << "Number : " << num2 << " times " << j <<" : " << num * j++ << endl;
+        }
+    }
+}

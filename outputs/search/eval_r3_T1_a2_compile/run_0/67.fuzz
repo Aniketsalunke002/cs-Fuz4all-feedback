@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    const char message  []= "hello world";
+    const char firstname []= "Max";
+    const char lastname  []= "Mustermann";
+    cout << firstname << " " << lastname <<" says: "<< message<<"!" << endl;
+    return 0;
+}
+

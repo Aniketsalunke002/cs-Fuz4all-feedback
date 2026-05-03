@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main( int argc, char **argv ){
+  int a = 1;
+  if( a > 0 ) a++;
+  for(int i = 0; i< argc; i++){
+    a*= 2;
+  }
+  a= a+ 1;
+  cout << a;
+}

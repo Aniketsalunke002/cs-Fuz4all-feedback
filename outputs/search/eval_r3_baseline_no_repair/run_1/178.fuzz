@@ -1,0 +1,57 @@
+#include <iostream>
+void mut() {
+  std::cout << "Mutant: Hello, World!" << std::endl;
+}
+
+int main() {
+  mut();
+  return 0;
+}
+ 
+typedef struct node_st {
+ const char *name;
+ struct node_st *children;
+ struct node_st *next;
+} node;
+
+struct token_st {
+ const char *name;  
+ const char *text;  
+}
+
+node *parse() {  
+ node *root = NULL;  
+ node *node = NULL;  
+ node *left = NULL;  
+ node *right = NULL;  
+ token token;  
+ 
+  
+ if (token_read(token)) {
+   if (token.name[0] == '(') {  
+     token_read(token);
+     
+      
+     node = new node_st;
+     node->name = token.name[0];
+     
+      
+     if (token.name[0] == ')') {  
+       left = NULL;
+       right = NULL;
+     }
+     else {
+ 
+       left = NULL;  
+       right = parse();
+     }
+   }
+
+    
+ }
+
+ return (root);
+}
+
+
+

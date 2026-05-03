@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int a=210;
+    while(a%2==0&&a%7==0){
+	a*=2;
+    }
+    cout<<a<<"\n";
+}
+
+ 
+
+for x in open(stdin):
+    print(x.rstrip());
+
+ 

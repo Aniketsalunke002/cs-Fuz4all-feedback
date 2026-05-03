@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+class Node {
+    int val;
+public:
+    Node(int v) : val(v) {}
+    int getVal() const {
+        return val;
+    }
+};
+Node f(const Node* p) {
+    return { p->getVal(), p };
+}
+int main(int argc, const char** argv) {
+    Node ptr(99);
+    auto np{ &f(&ptr) };
+    cout << np.getVal() << '\n';
+    return 0;
+}
+// Compiler error is gone.

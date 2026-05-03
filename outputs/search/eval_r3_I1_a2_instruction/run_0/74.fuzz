@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int arr [15] = { 0, -1, 2, 3, 2, 8, 4, 7, 4, 10, 13, 14, 12, 45 };
+    int i, j;
+    for (i = 0; i < 15; i++)
+        for (j = i + 1; j < 15; j++) {
+            if (arr[i] == arr[j]) {
+                cout <<arr[i]<< " ";
+                arr[i] = 888888;
+                arr[j] = 999999;
+            }
+        }
+    return 0;
+}

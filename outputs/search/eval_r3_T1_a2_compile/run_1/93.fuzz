@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int onePlusOne() {
+  return 2;
+}
+
+int main() {
+  int a=onePlusOne();
+  cout<<a<<endl;
+}

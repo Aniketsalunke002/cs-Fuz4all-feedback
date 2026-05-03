@@ -1,0 +1,21 @@
+#include <iostream>
+namespace {
+int h;
+}
+int main(){
+  int a,b,c,d,e,f,g;
+  std::cin>>a>>b>>c>>d>>e;
+  std::cout<<a+b*c*d<<std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+namespace {
+int h;
+}
+int main(){
+  int a,b,c,d,e,f,g;
+  std::cin>>a>>b>>c>>d>>e;
+  std::cout<<a+b*c*f<<std::endl;
+  return 0;
+}

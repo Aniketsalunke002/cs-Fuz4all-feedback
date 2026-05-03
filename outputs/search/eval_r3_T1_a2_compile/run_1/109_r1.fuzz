@@ -1,0 +1,78 @@
+#include <iostream>
+
+using namespace std;
+int main () {
+    int n;
+    cin>>n;
+    for (int i=1;i<=n;i++) {
+        cout<<i<<endl;
+    }
+    return 0;
+}
+//  
+//  
+//  
+// #include <iostream>
+// using namespace std;
+// int main ()
+// {
+//     int n;
+//     cin>>n;
+//     cout<<n^n<<endl;
+//     return 0;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main ()
+// {
+//     int n,m;
+//     cin>>n>>m;
+//     if (n==0 && m==0) {
+//         cout<<"0";
+//         return 0;
+//     }
+//     else if (n<0 && m>0) {
+//         cout<<n<<endl;
+//     }
+//     else if (n>0 && m<0) {
+//         cout<<(-m)<<endl;
+//     }
+//     else if (n>0 && m>0) {
+//         cout<<n+m<<endl;
+//     }
+//     else if (n<0 && m<0) {
+//         cout<<(-n)+(-m)<<endl;
+//     }
+//     return 0;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main ()
+// {
+//     int n;
+//     for (int i=0;i<=100;i++)
+//     {
+//         n=i*i;
+//         if(n>100)
+//         break;
+//         else
+//             cout<<n<<endl;
+//     }
+//     return 0;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main ()
+// {
+//     int n;
+//     cin>>n;
+//     int sum=0;
+//     while (n!=0)
+//     {
+//         sum=sum+n%10;
+//         n=n/10;
+//     }
+//     cout<<sum<<

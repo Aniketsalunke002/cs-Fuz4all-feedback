@@ -1,0 +1,36 @@
+#include <iostream>
+int main() {
+    int c,d;
+    std::cin>>c>>d;
+    std::cout<<c+d<<'\n';
+}
+ 
+#include <iostream>
+int main() {
+    int c,d;
+    std::cin>>c>>d;
+    std::cout<<c+d<<'\n';
+    if(c<d) {
+    	if(c%2==0) {
+      		std::cout<<c<<'\n';
+      		std::cout<<d<<'\n';
+    	}
+    	else {
+     		std::cout<<0<<'\n';
+      		std::cout<<d<<'\n';
+    	}
+    }
+    else {
+    	if(c%2==0) {
+      		std::cout<<c<<'\n';
+      		std::cout<<0<<'\n';
+    	}
+    	else {
+     		
+      		std::cout<<0<<'\n';
+      		std::cout<<c<<'\n';
+    	}
+    }
+    return 0;
+}
+ 

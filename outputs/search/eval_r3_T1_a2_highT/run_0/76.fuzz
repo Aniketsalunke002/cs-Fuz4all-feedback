@@ -1,0 +1,14 @@
+#include <iostream>
+ void __VERIFIER_assume(int cond) {
+  if(!(cond)) {
+     ERROR: goto ERROR;
+  }
+}
+int main() {
+long x;
+std::cin >> x;
+std::cout << x;
+x = 10;
+}
+
+

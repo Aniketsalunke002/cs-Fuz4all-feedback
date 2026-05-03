@@ -1,0 +1,119 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int i = 0;
+	do {
+		i++;
+	} while (i < 5);
+	cout << i << endl;
+	i--;
+	cout << i << endl;
+	if (i < 5) {
+		i++;
+	}
+	i--;
+	cout << i << endl;
+	return 1;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int i = 0;
+	while (1) {
+		cout << i;
+		if (i > 5) {
+			break;
+		}
+		i++;
+	}
+	cout << endl;
+	return 1;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int i = 0;
+	while (i < 2)
+		i++;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int cnt = 0;
+	while (cnt < 2)
+		cnt++;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int cnt = 0;
+	while (cnt < 2) {
+		cnt++;
+		if (cnt == 2)
+			cout << "break, value is " << cnt << endl;
+		cout << "i = " << cnt << endl;
+		if (cnt == 2)
+			break;
+	}
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int cnt = 0;
+	do {
+		cnt++;
+		if (cnt == 2)
+			cout << "break, value is " << cnt << endl;
+		cout << "i = " << cnt << endl;
+		if (cnt == 2)
+			break;
+	} while (cnt < 9);
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int cnt = 0;
+	while (1) {
+		cnt++;
+		if (cnt == 2)
+			break;
+		if (cnt == 4)
+			continue;
+		cout << "i = " << cnt << endl;
+	}
+	return 0;
+}
+
+ 
+#include <stdbool.h>
+#include <stdio.h>
+#include <stdint.h>
+#include <stdlib.h>
+#define _GNU_SOURCE
+#include <dlfcn.h>
+bool isKernelModule = false;
+bool isGnuModule = false;
+int main(int argc, char* argv[]) {
+	 
+	void* handle = dlopen(argv[0], RTLD_NOW);
+	void* sym = dlsym(handle, "_Z5isUsern");
+	if (sym) {
+		printf("Not a kernel module\n");
+		isKernelModule = true;
+	}
+	syms = _dl_sym(handle, "_ZGVZFvvE");
+	if (syms) {
+		printf("GNU C module\n");
+		isGnuModule = true;
+	}
+

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+   double x =2.45;
+   int d,y =5;
+   d = static_cast<int>(x);
+    cout<< "Integer value =" << d << endl;
+  return 0;
+} 
+

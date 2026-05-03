@@ -1,0 +1,8 @@
+#include <iostream>
+
+#include <string_view>
+using namespace std;
+int main() {
+	for (const auto &c : string_view("abacab"))
+		cout << c << ',' << endl;
+}

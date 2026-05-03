@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+
+struct A
+{
+	A(const char* str)
+	{
+		puts(str);
+	}
+};
+int main()
+{	A a;
+	puts("Goodbye");
+	return 0;
+}

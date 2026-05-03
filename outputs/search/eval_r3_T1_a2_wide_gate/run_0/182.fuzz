@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+char mycar[80]="volvo xC200";
+int value = 5;
+cout << "The my car is " << mycar << " and the my value is " << value << endl;
+value++;
+cout << "The my value is now " << value << endl;
+return 0;
+}

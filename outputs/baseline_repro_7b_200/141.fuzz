@@ -1,0 +1,14 @@
+#include <iostream>
+main(void) {
+  int a = 100;
+  std::cout << a << std::endl;
+}
+ 
+#include <iostream>
+int main() { 
+  int t1 = 0;  
+  t1 += 177;  
+  std::cout << t1 << std::endl;
+  t1 = t1 * 44 + 66;  
+  std::cout << t1 << std::endl;
+}

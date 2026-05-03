@@ -1,0 +1,14 @@
+#include <iostream>
+#include <vector>
+int main() {
+	int z = 1;
+	z = 10;
+	std::vector <int> v;
+	v.reserve(100);
+	v.push_back(z);
+	std::cout << z << std::endl;
+	int x = v[0] = 2;
+	std::cout <<  x << std::endl;
+	std::cout << z <<std::endl;
+}
+```

@@ -1,0 +1,21 @@
+#include <iostream>
+using std::endl;
+struct Base {
+    int a;
+    Base* operator++()
+    {
+        return this;
+    }
+};
+struct Derived : public Base {
+    int b;
+};
+int main()
+{
+    Derived d;
+    Base* pb = &d;
+    pb->a = 20;  
+    ++pb;
+    std::cout << d.a << "\t" << d.b << endl;
+    return 0;
+}

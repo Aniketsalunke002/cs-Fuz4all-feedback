@@ -1,0 +1,44 @@
+#include <iostream>
+
+#include <stdint.h>
+namespace foo {
+struct bar {
+    bar() {};
+};
+}
+int main(void) {
+    foo::bar a;
+    foo::bar b(12);
+    foo::bar c = b;
+    foo::bar d = a;
+    return 0;
+}
+
+
+// #include <iostream>
+// enum foo {
+//     a,
+//     b,
+//     c
+// };
+// int main(void) {
+//     foo a;
+//     foo b(12u);
+//     foo c = b;
+//     foo d = a;
+//     return 0;
+// }
+#include <iostream>
+#include <stdint.h>
+enum foo {
+    a,
+    b,
+    c
+};
+int main(void) {
+    foo a;
+    foo b(12u);
+    foo c = b;
+    foo d = a;
+    return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+
+
+int main() {
+	unsigned int n, m, i, j;
+	std::cin >> n >> m;
+	m = m << (n-1);
+	while(n<=30) {
+		m = m << (n-30);
+		n += 30;
+	}
+	std::cout << m;	
+	return 0;
+}

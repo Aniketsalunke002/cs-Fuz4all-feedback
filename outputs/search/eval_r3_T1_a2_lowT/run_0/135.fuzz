@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, m;
+    int i, j;
+    int p;
+    cin>>n>>m;
+    for(i=1; i<=n; i++)
+    {
+        p=n;
+        for(j=i; j<=n;j++)
+        {
+            if( ((p%2==0) && (j%2==0)) || ((p%2==1) && (j%2==0)) )
+            {
+                cout<<1<<" ";
+                p++;
+            }
+            else
+            {
+                cout<<0<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}

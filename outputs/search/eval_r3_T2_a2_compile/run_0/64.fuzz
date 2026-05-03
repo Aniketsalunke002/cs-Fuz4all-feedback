@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+    int bMin = b % c;
+    int bMax = b + c - 1;
+    int aMin = 0;
+    int aMax = aMin + c;
+    if (bMin!= b)
+    {
+        for (; a < aMax; ++a)
+            if (a % c == 0)
+                continue;  
+            else
+            {
+                bool f = false;  
+                for (; b < bMax; ++b)
+                    if (a * b % c == 0)
+                    {
+                        f = true;  
+                        b = bMax;
+                    }
+                if (!f)
+                    return 0;
+            }
+    }
+    else
+    {
+        cout << "YES" << endl;
+        for (; a < aMax; ++a)
+            if (a * bMin % c!= 0)
+                return 0;    
+    }
+    cout << "NO" << endl;
+}

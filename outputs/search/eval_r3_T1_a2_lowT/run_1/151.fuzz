@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+	char a;
+	a = 65;
+	if(a >= 65 and a <= 122)
+	cout << a << endl;
+}
+

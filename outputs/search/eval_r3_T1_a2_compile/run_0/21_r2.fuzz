@@ -1,0 +1,9 @@
+#include <iostream>
+
+void namespace_world::hello() {
+	std::cout << "Hello worlddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" << std::endl;
+}
+int main() {
+	namespace_world::hello();
+	return 0;
+}

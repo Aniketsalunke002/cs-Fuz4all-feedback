@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+int main(int argc,char **argv) {
+   if (argc < 2) {
+      cout << "Please enter a parameter!" << endl;
+      throw 10;
+   }
+   else{
+      cout << argv[1] << " " << argv[2] << endl;
+      cout << argc << endl;
+      throw 20;
+      return 0;
+   }
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc,char **argv) {
+   if (argc < 3) {
+      cout << "Please enter 3 argument!" << endl;
+      throw;
+   }
+   else{
+      cout << argv[1] << " " << argv[2] << " " << argv[3] << endl;
+      throw 10;
+      return 10;
+   }
+}
+
+ 
+#include <iostream>
+using namespace std;
+int mult(int x, int y) {
+	return (x*y);
+}
+ 
+#include <string>
+#include <iostream>
+using namespace std;
+
+int mult(int x, int y);
+int main(){
+	int a,b;
+
+	cin >> a;
+	cin >> b;
+	
+	cout << mult(a,b);
+
+	return 0;	
+}
+ 

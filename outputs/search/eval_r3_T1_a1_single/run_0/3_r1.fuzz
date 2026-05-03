@@ -1,0 +1,15 @@
+#include <iostream>
+
+
+class Person
+{
+public:
+    Person(std::string name, int age);
+    std::string toString() const;
+
+private:
+    std::string m_name;
+    int m_age;
+};
+
+#endif

@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+class Node {
+    int val;
+public:
+    explicit Node(int v) : val(v) {}
+    int getVal() const noexcept {
+        return val;
+    }
+};
+int main(void) {
+    Node ptr(99);
+    cout << ptr.getVal() << '\n';
+    return 0;
+}

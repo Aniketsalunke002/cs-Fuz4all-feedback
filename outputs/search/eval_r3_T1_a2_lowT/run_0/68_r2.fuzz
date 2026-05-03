@@ -1,0 +1,7 @@
+#include <iostream>
+
+int main()
+{
+    std::cin >> std::cin.rdbuf()->get();
+    std::cout << std::cin.rdbuf()->get() << std::endl;
+}

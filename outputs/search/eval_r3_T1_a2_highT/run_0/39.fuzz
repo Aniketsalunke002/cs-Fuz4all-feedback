@@ -1,0 +1,19 @@
+#include <iostream>
+int main()
+{
+   int a = 0, b = 1;
+   for (int i = 2; ; i++)
+   {
+      a += b;
+      b = a - b;
+      if (i % 1000 == 0)
+      {
+         std::cout << a << std::endl;
+      }
+      if (i >= 10000)
+      {
+         std::cout << "Answer = " << a << std::endl;
+         return 0;
+      }
+   }
+}

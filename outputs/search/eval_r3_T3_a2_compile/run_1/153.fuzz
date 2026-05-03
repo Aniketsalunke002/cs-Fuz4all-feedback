@@ -1,0 +1,50 @@
+#include <iostream>
+#include <vector>
+int main(int argc, char * argv[]) {
+  float a = (float)(rand() % 100) / 10;
+  std::cout << a << '\n';
+  std::vector<float> v;
+  v.push_back(a);
+  for(int i = 0; i <= 100; i++) {
+    float b = (float)((rand() % 100) + v[i]);
+    if (rand() % 10 >= 5) {
+      v.push_back(b);
+      std::cout << a << '\n';
+    } else {
+      v[i] = b;
+      std::cout << b << '\n';
+    }
+  }
+}
+ 
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#define rand() ((time(NULL)*rand()) % 9000)
+int main(int argc, char * argv[]) {
+  for (int i = 0; i <= 100; i++) {
+    std::cout << rand() << '\n';
+  }
+}
+ 
+#include <iostream>
+#include <vector>
+#include <cstdlib>
+#define rand() ((time(NULL)*rand()) % 1000000000)
+class C{
+  int v_;
+public:
+  C() {
+    v_ = 0;
+  }
+  explicit C(int i):v_(i) {}
+  int value() {
+    return v_;
+  }
+};
+int main(int argc, char * argv[]) {
+  for (int i = 0; i <= 100; i++) {
+    C * p = new C(rand()); 
+    std::cout << p -> value() << '\n';
+  }
+}

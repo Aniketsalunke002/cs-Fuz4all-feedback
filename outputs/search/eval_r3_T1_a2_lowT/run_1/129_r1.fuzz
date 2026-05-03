@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+void s() {
+
+}
+
+struct b {
+	int a;
+	int b;
+	int c;
+};
+
+b arr[18];
+
+cout << sizeof(b) << endl;
+
+arr[0].c = 5;
+arr[0].a = 5;
+arr[0].b = 5;
+
+cout << arr[0].a << " " << arr[0].b << " " << arr[0].c << endl;
+
+s();

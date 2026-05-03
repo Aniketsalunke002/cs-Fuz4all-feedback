@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+template <typename T> class A
+{
+    public:
+	T iField;
+    private:
+	T jField;
+};
+int main()
+{
+    A<int> temp;
+    A<int>* pA = (A<int>*) &temp;
+    (*pA).iField = 1;
+    cout << temp.iField << " " << temp.jField << endl;
+    return 0;
+}

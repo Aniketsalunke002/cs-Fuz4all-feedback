@@ -1,0 +1,70 @@
+#include <iostream>
+
+#include <vector>
+
+using namespace std;
+
+namespace MyVectorNamespace {
+	class MyVector
+	{
+	private:
+		vector<int>	fVector;
+
+	public:
+		MyVector() {
+		}
+		~MyVector() {
+		}
+		int Length() {
+			return fVector.size();
+		}
+
+		int& operator[](int i) {
+			return fVector[i];
+		}
+
+		const int& operator[](int i) const {
+			return fVector[i];
+		}
+
+		int& Pushback(const int& s) {
+			return fVector.push_back(s);
+		}
+
+		int& Insert(const int& s) {
+			return fVector.emplace(fVector.begin(), s);
+		}
+
+		void PopBack() {
+			fVector.pop_back();
+		}
+
+		void Clear() {
+			fVector.clear();
+		}
+
+		const vector<int>& Vector() const {
+			return fVector;
+		}
+	};
+}
+
+using namespace MyVectorNamespace;
+int main()
+{
+
+	MyVector cVector;
+
+
+	cVector.Pushback(1);
+	cVector.Pushback(2);
+	cVector.Insert(5);
+
+	cVector.PopBack();
+
+
+	vector<int> stdVector;
+	std::vector<int> stdCppVector;
+
+	return 0;
+}

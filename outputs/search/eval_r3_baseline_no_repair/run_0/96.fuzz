@@ -1,0 +1,8 @@
+#include <iostream>
+int getint();
+int f(int i);
+int main(int argc, char **argv) {
+  if(argc == 7) {
+    return f(argc);
+  }
+}

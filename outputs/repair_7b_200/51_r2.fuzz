@@ -1,0 +1,14 @@
+#include <iostream>
+
+template <typename T> struct B{
+int x = 123;
+    T operator+(T t){
+        t += x;
+        return t;
+    }
+};
+int main() {
+    B<int> b;
+    std::cout << b.x + b + 224;
+    return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+  int i=1;
+  while(i<10) {
+    cout << i;
+    if(i&1) cout << argv[0] <<" is even\n";
+    else cout << argv[0] <<" is odd\n";
+    i += (i&0x8000?1:1);
+  }
+return 0;
+}
+
+Output:
+1 is even
+3 is odd
+5 is even
+7 is odd
+9 is even

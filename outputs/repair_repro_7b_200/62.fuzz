@@ -1,0 +1,6 @@
+#include <iostream>
+unsigned int a = 1;
+unsigned int *p = &a;
+int main() {
+  printf("%d", *p);
+}

@@ -1,0 +1,75 @@
+#include <iostream>
+using std::cout;
+int* mut_add(int x, int y, int *ret) {
+	auto my_lambda = [=](int a, int b) {
+		*ret = a + b;
+	};
+	if (x + y < 0)
+		my_lambda(y, x);
+	else
+		my_lambda(x, y);
+	return ret;
+}
+int main(void) {
+	int r(0);
+	int* add = mut_add(-10, 20, &r);
+	cout << *add << std::endl;
+	return 0;
+}
+
+ 
+#include <iostream>
+#include <string>
+using std::cout;
+using std::string;
+#define STUPID_ERROR "error!"
+static string s("Hello world!");
+static const string s1("Hello");
+static const string s_rep("world");
+static const string s_p("!");
+static const string s_m("*/");
+static const string s_m_1("-*-");
+static const string s_2("Hello*world*!");
+static const size_t S_C_LEN = s_m_1.length();
+static inline void modify(string &str, const string &m1, const string &m2) {
+	for (size_t i = 0; i < str.length(); ++i) {
+		if (str[i] == '.') {
+			str += " ";
+			i += 5;
+		}
+		else if (s_m_1[i % S_C_LEN] == m1[i % S_C_LEN]) {
+			str[i] = m2[i % S_C_LEN];
+		}
+	}
+}
+inline bool str_contains(const string &haystack, const string &needle) {
+	size_t found = haystack.find(needle);
+	return (found!= string::npos);
+}
+inline void print_str(const string&str) {
+	cout << std::getchar() << str;
+}
+int main()
+{
+	print_str(s);
+	modify(s, s_p, s_m);
+	print_str(s);
+	if (!str_contains(s, s_rep)) {
+		print_str(STUPID_ERROR);
+	}
+	else {
+		modify(s, s_m, s_m_1);
+		print_str(s);
+	}
+	if (str_contains(s, "wor")) {
+		if (s.find("or") == 2) {
+			print_str(s);
+		}
+		else {
+			print_str(s);
+			modify(s, "wor", "wow");
+		}
+	}
+	else {
+		print_str(STUPID_ERROR);
+	}

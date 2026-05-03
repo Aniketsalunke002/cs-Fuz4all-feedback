@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int array[256];
+  int i;
+  for (i = 0;i < 256; i++)
+    array[i] = (0 << i) + (0 << i) + (0 << i) + (0 << i) + (0 << i) + (0 << i);
+  return 0;
+}
+```
+# Build
+```bash
+git clone https: 
+cd cpp-modernization
+git submodule update --init --recursive
+cd cpp-modernization
+mkdir build
+cd build
+cmake..
+make
+```
+# Test
+
+To see that the output is 0, test on a Linux/Unix-like machine. Note that on Windows, you'll need to setup MinGW using the `build-mingw.bat` script in the `build` directory by uncommenting the line with the message "Build-Using MinGW as C and C++ Compiler."
+```
+$./test_cpp_modernization 
+Test1 with original C: OK
+Test2 using new C++: OK
+Test3 with original C: OK
+Test4 using new C++: OK
+All tests passed
+```

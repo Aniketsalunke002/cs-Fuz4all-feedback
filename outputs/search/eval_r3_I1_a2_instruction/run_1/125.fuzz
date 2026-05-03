@@ -1,0 +1,13 @@
+#include <iostream>
+int main()
+{
+    std::wstring wstr = { L"<NAME>" };
+    std::cout << wstr << '\n';
+    std::wstring wstr1{L"This is awesome!"};
+    std::wstring wstr2(wstr.data(), wstr.size(), 11);
+
+    std::wcout << wstr <<  L"\n";
+    std::wcout << wstr1 << '\n';
+    std::wcout << wstr2 << '\n';
+    return 0;
+}

@@ -1,0 +1,44 @@
+#include <iostream>
+#include <vector>
+#include <set>
+#include <algorithm>
+
+class Genome;
+std::set<Genome *> Genomes;
+
+class Genome
+{
+public:
+	Genome() {}
+	~Genome() {
+		std::cout << "Deleting gen."  << '\n';
+	}
+	static void addGenome(Genome *p) {
+		Genomes.insert(p);
+	}
+	static void delGenome(Genome *p) {
+		Genomes.erase(p);
+	}
+private:
+	char pad[10000];  
+};
+
+int main()
+{
+	std::cout << "Genomes are : " << Genomes.size() << '\n';
+	Genome *p1 = new Genome;
+	Genome *p2 = new Genome;
+	Genome *p3 = new Genome;
+	Genome::addGenome(p1);
+	Genome::addGenome(p2);
+	Genome::addGenome(p3);
+	Genome::delGenome(p2);
+
+	p1 = nullptr;
+	p2 = nullptr;
+	p3 = nullptr;
+
+	std::cout << "Genomes are : " << Genomes.size() << '\n';
+
+	return 0;
+}

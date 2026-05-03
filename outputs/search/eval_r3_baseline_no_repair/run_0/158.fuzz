@@ -1,0 +1,18 @@
+#include <iostream>
+int mul(int a, int b) {
+    int t = a;
+    a /= b;
+    return a*t;
+}
+int main(int argc, char **argv) {
+    for (int i = 0;;i++) {
+        std::cout << i << "=";
+        for (int j = i+1; j < 10; j++) {
+            int m = i*j;
+            std::cout << mul(m, m) << " ";
+        } std::cout << "\n";
+        if (i > 8) break;
+    }
+}
+
+```

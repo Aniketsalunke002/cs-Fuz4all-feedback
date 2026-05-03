@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+void check_pass(string pa)
+{
+	cout<<"Please enter password\n";
+	cin>>pa;
+	if(pa!="password")
+	{
+		cout<<"Incorrect Password!!!";
+	}
+	else
+	{
+		cout<<"Access Granted\n";
+	}
+}
+int main()
+{
+	string pa;
+	check_pass(pa);
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+void check_pass(string pa)
+{
+	cout<<"Please enter password\n";
+	cin>>pa;
+	if(pa=="password")
+	{
+		cout<<"Access Granted\n";
+	}
+	else
+		cout<<"Incorrect Passward!!!";
+}
+int main()
+{
+	string pa;
+	cout<<"Press C to check the password\n";
+	else
+		cout<<"Incorrect Passward!!!";
+}
+ 

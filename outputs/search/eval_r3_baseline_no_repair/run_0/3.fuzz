@@ -1,0 +1,20 @@
+#include <iostream>
+
+#include <string>
+#include <vector>
+
+using namespace std;
+
+int main(int, char**)
+{
+     
+    vector<int> x(10);
+    cout << "vector<int> x(10)" << endl;
+    print(x);
+    
+     
+    auto y = {20};
+    cout << "auto y = {20}" << endl;
+    print(y);
+    
+}

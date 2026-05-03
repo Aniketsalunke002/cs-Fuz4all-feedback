@@ -1,0 +1,8 @@
+#include <iostream>
+
+#include <string.h>
+int main() {
+    int* x = new int;
+    int arr[3];
+    strcpy(*(char**)(&arr + 1), "hello world");
+    A* a = new A();

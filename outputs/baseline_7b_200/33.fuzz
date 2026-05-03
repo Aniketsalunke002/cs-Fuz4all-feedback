@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int no=12;
+	cin>>no;
+	int no1=no/2;
+	cout<<no1;
+}

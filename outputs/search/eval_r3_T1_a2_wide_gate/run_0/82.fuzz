@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main2()
+{
+	int myAge = 10;
+	int myMarks = 100;
+	cout << "My age is :" << myAge << endl;
+	cout << "My marks are :  " << myMarks << endl;
+	return 0;
+}
+

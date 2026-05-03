@@ -1,0 +1,88 @@
+#include <iostream>
+#include <algorithm>
+#include <vector>
+#include <iterator>
+#include <numeric>
+namespace {
+int max(const std::vector<int>& v) {
+  int m = *std::max_element(std::begin(v), std::end(v));
+  auto t = std::find(std::begin(v), std::end(v), m);
+  for (; m == *t; ++t)
+    ;
+  return std::distance(std::begin(v), t);
+}
+}
+namespace {
+template <const unsigned M>
+class modint{
+public:
+  unsigned v;
+  modint(const modint& x) = default;
+  modint(const int s) : v(s >= 0? s % M : (s+M)% M) {}
+  operator int() const { return v; }
+  modint& operator=(const modint& x) {
+    if (this == &x)
+      return *this;
+    v = x.v % M;
+    if (v < 0)
+      v += M;
+    return *this;
+  }
+  modint& operator+=(const modint& x) {
+    v += x.v;
+    if (v >= M)
+      v -= M;
+    return *this;
+  }
+  modint& operator-=(const modint& x) {
+    if (v < x.v)
+      v += M;
+    v -= x.v;
+    return *this;
+  }
+  modint& operator*=(const modint& x) {
+    v = int((long long)v * x.v % M);
+    return *this;
+  }
+};
+template <const unsigned M>
+modint<M> inv(const modint<M>& x) {
+  return modint<M>(M - x.v).power(M-2);
+}
+template <class T, const unsigned N, const unsigned M>
+modint<M> operator+(const modint<M> x, const modint<N>(&y)[N]) {
+  modint<M> t(x);
+  std::copy(std::begin(y)+1, std::end(y), std::begin(y));
+  std::transform(std::begin(y), std::end(y), std::begin(y), [&](const modint<N> z){return z + x;});
+  return t;
+}
+template <const unsigned M>
+modint<M> operator-(const modint<M>& x, const modint<M>& y) {
+  return x + (-y);
+}
+constexpr static const int maxn = 500000;
+modint<100000000> a[maxn];
+}
+int main(){
+  int m;
+  int s[maxn] = {0};
+  for (int i = 0; i < maxn; ++i) {
+    a[i] = (i+1) % 2;
+  }
+  std::cin >> m;
+  while (m--) {
+    static int c[100000];
+    int n;
+    while (scanf("%d", &n) > 0)
+      c[n-1]++;
+    for (int i = 0; i < maxn; ++i) {
+      s[i] = c[i]*a[i].v;
+    }
+    modint<100000000> a0 = 0;
+    modint<100000000> a1 = 1;
+    modint<100000000> a2;
+    modint<100000000> a3;
+    modint<100000000> a4;
+    for (int L = 0; L < maxn; L += 4) {
+      int M = std::min(L + 3, maxn);
+      std::sort(s+L, s+M+1, [&](int x, int y){return x <= y;

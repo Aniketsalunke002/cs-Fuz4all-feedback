@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+int main(){
+  int* myfav=new int[3];
+  myfav[1]=10;
+  cout<<*myfav<<' '<<myfav[1]<<endl;
+}

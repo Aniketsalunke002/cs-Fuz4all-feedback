@@ -1,0 +1,85 @@
+#include <iostream>
+int main() {
+	uint8_t x = 1;
+	x++; 
+	std::cout << x << std::endl;
+}
+#include <type_traits>
+#include <iostream>
+int main() {
+	static_assert(std::is_same<std::remove_reference_t<int&>,int>::value,"remove_reference_t failed"); 
+	static_assert(std::is_same<std::add_lvalue_reference_t<int>,int&>::value,"add_lvalue_reference_t failed"); 
+	static_assert(std::is_same<std::add_rvalue_reference_t<int>,int&&>::value,"add_rvalue_reference_t failed"); 
+
+	std::cout << std::endl;
+}
+#include <type_traits>
+#include <iostream>
+int main() {
+	static_assert(std::is_same<std::remove_cv_t<int>,int>::value,"remove_cv_t failed"); 
+	static_assert(std::is_same<std::add_cv_t<int const volatile>,int const volatile>::value,"add_cv_t failed"); 
+	static_assert(std::is_same<std::remove_volatile_t<int volatile const>,int const>::value,"remove_volatile_t failed"); 
+	static_assert(std::is_same<std::add_volatile_t<int>,int volatile>::value,"add_volatile_t failed"); 
+	static_assert(std::is_same<std::remove_const_t<const int>,int>::value,"remove_const_t failed"); 
+	static_assert(std::is_same<std::add_const_t<int>,const int>::value,"add_const_t failed"); 
+	std::cout << std::endl;
+}
+#include <iostream>
+#include <thread>
+#include <atomic>
+int main(){
+	std::atomic_int x = {0};
+	std::thread t0([&](){	x.fetch_add(1,std::memory_order_relaxed);});
+	std::thread t1([&](){x.fetch_add(1,std::memory_order_relaxed);});
+	std::cout << x << std::endl;
+}
+#include <iostream>
+#include <thread>
+#include <unordered_set>
+#include <atomic>
+int main(){
+	std::unordered_set<int> s;
+	std::thread t0([&]{ s.insert(0);});
+	std::thread t1([&]{ s.insert(1);});
+	t0.join();
+	t1.join();
+	s.insert(2);
+	std::cout << s.size() << std::endl;
+	std::cout << s.find(2) == s.end() << std::endl;
+}
+#include <type_traits>
+#include <iostream>
+int main() {
+	
+}
+#include <type_traits>
+#include <iostream>
+int main() {
+	
+}
+#include <type_traits>
+#include <iostream>
+class Object {
+public:
+	Object() = default;
+	~Object() = default; 
+	void process() {
+		std::cout << "process\n";
+	}
+};
+template <typename... Args>
+void generic_function(Args...) {
+	if constexpr( requires { typename std::enable_if_t<std::is_base_of_v<Object,Object_type>>; }) {
+		std::cout << "1" << std::endl;
+	}
+	
+	if constexpr( requires(Args...) { typename std::enable_if_t<std::is_base_of_v<Object,Object_type>>; } ) {
+		std::cout << "2" << std::endl;
+	}
+	std::cout << "3" << std::endl;
+}
+int main() {
+	generic_function<Object>();
+	std::cout << "Hello World\n";
+	return 0;
+}

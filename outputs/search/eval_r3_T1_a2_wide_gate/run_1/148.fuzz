@@ -1,0 +1,7 @@
+#include <iostream>
+#include <exception>
+#include <typeinfo>
+int main( int argc, char **argv ){
+  int array[10];
+  throw typeid(*array);
+}

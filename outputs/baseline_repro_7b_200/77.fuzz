@@ -1,0 +1,16 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+    std::cout << argc << std::endl;
+}
+ 
+#include "../example/cpp/example.h"
+int main(int argc, char* argv[]) {
+    say::foo();
+    return 0;
+}
+ 
+#include <iostream>
+#include <fstream>
+int main(int argc, char* argv[]) {
+    std::cout << argc << std::endl;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+
+ #define assume(__C) {if(! (__C)) ERROR;}
+ void __VERIFIER_assume(int cond){}
+ __long x;
+ std::cin >> x;
+ assume((x >= 0) && (x <= 2147483647));
+ __long xx;
+ if (x > 0)
+	xx = x;
+ else
+ 	xx = 0;
+ assume((xx >= 0) && (xx <= 2147483647));
+ __long __tmp_invariant_var_1413;
+ if (xx >= 0)
+ 		__tmp_invariant_var_1413 = 1;
+  else
+ 		__tmp_invariant_var_1413 = 0;
+ assume

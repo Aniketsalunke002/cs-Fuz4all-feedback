@@ -1,0 +1,102 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 11, b = 3, c = 7;
+	int d = 20, e = 25, f = 35;
+	if (a > b) {
+		if (b > c) {
+			a = d;
+		}
+	}
+	else {
+		if (a > c) {
+			a = b * 10;
+			f *= -1;
+		}
+	}
+	cout << a << endl;
+	if (a > b) {
+		a++;
+	}
+	else {
+		d--;
+		if (a > c) {
+			c = 2;
+		}
+		e = f;
+		d = 4;
+	}
+	cout << c << endl;
+	cout << d << endl;
+	cout << e << endl;
+	return 1;
+}
+ 
+#include "UnitTest.h"
+
+ 
+class mytestcase1 : public UnitTest{};
+void mytestcase1Func(int argc, char* argv[]){
+    char str[512];
+    if ("abc"=="abc"){
+        strcpy(str,"abcd");
+    }
+    string s = "bc";
+    if (s == "bc") strcat(str,"bc");
+    printOut(str);
+}
+
+ 
+class mytestcase2 : public UnitTest{};
+void mytestcase2Func(int argc,char* argv[]) {
+    int i;
+    for (int i = 0; i < 102; ++i)
+        cout << i << endl;
+}
+
+ 
+class mytestcase2a : public UnitTest{};
+void mytestcase2aFunc(int argc,char* argv[]) {
+    int a = 20;
+    switch (a) {
+    }
+    bool b = true;
+    switch (b) {
+        case true: cout << "true"; break;
+        default: cout << "default";
+    }
+}
+void mytestcase3() {
+    int i = 0;
+    switch (1) {
+        case 1: i = 1; break;
+        case 2: i = 2;
+    }
+    int j = 4;
+    switch (2) {
+        case 1: case 2: cout << "1, 2" << endl; break;
+        default: j--;
+    }
+    char a = 'c';
+    switch (a) {
+        case 'h': { char ab = 0; int aa = 222; }}
+        case 'a', 'b': cout << "ab, b" << endl; break;
+        default: cout << "default" << endl;
+    }
+}
+int main(int argc, char* argv[]) {
+    if (!mytestcase1()){
+        printOut("Test failed!\n");
+        return -1;
+    }
+    if (!mytestcase2()){
+        printOut("Test failed!\n");
+        return -1;
+    }
+    if (!mytestcase2a()){
+        printOut("Test failed!\n");
+        return -1;
+    }
+    mytestcase3();
+    return 0;
+}

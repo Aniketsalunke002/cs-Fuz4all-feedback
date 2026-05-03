@@ -1,0 +1,9 @@
+#include <iostream>
+int main(int argc, char** argv) {
+  int counter = 0;
+  do {
+    counter = counter + 10;
+    std::cout << counter * 100 << '\n';
+  } while(counter < 100);
+  return 0;
+}

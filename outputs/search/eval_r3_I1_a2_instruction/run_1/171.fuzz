@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n=++n;
+    std::cout << n << std::endl;
+    return 0;
+}

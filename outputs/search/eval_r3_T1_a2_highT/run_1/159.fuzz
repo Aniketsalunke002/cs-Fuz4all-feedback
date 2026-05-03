@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int age = std::stoi("12");
+    std::cout<<age<<std::endl;
+    std::string number = "12345";
+    number = number + std::to_string(65412315);
+    std::cout<<number<<std::endl;
+    return 0;
+}

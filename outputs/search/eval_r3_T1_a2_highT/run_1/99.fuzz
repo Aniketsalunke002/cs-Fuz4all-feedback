@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int sum = 0;
+    ++sum;
+    cout << sum;
+    return 0;
+}
+
+ 
+#include <iostream>
+using namespace std;
+void f(float, char const *)
+;
+int main()
+{
+    char const *s;
+    int x;
+    char ch;
+    f(x + y + z, s + ch);
+    return 0;
+}

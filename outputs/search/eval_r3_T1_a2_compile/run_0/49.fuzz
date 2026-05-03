@@ -1,0 +1,74 @@
+#include <iostream>
+int main()
+{
+std::cout<<"Hello world";
+return 0;
+}
+	```
+
+*   This new feature:
+	*   declaraciones en línea
+	*   declaraciones en la forma "extern" 
+	*   declaraciones a nivel única
+	*   barras diagonales dobles
+	*   declaraciones de constantes
+	*   declaraciones a nivel de espacio de nombres
+	*   declaraciones globales
+
+*   Aquí el compilador debe decidir si la declaración va a ser global o dentro de algún namespace. Haz la prueba para ver si te puedes arreglar
+
+*   El compilador debe también decidir en que namespace va a insertarse una declaración.
+
+*   Como hay tantos namespace y variables globales en este código, se sugiere que el código esté correctamente formado al comienzo:
+
+~~~
+#include <iostream>
+using namespace std;
+		int y=7;
+		static const float y2 = 7.0;
+		void foo(float x)
+		{
+		}	
+		int main ()  
+		{
+		cout <<"Hello world!";
+		while (true)  
+	
+ 
+ 
+ 
+ 
+ 
+ 
+	
+ 
+	
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+}
+
+		~~~

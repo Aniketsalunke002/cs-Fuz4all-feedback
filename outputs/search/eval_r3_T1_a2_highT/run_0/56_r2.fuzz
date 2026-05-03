@@ -1,0 +1,5 @@
+#include <iostream>
+
+#include <string>
+void func(int** arg) { std::string a = ""+ **arg; ++a; **arg = a; std::cout << **arg;}
+int main() { std::string n; std::cin >> n; int a=0; func(&a); }

@@ -1,0 +1,12 @@
+#include <iostream>
+int main4() {
+    static int i = 0, sum =0,n=0;
+    std::cin >> n;
+    if (i<n){
+        int num;
+    std::cin >> num;
+        sum += (num - sum) / 2;
+        ++i;
+    main4();
+    } else std::cout << sum;
+}

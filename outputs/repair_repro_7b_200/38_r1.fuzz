@@ -1,0 +1,10 @@
+#include <iostream>
+
+#include <initializer_list>
+using namespace std;
+
+int main() {
+
+    auto[a,b,c]= {20,10,12};
+    cout << a + b +c << endl;
+}

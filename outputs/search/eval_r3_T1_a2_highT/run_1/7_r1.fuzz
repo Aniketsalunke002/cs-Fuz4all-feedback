@@ -1,0 +1,20 @@
+#include <iostream>
+
+#include <iterator>
+
+int main() {
+  std::vector<int> v = {-55, 11, 33, 2, 45, 22, 31, 41, 16};
+  
+  std::sort(v.begin(), v.end());
+  std::copy(v.begin(), v.end(), std::ostream_iterator<int>(std::cout, ", "));
+  
+  std::cout << std::endl;
+  std::copy(v.rbegin(), v.rend(), std::ostream_iterator<int>(std::cout, ", "));
+  
+  return 0;
+}
+/*
+Output:
+-55,11,16,2,22,31,33,41,45,
+45,41,33,31,22,2,16,11,-55,
+*/

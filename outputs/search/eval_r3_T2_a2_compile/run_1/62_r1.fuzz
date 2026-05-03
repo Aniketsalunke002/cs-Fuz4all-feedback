@@ -1,0 +1,7 @@
+#include <iostream>
+
+int main() {
+    int *p = (int*) malloc(sizeof(int));
+    *p = 8;
+    std::cout << *p << '\n';
+}

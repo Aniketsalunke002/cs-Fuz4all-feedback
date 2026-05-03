@@ -1,0 +1,32 @@
+#include <iostream>
+int main()
+{
+    int * t = &std::cin.tie();
+    if(!(*t))
+    {
+        *t = 0;
+        std::cin.tie(0);
+    }
+}
+ 
+#include <iostream>
+#include <memory>
+void test_tie(int & old_tie, int & new_tie)
+{
+    std::tie(old_tie, new_tie) = std::tie(std::cin.tie(), std::cin.tie(0));
+}
+int main()
+{
+    int old_tie = std::cin.tie();
+    int current_tie = std::cin.tie(0);
+    int new_tie;
+
+    old_tie = std::cin.tie();
+
+    int * t = &std::cin.tie();
+    if(!(*t))
+    {
+        *t = 0;
+        std::cin.tie(0);
+    }
+}

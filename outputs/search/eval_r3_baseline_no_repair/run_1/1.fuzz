@@ -1,0 +1,15 @@
+#include <iostream>
+
+#include <set>
+#include <vector>
+
+int main()
+{
+    std::set<int> my_set {1, 2, 3, 4};
+    std::vector<int> v(8);
+
+    for (auto it = v.rbegin(); it < v.rend(); ++it)
+        *it = 31;
+
+    return my_set.empty()? 1 : 0;
+}

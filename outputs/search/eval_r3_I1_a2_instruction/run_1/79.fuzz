@@ -1,0 +1,17 @@
+#include <iostream>
+int main()
+{
+    return 0;
+}
+ 
+#include <iostream>
+#define UNIVERSE_ANSWER 42
+int main()
+{
+    while (true) {
+        std::cout << "42"<< std::endl;
+    }
+}
+ 
+ 
+ 

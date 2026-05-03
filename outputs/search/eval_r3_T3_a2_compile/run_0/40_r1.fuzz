@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    std::string s1 = "0123456789";
+    s1[23] = 'A';
+    s1.erase(s1.end()-1);
+    cout << s1 << endl;
+    return 0;
+}

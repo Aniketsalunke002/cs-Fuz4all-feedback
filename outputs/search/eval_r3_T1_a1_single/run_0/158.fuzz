@@ -1,0 +1,27 @@
+#include <iostream>
+int main() {
+  int foo[64] = {0};
+  foo[550];
+  std::cout << foo[0];
+  return 0;
+}
+ 
+#include <iostream>
+
+struct Foo {
+  short int data[64];
+  short int* x;
+};
+
+int main() {
+  Foo foo;
+  short int* y = foo.x;
+  for(short i = 0; i < 550; i +=10) {
+    y[i];
+  }
+  std::cout << foo.data[0];
+  return 0;
+}
+ 
+
+ 

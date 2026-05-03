@@ -1,0 +1,24 @@
+#include <iostream>
+int main()
+{
+    int number = 42;
+    int number1 = 43;
+    int number2 = ++number;
+    int number3 = number1 * number;
+    number1 += 2;
+    ++number2;
+    --number3;
+    int number4 = (number2) * (++number3);
+    std::cout<<number4<<"\n"<<number1<<"\n"<<number2<<"\n"<<number3<<"\n";
+
+    return 0;
+}
+ 
+#include <iostream>
+class MyClass1
+{
+    public:
+    void print() {}
+    virtual void say() {}
+    virtual ~MyClass1() {}
+};

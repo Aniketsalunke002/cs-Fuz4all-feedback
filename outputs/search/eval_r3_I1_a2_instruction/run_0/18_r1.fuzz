@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, e, f = 20;
+    int g;
+    g = f = e + 20;
+    cout << g << endl;
+    return 0;
+}

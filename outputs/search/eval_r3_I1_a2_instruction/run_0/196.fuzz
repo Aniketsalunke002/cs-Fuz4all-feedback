@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+class A
+{
+public:
+ virtual void f() {}
+  int i;
+  A(int ii) : i(ii) {
+  }
+};
+#if 1
+struct B : public A
+{
+  B(int ii) : A(ii) {}
+};
+#endif
+
+int main(int, char**)
+{
+  B b(1);
+  return 0; 
+}
+

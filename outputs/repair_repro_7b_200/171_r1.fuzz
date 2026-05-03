@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+class Node {
+    public:
+    Node* next;
+    int val;
+
+    int getVal() {
+        return val;
+    }
+
+    friend std::ostream& operator<<(std::ostream& stream,

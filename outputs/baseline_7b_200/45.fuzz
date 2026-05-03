@@ -1,0 +1,10 @@
+#include <iostream>
+ using namespace std;
+int main() 
+{
+	int v = 1;
+	puts(v); 
+	v = 127;
+	puts(v);
+	v= 128;
+}

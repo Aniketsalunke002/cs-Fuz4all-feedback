@@ -1,0 +1,21 @@
+#include <iostream>
+template <typename T>
+class A {
+	T t;
+	public:
+		A(const T& t) :t(t) {}
+		T get_t(void) {
+			return t;
+		}
+};
+template <typename T, typename B>
+A <B> foo(T input) {
+	A<T> t(input);
+	A<B> b=t;
+	return b;
+}
+int main (void) {
+	auto temp = foo<char,char>('z');
+	std::cout << temp.get_t() << std::endl;
+	return 0;
+}

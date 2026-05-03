@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int x = 1;
+	int y = 2;
+	x = x + y;
+	y = x - y;
+	x /= 2;
+	const double foo = y + x;
+	cout << foo;
+	return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int x = 9 / 2;  
+	cout << "int x = 9 / 2:" << x << endl;
+	double xD = 9.0 / 2.0;  
+	cout << "double xD = 9.0 / 2.0:" << xD << endl;
+	float xF = 9.0F / 2.0F;  
+	cout << "float xF = 9.0F / 2.0F:" << xF << endl;
+	return 0;
+}
+ 
+ 
+ 
+ 
+ 
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(int argc, char* argv[]) {
+	double x = 8.2;
+	float c = cos(x);
+	cout << "float c = cos(x);" << c << endl;
+	return 0;
+}
+ 
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main(int argc, char* argv[]) {
+	double x = 8.2;
+	float c = cos((float) x);  
+	cout << "float c = cos(x);" << c << endl;
+	return 0;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+/* https: 

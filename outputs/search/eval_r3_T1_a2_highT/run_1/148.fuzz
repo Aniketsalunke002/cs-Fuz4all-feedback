@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]){
+    int i = 3;
+    double k = 9;
+    char c = i * k;
+ 
+        while (c < 180){
+            ++c;
+            cout << "c = " << c << endl;
+        }
+    return 0;
+}
+
+int i = 0;
+#ifndef _WIN32
+typedef __typeof(&i) ptrI;
+#else
+typedef long ptrI;
+#endif
+ptrI ptr;
+*ptr += 4;

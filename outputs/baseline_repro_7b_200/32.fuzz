@@ -1,0 +1,9 @@
+#include <iostream>
+int main(void) {
+	auto add_lambda = [](auto x, auto y) -> auto {
+		return x + ++y;
+	};
+	char p = add_lambda('a', 'b');
+	cout << p << std::endl;
+	return 0;
+}

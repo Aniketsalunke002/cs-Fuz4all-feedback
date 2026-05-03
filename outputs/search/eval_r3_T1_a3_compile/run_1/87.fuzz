@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+void fun(int a, int b) {
+	if (a + b > 10) {
+		return;
+	}
+	if (a > b) {
+		return;
+	}
+	if (b > 5) {
+		return;
+	}
+	int tmp;
+	tmp = a;
+	a = b;
+	b = tmp;
+	return;
+}
+int main(int argc, char* argv[]) {
+	int a = 5, b = 12;
+	fun(a, b);
+	cout << a << endl;
+	cout << b << endl;
+	return 0;
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+class __declspec(dllimport) A
+{
+public:
+  virtual ~A() = default;
+  A() = default;
+  A(const A &) = default;
+  A(A &&) = default;
+  A &operator=(const A &) = default;
+  A &operator=(A &&) = default;
+};
+class __declspec(dllimport) B : public A
+{
+public:
+  B() = default;
+  B(const B &) = default;
+  B(B &&) = default;
+  B &operator=(const B &) = default;
+  B &operator=(B &&) = default;
+  ~B() = default;
+};
+A *Factory(bool);
+int main()
+{
+  A *a = new A, b = *Factory(true);
+  delete [&b{b}]() { A *a = new A, b = *Factory(true); delete a; }(), a;
+  return 0;
+}

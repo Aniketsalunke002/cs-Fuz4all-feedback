@@ -1,0 +1,13 @@
+#include <iostream>
+int main(int argc, char** argv) {
+  int counter = 1, step = 1000;
+  while (counter < 100) {
+    for (int i = step; i > 0;) {
+      std::cout << i / step;
+      i = i / 2;
+    }
+    std::cout << '\n';
+    counter = counter + step;
+  }
+  return 0;
+}

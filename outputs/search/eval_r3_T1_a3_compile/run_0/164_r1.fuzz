@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+#include <iostream>
+#include <cmath>
+
+#include "hello-world.cpp"
+
+#include "sub/world.h"
+
+int main() {
+    std::cout << "Hello, world!\n";
+    std::cout << "sqrt(2): " << std::sqrt(2) << "\n";
+    std::cout << hello_world() << "\n";
+    std::cout << world() << "\n";
+}

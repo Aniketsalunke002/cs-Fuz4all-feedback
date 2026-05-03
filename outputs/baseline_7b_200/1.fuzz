@@ -1,0 +1,23 @@
+#include <iostream>
+
+
+#include <QCoreApplication>
+
+
+using namespace std;
+
+class Test
+{
+};
+
+
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
+
+     
+
+    QCoreApplication app;
+    return a.exec();
+         
+}

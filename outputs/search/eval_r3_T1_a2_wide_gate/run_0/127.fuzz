@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int f(int n)    
+{
+    while (n>0)    
+    {
+        cout<<"Hello World"<<endl;
+        n--;        
+    }
+    return 0;     
+}
+int main(int argc, char* argv[])    
+{
+    string a,b,c,d,e;               
+    char str[10];       
+    cin>>a;
+    cin>>b>>c;    
+    cout<<a<<", ";    
+    cout<<b<<", ";
+    cout<<c<<", ";
+    cin<<str<<d<<e;    
+    cout<<str<<d<<e;
+    cin.clear();   
+    cin.ignore();
+    cout<<argv[0]<"Hello ";    
+    f(atoi(argv[1]));  
+    return 0;
+}

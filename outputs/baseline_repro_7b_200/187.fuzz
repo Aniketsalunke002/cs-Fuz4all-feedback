@@ -1,0 +1,10 @@
+#include <iostream>
+{  
+  std::cout << "Hello, World! My first c++ code." << std::endl;
+ 
+  int variable = 22 +2;
+  
+  if (variable < 20)
+    
+    printf("Your number is less than 20.\n");
+}

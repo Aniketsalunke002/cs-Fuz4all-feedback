@@ -1,0 +1,18 @@
+#include <iostream>
+
+
+
+template <typename T>
+int f(int a, int b) {
+	return 1;
+}
+
+template int f(int, int);
+
+int main() {
+    
+	
+	auto x = f<double>(1, 2);
+	
+	std::cout << x << std::endl;
+}

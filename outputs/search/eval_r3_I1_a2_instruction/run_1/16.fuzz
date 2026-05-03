@@ -1,0 +1,9 @@
+#include <iostream>
+int main ()
+{
+	int a = 0;
+	int &my_var = *(&a);
+	my_var = 2;
+	return 0;
+}
+

@@ -1,0 +1,8 @@
+#include <iostream>
+int main(int argc, char* argv[])
+{
+    char ch1;
+    std::cout << "sizeof(ch1)=" << sizeof(ch1) << std::endl;
+    return 0;
+}
+ 

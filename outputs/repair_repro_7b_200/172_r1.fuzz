@@ -1,0 +1,59 @@
+#include <iostream>
+
+using namespace std;
+class Node {
+    int val;
+    Node* next;
+public:
+    int getVal() {
+        return val;
+    }
+};
+class ListNode {
+    Node* head;
+public:
+    int getVal() {
+        return val;
+    }
+    Node* getTail() {
+        return next;
+    }
+};
+class LinkedList {
+private:
+    Node* head;
+public:
+    LinkedList() {
+        head = nullptr;
+    }
+    void push_back(int val) {
+        Node* n = new Node();
+        n->val = val;
+        n->next = nullptr;
+        Node* curr = head;
+        if (!curr) {
+            head = n;
+        } else {
+            Node* last = head;
+            while (last->next) {
+                last = last->next;
+            }
+            last->next = n;
+        }
+    }
+    int getVal() {
+        if (head) {
+            return head->val;
+        }
+        return 0;
+    }
+};
+int main(int argc, char** argv) {
+    LinkedList* ll = new LinkedList();
+    ll->push_back(42);
+    ll->push_back(24);
+    ll->push_back(12);
+    ll->push_back(8);
+    cout << "The value is " << ll->getVal() << endl;
+    return 0;
+}

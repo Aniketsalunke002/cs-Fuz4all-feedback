@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int k, l, a, b, c;
+    l = k;
+    k = a + b + c + 5;
+    cout << "l = " << l << endl;
+    cout << "k = " << k << endl;
+    k = k + k - 7;
+    cout << "k = " << k << endl;
+    return 0;
+}

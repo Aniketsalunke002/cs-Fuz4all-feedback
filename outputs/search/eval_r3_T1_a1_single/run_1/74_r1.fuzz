@@ -1,0 +1,21 @@
+#include <iostream>
+
+#include <unistd.h>
+using namespace std;
+int main()
+{
+    cout << " Scoreboard " << endl
+    << " ------- " << endl
+    << " Score   Name     Time " << endl
+    << " ------- ------- ----------- " << endl;
+    int j;
+    for (int i=0; i<10; i++)
+    {
+    srand(time(0));
+    j=rand() % 10 + 1;
+    cout << "  " << j << "   <Player" << endl
+    << "        >" << "  " <<j << "        " <<endl
+    << endl;
+    sleep(1);
+}
+}

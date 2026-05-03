@@ -1,0 +1,8 @@
+#include <iostream>
+int main(int argc, char** argv)
+{
+    int k, n;
+    std::cin >> k >> n;
+    std::cout << k * n;
+}
+```

@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int i = 5;
+  int l = 0;
+
+  l -= 1;
+  if (i < 0) {
+    l = 147;
+  }
+  i = l;
+
+  i += l;
+  if (i >=0 || l>=0)
+    cout << i << endl;
+}
+/*
+i = 5
+l=4
+i+l = 9
+
+i = 5
+l = 2
+i = l + 4
+i = 6
+i + l = 9
+

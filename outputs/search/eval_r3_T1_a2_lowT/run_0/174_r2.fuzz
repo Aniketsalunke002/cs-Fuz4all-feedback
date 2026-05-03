@@ -1,0 +1,9 @@
+#include <iostream>
+
+#include <utility>
+char a;
+std::cin>>a;
+std::pair<char, int>*p;
+*p= std::make_pair(a, 999);
+p=nullptr;
+return 0;

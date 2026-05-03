@@ -1,0 +1,25 @@
+#include <iostream>
+class SomeClass {
+	int *array;
+};
+
+int main() {
+	SomeClass obj;
+	obj.array = new int[ 5 ];
+	delete[] obj.array;
+}
+ 
+#include <iostream>
+ 
+class ExoticType {};
+ 
+class SomeClass {
+	ExoticType* obj;
+};
+ 
+int main() {
+	 
+	 
+	ExoticType exoticType;
+	SomeClass obj;
+}

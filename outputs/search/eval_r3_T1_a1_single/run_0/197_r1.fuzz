@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include "game.h"
+#include "game_engine.h"
+#include "view.h"
+
+int main() {
+  auto game = initialize_game();
+  game_engine *g = create_view(game);
+  play_game_with_keyboard(g);
+  play_game_with_mouse(g);
+
+  return 0;
+}

@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    ifstream ifile(argv[1]);
+    int a, b, c;
+    ifilename >> a >> b >> c;
+    ofstream ofile("out", ofstream::out);
+    ofilename << a-- << " " << b++ << " " << c--;
+    ifile >> a;b++;c--;ofile << a << "\n";
+    delete[] a;delete[]&b;a=(b++)++;c--;ofile << a << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int a;
+    do
+    {
+        a++;
+        cout << 'a' << a << endl;
+    }
+    while (a < 1);
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    while (true)
+    {
+        cout << 'a' << endl;
+    }
+    return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    char c[] = "abc";
+    cout<<c;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    char *p;
+    *p = (char)0;
+}

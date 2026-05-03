@@ -1,0 +1,19 @@
+#include <iostream>
+int main( int argc, char **argv ){
+std::cout << "  Semantically equivalent.\n\n";
+int a, b, x;
+a = 4;
+b = 5;
+if (a<b){
+std::cout << "The condition of the if statement is true\n"
+           << "a = " << a << "\n"
+           << "b = " << b << "\n\n";
+}
+else if (a>b){
+   
+  std::cout << "The conditional is false\n\n";
+}
+x = a * a + b * b ;
+ 
+ 
+}

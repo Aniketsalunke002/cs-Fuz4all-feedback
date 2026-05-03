@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char **argv) {
+   if(argc < 2) cout << "Please enter a parameter!" << endl;
+   string parameter = argv[1];
+   if(parameter == "firstparameter") {
+      argc++;
+      argv++;
+      argv[0] = "secondparameter";
+      argv[1] = "modifiedparameter";
+   }
+  cout << "I have " << argc << " arguments" << endl;
+  cout << "My first parameter is " << argv[0] << endl;
+  cout << "My second parameter is " << argv[1] << endl;
+
+  return 0;
+}

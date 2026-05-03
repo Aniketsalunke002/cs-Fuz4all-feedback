@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+void func(string *foo)
+{
+	func(foo);
+	
+	(*foo).append(" bar");
+}
+
+int main()
+{
+	string *s;
+	
+	func(s);
+	cout << *s << endl;
+    
+    return 0;
+}
+// Compiler error should go away

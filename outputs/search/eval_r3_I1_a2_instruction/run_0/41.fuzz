@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+void foo() {
+    cout<<"in foo"<<endl;
+}
+int main(int argc, char**argv) {
+    foo();
+    return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+class A {
+public:
+    void f() {
+    }
+};
+ 
+class B {
+public:
+    static void i;
+    void f(long int i) {
+        A::f(i * i);
+    }
+};
+ 
+int j = 5;
+int main(int argc, char**argv) {
+     
+     
+    A& a = static_cast<A&>(*argv);
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class A {
+public:
+     
+    static int a;
+    void f() {
+        cout<<"in A"<<endl;
+    }
+    static void printA() {
+        cout<<a<<endl;
+    }
+};
+class C : virtual public A {
+public:
+    int c;
+    void f() {
+        cout<<"in f"<<endl;
+        A::f();
+    }
+    static void printA() {
+        cout<<a<<endl;
+    }
+};
+ 
+C* g = NULL;
+int main(int argc, char** argv) {
+     
+    (*argv)->f();
+    return 0;
+}

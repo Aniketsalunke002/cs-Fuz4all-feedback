@@ -1,0 +1,27 @@
+#include <iostream>
+
+#include <mutex>
+#include <thread>
+#include <condition_variable>
+struct Bar {
+    Bar(int _a) { a = _a; }
+    void foo(bool);
+private:
+    int a;
+};
+struct Foo {
+    Foo() { b.reset(new Bar(10)); }
+    Bar *ptr_to_B() { return b.get(); }
+    std::unique_ptr<Bar> b;
+};
+void Bar::foo(bool) { std::cout << "FOO " << a << " " << std::endl; }
+int main(void) {
+    Foo myF;
+    std::thread t([&myF]() {
+        Bar *b = myF.ptr_to_B();
+        b->foo(true);
+        std::cout << "BAR " << b->a << std::endl; });
+    myF.b->foo(false);
+    t.join();
+    return 0;
+}

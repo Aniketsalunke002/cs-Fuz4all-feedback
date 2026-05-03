@@ -1,0 +1,72 @@
+#include <iostream>
+ 
+int gcd(int, int);
+int h;
+int main(){
+  int a,b,c,d,e,f,g;
+  std::cin>>a>>b>>c>>d>>e>>f>>g;
+  std::cout<<gcd(a,b)<<std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+class C {
+  void* p_;   
+};
+void C::init() {   }
+void C::destroy() {   }
+C* createC() {   }
+class CDeleter {   };
+int main() {
+  std::set<C*,CDeleter> s;
+  C* p = createC();
+  s.insert(p);   
+  delete p;   
+  return 0;
+}
+ 
+#include <iostream>
+#include <memory>  
+
+class C {
+  void* memory_;   
+ public:
+  C() : memory_(malloc(sizeof(C))) {}
+   
+   
+  ~C() { free(memory_); }
+};
+
+std::auto_ptr<C> createCpp() {   }
+
+int main() {
+  std::auto_ptr<C> p(createCpp());
+  return 0;
+}
+ 
+#include <iostream>
+#include <memory>
+
+class MyClass {
+ private:
+   int numFoo;
+   std::shared_ptr<int> baz;
+ public:
+  MyClass();
+  ~MyClass(); 
+};
+
+MyClass::MyClass(){
+  numFoo=0;
+  baz = std::make_shared<int>();
+}
+MyClass::~MyClass(){
+   
+}
+
+std::auto_ptr<MyClass> createMyClass() {   }
+
+int main() {
+  std::auto_ptr<MyClass> myptr(createMyClass());
+  return 0;
+}

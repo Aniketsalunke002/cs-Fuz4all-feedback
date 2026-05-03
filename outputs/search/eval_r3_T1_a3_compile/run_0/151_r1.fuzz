@@ -1,0 +1,24 @@
+#include <iostream>
+
+using std::endl;
+class Base {
+public:
+    int a;
+    virtual void print_a() { std::cout << "a: " << a << endl; }
+};
+class Derived : public Base {
+public:
+    int b;
+    void print_a() {
+        std::cout << "a: " << a << std::endl;
+        std::cout << "b: " << b << std::endl;
+    }
+};
+int main() {
+    Derived d;
+    Base *pb = &d;
+    pb->a = 20;
+    d.b = 30;
+    d.print_a();
+    return 0;
+}

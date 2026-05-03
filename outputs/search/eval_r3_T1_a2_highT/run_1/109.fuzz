@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int s = 5, t = 5, p = 5;
+    s += 10;
+    p = t++;
+    cout << s << " " << p;
+    return 0;
+}

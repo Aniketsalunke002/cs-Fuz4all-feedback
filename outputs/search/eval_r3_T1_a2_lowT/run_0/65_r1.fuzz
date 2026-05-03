@@ -1,0 +1,47 @@
+#include <iostream>
+
+class MyStreambuf : public std::streambuf
+{
+    virtual int overflow(int c) override;
+public:
+    MyStreambuf(std::ostream &os)
+    {
+        setpp(os.rdbuf());
+    }
+};
+int MyStreambuf::overflow(int c)
+{
+    if (c == std::cout.widen('.') && pbase() && this->pptr() && *(pptr()-1) == std::wstring(this->pbase(), pptr()))
+        std::cout << std::endl;
+    else
+        std::cout.put(std::wcout.widen(c));
+    return 0;
+}
+int main()
+{
+    MyStreambuf x(std::cout);
+    std::wcout << std::wcout.rdbuf(&x);
+}
+#include <iostream>
+class MyStreambuf : public std::streambuf
+{
+    virtual int overflow(int c) override;
+public:
+    MyStreambuf(std::ostream &os)
+    {
+        setpp(os.rdbuf());
+    }
+};
+int MyStreambuf::overflow(int c)
+{
+    if (c == std::cout.widen('.') && pbase() && this->pptr() && *(pptr()-1) == std::wstring(this->pbase(), pptr()))
+        std::cout << std::endl;
+    else
+        std::cout.put(std::wcout.widen(c));
+    return 0;
+}
+int main()
+{
+    MyStreambuf x(std::cout);
+    std::wcout << std::wcout.rdbuf(&x);
+}

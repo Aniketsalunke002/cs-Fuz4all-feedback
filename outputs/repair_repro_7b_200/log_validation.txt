@@ -1,0 +1,1597 @@
+[TRACE] Validating outputs/repair_repro_7b_200/0.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/0.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/3.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/3.fuzz failed validation with error message: outputs/repair_repro_7b_200/3.fuzz: In function ‘std::ostream& operator<<(std::ostream&, const HelloWorld&)’:
+outputs/repair_repro_7b_200/3.fuzz:21:21: error: passing ‘const HelloWorld’ as ‘this’ argument discards qualifiers [-fpermissive]
+   21 |    out << p.add_nums(7,8);
+      |           ~~~~~~~~~~^~~~~
+outputs/repair_repro_7b_200/3.fuzz:10:6: note:   in call to ‘int HelloWorld::add_nums(int, int)’
+   10 |  int add_nums(int a,int b)
+      |      ^~~~~~~~
+[TRACE] Validating outputs/repair_repro_7b_200/4.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/4.fuzz failed validation with error message: outputs/repair_repro_7b_200/4.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/4.fuzz:12:3: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+   12 |   cout << a.root_path().generic_string() << endl;
+      |   ^~~~
+      |   std::cout
+In file included from outputs/repair_repro_7b_200/4.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/repair_repro_7b_200/4.fuzz:12:45: error: ‘endl’ was not declared in this scope; did you mean ‘std::endl’?
+   12 |   cout << a.root_path().generic_string() << endl;
+      |                                             ^~~~
+      |                                             std::endl
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_repro_7b_200/4.fuzz:1:
+/usr/include/c++/11/ostream:684:5: note: ‘std::endl’ declared here
+  684 |     endl(basic_ostream<_CharT, _Traits>& __os)
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/4_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/4_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/5.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/5.fuzz failed validation with error message: outputs/repair_repro_7b_200/5.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/5.fuzz:8:3: error: ‘queue’ was not declared in this scope
+    8 |   queue<pair<int, int>> A;
+      |   ^~~~~
+outputs/repair_repro_7b_200/5.fuzz:2:1: note: ‘std::queue’ is defined in header ‘<queue>’; did you forget to ‘#include <queue>’?
+    1 | #include <iostream>
+  +++ |+#include <queue>
+    2 | using namespace std;
+outputs/repair_repro_7b_200/5.fuzz:8:22: error: expected primary-expression before ‘>’ token
+    8 |   queue<pair<int, int>> A;
+      |                      ^~
+outputs/repair_repro_7b_200/5.fuzz:8:25: error: ‘A’ was not declared in this scope
+    8 |   queue<pair<int, int>> A;
+      |                         ^
+outputs/repair_repro_7b_200/5.fuzz: At global scope:
+outputs/repair_repro_7b_200/5.fuzz:29:5: error: redefinition of ‘int main()’
+   29 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/5.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+[TRACE] Validating outputs/repair_repro_7b_200/6.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/6.fuzz failed validation with error message: outputs/repair_repro_7b_200/6.fuzz:56:5: error: redefinition of ‘int main()’
+   56 | int main(){
+      |     ^~~~
+outputs/repair_repro_7b_200/6.fuzz:10:5: note: ‘int main()’ previously defined here
+   10 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/6.fuzz:65:5: error: conflicting declaration of C function ‘int main(int, const char**)’
+   65 | int main(int argc, const char * argv[]) {
+      |     ^~~~
+outputs/repair_repro_7b_200/6.fuzz:10:5: note: previous declaration ‘int main()’
+   10 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/6.fuzz: In function ‘int main(int, const char**)’:
+outputs/repair_repro_7b_200/6.fuzz:96:25: error: expected primary-expression at end of input
+   96 |         cout << "2: " <<
+      |                         ^
+outputs/repair_repro_7b_200/6.fuzz:96:25: error: expected ‘}’ at end of input
+outputs/repair_repro_7b_200/6.fuzz:85:12: note: to match this ‘{’
+   85 |     } else {
+      |            ^
+[TRACE] Validating outputs/repair_repro_7b_200/7.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/7.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/8.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/8.fuzz failed validation with error message: outputs/repair_repro_7b_200/8.fuzz:12:37: error: empty character constant
+   12 |   x.erase(remove(x.begin(), x.end(),''), x.end());
+      |                                     ^~
+outputs/repair_repro_7b_200/8.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/8.fuzz:11:10: error: no matching function for call to ‘std::basic_istream<char>::get(std::vector<char>::iterator, std::vector<char>::iterator, char)’
+   11 |   cin.get(str.begin(), str.end(), '+');
+      |   ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/c++/11/iostream:40,
+                 from outputs/repair_repro_7b_200/8.fuzz:1:
+/usr/include/c++/11/istream:302:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>::int_type std::basic_istream<_CharT, _Traits>::get() [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::int_type = int]’
+  302 |       get();
+      |       ^~~
+/usr/include/c++/11/istream:302:7: note:   candidate expects 0 arguments, 3 provided
+/usr/include/c++/11/istream:316:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::get(std::basic_istream<_CharT, _Traits>::char_type&) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::char_type = char]’
+  316 |       get(char_type& __c);
+      |       ^~~
+/usr/include/c++/11/istream:316:7: note:   candidate expects 1 argument, 3 provided
+/usr/include/c++/11/istream:343:7: note: candidate: ‘std::basic_istream<_CharT, _Traits>& std::basic_istream<_CharT, _Traits>::get(std::basic_istream<_CharT, _Traits>::char_type*, std::streamsize, std::basic_istream<_CharT, _Traits>::char_type) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_istream<_CharT, _Traits>::char_type = char; std::streamsize = long int]’
+  343 |       get(char_type* __s, streamsize __n, char_type __delim);
+      |       ^~~
+[TRACE] Validating outputs/repair_repro_7b_200/9.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/9.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/10.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/10.fuzz failed validation with error message: outputs/repair_repro_7b_200/10.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/10.fuzz:6:12: error: ‘sin’ was not declared in this scope
+    6 |   cout << (sin(y) + cos(y - 90) + cos(y + 90) - 3) * x << endl;
+      |            ^~~
+outputs/repair_repro_7b_200/10.fuzz:6:21: error: ‘cos’ was not declared in this scope
+    6 |   cout << (sin(y) + cos(y - 90) + cos(y + 90) - 3) * x << endl;
+      |                     ^~~
+outputs/repair_repro_7b_200/10.fuzz: At global scope:
+outputs/repair_repro_7b_200/10.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/10.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/10.fuzz: In constructor ‘Rectangle::Rectangle(std::string, int, int)’:
+outputs/repair_repro_7b_200/10.fuzz:80:12: error: no matching function for call to ‘Shape::Shape(<brace-enclosed initializer list>)’
+   80 | ) : Shape{t} {
+      |            ^
+outputs/repair_repro_7b_200/10.fuzz:45:7: note: candidate: ‘Shape::Shape()’
+   45 | class Shape {
+[TRACE] Validating outputs/repair_repro_7b_200/10_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/10_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/11.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/11.fuzz failed validation with error message: outputs/repair_repro_7b_200/11.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/11.fuzz:6:19: error: ‘M_PI’ was not declared in this scope
+    6 |   if ((b / 180) * M_PI >= sin(a / 180) * M_PI) cout << 0.0 << endl;
+      |                   ^~~~
+outputs/repair_repro_7b_200/11.fuzz:6:19: note: the macro ‘M_PI’ had not yet been defined
+In file included from /usr/include/c++/11/cmath:45,
+                 from outputs/repair_repro_7b_200/11.fuzz:13:
+/usr/include/math.h:1151: note: it was later defined here
+ 1151 | # define M_PI           3.14159265358979323846  /* pi */
+      | 
+outputs/repair_repro_7b_200/11.fuzz:6:27: error: ‘sin’ was not declared in this scope
+    6 |   if ((b / 180) * M_PI >= sin(a / 180) * M_PI) cout << 0.0 << endl;
+      |                           ^~~
+outputs/repair_repro_7b_200/11.fuzz: At global scope:
+outputs/repair_repro_7b_200/11.fuzz:23:5: error: redefinition of ‘int main()’
+   23 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/11.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/12.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/12.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/13.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/13.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/14.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/14.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/15.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/15.fuzz failed validation with error message: outputs/repair_repro_7b_200/15.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/15.fuzz:6:17: error: ‘sin’ was not declared in this scope
+    6 |   cout << round(sin(p - a)) * p - b;
+      |                 ^~~
+outputs/repair_repro_7b_200/15.fuzz:6:11: error: ‘round’ was not declared in this scope
+    6 |   cout << round(sin(p - a)) * p - b;
+      |           ^~~~~
+[TRACE] Validating outputs/repair_repro_7b_200/15_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/15_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/16.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/16.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/17.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/17.fuzz failed validation with error message: outputs/repair_repro_7b_200/17.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/17.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/17.fuzz:19:5: error: redefinition of ‘int main()’
+   19 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/17.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/17_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/17_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/18.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/18.fuzz failed validation with error message: outputs/repair_repro_7b_200/18.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/18.fuzz:6:7: error: ‘sin’ was not declared in this scope
+    6 |   p = sin(p-a)*p+b;
+      |       ^~~
+outputs/repair_repro_7b_200/18.fuzz: At global scope:
+outputs/repair_repro_7b_200/18.fuzz:14:7: error: expected initializer before ‘<’ token
+   14 | int ma<stdin, stdin>ain() {
+      |       ^
+[TRACE] Validating outputs/repair_repro_7b_200/18_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/18_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/19.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/19.fuzz failed validation with error message: outputs/repair_repro_7b_200/19.fuzz:35:106: error: stray ‘#’ in program
+   35 | }<commit_msg>[Added] Problem set problems for C++. Mostly the same as that for Java, but in C++ instead. #2<commit_after>
+      |                                                                                                          ^
+outputs/repair_repro_7b_200/19.fuzz:9:5: error: redefinition of ‘int main()’
+    9 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/19.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/19.fuzz:15:5: error: redefinition of ‘int main()’
+   15 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/19.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/19.fuzz:21:5: error: redefinition of ‘int main()’
+   21 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/19.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+[TRACE] Validating outputs/repair_repro_7b_200/19_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/19_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/20.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/20.fuzz failed validation with error message: outputs/repair_repro_7b_200/20.fuzz:5:1: error: ‘g’ does not name a type
+    5 | g = g+"s";
+      | ^
+outputs/repair_repro_7b_200/20.fuzz:6:1: error: ‘cout’ does not name a type
+    6 | cout << g << endl;
+      | ^~~~
+outputs/repair_repro_7b_200/20.fuzz:7:1: error: expected declaration before ‘}’ token
+    7 | }
+      | ^
+[TRACE] Validating outputs/repair_repro_7b_200/20_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/20_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/21.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/21.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/22.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/22.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/23.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/23.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/24.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/24.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/25.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/25.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/26.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/26.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/27.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/27.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/28.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/28.fuzz failed validation with error message: outputs/repair_repro_7b_200/28.fuzz:13:5: error: redefinition of ‘int main()’
+   13 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/28.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/28.fuzz:19:5: error: redefinition of ‘int main()’
+   19 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/28.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/28.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/28.fuzz:24:18: error: narrowing conversion of ‘1.0e+1’ from ‘double’ to ‘int’ [-Wnarrowing]
+   24 |         int u{10.};
+      |                  ^
+[TRACE] Validating outputs/repair_repro_7b_200/28_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/28_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/29.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/29.fuzz failed validation with error message: outputs/repair_repro_7b_200/29.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main(void) {
+      |     ^~~~
+outputs/repair_repro_7b_200/29.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main(void) {
+      |     ^~~~
+outputs/repair_repro_7b_200/29.fuzz:19:5: error: redefinition of ‘int main()’
+   19 | int main(void) {
+      |     ^~~~
+outputs/repair_repro_7b_200/29.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main(void) {
+      |     ^~~~
+outputs/repair_repro_7b_200/29.fuzz:28:5: error: redefinition of ‘int main()’
+   28 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/29.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/29_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/29_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/30.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/30.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/31.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/31.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/32.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/32.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/33.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/33.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/34.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/34.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/35.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/35.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/36.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/36.fuzz failed validation with error message: outputs/repair_repro_7b_200/36.fuzz:13:5: error: redefinition of ‘int main()’
+   13 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/36.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/36_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/36_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/37.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/37.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/38.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/38.fuzz failed validation with error message: outputs/repair_repro_7b_200/38.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/38.fuzz:5:13: error: cannot decompose inaccessible member ‘std::initializer_list<int>::_M_array’ of ‘std::initializer_list<int>’
+    5 |         auto[a,b,c]= {20,10,12};
+      |             ^~~~~~~
+In file included from /usr/include/c++/11/bits/algorithmfwd.h:39,
+                 from /usr/include/c++/11/bits/stl_algo.h:60,
+                 from /usr/include/c++/11/string:52,
+                 from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_repro_7b_200/38.fuzz:1:
+/usr/include/c++/11/initializer_list:58:33: note: declared private here
+   58 |       iterator                  _M_array;
+      |                                 ^~~~~~~~
+[TRACE] Validating outputs/repair_repro_7b_200/38_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/38_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/39.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/39.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/40.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/40.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/41.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/41.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/42.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/42.fuzz failed validation with error message: outputs/repair_repro_7b_200/42.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/42.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/42.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/42.fuzz:21:43: error: ‘x’ was not declared in this scope
+   21 |                          case 10: cout << x << endl; break;
+      |                                           ^
+outputs/repair_repro_7b_200/42.fuzz: At global scope:
+outputs/repair_repro_7b_200/42.fuzz:29:5: error: redefinition of ‘int main()’
+   29 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/42.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/42_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/42_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/43.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/43.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/44.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/44.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/45.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/45.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/46.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/46.fuzz failed validation with error message: outputs/repair_repro_7b_200/46.fuzz:12:11: error: ‘Point001’ has not been declared
+   12 | const int Point001::*x002;
+      |           ^~~~~~~~
+outputs/repair_repro_7b_200/46.fuzz:12:21: error: expected unqualified-id before ‘*’ token
+   12 | const int Point001::*x002;
+      |                     ^
+outputs/repair_repro_7b_200/46.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/46.fuzz:14:9: error: ‘Point001’ was not declared in this scope; did you mean ‘Point003’?
+   14 |         Point001 coopt;
+      |         ^~~~~~~~
+      |         Point003
+outputs/repair_repro_7b_200/46.fuzz:15:17: error: expected ‘;’ before ‘point1’
+   15 |         Point001 point1;
+      |                 ^~~~~~~
+      |                 ;
+[TRACE] Validating outputs/repair_repro_7b_200/46_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/46_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/47.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/47.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/48.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/48.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/49.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/49.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/50.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/50.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/51.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/51.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/52.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/52.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/53.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/53.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/54.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/54.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/55.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/55.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/56.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/56.fuzz failed validation with error message: outputs/repair_repro_7b_200/56.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/56.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/56_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/56_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/57.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/57.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/58.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/58.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/59.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/59.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/60.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/60.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/61.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/61.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/62.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/62.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/63.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/63.fuzz failed validation with error message: outputs/repair_repro_7b_200/63.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main() {}
+      |     ^~~~
+outputs/repair_repro_7b_200/63.fuzz:6:5: note: ‘int main()’ previously defined here
+    6 | int main() { func(5); }
+      |     ^~~~
+outputs/repair_repro_7b_200/63.fuzz:19:5: error: redefinition of ‘int main()’
+   19 | int main()
+      |     ^~~~
+outputs/repair_repro_7b_200/63.fuzz:6:5: note: ‘int main()’ previously defined here
+    6 | int main() { func(5); }
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/63_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/63_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/64.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/64.fuzz failed validation with error message: outputs/repair_repro_7b_200/64.fuzz:2:20: error: expected ‘;’ before ‘{’ token
+    2 | using namespace std
+      |                    ^
+      |                    ;
+    3 | {
+      | ~                   
+outputs/repair_repro_7b_200/64.fuzz:3:1: error: expected unqualified-id before ‘{’ token
+    3 | {
+      | ^
+[TRACE] Validating outputs/repair_repro_7b_200/65.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/65.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/66.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/66.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/67.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/67.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/68.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/68.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/69.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/69.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/70.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/70.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/71.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/71.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/72.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/72.fuzz failed validation with error message: outputs/repair_repro_7b_200/72.fuzz: In lambda function:
+outputs/repair_repro_7b_200/72.fuzz:5:6: error: assignment of read-only variable ‘i’
+    5 |     i+=1;
+      |     ~^~~
+outputs/repair_repro_7b_200/72.fuzz:6:6: error: assignment of read-only variable ‘j’
+    6 |     j+=1;
+      |     ~^~~
+[TRACE] Validating outputs/repair_repro_7b_200/73.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/73.fuzz failed validation with error message: outputs/repair_repro_7b_200/73.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/73.fuzz:11:9: error: cannot bind non-const lvalue reference of type ‘unsigned int&’ to a value of type ‘int’
+   11 |   pf(i, j);
+      |         ^
+[TRACE] Validating outputs/repair_repro_7b_200/73_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/73_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/74.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/74.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/75.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/75.fuzz failed validation with error message: outputs/repair_repro_7b_200/75.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/75.fuzz:9:3: error: cannot convert ‘main()::<lambda()>’ to ‘void (*)()’ in initialization
+    9 |   };
+      |   ^
+[TRACE] Validating outputs/repair_repro_7b_200/76.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/76.fuzz failed validation with error message: outputs/repair_repro_7b_200/76.fuzz: In lambda function:
+outputs/repair_repro_7b_200/76.fuzz:6:7: error: ‘j’ is not captured
+    6 |     ++j;
+      |       ^
+outputs/repair_repro_7b_200/76.fuzz:4:16: note: the lambda has no capture-default
+    4 |   auto fn = [&i]() mutable {
+      |                ^
+outputs/repair_repro_7b_200/76.fuzz:3:24: note: ‘unsigned int j’ declared here
+    3 | auto f(int i, unsigned j) {
+      |               ~~~~~~~~~^
+outputs/repair_repro_7b_200/76.fuzz:7:25: error: ‘j’ is not captured
+    7 |     cout << i << " " << j << endl;
+      |                         ^
+outputs/repair_repro_7b_200/76.fuzz:4:16: note: the lambda has no capture-default
+    4 |   auto fn = [&i]() mutable {
+      |                ^
+outputs/repair_repro_7b_200/76.fuzz:3:24: note: ‘unsigned int j’ declared here
+    3 | auto f(int i, unsigned j) {
+      |               ~~~~~~~~~^
+outputs/repair_repro_7b_200/76.fuzz: At global scope:
+[TRACE] Validating outputs/repair_repro_7b_200/76_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/76_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/77.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/77.fuzz failed validation with error message: outputs/repair_repro_7b_200/77.fuzz:16:1: error: stray ‘`’ in program
+   16 | ```
+      | ^
+outputs/repair_repro_7b_200/77.fuzz:16:2: error: stray ‘`’ in program
+   16 | ```
+      |  ^
+outputs/repair_repro_7b_200/77.fuzz:16:3: error: stray ‘`’ in program
+   16 | ```
+      |   ^
+outputs/repair_repro_7b_200/77.fuzz:18:1: error: stray ‘##’ in program
+   18 | ## [C++17](https:
+      | ^~
+outputs/repair_repro_7b_200/77.fuzz:20:1: error: stray ‘##’ in program
+   20 | ## [OpenCV](https:
+      | ^~
+outputs/repair_repro_7b_200/77.fuzz:18:4: error: expected unqualified-id before ‘[’ token
+   18 | ## [C++17](https:
+      |    ^
+[TRACE] Validating outputs/repair_repro_7b_200/78.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/78.fuzz failed validation with error message: outputs/repair_repro_7b_200/78.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/78.fuzz:6:3: error: ‘vector’ was not declared in this scope
+    6 |   vector<int> a(5);
+      |   ^~~~~~
+outputs/repair_repro_7b_200/78.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | using namespace std;
+outputs/repair_repro_7b_200/78.fuzz:6:10: error: expected primary-expression before ‘int’
+    6 |   vector<int> a(5);
+      |          ^~~
+outputs/repair_repro_7b_200/78.fuzz:7:3: error: ‘a’ was not declared in this scope
+    7 |   a.push_back(1);
+      |   ^
+outputs/repair_repro_7b_200/78.fuzz:12:10: error: expected primary-expression before ‘int’
+   12 |   vector<int> b = a;
+      |          ^~~
+outputs/repair_repro_7b_200/78.fuzz:13:10: error: expected primary-expression before ‘int’
+   13 |   vector<int> c = i;
+      |          ^~~
+[TRACE] Validating outputs/repair_repro_7b_200/79.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/79.fuzz failed validation with error message: outputs/repair_repro_7b_200/79.fuzz: In lambda function:
+outputs/repair_repro_7b_200/79.fuzz:5:6: error: assignment of read-only variable ‘i’
+    5 |     i+=1;
+      |     ~^~~
+outputs/repair_repro_7b_200/79.fuzz:6:6: error: assignment of read-only variable ‘j’
+    6 |     j+=1;
+      |     ~^~~
+[TRACE] Validating outputs/repair_repro_7b_200/79_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/79_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/80.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/80.fuzz failed validation with error message: outputs/repair_repro_7b_200/80.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/80.fuzz:4:17: error: expected ‘}’ at end of input
+    4 | int main(void) {
+      |                ~^
+[TRACE] Validating outputs/repair_repro_7b_200/80_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/80_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/81.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/81.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/82.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/82.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/83.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/83.fuzz failed validation with error message: outputs/repair_repro_7b_200/83.fuzz:3:10: fatal error: A.h: No such file or directory
+    3 | #include "A.h"
+      |          ^~~~~
+compilation terminated.
+[TRACE] Validating outputs/repair_repro_7b_200/84.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/84.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/85.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/85.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/86.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/86.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/87.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/87.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/88.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/88.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/89.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/89.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/90.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/90.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/91.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/91.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/92.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/92.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/93.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/93.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/94.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/94.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/95.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/95.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/96.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/96.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/97.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/97.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/98.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/98.fuzz failed validation with error message: outputs/repair_repro_7b_200/98.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/98.fuzz:23:5: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+   23 |     cout << a.m_x << endl;
+      |     ^~~~
+      |     std::cout
+In file included from outputs/repair_repro_7b_200/98.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/repair_repro_7b_200/98.fuzz:23:22: error: ‘endl’ was not declared in this scope; did you mean ‘std::endl’?
+   23 |     cout << a.m_x << endl;
+      |                      ^~~~
+      |                      std::endl
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_repro_7b_200/98.fuzz:1:
+/usr/include/c++/11/ostream:684:5: note: ‘std::endl’ declared here
+  684 |     endl(basic_ostream<_CharT, _Traits>& __os)
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/98_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/98_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/99.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/99.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/100.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/100.fuzz failed validation with error message: outputs/repair_repro_7b_200/100.fuzz:18:7: error: ‘template<class T> struct foo’ redeclared as different kind of entity
+   18 | class foo
+      |       ^~~
+outputs/repair_repro_7b_200/100.fuzz:2:11: note: previous declaration ‘namespace foo { }’
+    2 | namespace foo
+      |           ^~~
+outputs/repair_repro_7b_200/100.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/100.fuzz:23:8: error: expected primary-expression before ‘<’ token
+   23 |     foo<int> b;
+      |        ^
+outputs/repair_repro_7b_200/100.fuzz:23:9: error: expected primary-expression before ‘int’
+   23 |     foo<int> b;
+      |         ^~~
+[TRACE] Validating outputs/repair_repro_7b_200/101.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/101.fuzz failed validation with error message: outputs/repair_repro_7b_200/101.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/101.fuzz:17:14: error: no matching function for call to ‘foo::bar::bar()’
+   17 |     foo::bar a1;
+      |              ^~
+outputs/repair_repro_7b_200/101.fuzz:8:9: note: candidate: ‘foo::bar::bar(int)’
+    8 |         bar(int x) : m_x(x) {}
+      |         ^~~
+outputs/repair_repro_7b_200/101.fuzz:8:9: note:   candidate expects 1 argument, 0 provided
+outputs/repair_repro_7b_200/101.fuzz:5:11: note: candidate: ‘constexpr foo::bar::bar(const foo::bar&)’
+    5 |     class bar
+      |           ^~~
+outputs/repair_repro_7b_200/101.fuzz:5:11: note:   candidate expects 1 argument, 0 provided
+outputs/repair_repro_7b_200/101.fuzz:5:11: note: candidate: ‘constexpr foo::bar::bar(foo::bar&&)’
+outputs/repair_repro_7b_200/101.fuzz:5:11: note:   candidate expects 1 argument, 0 provided
+[TRACE] Validating outputs/repair_repro_7b_200/102.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/102.fuzz failed validation with error message: outputs/repair_repro_7b_200/102.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/102.fuzz:12:18: error: no matching function for call to ‘foo::bar::bar(int)’
+   12 |     foo::bar b(12);
+      |                  ^
+outputs/repair_repro_7b_200/102.fuzz:7:9: note: candidate: ‘foo::bar::bar()’
+    7 |         bar() {};
+      |         ^~~
+outputs/repair_repro_7b_200/102.fuzz:7:9: note:   candidate expects 0 arguments, 1 provided
+outputs/repair_repro_7b_200/102.fuzz:4:11: note: candidate: ‘constexpr foo::bar::bar(const foo::bar&)’
+    4 |     class bar
+      |           ^~~
+outputs/repair_repro_7b_200/102.fuzz:4:11: note:   no known conversion for argument 1 from ‘int’ to ‘const foo::bar&’
+outputs/repair_repro_7b_200/102.fuzz:4:11: note: candidate: ‘constexpr foo::bar::bar(foo::bar&&)’
+outputs/repair_repro_7b_200/102.fuzz:4:11: note:   no known conversion for argument 1 from ‘int’ to ‘foo::bar&&’
+[TRACE] Validating outputs/repair_repro_7b_200/103.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/103.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/104.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/104.fuzz failed validation with error message: outputs/repair_repro_7b_200/104.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/104.fuzz:25:35: error: invalid operands of types ‘int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+   25 |     std::cout << array_ref(1) = 0 << std::endl;
+      |                                 ~~^~~~~~~~~~~~
+outputs/repair_repro_7b_200/104.fuzz:28:11: error: cannot declare reference to ‘void’
+   28 |     void& array_ptr = array;
+      |           ^~~~~~~~~
+outputs/repair_repro_7b_200/104.fuzz:28:11: error: variable or field ‘array_ptr’ declared void
+outputs/repair_repro_7b_200/104.fuzz:31:6: error: ‘array_ptr’ was not declared in this scope; did you mean ‘array_ref’?
+   31 |      array_ptr++;
+      |      ^~~~~~~~~
+      |      array_ref
+[TRACE] Validating outputs/repair_repro_7b_200/105.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/105.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/106.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/106.fuzz failed validation with error message: outputs/repair_repro_7b_200/106.fuzz:2:6: error: ‘mutex’ in namespace ‘std’ does not name a type
+    2 | std::mutex mtx;
+      |      ^~~~~
+outputs/repair_repro_7b_200/106.fuzz:2:1: note: ‘std::mutex’ is defined in header ‘<mutex>’; did you forget to ‘#include <mutex>’?
+    1 | #include <iostream>
+  +++ |+#include <mutex>
+    2 | std::mutex mtx;
+outputs/repair_repro_7b_200/106.fuzz:3:6: error: ‘condition_variable’ in namespace ‘std’ does not name a type
+    3 | std::condition_variable cv;
+      |      ^~~~~~~~~~~~~~~~~~
+outputs/repair_repro_7b_200/106.fuzz:2:1: note: ‘std::condition_variable’ is defined in header ‘<condition_variable>’; did you forget to ‘#include <condition_variable>’?
+    1 | #include <iostream>
+  +++ |+#include <condition_variable>
+    2 | std::mutex mtx;
+outputs/repair_repro_7b_200/106.fuzz: In function ‘void foo()’:
+outputs/repair_repro_7b_200/106.fuzz:6:5: error: ‘mtx’ was not declared in this scope
+    6 |     mtx.lock();
+      |     ^~~
+outputs/repair_repro_7b_200/106.fuzz:7:5: error: ‘cv’ was not declared in this scope
+    7 |     cv.notify_all();
+[TRACE] Validating outputs/repair_repro_7b_200/106_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/106_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/107.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/107.fuzz failed validation with error message: outputs/repair_repro_7b_200/107.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/107.fuzz:3:23: error: ‘array’ is not a member of ‘std’
+    3 |     std::cout << std::array<char, 10>()<< std::endl;
+      |                       ^~~~~
+outputs/repair_repro_7b_200/107.fuzz:2:1: note: ‘std::array’ is defined in header ‘<array>’; did you forget to ‘#include <array>’?
+    1 | #include <iostream>
+  +++ |+#include <array>
+    2 | int main(void) {
+outputs/repair_repro_7b_200/107.fuzz:3:29: error: expected primary-expression before ‘char’
+    3 |     std::cout << std::array<char, 10>()<< std::endl;
+      |                             ^~~~
+outputs/repair_repro_7b_200/107.fuzz:4:29: error: ‘array’ is not a member of ‘std’
+    4 |     for (int const i : std::array<int, 20>())
+      |                             ^~~~~
+outputs/repair_repro_7b_200/107.fuzz:4:29: note: ‘std::array’ is defined in header ‘<array>’; did you forget to ‘#include <array>’?
+outputs/repair_repro_7b_200/107.fuzz:4:35: error: expected primary-expression before ‘int’
+    4 |     for (int const i : std::array<int, 20>())
+      |                                   ^~~
+outputs/repair_repro_7b_200/107.fuzz:4:35: error: expected ‘)’ before ‘int’
+    4 |     for (int const i : std::array<int, 20>())
+[TRACE] Validating outputs/repair_repro_7b_200/108.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/108.fuzz failed validation with error message: outputs/repair_repro_7b_200/108.fuzz: In function ‘void foo()’:
+outputs/repair_repro_7b_200/108.fuzz:5:5: error: ‘mtx’ was not declared in this scope
+    5 |     mtx.lock();
+      |     ^~~
+outputs/repair_repro_7b_200/108.fuzz:6:10: error: ‘cv’ was not declared in this scope
+    6 |     if (!cv.wait_for(mtx, std::chrono::seconds(3), []{
+      |          ^~
+outputs/repair_repro_7b_200/108.fuzz: In lambda function:
+outputs/repair_repro_7b_200/108.fuzz:15:41: error: ‘mtx’ was not declared in this scope
+   15 |         std::unique_lock<std::mutex> lk(mtx);
+      |                                         ^~~
+outputs/repair_repro_7b_200/108.fuzz:16:9: error: ‘cv’ was not declared in this scope
+   16 |         cv.wait_for(lk, std::chrono::seconds(3), []{
+      |         ^~
+outputs/repair_repro_7b_200/108.fuzz: In function ‘void one()’:
+outputs/repair_repro_7b_200/108.fuzz:31:5: error: ‘x’ was not declared in this scope; did you mean ‘mx’?
+   31 |     x = 1;
+      |     ^
+      |     mx
+outputs/repair_repro_7b_200/108.fuzz: In function ‘void two()’:
+[TRACE] Validating outputs/repair_repro_7b_200/109.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/109.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/110.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/110.fuzz failed validation with error message: outputs/repair_repro_7b_200/110.fuzz: In function ‘void foobar(int)’:
+outputs/repair_repro_7b_200/110.fuzz:13:13: error: ‘lk’ was not declared in this scope
+   13 |     cv.wait(lk, [](){
+      |             ^~
+outputs/repair_repro_7b_200/110.fuzz: In lambda function:
+outputs/repair_repro_7b_200/110.fuzz:14:16: error: ‘x’ is not captured
+   14 |         return x;
+      |                ^
+outputs/repair_repro_7b_200/110.fuzz:13:18: note: the lambda has no capture-default
+   13 |     cv.wait(lk, [](){
+      |                  ^
+outputs/repair_repro_7b_200/110.fuzz:11:17: note: ‘int x’ declared here
+   11 | void foobar(int x) {
+      |             ~~~~^
+[TRACE] Validating outputs/repair_repro_7b_200/111.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/111.fuzz failed validation with error message: outputs/repair_repro_7b_200/111.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/111.fuzz:4:10: error: ‘thread’ is not a member of ‘std’
+    4 |     std::thread[7] t;
+      |          ^~~~~~
+outputs/repair_repro_7b_200/111.fuzz:2:1: note: ‘std::thread’ is defined in header ‘<thread>’; did you forget to ‘#include <thread>’?
+    1 | #include <iostream>
+  +++ |+#include <thread>
+    2 | int main(void) {
+outputs/repair_repro_7b_200/111.fuzz:6:9: error: ‘t’ was not declared in this scope
+    6 |         t[i]=new std::thread([](){
+      |         ^
+outputs/repair_repro_7b_200/111.fuzz:6:18: error: expected type-specifier
+    6 |         t[i]=new std::thread([](){
+      |                  ^~~
+outputs/repair_repro_7b_200/111.fuzz:15:10: error: expected primary-expression before ‘)’ token
+   15 |         });
+      |          ^
+outputs/repair_repro_7b_200/111.fuzz:16:5: error: ‘t’ was not declared in this scope
+   16 |     t[1]->join();
+      |     ^
+[TRACE] Validating outputs/repair_repro_7b_200/112.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/112.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/113.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/113.fuzz failed validation with error message: outputs/repair_repro_7b_200/113.fuzz: In lambda function:
+outputs/repair_repro_7b_200/113.fuzz:16:28: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+   16 |             cv.wait(lk, []{cout << "notify" << endl; return true; } );
+      |                            ^~~~
+      |                            std::cout
+In file included from outputs/repair_repro_7b_200/113.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/repair_repro_7b_200/113.fuzz:16:48: error: ‘endl’ was not declared in this scope; did you mean ‘std::endl’?
+   16 |             cv.wait(lk, []{cout << "notify" << endl; return true; } );
+      |                                                ^~~~
+      |                                                std::endl
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_repro_7b_200/113.fuzz:1:
+/usr/include/c++/11/ostream:684:5: note: ‘std::endl’ declared here
+  684 |     endl(basic_ostream<_CharT, _Traits>& __os)
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/113_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/113_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/114.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/114.fuzz failed validation with error message: outputs/repair_repro_7b_200/114.fuzz:68:5: error: redefinition of ‘int main()’
+   68 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/114.fuzz:18:5: note: ‘int main()’ previously defined here
+   18 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/115.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/115.fuzz failed validation with error message: outputs/repair_repro_7b_200/115.fuzz: In function ‘void foo1()’:
+outputs/repair_repro_7b_200/115.fuzz:8:8: error: ‘class std::condition_variable’ has no member named ‘notify_all_at_thread_exit’
+    8 |     cv.notify_all_at_thread_exit(mtx.native_handle(),(pthread_cond_t*)NULL);
+      |        ^~~~~~~~~~~~~~~~~~~~~~~~~
+outputs/repair_repro_7b_200/115.fuzz: In lambda function:
+outputs/repair_repro_7b_200/115.fuzz:17:20: error: ‘union pthread_cond_t’ has no member named ‘wait’
+   17 |                 cv.wait(lk);
+      |                    ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/116.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/116.fuzz failed validation with error message: outputs/repair_repro_7b_200/116.fuzz: In constructor ‘Foo::Foo()’:
+outputs/repair_repro_7b_200/116.fuzz:12:25: error: expected type-specifier before ‘B’
+   12 |     Foo() { b.reset(new B()); }
+      |                         ^
+outputs/repair_repro_7b_200/116.fuzz: In lambda function:
+outputs/repair_repro_7b_200/116.fuzz:22:35: error: ‘int Bar::a’ is private within this context
+   22 |         std::cout << "BAR " << b->a << std::endl; });
+      |                                   ^
+outputs/repair_repro_7b_200/116.fuzz:9:9: note: declared private here
+    9 |     int a;
+      |         ^
+[TRACE] Validating outputs/repair_repro_7b_200/117.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/117.fuzz failed validation with error message: outputs/repair_repro_7b_200/117.fuzz:2:6: error: ‘atomic’ in namespace ‘std’ does not name a template type
+    2 | std::atomic<int> ai;
+      |      ^~~~~~
+outputs/repair_repro_7b_200/117.fuzz:2:1: note: ‘std::atomic’ is defined in header ‘<atomic>’; did you forget to ‘#include <atomic>’?
+    1 | #include <iostream>
+  +++ |+#include <atomic>
+    2 | std::atomic<int> ai;
+outputs/repair_repro_7b_200/117.fuzz:3:6: error: ‘atomic’ in namespace ‘std’ does not name a template type
+    3 | std::atomic<bool> ab;
+      |      ^~~~~~
+outputs/repair_repro_7b_200/117.fuzz:3:1: note: ‘std::atomic’ is defined in header ‘<atomic>’; did you forget to ‘#include <atomic>’?
+    3 | std::atomic<bool> ab;
+      | ^~~
+outputs/repair_repro_7b_200/117.fuzz:4:6: error: ‘atomic’ in namespace ‘std’ does not name a template type
+    4 | std::atomic<std::string> as;
+      |      ^~~~~~
+outputs/repair_repro_7b_200/117.fuzz:4:1: note: ‘std::atomic’ is defined in header ‘<atomic>’; did you forget to ‘#include <atomic>’?
+    4 | std::atomic<std::string> as;
+      | ^~~
+outputs/repair_repro_7b_200/117.fuzz: In function ‘int main()’:
+[TRACE] Validating outputs/repair_repro_7b_200/118.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/118.fuzz failed validation with error message: outputs/repair_repro_7b_200/118.fuzz: In lambda function:
+outputs/repair_repro_7b_200/118.fuzz:12:33: error: unable to find numeric literal operator ‘operator""s’
+   12 |                 cv.wait_for(lk, 15s, []{std::cout << "notify" << std::endl; return true; } );
+      |                                 ^~~
+outputs/repair_repro_7b_200/118.fuzz:12:33: note: use ‘-fext-numeric-literals’ to enable more built-in suffixes
+[TRACE] Validating outputs/repair_repro_7b_200/118_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/118_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/119.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/119.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/120.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/120.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/121.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/121.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/122.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/122.fuzz failed validation with error message: outputs/repair_repro_7b_200/122.fuzz:58:1: error: stray ‘`’ in program
+   58 | ```
+      | ^
+outputs/repair_repro_7b_200/122.fuzz:58:2: error: stray ‘`’ in program
+   58 | ```
+      |  ^
+outputs/repair_repro_7b_200/122.fuzz:58:3: error: stray ‘`’ in program
+   58 | ```
+      |   ^
+outputs/repair_repro_7b_200/122.fuzz:2:6: error: ‘mutex’ in namespace ‘std’ does not name a type
+    2 | std::mutex mtx;
+      |      ^~~~~
+outputs/repair_repro_7b_200/122.fuzz:2:1: note: ‘std::mutex’ is defined in header ‘<mutex>’; did you forget to ‘#include <mutex>’?
+    1 | #include <iostream>
+  +++ |+#include <mutex>
+    2 | std::mutex mtx;
+outputs/repair_repro_7b_200/122.fuzz: In function ‘void foo(bool&)’:
+outputs/repair_repro_7b_200/122.fuzz:4:5: error: ‘mtx’ was not declared in this scope
+    4 |     mtx.lock();
+      |     ^~~
+[TRACE] Validating outputs/repair_repro_7b_200/123.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/123.fuzz failed validation with error message: outputs/repair_repro_7b_200/123.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/123.fuzz:35:7: error: no matching function for call to ‘Foo::Foo()’
+   35 |   Foo f;
+      |       ^
+outputs/repair_repro_7b_200/123.fuzz:9:3: note: candidate: ‘Foo::Foo(const Foo&)’
+    9 |   Foo(const Foo&) : m(0) {}
+      |   ^~~
+outputs/repair_repro_7b_200/123.fuzz:9:3: note:   candidate expects 1 argument, 0 provided
+outputs/repair_repro_7b_200/123.fuzz:36:7: error: no matching function for call to ‘Bar::Bar()’
+   36 |   Bar b;
+      |       ^
+outputs/repair_repro_7b_200/123.fuzz:21:3: note: candidate: ‘Bar::Bar(const Bar&)’
+   21 |   Bar(const Bar&) {}
+      |   ^~~
+outputs/repair_repro_7b_200/123.fuzz:21:3: note:   candidate expects 1 argument, 0 provided
+outputs/repair_repro_7b_200/123.fuzz:39:16: error: no matching function for call to ‘std::condition_variable::wait_for(std::unique_lock<std::mutex>, std::chrono::milliseconds)’
+   39 |     cv.wait_for(std::unique_lock<std::mutex>(mtx), std::chrono::milliseconds(1000));
+      |     ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from outputs/repair_repro_7b_200/123.fuzz:3:
+/usr/include/c++/11/condition_variable:159:7: note: candidate: ‘template<class _Rep, class _Period> std::cv_status std::condition_variable::wait_for(std::unique_lock<std::mutex>&, const std::chrono::duration<_Rep1, _Period1>&)’
+[TRACE] Validating outputs/repair_repro_7b_200/124.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/124.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/125.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/125.fuzz failed validation with error message: outputs/repair_repro_7b_200/125.fuzz: In function ‘void foo()’:
+outputs/repair_repro_7b_200/125.fuzz:11:20: error: no matching function for call to ‘std::condition_variable::wait_for(std::mutex&, std::chrono::milliseconds)’
+   11 |         cv.wait_for(mtx, std::chrono::milliseconds(1000));
+      |         ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from outputs/repair_repro_7b_200/125.fuzz:3:
+/usr/include/c++/11/condition_variable:159:7: note: candidate: ‘template<class _Rep, class _Period> std::cv_status std::condition_variable::wait_for(std::unique_lock<std::mutex>&, const std::chrono::duration<_Rep1, _Period1>&)’
+  159 |       wait_for(unique_lock<mutex>& __lock,
+      |       ^~~~~~~~
+/usr/include/c++/11/condition_variable:159:7: note:   template argument deduction/substitution failed:
+outputs/repair_repro_7b_200/125.fuzz:11:21: note:   cannot convert ‘mtx’ (type ‘std::mutex’) to type ‘std::unique_lock<std::mutex>&’
+   11 |         cv.wait_for(mtx, std::chrono::milliseconds(1000));
+      |                     ^~~
+In file included from outputs/repair_repro_7b_200/125.fuzz:3:
+/usr/include/c++/11/condition_variable:170:7: note: candidate: ‘template<class _Rep, class _Period, class _Predicate> bool std::condition_variable::wait_for(std::unique_lock<std::mutex>&, const std::chrono::duration<_Rep1, _Period1>&, _Predicate)’
+  170 |       wait_for(unique_lock<mutex>& __lock,
+      |       ^~~~~~~~
+/usr/include/c++/11/condition_variable:170:7: note:   template argument deduction/substitution failed:
+outputs/repair_repro_7b_200/125.fuzz:11:20: note:   candidate expects 3 arguments, 2 provided
+   11 |         cv.wait_for(mtx, std::chrono::milliseconds(1000));
+      |         ~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[TRACE] Validating outputs/repair_repro_7b_200/125_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/125_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/126.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/126.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/127.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/127.fuzz failed validation with error message: outputs/repair_repro_7b_200/127.fuzz: In function ‘void foo()’:
+outputs/repair_repro_7b_200/127.fuzz:12:15: error: no match for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘<unresolved overloaded function type>’)
+   12 |     std::cout << std::end;
+      |     ~~~~~~~~~~^~~~~~~~~~~
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_repro_7b_200/127.fuzz:1:
+/usr/include/c++/11/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:108:36: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:117:32: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |                  ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/ostream:127:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  127 |       operator<<(ios_base& (*__pf) (ios_base&))
+[TRACE] Validating outputs/repair_repro_7b_200/127_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/127_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/128.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/128.fuzz failed validation with error message: outputs/repair_repro_7b_200/128.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/128.fuzz:7:39: error: ‘m1’ was not declared in this scope
+    7 |     std::unique_lock<std::mutex> lock(m1);
+      |                                       ^~
+outputs/repair_repro_7b_200/128.fuzz:8:5: error: ‘cv’ was not declared in this scope
+    8 |     cv.wait(lock, []{return false;});
+      |     ^~
+outputs/repair_repro_7b_200/128.fuzz: At global scope:
+outputs/repair_repro_7b_200/128.fuzz:33:5: error: redefinition of ‘int main()’
+   33 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/128.fuzz:6:5: note: ‘int main()’ previously defined here
+    6 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/128_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/128_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/129.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/129.fuzz failed validation with error message: outputs/repair_repro_7b_200/129.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/129.fuzz:16:10: error: ‘thread’ is not a member of ‘std’
+   16 |     std::thread t([n]{
+      |          ^~~~~~
+outputs/repair_repro_7b_200/129.fuzz:6:1: note: ‘std::thread’ is defined in header ‘<thread>’; did you forget to ‘#include <thread>’?
+    5 | #include <queue>
+  +++ |+#include <thread>
+    6 | static int i = 0;
+outputs/repair_repro_7b_200/129.fuzz:31:6: error: expected primary-expression before ‘)’ token
+   31 |     });
+      |      ^
+outputs/repair_repro_7b_200/129.fuzz:34:21: error: ‘cv’ was not declared in this scope
+   34 |         while (i<n) cv.wait(locker);
+      |                     ^~
+outputs/repair_repro_7b_200/129.fuzz:38:9: error: ‘t’ was not declared in this scope
+   38 |         t.join();
+      |         ^
+[TRACE] Validating outputs/repair_repro_7b_200/129_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/129_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/130.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/130.fuzz failed validation with error message: outputs/repair_repro_7b_200/130.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/130.fuzz:16:9: error: cannot bind non-const lvalue reference of type ‘int&’ to a value of type ‘bool’
+   16 |     foo(a);
+      |         ^
+outputs/repair_repro_7b_200/130.fuzz:7:15: note:   initializing argument 1 of ‘void foo(int&)’
+    7 | void foo(int &a) {
+      |          ~~~~~^
+outputs/repair_repro_7b_200/130.fuzz: At global scope:
+outputs/repair_repro_7b_200/130.fuzz:27:17: error: non-local lambda expression cannot have a capture-default
+   27 | std::thread th([&] {
+      |                 ^
+outputs/repair_repro_7b_200/130.fuzz:32:1: error: ‘rLock’ does not name a type
+   32 | rLock.lock();
+      | ^~~~~
+outputs/repair_repro_7b_200/130.fuzz:33:6: error: ‘cout’ in namespace ‘std’ does not name a type
+   33 | std::cout << condition << std::endl;
+      |      ^~~~
+In file included from outputs/repair_repro_7b_200/130.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+[TRACE] Validating outputs/repair_repro_7b_200/131.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/131.fuzz failed validation with error message: outputs/repair_repro_7b_200/131.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/131.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/131.fuzz:24:5: error: redefinition of ‘int main()’
+   24 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/131.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/131_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/131_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/132.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/132.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/133.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/133.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/134.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/134.fuzz failed validation with error message: outputs/repair_repro_7b_200/134.fuzz:8:5: error: redefinition of ‘int main()’
+    8 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/134.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/134.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/134.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/134_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/134_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/135.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/135.fuzz failed validation with error message: outputs/repair_repro_7b_200/135.fuzz:10:1: error: stray ‘`’ in program
+   10 | ```
+      | ^
+outputs/repair_repro_7b_200/135.fuzz:10:2: error: stray ‘`’ in program
+   10 | ```
+      |  ^
+outputs/repair_repro_7b_200/135.fuzz:10:3: error: stray ‘`’ in program
+   10 | ```
+      |   ^
+[TRACE] Validating outputs/repair_repro_7b_200/135_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/135_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/136.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/136.fuzz failed validation with error message: outputs/repair_repro_7b_200/136.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/136.fuzz:3:23: error: ‘get_value’ was not declared in this scope
+    3 |     std::cout << 20 * get_value() << '\n';
+      |                       ^~~~~~~~~
+[TRACE] Validating outputs/repair_repro_7b_200/137.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/137.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/138.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/138.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/139.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/139.fuzz failed validation with error message: outputs/repair_repro_7b_200/139.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/139.fuzz:4:5: error: ‘cin’ was not declared in this scope; did you mean ‘std::cin’?
+    4 |     cin >> x;
+      |     ^~~
+      |     std::cin
+In file included from outputs/repair_repro_7b_200/139.fuzz:1:
+/usr/include/c++/11/iostream:60:18: note: ‘std::cin’ declared here
+   60 |   extern istream cin;           /// Linked to standard input
+      |                  ^~~
+outputs/repair_repro_7b_200/139.fuzz:5:5: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    5 |     cout << (x - 10) * 20 << '\n';
+      |     ^~~~
+      |     std::cout
+In file included from outputs/repair_repro_7b_200/139.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/139_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/139_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/140.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/140.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/141.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/141.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/142.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/142.fuzz failed validation with error message: outputs/repair_repro_7b_200/142.fuzz:8:1: error: stray ‘`’ in program
+    8 | ```
+      | ^
+outputs/repair_repro_7b_200/142.fuzz:8:2: error: stray ‘`’ in program
+    8 | ```
+      |  ^
+outputs/repair_repro_7b_200/142.fuzz:8:3: error: stray ‘`’ in program
+    8 | ```
+      |   ^
+[TRACE] Validating outputs/repair_repro_7b_200/142_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/142_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/143.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/143.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/144.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/144.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/145.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/145.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/146.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/146.fuzz failed validation with error message: outputs/repair_repro_7b_200/146.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/146.fuzz:3:61: error: no match for ‘operator<<’ (operand types are ‘int’ and ‘std::istream’ {aka ‘std::basic_istream<char>’})
+    3 |     std::cout << int(-std::ios_base::sync_with_stdio(false) << std::cin) - 10 * 20 << '\n';
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^~ ~~~~~~~~
+      |                      |                                              |
+      |                      int                                            std::istream {aka std::basic_istream<char>}
+outputs/repair_repro_7b_200/146.fuzz:3:61: note: candidate: ‘operator<<(int, int)’ (built-in)
+    3 |     std::cout << int(-std::ios_base::sync_with_stdio(false) << std::cin) - 10 * 20 << '\n';
+      |                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~
+outputs/repair_repro_7b_200/146.fuzz:3:61: note:   no known conversion for argument 2 from ‘std::istream’ {aka ‘std::basic_istream<char>’} to ‘int’
+In file included from /usr/include/c++/11/bits/basic_string.h:48,
+                 from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_repro_7b_200/146.fuzz:1:
+/usr/include/c++/11/string_view:667:5: note: candidate: ‘template<class _CharT, class _Traits> std::basic_ostream<_CharT, _Traits>& std::operator<<(std::basic_ostream<_CharT, _Traits>&, std::basic_string_view<_CharT, _Traits>)’
+  667 |     operator<<(basic_ostream<_CharT, _Traits>& __os,
+[TRACE] Validating outputs/repair_repro_7b_200/147.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/147.fuzz failed validation with error message: outputs/repair_repro_7b_200/147.fuzz:24:34: error: empty character constant
+   24 |         std::cout << it->first <<'' << it->second << '\n';
+      |                                  ^~
+outputs/repair_repro_7b_200/147.fuzz:30:39: error: empty character constant
+   30 |             std::cout << charAry[i] <<'' << counts[charAry[i]] << '\n';
+      |                                       ^~
+outputs/repair_repro_7b_200/147.fuzz:85:1: error: unterminated comment
+   85 | /* Write a function which receives two arguments: char * and int * and copies n
+      | ^
+outputs/repair_repro_7b_200/147.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/147.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/147.fuzz:70:5: error: redefinition of ‘int main()’
+   70 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/147.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+[TRACE] Validating outputs/repair_repro_7b_200/148.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/148.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/149.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/149.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/150.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/150.fuzz failed validation with error message: outputs/repair_repro_7b_200/150.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/150.fuzz:5:20: error: no match for ‘operator^’ (operand types are ‘std::basic_ostream<char>’ and ‘int’)
+    5 |     std::cout << x ^ (32 / 10) << '\n';
+      |     ~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~
+      |               |                |
+      |               |                int
+      |               std::basic_ostream<char>
+outputs/repair_repro_7b_200/150.fuzz:5:20: note: candidate: ‘operator^(int, int)’ (built-in)
+    5 |     std::cout << x ^ (32 / 10) << '\n';
+      |     ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+outputs/repair_repro_7b_200/150.fuzz:5:20: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘int’
+In file included from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_repro_7b_200/150.fuzz:1:
+/usr/include/c++/11/bits/ios_base.h:91:3: note: candidate: ‘constexpr std::_Ios_Fmtflags std::operator^(std::_Ios_Fmtflags, std::_Ios_Fmtflags)’
+   91 |   operator^(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+      |   ^~~~~~~~
+/usr/include/c++/11/bits/ios_base.h:91:27: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘std::_Ios_Fmtflags’
+   91 |   operator^(_Ios_Fmtflags __a, _Ios_Fmtflags __b)
+[TRACE] Validating outputs/repair_repro_7b_200/150_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/150_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/151.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/151.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/152.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/152.fuzz failed validation with error message: outputs/repair_repro_7b_200/152.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/152.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/152.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/152.fuzz:14:18: error: ‘y’ was not declared in this scope
+   14 |     std::cout << y;
+      |                  ^
+[TRACE] Validating outputs/repair_repro_7b_200/152_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/152_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/153.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/153.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/154.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/154.fuzz failed validation with error message: outputs/repair_repro_7b_200/154.fuzz:9:3: error: #endif without #if
+    9 | # endif
+      |   ^~~~~
+[TRACE] Validating outputs/repair_repro_7b_200/154_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/154_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/155.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/155.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/156.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/156.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/157.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/157.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/158.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/158.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/159.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/159.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/160.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/160.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/161.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/161.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/162.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/162.fuzz failed validation with error message: outputs/repair_repro_7b_200/162.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/162.fuzz:4:8: error: lvalue required as increment operand
+    4 |     ++x++;
+      |       ~^~
+[TRACE] Validating outputs/repair_repro_7b_200/162_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/162_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/163.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/163.fuzz failed validation with error message: outputs/repair_repro_7b_200/163.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/163.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/163.fuzz:23:5: error: redefinition of ‘int main()’
+   23 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/163.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/163.fuzz:33:5: error: redefinition of ‘int main()’
+   33 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/163.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/163.fuzz:60:5: error: redefinition of ‘int main()’
+   60 | int main() {
+[TRACE] Validating outputs/repair_repro_7b_200/163_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/163_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/164.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/164.fuzz failed validation with error message: outputs/repair_repro_7b_200/164.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/164.fuzz:5:10: error: ‘strcmpi’ was not declared in this scope
+    5 |     if (!strcmpi(buffer, "Ok")) {
+      |          ^~~~~~~
+outputs/repair_repro_7b_200/164.fuzz: At global scope:
+outputs/repair_repro_7b_200/164.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/164.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/165.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/165.fuzz failed validation with error message: outputs/repair_repro_7b_200/165.fuzz:13:1: error: stray ‘`’ in program
+   13 | ```
+      | ^
+outputs/repair_repro_7b_200/165.fuzz:13:2: error: stray ‘`’ in program
+   13 | ```
+      |  ^
+outputs/repair_repro_7b_200/165.fuzz:13:3: error: stray ‘`’ in program
+   13 | ```
+      |   ^
+outputs/repair_repro_7b_200/165.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/165.fuzz:6:10: error: ‘strncmp’ was not declared in this scope
+    6 |     if (!strncmp(buffer, "OK", 2)) {
+      |          ^~~~~~~
+outputs/repair_repro_7b_200/165.fuzz:2:1: note: ‘strncmp’ is defined in header ‘<cstring>’; did you forget to ‘#include <cstring>’?
+    1 | #include <iostream>
+  +++ |+#include <cstring>
+    2 |
+[TRACE] Validating outputs/repair_repro_7b_200/165_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/165_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/166.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/166.fuzz failed validation with error message: outputs/repair_repro_7b_200/166.fuzz: In function ‘int to_binary_string(int, std::size_t)’:
+outputs/repair_repro_7b_200/166.fuzz:25:47: error: no match for ‘operator+’ (operand types are ‘int’ and ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’})
+   25 |     return to_binary_string(num / 2, padding) + std::string(padding, 1) + std::to_string(num % 2);
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ^      ~~~~~~~~~~~~~~~~~~
+      |                            |                         |
+      |                            int                       std::string {aka std::__cxx11::basic_string<char>}
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/ios:40,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_repro_7b_200/166.fuzz:1:
+/usr/include/c++/11/bits/stl_iterator.h:1276:5: note: candidate: ‘template<class _Iterator, class _Container> constexpr __gnu_cxx::__normal_iterator<_Iterator, _Container> __gnu_cxx::operator+(typename __gnu_cxx::__normal_iterator<_Iterator, _Container>::difference_type, const __gnu_cxx::__normal_iterator<_Iterator, _Container>&)’
+ 1276 |     operator+(typename __normal_iterator<_Iterator, _Container>::difference_type
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:1276:5: note:   template argument deduction/substitution failed:
+outputs/repair_repro_7b_200/166.fuzz:25:71: note:   ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} is not derived from ‘const __gnu_cxx::__normal_iterator<_Iterator, _Container>’
+   25 |     return to_binary_string(num / 2, padding) + std::string(padding, 1) + std::to_string(num % 2);
+      |                                                                       ^
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+[TRACE] Validating outputs/repair_repro_7b_200/166_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/166_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/167.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/167.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/168.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/168.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/169.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/169.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/170.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/170.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/171.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/171.fuzz failed validation with error message: outputs/repair_repro_7b_200/171.fuzz: In function ‘bool operator==(const Widget&, const Widget&)’:
+outputs/repair_repro_7b_200/171.fuzz:7:17: error: ‘int Widget::x’ is private within this context
+    7 |     return left.x == right.x && left.y == right.y;
+      |                 ^
+outputs/repair_repro_7b_200/171.fuzz:3:9: note: declared private here
+    3 |     int x;
+      |         ^
+outputs/repair_repro_7b_200/171.fuzz:7:28: error: ‘int Widget::x’ is private within this context
+    7 |     return left.x == right.x && left.y == right.y;
+      |                            ^
+outputs/repair_repro_7b_200/171.fuzz:3:9: note: declared private here
+    3 |     int x;
+      |         ^
+outputs/repair_repro_7b_200/171.fuzz:7:38: error: ‘int Widget::y’ is private within this context
+    7 |     return left.x == right.x && left.y == right.y;
+      |                                      ^
+outputs/repair_repro_7b_200/171.fuzz:4:9: note: declared private here
+    4 |     int y;
+      |         ^
+outputs/repair_repro_7b_200/171.fuzz:7:49: error: ‘int Widget::y’ is private within this context
+[TRACE] Validating outputs/repair_repro_7b_200/171_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/171_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/172.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/172.fuzz failed validation with error message: outputs/repair_repro_7b_200/172.fuzz: In member function ‘int ListNode::getVal()’:
+outputs/repair_repro_7b_200/172.fuzz:15:16: error: ‘val’ was not declared in this scope
+   15 |         return val;
+      |                ^~~
+outputs/repair_repro_7b_200/172.fuzz: In member function ‘Node* ListNode::getTail()’:
+outputs/repair_repro_7b_200/172.fuzz:18:16: error: cannot resolve overloaded function ‘next’ based on conversion to type ‘Node*’
+   18 |         return next;
+      |                ^~~~
+outputs/repair_repro_7b_200/172.fuzz: At global scope:
+outputs/repair_repro_7b_200/172.fuzz:24:8: error: expected ‘}’ at end of input
+   24 | public:
+      |        ^
+outputs/repair_repro_7b_200/172.fuzz:21:18: note: to match this ‘{’
+   21 | class LinkedList {
+      |                  ^
+outputs/repair_repro_7b_200/172.fuzz:24:8: error: expected unqualified-id at end of input
+   24 | public:
+      |        ^
+[TRACE] Validating outputs/repair_repro_7b_200/173.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/173.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/174.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/174.fuzz failed validation with error message: outputs/repair_repro_7b_200/174.fuzz:12:6: error: ‘cout’ in namespace ‘std’ does not name a type
+   12 | std::cout << Node(42).getVal() << '\n';
+      |      ^~~~
+In file included from outputs/repair_repro_7b_200/174.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/repair_repro_7b_200/174.fuzz:13:16: error: ambiguating new declaration of ‘constexpr Node f(Node*)’
+   13 | constexpr Node f(Node* p) {
+      |                ^
+outputs/repair_repro_7b_200/174.fuzz:5:27: note: old declaration ‘constexpr auto f(Node*)’
+    5 |     friend constexpr auto f(Node*);
+      |                           ^
+[TRACE] Validating outputs/repair_repro_7b_200/174_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/174_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/175.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/175.fuzz failed validation with error message: outputs/repair_repro_7b_200/175.fuzz: In function ‘int main(int, const char**)’:
+outputs/repair_repro_7b_200/175.fuzz:6:5: error: ‘Node’ was not declared in this scope
+    6 |     Node* head = new Node();
+      |     ^~~~
+outputs/repair_repro_7b_200/175.fuzz:6:11: error: ‘head’ was not declared in this scope
+    6 |     Node* head = new Node();
+      |           ^~~~
+outputs/repair_repro_7b_200/175.fuzz:6:22: error: expected type-specifier before ‘Node’
+    6 |     Node* head = new Node();
+      |                      ^~~~
+outputs/repair_repro_7b_200/175.fuzz:8:22: error: expected type-specifier before ‘Node’
+    8 |     head->next = new Node();
+      |                      ^~~~
+outputs/repair_repro_7b_200/175.fuzz:10:28: error: expected type-specifier before ‘Node’
+   10 |     head->next->next = new Node();
+      |                            ^~~~
+outputs/repair_repro_7b_200/175.fuzz:13:11: error: ‘secondHead’ was not declared in this scope
+   13 |     Node* secondHead = head;
+      |           ^~~~~~~~~~
+[TRACE] Validating outputs/repair_repro_7b_200/176.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/176.fuzz failed validation with error message: outputs/repair_repro_7b_200/176.fuzz: In function ‘Node f(const Node*)’:
+outputs/repair_repro_7b_200/176.fuzz:12:29: error: could not convert ‘{p->Node::getVal(), p}’ from ‘<brace-enclosed initializer list>’ to ‘Node’
+   12 |     return { p->getVal(), p };
+      |                             ^
+      |                             |
+      |                             <brace-enclosed initializer list>
+outputs/repair_repro_7b_200/176.fuzz: In function ‘int main(int, const char**)’:
+outputs/repair_repro_7b_200/176.fuzz:16:16: error: taking address of rvalue [-fpermissive]
+   16 |     auto np{ &f(&ptr) };
+      |               ~^~~~~~
+[TRACE] Validating outputs/repair_repro_7b_200/177.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/177.fuzz failed validation with error message: outputs/repair_repro_7b_200/177.fuzz: In function ‘node f(Node*)’:
+outputs/repair_repro_7b_200/177.fuzz:7:15: error: invalid use of incomplete type ‘struct Node’
+    7 |     return { p->val };
+      |               ^~
+outputs/repair_repro_7b_200/177.fuzz:6:15: note: forward declaration of ‘struct Node’
+    6 | node f(struct Node* p) {
+      |               ^~~~
+outputs/repair_repro_7b_200/177.fuzz:7:21: error: could not convert ‘{<expression error>}’ from ‘<brace-enclosed initializer list>’ to ‘node’
+    7 |     return { p->val };
+      |                     ^
+      |                     |
+      |                     <brace-enclosed initializer list>
+outputs/repair_repro_7b_200/177.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/177.fuzz:10:17: error: variable ‘Node ptr’ has initializer but incomplete type
+   10 |     struct Node ptr{99};
+      |                 ^~~
+outputs/repair_repro_7b_200/177.fuzz: At global scope:
+outputs/repair_repro_7b_200/177.fuzz:33:5: error: redefinition of ‘int main()’
+   33 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/178.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/178.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/179.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/179.fuzz failed validation with error message: outputs/repair_repro_7b_200/179.fuzz: In function ‘Node f(Node*)’:
+outputs/repair_repro_7b_200/179.fuzz:12:32: error: ‘constexpr int Node::getVal() const’ is private within this context
+   12 |     return new Node { p->getVal(), {} };
+      |                       ~~~~~~~~~^~
+outputs/repair_repro_7b_200/179.fuzz:7:19: note: declared private here
+    7 |     constexpr int getVal() const {
+      |                   ^~~~~~
+outputs/repair_repro_7b_200/179.fuzz:12:39: error: ‘constexpr Node::Node(int, Node*)’ is private within this context
+   12 |     return new Node { p->getVal(), {} };
+      |                                       ^
+outputs/repair_repro_7b_200/179.fuzz:6:15: note: declared private here
+    6 |     constexpr Node(int v, Node* l) : val(v), next(l) {}
+      |               ^~~~
+outputs/repair_repro_7b_200/179.fuzz:12:39: error: could not convert ‘(p->Node::getVal(), (operator new(16), (<statement>, ((Node*)<anonymous>))))’ from ‘Node*’ to ‘Node’
+   12 |     return new Node { p->getVal(), {} };
+      |                                       ^
+      |                                       |
+      |                                       Node*
+outputs/repair_repro_7b_200/179.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/179.fuzz:15:25: error: ‘constexpr Node::Node(int, Node*)’ is private within this context
+[TRACE] Validating outputs/repair_repro_7b_200/180.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/180.fuzz failed validation with error message: outputs/repair_repro_7b_200/180.fuzz: In function ‘Node f(const Node&)’:
+outputs/repair_repro_7b_200/180.fuzz:12:15: error: base operand of ‘->’ has non-pointer type ‘const Node’
+   12 |     return { n->getVal() };
+      |               ^~
+outputs/repair_repro_7b_200/180.fuzz:12:26: error: could not convert ‘{<expression error>}’ from ‘<brace-enclosed initializer list>’ to ‘Node’
+   12 |     return { n->getVal() };
+      |                          ^
+      |                          |
+      |                          <brace-enclosed initializer list>
+[TRACE] Validating outputs/repair_repro_7b_200/180_r2.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/180_r2.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/181.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/181.fuzz failed validation with error message: outputs/repair_repro_7b_200/181.fuzz:8:5: error: only declarations of constructors and conversion operators can be ‘explicit’
+    8 |     explicit constexpr int getVal() const {
+      |     ^~~~~~~~
+outputs/repair_repro_7b_200/181.fuzz:26:5: error: redefinition of ‘int main()’
+   26 | int main() {
+      |     ^~~~
+outputs/repair_repro_7b_200/181.fuzz:15:5: note: ‘int main()’ previously defined here
+   15 | int main(void) {
+      |     ^~~~
+In file included from outputs/repair_repro_7b_200/181.fuzz:22:
+/usr/include/c++/11/optional: In instantiation of ‘union std::_Optional_payload_base<int&>::_Storage<int&, true>’:
+/usr/include/c++/11/optional:242:30:   required from ‘struct std::_Optional_payload_base<int&>’
+/usr/include/c++/11/optional:298:12:   required from ‘struct std::_Optional_payload<int&, true, true, true>’
+/usr/include/c++/11/optional:634:30:   required from ‘struct std::_Optional_base<int&, true, true>’
+/usr/include/c++/11/optional:662:11:   required from ‘class std::optional<int&>’
+outputs/repair_repro_7b_200/181.fuzz:28:27:   required from here
+/usr/include/c++/11/optional:215:15: error: non-static data member ‘std::_Optional_payload_base<int&>::_Storage<int&, true>::_M_value’ in a union may not have reference type ‘int&’
+  215 |           _Up _M_value;
+      |               ^~~~~~~~
+/usr/include/c++/11/optional: In instantiation of ‘class std::optional<int&>’:
+[TRACE] Validating outputs/repair_repro_7b_200/182.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/182.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/183.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/183.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/184.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/184.fuzz failed validation with error message: outputs/repair_repro_7b_200/184.fuzz:21:37: error: ‘constexpr const int S<T>::size’ is not a static data member of ‘struct S<T>’
+   21 | template <typename T> constexpr int S<T>::size;
+      |                                     ^~~~
+outputs/repair_repro_7b_200/184.fuzz:21:43: error: template definition of non-template ‘constexpr const int S<T>::size’
+   21 | template <typename T> constexpr int S<T>::size;
+      |                                           ^~~~
+outputs/repair_repro_7b_200/184.fuzz:23:5: error: redefinition of ‘int main()’
+   23 | int main(void) {
+      |     ^~~~
+outputs/repair_repro_7b_200/184.fuzz:11:5: note: ‘int main()’ previously defined here
+   11 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/185.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/185.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/186.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/186.fuzz failed validation with error message: outputs/repair_repro_7b_200/186.fuzz:22:5: error: redefinition of ‘int main()’
+   22 | int main(void) {
+      |     ^~~~
+outputs/repair_repro_7b_200/186.fuzz:11:5: note: ‘int main()’ previously defined here
+   11 | int main(void) {
+      |     ^~~~
+outputs/repair_repro_7b_200/186.fuzz:40:5: error: redefinition of ‘int main()’
+   40 | int main()
+      |     ^~~~
+outputs/repair_repro_7b_200/186.fuzz:11:5: note: ‘int main()’ previously defined here
+   11 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/186_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/186_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/187.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/187.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/188.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/188.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/189.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/189.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/190.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/190.fuzz failed validation with error message: outputs/repair_repro_7b_200/190.fuzz:29:17: error: empty character constant
+   29 |     cout << a <<'' << b <<'' << c;
+      |                 ^~
+outputs/repair_repro_7b_200/190.fuzz:29:27: error: empty character constant
+   29 |     cout << a <<'' << b <<'' << c;
+      |                           ^~
+[TRACE] Validating outputs/repair_repro_7b_200/191.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/191.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/192.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/192.fuzz failed validation with error message: outputs/repair_repro_7b_200/192.fuzz:38:45: error: empty character constant
+   38 |     auto v = std::vector<int>(sqrt(100) + 1,'');
+      |                                             ^~
+outputs/repair_repro_7b_200/192.fuzz:43:26: error: empty character constant
+   43 |         std::cout << e <<'' << std::flush;
+      |                          ^~
+outputs/repair_repro_7b_200/192.fuzz:37:5: error: redefinition of ‘int main()’
+   37 | int main(void) {
+      |     ^~~~
+outputs/repair_repro_7b_200/192.fuzz:23:5: note: ‘int main()’ previously defined here
+   23 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/193.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/193.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/194.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/194.fuzz failed validation with error message: outputs/repair_repro_7b_200/194.fuzz:18:29: warning: missing terminating ' character
+   18 |     cout << ptr.getVal() << '\n;
+      |                             ^
+outputs/repair_repro_7b_200/194.fuzz:18:29: error: missing terminating ' character
+   18 |     cout << ptr.getVal() << '\n;
+      |                             ^~~~
+outputs/repair_repro_7b_200/194.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/194.fuzz:19:5: error: expected primary-expression before ‘return’
+   19 |     return 0;
+      |     ^~~~~~
+[TRACE] Validating outputs/repair_repro_7b_200/194_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/194_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/195.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/195.fuzz failed validation with error message: outputs/repair_repro_7b_200/195.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/195.fuzz:4:18: error: ‘Node’ does not name a type
+    4 |     auto ptr(new Node{*p});
+      |                  ^~~~
+outputs/repair_repro_7b_200/195.fuzz:5:5: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    5 |     cout << ptr->getVal() << '\n';
+      |     ^~~~
+      |     std::cout
+In file included from outputs/repair_repro_7b_200/195.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/repair_repro_7b_200/195.fuzz:7:12: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+    7 |     delete ptr;
+      |            ^~~
+[TRACE] Validating outputs/repair_repro_7b_200/195_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/195_r1.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/196.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/196.fuzz failed validation with error message: outputs/repair_repro_7b_200/196.fuzz:25:2: error: #endif without #if
+   25 | #endif
+      |  ^~~~~
+outputs/repair_repro_7b_200/196.fuzz: In function ‘int main()’:
+outputs/repair_repro_7b_200/196.fuzz:17:29: error: request for member ‘val’ in ‘p’, which is of pointer type ‘Node*’ (maybe you meant to use ‘->’ ?)
+   17 |     Node *ptr = new Node(*p.val);
+      |                             ^~~
+[TRACE] Validating outputs/repair_repro_7b_200/197.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/197.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/198.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/198.fuzz is safe
+[TRACE] Validating outputs/repair_repro_7b_200/199.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/199.fuzz failed validation with error message: outputs/repair_repro_7b_200/199.fuzz:19:8: error: redefinition of ‘struct Node’
+   19 | struct Node {
+      |        ^~~~
+outputs/repair_repro_7b_200/199.fuzz:2:8: note: previous definition of ‘struct Node’
+    2 | struct Node {
+      |        ^~~~
+outputs/repair_repro_7b_200/199.fuzz:26:5: error: redefinition of ‘int main()’
+   26 | int main(void) {
+      |     ^~~~
+outputs/repair_repro_7b_200/199.fuzz:9:5: note: ‘int main()’ previously defined here
+    9 | int main(void) {
+      |     ^~~~
+[TRACE] Validating outputs/repair_repro_7b_200/199_r1.fuzz ...
+[VERBOSE] outputs/repair_repro_7b_200/199_r1.fuzz is safe

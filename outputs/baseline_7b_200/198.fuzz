@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+class Student
+{
+    string name;
+    int age;
+  public:
+    Student(string s, int a) : name(s), age(a) {}
+    string getName() { return name; }
+    void setAge(int a) { age = a; }
+    int getAge() { return age

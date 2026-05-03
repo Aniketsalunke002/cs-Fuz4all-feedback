@@ -1,0 +1,79 @@
+#include <iostream>
+int main() {
+	int winner=1;
+	int mut=1;
+	bool alive=true;
+	std::cout << "Press ENTER to start, any other key to quit.";
+	switch(std::cin.peek()) {
+	case '\n':
+		break;
+	case 'Q':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\x1b':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\t':
+		std::cin.get();
+	case '\b':
+	default:
+		std::cout << "Invalid input." << std::endl;
+		break;
+	}
+	for(;;) {
+		winner=winner*2;
+		winner+=mut;
+		switch(mut) {
+		case 0:
+			mut=1;
+			break;
+		default:
+			mut=0;
+			break;
+		}
+		if(alive) {
+			switch(winner&3) {
+			case 0:
+				std::cout << mut << ": [ ] [ ] is dead" << std::endl;
+				alive=false;
+				break;
+			default:
+			case 1: case 3:
+				std::cout << mut << ": [1] [1] is live!" << std::endl;
+				break;
+			case 2:
+				std::cout << mut << ": [1] [0] is live!" << std::endl;
+				break;
+			}
+		}else {
+			std::cout << mut << ": [1] [1] is live!" << std::endl;
+		}
+		if(winner==0) {
+			break;
+		}else {
+			alive=true;
+		}
+	}
+}
+ 
+#include <iostream>
+int main() {
+	int mut=1;
+	std::cout << "Press ENTER to start, any other key to quit.";
+	switch(std::cin.peek()) {
+	case '\n':
+		break;
+	case 'Q':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\x1b':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\t':
+		std::cin.get();
+	case '\b':
+	default:
+		std::cout << "Invalid input." << std::endl;
+		break;
+	}
+	for(;;) {

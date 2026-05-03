@@ -1,0 +1,23 @@
+#include <iostream>
+
+
+enum class color {red, green, blue};
+size_t red() {return color::red};
+int green() { return color::green };  
+
+int main() {
+  auto l = []{
+    const auto r=color::red;
+    switch (r) {
+      case color::red: {
+        return static_cast<size_t>(red());
+      }
+      case color::green: {
+        return green();
+      }
+    };
+  }
+ ;
+  std::cout << green() << '\n';
+  return 0;
+}

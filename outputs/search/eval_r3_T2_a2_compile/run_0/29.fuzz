@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    cout << "We modify " << string(5, 'a') << endl;
+    cout << "to the next generation" << endl;
+    cout << "we just remove one letter: delete " << string(1, 'a') << endl;
+    cout << "Now we have " << string(4, 'a') << endl;
+    cout << "We now delete the remaining string: delete " << string(3, 'a') << endl;
+    cout << "We have emptied the space!" << endl;
+    cout << "We now delete the other two strings..." << endl;
+    cout << "Now " << string(2, 'a') << endl;
+    cout << "All" << string(3, 'a') << " are gone!" << endl;
+}

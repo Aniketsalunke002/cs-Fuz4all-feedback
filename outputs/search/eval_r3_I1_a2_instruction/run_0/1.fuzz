@@ -1,0 +1,15 @@
+#include <iostream>
+
+
+using namespace std;
+int main()
+{
+    int arr[5] = { 0, 1, 2, 3, 4 };
+    int i = 0;
+    for (; i <= 2; ++i) {
+        arr[i] = arr[i] * 2;
+    }
+
+    for_each(arr, arr + sizeof(arr) / sizeof(arr[0]), [](int elem) { cout << elem << std::endl; });
+
+}

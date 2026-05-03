@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+void mutate(int* arr)
+{
+    arr[0]++;
+    arr[1]++;
+}
+int main(int argc, char** argv)
+{
+    using namespace std;
+    int a;
+    cout << "start of main" << endl;
+    __asm__ __volatile__("" ::: "memory");
+    a = 100;
+    mutate(&a);
+    cout << a << endl;
+    cout << "end of main" << endl;
+    return 0;
+}

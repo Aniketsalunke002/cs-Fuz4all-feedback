@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+class Vehicle{
+	string strMake;
+	int makeYear;
+public:
+	Vehicle(string strMake_,int makeYear_):strMake(strMake_),makeYear(makeYear_){}
+	void print() const
+	{
+		cout << strMake << " " << makeYear << endl;
+	}
+};
+template <typename T>
+void print(const T& v)
+{
+	v.print();
+}
+class Bike:public Vehicle{
+	int chainstayYear;
+	int bikeWeight;
+public:
+	Bike(string strMake_,int makeYear_,int chainstayYear_,int bikeWeight_):Vehicle(strMake_,makeYear_),chainstayYear(chainstayYear_),bikeWeight(bikeWeight_){}

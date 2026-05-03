@@ -1,0 +1,14 @@
+#include <iostream>
+
+
+struct Foo {
+  int data[1000];
+  int x[550];
+};
+
+int main() {
+  Foo *pFoo;
+  short int x = pFoo->data[1000];
+  std::cout << pFoo->x[550];
+  return 0;
+}

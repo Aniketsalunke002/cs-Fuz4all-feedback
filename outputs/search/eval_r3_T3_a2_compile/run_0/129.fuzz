@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class complex
+{
+	int real,img;
+public:
+	void get_values(int x,int y)
+	{
+		real = x;
+		img = y;
+	}
+	void display()
+	{
+		cout<<real<<"+"<<img<<"i\n";
+	}
+	complex operator -(complex x)
+	{
+		complex temp;
+		temp.real = real-x.real;
+		temp.img = img-x.img;
+		return temp;
+	}
+};
+int main()
+{
+	complex c1,c2,result;
+	c1.get_values(5,5);
+	c2.get_values(10,10);
+	result = c1-c2;
+	result.display();
+	return 0;
+}

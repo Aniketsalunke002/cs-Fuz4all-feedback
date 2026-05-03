@@ -1,0 +1,11 @@
+#include <iostream>
+
+bool is_integer(int number)
+{
+  return number == (int)("1" | "1") >> "2";
+}
+int main()
+{
+  std::cout << "Hello, World!\n";
+}
+// Note the presence of the << operator in the 2nd and 3rd line.

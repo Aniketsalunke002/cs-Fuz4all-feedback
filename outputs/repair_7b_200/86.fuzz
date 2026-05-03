@@ -1,0 +1,22 @@
+#include <iostream>
+int main() {
+    int a=0;
+    int b=1;
+    int sum=0;
+    int tmp=0;
+
+    for (int i=1; i<=5; i=i+2) {
+        tmp = a + b;
+
+        a = b;
+        b = tmp;
+
+        sum = sum + tmp;
+
+        std::cout << i << ':' << a << '+' << b << '=' << a + b << std::endl;
+    }
+    std::cout << "Sum:" << sum << std::endl;
+
+    return 0;
+}
+

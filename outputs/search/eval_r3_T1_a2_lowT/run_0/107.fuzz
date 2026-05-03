@@ -1,0 +1,33 @@
+#include <iostream>
+int main()
+{
+    int y = 2;
+    y += 1;
+    std::cout << -y + y-- - ++y * ++y + y;
+}
+ 
+#include <iostream>
+#include <string>
+class NewClass {
+public:
+    int f0() const {
+        int y = 2;
+        y += 5;
+        return y;
+    }
+
+    int f1(int in) {
+        int y = 2;
+        y -= 2;
+        return y + in;
+    }
+
+    int f2(int in) {
+        return in * 2;
+    }
+};
+
+int main() {
+    NewClass n;
+    std::cout << n.f0() - n.f1(1) - n.f2(2);
+}

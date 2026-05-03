@@ -1,0 +1,22 @@
+#include <iostream>
+
+namespace foo {
+  namespace bar {
+    bar() {
+      std::cout << "Constructor called!" << std::endl;
+    }
+    void barMethod() {
+      std::cout << "bar method called" << std::endl;
+    }
+  }
+}
+
+int main() {
+  foo::bar x;
+
+  auto fn(&foo::bar::barMethod, &x);
+  std::thread thd(fn);
+  thd.join();
+
+  return 0;
+}

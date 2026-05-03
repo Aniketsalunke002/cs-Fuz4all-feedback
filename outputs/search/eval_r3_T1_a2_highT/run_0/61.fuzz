@@ -1,0 +1,4 @@
+#include <iostream>
+#include <string>
+int main() { std::string s("Hello World"); char* c = &s[1]; *c = 'J'; std::cout << s; }
+uint8_t fuzzme[64] = {0xd9, 0x41, 0x7e};

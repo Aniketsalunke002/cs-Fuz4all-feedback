@@ -1,0 +1,37 @@
+#include <iostream>
+int main()
+{
+    std::string* mutated_str = nullptr;
+    std::string* str = nullptr;
+    str = new std::string{ "<NAME>" };
+    str = mutated_str;  
+    std::cout << "Before modification\n";
+    std::cout << *str << '\n';
+    str->append("!?");
+    std::cout << "After modification\n";
+    std::cout << *str << '\n';
+    if(str!= nullptr)
+    {
+        delete str;
+    }  
+    mutated_str = str = nullptr;
+    return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+    std::string* uninitialized_str = nullptr;
+
+    {
+        std::string* str = uninitialized_str;
+    }
+
+    std::cout << "Address of uninitialized_str: " << (void*)uninitialized_str << '\n';
+    if(uninitialized_str!= nullptr)
+    {
+        delete uninitialized_str;
+    }
+    uninitialized_str = nullptr;
+    return 0;
+}

@@ -1,0 +1,43 @@
+#include <iostream>
+#include <memory>
+
+class Foo {
+	int x;
+	std::weak_ptr<Foo> c;	 
+	Foo(int x) : x(x) {}
+public:
+	int get_x() const {
+		if (auto e = c.lock( ))
+			if (auto f = e.lock( ))
+				return f->get_x( ) + x;
+		return 0;
+	}
+	Foo *clone(int x) const {
+		auto r = new Foo(x);	 
+		r->c = c;				 
+		return r;
+	}
+	void reset_c() {
+		c.reset( );
+	}
+};
+Foo *create(int x) {
+	auto r = new Foo(x);
+	return r;
+}
+int main() {
+	Foo *p = create(27);
+	Foo *p1 = create(46);
+	p->c = p1;
+
+	std::weak_ptr<Foo> w2 = p->c;
+	std::cout << p->get_x( );		 
+	std::cout << w2.lock( )->get_x( );	 
+	w2.reset( );
+
+	 
+	std::cout << p->get_x( ) << std::endl;		 
+	std::cout << w2.lock( )->get_x( ) << std::endl;	 
+
+	return 0;
+} 

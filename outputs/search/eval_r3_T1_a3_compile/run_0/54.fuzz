@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+#pragma warning(suppress: 26811 26446)
+  int y = 5;
+  cout << y << endl;
+  while (cin >> y)
+    ;
+  return 0;
+}

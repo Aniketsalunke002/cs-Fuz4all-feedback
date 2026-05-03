@@ -1,0 +1,63 @@
+#include <iostream>
+
+using namespace std;
+template <class T>
+class A
+{
+	protected:
+		T a = 10;
+	public:
+		T c = 6;
+		void display()
+		{
+			cout<<"this is class object"<<endl;
+		}
+		friend class B;
+		friend class D;
+		friend void swap(A<T> &a1,A<T> &a2)
+		{
+			T temp1 = a1.a;
+			a1.a = a2.a;
+			a2.a = temp1;
+
+			T temp = a1.c;
+			a1.c = a2.c;
+			a2.c = temp;
+		}
+};
+template <class T>
+class B : public A<T>
+{
+	T d = 4;
+	void display()
+	{
+		cout<<"this is object of another class"<<endl;
+	}
+	friend void swap(A<T> &,A<T> &);
+	friend class A<T>;
+	friend void sum(B<T> &,T,B<T> &);
+	friend class C;
+	friend void sum(D<T> &,T,D<T> &);
+};
+template <class T>
+class C : public A<T>
+{
+	T d = 7;
+	void display()
+	{
+		cout<<"this is object of another class"<<endl;
+	}
+};
+template <class T>
+class D : public A<T>
+{
+	T d = 9;
+	void display()
+	{
+		cout<<"this is object of another class"<<endl;
+	}
+};
+int main()
+{
+	A<int> a1,a2;
+	B<int> b

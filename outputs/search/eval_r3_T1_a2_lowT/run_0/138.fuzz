@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, m;
+    int i, j;
+    cout<<"Enter number of rows and columns:";
+    cin>>n>>m;
+    int countA=1;
+    int countB=1;
+    for(i=1; i<=n; i++)
+    {
+        for(j=1; j<=m; j++)
+        {
+            if(j%2==0)
+            {
+                if(countB<=n)
+                 cout<<countB<<"\t";
+            }
+            else
+            {
+                if(countA>=1)
+                 cout<<countA<<"\t";
+            }
+            if(countA>=1 && countB<=n)
+            {
+                countA++;
+            }
+            else
+            {
+                countA=1;
+                countB++;
+            }
+        }
+        cout<<endl;
+    }
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+std::string input_from_user() {
+    string userinput {};
+    cout << "Enter Something! ";
+    cin >> userinput;
+    return userinput;
+}
+int main()
+{
+    do{
+        cout << "My input is " << input_from_user() << endl;
+    } while(true);
+    return 0;
+}

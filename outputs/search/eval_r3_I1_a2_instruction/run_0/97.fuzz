@@ -1,0 +1,9 @@
+#include <iostream>
+    using namespace std;
+    int main() {
+        string name [] = {"Fred","Georgie","Perry"};
+        for (int i = 0; i < 3; i++) {
+            cout << *( name + i) <<"\n";
+        }
+        return 0;
+    }

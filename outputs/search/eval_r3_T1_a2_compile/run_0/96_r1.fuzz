@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+bool isprime(int a) {
+   for(int i=2;i<a;i++) {
+      if(a%i == 0) return false; 
+   }
+   return true;
+}
+int main() {
+   int n;
+   cin>>n;
+   int a[n];       
+   int p=0;
+   for(int x=4;x<=n;x++) { 
+      for(int j=3;j<x-1;j++) 
+         if(isprime(x) && x%2==1) ++p;
+   }
+   for(int k=1;k<=p;k++) 
+   {
+      a[k]=p+1;
+      for(int i=4;i<=p+1;i++) {
+         if(a[i]%2==1 && isprime(a[i])) a[k]-=1;
+      }
+   }
+   for(int i=4;i<=p;i++) cout<<a[i]<<" ";
+   cout<<endl;
+   return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+int main()
+{
+	  size_t data=6;
+	  get(data);
+	  return 0;
+}
+#include <iostream>
+#include <thread>
+#include <chrono>
+int main()
+{
+	  std::this_thread::sleep_for(std::chrono::seconds(5) );
+	  std::cout << "Hello world"<< std::endl;
+	  return 0;
+}
+#include<iostream>

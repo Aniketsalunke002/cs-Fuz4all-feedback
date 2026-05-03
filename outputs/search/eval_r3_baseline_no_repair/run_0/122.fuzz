@@ -1,0 +1,44 @@
+#include <iostream>
+int main(int argc,char **argv) {
+  unsigned int size;
+  unsigned int count;
+  std::cin >> size;
+  std::cin >> count;
+   
+  char arr[size];
+  for (int i = 0; i < count; i++) {
+    arr[i] = 1;
+  }
+  for (int i = 0; i < size; i++) {
+    std::cout << arr[i];
+  }
+  return 0;
+}
+ 
+#include <iostream>
+int getInt();
+ 
+void fillArray(int *elements);
+template<typename T> T printValues(T val);
+int main() {
+  int array[size];
+  for (int i = 0; i < size; i++) {
+    elements[i] = 0;
+  }
+  fillArray(array);
+  for (int i = 0; i < size; i++) {
+    std::cout << printValues(array[i]) << "\n";
+  }
+  return 0;
+}
+ 
+int getInt();
+void fillArray(int *elements);
+int main(int argc, char **argv) {
+  int array[size];
+  for (int i = 0; i < size; i++) {
+    array[i] = 0;
+  }
+  fillArray(array);
+  return 0;
+}

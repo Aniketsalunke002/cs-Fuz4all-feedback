@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+class Base {
+protected:
+	int baseVal;
+public:
+	Base(int);
+	virtual ~Base();
+	virtual void printBase();
+};
+
+Base::Base(int val) : baseVal(val)
+{
+}
+
+Base::~Base()
+{
+}
+
+void Base::printBase() {
+	cout << " Base value = " << baseVal << endl;
+}
+
+class Derived : public Base {
+public :
+	Derived(int,int);
+	virtual ~Derived();
+	virtual void printBase();
+	virtual void printDerived();
+};
+
+Derived::Derived(int val1, int val2) : Base(val1)
+{
+	derivedVal = val2;
+}
+Derived::~Derived()
+{
+}
+void Derived::printDerived() {
+	cout << " Derived value = " << derivedVal << endl;
+}
+void Derived::printBase() {
+	Base::printBase();
+}
+int main() {
+	Derived d1(10,20);
+	Base* b2 = &d1;
+	b2->printBase();
+
+	return 0;
+}

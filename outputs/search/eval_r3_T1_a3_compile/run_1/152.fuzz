@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+#include <chrono>
+int main(int argc, char* argv[]) {
+	auto t1 = std::chrono::steady_clock::now();
+    long long res = 0;
+    const long long N = 2147483647;
+    for (long long i = 0; i < N; i++) {
+        res = i % 2 * N + res;
+    }
+    auto t2 = std::chrono::steady_clock::now();
+    cout << "duration of computation " << (t2 - t1).count() << endl;
+    cout << res << endl;
+	return 0;
+}

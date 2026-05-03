@@ -1,0 +1,6 @@
+#include <iostream>
+
+using namespace std;
+struct Node{int key;struct Node *left;struct Node *right;};
+struct Node *newNode(int item){struct Node *temp=new Node;temp->key=item;temp->left=temp->right=NULL;return temp;}Node *root;
+void insert(int item){Node *newnode,*temp;if (root==NULL){root=newNode(item);return;}newnode=newNode(item);temp=root;while (temp!=NULL){if (newnode->key<temp->key){if (temp->left==NULL){temp->left=newnode;return;}}else{if (temp->right==NULL

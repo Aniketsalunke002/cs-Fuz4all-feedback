@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+void doTest() {
+	cout << "Hello World";
+}
+int main() {
+	doTest();
+	return 0;
+}

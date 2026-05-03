@@ -1,0 +1,13 @@
+#include <iostream>
+   using namespace std;
+int main() {
+    int num = 3, num2 = 3;
+    if (num == num2) {
+        num = 50;
+    }
+    else
+        num = 30;
+    cout << "num = " << num << endl;
+    cout << "num2= " << num2 << endl;
+    return 0;
+}

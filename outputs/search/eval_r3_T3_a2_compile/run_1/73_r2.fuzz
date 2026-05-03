@@ -1,0 +1,19 @@
+#include <iostream>
+
+int a = 1;
+int n = 1;
+while (true) {
+	int t = a + n;
+	int tt = f<int, int>(t);
+	int tt1 = f<int, int>(tt);
+	int tt2 = f<int, int>(tt1);
+	int tt3 = f<int, int>(tt2);
+	int tt4 = f<int, int>(tt3);
+	if (tt4 == t) {
+		break;
+	} else {
+		a = t;
+		n++;
+	}
+}
+std::cout << a << std::endl;

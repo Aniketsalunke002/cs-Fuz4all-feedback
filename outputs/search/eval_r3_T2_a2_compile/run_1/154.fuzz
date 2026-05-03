@@ -1,0 +1,10 @@
+#include <iostream>
+int main() {
+    int a [32], b [32];
+        for (int i = 0; i < 32; i++)
+        {
+            a [i] = 2 * i;
+            b [i] = 3 * a [i];
+        }
+        return 0;
+        }

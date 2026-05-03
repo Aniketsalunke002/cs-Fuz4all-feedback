@@ -1,0 +1,45 @@
+#include <iostream>
+class myclass
+{
+public:
+  myclass(void)
+  : _i(0)
+  {
+    std::cout << "default constructor called" << std::endl;
+  }
+  myclass(myclass const &t)
+  :_i(t._i)
+  {
+    std::cout << "copy constructor called " << std::endl; 
+  }
+  int _i;
+};
+class myclass1
+{
+public:
+  myclass1(void)
+  : _i(0)
+  {
+    std::cout << "default constructor called" << std::endl;
+  }
+  myclass1(myclass1 const &t)
+  :_i(t._i)
+  {
+    std::cout << "copy constructor called " << std::endl; 
+  }
+  int _i;
+};
+void a(myclass1 const &);
+void b(myclass const &);
+int main(int argc, char **argv)
+{
+   myclass1 x;
+   b(x);
+   x._i = 10;
+}
+ 
+
+
+
+ 
+

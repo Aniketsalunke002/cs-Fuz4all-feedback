@@ -1,0 +1,24 @@
+#include <iostream>
+
+
+using namespace std;
+
+public class myclass {
+  int _i;
+  myclass(int i) { _i =i; }
+}
+public class myclass1 { 
+  myclass _myclass; 
+  myclass1(int i) { _myclass = myclass(i); }
+  bool equal(myclass1 y) { return _myclass  == y._myclass; }
+};
+public class driver {
+  public static void main(String[] a){
+    myclass1 x(10), y(11);
+    if (x.equal(y)) 
+      System.out.println("1: equal");
+    else 
+      System.out.println("1: notEqual");
+    myclass2 z(10), w(10); 
+  }
+}

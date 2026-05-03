@@ -1,0 +1,57 @@
+#include <iostream>
+
+int operator++(int)
+{
+    std::cout << "post++" << std::endl;
+}
+int operator++(int, int)
+{
+    std::cout << "pre++" << std::endl;
+}
+int main()
+{
+    int i;
+    for(i=0; i<4500; i++) {
+        std::cout << "1" << (i+1) << std::endl;
+    }
+    return 0;
+}
+//  
+// #include <iostream>
+// using std::cout;
+// using std::endl;
+// class C {
+// private:
+//     int id, age;
+//     unsigned int *ptr;
+// public:
+//     C(int id, int age) : id(id), age(age)
+//     {
+//         cout << "C : " << id << ":" << age << endl;
+//     }
+//     C &operator++()
+//     {
+//         int i;
+//         for(i=0; i<age; i++) {
+//             cout << "1" << (i+1) << endl;
+//         }
+//         ptr++;
+//         return *this;
+//     }
+//     friend int *getPtr(C& c)  {
+//         return c.ptr;
+//     }
+// };
+// 
+// int *getPtr(C& c) {
+//     return c.ptr;
+// }
+// int main() {
+//     C c(1, 4500);
+//      
+//      
+//      
+//     *++c;
+//     cout << *(getPtr(c)) << endl;
+//     return 0;
+// }

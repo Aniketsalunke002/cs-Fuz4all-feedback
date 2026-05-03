@@ -1,0 +1,43 @@
+#include <iostream>
+
+template<typename T>
+class A
+{
+public:
+    A(T val)
+    :val(val)
+    {}
+    T & getVal()
+    {
+        return val;
+    }
+    void setValue(T val_)
+    {
+        val = val_;
+    }
+private:
+    T val;
+};
+template<typename T>
+struct B
+{
+    B(T val)
+    :val(val)
+    {}
+    T val;
+};
+template<typename T>
+class C:public A<T>,public B<T>
+{
+public:
+    C(T val):A<T>(val),B<T>(val)
+    {}
+};
+int main(int argc, char *argv[])
+{
+    C<int> object{50};
+    std::cout << object.getVal();
+    object.setValue(19);
+    std::cout << object.getVal();
+    return 0;
+}

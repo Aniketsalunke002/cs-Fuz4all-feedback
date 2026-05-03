@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+	int x = 5;
+	while (x < 10) {
+		cout << x << " " << pow(x++, 2) << " " << x << endl;
+	}
+	cout << "true" << endl;
+	return 0;
+}

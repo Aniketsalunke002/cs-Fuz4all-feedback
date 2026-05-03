@@ -1,0 +1,38 @@
+#include <iostream>
+
+
+template <typename T>
+class Cell {
+public:
+    T c;
+    int f;
+};
+
+int main(int argc, char ** argv) {
+    int a = rand() % 100; 
+    Cell<int> *c = new Cell<int> {
+        a, 99
+    };
+    cout << c->c;
+    cout << c->f;
+    delete c;
+}
+
+#include <iostream>
+
+template <typename T>
+class Cell {
+public:
+    T c;
+    int f;
+};
+
+int main(int argc, char ** argv) {
+    int a = rand() % 100; 
+    Cell<int> *c = new Cell<int> {
+        a, 99
+    };
+    cout << c->c;
+    cout << c->f;
+    delete c;
+}

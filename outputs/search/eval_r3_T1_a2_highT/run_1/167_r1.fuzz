@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+int main() 
+{
+    int num = 100;
+    num = num * 1000000;
+    std::cout << num << std::endl;
+    return 0;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// int main() 
+// {
+//     std::cout << "hi" << std::endl;
+//     return 0;
+// }

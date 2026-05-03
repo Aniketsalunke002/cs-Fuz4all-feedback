@@ -1,0 +1,11 @@
+#include <iostream>
+int main()
+{
+	int age;
+	int marks;
+	std::cin >> age;
+	std::cin >> marks;
+	std::cout << "My Age : " << age << std::endl;
+	std::cout << "My Marks : " << marks << std::endl;
+	return 0;
+}

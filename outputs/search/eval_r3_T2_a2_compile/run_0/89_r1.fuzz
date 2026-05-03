@@ -1,0 +1,30 @@
+#include <iostream>
+
+#include <cstdint>
+#include <cstdlib>
+#include <cstring>
+using namespace std;
+#define MAX 3
+
+struct Point {
+    int32_t x_;
+    int32_t y_;
+};
+
+Point foo(Point a, Point b) {
+  a.x_ += b.x_;
+  a.y_ += b.y_;
+  return a;
+}
+
+int main(int32_t argc, char** argv) {
+  Point p1 = {1, 2};
+  Point p2 = {5, 6};
+  Point p3;
+  memcpy(&p3, &foo(p1, p2), sizeof(Point));
+  cout << p3.x_ << "," << p3.y_ << endl;
+  return 0;
+}
+
+// For more information on fuzzing and clang sanitizer see
+// https://github.com/google/fuzzing/blob/master/tutorial/libFuzzerTutorial.md

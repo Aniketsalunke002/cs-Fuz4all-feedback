@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+map<int, int> map;
+int main()
+{
+  map["1abc"];
+  map[2];
+  map["hello"];
+  return 0;
+}

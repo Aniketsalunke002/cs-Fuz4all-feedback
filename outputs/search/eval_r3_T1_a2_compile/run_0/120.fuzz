@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a = 3;
+    int& b = a;
+    int& c = b;
+
+    b *= 10;
+    cout << c + 20 << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class A {
+private:
+  int a;
+  int b;
+public:
+  A() : a {0}, b {0} {};
+  A(int a_, int b_) : a {a_}, b {b_} {};
+  
+  A& operator+=(const A& other) {
+      a += other.a;
+      b += other.b;
+      return *this;
+   };
+  
+  friend void print(const A& obj);
+};
+
+void print(const A& obj) {
+    cout << "A: " << obj.a << " b: " << obj.b << endl;
+}
+
+int main() {
+  A a(2,5);
+  print(A(2, 4));
+  A b = a;
+  b += a;
+  print(b);
+}
+ 

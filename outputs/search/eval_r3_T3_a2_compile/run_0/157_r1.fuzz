@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+template <typename T>
+T product(T a, T b) {
+  return a * b;
+}
+
+int main() {
+  int *p;
+  int *q;
+  p = q;
+  cout << "\n";
+  return q;
+}

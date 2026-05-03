@@ -1,0 +1,8 @@
+#include <iostream>
+ 
+void world_hello() {
+	std::cout << "Hello woll" << std::endl;
+}
+int main() {
+	world_hello();
+}

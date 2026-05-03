@@ -1,0 +1,56 @@
+#include <iostream>
+
+#include <vector>
+using namespace std;
+template <class T>
+class A
+{
+    private:
+    	T iField1;
+    	T iField2;
+    public:
+    	A():iField1(T(777)){}
+    	A(T b):iField1(b){}
+    	A(A &r): iField1(r.iField1),iField2(r.iField2-1){}
+    	A& operator=(T b)
+    	{
+    		iField2=b;
+    		return *this;
+    	}
+};
+  
+template <class T>
+A<T> f(A<T>& param)
+{
+	return param;
+}
+  
+#include <iostream>
+#include <vector>
+using namespace std;
+template <class T>
+class A
+{
+    private:
+    	T iField1;
+    	T iField2;
+    public:
+    	A():iField1(T(777)){}
+    	A(T b):iField1(b){}
+    	A(A &r): iField1(r.iField1),iField2(r.iField2-1){}
+    	A& operator=(T b)
+    	{
+    		iField2=b;
+    		return *this;
+    	}
+    	A& operator=(A<T>& b,T c)
+    	{
+    		iField2=b.iField2+c;
+    	}
+};
+  
+template <class T>
+A<T> f(A<T>& param,T c)
+{
+	return param=c;
+}

@@ -1,0 +1,21 @@
+#include <iostream>
+
+#include <exception>
+#include <typeinfo>
+
+class my_exception : public std::exception 
+{
+   std::string msg_;
+public:
+   my_exception(std::string msg)
+      : msg_(msg)
+   {}
+   virtual ~my_exception() throw()
+   {}
+   virtual const char* what() const throw() { return msg_.c_str(); }
+};
+
+int main( int argc, char **argv ){
+  int array[10];
+  throw my_exception(typeid(*array).name());
+}

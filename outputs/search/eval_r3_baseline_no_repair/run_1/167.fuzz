@@ -1,0 +1,54 @@
+#include <iostream>
+int main() {
+  double x = 4;
+  x = x+2; x = x+3; x = x+7;
+  std::cout<< "x now equals "<< x<< std::endl;
+   
+   
+  int x = 0x76543210;          
+  int y = 0x1002; x &= y;        
+                               
+  int z = 0x65042; y |= z;       
+  return 0;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+#include <iostream>
+int main() {
+  double x = 4;
+  x = x+14;
+  std::cout<< "x now equals "<< x<< std::endl;
+   
+  x = x*2;
+  std::cout<< "x now equals "<< x<< std::endl;
+  x = x+2;
+  std::cout<< "x now equals "<< x<< std::endl;
+  x = x+x+1; x-=3; x-=2;
+   
+   
+  x = x%2;
+  std::cout<< "x now equals "<< x<< std::endl;
+  x |= 1;
+  std::cout<< "x now equals "<< x<< std::endl;
+  x &= x;   
+  std::cout<< "x now equals "<< x<< std::endl;
+  x <<= 3;   
+  std::cout<< "x now equals "<< x<< std::endl;
+  int y = x;   
+  std::cout<< "The value of x is "<< y<< " and should be 256"<< std::endl;
+  y = x % 2;
+  std::cout<< "The value of y is "<< y<< " and should be 64"<< std::endl;
+  y = x / 16;   
+  std::cout<< "The value of y is "<< y<< " and should be 1"<< std::endl;
+  y = x - 8;   
+  std::cout<< "The value of y is "<< y<< " and should be 224"<< std::endl;
+  y = x * x;   
+  std::cout<< "The value of y is "<< y<< " and should be 4096"<< std::endl;
+  bool equal = (x == y+y);   
+  std::cout<< "The equality test result should be true and is "<< equal<< std::endl;
+  return 0;
+}

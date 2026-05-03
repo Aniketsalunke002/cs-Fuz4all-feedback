@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+const double PI = 3.141592;
+int main()
+{
+	cout<<"Hello, World! I am a mutated program! ";
+	cout<<"My mutation method was to modify the PI constant!\n";
+	cout<<endl<<PI<<'\t'<<2*PI<<endl<<1/PI<<endl;
+	return 0;
+}

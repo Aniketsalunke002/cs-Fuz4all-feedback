@@ -1,0 +1,11 @@
+#include <iostream>
+
+int main ()
+{
+    int input;
+    std::cout << "please enter any integer ";
+    std::cin >> input;
+    int array[input];
+    std::cout << "the array input is" << array << " and size is " <<sizeof array << " byte";
+    return 0;
+}

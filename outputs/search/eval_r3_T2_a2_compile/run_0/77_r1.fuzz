@@ -1,0 +1,21 @@
+#include <iostream>
+
+// using namespace std;
+const int MAX = 100;
+
+// int main(int argc, char** argv) {
+int main(int argc, char** argv) {
+    int x[MAX], a, b, i;
+
+    for (i = 0; i < MAX; i++)
+        cin >> x[i];
+    cin >> a;
+    cin >> b;
+    for (i = b; i < MAX - 1; i++) {
+        if (x[i + 1] == a) {
+            x[i] = x[i + 1];
+            i++;
+        }
+    }
+    cout << x[b] << " " << i + 1;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 66, b = 5;
+	cout << a << endl;
+	cout << b << endl;
+	int* p1 = &a, *p2 = &b;
+	a += p1[1] - b;
+	b -= p2[-1];
+	b *= 2;
+	cout << a << endl;
+	cout << p1[0] << endl;
+	cout << b << endl;
+	cout << p2[1] << endl;
+	return 0;
+}

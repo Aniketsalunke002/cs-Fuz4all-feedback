@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    char* s1 = new char[96];
+    char* s2 = new char[96];
+    for(int i = 0; i < 96; ++i)
+        s2[i] = s1[i];
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+void *allocate( int x, int y )
+{
+  int alloc_size = x;
+  int alloc_size2 = ( y + x - 1 ) / x;
+ 
+   
+
+  int num_of_rows = ( y + x - 1 ) / x;
+
+  return ( void* ) malloc( sizeof(char*) * num_of_rows );
+}
+void *allocate( int *x, int *y )
+{
+  int alloc_size = *x;
+  int alloc_size2 = ( *y + *x - 1 ) / *x;
+ 
+   
+
+  int num_of_rows = ( *y + *x - 1 ) / *x;
+
+   
+
+  return ( void* ) malloc( sizeof(char*) * num_of_rows );
+}
+ 
+ 
+
+void show( int* c )
+{
+    *c = 97;
+}
+
+void release( int *x, int *y )
+{
+   
+   
+  delete x;
+  delete y;
+}
+ 
+#include <iostream>
+using namespace std;
+int stringToInt(string s)
+{
+    return s.empty()? 0 : (s[0] - '0');
+}
+/* Please write a program which implements a function similar to atoi() from the C library. What is required is the
+ * ability to convert strings to signed integer values, as described in the description of atoi().
+ *

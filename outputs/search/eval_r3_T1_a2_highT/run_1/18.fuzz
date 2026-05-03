@@ -1,0 +1,15 @@
+#include <iostream>
+ 
+int main(){
+    int x=0, y=0, new_x=0;
+    cin>>x>>y;
+    cout>>x<<endl;
+    if(x%2!=0){
+        new_x=((x-y)*10000)+(pow(1987,x))%100;
+    }
+    else{
+        new_x=(x*y*9876)+(pow(1987,y)%1000)%100;
+    }
+    cout<<new_x<<endl;
+}
+

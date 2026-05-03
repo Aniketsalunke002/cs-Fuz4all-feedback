@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+	double * d = new double[200];
+	d[100] = 3.14;
+	cout << d[100] << endl;
+	for (int i = 0; i<200;i++) {
+		d[i] = d[i] + 1;
+	}
+	for (int i = 0; i<200;i++) {
+		d[i] = d[i] * 100;
+	}
+	for (int i = 0; i<200;i++) {
+		d[i] = d[i] + d[i];
+	}
+	cout << d[100] << endl;
+	delete []d;
+}

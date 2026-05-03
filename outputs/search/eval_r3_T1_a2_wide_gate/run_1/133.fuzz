@@ -1,0 +1,71 @@
+#include <iostream>
+#include <cstdint>
+#include <thread>
+#include <pthread.h>
+int main(int argc, char **argv)
+{
+	std::thread t1(worker, (void *) NULL);
+	std::thread t2(worker, (void *) NULL);
+	t1.join();
+	t2.join();
+	std::cout << "\n\tThis program demonstrates a race condition - it may work\n\tsometimes but will be inefficient\n\nor non-functioning correctly in some cases.\n\n";
+}
+ 
+#include <iostream>
+#include <thread>
+#include <chrono>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/types.h>
+#include <sys/wait.h>
+#include <sys/time.h>
+
+void child_thread(std::string p)
+{
+    std::cout << __func__ << " -- " << __LINE__ << " --" << std::endl;
+    sleep(1);
+    printf("Hi from child thread!\n");
+}
+
+int create_child_process(const pthread_t pchild)
+{
+    int pid = fork();
+
+    if (pid < 0)
+    {
+        std::cout << __func__ << " -- " << __LINE__ << " --" << std::endl;
+        return -1;
+    }
+
+    if (pid == 0)
+    {
+        std::cout << __func__ << " -- " << __LINE__ << " --" << std::endl;
+        child_thread("1");
+        pthread_exit(NULL);
+    }
+    else
+    {
+        std::cout << __func__ << " -- " << __LINE__ << " --" << std::endl;
+        return 0;
+    }
+}
+
+int main(int argc, char *argv[])
+{
+    std::cout << __func__ << " -- " << __LINE__ << " --" << std::endl;
+    auto t1 = std::chrono::system_clock::now();
+    while (1)
+    {
+        pthread_t child_thread;
+        int ret = pthread_create(&child_thread, NULL, create_child_process, NULL);
+        std::cout << __func__ << " -- " << __LINE__ << " --" << std::endl;
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+    auto t2 = std::chrono::system_clock::now();
+
+    std::cout << __func__ << " -- " << __LINE__ << " --" << std::endl;
+    auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(t2 - t1);
+    std::cout << __func__ << " -- " << __LINE__ << " --" << std::endl;
+
+    return 0;
+}

@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int onePlusOne() {
+  return 1+1;
+}
+int main(int  argc, char * argv[]) {
+  int a=3;
+  cout<<a<<endl;
+}

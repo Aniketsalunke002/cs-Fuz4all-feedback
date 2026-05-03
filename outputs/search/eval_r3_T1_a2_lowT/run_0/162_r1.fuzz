@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main() {
+    int a;
+    std::cin>>a;
+    int *p=(int*)&a;
+    std::cout<<*p<<std::endl;
+    return 0;
+}

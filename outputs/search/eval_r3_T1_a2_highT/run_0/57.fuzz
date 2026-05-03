@@ -1,0 +1,12 @@
+#include <iostream>
+int main() {
+  int* x = new int;  
+  *x = 1;           
+  std::cout << *x;
+
+  int** y = new int*;  
+  *y = x;             
+
+  std::cout << **y;  
+   
+}

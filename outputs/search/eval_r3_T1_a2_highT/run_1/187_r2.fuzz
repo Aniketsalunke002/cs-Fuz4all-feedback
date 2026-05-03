@@ -1,0 +1,26 @@
+#include <iostream>
+
+   using namespace std;
+
+   class S{
+
+      private:
+	class P{
+	  double x,y;
+	};
+
+      public:
+	int num = 3;
+	S(){
+	  P p;
+	  p.x = 0.0;
+	  p.y = 0.0;
+	}
+   };
+
+   int main() {
+      S s;
+      s.num += 1;
+      cout << s.num << endl;
+      return 0;
+   }

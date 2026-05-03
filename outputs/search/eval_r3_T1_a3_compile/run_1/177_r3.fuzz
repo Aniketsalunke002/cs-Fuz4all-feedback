@@ -1,0 +1,38 @@
+#include <iostream>
+
+#include <string>
+
+struct MyString {
+	MyString(const char *str) : _size(strlen(str)) { _str = new char[_size+1]; strcpy(_str,str); }
+	~MyString() { delete[]_str; }
+	const char *str() const { return _str; }
+	int length() const { return _size; }
+private:
+	char *_str;
+	const int _size;
+};
+
+int main() {
+	MyString ss("some string!!");
+	std::cout << "some string is of size " << ss.length() << " and I have the following string : " << ss.str() << std::endl;
+}
+
+#include <fstream>
+#include <chrono>
+#include <iomanip>
+int main() {
+	using namespace std::chrono_literals;
+
+	auto start = std::chrono::high_resolution_clock::now();
+	int numLines = 1000000;
+
+	std::ofstream out("data.txt");
+	for (int i = 1; i < (numLines+1); i++)
+		out << i << std::endl;
+	out.close();
+
+	auto finish = std::chrono::high_resolution_clock::now();
+
+	std::chrono::duration<double> elapsed = finish-start;
+	std::cout << "Writing " << numLines << " lines took " << std::setprecision(3) << elapsed.count() << " seconds!" << std::endl;
+}

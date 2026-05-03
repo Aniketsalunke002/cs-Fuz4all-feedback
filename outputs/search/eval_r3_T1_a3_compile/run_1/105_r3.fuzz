@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+void fun3(int &c, int &d) {
+	int a = c, b = d;
+	c = 30;
+	d = 8;
+	return;
+}
+int main(int argc, char* argv[]) {
+	int c = 5, d = 12;
+	cout << c << endl;
+	cout << d << endl;
+	fun3(c, d);
+	cout << c << endl;
+	cout << d << endl;
+	return 0;
+}

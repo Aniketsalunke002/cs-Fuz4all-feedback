@@ -1,0 +1,108 @@
+#include <iostream>
+char * f(char * a, int i){
+    a = 0;
+    return a;
+}
+int main(int argc, char **argv){
+    f(argv[0], argc);
+    return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char **argv){
+    int n = 0;
+    while(true){
+        n = n + 1;
+    }
+}
+ 
+#include <iostream>
+int main(int argc, char **argv){
+    auto &argc = 1;
+    assert(argc == 0);
+    int n = argc;
+    assert(n == argv[1]);
+}
+int assert(int);
+ 
+int main(int argc, char **argv){
+    int a[100];
+    memset(a, 0, 100);
+    int n = 0, i = 0;
+    while(!a[n] && i < 100){
+        n = n+1;
+    }
+}
+ 
+#include <iostream>
+bool a[10][10][10];
+int main(int argc, char **argv){
+    int x = 0, y = 4, z = 11;
+    a[x][y][z] =!a[x][x + 1][z];
+    printf("%d %d %d\n", x, y, z);
+}
+ 
+#include <iostream>
+int main(int, char **argv) {
+    int i = 0, j = 0, k = 0, l = 0;
+    int a, b;
+    if (i) {
+        a = 5;
+    }
+    if (j) {
+        b = 5;
+    }
+    ++k;
+    if (!k) {
+        if (l) {
+            a = b;
+        } else {
+            b = a;
+        }
+    }
+    printf("%d %d\n", a, b);
+    return 0;
+}
+ 
+int main(int argc, char **argv){
+    int a = 0;
+    int b = 1 | 2;      
+    int c = 1 & 2;      
+    int d = 1 ^ 2;      
+    int e = 14 & 6;     
+}
+ 
+#include <iostream>
+int main(int argc, char **argv){
+    int a = 15;
+    int b[3] = {0, 1, 2};
+    static int c = 3;
+    int & d = (argc);
+    b[c] = a;
+    printf("%d\n", b[d]);
+}
+ 
+#include <iostream>
+int main(int argc, char **argv){
+    int a = 2;
+    char b[5], * c = (char *)malloc(sizeof(char) * 5);
+    b[a] = 0;
+    c = &b[a];
+    printf("%s\n", c);
+    return 1;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char **argv){
+    double a = 0.1;
+    float b = a;
+    printf("b = %f\n", b);
+}
+ 
+#include <iostream>
+int main(int argc, char **argv){
+    if (argc) {
+    } else {
+    }
+    std::cout << "done";

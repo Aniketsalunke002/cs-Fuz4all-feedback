@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <fstream>
+using namespace std;
+void main()
+{
+	ifstream f("point.dat");
+    int x, y;
+    if(!f.good())
+    {
+        return;
+    }
+    f >> x >> y;
+    cout << '(' << x << ',' << y << ')' << endl;
+    f.close();
+}
+// 
+//  
+// #include <iostream>
+// #include <fstream>
+// using namespace std;
+// void main()
+// {
+// 	ofstream f("point.dat");
+// 	if(!f.good())
+// 		return;
+// 	f << 7 <<'' << 8 << endl;
+// 	f.close();
+// }
+#include <iostream>
+#include

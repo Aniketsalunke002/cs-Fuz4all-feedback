@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+int main(){
+    cout << sizeof(char) << '\n';
+    cout << sizeof(int) << '\n';
+    cout << sizeof(short) << '\n';
+    cout << sizeof(long) << '\n';
+    cout << sizeof(long long) << '\n';
+    return 0;
+}
+```
+
+## How to use the compiler flag and what is its default value
+
+<code>-std=\<xxx></code> <br/>
+<table style="width:100%">
+  <tr>
+    <td>GCC</td> <td>GCC default</td>
+    <td>Clang</td> <td>Clang default</td>
+  </tr>  
+  <tr>
+    <td>gnu++98</td> <td>none</td>
+    <td>c++11</td> <td>c++11</td>
+  </tr>
+  <tr>
+    <td>gnu++11</td> <td>none</td>
+    <td>gnu++1z</td> <td>none</td>
+  </tr>
+  <tr>
+    <td>gnu++14</td> <td>none</td>
+    <td>c++14</td> <td>c++14</td>
+  </tr>
+  <tr>
+    <td>gnu++17</td> <td>none</td>
+    <td>c++17</td> <td>c++17</td>
+  </tr>
+  <tr>
+    <td>gnu++2a</td> <td>none</td>
+  </tr>
+</table>
+
+## Pointer
+

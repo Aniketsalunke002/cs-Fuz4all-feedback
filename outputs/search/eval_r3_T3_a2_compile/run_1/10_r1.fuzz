@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int i = 0;
+    A one = { i, NULL};
+    A two;
+    A *prev = &one;
+    while ( (prev=prev->next) )
+    {
+        prev->i += 3;
+    }
+    cout << "Size of one:  " << sizeof(one) <<  ";  contents: " << one.i << endl; 
+    cout << "Size of two:  " << sizeof(two) << endl;
+    return 0;
+}

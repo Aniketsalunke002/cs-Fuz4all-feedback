@@ -1,0 +1,37 @@
+#include <iostream>
+
+#include <fstream>
+#include <string>
+#include <cctype>
+#include <vector>
+
+using namespace std;
+
+int main(int argc, char** argv)
+{
+  // Read file into a string.
+  ifstream myfile("in.txt");
+  string file_str((istreambuf_iterator<char>(myfile)),
+                   istreambuf_iterator<char>());
+
+  // Process the string.
+  vector<string> lines = splitLines(file_str);
+  int sum = 0;
+  for (size_t i = 0; i < lines.size(); i++) {
+    int a, b;
+    stringstream ss(lines[i]);
+    ss >> a >> b;
+    sum += a * b;
+  }
+
+  cout << "Lines read: " << lines.size() << endl;
+  cout << "Sum: " << sum << endl;
+
+  // Write the result.
+  ofstream myfile2("output.txt");
+  myfile2 << "result:" << sum << endl;
+  myfile2.close();
+  return 0;
+}
+
+vector<string> splitLines(string const& str)

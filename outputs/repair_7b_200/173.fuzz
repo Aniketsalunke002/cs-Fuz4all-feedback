@@ -1,0 +1,7 @@
+#include <iostream>
+int main()
+{
+  std::cout << (x = 1) + 2 << std::endl;
+  int x = 1;
+  std::cout << ++x + 3;
+}

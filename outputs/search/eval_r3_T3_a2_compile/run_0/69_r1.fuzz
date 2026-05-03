@@ -1,0 +1,13 @@
+#include <iostream>
+
+
+int main()
+{
+    int i = 0;
+    const char* s = const_cast<const char*>("hello, world\n");
+    while(s && s[i++]);
+    return 0;
+}
+
+//
+//

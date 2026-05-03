@@ -1,0 +1,24 @@
+#include <iostream>
+int main(int a) {
+  a = a + 10;
+  return 0;
+}
+ 
+#include <iostream>
+ 
+#include <algorithm>
+#include <vector>
+
+int main(int argc, char ** argv)
+{
+
+  const std::string test_string = "Hello";
+   
+   
+   
+  for (int i = 0; i < test_string.size(); ++i) {
+    std::cout << "The char at position " << i << " is ";
+    std::cout << test_string[i] << "\n";
+  }
+  return 0;
+}

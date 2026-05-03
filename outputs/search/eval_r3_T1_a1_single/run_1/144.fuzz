@@ -1,0 +1,99 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x = 6;
+    int y = 12;
+    cout << x * y << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class Point
+{
+private:
+	int m_x, m_y;
+public:
+	Point(int x, int y);
+	void Print();
+};
+Point::Point(int x=0, int y=0)
+{
+	m_x=x;
+	m_y=y;
+}
+void Point::Print()
+{
+	cout << '(' << m_x << ',' << m_y << ')' << endl;
+}
+int main()
+{
+	Point P(7,8);
+	P.Print();
+	return 0;
+}
+
+ 
+#include <iostream>
+using namespace std;
+class Point
+{
+private:
+	int m_x, m_y;
+public:
+	Point(int x);
+	void Print();
+	void Set(int x, int y);
+	int GetX();
+	int GetY();
+	void Show();
+};
+Point::Point(int x=0)
+{
+	m_x=x;
+}
+void Point::Print()
+{
+	cout << '(' << m_x << ',' << m_y << ')' << endl;
+}
+void Point::Set(int x, int y)
+{
+	m_x=x;
+    m_y=y;
+}
+int Point::GetX()
+{
+    return m_x;
+}
+int Point::GetY()
+{
+    return m_y;
+}
+void Point::Show()
+{
+	cout << '(' << m_x << ',' << m_y << ')' << endl;
+}
+int main()
+{
+	Point P(7);
+    P.Show();
+    P.Set(5,4);
+    P.Show();
+	return 0;
+}
+
+ 
+#include <iostream>
+#include <fstream>
+using namespace std;
+void main()
+{
+	ifstream f("point.dat");
+	if(!f.good())
+		return;
+	int x, y;
+	f >> x >> y;
+    cout << '(' << x << ',' << y << ')' << endl;
+	f.close();
+}

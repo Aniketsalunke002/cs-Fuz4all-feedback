@@ -1,0 +1,132 @@
+#include <iostream>
+#include <string>
+
+class person_t
+{
+public:
+    person_t()
+        : m_name("")
+    { }
+    person_t(const std::string &name)
+        : m_name(name)
+    { }
+
+    const std::string &name() const
+    {
+        return m_name;
+    }
+
+    std::string m_name;
+};
+
+class person_t_ref
+{
+public:
+    person_t_ref()
+        : m_pPerson(0)
+    { }
+
+    person_t_ref(const person_t &other)
+        : m_pPerson(0)
+    {
+        new (this) person_t_ref(other);
+    }
+    person_t_ref(const person_t_ref &other)
+        : m_pPerson(0)
+    {
+        new (this) person_t_ref(other.m_pPerson->clone());
+    }
+    ~person_t_ref()
+    {
+        delete m_pPerson;
+    }
+
+    person_t_ref &operator = (const person_t_ref &other)
+    {
+        person_t *pNewPerson = new person_t(*(other.m_pPerson));
+        person_t *pOldPerson = m_pPerson;
+        m_pPerson = pNewPerson;
+        delete pOldPerson;
+        return *this;
+    }
+
+    const person_t &ref() const
+    {
+        return *m_pPerson;
+    }
+
+private:
+    person_t* clone() const
+    {
+        return new person_t(*(this->m_pPerson));
+    }
+
+    person_t *m_pPerson;
+};
+
+std::ostream& operator << (std::ostream &strm, const person_t& p)
+{
+    strm << p.name();
+    strm.flush();
+    return strm;
+}
+
+
+int main()
+{
+    std::string name("Bob");
+    person_t bob(name);
+    person_t_ref bobRef(bob);
+    person_t_ref bobRef2(bobRef);
+    std::cout << person_t(bob.name()) << ", " << bobRef.ref().name()
+        << ", " << bobRef2.ref().name() << std::endl;
+    return 0;
+}
+
+ 
+#include <iostream>
+#include <string>
+
+class Sales_data
+{
+public:
+    Sales_data() : units_sold(0), revenue(0.0) { }
+
+    Sales_data(std::string s) : bookNo(s), units_sold(0), revenue(0.0) { }
+
+    Sales_data(std::istream &is) : units_sold(0), revenue(0.0)
+    {
+        double price;
+        is >> bookNo >> units_sold >> price;
+        revenue = units_sold * price;
+    }
+
+    std::string isbn() const
+    {
+        return bookNo;
+    }
+
+    Sales_data &combine(const Sales_data&);
+
+public:
+    std::string bookNo;
+    unsigned units_sold = 0;
+    double revenue = 0.0;
+};
+
+Sales_data& Sales_data::combine(const Sales_data &rhs)
+{
+    units_sold += rhs.units_sold;
+    revenue += rhs.revenue;
+    return *this;
+}
+
+Sales_data main()
+{
+    Sales_data book;
+    Sales_data next("222");
+    Sales_data *pp = &next;
+    return main(book, next);
+}
+
+int main(int argc, char **argv)

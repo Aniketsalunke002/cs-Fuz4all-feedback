@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int f1(int a)
+{
+  cout << "In f1" << endl;
+  a++;
+  cout << &a << endl;
+  return a;
+}
+
+int main()
+{
+  int a;
+  cout << "In main" << endl;
+  cout << &a << endl;
+   
+  cout << &a << endl;
+   
+  a=f1(a);
+  cout << "In main after calling f1" << endl;
+  cout << a << endl;
+   
+  cout << "End of main" << endl;
+  return 0;
+}

@@ -1,0 +1,104 @@
+#include <iostream>
+int main() {
+    int x;
+    std::cin >> x;
+    std::cout << x + 5 / 2 * 10 << '\n';
+    return 0;
+}
+ 
+#include <iostream>
+#include <map>
+int main() {
+    char charAry[5];
+    std::map <char, int> counts;
+    for (int i = 1; i < 5; ++i) {
+        std::cin >> charAry[i];
+        if (counts.find(charAry[i])!= counts.end()) {
+            counts[charAry[i]]++;
+        }
+        else {
+            counts[charAry[i]] = 1;
+        }
+    }
+    for (auto it = counts.begin(); it!= counts.end(); ++it) {
+        std::cout << it->first <<'' << it->second << '\n';
+    }
+
+    std::cout << std::endl;
+    for (int i = 1; i < 5; ++i) {
+        if (counts.find(charAry[i])!= counts.end()) {
+            std::cout << charAry[i] <<'' << counts[charAry[i]] << '\n';
+        }
+    }
+    std::cout << std::endl;
+    for (int i = 1; i < 5; ++i) {
+        if (counts.find(charAry[i])!= counts.end()) {
+            counts[charAry[i]]++;
+        }
+        else {
+            counts[charAry[i]] = 1;
+        }
+    }
+
+    std::cout << "This way is OK, though you have not created a deep copying copy of the previous object "
+                 "because you modify the contents of it with its copy constructor to change it." << std::endl;
+
+    return 0;
+}
+ 
+#include <cctype>
+bool isLower(char ch) 
+{
+    return (bool)std::islower(ch);
+}
+#include <cctype>
+bool isUpper(char ch) 
+{
+    return (bool)std::isupper(ch);
+}
+bool case_converter(char ch)
+{
+    if ((isLower(ch) == true)||(isUpper(ch) == true))
+    {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+#include <iostream>
+int main() {
+    char charAry[5];
+    for (int i = 1; i < 5; ++i) {
+        std::cin >> charAry[i];
+    }
+    for (int i = 1; i < 5; ++i) {
+        if (case_converter((char)(charAry)[i]) == true) {
+            std::cout << charAry[i];
+        }else {
+            std::cout << std::to_string(charAry[i]);
+        }
+    }
+    std::cout << std::endl;
+    return 0;
+}
+/* Write a function which receives two arguments: char * and int * and copies n
+characters from char * into int *
+
+int * copyToInts(char * str) {
+    int * int_ptr = new int[26];
+    bool innum = true;  
+    int cur_int_num = 0;
+    for (size_t i = 0; i < strlen(str); ++i) {
+        if(innum == true) {
+            if(!isdigit(str[i])) {
+                innum = false;
+            }
+        }
+        else {
+            if(isdigit(str[i])) {
+                cur_int_num  = cur_int_num*10 + (int)(str[i] - 48);
+            }
+            else {
+                int_ptr[str[i] - 65] = cur_int_num;
+                cur_int

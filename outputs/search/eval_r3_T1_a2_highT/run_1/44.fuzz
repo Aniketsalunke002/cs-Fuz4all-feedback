@@ -1,0 +1,23 @@
+#include <iostream>
+int main() {
+	int max;
+	for(;;) {
+		std::cin >> max;
+		for(int i = 0; i < max; i++)
+			for(int j = 0; j < max; j++) 
+				std::cout << ((std::rand()%2) == 0? '#' :'');
+		std::cout << std::endl;
+	}
+	return 0;
+}
+ 
+#include <iostream>
+#include "GameOfLife.cpp"
+int main() {
+	int max;
+	for(;;) {
+		std::cin >> max;
+		play(max, '#' );
+	}
+	return 0;
+}

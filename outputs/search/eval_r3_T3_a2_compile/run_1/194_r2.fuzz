@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+string a("abbbbbaaaabbb");
+auto ptr = a.c_str() + a.length();
+cout << ptr;
+while (ptr!= a.c_str())
+{
+  *ptr = '\0';
+  cout << ptr << " ";
+  ptr--;
+}
+return 0;
+
+/*
+ * Test cases for strlen
+ *
+ * */
+// #include <iostream>
+// using namespace std;
+// char a[]="abbbbbaaaabbb";
+// cout<<strlen(a);
+// return 0;
+
+#include <iostream>
+#include <string>
+using namespace std;
+string a("abbbbbaaaabbb");
+cout << a.length() << endl;
+return 0;

@@ -1,0 +1,22 @@
+#include <iostream>
+
+#include <fstream>
+using namespace std;
+int s = 0;
+int main(int argc, char** argv)
+{
+    for (int i = 0; i < argc - 1; i++){
+        cout << argv[i] << " ";
+    }
+    char s;
+    cin >> s;
+    if (s == 'a')
+    {
+        int x = 'z';
+    }
+    cout << s;
+    ofstream file("file.txt");
+    file << s;
+    file.close();
+    return 0;
+}

@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << argc << " ";
+    struct Person
+    {
+        int age;
+        int height;
+        int weight;
+        Person() : age(0), height(0), weight(0)
+        {
+            cout << "person constructor\n";
+        }
+        Person(const Person& p) : age(p.age), height(p.height), weight(p.weight)
+        {
+            age = 0;
+            cout << "copy constructor\n";
+        }
+        ~Person()
+        {
+            cout << "destructor\n";
+        }
+        Person& operator=(const Person& p)
+        {
+            age = p.age;
+            height = p.height;
+            weight = p.weight;
+            return *this;
+        }
+        void sayHello()
+        {
+            cout << "hello world\n";
+        }
+    };
+    Person david;
+    Person jason(david);
+    david.age = 11;
+    Person qixi = 11;
+    Person pee;
+    cout << "end of main\n";
+    return 0;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+int main(void) {
+ int foo_var = 1;
+ std::cout << foo_var << " " << "foo_var\n";
+ foo_var++;
+ std::cout << foo_var << " " << "foo_var\n";
+ return 0;
+}
+
+{% endhighlight %}
+
+And this is the output to the terminal.
+
+{% highlight text %}
+
+
+
+1 foo_var
+2 foo_var
+
+
+{% endhighlight %}
+

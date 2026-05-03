@@ -1,0 +1,105 @@
+#include <iostream>
+using namespace std;
+void fun(int a, int b) {
+	if (a + b > 10) {
+		return;
+	}
+	int tmp;
+	tmp = a;
+	a = b;
+	b = tmp;
+	if (a + b > 10) {
+		return;
+	}
+	tmp = a;
+	a = b;
+	b = tmp;
+	return;
+}
+int main(int argc, char* argv[]) {
+	int a = 5, b = 12;
+	fun(a, b);
+	cout << a << endl;
+	cout << b << endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class Test {
+public:
+	Test() {
+		cout << "Default constructor" << endl;
+	}
+	~Test() {
+		cout << "Destructor" << endl;
+	}
+	Test(int a, int b, int c) {
+		int tmp;
+		tmp = a;
+		a = b;
+		b = tmp;
+		c = 99;
+		cout << "Int, Int, Int constructor" << endl;
+	}
+	Test(Test& test) {
+		int a, b, c;
+		a = test.a;
+		b = test.b;
+		c = test.c;
+		test.a = 10;
+		test.b = 99;
+		test.c = 999;
+		cout << "Copy constructor" << endl;
+	}
+	Test(const Test& test) {
+		int a, b, c;
+		a = test.a;
+		b = test.b;
+		c = test.c;
+		test.a = 10;
+		test.b = 99;
+		test.c = 999;
+		cout << "Const copy constructor" << endl;
+	}
+	Test(Test&& test) {
+		a = test.a;
+		b = test.a;
+		c = test.a;
+		cout << "Move constructor" << endl;
+	}
+	void fun(Test& test) {
+		int a, b, c;
+		a = test.a;
+		b = test.b;
+		c = test.c;
+
+		test.a = 10;
+		test.b = 99;
+		test.c = 999;
+		cout << "Fun" << endl;
+	}
+	void fun2(Test& test) {
+		a = 10;
+		b = 99;
+		c = 999;
+		cout << "Fun2" << endl;
+	}
+	void fun3(Test* test) {
+		int a, b, c;
+		a = test->a;
+		b = test->b;
+		c = test->c;
+		test->a = 10;
+		test->b = 99;
+		test->c = 999;
+		cout << "Fun3" << endl;
+	}
+	void fun4(Test test) {
+		int a, b, c;
+		a = test.a;
+		b = test.b;
+		c = test.c;
+		test.a = 10;
+		test.b = 99;
+		test.c

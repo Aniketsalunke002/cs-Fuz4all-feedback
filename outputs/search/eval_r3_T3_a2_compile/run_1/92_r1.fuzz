@@ -1,0 +1,18 @@
+#include <iostream>
+
+template <typename T>
+int mutator(T* v, int x) {
+	T a = v[x];
+	if (a > 0) v[x] = -v[x];
+	return 0;
+}
+int main()
+{
+	int a[10];
+	mutator(a, 5);
+	for(int i = 0; i < 10; i++)
+	{
+		std::cout << a[i] << std::endl;
+	}
+	return 0;
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int i = 15;
+    int j = i + 25 - 3;
+}
+ 
+25 - 3 - i
+ 
+
+std::string GetName(int input) {
+    auto x = input;
+    if(x > 90) {
+        return "Peter";
+    } else if(x > 60) {
+        return "Paul";
+    } else {
+        return "John";
+    }
+}

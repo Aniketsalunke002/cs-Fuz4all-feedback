@@ -1,0 +1,18 @@
+#include <iostream>
+int main() {
+    int a, b;
+    a=0;
+    b=1;
+    for (int i=1; i<=5; i++) {
+        a = a + b;
+        b = a + b;
+        std::cout << i << ':' << a << '+' << b << '=' << a + b << std::endl;
+    }
+    return 0;
+}
+
+ 
+#include <iostream>
+int main() {
+    int a=0, b=1;
+    std::cout <<a

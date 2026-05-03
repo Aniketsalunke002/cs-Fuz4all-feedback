@@ -1,0 +1,19 @@
+#include <iostream>
+
+#include <iomanip>
+#include <string>
+#include <sstream>
+#include <algorithm>
+int main (void) {
+  double val;
+  string str;
+   
+  cin >> str >> val;
+   
+  auto value = stod(str);
+   
+  auto result = 2*value + val;
+   
+  cout << "Input strings: [" << str << "], [" << val << "], [" << value << "]" << endl;
+  cout << "Result is [" << result << "]" << endl;
+}

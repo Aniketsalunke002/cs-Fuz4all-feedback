@@ -1,0 +1,41 @@
+#include <iostream>
+class myclass
+{
+public:
+  myclass(void)
+  {
+    std::cout << "Default constructor called" << std::endl; 
+  }
+  myclass(const myclass &a)
+  {
+    std::cout << "Copy constructor called with address: " << &a << std::endl; 
+  }
+  myclass& operator=(const myclass &a)
+  {
+    std::cout << "operator = called with address: " << &a << std::endl;
+    return *this;
+  }
+  ~myclass(void)
+  {
+    std::cout << "Destructor called" << std::endl;
+  }
+};
+int main(int argc, char **argv)
+{
+  std::cout << "sizeof myclass = "<< sizeof(myclass) << std::endl;
+  myclass x;
+  myclass y(x);
+  y = x;
+}
+ 
+#include <iostream>
+double f(int x) { return x * 2.34; }
+void main(int argc, char **argv) { f(1234); }
+```
+
+## Questions?
+
+This repository and its author are not affiliated or associated to the ITIS Foundation.
+
+
+

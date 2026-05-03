@@ -1,0 +1,26 @@
+#include <iostream>
+
+void f()
+{
+    double x=static_cast<double>(int(15))+1;
+    char c='A';
+    std::cout<<c<<' ';
+    std::cout<<x<<" ";
+    int a=0;
+    while (x<30)
+    {
+        ++x;
+        std::cout<<' ';
+    }
+    while (x>=5)
+    {
+        x=static_cast<double>(int(x-1));
+        std::cout<<x;
+    }
+    std::cout<<"\n";
+}
+
+int main()
+{
+    f();
+}

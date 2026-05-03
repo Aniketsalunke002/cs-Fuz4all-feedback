@@ -1,0 +1,24 @@
+#include <iostream>
+class A 
+{
+
+public:
+	void foo();
+};
+
+class B : public A 
+{
+public:
+	virtual void foo();
+};
+
+void A::foo()
+{
+
+}
+
+int main()
+{
+	B b;
+	b.foo();
+}

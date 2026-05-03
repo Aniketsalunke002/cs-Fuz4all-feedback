@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <iomanip>
+#include <algorithm>
+#include <tuple>
+#include <string>
+using namespace std;
+int main() {
+  vector<char> str;
+  cin.get(str.begin(), str.end(), '+');
+  x.erase(remove(x.begin(), x.end(),''), x.end());
+  vector<char>::iterator itr = find(str.begin(), str.end(), '-');
+  for (char i = *(itr); i >= 0; i >= 0; --itr) {
+    cout << i << endl;
+  }
+  return 0;
+}
+ 

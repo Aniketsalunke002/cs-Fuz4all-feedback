@@ -1,0 +1,14 @@
+#include <iostream>
+
+int aaa(int n){return n;}
+template<typename T>
+T bbb(const T o){return aaa(o)+1;}
+int main(void){BBB<int>(5);AAA<int>(3); return 0;}
+// #include <iostream>
+// template<typename T>
+// T bbb(const T o){return aaa(o)+1;}
+// int main(void){BBB(5);AAA(3); return 0;}
+#include <iostream>
+template<typename T>
+T bbb(const T o){return aaa(o)+1;}
+int main(void){BBB<int>(5);AAA<int>(3); return 0;}

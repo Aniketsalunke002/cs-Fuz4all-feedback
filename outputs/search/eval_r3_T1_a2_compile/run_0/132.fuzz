@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x = 0;
+    while (x < 100)
+    {
+        cout << ++x << endl;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+void function(void){
+    cout << "First Line"<< endl;
+    cout << "Second Line"<< endl;
+}
+ 
+#include <iostream>
+using namespace std;
+void function(void){
+    cout << "First Line"<< endl;
+    cout << "Second Line"<< endl;
+}
+ 
+#include <iostream>
+using namespace std;
+void function(void){
+    cout << "First Line"<< endl;
+    cout << "Second Line"<< endl;
+}
+ 
+#include <iostream>
+using namespace std;
+void function(void){
+    cout << "function()"<< endl;
+}

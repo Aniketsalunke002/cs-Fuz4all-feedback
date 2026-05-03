@@ -1,0 +1,80 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	double d;
+	double *pd = &d;
+	int *pi = new int;
+	pi = &d;
+	cout<<*pd<<endl;
+	cout<<*pi<<endl;
+	return 0;
+}
+ 
+#include<iostream>
+using namespace std;
+using funcptr=int (*)();
+class myclass
+{
+	public:
+		int x=20,y;
+		void set_y(int n)
+		{
+			y=n;
+		}
+};
+myclass myobj;
+funcptr myptr = &myobj.set_y;
+int main()
+{
+	myptr=&myobj.x;
+	(*myptr)(30);
+	cout<<myobj.x<<endl;
+	return 0;
+}
+ 
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{
+	char *p;
+	string s1="good morning",s2="good day",s3="good night";
+	int n;
+	cout<<"1 for char,2 for int,3 for double,4 for string? :";
+	cin>>n;
+	if(n==1)
+	{
+		p=new char[strlen(s1)+1];
+		strcpy(p,s1.c_str());
+		cout<<"Enter the number you want to delete:";
+		cin>>n;
+		if(n>p[0])
+			cout<<(n-1)<<endl;
+		else
+			cout<<n-1<<endl;
+		delete p;
+		p=NULL;
+	}
+	else if(n==2)
+	{
+		int *p1;
+		p1=new int[2];
+		p1[0]=36;
+		p1[1]=6;
+		cout<<"Enter the number you want to delete:";
+		cin>>n;
+		if(n>p1[0])
+			cout<<(n-1)<<endl;
+		else
+			cout<<n-1<<endl;
+		delete p1;
+		p1=NULL;
+	}
+	else if(n==3)
+	{
+		double *p2;
+		p2=new double[4];
+		p2[0]=29.5;
+		p2[1]=0.33;
+		p2[2]=3.

@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <memory>
+
+void deleteInt(int* i) {
+  std::cout << "Deleting int " << *i << std::endl;
+  delete i;
+}
+
+void deleteDouble(double* i) {
+  std::cout << "Deleting double " << *i << std::endl;
+  delete i;
+}
+
+std::unique_ptr<int> get() {
+  int* i = new int;
+  double* d = new double;
+  *i = 42;
+  *d = 1.0;
+  std::unique_ptr<int, decltype(&deleteInt)> ival(i, &deleteInt);
+  std::unique_ptr<double, decltype(&deleteDouble)> dval(d, &deleteDouble);
+  return ival;
+}
+
+A* create_b() {
+  int* i = new int;
+  double* d = new double;
+  *i = 42;
+  *d = 1.0;
+  return new B;
+}

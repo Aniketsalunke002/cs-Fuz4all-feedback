@@ -1,0 +1,35 @@
+#include <iostream>
+
+int main(void) {
+	char name1[] = "Kennedy";
+	char name2[] = "Eric";
+	const char *name1p = name1, *name2p = name2;
+	for(int i = 0; i < 15; ++i) {
+		std::cout << *name1p << *name2p << std::endl;
+		++name1p; ++name2p;
+	}
+	return 0;
+}
+
+union someunion {
+	int a;
+	int b;
+};
+
+int main(void) {
+	someunion s;
+	s.b = 10;
+	std::cout << "The value of the union element is: " << s.b << std::endl;
+	return 0;
+}
+
+int aaa(int n) { return n; }
+
+template<typename T>
+T bbb(const T o) { return aaa(o) + 1; }
+
+int main(void) {
+	BBB(5);
+	AAA(3);
+	return 0;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+
+#include <vector>
+#include <set>
+#include <algorithm>
+class Genome;
+std::set<Genome *> Genomes; 
+class Organism {
+  public:
+  float fitness; 
+  Organism() {}
+  Organism(float f) {
+    fitness = f;
+  }
+};
+class Genome {
+  void mutate() {
+   std::cout << "Mutating..." << '\n';
+  }
+  virtual ~Genome() {   }
+  static void addGenome(Genome * p) {
+   Genomes.insert(p); 
+  }

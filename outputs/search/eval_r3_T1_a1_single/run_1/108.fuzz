@@ -1,0 +1,84 @@
+#include <iostream>
+using namespace std;
+class Point {
+public:
+Point(void);
+Point(int,int,int);
+~Point(void);
+void setPoint(int,int,int);
+int getX(void);
+int getY(void);
+int getZ(void);
+private:
+int myx;
+int myy;
+int myz;
+};
+Point::Point(void):myx(0),myy(0),myz(0)
+{
+}
+Point::Point(int val1,int val2,int val3):myx(val1),myy(val2),myz(val3)
+{
+}
+Point::~Point(void)
+{
+}
+void Point::setPoint(int val1,int val2,int val3)
+{
+	myx = val1;
+	myy = val2;
+	myz = val3;
+}
+int Point::getX(void)
+{
+	return myx;
+}
+int Point::getY(void)
+{
+	return myy;
+}
+int Point::getZ(void)
+{
+	return myz;
+}
+int main(void)
+{
+	Point p2;
+	Point p1(4,10,10);
+	p2.setPoint(p1.getX() + 1, p1.getY() + 1, p1.getZ() + 1);
+	p1.setPoint(p2.getX() + 1, p2.getY() + 1, p2.getZ() + 1);
+	cout << p2.getX() << " ";
+	cout << p2.getY() << " ";
+	cout << p2.getZ() << " ";
+	cout << p1.getX() << " ";
+	cout << p1.getY() << " ";
+	cout << p1.getZ() << " ";
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class Point {
+public:
+Point(void);
+Point(int,int,int);
+~Point(void);
+void setPoint(int,int,int);
+int getX(void);
+int getY(void);
+int getZ(void);
+private:
+int myx;
+int myy;
+int myz;
+};
+Point::Point(void):myx(0),myy(0),myz(0)
+{
+}
+Point::Point(int val1,int val2,int val3):myx(val1),myy(val2),myz(val3)
+{
+}
+Point::~Point(void)
+{
+}
+void Point::setPoint(int val1,int val2,int

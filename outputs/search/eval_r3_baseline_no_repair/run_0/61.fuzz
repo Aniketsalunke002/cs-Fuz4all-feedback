@@ -1,0 +1,13 @@
+#include <iostream>
+void foo2(int *x)
+{
+    *x = 42;
+}
+int main()
+{
+    int *a;
+    a = new int;
+    foo2(a);
+    std::cout << *a << std::endl;
+}
+#endif

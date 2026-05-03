@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main(void)
+{
+    class myclass;
+    myclass x;
+    myclass y(x);
+    x->_i = 10;
+}

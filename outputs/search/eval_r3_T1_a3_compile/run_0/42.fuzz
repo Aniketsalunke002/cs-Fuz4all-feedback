@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int a[6] = {1,2,3,4};
+  cout << "*";
+  for (int i = 0; i < 5; ++i) {
+    cout << a[i] << " ";
+  }
+  int c1 = 1;
+  int c2 = 1;
+  int c3 = 1;
+  int c4 = 1;
+  int c5 = 0;
+  int c6 = 0;
+  cout << "|" << c1 << c2 << c3 << c4 << c5 << c6 << endl;
+  return 0;
+}
+ 

@@ -1,0 +1,48 @@
+#include <iostream>
+
+void insert_list(std::list<int>& l,int i,int x)
+{
+    l.insert(l.begin()+i,x);
+}
+int main(void)
+{
+    std::list<int> l1;
+    l1.push_front(1);
+    l1.push_front(2);
+    l1.push_front(4);
+    l1.push_front(5);
+    l1.push_front(6);
+    l1.push_back(77);
+    l1.push_front(110);
+    l1.push_front(123);
+    for(unsigned int i = 0;i < 3;++i)
+    {
+        std::list<int> l2;
+        for(std::list<int>::iterator i = l1.begin();i!= l1.end();++i)
+            l2.push_back(*i);
+        for(std::list<int>::iterator i = l2.begin();i!= l2.end();++i)
+            insert_list(l2,i-l2.begin(),*i);
+        l1 = l2;
+    }
+    std::cout << "l1 is " << l1.size() << " long." << std::endl;
+}
+
+// #include <iostream>
+// void insert_list(std::list<int>& l,int i,int x)
+// {
+//     l.insert(l.begin()+i,x);
+// }
+// int main(void)
+// {
+//     std::list<int> l1;
+//     l1.push_front(1);
+//     l1.push_front(2);
+//     l1.push_front(4);
+//     l1.push_front(5);
+//     l1.push_front(6);
+//     l1.push_back(77);
+//     l1.push_front(110);
+//     l1.push_front(123);
+//     for(unsigned int i = 0;i < 3;++i)
+//     {
+//         std::

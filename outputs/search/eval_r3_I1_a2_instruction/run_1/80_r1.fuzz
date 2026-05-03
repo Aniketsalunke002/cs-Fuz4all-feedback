@@ -1,0 +1,8 @@
+#include <iostream>
+int main()
+{
+    MyClass1 obj1;  
+    std::cout<<"I am MyClass1 "<<sizeof(obj1)<<"\n";
+    MyClass1 *obj = new MyClass1;  
+    std::cout<<"I am MyClass1 * "<<sizeof(obj)<<"\n";
+}

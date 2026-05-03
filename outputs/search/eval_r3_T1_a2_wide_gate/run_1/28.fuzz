@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+class Bla {
+public:
+	Bla() {
+		int a;
+	}
+};
+void doTest() {
+	Bla bla;
+}
+int main() {
+	doTest();
+	return 0;
+}

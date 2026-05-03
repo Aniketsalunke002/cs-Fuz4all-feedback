@@ -1,0 +1,53 @@
+#include <iostream>
+
+#include <stdlib.h>
+#include <string.h>
+int main() {
+	int counter=0;
+	int winner=1;
+	char input[1024];
+	memset(input, '\0', sizeof(input));
+	std::cout << "Press ENTER to start, any other key to quit.";
+	printf("%s", fgets(&input[0], sizeof(input), stdin)!= NULL? input : "invalid input");
+	if (input[0] == 'Q') {
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	}
+	for(;;) {
+		bool won = false;
+		if(scanf("%d", &counter)!= 1) {
+			printf("Invalid input!\n");
+			break;
+		}
+		if (input[0] == '\x03') {
+			std::cout << "Caught Ctrl-C!" << std::endl;
+			break;
+		}
+		switch(counter) {
+		case 1:
+			winner++;
+			printf("[%d][%d] is live!\n", winner, counter);
+			won = true;
+			break;
+		case 2:
+			winner=((1+winner)%2)+1;
+			printf("[%d][%d] is live!\n", winner, counter);
+			won = true;
+			break;
+		case 3:
+			printf("[%d][%d] is live!\n", winner, counter);
+			won = true;
+			break;
+		case 4:
+			winner=((1+winner)%2)+1;
+			printf("[%d][%d] is live!\n", winner, counter);
+			won = true;
+			break;
+		default:
+			printf("Invalid input!\n");
+			break;
+		}
+		memset(input, '\0', sizeof(input));
+		if (!won)
+			printf("Enter [ENTER] key to continue:\n%s", fgets(&input[0], sizeof(input), stdin)!= NULL? input : "invalid input");
+	}

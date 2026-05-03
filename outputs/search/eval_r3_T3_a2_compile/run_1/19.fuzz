@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cstddef>
+using namespace std;
+class A
+{
+    public:
+    	int iField;
+    	A():iField(777){}
+	A(const A &r): iField(r.iField+1){}
+	A& operator=(const A&r) {iField=r.iField;}
+};
+
+int main()
+{
+	A one, two(one);
+    	one=two;
+    	return 0;
+}

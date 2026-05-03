@@ -1,0 +1,26 @@
+#include <iostream>
+  using namespace std;
+  int main(char** argv) {
+   char* i = argv[0];
+   char* j = argv[1];
+   while (*i!= '\0') {
+     *j = 'b';
+     i++;
+     j++;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+  int a=1;
+
+while (a < argc)
+   std :: cout << argv[a++] << std :: endl;
+}
+ 
+#include <iostream>
+  using namespace std;
+  class My_vector {
+    int n, m, *

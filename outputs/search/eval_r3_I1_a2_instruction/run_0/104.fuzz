@@ -1,0 +1,36 @@
+#include <iostream>
+    using namespace std;
+    int main() {
+        int i;
+        for (i=0; i<10; i++) {
+            if (!(i%2)) {
+                switch (0) {
+                case 0:
+                    cout << "Even: " << i << "\n";
+                    continue;
+                case 1:
+                case 2:
+                    cout << "Odd: " << i << "\n";
+                    continue;
+                default:
+                    cout << "Default" << "\n";
+                }
+            }
+            printf("Hello!");
+        }
+        return 0;
+    }
+ 
+void test_01() {
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+void test_02() {
+
+}

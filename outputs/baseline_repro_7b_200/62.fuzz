@@ -1,0 +1,11 @@
+#include <iostream>
+int i = 42;
+int main(void) {
+    std::cout << "A\n";
+    int j = i++;
+    std::cout << "B " << i << std::endl;
+    i = j--;
+    std::cout << "C " << i << std::endl;
+    i = j--;;
+    std::cout << "D " << i << std::endl;
+}

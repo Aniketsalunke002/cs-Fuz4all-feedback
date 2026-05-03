@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main()
+{
+    char a[20],b[20];
+    std::cout << "Please input two integers:" << std::endl;
+    std::cin>>a>>b;
+    float fa,fb;
+    fa = atoi(a);
+    fb = atoi(b);
+    std::cout << "sum: " << (fa+fb) << std::endl;
+}

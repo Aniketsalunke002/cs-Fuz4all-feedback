@@ -1,0 +1,79 @@
+#include <iostream>
+int main()
+{
+	for (int i{1}, j{1}; i<=10; i++, j--) {
+		std::cout << i << " + " << j << " = " << (i + j) << std::endl;
+	}
+	return EXIT_SUCCESS;
+}
+ 
+#include <iostream>
+int main()
+{
+   int i{1}, sum{0};
+   int counter{2};
+   std::cout << "Enter a number: ";
+   int number{2};
+   std::cin >> number;
+   while (counter < number) {
+      int counter_limit{ static_cast<int>(pow(number,1/2)) };
+      for (; i <= counter_limit; ++i) {
+         bool result{ counter % i == 0 || number % i == 0 };
+         if (counter % i == 0 && result == false) {
+            sum += counter;
+         }
+         if (number % i == 0 && result == false) {
+            sum += number;
+         }
+      }
+      counter++;
+      i = 1;
+   }
+   std::cout << "The sum of " << number << " prime numbers is: " << sum << std::endl;
+	return EXIT_SUCCESS;
+}
+
+ 
+#include <iostream>
+int main()
+{
+   int i{0}, counter{1};
+   int sum{ 0 };
+   while (i <= counter) {
+      int square{ counter*counter };
+      if (square < counter) {
+         std::cout << square << std::endl;
+         sum += square;
+      }
+      ++ i;
+      ++ counter;
+   }
+   std::cout << sum << std::endl;
+	return EXIT_SUCCESS;
+}
+ 
+#include <iostream>
+#include <string>
+#include <algorithm>
+using namespace std;
+int main()
+{
+	string name{};
+	bool valid{ false };
+	std::cout << "What is your name: ";
+	cin >> name;
+	while (valid == false){
+		if (name.size()>0) {
+			valid = true;
+		}else{
+			std::cout << "Please provide a valid name: ";
+            cin >> name;
+		}
+	}
+	for (int i {0}; i <= name.size()-1; ++i) {
+		cout << name[i] << "-";
+	}
+	return EXIT_SUCCESS;
+}
+ 
+ <commit_msg>Update Assignment11.cpp<commit_after>

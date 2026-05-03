@@ -1,0 +1,10 @@
+#include <iostream>
+int getint();
+int main(int argc, char **argv) {
+  int elements = 3;
+  static int original = -1;
+  if (original < 0) original = elements;
+  for (; elements >= 0; std::cout << elements << "\n", std::cout << original << " -> " << elements << " (" << getint() << ")\n", elements -= getint()) {
+    std::cout << original << "\n";
+  }
+}

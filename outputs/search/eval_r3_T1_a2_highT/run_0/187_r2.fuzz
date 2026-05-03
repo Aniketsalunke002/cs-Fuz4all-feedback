@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+#define CONST const
+
+class car {
+private:
+  CONST static int N_PASSENGERS = 2;
+};
+int main() {
+  CONST int passengers = car::N_PASSENGERS;
+  car car1;
+  car1.N_PASSENGERS;
+  return 0;
+}

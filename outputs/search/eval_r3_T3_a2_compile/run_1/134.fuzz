@@ -1,0 +1,16 @@
+#include <iostream>
+void function() {
+	std::cout << "function() is called." << std::endl;
+}
+int main() {
+	int array[11] {0};
+	function();
+}
+ 
+#include <iostream>
+void function() {
+	std::cout << "function() is called." << std::endl;
+}
+int main() {
+	function();
+}

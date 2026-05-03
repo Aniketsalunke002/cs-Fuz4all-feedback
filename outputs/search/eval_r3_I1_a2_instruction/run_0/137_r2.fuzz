@@ -1,0 +1,20 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+  int a=1;
+
+while (a < argc)
+   std :: cout << argv[a++] << std :: endl;
+}
+
+#include <iostream>
+  using namespace std;
+  class My_vector {
+    int n, m, *p, *q;
+  public:
+    My_vector () : n (0), m (0), p (0), q (0)
+    { p = new int [n];
+      q = new int [m];
+    }
+    void resize (int new_size)
+    { int *p2, *q2;

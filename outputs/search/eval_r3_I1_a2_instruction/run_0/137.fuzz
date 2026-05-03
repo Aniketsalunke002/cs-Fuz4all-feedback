@@ -1,0 +1,50 @@
+#include <iostream>
+  using namespace std;
+  int main(char** argv) {
+   char* i = argv[0];
+   char* j = argv[1];
+   while (*i!= '\0') {
+     *j = 'b';
+     i++;
+     j++;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+  int a=1;
+
+while (a < argc)
+   std :: cout << argv[a++] << std :: endl;
+}
+ 
+#include <iostream>
+  using namespace std;
+  class My_vector {
+    int n, m, *p, *q;
+  public:
+    My_vector () : n (0), m (0), p (0), q (0)
+    { p = new int [n];
+      q = new int [m];
+    }
+    void resize (int new_size)
+    { int *p2, *q2;
+      p2 = new int [new_size];
+      q2 = new int [new_size*n];
+      for (int k = 0; k < new_size; ++ k)
+        p2[k] = p[p[k]];
+      delete [] p;
+      p = p2;
+      p2 = new int [new_size];
+      q2 = new int [new_size*n];
+      delete [] q;
+      q = q2;
+    }
+  };
+  int main () {
+    My_vector my_vector;
+    my_vector.resize (2);
+    return 0;
+  }

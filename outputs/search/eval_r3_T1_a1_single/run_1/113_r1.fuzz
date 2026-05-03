@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+double c,r,pi;
+void circle(double l, double radius) 
+{
+    c=l;
+    r=radius;
+}
+void circle2(double l, double radius,double pi) 
+{
+    c=l;
+    r=radius;
+    circle(pi*r*r);
+    cout<<"The area is "<<area<<endl;
+}
+main()
+{
+    circle(5,5);
+    circle2(3,3,3.1415);
+}

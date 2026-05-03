@@ -1,0 +1,9 @@
+#include <iostream>
+#include <vector>
+struct X {
+	int x;
+};
+int main() {
+	X x = {123};
+	return x.x;
+}

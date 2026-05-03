@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+class Matrix {
+	private:
+	int** data;
+
+	 
+	 
+
+	 
+	int n;
+
+	public:
+	 
+	Matrix(int n)  {
+		data = new int* [n];
+		for (int i = 0; i < n; i++) 
+			data[i] = new int [n];
+		this->n = n;
+
+	};
+	
+	 
+	int* element(int i, int j) {
+		return &data[i][j];
+	}
+	
+	 
+	Matrix::~Matrix(void) {
+		for (int i = 0; i < n; i++) {
+			delete data[i];
+		}
+		delete data;
+	}
+
+	int** data2;
+	 
+	int* element2(int i, int j) {
+		return &data2[i][j];
+	}
+};
+
+int main() {
+	int n = 7;
+	Matrix a(n);
+	int **aData1 = new int*[n];
+	for (int i = 0; i < n; i++) {
+		aData1[i] = new int[n];
+	}
+	a.data2 = aData1;
+	 
+	 
+	 
+    char* aData2;
+    cout << a.element(4,3);
+}
+ 

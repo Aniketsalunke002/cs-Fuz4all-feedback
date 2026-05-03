@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int num{100};
+    int num2 = num += 25;
+    cout << "Number is " << num << endl;
+    cout << num2 - 17 << endl;
+    return 0;
+}

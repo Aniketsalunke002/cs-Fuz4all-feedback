@@ -1,0 +1,28 @@
+#include <iostream>
+
+#include <ostream>
+using namespace std;
+
+class Number{
+  int firstNumber;
+  int secondNumber;
+public:
+  Number(){
+    this->firstNumber = 1;
+    this->secondNumber = this->firstNumber*2;
+  }
+  void print(){
+    cout<<firstNumber<<" "<<secondNumber<<endl;
+  }
+  friend std::ostream& operator<<(std::ostream& os, Number& num)
+  {
+      os << num.firstNumber << " " << num.secondNumber;
+	  return os;
+  }
+};
+int main(){
+  Number num1;
+  num1.firstNumber = 31;
+  num1.print();
+  cout << num1 << endl;
+}

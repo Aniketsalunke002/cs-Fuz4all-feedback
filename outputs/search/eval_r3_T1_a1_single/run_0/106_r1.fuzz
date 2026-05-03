@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main ()
+{
+    int a = 5;
+    a = *&a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}

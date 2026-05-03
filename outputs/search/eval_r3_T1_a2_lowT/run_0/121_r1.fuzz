@@ -1,0 +1,13 @@
+#include <iostream>
+
+#include <string.h>
+using namespace std;
+int main(){
+    char tst[] = "0";
+    char w[100], ch ='';
+    cin >> w;
+    while(strlen(tst)!= 1)
+    {
+        string tt(w);
+        string st(tst);
+        int mx = abs(tt.length()-st.length());

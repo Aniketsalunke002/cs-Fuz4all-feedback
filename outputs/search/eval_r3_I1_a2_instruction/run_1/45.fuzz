@@ -1,0 +1,23 @@
+#include <iostream>
+
+int foo (){}
+void x (){}
+int main (int argc, char **argv)
+{
+	int x = 5;
+	int a = 2;
+	if (x == 5)
+	{
+		x = 7;
+	}
+	else
+	{
+		x = 3;
+	}
+	int * pX = &x;
+	std::cout << *pX;
+	a ^= 4;
+	std::cout << a;
+	std::cin >>a;
+	return 0;
+}

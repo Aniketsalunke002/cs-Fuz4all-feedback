@@ -1,0 +1,19 @@
+#include <iostream>
+int main()
+{
+    std::string a;
+    return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+    constexpr float kPi{ 3.14f };
+    constexpr unsigned int kCelestialBoarder{ 6371000 };
+    std::string a;
+    std::string b;
+    a.erase(a.begin());
+    b.erase(0, 1);
+    
+    return 0;
+}

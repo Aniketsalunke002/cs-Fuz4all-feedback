@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int myvar = 6;
+    while(myvar <= 5) {
+        cout << myvar << " ";
+        myvar = myvar+1;
+    }
+    cout << endl;
+}

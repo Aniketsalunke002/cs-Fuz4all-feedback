@@ -1,0 +1,10 @@
+#include <iostream>
+#include <fstream>
+#include <map>
+#include <string>
+std::string output = "Hello World";
+void hello() {
+   std::ofstream outfile("file_name.txt", std::ios::out);
+   outfile<< "Hello new world!" << std::endl;
+   outfile.close();
+}

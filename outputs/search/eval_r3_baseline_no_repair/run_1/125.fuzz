@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+struct mystruct
+{
+	int x;
+	operator int()
+	{
+		return x;
+	}
+	mystruct operator-(const mystruct &b)
+	{
+		mystruct p;
+		p.x = this ->x - b.x;
+		return p;
+	}
+	template <class T>
+	mystruct operator+(const T &b)
+	{
+		mystruct p;
+		p.x = this -> x + b;
+		return p;
+	}
+};
+int main()
+{
+mystruct a,b;
+a.x = 2;
+b.x = 3;
+cout<<a+9<<endl;
+cout<<a-b<<endl;
+cout<<(a+b)*(a-b)<<endl;
+cout<<(a+b)*2<<endl;
+return 0;
+}

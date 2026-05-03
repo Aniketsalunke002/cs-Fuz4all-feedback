@@ -1,0 +1,43 @@
+#include <iostream>
+
+int main() {
+	int mut=0;
+	int winner=1;
+	std::cout << "Press ENTER to start, any other key to quit.";
+	switch(std::cin.peek()) {
+	case '\n':
+		break;
+	case 'Q':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\x1b':
+		std::cout << "Exiting..." << std::endl;
+		return 0;
+	case '\t':
+		std::cin.get();
+	case '\b':
+	default:
+		std::cout << "Invalid input." << std::endl;
+		break;
+	}
+	for(;;) {
+		bool won=false;
+		std::cin >> mut;
+		std::cin.get();
+		winner=(winner*2)+mut;
+		if(winner==1) {
+			std::cout << mut << ": [1][ ] is live!" << std::endl;
+			winner^=1;
+			won=true;
+			winner^=mut;
+			std::cout << winner << ": [ ] is dead" << std::endl;
+		}else if((winner%2)==1) {
+			std::cout << mut << ": [0][1] is live!" << std::endl;
+			std::cout << (winner>>1) << ": [1][ ] is dead" << std::endl;
+		}else {
+			std::cout << mut << ": [1][1] is live!" << std::endl;
+			break;
+		}
+	}
+}
+// End of fixed version of the code above

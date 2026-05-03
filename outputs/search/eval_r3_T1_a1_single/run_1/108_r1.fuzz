@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+class Point {
+public:
+  Point(void);
+  Point(int,int,int);
+  ~Point(void);
+  void setPoint(int,int,int);
+  int getX(void);
+  int getY(void);
+  int getZ(void);
+  private:
+  int myx;
+  int myy;
+  int myz;
+};
+Point::Point(void):myx(0),myy(0),myz(0)
+{
+}
+Point::Point(int val1,int val2,int val3):myx(val1),myy(val2),myz(val3)
+{
+}
+Point::~Point(void)
+{
+}
+void Point::setPoint(int val1,int val2,int val3)
+{
+  myx = val1;
+  myy = val2;
+  myz = val3

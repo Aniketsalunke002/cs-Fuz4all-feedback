@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <map>
+using namespace std;
+map<string, map<string,int>> db;  
+void add(string db_id, string name1, string name2, int age1,int age2);
+int get(string db_id, string name1);
+void add(string db_id, string name1, string name2, int age1,int age2){
+    int i = get(db_id, name1);
+    db[name1][name2] = age2;
+}
+int get(string db_id, string name1){
+    return db[name1].size()+1;
+}
+int main(){
+    int n ;
+    string name1, name2;
+    int age1, age2;
+    cin>> n;
+    for(int i = 0; i < n; i++){
+        cin>> name1 >>name2>> age1>> age2;
+        db[name1][name2] = age2;
+        db[name2][name1] = age1;
+    }
+    bool found = db["John"][db_id]["<NAME>"]!= age2;
+    found = found && db[ "<NAME>" ][db_id]["John"]!= age1;
+    cout << found;
+    return 0;
+}

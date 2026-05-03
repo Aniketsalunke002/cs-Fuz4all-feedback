@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <mutex>
+#include <condition_variable>
+#include <chrono>
+std::condition_variable cv;
+std::mutex m1, m2;
+void foo() {
+    std::unique_lock<std::mutex> locker(m1);
+    std::cout << std::endl;
+    cv.notify_all();
+}
+int main() {
+    std::thread t([](){
+        try {
+            std::unique_lock<std::mutex> locker(m2);
+            cv.wait(locker, []{return false;});
+            std::cout << "Done" << std::endl;
+        } catch (std::logic_error& le) {
+            std::cout << "LOGIC ERROR" << std::endl;
+        }
+    });
+    foo();
+    t.join();
+    return 0;
+}
+// Note that the above code is not correct. The output is:
+// Done
+// LOGIC ERROR
+// In other words, the thread which was expected to be notified by condition variable
+// was notified by some other thread.

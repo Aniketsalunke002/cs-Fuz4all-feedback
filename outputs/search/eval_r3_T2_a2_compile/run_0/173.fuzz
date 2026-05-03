@@ -1,0 +1,23 @@
+#include <iostream>
+#include <unordered_set>
+int main() {
+  std::unordered_set<int> s{1};
+  return 0;
+}
+ 
+#include <iostream>
+
+int main() {
+  std::string x = "9223372036854775807";
+  std::cout << x << std::endl;
+
+   
+  std::string x2 = std::to_string(9223372036854775807ULL);
+  x2 += "abc";
+  std::cout << x2 << std::endl;
+
+   
+  std::string x3 = std::to_string(9223372036854775806ULL) + "foobar";
+  std::cout << x3 << std::endl;
+  return 0;
+}

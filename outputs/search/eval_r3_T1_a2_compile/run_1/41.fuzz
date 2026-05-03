@@ -1,0 +1,7 @@
+#include <iostream>
+#include <string>
+int main() {
+    char ch = '2';
+    char rCh = ch;
+    std::cout<<rCh;
+}

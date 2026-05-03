@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int array[16] = {1,2,3};
+  int *q = &array[6];
+  q = nullptr;
+  cout << "array[6] = " << array[6] << endl;
+  return 0;
+}

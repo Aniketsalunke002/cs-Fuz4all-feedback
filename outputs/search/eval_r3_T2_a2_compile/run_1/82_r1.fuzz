@@ -1,0 +1,11 @@
+#include <iostream>
+
+
+using namespace std;
+
+int main() {
+    int arr[3][5] = {1, 2, 3};
+    int (&o)[5] = arr;
+    cout << o[1][1] << endl;
+    return 0;
+}

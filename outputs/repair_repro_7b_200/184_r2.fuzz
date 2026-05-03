@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+struct Node {
+    int val;
+public:
+    constexpr Node(int v) : val(v) {}
+    constexpr int getVal() const {
+        return val;
+    }
+};
+int main(void) {
+    Node ptr(99);
+    cout << ptr.getVal() << '\n';
+    return 0;
+}
+template <typename T> struct S {
+  int size;
+};
+
+template <typename T> constexpr int S<T>::size;
+
+int main(void) {
+  return 0;
+}

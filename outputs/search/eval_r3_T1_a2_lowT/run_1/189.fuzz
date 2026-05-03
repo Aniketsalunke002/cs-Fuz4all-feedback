@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+main() {
+	int summation[] = {5, 9, 10, 8, 7, 6, 4, 3, 2, 1};
+	for (int i = 0; i < 10; i++) cout << summation[i] << endl;
+}
+ 

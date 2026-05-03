@@ -1,0 +1,10 @@
+#include <iostream>
+void do_it()
+{
+    std::cerr << std::endl;
+}
+int main()
+{
+    do_it();
+    std::cout << std::cout.rdbuf() << std::endl;
+}

@@ -1,0 +1,11 @@
+#include <iostream>
+
+void doit(int n){
+  std::cout << n << '\n';
+}
+int main(void) {
+  doit(-3);
+  doit(0);
+  doit(5);
+  return 0;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main ()
+{
+    int a = 5;
+    std::cout << "the value of the varible a " << a << std::endl;
+    a = 15;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}

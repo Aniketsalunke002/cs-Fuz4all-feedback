@@ -1,0 +1,26 @@
+#include <iostream>
+#include <memory>
+static float a;
+static std::unique_ptr<float> ptr;
+static int main() {
+    a = 1.0f;
+    if (ptr.get() == nullptr) {
+        ptr = std::move(std::make_unique<float>(a));
+    }
+    return 0;
+}
+int main1() {
+    std::unique_ptr<float> a(new float(1.0f));
+    if (a) {
+        float *ptr = a.get();
+        if (ptr!= nullptr) {
+            ptr->release();
+        }
+        const float *const_ptr = a.get();  
+        if (*const_ptr == 1.0f) {
+            ptr = a.release();  
+        }
+        else {
+            a.reset(const_ptr);  
+        }
+   

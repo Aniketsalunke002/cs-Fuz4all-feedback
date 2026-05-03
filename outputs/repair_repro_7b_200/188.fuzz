@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+class Node {
+    double val;
+public:
+    explicit Node(int v) : val(v) {}
+    double getVal() const {
+        return val;
+    }
+};
+int main(void) {
+    const Node ptr(99);
+     
+    return 0;
+}
+
+ 

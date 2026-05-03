@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    class A
+    {
+        public:
+            A() {
+                cout << "I am in A\n"; 
+            }
+            virtual void f() {
+                cout << "I am in A::f\n";
+            }
+            ~A() {
+                cout << "I am in A\n";
+            }
+    };
+
+    class B: public virtual A
+    {
+        public:
+            B() {
+                cout << "I am in B\n"; 
+            }
+            virtual void f() {
+                cout << "I am in B::f\n";
+            }
+            virtual void g() {
+                cout << "I am in B::g\n"; 
+            }
+            ~B() {
+                cout << "I am in B\n";
+            }
+    };
+
+    class C: public virtual A
+    {
+        public:
+            C() {
+                cout << "I am in C\n"; 
+            }
+            virtual void f() {
+                cout << "I am in C::f\n";
+            }
+            ~C() {
+                cout << "I am in C\n";
+            }
+            virtual void g() {
+                cout << "I am in C::g\n"; 
+            }
+    };
+
+    class D: public B, public C
+    {
+        public:
+            D() {
+                cout << "I am in D\n"; 
+            }
+            ~D() {
+                cout << "I am in D\n";
+            }
+    };
+
+    class E: public C
+    {
+        public:
+            E() {
+                cout << "I am in e\n"; 
+            }
+            ~E() {
+                cout << "I am in e\n";
+            }
+    };
+
+    D* d = new D();
+    d->f();
+    d->g();
+    cout << "------\n";
+    E* e = new E();
+    e->f();
+    e->g();
+    delete d;
+    delete e;
+    return 0;
+}

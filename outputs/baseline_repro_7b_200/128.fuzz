@@ -1,0 +1,15 @@
+#include <iostream>
+int main(void) {
+ auto foo_var = 1;
+ foo_var = foo_var + 1;
+ std::cout << foo_var << " " << "foo_var\n";
+ return 0;
+}
+
+ 
+#include <optional>
+int main(void) {
+ std::optional<int> foo_var;
+ std::cout << foo_var.has_value() << " " << "" << "\n";
+ return 0;
+}

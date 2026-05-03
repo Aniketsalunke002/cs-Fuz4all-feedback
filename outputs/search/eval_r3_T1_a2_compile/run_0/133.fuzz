@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+const double MAX=1;
+int main()
+{
+    double x=0;
+    cout << "Before mutated = " << x << endl;
+    while (x<1)
+    {
+        x=fabs(0.5*x);
+    }
+    cout << "After mutated = " << x << endl;
+    return 0;
+}
+

@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main()
+{
+    int var = 5;
+    std::cin >> var;
+    std::cout << var << "\n";
+    return 0;
+}

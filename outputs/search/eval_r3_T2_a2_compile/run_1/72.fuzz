@@ -1,0 +1,5 @@
+#include <iostream>
+int main5() {
+  std::cout << (__builtin_expect(true, 1)? 0 : 1) << " \\n";  
+return ((__builtin_expect(true, 1)? 1 : 1));  
+}

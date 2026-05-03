@@ -1,0 +1,30 @@
+#include <iostream>
+
+#include <ctime>
+#include <fstream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    ofstream out("somefile.txt");
+    for (int i=40000; i>2; i--)
+    {
+        cout << i << "... ";
+        out << i << " ";
+        for (int j=40000; j>2; j--)
+        {
+            if (i%j == 0)
+            {
+                out << " ***  ";
+                cout << "***";
+                break;
+            }
+            else {
+                out << j << " ";
+            }
+        }
+        cout << endl;
+        out << endl;
+    }
+    cout << "Finished";
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+#include <iterator>
+#include <algorithm>
+int main() {
+	std::vector<double> vec(100000);
+	std::generate(vec.begin(), vec.end(), [](){
+		return rand();
+	});
+	double sum = 0;
+	std::vector<double>::const_iterator begin = vec.begin();
+	std::vector<double>::const_iterator end = vec.end();
+	for(std::vector<double>::const_iterator it = begin; it!= end ; ++it) {
+		sum += (*it)/2.0;
+	}
+	std::cout << sum << std::endl;
+	return 0;
+}

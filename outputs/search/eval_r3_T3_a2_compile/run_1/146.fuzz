@@ -1,0 +1,39 @@
+#include <iostream>
+int main()
+{
+ int x = 2;
+ while(!(std::cin >> x));
+ std::cout << x << '\n';
+}
+
+ 
+#include <iostream>
+#include <fstream>
+int main()
+{
+ std::cerr << "This is a message written to stderr\n";
+ std::cout << "This is a message written to stdout\n";
+ std::clog << "This is a message written to cout\n";
+ std::ofstream fout("outfile", std::ios_base::out | std::ios_base::app );
+ fout << "1\n"
+      << "2\n"
+      << "3\n";
+ for(auto x: {0, 1, 2})
+ {
+  fout << x << '\n';
+ }
+ fout.close();
+ std::fstream fin("outfile", std::ios_base::in);
+ while(!fin.eof())
+ {
+  int v = 0;
+  fin >> v;
+  if(fin.fail())
+  {
+   break;
+  }
+  std::cout << v << '\n';
+ }
+ fin.close();
+}
+ 

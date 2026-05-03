@@ -1,0 +1,16 @@
+#include <iostream>
+
+namespace fuzz {
+void mutate(char *&str, int index) {
+    if (str[index]!= 0) {
+        str[index] = 'a';
+    }
+}
+}
+int main() {
+    char *test = "test";
+    int i = 1;
+    fuzz::mutate(test, i);
+    std::cout << test << "i = " << i << std::endl;
+    return 0;
+}

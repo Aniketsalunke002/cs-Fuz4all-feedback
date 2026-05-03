@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+        int iField;
+};
+int main()
+{
+    int i = 0;
+    A one = { i };
+    cout << sizeof(one) << endl;
+    return 0;
+}

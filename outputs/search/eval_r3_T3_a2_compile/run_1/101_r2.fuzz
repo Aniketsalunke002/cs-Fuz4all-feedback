@@ -1,0 +1,32 @@
+#include <iostream>
+
+template <typename T>
+void inc(T& i) {
+    ++i;
+}
+int main() {
+    int i=5;
+    inc(i);
+    std::cout<<i<<std::endl;
+}
+//  
+#include <iostream>
+#include <iomanip>
+#include <string>
+template <typename T>
+void print_int(T i) {
+    std::cout<<std::setfill('0') << std::setw(4) << i <<std::endl;
+}
+template <typename T>
+void check_string(T& s) {
+    if (s.length()!=4) { std::cout<<"Not Hello"<<std::endl; }
+}
+int main() {
+    int a;
+    std::cin>>a;
+    print_int(a);
+    std::string b;
+    std::cin>>b;
+    check_string(b);
+}
+//

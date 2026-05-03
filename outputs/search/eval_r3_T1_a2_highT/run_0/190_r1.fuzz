@@ -1,0 +1,33 @@
+#include <iostream>
+
+using namespace std;
+class A
+{
+public:
+    A(int i) : a(i) {}
+    int a;
+};
+int main()
+{
+    A *p = new A(100);
+    cout << p->a << endl;
+    p->a++;
+    cout << p->a << endl;
+    A *q = new A((*p).a);
+    cout << q->a << endl;
+    delete p;
+    delete q;
+}
+void foo(int a)
+{
+    cout << "foo:" << a << endl;
+}
+int main()
+{
+    int a;
+    a = 10;
+    void (*fptr)(int);
+    ftptr = foo;
+    (*fptr)(a);
+    ftptr(30);
+    void (*fptr1)(int, int);

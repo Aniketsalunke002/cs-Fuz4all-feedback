@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int z = 50;
+    (z == 5) + cout << "True" << endl;
+    return 0;
+}

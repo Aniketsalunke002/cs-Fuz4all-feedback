@@ -1,0 +1,113 @@
+#include <iostream>
+#include <string>
+using namespace std;
+#ifndef CHAR_MAX
+#define CHAR_MAX 127
+#endif
+#ifndef CHAR_MIN
+#define CHAR_MIN -127
+#endif
+int add(int a, int b){
+    if(b + a > CHAR_MIN && CHAR_MAX - b + a > 0){
+        return b + a;
+    }else{
+        return INT_MIN;
+    }
+}
+int mul(int a, int b){
+    int l_a, l_b;
+    l_a = a > 0? a : -a;
+    l_b = b > 0? b : -b;
+    bool flag = false;
+    if(a == INT_MIN && b == INT_MIN){
+        if(add(0, 0) == 0){
+            return 1;
+        }else{
+            return INT_MIN;
+        }
+    }
+    if( l_a - 1 < l_b ) return INT_MIN;
+    if( l_a == l_b ) return flag? 1: INT_MIN;
+    int ans = 0;
+    for(int i = 0; i < l_a; i++){
+        for(int j = 0; j < l_b; j++){
+            if(ans / CHAR_MAX && ans % CHAR_MAX + i * l_b + j > CHAR_MAX && !flag){
+                flag = true;
+                continue;
+            }
+            ans += i * l_b + j;
+        }
+    }
+    if(flag) return INT_MIN;
+
+    return ans;
+}
+int main(){
+    int a = 99;
+    int b = -99;
+    cout << mul(a, b) << endl;
+    return 0;
+}
+
+ 
+#include <iostream>
+int main(){
+    char c;
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    num = num * num;
+    cout << num << endl;
+    return 0;
+}
+ 
+#include <iostream>
+int my_char(char c){
+    if(c == '_' || 'a' <= c && c <= 'z' || 'A' <= c && c <= 'Z'){
+        cout << c << ": it is a alphanumeric character" << endl;
+    }else if(c >= '0' && c <= '9'){
+        cout << c << ": it is a digit character" << endl;
+    }else if(c ==''){
+        cout << c << ": it is a whitespece character" << endl;
+    }else{
+        cout << c << ": it is a special character" << endl;
+    }
+    return 0;
+}
+int main(){
+    char c;
+    cout << "Enter a character: ";
+    cin >> c;
+    my_char(c);
+    return 0;
+}
+ 
+#include <iostream>
+int main(){
+    int a, b;
+    cout << "Enter two integers: ";
+    cin >> a >> b;
+    int sum = a + b;
+    cout << "Sum of " << a << " and " << b << " = " << sum << endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main(){
+    int a, b;
+    cout << "Enter two integers: ";
+    cin >> a >> b;
+    if(a >= b){
+        cout << "Greater number: " << a << endl;
+    }else{
+        cout << "Greater number: " << b << endl;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+int main(){
+    int x = 10, y = 20;
+    int z = x;
+    if(y > z){
+        cout <<

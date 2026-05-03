@@ -1,0 +1,13 @@
+#include <iostream>
+void func();
+int main() {
+	typedef class a {
+		void function() {
+			std::func();
+		}
+		int array[999];
+	};
+	class a a;
+	a.function();
+}
+

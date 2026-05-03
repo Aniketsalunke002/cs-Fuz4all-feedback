@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int num = 3;
+    {
+        int tmp = num*5;
+        cout << tmp << endl;
+    }
+    return 0;
+}

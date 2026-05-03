@@ -1,0 +1,22 @@
+#include <iostream>
+int main()
+{
+ int i=1;
+        double d=2.0;
+        char *ps=new char[100];
+        ps[0]='q';
+ {
+  i*=2;
+      d/=2.0;
+ }
+  return 0; 
+}
+ 
+#include <iostream>
+#include <vector>
+int main() {
+  std::vector<int> v;
+  for (int i = 0; i < 100; ++i)
+    v.push_back(i);
+  return 0;
+}

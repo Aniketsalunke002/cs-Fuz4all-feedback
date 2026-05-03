@@ -1,0 +1,5 @@
+[
+  {"name": "c1", "gen": {"llm": {"batch_size": 10}}, "repair": {"enabled": true, "max_attempts": 1, "template_id": "T1"}},
+  {"name": "c2", "gen": {"llm": {"batch_size": 5}}, "repair": {"enabled": true, "max_attempts": 2, "template_id": "T2"}},
+  {"name": "c3", "gen": {"llm": {"batch_size": 10}}, "repair": {"enabled": false}}
+]

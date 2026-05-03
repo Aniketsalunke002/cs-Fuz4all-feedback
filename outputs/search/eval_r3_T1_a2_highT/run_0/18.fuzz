@@ -1,0 +1,13 @@
+#include <iostream>
+int main()
+{
+  int a[] = {1, 2, 3, 4, 5, 6};
+  for (long i = ((a[(sizeof(a) / sizeof(a[0])) - 1]) - 1); i >= ((a[0]) + 1); i--) {
+    if (i < 10) {
+      std::cout << i;
+    } else {
+      std::cout << i << " ";
+    }
+    int h = 5;
+  }
+}

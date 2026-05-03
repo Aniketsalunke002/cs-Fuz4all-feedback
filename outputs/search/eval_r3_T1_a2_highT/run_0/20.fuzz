@@ -1,0 +1,8 @@
+#include <iostream>
+#include <cstdlib>
+int main()
+{
+  int a[][2] = { {0, 0}, {10,10}, {20,20} };
+  for (auto &&i : *a) { ++i[0]; std::cout << a[i = 0] << " "; }
+  return EXIT_SUCCESS;
+}

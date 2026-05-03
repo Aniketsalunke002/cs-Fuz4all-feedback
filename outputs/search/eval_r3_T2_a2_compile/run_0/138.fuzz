@@ -1,0 +1,14 @@
+#include <iostream>
+int main(){
+  int arr[100];
+  int num,sum=0,i;
+  std::cin>>num;
+  for(i = 0; i < num; i++){
+    std::cin>>arr[i];
+  }
+  for(i = 0; i < num; i++){
+    sum+=arr[i]%2;
+  }
+  std::cout<<"Sum of even numbers is:"<<sum<<std::endl;
+  return 0;
+}

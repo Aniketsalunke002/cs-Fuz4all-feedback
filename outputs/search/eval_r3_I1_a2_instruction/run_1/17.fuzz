@@ -1,0 +1,154 @@
+#include <iostream>
+int main ()
+{
+    std::cout<<"Hello world"<<std::endl;
+	return 0;
+}
+ 
+#include <iostream>
+#include <list>
+#include <memory>
+#include <vector>
+
+template<typename T>
+class MyList
+{
+
+	public:
+
+		class Node
+		{
+			friend class MyList<T>;
+
+			bool   isTail;
+			T      data;
+			std::shared_ptr<Node> head;
+			std::shared_ptr<Node> tail;
+
+		};
+
+		std::shared_ptr<Node> head;
+		std::shared_ptr<Node> tail;
+
+		MyList() : head(new Node){ head->isTail = true;};
+		
+		void add (T d)
+		{
+			std::shared_ptr<Node> ptr = std::shared_ptr<Node>(new Node);
+			ptr->data = d;
+
+			if(head &&!tail)
+				this->append(ptr);
+			else
+				this->insert(ptr);
+		}
+
+		void insert (std::shared_ptr<Node> new_node) 
+		{	
+			new_node->head = head;
+			new_node->tail = tail;
+
+			head->head = new_node;
+			if(head->tail == nullptr)
+				tail = new_node;
+
+			head = std::move(new_node);
+		}
+
+		void append (std::shared_ptr<Node> new_node) 
+		{
+			new_node->head = head;
+			new_node->tail = tail;
+
+			tail->tail = new_node;
+			if(tail->head == nullptr)
+				head = new_node;
+
+			tail = std::move(new_node);
+		}
+
+		void print ()
+		{
+			std::cout << "[ ";
+			std::shared_ptr<Node> ptr = head;
+			while(ptr!= nullptr) 
+			{	
+				std::cout << ptr->data << " ";
+				ptr = ptr->tail;
+			}
+			std::cout << "]"<<std::endl;
+		}
+
+		 
+		void deleteData(T d)
+		{	
+			
+			if(head == nullptr )
+			{
+				return;
+			}
+			if(head->data == d)
+			{
+				head = head->tail;
+			}
+			else
+			{
+					std::shared_ptr<Node> iterator = head;
+
+				while(iterator->tail!= nullptr)
+				{
+					if(iterator->tail->data == d)
+					{
+						iterator->tail = iterator->tail->tail;
+					}
+					else 
+					{
+						iterator = iterator->tail;
+					}
+				}
+			}
+		}
+	
+		void deleteAll ()
+
+		{	 
+			while (head!= nullptr)
+			{
+				head = head->tail;	
+			}
+		}
+	 
+
+
+};
+
+int main()
+{
+
+	std::cout<<"Hello world"<<std::endl;
+
+	MyList <int> nums;
+
+	for ( int i = -100; i < 300; i += 21)
+
+	{
+		nums.add(i);
+	}	
+
+	nums.print ();
+
+	nums.deleteData(129);
+
+	nums.print ();
+
+	nums.deleteAll ();
+
+	nums.print ();
+
+	std::cout<<std::endl;
+
+	nums.add(-449);
+
+	nums.print ();
+
+}

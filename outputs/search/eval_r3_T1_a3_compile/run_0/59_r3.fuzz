@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+#define C_CONST 1
+int main() {
+#if C_CONST
+  int y = 5;
+  cout << y << endl;
+#endif
+#if C_CONST
+  int z = 10;
+  char c = 'a';
+  cout << z << " " << c << endl;
+  const char& p = c;
+  p = 'b';
+  cout << c << " " << &c << endl;
+#endif
+  return 0;
+}

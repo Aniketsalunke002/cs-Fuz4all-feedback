@@ -1,0 +1,12 @@
+#include <iostream>
+int num = 33;
+int plus2(int num)
+{
+    return num + 2;
+}
+int main()
+{
+    int num2 = plus2(num);
+    std::cout << num2 << std::endl;
+    return 0;
+}

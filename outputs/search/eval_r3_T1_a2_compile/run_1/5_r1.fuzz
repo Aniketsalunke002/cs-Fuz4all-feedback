@@ -1,0 +1,27 @@
+#include <iostream>
+
+#include <list>
+#include <cstdlib>
+int main(void)
+{
+    std::list<int> l1;
+    l1.push_back(1);
+    l1.push_back(2);
+    l1.push_back(3);
+    l1.push_back(4);
+    l1.push_back(5);
+    l1.push_back(6);
+    l1.resize(5);
+    l1.remove(77);
+    l1.push_back(110);
+    l1.push_back(123);
+    l1.insert(l1.begin()+4,0);
+    bool ok=true;
+    for(std::list<int>::iterator i = l1.begin();i!= l1.end();++i)
+    {
+        printf("%d, ",*i);
+        if(ok) ok=(*i==i+1);
+    }
+    if(ok) printf("Correct!!!\n");
+    else printf("Wrong\n");
+}

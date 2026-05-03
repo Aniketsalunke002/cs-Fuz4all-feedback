@@ -1,0 +1,13 @@
+#include <iostream>
+
+using std::cout; using std::endl;
+int main() {
+    int age = 21;
+    int *px = &age;
+    age = 50;
+    cout << age
+         << " (address of px[0]: "
+         << px << ", value in px: " << *px << ")"
+         << endl;
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+#include <stdlib.h>  
+template <typename T>
+class Cell {
+public: 
+  T c;
+  T f;
+};
+template <typename T>
+Cell<T>* cell;
+int main(int argc, char * argv[]) {
+  int a = rand() % 100; 
+  cell<int> -> c = a; 
+  cell<int> -> f = 99;
+  std::cout << cell<int> -> c << '\n';
+  std::cout << cell<int> -> f << '\n';
+}

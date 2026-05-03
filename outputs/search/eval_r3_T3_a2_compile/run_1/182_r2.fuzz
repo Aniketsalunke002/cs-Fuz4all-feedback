@@ -1,0 +1,30 @@
+#include <iostream>
+
+
+template<typename T>
+class A
+{
+    public:
+        A(T & val_)
+        :val(val_)
+        {}
+        auto& getVal()
+        {
+            return val;
+        }
+        void setValue(T & val_)
+        {
+            val = val_;
+        }
+    private:
+        T val;
+};
+
+int main(int argc, char *argv[])
+{
+    A<std::string> object("HOLA");
+    std::cout << object.getVal();
+    object.setValue("QUE TAL");
+    std::cout << object.getVal();
+    return 0;
+}

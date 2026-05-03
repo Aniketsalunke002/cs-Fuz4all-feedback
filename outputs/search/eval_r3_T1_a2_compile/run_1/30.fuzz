@@ -1,0 +1,13 @@
+#include <iostream>
+bool is_integer(int number)
+{
+    if (number == 0)
+        return number + number;
+    if (number < 0)
+        return 0;
+}
+
+int main()
+{
+    std::cout << "Hello, World!\n";
+}

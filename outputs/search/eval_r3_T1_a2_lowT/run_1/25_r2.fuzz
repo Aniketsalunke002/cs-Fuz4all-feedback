@@ -1,0 +1,25 @@
+#include <iostream>
+
+class myclass{
+public :
+    myclass(int i):_i(i){}
+    ~myclass(){
+        std::cout << "destroying myclass" << std::endl;
+    }
+    int _i;
+};
+class myclass2{
+public:
+    myclass2(void):_i(5),y(){
+        std::cout << "default constructing myclass2" << std::endl;
+    }
+    myclass2(myclass2& t):_i(t._i),y(){
+        std::cout << "copy constructing myclass2" << std::endl;
+    }
+    myclass2& operator=(const myclass2&) = default;
+    int _i;
+    myclass y;
+};
+int main(){
+    myclass2 x;
+}

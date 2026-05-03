@@ -1,0 +1,30 @@
+#include <iostream>
+int main5() {
+    int i=0,sum=0,n=0;
+    std::cin >> n;
+    while (i<n){
+        int num = 0;
+        sum += (num+sum)/2;
+    }
+    std::cout << sum << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+void main4() {
+    struct data {
+        int a;
+    };
+    data d[10];
+    int n = 0,cnt = 0;
+    while(cnt < 10){
+        std::cin >> d[cnt].a;
+        cnt++;
+    }
+    int *ptr = d;
+    while(ptr->a > 0){
+        ptr += ptr->a;
+        sum += *ptr;
+    }
+    std::cout << sum << "\n";
+}

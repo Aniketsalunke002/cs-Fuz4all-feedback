@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+void deobfuscate(const string& str) {
+    if (str.length() < 3) {
+        return;
+    }
+    char temp = str[1];
+    str[1] = str[0];
+    str[0] = temp;
+}
+int main(int argc, char *argv[]) {
+    string str = "0123456789abcdef";
+    deobfuscate(str);
+    cout << str << endl;
+    return 0;
+}

@@ -1,0 +1,7 @@
+#include <iostream>
+
+int main ()
+{
+    std::cout << "the value of the variable array array " << __builtin_choose_expr(false, (char*)array, (char*)0) << std::endl;
+    return 0;
+}

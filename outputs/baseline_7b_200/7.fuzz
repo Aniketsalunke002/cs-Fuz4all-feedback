@@ -1,0 +1,9 @@
+#include <iostream>
+#include <vector>
+int main()
+{
+	std::unordered_map<int, int> dict = { { 1, 2 },{ 3, 4 } };
+	std::cout << dict[3] << std::endl;
+
+	return 0;
+}

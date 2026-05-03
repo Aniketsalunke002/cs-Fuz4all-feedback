@@ -1,0 +1,19 @@
+#include <iostream>
+int main() {
+    std::string ctest{"Hello World};
+    ctest.append(", How are you?");
+    std::cout << ctest << "\n";
+    return 0;
+}
+/* write a program which creates an array which grows (2.10.6) */
+#include <iostream>
+int main() {
+    char ch[20];
+    for (auto i = 0; i < 20; ++i) {
+        ch[i] = "1234567890"[i];
+    }
+    std::cout << ch[0];
+    std::cout << ch[15];
+    std::cout << "\n";
+    return 0;
+}

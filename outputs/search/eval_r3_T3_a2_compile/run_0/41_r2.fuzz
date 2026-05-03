@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int a[] = {1,2,3};      
+    int* p1 = new int[10];   
+    p1[3] = 1;     
+    int* p2[10];    
+    int* p3 = new int[10][10];   
+    int* p4[10][10];  
+    p4 = nullptr;  
+    delete[] p3;   
+    p3 = nullptr;  
+    delete[] p2;   
+    p2 = nullptr;  
+    delete[] p1;   
+    int* p5 = new int[sizeof(a)/sizeof(int)];  
+    delete[] p5;  
+    const int size1 = 3;
+    int* p6 = new int[size1];  
+    p6 = nullptr;  
+    delete[] p6;  
+    int** p7 = new int*[10];  
+    delete[] p7;  
+    p7 = nullptr;  
+    cout << sizeof(a)/sizeof(int) <<''<<sizeof(short)/sizeof(int) << endl;
+    return 0;
+}

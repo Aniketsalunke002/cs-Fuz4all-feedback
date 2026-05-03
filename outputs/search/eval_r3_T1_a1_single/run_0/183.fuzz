@@ -1,0 +1,75 @@
+#include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int a = 3, b = 6, c = 11;
+  const auto var = a + b + c;
+  std::cout << var << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int a = 3, b = 6, c = 11;
+  const auto var = a + b + c;
+  std::cout << var << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int arr[10];
+  for (int  i = 0; i < 10; i++) { arr[arr[i] = 0] = i; }
+  for (int : arr) std::cout << i;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int arr[10];
+  for (int  i = 0; i < 10; i++) { arr[arr[i] = 0] = i; }
+  for (int : arr) std::cout << i;
+  return 0;
+}
+ 
+#include <iostream>
+#include <chrono>
+int main() {
+  const auto beg = std::chrono::steady_clock::now();
+  const int arr[] = {0,1,2,3,4,5};
+  for (const int value: arr) [[maybe_unused]] const auto value = value;
+  const auto end = std::chrono::steady_clock::now();
+  const std::chrono::duration<double> elapsed_seconds = end - beg;
+  std::cout << "time elapsed: " << elapsed_seconds.count() << "s" << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <chrono>
+int main() {
+  const auto beg = std::chrono::steady_clock::now();
+  const int arr[] = {0,1,2,3,4,5};
+  for (const int value: arr) [[maybe_unused]] const auto value = value;
+  const auto end = std::chrono::steady_clock::now();
+  const std::chrono::duration<double> elapsed_seconds = end - beg;
+  std::cout << "time elapsed: " << elapsed_seconds.count() << "s" << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <chrono>
+int main() {
+  const auto beg = std::chrono::steady_clock::now();
+  const int arr[] = {0,1,2,3,4,5};
+  for (const int & value: arr) [[maybe_unused]] const auto value = value;
+  const auto end = std::chrono::steady_clock::now();
+  const std::chrono::duration<double> elapsed_seconds = end - beg;
+  std::cout << "time elapsed: " << elapsed_seconds.count() << "s" << std::endl;
+  return 0;
+}
+ 
+#include <iostream>

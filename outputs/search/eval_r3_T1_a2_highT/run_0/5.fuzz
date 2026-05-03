@@ -1,0 +1,22 @@
+#include <iostream>
+ 
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+#include <iostream>
+#include <string>
+
+int main()
+{
+  using namespace std;
+  string s;
+  getline(cin, s);
+  cout << s << "\n";
+}

@@ -1,0 +1,64 @@
+#include <iostream>
+void foo(int &a)
+{
+    a = 10;
+}
+int main()
+{
+    int a;
+    a = 5;
+    std::cout << a << std::endl;
+    foo(a);
+    std::cout << a << std::endl;
+}
+ 
+#include <iostream>
+void assign(int&,int);
+int main()
+{
+    int a = 3;
+    assign(a,4);
+    std::cout << a << std::endl;
+}
+ 
+ 
+#include <iostream>
+class ClassA
+{
+public:
+    ClassA(int i):data(i){}
+    ~ClassA(){}
+    ClassA(ClassA & o):data(o.data){}
+    ClassA(ClassA && o):data(o.data){}
+    void print_value()
+    {
+        std::cout << data << std::endl;
+    }
+    static void setValue(int i)
+    {
+        value = i;
+    }
+    static int getValue()
+    {
+        return value;
+    }
+private:
+    int data;
+    static int value;
+};
+int ClassA::value;
+class ClassA2
+{
+public:
+    ClassA2(int i):data(i){}
+    ~ClassA2(){}
+    ClassA2(const ClassA2 & o):data(ClassA::getValue()){
+    }
+    ~ClassA2(){}
+    void print_value()const
+    {
+        std::cout << data << std::endl;
+    }
+private:
+    ClassA data;
+};

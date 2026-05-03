@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+void func(string &foo)
+{
+     func(foo);
+     foo += " bar";
+}
+int main()
+{
+    string s;
+    func(s);
+    cout << s << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+void bar(string &foo) { foo += " bar"; }
+void func(string &foo) { func(foo); bar(foo); }
+int main()
+{
+    string s;
+    func(s);
+    cout << s << endl;
+    return 0;
+}

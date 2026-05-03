@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+class A {
+public:
+	A() {
+		a = 5;
+	}
+	A(int&a):a(a){
+	{
+	return;
+	}
+	}
+	int a;
+	~A() {
+
+	}
+};
+int main(int argc, char* argv[]) {
+	A a;
+	cout << a.a << endl;
+	a.a = 10;
+	cout << a.a << endl;
+	A c(a.a);
+	cout << a.a << endl;
+	cout << c.a << endl;
+	return 0;
+}
+

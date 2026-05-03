@@ -1,0 +1,17 @@
+#include <iostream>
+namespace foo
+{
+    struct bar
+# ifdef __cplusplus
+    {
+        float a;
+    };
+#endif
+}
+int main()
+{
+# ifdef __cplusplus
+	foo::bar f;
+#endif
+    return 0;
+}

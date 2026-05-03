@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int x = 10, y = 20;
+    const int z = 5 + 10 / 3;
+    cout << "Hello World!" << endl;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// int main() {
+// 	int x = 10, y = 20;
+//     int z = 5 + 10 / 3;
+//     const int w = 10 + 5;
+//     cout << "Hello World!" << endl;
+// 
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main() {
+// 	int x = 10, y = 20;
+//     int z = 5 + 10 / 3;
+//     const int w = 10 + 5;
+//     const int u = 10 * 5;
+//     cout << "Hello World!" << endl;
+// 
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main() {
+// 	int x = 10, y = 20;
+//     int z = 5 + 10 / 3;
+//     const int w = 10 + 5;
+//     const int u = 10 * 5;
+//     const int v = 100 - 10;
+//     cout << "Hello World!" << endl;
+// 
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main() {
+// 	int x = 10, y = 20;
+//     int z = 5 + 10 / 3;
+//     const int w = 10 + 5;
+//     const int u = 10 * 5;
+//     const int v = 100 - 10;
+//     const int t = 1000 % 6;
+//     cout << "Hello World!" << endl;
+// 
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main() {

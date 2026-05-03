@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main()
+{
+    short y = 85;
+    std::cout << y << std::endl;
+    y++;
+    std::cout << y << std::endl;
+}
+
+#include <iostream>
+int main()
+{
+    short z = 85;
+    std::cout << ++z << std::endl;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+    int i;
+    int j;
+    string temp;
+      for (i=1;i<argc-1;i++) {
+          temp = argv[i];
+          for (j=0;j<argc-1;j++) {
+              argv[j] = argv[j+1];
+          }
+          argv[argc - 1] = temp;
+          cout << argv[i][argc] << argv[i+1][argc] << argv[i+2][argc] << endl;
+      }
+  }

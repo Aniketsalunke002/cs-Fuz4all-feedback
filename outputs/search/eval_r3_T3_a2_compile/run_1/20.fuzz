@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+struct one {
+	long val;
+	static float fVal;
+	one(long v=777, float fv=-1.0)
+	{
+		val=v;
+		fVal=fv;
+	};
+	friend ostream& operator<< (ostream &outf, one &o)
+	{
+		outf<<o.val<<": "<<o.fVal;
+		return outf;
+	};
+};
+float one::fVal;
+int main()
+{
+	one o;
+	return 0;
+}

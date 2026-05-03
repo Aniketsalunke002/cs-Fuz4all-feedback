@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+  int array_new[5];
+  int *array = new int[5];
+  int a = 3, b = 4;
+  int c = a + b;
+  int d = c / 5;
+  for (int i = 0; i < 5; i++) {
+    array[i] = c + i * 10;
+    array_new[i] = c + i * 10;
+  }
+  for (int i = 0; i < 5; i++) {
+    cout << array[i] << " ";
+    cout << array_new[i] << " ";
+  }
+  cout << endl;
+  cout << a + b << endl;
+  cout << d << endl;
+  return 0;
+}

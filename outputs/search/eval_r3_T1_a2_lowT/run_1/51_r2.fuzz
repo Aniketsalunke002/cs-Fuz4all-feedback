@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << argc << " ";
+
+    struct Person
+    {
+        int age;
+        int height;
+        int weight;
+
+        Person() : age(0), height(0), weight(0)
+        {
+            cout << "person constructor\n";
+        }
+    };
+    Person david;
+    Person jason;
+    cout << "end of main\n";
+    return 0;
+}

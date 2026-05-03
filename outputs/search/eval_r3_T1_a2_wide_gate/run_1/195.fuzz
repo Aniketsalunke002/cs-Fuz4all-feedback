@@ -1,0 +1,17 @@
+#include <iostream>
+namespace mys {
+using std::cout;
+int i;
+}   
+int main(int argc, char** argv) {
+  mys::cout << mys::i;
+}
+ 
+#include <iostream>
+namespace mys {
+using std::cout;
+int i[10];
+}   
+int main(int argc, char** argv) {
+  mys::cout << mys::i;
+}

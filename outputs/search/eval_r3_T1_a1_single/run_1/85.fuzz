@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+
+class Base
+{
+    int x;
+    public:
+        Base(int);
+        void setX();
+        int getX();
+};
+Base::Base(int val1)
+{
+    x = val1;
+}
+void Base::setX()
+{
+    x = 10;
+}
+int Base::getX()
+{
+    return x;
+}
+
+class Derived :public Base
+{
+    public:
+        Derived(int x);
+        void display();
+};
+Derived::Derived(int val1) :Base(val1)
+{
+
+}
+void Derived::display()
+{
+    cout << " The value of x is "<<this->x<<endl;
+}
+
+
+int main()
+{
+    Derived d(10);  
+    d.display();
+    d.setX();
+    d.display();
+    Base b(20);   
+    return 0;
+}

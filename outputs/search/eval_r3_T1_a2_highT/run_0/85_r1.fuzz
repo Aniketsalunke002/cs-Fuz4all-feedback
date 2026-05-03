@@ -1,0 +1,32 @@
+#include <iostream>
+
+extern void __VERIFIER_assert(int);
+
+extern void __VERIFIER_assume(int);
+unsigned int g_30_0=0;
+
+void main()
+{
+  __VERIFIER_assume(g_30_0 == 0);
+  int a =1; 
+
+  int b=0;
+  std::cin>>a;
+ 
+  std::cin>>b; 
+
+  __VERIFIER_assert(a == b);
+  __VERIFIER_assert(b >0);
+
+  __VERIFIER_assert(a > b);
+
+  __VERIFIER_assume(g_30_0 == 1);
+  unsigned int g_26_0 = 0;
+  unsigned int g_26_1 = 0;
+  unsigned int g_26_2 = 0;
+  unsigned int g_26_3 = 0;
+  unsigned int g_26_4 = 0;
+  int a_8_0=1;
+  int b_9_0=1;
+  int c_52_0=0;
+}

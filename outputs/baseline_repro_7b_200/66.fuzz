@@ -1,0 +1,26 @@
+#include <iostream>
+int main() {
+  int i = 10;
+  while (i > 5)
+  {
+    i -= 2;
+  }
+  std::cout << i;
+}
+ 
+#include <iostream>
+int count = 0;
+void loop(int number) {
+  if (count == 5) {
+    return;
+  }
+  else {
+    std::cout << number << " ";
+    count++;
+    loop(number + 1);
+  }
+}
+int main() {
+  loop(1);
+  return 0;
+}

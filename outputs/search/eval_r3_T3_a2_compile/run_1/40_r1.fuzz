@@ -1,0 +1,38 @@
+#include <iostream>
+
+template <typename T>
+void inc(T &n) {
+	++n;
+}
+template <typename T>
+void dec(T &n) {
+	--n;
+}
+int main (void) {
+	int a=4;
+	int *aptr=&a;
+	std::cout << *aptr << std::endl;
+	inc(*aptr);
+	std::cout << *aptr << std::endl;
+	dec(*aptr);
+	std::cout << *aptr << std::endl;
+	return 0;
+}
+//  
+// #include <iostream>
+// template <typename T>
+// void inc(T &n) {
+// 	++n;
+// }
+// template <typename T>
+// void dec(T &n) {
+// 	--n;
+// }
+// int main (void) {
+// 	int t=4;
+// 	std::cout << t++ << std::endl;
+// 	std::cout << --t << std::endl;
+// 	inc(t);
+// 	dec(t);
+// 	return 0;
+// }

@@ -1,0 +1,6 @@
+#include <iostream>
+int main() {
+    int value = 0;
+    value = ((value - 5) / 3) * (-(value + 3) / 4);
+    std::cout << value;
+}

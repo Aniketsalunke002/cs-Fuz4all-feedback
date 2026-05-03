@@ -1,0 +1,101 @@
+#include <iostream>
+int main(void) {
+    int a=1,b=2,c=3,d=4,e=5,f=6;
+    std::thread[7] t;
+    for (int i=0;i<7;i++)
+        t[i]=new std::thread([](){
+            if (i==1) {
+                a=a+d;
+            } else if (i==3) {
+                b=c+b;
+            } else {
+                c=a+a+a+c;
+            }
+            f=1;
+        });
+    t[1]->join();
+    t[0]->join();
+    t[2]->join();
+    t[3]->join();
+    t[4]->join();
+    t[5]->join();
+    t[6]->join();
+    if (f==1)
+        std::cout<<a << " " << b << " " << c << std::endl;
+    foo();
+    return 0;
+}
+ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <pthread.h>
+#include <sys/wait.h>
+#include <sched.h>
+#include <semaphore.h>
+#include "semaphore.h"
+pthread_mutex_t mtx[2] = {PTHREAD_MUTEX_INITIALIZER, PTHREAD_MUTEX_INITIALIZER}, *m;
+pthread_mutex_t finish = PTHREAD_MUTEX_INITIALIZER;
+sem_t sem, *psem;
+pthread_cond_t t, d;
+sem_t end;
+void foo() {
+    sem_wait(&end);
+}
+int main(void) {
+    pthread_mutex_init(&sem, NULL);
+    sem_init(&end, 0, 0);
+    pthread_t t[2], *tt;
+    m = &mtx[0];
+    psem = &sem;
+    int i,j;
+    for (i=0;i<2;i++)
+        pthread_mutex_init(&mtx[i],NULL);
+    for (i=0;i<2;i++)
+        pthread_create(&t[i], NULL, foo, NULL);
+    pthread_cond_init(&t, NULL);
+    pthread_cond_init(&d, NULL);
+    for (i=0;i<2;i++)
+        pthread_mutex_lock(&mtx[i]);
+    while(TRUE) {
+        bool flag=FALSE;
+        for (i=0;i<2;i++)
+            if (!flag)
+                if (mtx[i]==m) {
+                    flag=TRUE;
+                    j=i;
+                }
+        for (j=j;j<2;j++)
+            if (mtx[i]==&mtx[j]) {
+                m=&mtx[i];
+                break;
+            }
+        if (flag==FALSE)
+            break;
+        if (i==1) {
+            psem->sem_wait(m);
+        } else {
+            m->pthread_mutex_lock();
+        }
+    }
+    pthread_mutex_unlock(m);
+    for (i=0;i<2;i++)
+        pthread_mutex_unlock(&mtx[i]);
+    pthread_mutex_init(&mtx[1], NULL);
+    for (i=0;i<2;i++)
+        if (t[i].m=TREAD_FINISHED) {
+            tt=&t[i];
+            sem_post(&end);
+        } else {
+            m = &mtx[i];
+        }
+    int n,sum=1,cnt=0;
+    foo();
+    for (;sum<=2;){
+        pthread_mutex_unlock(&mtx[1]);
+        sem_wait(&end);
+        for (;;) {
+             
+            for (i=0;i<2;i++)
+                pthread_cond_signal(&d);
+            pthread_cond_wait(&d

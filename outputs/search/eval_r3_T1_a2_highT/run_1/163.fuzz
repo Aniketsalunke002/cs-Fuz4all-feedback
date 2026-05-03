@@ -1,0 +1,20 @@
+#include <iostream>
+ 
+ 
+    class Number{
+    public:
+        int firstNumber;
+        int secondNumber;
+    Number(){
+        firstNumber = 1;
+        secondNumber = firstNumber*2;
+    }
+    void print(){
+        cout<<firstNumber<<" "<<secondNumber<<endl;
+    }
+};
+int main(){
+    Number num1;
+    num1.firstNumber = 31;
+    num1.print();
+}

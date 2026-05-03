@@ -1,0 +1,14 @@
+#include <iostream>
+using std::cout;
+using std::endl;
+int foo(int a, int b) {
+    int r = new b - a;
+    return *(b + a) / r;
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7;
+    foo(a, a);
+    cout << foo(b, b) << endl;
+    cout << *(b + b) << endl;
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main( int argc, char **argv ){
+ double a[8];
+ double *b;
+ b = 2.5 % a / 1.1e2 << ( a - b );
+ cout << b;
+}
+ 
+#include <iostream>
+using namespace std;
+enum fruit {APPLE = 1, ORANGE};
+int main( int argc, char **argv ){
+ fruit a;
+ cin >> a;
+ int n = a;
+ cout << n;
+}

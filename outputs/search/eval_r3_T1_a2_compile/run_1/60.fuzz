@@ -1,0 +1,18 @@
+#include <iostream>
+void f(int n)
+{
+    double x=static_cast<double>(int(15))+1;
+    int a=0;
+    std::cout<<x<<" ";
+    while (x<(n-1))
+    {
+        x=static_cast<double>(int(x+1));
+        std::cout<<x<<" ";
+    }
+    std::cout<<n;
+}
+int main()
+{
+    int n=static_cast<int>(double(15-1))+1;
+    std::cout<<n;
+}

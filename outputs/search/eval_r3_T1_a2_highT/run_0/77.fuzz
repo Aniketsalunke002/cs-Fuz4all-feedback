@@ -1,0 +1,13 @@
+#include <iostream>
+ void __VERIFIER_assume(int cond) {
+  if(!(cond)) {
+     ERROR: goto ERROR;
+  }
+}
+int main() {
+ long x;
+ std::cin >> x;
+ __VERIFIER_assume(x >= 0 && x <= 2147483647);
+ x *= 2;  
+ std::cout << x;
+}

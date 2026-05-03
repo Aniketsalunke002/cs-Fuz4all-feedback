@@ -1,0 +1,67 @@
+#include <iostream>
+#include <cstdint>
+#include <chrono>
+#include <map>
+namespace sample1 {
+typedef enum
+{
+    VALUE_0,
+    VALUE_1,
+    VALUE_2,
+    VALUE_3,
+    VALUE_4
+} enum3;
+class class1 {
+public:
+    class1()
+    {
+    }
+};
+
+class class2
+{
+    class1 obj1;
+    enum3 enum_data;
+    int16_t int_data;
+    int number;
+    char symbol;
+    char char_data;
+    unsigned char uc_data;
+    long long ll_data;
+    unsigned long long ull_data;
+    short short_data;
+    long double long_double_data;
+    const char* const_char_data;
+    const char*const nullptr_pointer;
+    int*pointer_data;
+    int*&reference_pointer;
+    string string_data;
+    string&string_ref;
+    void func1()
+    {
+    }
+    void func2()
+    {
+        func1();
+    }
+};
+
+int main()
+{
+    class2 sample;
+    sample.func2();
+    return 0;
+}
+}  
+
+#include <iostream>
+#include <string>
+#include <vector>
+#include <tuple>
+#include <map>
+#include <regex>
+#include <filesystem>
+
+
+int main(int argc, char **argv) {
+}

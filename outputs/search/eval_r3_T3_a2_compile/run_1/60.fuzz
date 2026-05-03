@@ -1,0 +1,16 @@
+#include <iostream>
+int main(void)
+{
+	char c = 'c';
+	char* ptr = new char();
+	ptr = &c;
+	char a;
+	a = *ptr;
+	*ptr = 'a';
+	std::cout << ptr << std::endl;
+	std::cout << &a << std::endl;
+	std::cout << c << std::endl;
+	std::cout << a << std::endl;
+	return 0;
+}
+

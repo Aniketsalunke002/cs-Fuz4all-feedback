@@ -1,0 +1,15 @@
+#include <iostream>
+class A {
+public:
+    int id;
+    A(int id) : id(id) {}
+};
+void change(A& a) { a.id = 1000; }
+int main() {
+    A a(1);
+    std::cout<<a.id;
+    change(a);
+    std::cout<<a.id;
+    return 0;
+}
+ 

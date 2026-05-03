@@ -1,0 +1,28 @@
+#include <iostream>
+#include <list>
+using namespace std;
+void mut_append_list(list<int>& l,int &x)
+{
+    list<int>::iterator i=l.begin();
+    while(i!=l.end() && *i)<x)++i; 
+    l.insert(i,x);
+    i++;
+    x = *i;
+    i++;
+    while(i!=l.end()) x = x+ *i,*i++;
+}
+int main(void)
+{
+    list<int> l;
+    int x=5;
+    int result;
+    mut_append_list(l,x);
+    l.back();
+    l.front();
+    l.push_back(6);
+    l.push_front(11);
+    l.remove(11);
+    l.pop_back();
+    l.pop_front();
+    l.swap(l);
+}

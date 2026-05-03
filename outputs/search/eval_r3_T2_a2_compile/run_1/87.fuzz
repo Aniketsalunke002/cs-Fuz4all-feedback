@@ -1,0 +1,6 @@
+#include <iostream>
+int main5(){
+unsigned int a=0;
+std::cout << __builtin_expect(a,1) << "\\n";
+return a+3;
+}

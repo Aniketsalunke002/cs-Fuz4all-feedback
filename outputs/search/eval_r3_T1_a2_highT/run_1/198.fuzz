@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int a;
+	a = 3;
+	++a;
+	a++;
+	cout << a << "\n";
+	return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout << sizeof(long int) << "\n";
+	return 0;
+}

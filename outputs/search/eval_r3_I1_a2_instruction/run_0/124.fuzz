@@ -1,0 +1,17 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+  int i=1;
+  while(i<10) {
+    cout << i;
+    if(i&1) cout << argv[0] <<" is even\n";
+    else cout << argv[0] <<" is odd\n";
+    i += (i&0x8000?1:1);
+  }
+return 0;
+}
+ 
+The output of the programs is correct but each line of the output is 
+incorrect if the arguments argv[0] and i contain the same string value
+because each occurrence of argv[0] within the program, if it is not
+within a call to the operator new, is evaluated as if it was a pointer.

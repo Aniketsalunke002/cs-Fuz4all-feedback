@@ -1,0 +1,28 @@
+#include <iostream>
+
+#include <algorithm>
+#include <iterator>
+#include <string>
+using namespace std;
+int main() {
+    char alphabet[] = { 'A','E','H', 'T','O', 'L' };
+    string string1(alphabet, alphabet + 6);
+    cout << "<" << string1[0] << string1[1] << string1[2] << string1[3] << string1 [4] << string1[5] << ">";
+    return 0;
+}
+
+#include <iostream>
+#include <algorithm>
+#include <iterator>
+#include <string>
+using namespace std;
+int main() {
+    string string1("Hello");
+    string string2("World");
+    string string3("!");
+    string string4(">");
+    string string5("(I)");
+    string final_string = string1 + string2 + string3 + string4 + string5;
+    cout << final_string;
+    return 0;
+}

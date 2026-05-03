@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+class test
+{
+	int a,b,c;
+	public:
+	test():a(2),b(7),c(9){}
+	int ret()
+	{
+		switch(a+b+c)
+		{
+			case 3:return 0;
+			default: return 1;
+		}
+	}
+};
+int main()
+{
+	test obj;
+	cout<<obj.ret()<<endl;
+	return 0;
+}

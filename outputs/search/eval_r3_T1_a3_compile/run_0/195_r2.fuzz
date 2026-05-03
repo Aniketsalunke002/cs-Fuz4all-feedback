@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double dbl1 {0},dbl2 {0};
+    dbl1=3.141592653589793;
+    dbl2=131+25;
+    cout << dbl1+131+25 << endl;
+    cout << dbl2<< endl;
+    cout << 3.143592653589793+131+25 << endl;
+    cout << (dbl1+131+25)+131+25 << endl;
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    double dbl1 {0},dbl2 {0};
+    dbl1=3.141592653589793;
+    dbl2=131+25;
+    cout << dbl1+131+25 << endl;
+    cout << dbl2<< endl;
+    cout << 3.143592653589793+131+25 << endl;
+    cout << (dbl1+131+25) 131+25 << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int ar1[3] = {13, 37, 88};
+    int ar2[3] = {13, 49, 71};
+    int ar12product [3];
+    for(int i = 0 to 2){
+        ar12product[i]=ar1[i]*ar2[i];
+    }
+    printf("%d %d %d",ar12product[0], ar12product[1], ar12product[2]);
+}

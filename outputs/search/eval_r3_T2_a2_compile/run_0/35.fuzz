@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int i=0;
+    char c;
+    do {
+        c = cin.get();
+        if (c=='/') {
+            i = -1;
+        } else
+        {
+            cout << (c=='\n'? '\n' : c+i);
+            i++;
+        }
+    } while (c!='.');
+}
+

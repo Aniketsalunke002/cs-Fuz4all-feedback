@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	for (float f1 = -1E10f; f1 < 1E25; f1 += 10) {
+		for (float f2 = -1E10f; f2 < 1E24; f2 += 10) {
+			float d1 = f1 - 5;
+			float d2 = f2 - 5;
+			float d3 = d1*d2;
+			if (f1 < 0 && f2 < 0) f1 = -1E24;
+			if (f1 > 0 && f2 < 0) f1 = 1E25;
+			if (f1 < 0 && f2 > 0) f1 = -1E24;
+			if (f1 > 0 && f2 > 0) f1 = 1E25;
+			cout << f1 << "   " << f2 << "   " << f1 + f2 << "   " << f1 - f2 << " " << (f1*10) << endl;
+			
+		}
+	}
+}
+ 
+#include <string>
+#include <iostream>
+using namespace std;
+class Person {
+	private:
+		string name;
+		int age;
+		char sex;
+		string hobby;
+	public:
+		Person();
+		Person(string n);
+		Person(string n, int a, char s);
+		Person(string n, int a, char s, string x);
+		void getName();
+		void getAge(int x);
+		void getSex(char x);
+		void getHobby(string x);
+		string toString();
+	
+};
+Person::Person() {
+	
+} 
+Person::Person(string n) {
+	name = n;
+} 
+Person::Person(string n, int a, char s) {
+	name = n;
+	age = a;
+	sex = s;
+} 
+Person::Person(string n, int a, char s, string x) {
+	name = n;
+	age = a;
+	sex = s;
+	hobby = x;
+} 
+void Person::getName() {
+	cout << "Name: " << name << endl;
+}
+void Person::getAge(int x) {
+	age = x;
+	cout << "Age: " << x << endl;
+}
+void Person::getSex(char x) {
+	sex = x;
+	cout << "Sex: " << x << endl;
+}
+void Person::getHobby(string x) {
+	hobby = x;
+	cout << "Hobby: "  << x << endl;
+}
+Person person1, person2("Bob");
+Person person3("Bob", 25, 'M', "Bowling");
+Person person4("Jim", 50, 'F');
+person3.getName();
+person4.getAge(25);
+person4.getSex('M');
+person4.getHobby("Basketball");
+ 
+
+class Student : Person {
+	private:
+		int grade;
+		double height;
+		double weight;
+	public:
+		Student();
+		Student(string n, int a, char s, int g, double h, double w);
+		void getClass();
+		void getHeight(double x);
+		void getWeight(double x);
+		string toString();
+	
+};
+/* Please fill all the blank spaces with your code

@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+using MyType = int;
+[[maybe_unused]] static inline MyType add(MyType a, MyType b)
+{
+  return a + b;
+}
+int main()
+{
+  MyType a = 3;
+  MyType b = 4;
+  MyType c = 0;
+  std::cout << "1+1=" << add(a, b) << std::endl;
+  std::cout << R"(add(a, b) = )" << add(a, b) << std::endl;  
+  cout << "Hello" << endl;
+  return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+  char a = 'a', b;
+  int c = 4;
+  do { 
+    cout << a;
+    b = getchar();
+  } while(a!= b);
+  cout << endl;
+  return 0;
+}

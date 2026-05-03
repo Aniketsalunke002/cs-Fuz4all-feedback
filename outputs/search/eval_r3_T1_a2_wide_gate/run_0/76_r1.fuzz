@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int age = 3;
+	int mark = 33;
+	cout << "My Age in years is " << age * 365 << endl;
+	cout << "My Marks is " << mark * 10 << endl;
+	return 0;
+}

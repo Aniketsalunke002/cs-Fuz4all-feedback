@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() { 
+    int foo=1;
+    cout<<foo<<endl;
+    foo++;
+    int bar = foo+1;
+    foo = foo*2;
+    bar = bar*2;
+    bar = bar/2; 
+    cout<<"foo is now "<<foo<<endl;
+    cout<<"bar is now "<<bar<<endl;
+    return 0;
+}

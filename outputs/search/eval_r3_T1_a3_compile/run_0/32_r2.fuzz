@@ -1,0 +1,47 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int a,b;
+    a = 10;
+    b = a++ + 10;
+    cout << b;
+    return 0;
+}
+//  
+// 3: 
+// a) What is the output of the program below?
+// b) Which statement is NOT a valid constructor declaration?
+// c) What does the line "string str3 = str1 + str2" do?
+// d) Which statement could NOT be used to declare 'a' and 'b'?
+// e) Why was it not an error for a to be declared twice?
+// f) Which statement is NOT a valid constructor declaration?
+// g) What does the line "string str3 = str1 + str2" do?
+// h) Which statement could NOT be used to declare 'a', 'b' and 'c'?
+// i) Why was it not an error for a to be declared twice?
+// j) Which solution is correct?
+// k) Which solution is more legible/concise?
+// l) Where in your solution to question 1 did you use the operator "+++"?
+// m) Where in your solution to question 2 did you use the operator "+++"?
+// n) Where in your solution to question 1 did you use the operator "+++"?
+// o) Where in your solution to question 2 did you use the operator "+++"?
+// p) Where in your solution to question 3 did you use the operator "+++"?
+string str1 = "hello";
+string str2 = "world";
+string str3 = str1 + str2;
+
+int main() {
+    string str4;
+    int a = ++str4;
+    cout << a;
+    return 0;
+}
+//  
+// 4: 
+// a) What is the output of the program below?
+// b) What does the line "a = a++ + 10" do?
+// c) What do you think the output is of the program below?
+// d) Why is the output of the program below 0?
+// e) What do you think the output is of the program below?
+// f) Why is the output of the program below 0?
+// g) Which solution is correct?

@@ -1,0 +1,12 @@
+#include <iostream>
+int main() {
+    auto a = 0;
+    auto b = 1;
+    for(auto i = 1; i <= 5; i = i + 2) {
+        auto c = a + b;
+        b = a;
+        a = c;
+        std::cout << i << ':' << b << '=' << a << '+' << b << std::endl;
+    }
+    return 0;
+}

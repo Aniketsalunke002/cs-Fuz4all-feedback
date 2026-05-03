@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+void getFoo_1(int x, int y, double &foo) {
+	foo = x - (y / 3.0);
+}
+int main(int argc, char* argv[]) {
+	int x = 1;
+	int y = 2;
+	int foo;
+	getFoo_1(x, y, foo);
+	cout << foo;
+	return 0;
+}

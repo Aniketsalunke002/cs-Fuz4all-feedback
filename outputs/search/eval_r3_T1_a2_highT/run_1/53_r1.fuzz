@@ -1,0 +1,24 @@
+#include <iostream>
+
+
+typedef unsigned char bool;
+std::ostream& operator<<(std::ostream& os, char const* str) {
+	os << std::string(str);
+	return os;
+}
+
+int main() {
+	int mut = 0;
+	std::cout << "Press ENTER to start, any other key to quit.";
+	if(std::cin.peek()!= '\n') {
+	    if(1 == std::cin.get()) {
+	        if((1 == std::cin.get()) && (1 == std::cin.get())) {
+	            ;
+	        }
+	    }
+	}
+	for(;;){
+	    int counter = 0;
+	    std::cout << "enter a block mutant: ";
+	    std::cout << "-- " << std::flush;
+	    std::cin >> mut;

@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[50];
+    arr[0] = 0;
+    int f0 = 0;
+    int f1 = 1;
+    cout << f0 << endl;
+    cout << f1 << endl;
+    for (int i = 1; i < 50; ++i)
+    {
+        int f2 = f1 + f0;
+        f0 = f1;
+        f1 = f2;
+        cout << f2 << endl;
+    }
+    return 0;
+}

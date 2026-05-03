@@ -1,0 +1,73 @@
+#include <iostream>
+
+int* foo() {
+    static int x;
+    return &x;
+}
+int main() {
+    int* p = foo();
+    std::cout<<*p<<std::endl;
+    (*p)++;
+    std::cout<<*p<<std::endl;
+    return 0;
+}
+//  
+// #include <iostream>
+// void foo(int x) {
+//     static int a = 0;
+//     a = x;
+// }
+// int main() {
+//     foo(1);
+//     std::cout<<foo(2)<<std::endl;
+//     return 0;
+// }
+//  
+// #include <iostream>
+// class A {
+// public:
+//     int x;
+//     int* get_x() {
+//         return &x;
+//     }
+//     A(int k) {
+//         x = k;
+//     }
+// };
+// class B {
+// public:
+//     int y;
+//     int* get_y() {
+//         return &y;
+//     }
+//     B(int k) {
+//         y=k;
+//     }
+// };
+// int main() {
+//     A* a = new A(100);
+//     B* b = new B(100);
+//      
+//     std::cout<<(*a).x<<std::endl;
+//     std::cout<<(*b).y<<std::endl;
+//      
+//      
+//      
+//      
+//     (*a).x = 10;
+//     std::cout<<(*b).x;
+//     std::cout<<(*a).x;
+//     std::cout<<(*b).x;
+//     std::cout<<std::endl;
+//     return 0;
+// }
+//  
+// #include <iostream>
+// class A {
+// public:
+//     int x;
+//     int* get_x() {
+//         return &x;
+//     }
+//     A(int k) {
+//         x = k;

@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <map>
+
+typedef std::map <std::string, std::string> M;
+
+class Map : public M {
+     
+};
+
+class my_map {
+    public:
+        void add(std::string, std::string);
+        std::map<std::string, std::string>::iterator find(std::string);
+    private:
+        M map;
+};
+
+void my_map::add(std::string key, std::string value)
+{
+    M::operator [] (key)  = value;
+}
+
+std::map<std::string, std::string>::iterator my_map::find(std::string key)
+{
+    return M::find(key);
+}
+
+int main(void)
+{
+    my_map m

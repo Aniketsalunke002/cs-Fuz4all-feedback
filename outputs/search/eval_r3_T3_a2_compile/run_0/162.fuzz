@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+struct A {int a; int b[256];};
+void printstruct(const A& p, int num) {
+  cout << "p" << num << ".a = " << p.a << endl;
+  cout << "p" << num << ".b[128] = " << p.b[128] << endl;
+  cout << "p" << num << ".b[196] = " << p.b[196] << endl;
+  cout << "p.b[196] = " << p.b[196] << endl;
+}
+int main() {
+  A a[16];
+  printstruct(a[1], 1);
+  return 0;
+}

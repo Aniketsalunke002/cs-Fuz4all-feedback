@@ -1,0 +1,114 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    set<int> v = { 4 };
+
+    for (unsigned int i: v)
+      cout << i << endl;
+
+    cout << endl;
+
+    return 0;
+}
+
+ 
+#include <iostream>
+#include <utility>
+#include <algorithm>
+#include <set>
+using namespace std;
+
+int main() {
+    set< pair<int,char> > v = { { 4, 'n' }, { -1, 'p' } };
+    cout << v.size();
+
+    for (auto p: v) {
+        cout << " [" << p.first << " | " + p.second << "]";
+    }
+}
+
+
+ 
+#include <iostream>
+#include <set>
+
+using namespace std;
+
+int main() {
+    set <char> char_s {'a','b','c'};
+    set <int> int_s {1,2,3};
+    set <pair<float, float> > pf_s{{4, 10}, {45.6, -24}};
+
+    char_s.insert(int_s.cbegin(), int_s.cend());
+    char_s.insert(pf_s.cbegin(), pf_s.cend());
+
+    for (auto i: char_s)
+        cout << i << " " <<endl;
+
+    cout << endl;
+
+return 0;
+}
+
+ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "");
+    size_t a[7] = {5, 3, 5, 11, 55, 15, 104};
+
+    size_t num_oc = 0;
+
+    for (size_t i = 0; i < 7; i++)
+        ++num_oc;
+
+    printf("The number of occurrences of 5 is %lu.\n",
+        num_oc );
+}
+
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> v;
+    for (int j = 5; j > 0; j--)
+        v.push_back(j);
+    for (int i = 1; i < 100; i++)
+        v[rand() % 7] = i;
+    int sum = 0;
+    for (int jj: v)
+        sum += jj;
+    cout << sum << endl;
+}
+
+ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main () {
+    int n[] = { 5, 2, 5, 3, 5, 6, 6, 8 };
+    int a, b, c;
+    scanf("%d%d%d", &a,&b,&c);
+    printf("%3d: %4d", 1, n[0]);
+    printf("%3d: %4d", 2, n[1]);
+    printf("%3d: %4d", 3, n[2]);
+    printf("%3d: %4d", 4, n[3]);
+    printf("%3d: %4d", 5, n[4]);
+    printf("%3d: %4d", 6, n[5]);
+    printf("%3d: %4d", 7, n[6]);
+    printf("%3d: %4d", 8, n[7]);
+    printf("\n");
+
+
+    for (int i = 0; i < 8; i++)
+        for (int k = 0; k < 8; k++)
+          if (i!= k)
+              if (n[i] == n[k]) {
+                  n[k] = a;
+                  n[

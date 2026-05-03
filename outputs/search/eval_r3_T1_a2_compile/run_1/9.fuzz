@@ -1,0 +1,60 @@
+#include <iostream>
+#include <list>
+void print_list(std::list<int>& l)
+{
+    for(std::list<int>::reverse_iterator i = l.rbegin();i!= l.rend();++i)
+        std::cout << *i << " ";
+    std::cout << std::endl;
+}
+int main(void)
+{
+    std::list<int> l1;
+    std::list<int>::iterator i;
+    i =l1.insert(l1.begin(),6);
+    l1.insert(i,77);
+    l1.insert(l1.begin(),2);
+    l1.insert(l1.end(),1);
+    print_list(l1);
+}
+ 
+#include <iostream>
+#include <list>
+template <class T> void swap(T& a,T& b){T temp = a;a = b;b = temp;}
+template <class T> void swap_list(T& a,T& b){swap(a.front(),b.front());std::reverse(b.begin(),b.end());print_list(b);}
+void swap_std(std::string& a,std::string& b){std::string temp = a;a = b;b = temp;}
+void swap_list_string(std::list<std::string>& a,std::list<std::string>& b){swap_std(a.front(),b.front());std::reverse(b.begin(),b.end());print_list(b);}
+int main(void)
+{
+    std::list<int> l1,l2;
+    append_list(l1,1);
+    append_list(l1,2);
+    append_list(l1,4);
+    append_list(l1,5);
+    std::cout << "l1 before swap\n";
+    print_list(l1);
+    swap_list(l1,l2);
+    std::cout << "l1 after swap\n";
+    print_list(l1);
+    std::string s1 = "Hello";
+    std::cout << "s1 before swap\n";
+    std::cout << s1 << '\n';
+    swap_list_string(l1,l2);
+    std::cout << "s1 after swap\n";
+    std::cout << s1 << '\n';
+}
+ 
+#include <iostream>
+#include <list>
+template <class T> void erase(T& a,std::list<typename T::value_type>::iterator iter){a.erase(iter);}
+void erase_std(std::list<std::string>& a,std::list<std::string>::iterator iter){a.erase(iter);}
+int main(void)
+{
+    std::list<int> l1,l2;
+    append_list(l1,1);
+    append_list(l1,2);
+    append_list(l1,4);
+    append_list(l1,5);
+    std::cout << "l1 before erase\n";
+    print_list(l1);
+    erase(l1,l1.begin());
+    std::cout << "

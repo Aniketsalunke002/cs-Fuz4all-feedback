@@ -1,0 +1,137 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x=5, y=9;
+    x++;
+    cout<<"Value after x++";
+    cout<<x;
+    y*=2;
+    cout<<"\nValue after y*=2";
+    cout<<y;
+    
+    return 0;
+}
+ 
+void incrementing(int x)
+{
+    x++;
+}
+
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x=5, y=9;
+    incrementing(x);
+    y=y*2;
+    cout<<y;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x = 5, y = 9;
+    function( x, y, 10 );
+
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+void swap( int x, int y )
+{
+    int temp = x;
+    x = y;
+    y = temp;
+}
+int main()
+{
+    int a = 10, b = 20;
+    cout << "Before calling function a = "
+    << a << " and b = " << b << endl;
+
+    cout << "After calling function a = " ;
+    swap(a, b);
+    cout << a << " and b = " << b << endl;
+
+
+    return 0;
+}
+
+using namespace std;
+ 
+void swap( int x, int y )
+{
+    static int temp = 0;
+    temp = x;
+    x = y;
+    y = temp;
+}
+int main()
+{
+    int a = 10, b = 20;
+    cout << "Before calling function a = "
+    << a << " and b = " << b << endl;
+
+    cout << "After calling function a = " ;
+    swap(a, b);
+    cout << a << " and b = " << b << endl;
+
+
+    return 0;
+}
+
+using namespace std;
+ 
+void swap( int x, int y )
+{
+     
+    int temp = x;
+     
+    int temp = y;
+     
+    y = x;
+     
+    x = temp;
+}
+int main()
+{
+    int a = 10, b = 20;
+    cout << "Before calling function a = "
+        << a << " and b = " << b << endl;
+
+    cout << "After calling function a = " ;
+    swap(a, b);
+    cout << a << " and b = " << b << endl;
+
+
+    return 0;
+}
+
+
+using namespace std;
+ 
+void swap( int x, int y )
+{
+    int temp;
+    temp = x;
+    x = y;
+    y = temp;
+}
+int main()
+{
+    int a = 10, b = 20;
+    cout << "Before calling function a = "
+        << a << " and b = " << b << endl;
+
+    cout << "After calling function a = " ;
+    swap(a, b);
+    cout << a << " and b = " << b << endl;
+
+
+    return 0;
+}

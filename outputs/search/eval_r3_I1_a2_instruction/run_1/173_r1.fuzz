@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int* p;
+    int n1;
+     int &ref=n1;
+    *p=&ref;
+    std::cout << n1 << "," << *(int*)p << ","<<*p << std::endl;
+    return 0;
+}

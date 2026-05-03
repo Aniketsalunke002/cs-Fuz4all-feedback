@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class A
+{
+	public:
+		A():iField(1){} 
+		A(const A&r):iField(r.iField+1){}
+		~A(){}
+		A& operator=(A&r){iField=r.iField+7;return *this;}
+	private:
+		int  iField=0;
+};
+int main()
+{
+	A one;
+	A two = one;
+	two=one;
+	return (0);
+}

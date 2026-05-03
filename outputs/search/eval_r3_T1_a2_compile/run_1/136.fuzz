@@ -1,0 +1,84 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int x = 5;
+    cout << x*24 << "\n";
+    x = 5*x;
+    cout << ++x + 15 << "\n";
+    x += 7;
+    cout << 3 + 2 + x << "\n";
+    x = 7*x;
+    cout << x << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    int result;
+    int x = 5;
+    cout << x*24 << "\n";
+    result = x*5;
+    x += 7;
+    cout << 3 + 2 + x << "\n";
+    result = 7*result;
+    cout << result << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    int result;
+    int x = 5;
+    cout << x*24 << "\n";
+    result = x*5;
+    x += 7;
+    cout << 3 + 2 + x << "\n";
+    result = 7*result;
+    cout << result << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    int result = 5;
+    int x = 5;
+    cout << x*24 << "\n";
+    result *= 5;
+    x += 7;
+    result += 3 + 2;
+    cout << x << "  " << result << "\n";
+    result *= 7;
+    cout << result << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    float result;
+    float x = 6.7;
+    cout << x*24 << "\n";
+    result = x*5;
+    x += 7;
+    cout << 3 + 2 + x << "\n";
+    result = 7*result;
+    cout << result << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    double result;
+    double x = 6.7;
+    cout << x*24 << "\n";
+    result = x*5;
+    x += 7;
+    cout << 3 + 2 + x << "\n";
+    result = 7*result;
+    cout << result << "\n";
+    return 0;
+}

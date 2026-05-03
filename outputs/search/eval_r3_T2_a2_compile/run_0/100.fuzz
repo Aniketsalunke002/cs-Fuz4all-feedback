@@ -1,0 +1,48 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+int foo(int a, int b) {
+    cout << b << ',' << a << '\n';
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7, c;
+    while(cin >> c)
+        if (c!= b)
+            foo(a, b);
+    foo(a, b);
+}
+ 
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+int foo(int a, int b, int c) {
+    cout << a << ',' << b << ',' << c << '\n';
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7, c, d;
+    while(cin >> c >> d) {
+        b = c; a = d;
+    }
+    foo(a, b, c);
+}
+ 
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+int foo(char b, int c) {
+    return b + c;
+}
+int main(int argc, char** argv)
+{
+    char a = 'a';
+    int b = 1, c;
+    while(cin >> c)
+        a = foo(a, c);
+    cout << a << "," << b << endl;
+}
+```

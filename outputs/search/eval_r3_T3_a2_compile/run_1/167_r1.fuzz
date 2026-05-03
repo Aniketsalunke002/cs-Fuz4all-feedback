@@ -1,0 +1,24 @@
+#include <iostream>
+
+#include <vector>
+template<typename T>
+T min(T a, T b, T c) {
+  T temp = (a > b? (a > c? c : a) : (b > c? b : c));
+  std::vector<T> v;
+  v.push_back(a);
+  v.push_back(b);
+  v.push_back(c);
+  if (v.size() > 1) {
+    for (int i = 0; i < v.size(); ++i) {
+      if (v[i] == temp) {
+        return v[i];
+      }
+    }
+  } else {
+    return temp;
+  }
+  return 1;
+}
+int main(int argc, char ** argv) {
+  std::cout << min(1,2,3) <<'' << min(2,4, 8) <<'' << min(24, 654, 123) << '\n';
+}

@@ -1,0 +1,100 @@
+#include <iostream>
+#include <memory>
+void f(int n)
+{
+     int  m =34;
+
+     if(n!= m)
+     {
+          std::cout << "Hello World";
+     } 
+     else
+     {
+          std::cout << "Hello World";
+     }
+     std::cout << "Hello World";
+     std::cout << "Hello World";
+     std::cout << "Hello World";
+}
+#include <iostream>
+#include <map>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <cassert>
+#include <cstdlib>
+using namespace std;
+
+using KeyType = string;
+using ValueType = int;
+using HashKeyType = size_t;
+
+
+
+struct hash_functor
+{
+     size_t operator()(const string &s) const { return hash<KeyType>{}(s); }     
+     size_t operator()(const char *s) const { return hash<KeyType>{}(s); }
+};
+
+
+
+
+struct equal_comparator
+{
+     bool operator()(const string &s1, const string &s2) { return s1 == s2; }     
+     bool operator()(const char *s1, const key2::KeyType &s2) { return strcmp(s1, (char *)s2.c_str()) == 0; }
+};
+
+
+template <typename K, typename V>
+int lookup(const map<K, V> &m, const K &key, bool (*equal)(const K &a, const K &b))
+{
+     auto i = find_if(m.begin(), m.end(),
+                       [&] (const pair<K, V> &p) {
+                            return equal(p.first, key);
+                       });
+     if (i == m.end())
+         return -1;
+     else
+         return i->second;
+}
+
+
+int main()
+{
+      
+     string s = "Hello World";
+      
+     string &r = s;
+
+     int n = lookup(std::map<string, int> {{r, 1}}, s, equal_comparator());
+     std::cout << "Result: " << n << std::endl;
+
+     for(const auto &p : { {"Hello World", 1},
+                          {"Hello World", 2},
+                          {"Hello Universe", 3},
+     })
+     {
+          cout << p.first << ", " << p.second << endl;
+     }
+     const int x{ 65 };
+
+     return 0;
+}
+ 
+#include<iostream> 
+#include<math.h>
+#include<vector>
+#include<string>
+#include<iostream>
+#include<map>
+#include<cstdlib>
+
+using namespace std;
+
+template <typename T>
+class tree
+{
+ public:
+  virtual void

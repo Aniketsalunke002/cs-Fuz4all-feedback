@@ -1,0 +1,9 @@
+#include <iostream>
+using std::cout; using std::endl;
+#include <string>
+using std::string;
+int main () {
+std::string name("Alexander");
+for(;name.size()!=0;name.pop_back())
+  cout<<name.back();
+}

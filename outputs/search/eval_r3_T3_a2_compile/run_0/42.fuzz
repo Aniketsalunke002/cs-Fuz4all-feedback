@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    char* s1 = new char[96];
+    int i = 0;
+    while((s1[i++] = char('A' + (i & 15))))
+        ;
+    for(int j = 95; j >= 5; --j)
+        putchar(s1[j]);
+    return 0;
+}

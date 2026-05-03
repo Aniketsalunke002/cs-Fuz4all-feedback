@@ -1,0 +1,19 @@
+#include <iostream>
+int main() {
+  std::cout << "hello again world!" << std::endl;
+}
+```
+
+```
+[main  ]: [2022-01-17T13:55:38.338Z] Started
+[main  ]: [2022-01-17T13:55:38.339Z] Isolating process...
+[main  ]: [2022-01-17T13:55:38.365Z] Launching process with args [/home/me/src/a.out]
+[main  ]: [2022-01-17T13:55:38.379Z] Process launched to PID: 123
+[process]: [2022-01-17T13:55:38.407Z] [123] Replacing a
+[process]: [2022-01-17T13:55:39.382Z] [123] Replacing again
+[process]: [2022-01-17T13:55:40.595Z] [123] Isolated by main
+[main  ]: [2022-01-17T13:55:40.608Z] Process exited, code: 0, signal: undefined
+[main  ]: [2022-01-17T13:55:40.609Z] Killing process 123
+```
+
+**Notice** This is for learning purposes only, and it is **very not recommended** for real usage.

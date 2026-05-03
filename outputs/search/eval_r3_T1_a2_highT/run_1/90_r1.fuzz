@@ -1,0 +1,35 @@
+#include <iostream>
+
+#include <string>
+
+std::vector<int> vector_func(); //returns function address
+
+int main()
+{
+    std::vector<int> vector;
+    int random = (rand() % 10);
+    vector.push_back(random);
+    std::cout << "Random = " << random << '\n';
+    int i;
+    std::cin >> i;
+    std::cout << "popped out = " << vector.at(0) << '\n';
+
+    for (int j = 0; j < 10; j++)
+    {
+        std::cout << vector.at(j) << '\n';
+    } //vector.at(i) = *&*((byte*)0x006B7998+j*4);
+
+    void (*v) () = &vector_func; //v = (void *)* 0x006B7A50;
+    v();
+    return 0;
+    delete &vector;
+}
+
+std::vector<int> vector_func() //original function
+{
+    int i;
+    std::cout << "v_f call!" << '\n';
+    std::cin >> i;
+    std::cout << "returning!" << '\n';
+    return vector_func;
+}

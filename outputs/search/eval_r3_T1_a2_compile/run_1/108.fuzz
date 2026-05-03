@@ -1,0 +1,28 @@
+#include <iostream>
+#include <stdlib.h>
+#include <vector>
+using namespace std;
+#include <iostream>
+#include <stdlib.h>
+#include <vector>
+using namespace std;
+int main ()
+{
+    vector<int> test;
+    test.push_back(5);
+    test.push_back(4);
+    test.push_back(3);
+    test.push_back(2);
+    if(test.size()>0)
+    {
+        int value=test[0];
+        test.erase(test.begin());
+        test.insert(test.begin(),value-1);
+    }
+    sort(test.begin(),test.end());
+    for (int i=0;i<test.size();i++) {
+        cout<<test[i]<<',';
+    }
+    cout<<endl;
+ return 0;
+}

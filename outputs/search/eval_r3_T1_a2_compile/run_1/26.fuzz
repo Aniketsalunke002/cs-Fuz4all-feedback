@@ -1,0 +1,23 @@
+#include <iostream>
+bool is_integer(int number)
+{
+    return false;
+}
+int main()
+{
+    std::cout << "Hello, World!\n";
+}
+```
+
+## How to run
+
+```bash
+git clone https: 
+cd afl_mutate
+mkdir build && cd build
+cmake..
+make 
+./run_main_original
+./run_main_mutated_short
+./run_main_mutated_long
+```

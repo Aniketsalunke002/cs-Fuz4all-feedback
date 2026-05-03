@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+  static short int data[32];
+  short int* x = data;
+  std::cout << x[170];
+   
+  return 0;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+void b(void) {
+  cout << "I'm called from function \"b\"." << endl;
+}
+int main() {
+  int a = b();
+  cout << "C = " << a << endl;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+
+#include <vector>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int a,b,c,x;
+    cin >> a >> b >> c;
+
+    vector<int> aTmp = {a,b};
+    while (aTmp[0] % c!= 0 || aTmp[1] % c!= 0)
+    {
+        aTmp[0]+=b;
+        aTmp[0]%=c;
+        aTmp[1]+=b;
+        aTmp[1]%=c;
+    };
+
+    if (aTmp[0] == 0 && aTmp[1] == 0)
+        cout << "YES: 1";
+    else
+        cout << "NO";
+}

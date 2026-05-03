@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  string input =
+  "Hello world!\n Hello I am a C++ Program\n My name is GG.";
+  char c;
+  while (true) {
+    c = input.at(0);
+    if (c == '\0') {
+      break;
+    }
+    cout << c;
+    input.erase(0);
+  }
+  return 0;
+}

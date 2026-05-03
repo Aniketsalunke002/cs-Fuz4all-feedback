@@ -1,0 +1,38 @@
+#include <iostream>
+
+#include <map>
+#include <string>
+#include <utility>
+using namespace std;
+int main() {
+	int n;
+	cin >> n;
+	map<string, pair<int, double> > mp;
+	cin >> ws;
+	char str[1000005];
+	while (n--) {
+		cin.getline(str, 1000005);
+		string s(str);
+		int space = s.find(' ');
+		int m;
+		int count = 0;
+		for (int i = 0; i < space; ++i) {
+			count = s[i] + count * 26;
+		}
+		mp[s] = {count, s.length() - 2 * space};
+	}
+	double sum = 0;
+	for (map<string,pair<int, double> >::iterator it = mp.begin(); it!= mp.end(); ++it)   
+		sum += it->second.second;
+	cout << sum << endl;
+	double sum2 = 0;
+	map<int, int> mp2;
+	for (map<string, pair<int, double> >::iterator it = mp.begin(); it!= mp.end(); ++it) {
+		if (mp2[it->second.first] == 0) count++;
+		mp2[it->second.first] = it->second.second;
+		sum2 += it->second.second;
+		if (maxl == 0) maxl = it->second.first;
+	}
+	cout << sum2 << endl;
+	return 0;
+}

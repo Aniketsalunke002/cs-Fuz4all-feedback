@@ -1,0 +1,10 @@
+#include <iostream>
+namespace {
+  int h;
+}
+int main(){
+  int a,b,c,d,e,f,g;
+  std::cin>>a>>b>>c>>d>>e>>f>>g;
+  std::cout<<a+b*c*f+h+g<<std::endl;
+  return 0;
+}

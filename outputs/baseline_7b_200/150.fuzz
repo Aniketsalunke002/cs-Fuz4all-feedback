@@ -1,0 +1,9 @@
+#include <iostream>
+int main(int argc, char *argv[]) {
+int x = 24;
+++x; x/=2;
+    std::cin;
+    std::cout;
+    std::cerr;
+    return x;
+}

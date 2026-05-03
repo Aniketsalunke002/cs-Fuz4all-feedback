@@ -1,0 +1,57 @@
+#include <iostream>
+
+#include <functional>
+#include <algorithm>
+#include <memory>
+#include <vector>
+#include <list>
+#include <set>
+#include <iterator>
+using namespace std;
+class B
+{
+    public:
+    	float fField;
+	virtual void print() {cout<<fField<<endl;}
+};
+class C:public B
+{
+    public:
+    	virtual void print() {cout<<fField*2<<endl;}
+};
+int main()
+{
+    int n=10;
+    vector<unique_ptr<B>> b1;
+    for(int i=0;i<n;++i)
+    {
+        auto b(make_unique<B>());
+        b->fField=float(rand())/RAND_MAX;
+        b1.push_back(move(b));
+    }
+    vector<unique_ptr<C>> c1;
+    transform(b1.begin(), b1.end(),back_inserter(c1),[](unique_ptr<B>& p)->unique_ptr<C>
+    {
+        return make_unique<C>(*p);
+    });
+    for_each(c1.begin(),c1.end(),[](unique_ptr<B>& p)
+    {
+        p->print();
+    });
+    return 0;
+}
+
+#include <list> 
+#include <set>
+#include <iterator>
+using namespace std;
+template<typename It>
+void insertAfter(set<It>& x, It e1, It e2)
+{
+    x.insert(e2);
+    x.erase(lower_bound(x.begin(), x.end(), e1), e2);
+}
+
+int main()
+{
+    list<int> l{1, 2,

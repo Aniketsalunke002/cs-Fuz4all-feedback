@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+extern void fun4(int &c, int &d);
+int main(int argc, char* argv[]) {
+	int c = 5, d = 12;
+	cout << c << endl;
+	cout << d << endl;
+	return 0;
+}
+extern void fun4(int &c, int &d) {
+	int a = 5, b = 12;
+	c = 30;
+	return;
+}
+ 
+extern void fun5(int &c, int &d);
+extern void fun6(int &c, int &d);
+int main(int argc, char* argv[]) {
+	int x;
+	fun5(x,x);
+	return 0;
+}
+extern void fun5(int &c, int &d) {
+	c = 30;
+	return;
+}
+extern void fun6(int &c, int &d) {
+	int y;
+	y = c ^ d;
+	c = y;
+	d = y;
+	return;
+}
+ 

@@ -1,0 +1,9 @@
+#include <iostream>
+int main() {
+	int i;
+	i = 0;
+	char * p;
+	p = new char[i]();
+	std::cout << *p;
+	return 0;
+}

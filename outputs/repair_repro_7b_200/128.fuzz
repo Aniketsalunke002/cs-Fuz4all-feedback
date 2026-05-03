@@ -1,0 +1,43 @@
+#include <iostream>
+#include <condition_variable>
+#include <mutex>
+#include <chrono>
+
+int main() {
+    std::unique_lock<std::mutex> lock(m1);
+    cv.wait(lock, []{return false;});
+    std::cout << "Done" << std::endl;
+    return 0;
+}
+
+ 
+
+#include <iostream>
+#include <thread>
+#include <chrono>
+std::mutex mtx_c;
+std::condition_variable cv;
+std::atomic_int counter = 0;
+
+void count() {
+    for(int i = 0; i < 100; ++i)
+    {
+        counter++;
+        std::cout<<std::this_thread::get_id()<<" " <<counter.load();
+        if (counter-10 == 0) {
+            std::cout << "Counter reached 10\n";
+        }
+    }
+    cv.notify_one();
+}
+int main() {
+    std::unique_lock<std::mutex> lock(mtx_c);
+    for (auto i = 0; i < 10; ++i) {
+        std::thread t1(count);
+         
+        t1.join();
+        ++counter;
+    }
+    cv.notify_all();
+    return 0;
+}

@@ -1,0 +1,7 @@
+#include <iostream>
+int getint(){
+  return 42;
+}
+int f(int argc){
+  return (argc+1) * 2;
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    cout << endl;
+    cout << 12.3456789 << endl;
+    char ch;
+    char ch1;
+    cout << boolalpha;
+    cout << true << endl;
+    cout << false;
+    cout << showpos;
+    cout << 123456789 << endl;
+    cout << setprecision(6);
+    cout << 123456789.0 << endl;
+    cout << noshowpos;
+    cout << setw(10) << 100;
+    cout << left;
+    cout << 'A' << endl;
+    cout << center << 'A' << endl;
+    cout << right << 'A' << endl;
+    cout << endl;
+    cout << showbase;
+    cout << oct << 123456789 << endl;
+    cout << dec << 123456789 << endl;
+    cout << hex << 123456789 << endl;
+    cout << noshowbase;
+    cout << endl;
+    cout << setfill('*');
+    cout << 'A' << 'B' << 'C' << endl;
+    cout << nofill;
+    int a;
+    return a;
+}

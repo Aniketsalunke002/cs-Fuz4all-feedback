@@ -1,0 +1,8 @@
+#include <iostream>
+
+int main()
+{
+ int x = 2;
+ while(!(std::cin >> x));
+ std::cout << x << '\n';
+}

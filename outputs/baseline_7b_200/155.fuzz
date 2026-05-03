@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+class MyVector {
+    int *data;
+    size_type size;
+public:
+    typedef size_type size_type;
+    MyVector(size_type n)
+    {
+        cout << "Constructor Called\n";
+        data = new int[n];
+        size = n;
+    }
+    ~MyVector()
+    {
+        cout << "Destructor Called\n";
+        size_type i;
+        for (i=0; i < size; ++i)
+        {
+            delete []data;
+        }
+        delete []data;
+    }
+};
+
+int main()
+{
+    MyVector v(10);
+}
+

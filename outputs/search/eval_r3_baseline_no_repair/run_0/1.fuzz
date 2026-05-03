@@ -1,0 +1,10 @@
+#include <iostream>
+
+
+int main() {
+    auto v = std::vector<double>{1.0, 2., 3.};
+    for (auto n : v)
+        std::cout << n << " ";
+    std::cout << "\n";
+    return 0;
+}

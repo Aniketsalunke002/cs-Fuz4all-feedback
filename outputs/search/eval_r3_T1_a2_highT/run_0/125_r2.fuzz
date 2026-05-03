@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main() {
+    std::string ctest{"Hello World"};
+    ctest.append(", How are you?");
+    std::cout << ctest << "\n";
+    return 0;
+}
+/* write a program which creates an array of (char *) which grows */
+#include <iostream>
+int main() {
+    std::string ctest{"Hello World"};
+    ctest.append(", How are you?");
+    std::cout << ctest << "\n";
+    return 0;
+}

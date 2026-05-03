@@ -1,0 +1,16 @@
+#include <iostream>
+
+#include <iomanip>
+using namespace std;
+struct Base1 { int basemember; };
+class Derived1 : public Base1 {
+	int member;
+};
+void foo(Derived1* x) {
+	cout << x->basemember << setw(8) << left << x->member;
+}
+
+int main() {
+	Derived1 d1;
+	foo(&d1);
+}

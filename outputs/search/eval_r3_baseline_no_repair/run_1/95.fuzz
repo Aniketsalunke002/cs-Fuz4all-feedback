@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+const int N0 = 66;
+int main()
+{
+	cout<<"Hello, World! I am a mutated program! ";
+	cout<<"My mutation method was to modify the N0 constant!\n";
+	cout<<" N is equal to "<<N0<<" \n";
+	return 0; 
+
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main (){
+    int num = 5;
+    cout<<num<<endl;
+    num*=5;
+    cout<< num<<endl;
+    int number = num;
+    number-=9;
+    cout<<number<<endl;
+    num/=2;
+    cout<< num <<endl;
+    cout<<(num+2)<<endl;
+    cout<<(num+1+2)<<endl;
+    cout<<(3+2+num)<<endl;
+    return 0;
+    }
+       
+            

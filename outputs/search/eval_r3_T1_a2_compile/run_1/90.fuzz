@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int a=3,b=3,c=3;
+  a+=1;
+  b+=1;
+  c+=1;
+  cout<<a+b+c<<endl;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+int main() {
+  int a=3,b=3,c=3;
+  cout<<a+++b+++c++<<endl;
+  cout<<a+b+c<<endl;
+}
+

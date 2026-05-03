@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+class Test {
+public:
+  void f(){cout<<1<<endl;}
+};
+
+int main(int argc, char** argv){
+  int* p = new int;
+  (*p) = 2;
+  cout<<"2"<<endl;
+  Test* q = new Test;
+  return 0;
+}

@@ -1,0 +1,9 @@
+#include <iostream>
+using double_iter = std::vector<int>::iterator;
+int main(int argc, char *argv[]) {
+    std::vector<int> vec = {1, 2, 3};
+    double_iter it {vec.begin()};
+    it++;
+    it++;
+    std::cout << *it << "\n";
+}

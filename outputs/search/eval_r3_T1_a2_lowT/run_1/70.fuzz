@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << argc << " ";
+    int i = 2;
+    i = 5;
+    cout << "end of main\n";
+    return 0;
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+int main(void) {
+    std::cout << std::array<char, 10>()<< std::endl;  
+    for (int const i : std::array<int, 20>())
+    {
+        if (i < 0 || i >= 20)
+            continue;
+        int idx = i % 3;
+        if (idx == 0)
+            std::cout << "red";
+        else if (idx == 1)
+            std::cout << "green";
+        else
+            std::cout << "blue";
+        std::cout << std::endl;
+    }
+    return 0;
+}

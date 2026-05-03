@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char const *argv[])
+{
+  int y = 0;
+  int x = 0;
+  y = x + y;
+  y = x - y;
+  if (y!= x) {
+    cout << endl;
+    return 0;
+  } else {
+    cout << y;
+  }
+  return 0;
+}

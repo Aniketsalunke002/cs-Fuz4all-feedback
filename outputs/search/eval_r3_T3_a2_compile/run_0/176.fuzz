@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+void vector_usage(void) {
+  std::vector<int> v, v1(10, 0);
+  std::vector<int> v2(v1.begin(), v1.end());
+  std::vector<int> v3{10, 20, 30};
+  std::vector<int> v4{std::begin(v3), std::end(v3)};
+  std::vector<int> v5{v4.begin(), v4.end()};
+}
+int main(void) { vector_usage(); }

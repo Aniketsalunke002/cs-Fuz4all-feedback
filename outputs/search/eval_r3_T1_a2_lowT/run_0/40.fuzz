@@ -1,0 +1,9 @@
+#include <iostream>
+int main()
+{
+    int cint = std::cin.tie(0);
+    cint++;
+    std::cin.tie(cint);
+    return 1;
+}
+#pragma clang version reset

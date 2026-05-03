@@ -1,0 +1,66 @@
+#include <iostream>
+
+
+#include <vector>
+
+class A
+{
+  public:
+    void say(int k) const
+    {
+      std::cerr<<"A::say "<<k<<std::endl;
+    }
+};
+
+class B : public A 
+{
+  public:
+    void say(int k) const 
+    {
+      std::cerr<<"B::say "<<k<<std::endl;
+      A::say(k+1);
+    }
+};
+
+class C : public A
+{
+public:
+  C(const A& obj)
+  {
+    std::cerr<<"C::C" << obj.getval() << std::endl;
+  }
+
+  C(int k) : val1(k), val2(k)
+  {
+    std::cerr<<"C::C"<<std::endl;
+  }
+private:
+  int val1,val2;
+  void say(int k) const
+  {
+    std::cerr<<"C::say "<<k<<std::endl;
+  }
+};
+
+void print(const A& obj)
+{
+  printf("object says %d\n",obj.getval());
+  obj.say(obj.getval()+obj.getval());
+}
+
+int main()
+{
+  std::vector<A*> all;
+  B bobj;
+  all.push_back(&bobj);
+
+  print(bobj);
+
+  std::cerr<<"-----------------------------------------"<<std::endl;
+
+  all.push_back(new C(3));
+  all.push_back(new C(4));
+  all.push_back(new A());
+  for(auto &x:all)
+    print(*x);
+}

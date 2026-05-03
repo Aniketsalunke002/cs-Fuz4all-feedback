@@ -1,0 +1,47 @@
+fuzzing:
+  evaluate: false
+  log_level: 3
+  no_input_prompt: true
+  num: 200
+  otf: true
+  output_folder: ../fastd/fuzzall/FuzzAll/experiment/full_run/cpp/run
+  prompt_strategy: 2
+  resume: true
+  target_name: /usr/bin/g++
+  total_time: 48
+  use_hand_written_prompt: false
+llm:
+  batch_size: 4
+  device: cuda
+  max_length: 1024
+  model_name: bigcode/starcoderbase-7b
+  temperature: 1
+ollama:
+  additional_params:
+    repetition_penalty: 1.2
+    top_k: 50
+    top_p: 0.95
+  batch_size: 20
+  device: gpu
+  max_length: 512
+  model_name: ollama/starcoder
+  temperature: 0.7
+repair:
+  cache: true
+  enabled: true
+  error_gate: compile_error
+  include_stderr: true
+  max_attempts: 2
+  max_tokens: 512
+  temperature: 0.7
+  template_id: T3
+  timeout_sec: 3
+target:
+  input_hint: '#include <iostream>'
+  language: cpp
+  path_documentation: config/documentation/cpp/cpp_23.md
+  path_example_code: null
+  path_hand_written_prompt: null
+  target_string: ''
+  trigger_to_generate_input: /* Please create a very short program which uses new
+    C++ features in a complex way */

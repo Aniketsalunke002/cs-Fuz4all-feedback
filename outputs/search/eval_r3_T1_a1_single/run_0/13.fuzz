@@ -1,0 +1,29 @@
+#include <iostream>
+int main() {
+	 
+	color.rgb = {1, 0, 0};
+	 
+	void draw(color color){
+		 
+		 
+	}
+	draw(color);  
+	std::cout << "Hey look! this is cool!";
+	return 0;
+}
+ 
+#include <iostream>
+#include <utility>
+void draw(std::pair<void*, int> colorInfo){
+	if (colorInfo.second == 3){
+		 
+	} else {
+		 
+	}
+}
+int main(){
+	void * red = static_cast<void*>(static_cast<int*>(&1));
+	colorInfo_red = {red, 2};
+	draw(colorInfo_red);
+	return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    cout << (int)pow((double)(3.141592653589793)/2.0, (double)2) << endl;
+    cout << pow((double)(3.141592653589793)/2.0, (double)2) << endl; 
+    cout << pow((double)(6.283185307179586)/2.0, (double)2) << endl;
+    cout << pow((double)(2.0*3.141592653589793)/2.0, (double)2) << endl;
+    return 0;
+}

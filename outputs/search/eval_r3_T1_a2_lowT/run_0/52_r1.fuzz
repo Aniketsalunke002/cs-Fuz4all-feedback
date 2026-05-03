@@ -1,0 +1,49 @@
+#include <iostream>
+
+void do_it()
+{
+    std::ios_base::sync_with_stdio(false);
+}
+int main()
+{
+    do_it();
+    std::cout << std::cout.sync_with_stdio(0) << std::endl;
+}
+
+// #include <iostream>
+// int main()
+// {
+//     std::cout << std::cout.sync_with_stdio(1) << std::endl;
+// }
+#include <iostream>
+void do_it()
+{
+    std::ios_base::sync_with_stdio(false);
+}
+int main()
+{
+    do_it();
+    std::cout << std::cout.sync_with_stdio(0) << std::endl;
+}
+
+// #include <iostream>
+// int main()
+// {
+//     std::cout << std::cout.sync_with_stdio(1) << std::endl;
+// }
+#include <iostream>
+void do_it()
+{
+    std::ios_base::sync_with_stdio(false);
+}
+int main()
+{
+    do_it();
+    std::cout << std::cout.sync_with_stdio(0) << std::endl;
+}
+
+// #include <iostream>
+// int main()
+// {
+//     std::cout << std::cout.sync_with_stdio(1) << std::endl;
+// }

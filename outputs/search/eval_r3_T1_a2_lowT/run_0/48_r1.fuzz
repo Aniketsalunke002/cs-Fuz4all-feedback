@@ -1,0 +1,36 @@
+#include <iostream>
+
+void do_it()
+{
+    std::cout << "Hello, World!";
+}
+int main(int argc, char *argv[])
+{
+    do_it();
+    std::cout << std::endl;
+}
+//  
+// #include <iostream>
+// void do_it()
+// {
+//     float first, second;
+//     std::cin >> first >> second;
+//     std::cout << std::max(first, second) << std::endl;
+//     std::cout << *std::max_element({first, second}) << std::endl;
+//     std::cout << *std::max_element(first, second) << std::endl;
+//     std::cout << std::cout << *std::max_element(std::max(first, second)) << std::endl;
+// }
+// int main(int argc, char *argv[])
+// {
+//     do_it();
+// }
+//  
+// #include <iostream>
+// void do_it()
+// {
+//     long int first, second, third;
+//     std::cin >> first >> second >> third;
+//     std::cout << std::max({first, second, third}) << std::endl;
+//     std::cout << *std::max_element({first, second, third}) << std::endl;
+//     std::cout << *std::max_element(first, second, third) << std::endl;
+//     std::cout << std::cout << *std::max_element(std::max(first, second), third) << std

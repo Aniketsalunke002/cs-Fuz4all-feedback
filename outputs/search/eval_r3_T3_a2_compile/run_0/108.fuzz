@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+   void fun()
+   {
+   static int a = 1;
+     if (a == 1){ a = a+1;}else{ a = a/5;}
+     cout << a << endl;
+   }
+   int main()
+   {
+    fun(); fun();fun();
+    return 0;
+   }
+    
+   #include<iostream>
+using namespace std;
+int main()
+{
+  int * a = new int;
+  delete a;
+  return 0;
+}
+16. PLEASE DESIGN AND IMPLEMENT A PROGRAM WHICH 
+IMPLEMENTS THE FARMER ASIAN TRADING SYSTEM */
+    
+
+

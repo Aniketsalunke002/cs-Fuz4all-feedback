@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int arr(3);
+    arr[0] = 20;
+    arr[1] = 19;
+    arr[2] = 18;
+    for(int iter = 0; iter<3; iter++) {
+        cout<<arr[iter];
+    }
+    return 0;
+}

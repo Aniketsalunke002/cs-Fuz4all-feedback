@@ -1,0 +1,13 @@
+#include <iostream>
+
+
+template <typename T>
+void world(T i)
+{
+	std::cout << i << std::endl;
+	world(i);
+}
+
+int main() {
+	world("Hello world");
+}

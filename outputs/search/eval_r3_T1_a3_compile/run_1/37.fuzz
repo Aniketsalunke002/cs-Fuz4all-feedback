@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 3, b = -1;
+	a += b;
+	cout << "Test: " << a << endl;
+	int* ip = &a;
+	int test = *ip + *ip;
+	ip = nullptr;
+	*ip = *ip + *ip;
+	ip = nullptr;
+	cout << "Test: " << test << endl;  
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 3, b = -1;
+	a += b;
+	bool test = false;
+	int* ip = &a;
+	int* jp = &b;
+	int test = static_cast<int>(*ip + *jp);
+	ip = nullptr;
+	jp = nullptr;
+	cout << "Test: " << test << endl;
+	return 0;
+}

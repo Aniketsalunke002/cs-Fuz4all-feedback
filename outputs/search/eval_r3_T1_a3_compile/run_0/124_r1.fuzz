@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main()
+{
+
+    int a = 0;
+    int b = ++a;
+    std::cout << "Hello, " << b << "! I am so hungry\nMy last meal was made using " << a << " bread.\n";
+    return 0;
+}

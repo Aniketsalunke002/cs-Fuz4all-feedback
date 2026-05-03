@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+#include <memory>
+#include <iostream>
+using namespace std;
+class Hello {
+public:
+    int a = 77;
+    string b{"hello"};
+    Hello(int i, string s) : a(i), b(s) { }
+    void set(int i, string s) {
+        a = i;
+        b = s;
+    }
+    void print() { cout << a << " " << b << endl; }
+};
+
+int main() {
+    unique_ptr<Hello> p{ new Hello{1, "hi there"} };  
+    p->set(1, "hi again");  
+
+    unique_ptr<Hello> p2;  
+    Hello *p3{ new Hello{1, "world"} };
+    p2 = unique_ptr<Hello>(p3);  
+    cout << p->a << endl;  
+}
+
+#include <iostream>
+using namespace std;
+#include <memory>
+#include <iostream>
+using namespace std;
+class Hello {
+public:
+    int a = 77;
+    string b{"hello"};
+    Hello(int i, string s) : a(i), b(s) { }
+    void set(int i, string s) {
+        a = i;
+        b = s;
+    }
+    void print() { cout << a << " " << b << endl; }
+};
+
+int main() {
+    unique_ptr<Hello> p{ new Hello{1, "hi there"} };  
+    p->set(1, "hi again");  
+
+    unique_ptr<Hello> p2;  
+    Hello *p3{ new Hello{1, "world"} };
+    p2 = unique_ptr<Hello>(p3);  
+    cout << p->a << endl;  
+    
+}

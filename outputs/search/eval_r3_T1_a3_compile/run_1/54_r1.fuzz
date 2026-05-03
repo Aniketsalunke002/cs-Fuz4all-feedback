@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+	int i;
+	int j = i+1, k = i+2;
+	i = 22;
+	j = 33;
+	k = 44;
+	cout << j << " " << k << " " << i << endl;
+	return 0;
+}

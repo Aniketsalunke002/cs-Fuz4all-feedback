@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int count=0;
+int a=0;
+volatile int *p=&a;
+__attribute__ ((noinline)) int func() {
+	 return *p++;
+}
+int main()
+{
+     while(count<100e3)
+          count += func();
+     cout << a << endl;
+}

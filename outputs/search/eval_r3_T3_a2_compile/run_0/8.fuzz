@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
+#include <numeric>
+int main() {
+	int a[] = {1, 2, 3, 4};
+	int result = std::accumulate(a, a+4, 0);
+	cout << result << endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
+int max_distance(int n) {
+	vector<pair<double, double>> points(n);
+	int t = 0;
+	double x, y, max_x = numeric_limits<double>::min();
+
+	for (int i = 0; i < n; ++i) {
+		cin >> x >> y;
+		points[i] = make_pair(x, y);
+		t = max({t, abs(points[i].first), abs(points[i].second)});
+		max_x = max({max_x, points[i].first});
+	}
+
+	t = max(t, max(abs(max_x)+0.5, 1));
+	return t;
+}
+int main() {
+	cout << max_distance(2);
+	return 0;
+
+}
+ 
+#include <vector>
+#include <iostream>
+#include <limits>
+using namespace std;
+int make_all_equal(vector<int> nums, int n) {
+
+	int result = 0;
+	int m = 0;
+	int min_value = numeric_limits<int>::max();
+	for (int i = 0; i < n; ++i) {
+		min_value = min(min_value, nums[i]);
+		m = max(m, nums[i]);
+	}
+
+	for (int i = 1; i < 100; ++i) {
+		if (m % i == 0) {
+			int value = m / i;
+
+			if (value <= min_value) {
+				if (abs(value - min_value) < abs(result)) {
+					result = i;
+				}
+			}
+
+		}
+	}
+	return result;
+
+}
+int main() {
+	int n;
+	cin >> n;
+	if (n < 2 || n > 100000) {
+		cout << "WRONG INPUT";
+	}
+
+	else {
+		vector<int> nums(n);
+		for (int i = 0; i < n; ++i) {
+			cin >> nums[i];
+
+		}
+
+		cout << make_all_equal(nums, n)  << endl;
+	}
+
+	return 0;
+}
+ 
+#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <ctime>
+#include <cstdlib>
+#include <iomanip>
+#include <algorithm>
+#include <

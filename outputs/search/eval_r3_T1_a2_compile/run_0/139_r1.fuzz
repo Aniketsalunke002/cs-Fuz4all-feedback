@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+    int sum{};
+    for (int i = 0; i <= 30; i += 3) {
+        for (int j = 1; j <= 20; j += 2) {
+            int mult{i * j};
+            sum += mult;
+            std::cout << "The product is " << mult << std::endl;
+        }
+        std::cout << "The sum calculated till now is " << sum << std::endl;
+        sum = 0;
+        std::cout << "A new line" << std::endl;
+    }
+}

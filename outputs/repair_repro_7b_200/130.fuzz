@@ -1,0 +1,123 @@
+#include <iostream>
+#include <mutex>
+#include <condition_variable>
+std::mutex m1;
+std::condition_variable cv;
+
+void foo(int &a) {
+    std::unique_lock<std::mutex> locker(m1);
+    cv.wait(locker, [&] {return a == false;});
+    std::cout << "Done" << std::endl;
+}
+int main()
+{
+    bool a = false;
+    std::thread t(foo, std::ref(a));
+    foo(a);
+    t.join();
+    return 0;
+}
+ 
+#include <iostream>
+#include <mutex>
+#include <condition_variable>
+std::mutex mtx;
+std::unique_lock<std::mutex> rLock(mtx);
+std::condition_variable con;
+std::thread th([&] {
+    rLock.unlock();
+    con.notify_one();
+});
+bool condition = false;
+rLock.lock();
+std::cout << condition << std::endl;
+con.wait(rLock,[] { return condition; });
+th.join();
+std::cout << condition << std::endl;
+ 
+#include <iostream>
+#include <thread>
+#include <vector>
+#include <mutex>
+#include <condition_variable>
+#define MAX_VALUE 10
+class Buffer
+{
+public:
+    void put(int i)
+    {
+        std::unique_lock<std::mutex> locker(mtx);
+        while (isFull())
+        {
+            full.wait(locker);
+        }
+        data.push_back(i);
+        data_amount.notify_all();
+    }
+    void get()
+    {
+        std::unique_lock<std::mutex> locker(mtx);
+        while (isEmpty())
+        {
+            empty.wait(locker);
+        }
+        data.pop_back();
+        data_amount.notify_all();
+    }
+    int dataPeek(const int pos)
+    {
+        std::unique_lock<std::mutex> locker(mtx);
+        while (pos > size() || pos < 0)
+            return 1000000000;
+        return data[pos];
+    }
+    const int peek()
+    {
+        std::unique_lock<std::mutex> locker(mtx);
+        data_amount.wait(locker);
+        return data.back();
+    }
+    const int size() const
+    {
+        return data.size();
+    }
+    void isEmpty(bool& st) const
+    {
+        std::unique_lock<std::mutex> locker(mtx);
+        if (data.size() == 0)
+            st = true;
+        else
+            st = false;
+    }
+    void isFull(bool& st) const
+    {
+        std::unique_lock<std::mutex> locker(mtx);
+        if (data.size() == MAX_VALUE)
+            st = true;
+        else
+            st = false;
+    }
+    Buffer(): max_size(MAX_VALUE), data_amount(mtx)
+    {
+    }
+    void setMaxSize(const int size)
+    {
+        max_size = size;
+    }
+private:
+    bool isEmpty()
+    {
+        if (data.size() == 0)
+            return true;
+        else
+            return false;
+    }
+    bool isFull()
+    {
+        if (data.size() == max_size)
+            return true;
+        else
+            return false;
+    }
+    const int MAX_SIZE;
+    std

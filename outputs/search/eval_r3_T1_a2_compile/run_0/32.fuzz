@@ -1,0 +1,13 @@
+#include <iostream>
+#include <cmath>
+#include <vector>
+template <typename T>
+void world(T i)
+{
+	std::pow(std::cos(std::sqrt(std::log(std::sin(std::ceil(f(3.0)))))));
+	std::cout << i << std::endl;
+	world(i);
+}
+int main() {
+	world("Hello world");
+}

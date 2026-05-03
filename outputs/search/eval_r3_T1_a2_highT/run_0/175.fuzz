@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class A
+{ public: A(); };
+class B : public A
+{ public: B(); };
+class C;
+
+static int count = 0;
+class C : public A
+{
+public:
+  C() { count++; }
+  ~C() { count--; }
+};
+
+A::A()
+{
+   
+}
+
+B::B()
+{
+  ++count;
+  cout << "called B::B() count = " << count << "\n";
+
+  C c;
+}
+int main()
+{
+  B b;
+  return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int *p = new int(10);
+}

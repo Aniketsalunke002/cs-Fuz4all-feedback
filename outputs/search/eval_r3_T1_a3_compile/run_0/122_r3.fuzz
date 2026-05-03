@@ -1,0 +1,23 @@
+#include <iostream>
+
+#include <fstream>
+#include <string>
+
+int main(int argc, char** argv) {
+  std::string file_path;
+  if (argc > 1) {
+    file_path = argv[1];
+  } else {
+    std::cout << "Input file path: ";
+    std::cin >> file_path;
+  }
+  std::ifstream file(file_path);
+  if (!file.is_open()) {
+    std::cerr << "Can not read file: " << file_path << std::endl;
+    std::cin.get();
+    return 1;
+  }
+  unsigned words_count = 1;
+  std::string word;
+  std::unordered_map<std::string, int> count;
+  while (

@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+static void function1()
+{
+    cout << "This is inside function1()\n";
+}
+static int function2()
+{
+    cout << "This is inside function2()\n";
+    return 0;
+}
+class TestClass
+{
+public:
+static void publicMemberFunction()
+{
+    cout << "This is inside publicMemberFunction()\n";
+}
+int privateMemberFunction(int x)
+{
+    cout << "The value x received is: ";
+    cout << x << endl;
+    if (x < 0)
+      cout << "X is negative" << endl;
+            return 0;
+}
+};
+void Test()
+{
+     
+    TestClass testobject;
+    testobject.publicMemberFunction();
+    int result = testobject.privateMemberFunction(3);
+    if (result == 0)  // not needed if privateMemberFunction returns an integer
+      
+
+    TestClass::publicMemberFunction();
+     function1();   
+    function2();   
+    TestClass::function1();   
+    TestClass::function2();   
+}
+     int main()
+     {
+         cout << "Hello Bamboo" << endl;
+         Test();
+         return 0;
+     }

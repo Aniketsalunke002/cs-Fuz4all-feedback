@@ -1,0 +1,103 @@
+#include <iostream>
+ int main()
+ {
+  int a = 44;
+  int b = a + 60;
+  return 0;
+ }
+ 
+ 
+#include <iostream>
+ class Main
+ {
+   struct Number
+   {
+     float a[3];
+     int getval();
+     void printval();
+   };
+  private:
+   Number val;
+  public:
+   void setval(int k);
+ };
+ int intgetvalue(){return 1;}
+ void Main::printval(){
+   std::cout << "value: " << val.getval() << '\n';
+ }
+ int Main::Number::getval()
+ {
+   return *a;
+ }
+ void Main::Number::printval()
+ {
+   std::cout << "value: " << val.a[0] << '\n';
+ }
+ int main(int argc, char **argv)
+ {
+   float i[] = {1.0f};
+   i[0] = 4.0f;
+   std::cout << i[0] << '\n';
+   Main mn;
+   mn.setval(88);
+   std::cout << i[0] << '\n';
+ } 
+ 
+#include <iostream>
+ namespace a
+ {
+  class Class
+  {
+  public:
+    void print1(int data)
+    {
+      std::cout << "Class print1: " << data << '\n';
+    }
+  };
+ }
+ void Main::printval()
+ {
+   std::cout << "value: " << val.a[0] << '\n';
+ }
+int main() { a::Class c; c.print1(22); } 
+int main() { a::Class c; }
+#include <iostream>
+ void Class::print(int data)
+ {
+   std::cout << "Class print1: " << data << '\n';
+ }
+ int main() { a::Class c; c.print(22); } 
+ 
+#include <iostream>
+ class Grandparent
+ {
+public:
+  Grandparent(int i=-1){}
+   virtual void print();
+ };
+ class Parent : public Grandparent
+ {
+  public:
+   int i;
+   Parent(int n) : Grandparent(n), i(n){}
+   void print();
+ };
+ class Child : public Parent
+ {
+  public:
+   Child (int n) : Parent(n) {}
+   void print()
+   {
+     std::cout << "Child print()" << i << '\n';
+   }
+ };
+ int main() { Child b(2); b.print(); }
+ void Grandparent::print ()
+ {
+    std::cout << "print1()" << '\n';
+ }
+ void Parent::print()
+ {
+   Grandparent::print();
+   std::cout << "print2()" << i << '\n';
+ }

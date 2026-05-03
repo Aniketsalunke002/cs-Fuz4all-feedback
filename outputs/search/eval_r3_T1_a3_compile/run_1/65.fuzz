@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+double getFoo(int x, int y) {
+	return x - (y / 3.0);
+}
+int main(int argc, char* argv[]) {
+	int x = 1, y = 2;
+	double foo = getFoo(x, y);
+	cout << foo;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int x = 5;
+	while (x > 0) {
+		if (x % 2 == 1) {
+			x += 2;
+		}
+		else {
+			x /= 2;
+		}
+	}
+	cout << x;
+	return 0;
+}
+

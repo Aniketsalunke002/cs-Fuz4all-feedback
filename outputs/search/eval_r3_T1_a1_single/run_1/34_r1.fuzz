@@ -1,0 +1,17 @@
+#include <iostream>
+
+
+template<typename T>
+class TemplatedFoo {
+
+};
+
+void test()
+{
+	TemplatedFoo<int> a;
+}
+
+int main() {
+	test();
+	return 0;
+}

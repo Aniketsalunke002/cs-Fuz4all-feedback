@@ -1,0 +1,12 @@
+#include <iostream>
+#include<cmath>
+#include<complex>
+
+double a = 1/9;
+double b = sqrt(2);
+int n = 12;
+complex<double> z = a+complex<double>::zero()I;
+complex<double> z0 = z^double(n);
+complex<double> z1 = z^complex(2.,2);
+cout<<z0<<endl;
+return 0;

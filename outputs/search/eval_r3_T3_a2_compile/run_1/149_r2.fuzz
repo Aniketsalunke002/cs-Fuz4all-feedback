@@ -1,0 +1,32 @@
+#include <iostream>
+
+#include <vector>
+#include <stdlib.h>  
+#include <string>
+
+template <typename T>
+class Cell {
+public: 
+  T c;
+  T f;
+
+  Cell (T a = 0, T b = 0) : c(a), f(b) {};
+
+  template <typename U>
+  friend std::ostream& operator <<( std::ostream& os, Cell<U> &obj1 ) {
+	os << obj1.c <<'' << obj1.f << '\n';
+  }
+};
+
+template <typename T>
+Cell<T> * cells = new Cell<T>;
+
+int main(int argc, char * argv[]) {
+  cells<int> -> c = 4; 
+  cells<int> -> f = 5; 
+
+  std::cout << *cells<int> << '\n';
+  cells<int> -> c = 08;  
+  cells<int> -> f = cells<int> -> c;  
+  std::cout << *cells<int> << '\n';
+}

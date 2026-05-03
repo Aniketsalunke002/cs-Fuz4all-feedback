@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int i;
+  bool j;
+  float l;
+  double m;
+  const char *cp;
+  i=1;
+  j=true;
+  l=1;
+  m=1;
+  cp="Hello";
+  if (i > 0 && j)
+    cp="Hi";  
+  else if (j && l)
+  {
+    cp="By

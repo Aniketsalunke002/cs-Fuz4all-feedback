@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int i = 0;
+	int b = i;
+	i++;
+	while(i <5) {
+	  cout<<i<<'\t';
+	  b = i;
+	  i++;
+		}
+	i=-2;
+	cout<<"\n\n\n"<<b;
+}	

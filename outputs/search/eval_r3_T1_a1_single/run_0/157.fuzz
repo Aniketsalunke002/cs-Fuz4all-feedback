@@ -1,0 +1,6 @@
+#include <iostream>
+int main() {
+  int data[64];
+  std::cout << data[0];
+  return 0;
+}

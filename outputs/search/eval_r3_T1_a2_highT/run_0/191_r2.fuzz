@@ -1,0 +1,43 @@
+#include <iostream>
+
+using namespace std;
+class A
+{
+  public:
+    A()
+    {
+      i = 10;
+    }
+    void Print()
+    {
+      cout << i;
+    }
+    int Inc()
+    {
+      i++;
+      return i;
+    }
+  private:
+    int i;
+};
+int main()
+{
+  A obj1 = A();
+  obj1.Print();
+  cout << endl;
+  return 0;
+}
+int main()
+{
+  A obj1 = A();
+  obj1.Print();
+  cout << endl;
+  obj1.Inc();
+  return 0;
+}
+int get_num()
+{
+  return 10;
+}
+// 
+/* vim:set shiftwidth=2 softtabstop=2 expandtab: */

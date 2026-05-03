@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    int x = 10;
+    x = 20;
+    int y = 20;
+    y = 40;
+    cout << x << endl;
+    x = 30;
+ }
+  
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    int x = 10;
+    x = 20;
+    int y = 20;
+    y = 40;
+    char * result = (x

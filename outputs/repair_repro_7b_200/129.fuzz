@@ -1,0 +1,43 @@
+#include <iostream>
+#include <exception>
+#include <chrono>
+#include <mutex>
+#include <queue>
+static int i = 0;
+class my_exception : public std::exception {
+};
+int main() {
+    std::cout << std::endl;
+    std::cout << "Enter an end time (secs.)? ";
+    int n;
+    std::cin >> n;
+    std::cout << std::endl;
+    std::mutex q_mutex;
+    std::thread t([n]{
+        try {
+            while (i < n) {
+                std::unique_lock<std::mutex> locker(q_mutex);
+                int c{i};
+                std::cout << c << std::endl;
+                ++i;
+                cv.notify_all();
+                std::this_thread::sleep_for(std::chrono::seconds(1));
+                if (c<n/2) {
+                    throw my_exception();
+                }
+            }
+        } catch (my_exception& me) {
+        }
+    });
+    while (i<n) {
+        std::unique_lock<std::mutex> locker(q_mutex);
+        while (i<n) cv.wait(locker);
+    }
+    i = 0;
+    try {
+        t.join();
+    } catch (std::exception& e) {
+        std::cout << e.what() << std::endl;
+    }
+    return 0;
+}

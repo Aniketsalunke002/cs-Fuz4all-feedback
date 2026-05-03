@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int i=5;
+  int l=0;
+  i = i + 127;
+  l = l - 1;
+  if ((i > 0) && l >= 0 || (i > 0) + l>=0) 
+  i = i + 147;
+  else
+    l = l - 4;
+  i=i+l;
+  if (i>0 || l > 0)
+    cout << i << endl;

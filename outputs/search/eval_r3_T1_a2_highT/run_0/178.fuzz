@@ -1,0 +1,21 @@
+#include <iostream>
+#include <vector>
+#include <memory>
+using namespace std;
+class Test {
+public:
+  virtual void Test1() = 0;
+};
+class Test2 : public Test {
+public:
+  void Test1() {
+    cout << "Test1" << endl;
+  }
+};
+int main(int argc, char const *argv[])
+{
+  Test *pTest = new Test2();
+  ((Test2 *)pTest)->Test1();
+  delete pTest;
+  return 0;
+}

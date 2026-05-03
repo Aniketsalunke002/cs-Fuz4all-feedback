@@ -1,0 +1,7 @@
+#include <iostream>
+    int factorial();
+int main(int argc, char **argv) {
+    int number = 3;
+    std::cout << factorial(number);
+    return 0;
+}

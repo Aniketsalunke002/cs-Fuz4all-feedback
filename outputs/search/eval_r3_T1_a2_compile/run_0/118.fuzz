@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+class A {
+ public:
+  int x;
+};
+int main() {
+  A x;
+  x.x = 4;
+  return 0;
+}

@@ -1,0 +1,51 @@
+#include <iostream>
+int main(int argc, char **argv) {
+char x[] = {'a'};
+std::cout << x;
+	return 0;
+}
+ 
+class User {
+	private:
+		int id;
+		char gender;
+	public:
+		User(int id, char gender);
+		void displayInfo();
+};
+
+User::User(int id, char gender)
+{
+	User::id = id;
+	User::gender = gender;
+}
+
+User::displayInfo()
+{
+	std::cout << "ID: " << id << ", Gender: " << gender << "\n";
+}
+
+int main() {
+	User u(1, 'M');
+	u.displayInfo();
+	return 0;
+}
+ 
+#include <iostream>
+#include <exception>
+
+int main() {
+	
+	try {
+		char *p = new char [6];
+		for (int i = 0; i < 6; i++) {
+			p[i] = 'a' + i;
+		}
+		p[6] = 0;
+		printf("Dynamic array: %s", p);
+		delete p;
+	} catch (std::exception &ex) {
+		std::cout << ex.what();
+	}	
+	return 0;
+}

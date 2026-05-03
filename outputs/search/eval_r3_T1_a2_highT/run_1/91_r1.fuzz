@@ -1,0 +1,34 @@
+#include <iostream>
+
+#include <vector>
+#include <set>
+#include <algorithm>
+#include <cstdlib>
+#include <queue>
+#include <cstring>
+
+struct Gene{
+	int id;
+	int generation;
+	int fitnessScore;
+	int a;
+	int b;
+	bool c[2];
+	Gene(bool c0,bool c1,int a_x, int a_y,int g,int i,int b){
+		c[0] = c0;
+		c[1] = c1;
+		a = a_x;
+		b = a_y;
+		generation = g;
+		id = i;
+		fitnessScore = b;
+	}
+	Gene mutated(){
+		Gene *a1;
+		a1 = new Gene(c[0],c[1], a,b,generation,id,fitnessScore);
+		int r = (std::rand()%(c[0] + c[1]));
+		if(r == c[0]){
+			r = 0;
+			a1->c[0] = true;
+		} else{
+			a1->c[1] = true;

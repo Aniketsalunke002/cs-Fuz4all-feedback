@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int x = 1;
+  if (true) {
+    x = 0;
+  }
+  return 0;
+}
+ 
+#include <iostream>
+#include <iostream>
+using namespace std;
+int main() {
+  int x [10];
+  x = new int[10];
+  x[0] = 1;
+  delete [] x;
+  return 0;
+}
+ 
+
+ 

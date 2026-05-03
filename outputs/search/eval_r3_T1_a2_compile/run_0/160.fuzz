@@ -1,0 +1,9 @@
+#include <iostream>
+ 
+int main() {
+    int i = 4;
+    cout << "The value of i is " << i << endl;
+    int j = (i += 3) * 2;
+    cout << "The value of i is " << i << ", the value of j is" << j << endl;
+    return 0;
+}

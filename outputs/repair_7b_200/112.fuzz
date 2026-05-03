@@ -1,0 +1,12 @@
+#include <iostream>
+int main() {
+    auto a = new int{};
+    return 0;
+}
+ 
+#include <iostream>
+int main() {
+    int a { };
+    return 0;
+}
+

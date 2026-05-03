@@ -1,0 +1,19 @@
+#include <iostream>
+
+ 
+
+using namespace std;
+
+template<typename T, typename U>
+T& foo(T& t, U&& u)
+{
+    t += forward<U>(u);
+    return t;
+}
+
+int main()
+{
+     
+    int x = 100;
+    int y = foo(x, 50);
+}

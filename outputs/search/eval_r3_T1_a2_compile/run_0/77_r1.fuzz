@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+int reverse(int num)
+{
+  int quotient = 0, temp;
+  while(num!= 0)
+  {
+    temp = quotient * 10 + num % 10;
+    if(temp / 10!= quotient)
+      return 0;
+    quotient = temp;
+    num /= 10;
+  }
+  return quotient;
+}

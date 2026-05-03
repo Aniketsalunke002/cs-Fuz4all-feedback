@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int val = 5;
+    int * aval = &val;
+    cout << "Address assigned to aval : " << aval << endl;
+    int &bval = val;
+    cout << "bval is :" << bval << endl;
+    int v = 23;
+    auto cval1 = v;
+    int &cval2 = v;
+    auto &cval3 = (int &)(v);
+    auto *cval4 = v;
+    return 0;
+}
+#include <iostream>
+#include <chrono>
+
+using namespace std;
+
+struct Car{
+    Car() : fuel(0.0){}
+    double fuel;
+};
+
+int main()
+{
+    int s = 10;
+    int &r = s;
+    auto t0 = std::chrono::system_clock::now();
+    do {
+        --r;
+    } while (r > 0);
+    Car c{};
+    Car& cr = c;
+    auto t1 = std::chrono::system_clock::now();
+    do {
+        --cr.fuel;
+    } while (cr.fuel > 0);
+    auto t2 = std::chrono::system_clock::now();
+    auto f0 = std::chrono::duration_cast<std::chrono::nanoseconds>(t1 - t0).count();
+    auto f1 = std::chrono::duration_cast<std::chrono::nanoseconds>(t2 - t1).count();
+    cout << "Normal method is " << f0 << " nanoseconds" << endl;
+    cout << "Ref method is " << f1 << " nanoseconds" << endl;
+    system("pause");
+}

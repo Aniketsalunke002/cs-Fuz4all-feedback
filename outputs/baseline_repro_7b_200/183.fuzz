@@ -1,0 +1,115 @@
+#include <iostream>
+int c = 2;
+int main()
+{return 1;}
+return 1;
+}
+"""
+        clang_flags = [
+            '-Werror=tautological-constant-out-of-range-compare',
+            '-Werror=parentheses']
+        self.flags = clang_flags + ['-std=c++1z', '-fno-inline']
+        self.cflags = clang_flags + ['-std=c11', '-fno-inline']
+        self.build()
+        self.verify("main", "int main() { return 1; };", exe=False)
+        self.verify(
+            "main",
+            """
+#include <iostream>
+#include <algorithm>
+#include <vector>
+int main()
+{int c = 2;
+unsigned uc = c;
+(void) uc;
+int v = 0;
+std::vector<int> v2(v);
+return 0;}
+""",
+            exe=False)
+
+    def test_cpp1z_features(self):
+        """
+        Test C++17 and later features
+        """
+        src = """ 
+#include <iostream>
+#include <vector>
+#include <range/v3/all.hpp>
+int main()
+{
+     
+    auto v = {1, 2, 3};
+    for(auto x : ranges::views::iota(10) | ranges::views::cyclic)
+    {
+        std::cout << x << " " ;
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
+"""
+
+        extra_flags = ['-std=c++17', '-fno-inline']
+        self.flags = extra_flags + ['-std=c++1z', '-fno-inline']
+        self.cflags = extra_flags + ['-std=c11', '-fno-inline']
+        self.build()
+        self.run_exe("main", src)
+        self.verify("main", src, exe=False)
+        self.run_exe("main", src)
+
+    def test_cxx_features_cxx_std_11(self):
+        """
+        Test -std=c++11 and later features
+        """
+        src = """ 
+#include <iostream>
+#include <algorithm>
+#include <vector>
+class C { int d; };
+int main()
+{int c = 2;
+unsigned uc = c;
+(void) uc;
+ 
+ 
+ 
+ 
+ 
+ 
+c? std::cout << "true" : std::cout << "false";
+int v = 0;
+std::vector<int> v2(v);
+typename C::d = 1;
+typename static_assert(false, "should not see this!");
+return 0;}
+"""
+
+        self.flags = ['-std=c++11', '-fno-inline']
+        self.cflags = ['-std=c11', '-fno-inline']
+        self.build()
+        self.run_exe(
+            "main",
+            """
+#include <iostream>
+#include <algorithm>
+#include <vector>
+int main()
+{int c = 2;
+unsigned uc = c;
+(void) uc;
+c? std::cout << "true" : std::cout << "false";
+int v = 0;
+std::vector<int> v2(v);
+typename std::initializer_list<int> ii = {1, 2, 3};
+return 0;}
+""")
+        self.run_exe("main", src)
+        self.verify("main", src, exe=False)
+        self.run_exe("main", src)
+
+    def test_cxx_features_cxx_std_17(self):
+        """Test -std=c++17 and later features"""
+        src = """ 
+#include <variant>
+template

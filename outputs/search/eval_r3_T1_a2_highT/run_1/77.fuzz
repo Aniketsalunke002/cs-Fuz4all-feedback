@@ -1,0 +1,28 @@
+#include <iostream>
+void foo(int x)
+{
+	auto *y = &x;
+	y = x * 2;
+}
+
+int main()
+{
+	int x{5};
+	foo(x);
+	std::cout << x << '\n';
+	return 0;
+}
+ 
+#include <iostream>
+void foo(int *x)
+{
+	x *= 2;
+}
+
+int main()
+{
+	int x{5};
+	foo(&x);
+	std::cout << x << '\n';
+	return 0;
+}

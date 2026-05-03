@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+int number = 5;
+cout<<number<<endl;
+number*=5;
+cout<<number<<endl;
+number-=9;
+cout<<number<<endl;
+number/=2;
+cout<<number<<endl; 
+cout<<(number+=2)<<endl;
+cout<<(number+=1+2)<<endl;
+cout<<(3+2+number)<<endl;
+return 0;
+}
+
+// #include <iostream>
+// using namespace std;
+// int main() {
+// int number = 5;
+// cout<<(string)"This is printing the value: "<<number<<endl;
+// cout<< "This is printing the value: "<<number<<endl;
+// number*=5;
+// cout<< "This is printing the value: "<<number<<endl;
+// cout<< "This is printing the value: "<<number<<endl;
+// number-=9;
+// cout<< "This is printing the value: "<<number<<endl;
+// cout<<  "This is printing the value: "<<number<<endl;
+// return 0;
+// }
+
+// #include <iostream>
+// using namespace std;
+// int main() {
+// int number = 5;
+// cout<<(string)"This is printing the value: "<<number<<endl;
+// cout<< "This is printing the value: "<<number<<endl;
+// number*=5;
+// cout<< "This is printing the value: "<<number<<endl;
+// cout<< "This is printing the value: "<<number<<endl;
+// number-=9;
+// cout<< "This is

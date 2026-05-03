@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+int foo()
+{
+    int a[] = {1,2,3,4,5};
+    int b[] = {6,7,8,9,10,11,12};
+    int c[] = {*(a+2),*(b+2),*(a+4),*(a+1),*(b+1),*(b+3)};
+    int d = *(c+1) * 2;
+    return a[b[c[d]]];
+}
+int main(int argc, char** argv)
+{
+    cout << foo() << endl;
+    cout << "end of main" << endl;
+    return 0;
+}
+
+//  
+// package main
+// import "fmt"
+// func main() {
+//     fmt.Println("main");
+//     a := [5]int{1,2,3,4,5}
+//     b := [7]int{6,7,8,9,10,11,12}
+//     c := [6]int{a[2],b[2],

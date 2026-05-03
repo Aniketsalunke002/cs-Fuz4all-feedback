@@ -1,0 +1,15 @@
+#include <iostream>
+int main(int argc, char** argv)
+{
+    int a, b, c;
+    cin >> a >> b >> c;
+    if (a!= c)
+    {
+        if (a % c > 0 && a / c % b == 0)
+            cout << "YES: " << a/c-b;
+        else
+            cout << "NO";
+    }
+    else
+        cout << "NO";
+}

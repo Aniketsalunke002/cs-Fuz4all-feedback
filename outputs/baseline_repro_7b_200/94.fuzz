@@ -1,0 +1,9 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+    int z;
+    int *w;
+    int *x;
+    w = &(z = 1);
+    x = &(z += 2);
+    std::cout << *w << *x << std::endl;
+}

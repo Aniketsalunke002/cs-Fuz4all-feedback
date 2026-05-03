@@ -1,0 +1,19 @@
+#include <iostream>
+
+#include <optional>
+
+int main() {
+  std::optional<int> opt1(10);
+  std::optional<int&> opt2(10);
+
+  opt1 = 11;
+  opt2 = 12;
+
+  if (auto opt1_ref = opt1) {
+    std::cout << *opt1_ref << '\n';
+  }
+
+  if (auto opt2_ref = opt2) {
+    std::cout << *opt2_ref << '\n';
+  }
+}

@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+ 
+double const pi = 13.0;
+double const x = 2 * pi;
+int main() {
+  cout << pi << endl;
+  cout << x << endl;
+  return 0;
+}
+ 

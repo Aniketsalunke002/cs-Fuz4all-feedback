@@ -1,0 +1,19 @@
+#include <iostream>
+
+ void __VERIFIER_assert(int cond) {
+  if(!(cond)) {
+      ERROR: goto ERROR;
+  }
+ }
+
+ int main()
+ {
+     int i = 0;
+     int a = 1;
+  while (a)
+  {
+     std::cout << "Halloo world2!" << std::endl;
+     i++;
+  }
+     return 0;
+ }

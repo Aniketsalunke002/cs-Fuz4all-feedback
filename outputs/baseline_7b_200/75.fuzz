@@ -1,0 +1,19 @@
+#include <iostream>
+int main() 
+{
+  int i=5;
+  const char *cp = "Hello";
+  volatile int l=0;
+  switch(i)
+  {
+  case 1:
+    cout << "Case 1\n";
+    break;
+  case 5:
+    i=147;
+    l=-1;
+    switch (l)
+    {
+    case 2:
+        cp="Hi";
+        if (cp)

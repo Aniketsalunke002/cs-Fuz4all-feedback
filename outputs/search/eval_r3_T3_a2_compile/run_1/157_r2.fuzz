@@ -1,0 +1,12 @@
+#include <iostream>
+
+extern int i;
+void increase(int i) {
+  ++i;
+}
+int main(int argc, char * argv[]) {
+  i = 11;
+  std::cout << i << '\n';
+  increase(i);
+  std::cout << i << '\n';
+}

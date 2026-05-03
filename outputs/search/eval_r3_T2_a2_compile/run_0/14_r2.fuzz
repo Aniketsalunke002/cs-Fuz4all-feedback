@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+        int a = 3;
+        int b = 4;
+        cout << (23 * 22 + a) >> b << endl;
+        return 0;
+}
+#include <iostream>
+using namespace std;
+int main()
+{
+        int a = 3;
+        int b = 4;
+        cout << (23 * 22 + a) >> b << endl;
+        return 0;
+}
+#include <iostream>
+using namespace std;
+int main()
+{
+        int a = 3;
+        int b = 4;
+        cout << (23 * 22 + a) >> b << endl;
+        cerr << a << endl;
+        return 0;
+}
+#include <iostream>
+using namespace std;
+class B
+{
+        public:
+                B() {}
+                B(const int& i)
+        {
+                i_=i*10;
+        }
+        int get_i() const {return i_;}
+        private:
+        int i_;
+};
+int main()
+{
+        B a(13);
+        cerr << a.get_i() << endl;
+        return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <string_view>
+#include <vector>
+#include <algorithm>
+int foo (){}
+void x (){}
+int main (int argc, char **argv)
+{
+	int a = 4;
+	std::vector<std::string> s{ "first", "second", "third"};
+	std::sort(s.begin (), s.end (), [](const std::string &a, const std::string &b){
+		return a.size() < b.size();
+	});
+	for (auto &w : s) std::cout << w << " ";
+	std::cin >>a;
+	std::cout << a;
+	return 0;
+}

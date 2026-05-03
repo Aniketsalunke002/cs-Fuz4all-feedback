@@ -1,0 +1,11 @@
+#include <iostream>
+
+#include <map>
+#include <unordered_map>
+
+int main()
+{
+    std::map<size_t, size_t> x;
+    {
+        std::map<size_t, size_t> y = x;
+        y.insert({

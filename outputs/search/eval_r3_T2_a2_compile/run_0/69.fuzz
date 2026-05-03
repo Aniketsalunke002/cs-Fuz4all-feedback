@@ -1,0 +1,71 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x;
+    char c = 'a';
+    switch (c) {
+    case 'a':
+        cout << "a\n"; break;
+    case 'A':
+    case 'b':
+        cout << "b\n"; break;
+    case 'c':
+        cout << "c\n"; break;
+    default:
+        cout << "Other\n";
+        break;
+    }
+}
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    cout << "Please enter 10 numericals as digits of an integer number\n";
+    long number;
+
+    for (long digit : {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}) {
+        while (true) {
+            cout << digit << "-digit:";
+            cin >> number;
+            if (number >= 1 && number <= 9)
+                break;
+            cout << "That is not a digit. Please enter 10 numericals as digits of an integer number\n";
+        }
+    }
+
+    long reversed_number = 0;
+    while (number > 0) {
+        reversed_number *= 10;
+        reversed_number += number % 10;
+        number /= 10;
+    }
+
+    cout << "Please enter an integer number\n";
+    cin >> number;
+}
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+bool ispalindrome(string number)
+{
+    if (number.empty() || number.length() == 1) {
+        return true;
+    }
+    return (number[0] == number[number.length() - 1]) &&
+           ispalindrome(number.substr(1, number.length() - 2));
+}
+
+
+int main()
+{
+    cout << "Please enter a number:\n";
+    string number;
+    cin >> number;
+    while (cin >> number && ispalindrome(number)) {
+        cout << "You're really a smart human!\n";
+    }
+}

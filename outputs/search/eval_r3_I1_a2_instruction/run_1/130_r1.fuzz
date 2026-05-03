@@ -1,0 +1,37 @@
+#include <iostream>
+int main()
+{
+    int x = 5;
+    x += 1;
+    if (x > 0)  
+        x = -x;
+    }
+    std::cout << x << '\n';
+    if (x > 7)
+    {
+        x--;
+    }
+    if (-x!= 8)
+    {
+        x++;
+    }
+    if (x > 6)
+    {
+        x += 2;
+        x &= 7; 
+    }
+    do 
+    {
+        x++;
+        if (x < 10)
+        {
+            std::cout << x;
+        }
+        else
+        {
+            std::cout << '\n';
+        }
+    } while (x < 10);
+    x = int(x) / -2 + 4 + -int(x) % 3 + (int(x) + 1) / -2;
+    return 0;
+}

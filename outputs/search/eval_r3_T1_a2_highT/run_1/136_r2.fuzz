@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+    char c = 0;
+    c++;
+    cout << (char)c << " - " << c;
+    do {
+        if (c) cout <<'' << c;
+        c++;
+    } while (c);
+    cout << " - ";
+    do {
+        if (c) cout <<'' << c;
+        c--;
+    } while (!c);
+    cout << " - ";
+    do {
+        if (c) cout <<'' << c;
+        c--;
+    } while ('a');
+    cout << " - ";
+    do {
+        if (c) cout <<'' << c;
+        c--;
+    } while (c);
+    return 0;
+}

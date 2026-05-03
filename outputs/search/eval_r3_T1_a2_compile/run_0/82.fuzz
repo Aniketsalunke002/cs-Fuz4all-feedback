@@ -1,0 +1,33 @@
+#include <iostream>
+ using namespace std;
+
+ 
+using namespace std;
+
+ 
+int a = 10;
+char f = 'c';
+int main(){
+
+
+    int a = 100;
+    char f = 'c';
+    string  d = "Hello There", g = "World";
+    cout<< "a: "<< a << endl;
+    cout<< "f: "<< f << endl;
+    cout<< "d: "<< d << endl;
+    cout<< "g: "<< g << endl;
+    return 0;
+}
+ 
+ 
+#include "stdio.h"
+ 
+using namespace std;
+
+ 
+int a = 100;
+int main(){
+    printf("A:  %c", a);
+    return 0;
+}

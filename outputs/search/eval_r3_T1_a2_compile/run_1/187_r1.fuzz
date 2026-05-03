@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc,char **argv) {
+   if (argc < 2) {
+      cout << "Please enter a parameter!" << endl;
+      throw;
+   }
+   else{
+      cout << argv[1] << " " << argv[2] << endl;
+      cout << argc << endl;
+      return 0;
+   }
+}
+// Output: Please enter two parameters!
+// 1
+// 2
+// 3

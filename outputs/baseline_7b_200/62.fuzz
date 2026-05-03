@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+bool test(int n);
+int main(){
+  int n = 15;
+  while(!test(n))n++;
+  cout<<n;
+}
+bool test(int n){  
+  return n % 2==1;
+}

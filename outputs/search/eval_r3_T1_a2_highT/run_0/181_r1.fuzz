@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+int main(bool argc, char const *argv[])
+{
+  int *ptr = nullptr;
+  int x[] = {1, 2, 3};
+  ptr = x;
+  x[1] = 7;
+  cout << *ptr << endl;
+  return 0;
+}

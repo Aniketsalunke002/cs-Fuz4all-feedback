@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+#include <iomanip>
+using namespace std;
+int main() {
+    int i = 0;
+    int j = 0;
+    {
+    }
+    if (0)
+      cout << j << endl;
+    else
+      { }
+    cout << "";
+    if (0)
+      cout << "This one is true" << endl;
+    else
+      { }
+    if (0)
+      cout << "This one is true." << endl;
+    else
+      { }
+    return 0;
+  };
+ 
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main() {
+    int i = 0;
+    int j = 0;
+    if (i)
+      cout << i << endl;
+    if (i == j)
+      cout << i;
+    else
+      cout << j;
+    cout << j;
+    return 0;
+  };

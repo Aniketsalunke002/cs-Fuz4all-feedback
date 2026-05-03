@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int n = 0;
+  int x = 0;
+  while (1) {
+    n++;
+    x = n % 3;
+    if (x == 0) {
+      cout << "8" << endl;
+    } else {
+      cout << "3" << endl;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+
+
+int main()
+{
+    int i = 0, j =10;
+    while ( i!= j ) {
+         
+        ++i;
+    }
+    cout << i << '\n';
+    --j;
+    cout << j << '\n';
+    int *ptr = &j;
+     
+    ++*ptr;
+     
+    return 0;
+}

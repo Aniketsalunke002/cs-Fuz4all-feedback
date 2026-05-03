@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int n = 0;
+  bool x;
+  while (1) {
+    x = false;
+    cout << "n=" << n << endl;
+    n++;
+    if (n % 4 == 0) {
+      x = true;
+    }
+    if (x) {
+      cout << "x true n=" << n << endl;
+      cout << "4" << endl;
+    } else {
+      cout << "x false n=" << n << endl;
+      cout << "3" << endl;
+    }
+  }
+  while (1) {
+    cout << "turing n=" << n << endl;
+    n++;
+    if (n % 4 == 0) {
+      cout << "4" << endl;
+    } else {
+      cout << "3" << endl;
+    }
+  }
+}

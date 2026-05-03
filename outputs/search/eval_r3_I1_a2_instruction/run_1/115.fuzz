@@ -1,0 +1,11 @@
+#include <iostream>
+int main()
+{
+    int* int_pointer = new int{ 5 };
+    std::cout << *int_pointer << '\n';
+
+    delete int_pointer;  
+    int_pointer = nullptr;
+
+    return 0;
+}

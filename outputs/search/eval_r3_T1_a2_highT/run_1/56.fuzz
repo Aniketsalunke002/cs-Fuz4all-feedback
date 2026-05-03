@@ -1,0 +1,24 @@
+#include <iostream>
+#include <cstdio>
+#include <atomic>
+int main() {
+	std::atomic<int> var{1};
+	int mut;
+	std::cin >> mut;
+	if (mut!= 0) {
+		var = mut;
+	}
+	std::cout << "Press ENTER to start.";
+	bool alive = true;
+	printf("\n" );
+	while (alive) {
+		alive = alive && (var!= 0);
+		if (!alive) {
+			printf("Press ENTER to start, any other key to quit.\n");
+		} else {
+			printf("%d: [1] [1] is live!\n", mut);
+		}
+		alive = alive && (var!= 0);
+	}
+	return 0;
+}

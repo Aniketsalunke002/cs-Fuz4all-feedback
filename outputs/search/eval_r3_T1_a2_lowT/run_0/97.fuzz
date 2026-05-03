@@ -1,0 +1,16 @@
+#include <iostream>
+int main(){
+    short y= 85;
+    std::cout<<y++<<std::endl;
+}
+
+ 
+#include <iostream>
+int main(){
+    short y = -13;
+    std::cout<<y++<<std::endl;
+}
+ 
+ 
+ 
+ 

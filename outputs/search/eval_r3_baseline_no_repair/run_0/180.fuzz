@@ -1,0 +1,7 @@
+#include <iostream>
+int main(int argc, char **argv) {
+    double a[5] {1.1, 2.2, 3.3, 4.4, 5.5};
+    double *b = a + 3;
+    std::cout << ++*++b << '\n';
+    return 0;
+}

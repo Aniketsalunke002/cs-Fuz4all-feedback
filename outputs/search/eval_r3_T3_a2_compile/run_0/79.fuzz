@@ -1,0 +1,16 @@
+#include <iostream>
+int main()
+{
+  std::vector<int> v1{1,2,3};
+  std::vector<int> v2{1,2,3,4,5};
+
+  auto result = v1;
+
+  result.reserve(v1.size() + v2.size());
+  result.insert(result.end(), v2.begin(), v2.end());
+
+  std::copy(result.begin(), result.end(), std::ostream_iterator<int>(std::cout, "\n"));
+
+  return 0;
+}
+

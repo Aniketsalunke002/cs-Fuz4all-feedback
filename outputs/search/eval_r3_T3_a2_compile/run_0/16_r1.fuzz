@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
+struct node {
+	int value;
+	node* next;
+};
+template <typename T>
+void push_back(T** head_ref,T new_data)
+{
+	T* new_node = new T;
+	new_node->value = new_data;
+	new_node->next = NULL;
+	T* last = *head_ref;
+	if (*head_ref == NULL)
+	{
+		*head_ref = new_node;
+		return;
+	}
+	while (last->next!=NULL)
+		last = last->next;
+	last->next = new_node;
+}
+template <typename T>
+void print_list(T* n)
+{
+	while (n!=NULL)
+	{
+		cout << n->value << " ";
+		n = n->next;
+	}
+	cout << endl;
+}
+int main(int argc, char const *argv[])
+{
+	node* head = NULL;
+	push_back(&head,6);
+    push_back(&head,5);
+    push_back(&head,4);
+    push_back(&head,3);
+    push_back(&head,2);
+    push_back(&head,1);
+	reverse_nodes(&head);
+	print_list(head);
+    return 0;
+}
+*/

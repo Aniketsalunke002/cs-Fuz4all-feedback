@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+struct x {
+  char _0_[] = { "hello,\tworld!\r\n",3 };
+  char _1_[] = { "hello,\tworld!\r\n",3 };
+  char _2_[] = { "hello,\tworld!\r\n",3 };
+  char _3_[] = { "hello,\tworld!\r\n",3 };
+  char _4_[] = { "hello,\tworld!\r\n",3 };
+  char _5_[] = { "hello,\tworld!\r\n",3 };
+  char _6_[] = { "hello,\tworld!\r\n",3 };
+  char _7_[] = { "hello,\tworld!\r\n",3 };
+};
+
+
+char a[sizeof(x)] = { 0 };
+#define W(_off) a[offsetof(x,_off)]
+#define WR(_off,_s) _s,sizeof(_s)-1
+int main(void) {
+
+  for (int i = 0; i < 8; i++)
+    W(i) = WR(i, "_0_" + W(i) + " 1\r\n");
+  
+  return 0;
+}

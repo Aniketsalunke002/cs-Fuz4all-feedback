@@ -1,0 +1,16 @@
+#include <iostream>
+
+
+int main()
+{
+  int a = 0, b = 1;
+  long long total = 0;
+  for (int16_t i = 0; i < 10000; i++)
+  {
+    a += b;
+    b += a;
+  }
+  (total %= 1000000);
+  std::cout << total;
+  return 0;
+}

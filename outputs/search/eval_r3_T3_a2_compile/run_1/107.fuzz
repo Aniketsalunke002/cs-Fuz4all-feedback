@@ -1,0 +1,9 @@
+#include <iostream>
+#include <vector>
+int main() {
+	std::vector <int> v;
+	int z = 1;
+	v.push_back(z);
+	v[0] = 2;
+	z = 3;
+}

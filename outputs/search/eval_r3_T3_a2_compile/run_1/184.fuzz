@@ -1,0 +1,28 @@
+#include <iostream>
+class A
+{
+    public:
+        A():obj("HOLA")
+        {}
+        A(const std::string& val_)
+        :obj(val_)
+        {}
+        auto& getVal()
+        {
+            return obj;
+        }
+        void setValue(const B& val_)
+        {
+            obj = val_;
+        }
+    private:
+        std::string obj;
+};
+int main(int argc, char *argv[])
+{
+    A object("QUE TAL");
+    std::cout << object.getVal();
+    object.setValue("HOLA");
+    std::cout << object.getVal();
+    return 0;
+}

@@ -1,0 +1,26 @@
+#include <iostream>
+
+using std::endl;
+class Base {
+public:
+    Base(int a_) : a(a_) {}
+    int a;
+    Base operator++()
+    {
+        return *this;
+    }
+};
+class Derived : public Base {
+public:
+    int b;
+    Derived(int a_, int b_) : Base(a_), b(b_) {}
+};
+int main()
+{
+    Derived d(10, 20);
+    Derived* pd = &d;
+    Base* pb = operator++(pd);
+    pb->a = 20;
+    std::cout << d.a << "\t" << d.b << endl;
+    return 0;
+}

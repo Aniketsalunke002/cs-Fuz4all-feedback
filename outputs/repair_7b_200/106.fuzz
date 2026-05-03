@@ -1,0 +1,9 @@
+#include <iostream>
+class A {
+public:
+    void b() {};
+};
+int main() {
+    A a;
+    return 0;
+}

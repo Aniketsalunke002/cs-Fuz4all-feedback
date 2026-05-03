@@ -1,0 +1,23 @@
+#include <iostream>
+double x;
+int main() {
+  x = 3;
+  printf("%f\n%p\n", x, &x);
+  volatile double y = 4;
+  printf("%f %d %p\n", x, 0, &x);
+  volatile double z[5];
+  z[0] = 1;
+  z[1] = 2;
+  z[2] = 3;
+  z[3] = 4;
+  z[4] = 5;
+  double t = 6;
+  printf("%f %d\n", z[0], ((int *)z)[0]);
+  printf("%f %d\n", t, ((int *)&t)[0]);
+  ((int *)z)[0] = 3;
+  ((int *)&t)[0] = 4;
+  printf("%f %d %p\n", z[0], 0, &z[0]);
+  x = 2;
+  printf("%f %d %p\n", y, 0, &z[0]);
+  return 0;
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+int getint();
+int main(int argc, char **argv) {
+  int elements = 3;
+  for (int ii = 0;;) {
+    static int original = -1;
+    int old = elements;
+    original = original + 1;
+    std::cout << "original = " << original << "\n";
+    elements += getint();
+    break;
+  }
+  elements = 3 + getint();
+  std::cout << original << " -> " << old << " (" << getint() << ")\n";
+  elements = elements + getint();
+  std::cout << elements << "\n";
+  return 0;
+}
+ 
+void swap(int &a, int &b) {
+  std::cout << "Swap?\n";
+  std::cin >> a;
+  a = a + b;
+  std::cout << "Swap?\n";
+  std::cin >> b;
+  b = a - b;
+  a = a - b;
+}

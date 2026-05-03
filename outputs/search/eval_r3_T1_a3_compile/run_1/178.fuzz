@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() { cout << "Hi!" << endl; }
+
+ 
+#include <iostream>
+using namespace std;
+int main() { std::cout << "Hi!" << std::endl; }

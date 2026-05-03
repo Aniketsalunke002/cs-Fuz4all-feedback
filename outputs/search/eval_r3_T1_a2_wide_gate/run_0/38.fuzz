@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(void) {
+    int *a = new int[2];
+    a[1] = 0;
+    cout<<strlen(a)<<endl;
+    delete[] a;
+}
+

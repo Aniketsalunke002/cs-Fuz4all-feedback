@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a,b,c,d,e,f;
+    cin>>a>>b>>c>>d;
+    cin>>e>>f;
+    cout<<b*f-a*d<<endl;
+    return 0;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// extern bool change;
+// int main() {
+//   int a,b,c,d,e,f;
+//   int num = rand()%100 ;
+//   cin>>a>>b>>c>>d;
+//   cin>>e>>f;
+//   if( num%2==0 ) { cout<<b*f-a*d<<endl;}
+//   else cout<<c*d-b*f<<endl;
+//   if( change ) { exit(EXIT_SUCCESS);}
+//   return 0;
+// }

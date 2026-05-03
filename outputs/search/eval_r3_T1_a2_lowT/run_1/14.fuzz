@@ -1,0 +1,11 @@
+#include <iostream>
+void copy(myclass* dst, myclass* src)
+{
+    *dst = *src;
+}
+int main(int argc, char **argv)
+{
+   myclass x;
+   myclass y;
+   copy(&y, &x);
+}

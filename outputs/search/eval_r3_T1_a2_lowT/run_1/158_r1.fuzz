@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main() {
+	char s[] = "abcdefghijklmnopqrstuvwxyz";
+	if (s[0] == 'a')
+	{
+		std::cout << "Hello World!" << std::endl;
+	}
+}

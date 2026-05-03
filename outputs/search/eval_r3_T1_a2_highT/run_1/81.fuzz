@@ -1,0 +1,25 @@
+#include <iostream>
+int main()
+{
+	int i = 3;
+	int &x = i;
+	x = 5;
+	std::cout << x << '\n';
+	return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+	int x = 3;
+	int y = 3;
+	int &i = x;
+	int &j = y;
+	i = 5;
+	j = 5;
+	std::cout << x << '\n';
+	std::cout << y << '\n';
+	return 0;
+}
+ 
+

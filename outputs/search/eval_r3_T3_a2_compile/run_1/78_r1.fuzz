@@ -1,0 +1,26 @@
+#include <iostream>
+
+template<typename T>
+T f(T x) {
+	return x + 1;
+}
+int mutant1() {
+	int a = -5;
+}
+int mutant2() {
+	if (int a = 80; a >= 80) {
+		return f(a);
+	}
+	else {
+		return -1;
+	}
+}
+int main() {
+	int a = 1;
+	if (int a = 0; a >= 0) {
+		return f(a);
+	}
+	else {
+		return -1;
+	}
+}

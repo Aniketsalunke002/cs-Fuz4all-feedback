@@ -1,0 +1,90 @@
+#include <iostream>
+using namespace std;
+#define MAX 3
+using std::cout;
+using std::endl;
+template <typename T>
+void foo(T a, T b) {
+    a = a + 1; 
+    cout << "Template: " << a << " " << b << endl;
+}
+int main(int argc, char** argv) {
+    int a1{0}, a2{0}, a3{0};
+    foo(a1, a2);    
+    foo(a3, a2);    
+}
+ 
+#include <iostream>
+#include <stack>
+#include <vector>
+#include <math.h>
+using namespace std;
+#define PMAX 100
+#define GOLDEN_RATIO 0.382
+typedef unsigned int tGen;
+typedef unsigned short tChromo;
+float randomFloat(){
+    return rand()/(float)RAND_MAX;
+}
+int randomInteger(const int a, const int b){
+    return a + (b-a)*randomFloat();
+}
+float normal(float mean, float sd) {
+    float x = randomFloat();
+    while (x < GOLDEN_RATIO || x > 1 - GOLDEN_RATIO) {
+        x = randomFloat();
+    }
+    return x*sd + mean;
+}
+float distance(const float& a, const float& b) {
+    return (b - a)*(b - a);
+}
+float mutationRate(const float& a, const int& generation) {
+    return 0.005 - (float)generation*0.008;
+}
+struct Candidate {
+    float fitnessScore;
+    float distanceToIndividualsAvgFitnessScore;
+    tChromo* bestOffspring;
+    tChromo parentalChromo;
+};
+float individualFitness(const tChromo& chromosome, const float& goal) {
+    float sum = 0.0;
+    for (int i = 0; i < PMAX; ++i) {
+        float x1 = normal(1, 1);
+        float x2 = normal(1, 1);
+        float diff = fabs(sqrt(x1*x1+x2*x2)-goal);
+        sum += diff*diff;
+    }   
+    sum = sum/PMAX;
+    return sum;
+}
+Candidate geneticAlgorithm(const tChromo& parentalChromo, const float& goal) {
+    float parentsFitness = individualFitness(parentalChromo, goal);
+   Candidate children{};
+    children.fitnessScore = parentsFitness;
+    children.parentalChromo = parentalChromo;
+    stack<Candidate> topHalf; 
+    stack<Candidate> bottomHalf; 
+    for (int i = 0; i < PMAX; ++i) {
+        Candidate temp{};
+        float childrenFitness = individualFitness(children.parentalChromo, goal);
+        temp.distanceToIndividualsAvgFitnessScore = 
+            distance(
+                parentsFitness, 
+                childrenFitness);
+        temp.fitnessScore = childrenFitness;
+        temp.bestOffspring = children.parentalChromo;
+        topHalf.push(temp);
+        for (int j = 0; j < PMAX; ++j) {
+            tChromo randomChromo = parentalChromo;
+            for (int l = 0; l < randomChromo.size(); ++l) {
+                tChromo newChromo = randomChromo;
+                if (randomFloat() < 0.5)
+                    newChromo.at(l) = (char)(newChromo.at(l)+1);
+                else newChromo.at(l) = (char)(newChromo.at(l)-1);
+                Candidate test{};
+                test.distanceToIndividualsAvgFitnessScore = 
+                    distance(parentsFitness, 
+                               individualFitness(randomChromo, goal));
+                test.fitnessScore = individualFitness(

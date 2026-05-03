@@ -1,0 +1,16 @@
+#include <iostream>
+int main() {
+    int a = 3u;
+    return 0;
+}
+
+ 
+#include <iostream>
+namespace A {
+    int a = 3.0F;
+}
+
+int main() {
+    return 0;
+}
+

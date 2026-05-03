@@ -1,0 +1,107 @@
+#include <iostream>
+class myclass
+{
+public:
+  myclass(int i)
+  {
+    std::cout << "Constructor called with value: " << i << std::endl;
+  }
+  void useMe(void) { std::cout << "Use me" << std::endl; }
+};
+int main(int argc, char *argv[])
+{
+  std::cout << "sizeof myclass = "<< sizeof(myclass) << std::endl;
+  myclass c(123);
+  c.useMe();
+  myclass *p = new myclass(10);
+  delete p;
+  p->useMe();
+}
+```
+- [x] 1.14
+
+```cpp
+ 
+class myclass
+{
+public:
+  virtual ~myclass(void) { std::cout << "This is the default destructor!" << std::endl; }
+};
+myclass x;
+~x;
+ 
+typedef struct myclass myclass;
+typedef struct myclass_var_t
+{
+myclass* data;
+size_t used;
+myclass_var_t* next;
+} myclass_var_t;
+myclass* myclass_get_default(myclass_mem_state_t *state)
+{
+  if (state->heap == NULL)
+    {
+      myclass_var_t *var_p = malloc(sizeof(*var_p));
+      if (var_p == NULL) {
+        return NULL;
+      }
+      var_p->used = 0;
+
+      state->heap = var_p;
+      state->var  = var_p;
+    }
+
+  myclass_var_t *var_p = state->var;
+  if (var_p == state->heap)
+    {
+      myclass_var_t *var_new = malloc(sizeof(*var_new));
+      if (var_new == NULL)
+        return NULL;
+
+      var_new->used = 0;
+      var_new->next = state->var->next;
+      state->var->next = var_new;
+
+      state->var = var_new;
+    }
+
+  if (var_p->used == var_p->data->var_info.capacity)
+    {
+      var_p = var_p->next;
+      if (var_p == NULL)
+        return NULL;
+      state->var = var_p;
+    }
+
+  myclass *p = &(var_p->data[var_p->used++]);
+  return p;
+}
+void myclass_get_default_ref_ptr(myclass_mem_state_t *state, void *ptr)
+{
+  if (state->ref_count == 0)
+    {
+      myclass_var_t *var_new = malloc(sizeof(*var_new));
+      if (var_new == NULL)
+        return;
+
+      var_new->used = 1;
+      var_new->next = state->var->next;
+      state->var->next = var_new;
+
+      state->var = var_new;
+    }
+   
+   
+  myclass_var_t *var_p = state->var;
+  myclass *p = (myclass*)(ptr);
+  if (var_p->data[var_p->used-1]!= p)
+    {
+      var_p->data[var_p->used-1] = p;
+      var_p->num_refs++;
+    }
+  state->ref_count++;
+}
+void *myclass_allocate(myclass_mem_state_t *_state,
+                       size_t bytes,
+                       myclass_mem_state_flags_t flags,
+                       myclass_

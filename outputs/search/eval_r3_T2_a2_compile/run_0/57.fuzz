@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int* buf= (int*) calloc(argc,sizeof(int));
+    int** buf2= (int**) malloc(sizeof(int*));
+    cout << buf << " " << buf2;
+     
+     
+}

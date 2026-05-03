@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+	vector<int> v = {1,2,3,4,5,6};
+	int cnt = 0;
+	int temp = 0;
+	int k = 0;
+	for (int i=0;i<v.size();i++) {
+		if (k % 2 == 0)
+			v.at(i) = v.at(i) + 2;
+		cnt++;
+		if (cnt==2) {
+			v.at(cnt) = v.at(cnt) - 2;
+			for (int j=1;j < cnt;j= j+2) {
+				temp = v.at(j);
+				v.at(j) = v.at(cnt);
+				v.at(cnt) = temp;
+			}
+			cnt=0;
+		}
+		if (cnt==4) {
+			v.at(cnt) = v.at(cnt) - 2;
+			for (int j=2;j < cnt;j= j+2) {
+				temp = v.at(j);
+				v.at(j) = v.at(cnt);
+				v.at(cnt) = temp;
+			}
+			cnt=0;
+		}
+		k++;
+	}
+	for (int i=0;i<v.size();i++) {
+		cout << v.at(i);
+	}
+	return 0;
+}

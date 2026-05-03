@@ -1,0 +1,27 @@
+#include <iostream>
+int g;
+int h(void)
+{
+  if(h())
+  {
+    goto x;
+  }
+  g = 0;
+  x++;
+  return 0;
+}
+C5 obj;
+int main(void)
+{
+  g++;
+  if(h() >= 0)
+  {
+    obj.n = 0;
+  }
+  ++obj.n;
+  if(obj.n)
+  {
+    g = -1;
+  }
+  return 0;
+}

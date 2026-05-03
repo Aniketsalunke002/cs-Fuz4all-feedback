@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+int myfunc (int *a, int b) {
+    int sum=0;
+    for (int i=0; i< b; i++){
+        sum=sum+a[i];
+    }
+    return sum;
+}
+int main()
+{
+    int listNum1[7]={1,1,2,3,5,8,13};
+    int listNum2[7]={1,1,4,9,25,64,169};
+    cout << "Test myfunc: " << myfunc(listNum1, 7) << "\n";
+    cout << "Test myfunc: " << myfunc(listNum2, 7) << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int count=0;
+int myfunc (int *a, int b){
+    count=count+1;
+    int sum=0;
+    for (int i=0; i< b; i++){
+        sum = sum + a[i];
+    }
+    return sum;
+}
+int main() {
+    int listNum1[7]={1,2,3,4,5,6,7};
+    cout << count;
+    cout << myfunc(listNum1, 7) << "\n";
+    return 0;
+}
+ 
+ 
+void print(short *s, int k){
+    for (int i=0; i< k; i++){
+    std::cout << s[i] << " ";  
+    }
+    }
+     
+     
+     
+    int operator+(int x, int y){
+        return x+y; 
+    }
+    int operator*(int x, int y){
+        return x*y;
+    }
+    int operator-(int x, int y){
+        return x-y;
+    }
+    int operator/(int x, int y){
+        return x/y;
+    }
+    int operator%(int x, int y){
+        return x%y;
+    }
+     
+void print2(int *i, int length) {
+for (int j = 0; j < length; j++) {
+cout << i[j] << " " << i+j << endl;
+}
+}

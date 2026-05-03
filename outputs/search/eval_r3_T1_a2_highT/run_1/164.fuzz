@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int numa = 5;
+    int numb = 6;
+    int numc = 6;
+    int numd = 6;
+    if (numc < numb) {
+        ++numa;
+    } else if (numc == numb) {
+        ++numb;
+    } else if (numb == numc){
+        numc = numc -1;
+    }
+    std::cout << numa << " " << numb << " " << numc << " " << numd << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int numa = 5;
+    int numb = 6;
+    int numc = 6;
+    int numd = 6;
+    int tempNumc;
+    if (numc < numb) {
+        ++numa;
+    } else if (numc == numb) {
+        ++numb;
+    } else if (numb == numc) {
+        tempNumc = numc;
+        numc = numc -2;
+        numb = numd;
+        numd = tempNumc;
+    }
+    std::cout << numa << " " << numb << " " << numc << " " << numd << std::endl;
+    return 0;
+}
+

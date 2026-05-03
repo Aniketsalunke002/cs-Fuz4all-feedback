@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+template <typename T>
+void foo(T * p)
+{
+	cout << "Another new foo2.cpp source code in foo" << endl;
+}
+void foo1(int *)
+{
+	cout << "Another new foo1.cpp source code in foo1" << endl;
+}
+int main()
+{
+	cout << "Another new foo.cpp source code in main" << endl;
+	foo((int *)0);
+	foo1(0);
+	return 0;
+}

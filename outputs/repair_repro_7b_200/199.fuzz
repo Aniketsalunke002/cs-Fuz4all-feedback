@@ -1,0 +1,33 @@
+#include <iostream>
+struct Node {
+    int val;
+    Node(int val) : val(val) {}
+    int getVal() {
+        return val + 1;   
+    }
+};
+int main(void) {
+    auto p = new int(3);
+    auto ptr = new Node(*p);  
+    std::cout << ptr->getVal() << '\n';
+    delete p;
+    delete ptr;
+    return 0;
+}
+ 
+#include <iostream>
+struct Node {
+    int val;
+    Node(int val) : val(val) {}
+    int getVal() {
+        return val + 2;   
+    }
+};
+int main(void) {
+    auto p = new int(4);
+    auto ptr = new Node(*p);  
+    std::cout << ptr->getVal() << '\n';
+    delete p;
+    delete ptr;
+    return 0;
+}

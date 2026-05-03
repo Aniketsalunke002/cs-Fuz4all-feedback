@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+#include <chrono>
+struct S{
+    int x0 = 11;  
+    const int x1 = 22, x2 = 33; 
+    static const int s1 = 44, s2 = 55;  
+};
+struct U : public S
+{
+    long double p = 11.11;
+    double const q = 22.22;
+    static const double t = 33.33;
+    volatile float a = 44.44f;
+    static volatile int b = 5555;
+};
+template<typename T>
+class Vector4
+{
+public:
+    double data[4];
+    Vector4(double d)
+    {
+        for(int i = 0; i < 4; ++i){
+            data[i] = d;
+        }
+    }
+    T dot(const Vector4& _other) const
+    {
+        T tmp;
+        for(int i = 0; i < 4; ++i){
+            tmp += data[i] * _other.data[i];
+        }
+        return tmp;
+    }
+};
+int main(int argc, char* argv[]) {
+    long long res = 0;
+    const int N = 10000000;
+    Vector4<int> v1(11);
+    Vector4<int> v2(22);
+    auto t1 = std::chrono::steady_clock::now();
+    for (int i = 0; i < N; i++) {
+        v1.dot(v2);
+    }
+    auto t2 = std::chrono::steady_clock::now();
+    cout << res << endl;
+    cout << (t2 - t1).count() << " duration of computation"<< endl;
+	return 0;
+}
+*/

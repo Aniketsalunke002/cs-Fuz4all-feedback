@@ -1,0 +1,13 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+int main(){
+    cout << sizeof(char) << endl;
+    cout << sizeof(int) << endl;
+    cout << sizeof(short) << endl;
+    cout << sizeof(long) << endl;
+    cout << sizeof(long long) << endl;
+    cout << sizeof(string) << endl;
+    return 0;
+}

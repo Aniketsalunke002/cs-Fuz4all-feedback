@@ -1,0 +1,27 @@
+#include <iostream>
+
+#include <map>
+#include <unordered_map>
+#include <cstdint>
+#include <functional>
+
+int main(int argc, char *argv[])
+{
+	std::unordered_map<int, std::string> umap;
+	std::map<int, std::string> map;
+
+
+	std::function< void (std::map<int, std::string>::iterator && ) const >  fn = [&] (std::map<int, std::string>::iterator it) 
+{
+		umap.emplace_hint(umap.end(), it.first, it.second);
+		map.insert(std::move(*it));
+	};
+
+	fn(std::make_move_iterator(map.find(0)));
+
+
+	std::for_each(umap.begin(), umap.end(), [](const auto &m){std::cout << m.first << " " << m.second << std::endl;});
+	std::for_each(map.begin(), map.end(), [](const auto &m){std::cout << m.first << " " << m.second << std::endl;});
+
+	return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+    int i = 0;
+    int j = 1;
+    while (i < argc) {
+      argv[i][0] ='s';
+      argv[i][argc -1] = 'B';
+        argv[i][argc] = 'B';
+      cout << argv[i] << endl;
+      i++;
+    }
+      return 0;
+      }

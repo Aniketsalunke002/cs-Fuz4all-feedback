@@ -1,0 +1,15 @@
+#include <iostream>
+
+#include "cell.hpp"
+
+template <typename T>
+struct cell {
+  int c;
+  T f;
+};
+
+int main(int argc, char * argv[]) {
+  cell<int> -> c += 1;
+  std::cout << cell<int> -> c << '\n';
+  std::cout << cell<int> -> f << '\n';
+}

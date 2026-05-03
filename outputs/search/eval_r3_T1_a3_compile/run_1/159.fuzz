@@ -1,0 +1,136 @@
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello world" << endl;
+    return 0;
+}
+ 
+#include <vector>
+int main() {
+    vector<int> v (10000);
+    return 0;
+}
+ 
+#include <vector>
+
+#include <iostream>
+using namespace std;
+int main() {
+    int a [10000];
+    for (auto &&x : a)
+        cin >> x;
+    for (const auto value : a)
+        cout << value << " ";
+}
+ 
+#include <vector>
+using namespace std;
+int main() {
+    vector<int> v;
+    int value {0};
+    for (auto &&x : v)
+        cin >> x;
+    v.push_back(value);
+}
+#include <vector>
+using namespace std;
+int main() {
+    vector<int> v;
+    int value {0};
+    for (int&& x : v)
+        cin >> x;
+    v.emplace_back(value);
+    v.push_back(value);
+    return 0;
+}
+ 
+#include <vector>
+#include <list>
+using namespace std;
+int main() {
+    vector<int> vi;
+    list<int> li;
+}
+ 
+#include <forward_list>
+using namespace std;
+int main() {
+    forward_list<int> fl {1, 2, 3, 4};
+    list<int> lst;
+}
+ 
+#include <vector>
+
+#include <algorithm>
+
+#include <iostream>
+using namespace std;
+int main () {
+    vector<int> vi {0,2,3,1,4};
+
+    auto sorted = vi;
+
+    sort(sorted.begin(), sorted.end());
+
+    vector<int>::iterator it = std::prev(sorted.end());
+
+
+     
+       
+
+    for_each(sorted.begin(), it, [&] (int value) { cout << value << endl; });
+
+    std::for_each(sorted.begin(), it, [&] (int value) { cout << value << endl; });
+
+    sort(vi.begin(), vi.end(), [] (int x, int y) { return y > x; });
+
+    auto result = std::is_sorted(vi.begin(), vi.end());
+
+    return 0;
+}
+ 
+#include <utility/move>
+#include <vector>
+#include <list>
+
+using namespace std;
+ 
+#include <list>
+#include <vector>
+using namespace std;
+
+int main () {
+    vector<int> v;
+    list<vector<int>> l;
+
+    for (int i = 0; i < 10; i++)
+    {
+        vector<int> vi {i};
+        l.push_back(vi);
+        v.push_back(i);
+    }
+
+    return 0;
+}
+ 
+#include <list>
+#include <vector>
+using namespace std;
+
+int main () {
+    vector<int> v;
+    list<int> l;
+    for (int i = 0; i < 10; i++)
+    {
+        v.push_back(i);
+        l.push_back(5);
+    }
+    return 0;
+}
+ 
+#include <list>
+#include <vector>
+using namespace std;
+
+int main () {
+   

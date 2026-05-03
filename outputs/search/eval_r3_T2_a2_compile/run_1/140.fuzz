@@ -1,0 +1,15 @@
+#include <iostream>
+foo::bar::bar(){std::cout << "Constructor called!" << std::endl;}
+#include <thread>
+void foo::bar::barMethod() {
+  std::cout << "bar method called" << std::endl;
+}
+int main() {
+  bar x;
+
+  auto fn(&bar::barMethod, &x);
+  std::thread thd(fn);
+  thd.join();
+
+  return 0;
+}

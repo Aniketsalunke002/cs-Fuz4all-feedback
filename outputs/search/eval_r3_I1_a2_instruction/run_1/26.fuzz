@@ -1,0 +1,13 @@
+#include <iostream>
+double calc(int count, double value)
+{
+  return count * value;
+}
+double calc(double a, double b)
+{
+  return calc(b, a);
+}
+int main(){
+  auto x = calc(2,3.5);
+  return 0;
+}

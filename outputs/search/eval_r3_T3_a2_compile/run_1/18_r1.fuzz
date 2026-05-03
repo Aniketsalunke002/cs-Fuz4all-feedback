@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+template <class T>
+class A
+{
+    public:
+	T iField;
+	A(): iField(777)
+	    {  }
+	A(const A &r): iField(r.iField+1)
+	   {  }
+};
+int main ()
+{
+    A<int> one; 
+    A<int> two=one;
+    cout << "Size of one:  " << sizeof(one) << endl;
+    cout << "Size of two:  " << sizeof(two) << endl;
+    return 0;
+}

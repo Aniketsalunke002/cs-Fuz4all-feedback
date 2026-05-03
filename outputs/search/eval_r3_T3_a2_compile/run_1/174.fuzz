@@ -1,0 +1,9 @@
+#include <iostream>
+int main(int argc, char *argv[])
+{
+    A<double> object{10.0};
+    std::cout << object.getVal();
+    object.setValue(20.0);
+    std::cout << object.getVal();
+    return 0;
+}

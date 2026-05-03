@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, i = 0;
+    cin >> n;
+    int a[100];
+    while(i<=n)
+    {
+        cin >> a[i];
+        while(a[i]!=-1)
+        {
+            a[i]++;
+            i++;
+        }
+        i--;
+    }
+}

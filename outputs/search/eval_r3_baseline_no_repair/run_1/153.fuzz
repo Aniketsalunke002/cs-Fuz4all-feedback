@@ -1,0 +1,87 @@
+#include <iostream>
+class Complex {
+  int _a, _b;
+ public:
+  Complex(int a, int b) :_a(a), _b(b){}
+  Complex operator*(const Complex &complex) {
+    Complex c(_a * complex._a - _b * complex._b, _a * complex._b + _b * complex._a);
+    return c;
+  }
+};
+int main() {
+  Complex c(1, 20);
+  Complex c2(3, 5);
+  Complex mul(c2 * c);
+  printf("%d %d\n", mul._a, mul._b);
+   
+  return 0;
+}
+ 
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+#include <string.h>
+using namespace std;
+int main() {
+  srand(time(NULL));
+  int i;
+  int r = rand();
+  int *nums = new int[r];
+  strcpy((void*)&nums[0], "Hello");
+   
+  for (i = 0; i < r; i++) {
+    nums[i] = i - i / 100;
+  }
+  cout << *((char*)nums) << endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <time.h>
+#include <cstdlib>
+using namespace std;
+int main() {
+  srand(time(NULL));
+  int i;
+  vector<map<string, int>*>* vec = new vector<map<string, int>*>();
+  for (i = 0; i < 10; i++) {
+     
+     
+    (*vec)[i] = new map<string, int>();
+    (*vec)[i]->insert(pair<string, int>("hello", rand()));
+    (*vec)[i]->insert(pair<string, int>("world", rand()));
+  }
+  return 0;
+}
+ 
+#include <iostream>
+class Item {
+public:
+  typedef int TYPE;
+  char *name;
+  TYPE quantity;
+  TYPE price;
+};
+#include <time.h>
+#include <map>
+int main() {
+  srand(time(NULL));
+  int i;
+  Item::TYPE randNumb;
+  map<Item *, Item> *items = new map<Item *, Item>();
+  map<Item *, Item>::iterator it;
+  time_t ticks;
+
+  while ((randNumb = rand()) % 100 < 1) {
+    ticks = time(NULL);
+    char *name = new char[20];
+    strcpy(name, ctime(&ticks));
+    cout << ticks << endl;
+    delete[] name;
+  }
+  return 0;
+}
+

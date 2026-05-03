@@ -1,0 +1,5 @@
+#include <iostream>
+
+int x, y = 5, z = 5;
+
+auto foo() { return [] { return

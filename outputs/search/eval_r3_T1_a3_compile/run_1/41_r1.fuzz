@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a;
+	cout << "enter int (2): \n";
+	cin >> a; 
+	if ((a = a + 2) == 2) { 
+		if (a > 2) { 
+			--a;
+		}
+	}
+	cout << "int: " << a << endl; 
+	return 0;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+
+namespace foo
+{
+
+    template<typename T>
+    class baz
+    {
+    public:
+        baz() {};
+        baz(T x) : m_x(x)
+        {
+            std::cout << "ctor : " << m_x << std::endl;
+        }
+        T m_x = T();
+    };
+}
+template<typename T>
+class foo
+{
+    auto a = baz<T>();
+};
+int main(void) {
+    foo<int> b;
+    std::cout << "done." << std::endl;
+    return 0;
+}

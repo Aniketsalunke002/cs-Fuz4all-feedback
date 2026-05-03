@@ -1,0 +1,17 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+int main(int argc, char** argv)
+{
+    char* a;
+    int* b;
+    new(a+1) char('x');
+    new(a) char('f');
+    new b;
+    new (*b)=1000;
+    a;
+    delete[] (*b);
+    delete[] (char*)a;
+    return 0;
+}

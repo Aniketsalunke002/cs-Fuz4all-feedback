@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+int main() {
+	float miles = 5280;
+	float kilometers = miles * 1.6;
+	cout << kilometers;
+}

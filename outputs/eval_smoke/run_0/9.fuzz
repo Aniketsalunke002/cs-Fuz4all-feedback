@@ -1,0 +1,12 @@
+#include <iostream>
+std::string str;
+template<typename T>
+void print_string_mutated(T a, T b) { 
+  str = a; 
+  str = b; 
+}
+main() {
+  print_string_mutated("A", "B");
+   
+   
+}

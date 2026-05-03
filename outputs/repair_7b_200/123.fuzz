@@ -1,0 +1,11 @@
+#include <iostream>
+struct A
+{
+    uint32_t a = 3;
+    void show() { std::cout << a << std::endl; }
+};
+int main()
+{
+    A a{};
+    a.show;
+}

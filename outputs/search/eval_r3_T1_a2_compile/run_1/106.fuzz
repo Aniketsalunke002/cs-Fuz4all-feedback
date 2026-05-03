@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main ()
+{
+  const int max=10;
+  int counter=0;
+  while (counter<max) {
+    cout<<counter<<endl;
+    counter=counter+1;
+  }
+  cout<<"Goodbye"<<endl;
+  return 0;
+}

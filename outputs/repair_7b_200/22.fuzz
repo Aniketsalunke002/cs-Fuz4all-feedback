@@ -1,0 +1,25 @@
+#include <iostream>
+namespace foo
+{
+    struct bar
+    {
+        int a;
+    };
+}
+int main()
+{
+    foo::bar f;
+    (void)f;
+	return 0;
+}
+ 
+#ifdef __cplusplus
+# warning "This is C++ code"
+#endif
+#endif
+#ifdef _MSC_VER
+#pragma warning (disable : 4702)
+#elif defined(__GNUC__)
+#pragma GCC system_header
+#endif
+int x = 0;

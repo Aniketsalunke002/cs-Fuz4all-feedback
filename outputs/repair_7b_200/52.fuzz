@@ -1,0 +1,17 @@
+#include <iostream>
+int data = 42;
+int main() {
+    data += 12;
+    return 0;
+}
+```
+
+## 注意事项
+
+- 代码中尽量不要出现不必要的循环
+
+## 提交内容
+
+请提交源码的文件名为 `cpp_basic.cpp` 并提交至 **Problem 04/task/code**
+
+注意：尽量不要使用额外的数据

@@ -1,0 +1,22 @@
+#include <iostream>
+
+#include <string>
+#include <vector>
+
+int main(int argc, char *argv[])
+{
+    char *var = new char[9]{'H','E','L','A','','','','Q','U'};
+    std::string str = "HOLAQu";
+    for (int i = 3; i<7; i++)
+    {
+        if (str[i]==var[i]) continue;
+        else
+        {
+            str[i] = var[i];
+            break;
+        }
+    }
+    std::cout << "Hello" << str;
+    delete[] var;
+    return 0;
+}

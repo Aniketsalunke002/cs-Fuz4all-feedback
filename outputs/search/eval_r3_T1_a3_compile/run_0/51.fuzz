@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+#define C_CONST 3
+int main() {
+#if C_CONST
+  int y = 5;
+  cout << y << endl;
+  while (cin >> y)
+    ;
+#endif
+  return 0;
+}

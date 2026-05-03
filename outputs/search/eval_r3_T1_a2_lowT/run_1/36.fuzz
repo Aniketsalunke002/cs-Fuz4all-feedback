@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int i = 2;
+    int j = 100;
+    while (i<=100)
+    {
+        cout << i << "... ";
+        if (j%4 == 0)
+        {
+            cout << i << " ***  ";
+            break;
+        }
+        j = j + 2*i;
+        i++;
+    }
+    cout << "Finished";
+    return 0;
+}

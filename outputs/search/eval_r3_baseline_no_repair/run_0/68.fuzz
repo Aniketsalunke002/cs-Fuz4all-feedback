@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int i = 0;
+    int j = 5;
+    cout << i << " " << " " << j << endl;
+    ++i;
+    j--;
+    cout << i << " " << " " << j << endl;
+    return 0;
+}
+*/

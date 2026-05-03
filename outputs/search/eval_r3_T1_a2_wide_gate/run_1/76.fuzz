@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+int main (int argc, char **argv)
+{
+  std::clog << std::string("Hello!!").size() << std::endl;
+  std::clog << std::string("")[1] << std::endl;
+  std::size_t old_length = std::string("Hello!!").size();
+  std::clog << old_length << std::endl;
+  std::string my_string = "World";
+  std::string my_string1 = "!!";
+  std::string new_string = my_string + my_string1;
+  for (size_t i = 0; i < new_string.size(); i++)
+    std::clog << new_string[i];
+   std::clog << std::endl;
+}

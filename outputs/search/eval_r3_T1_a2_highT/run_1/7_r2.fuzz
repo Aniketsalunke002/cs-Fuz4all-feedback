@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include <vector>
+#include <string>
+#include <deque>
+#include <algorithm>
+#include <iterator>
+
+int main() {
+	std::vector<int> v = {-55,11,33,2,45,22,31,41,16};
+	std::sort(v.begin(),v.end());
+  std::for_each(v.begin(),v.end(),std::ostream_iterator<int>(std::cout,","));
+  return 0;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+  struct Data {
+    Data(){  }
+    ~Data(){  }
+  
+  private:
+   long n;             
+  };
+  
+  Data* get_data(long n) {
+    Data* pd = new Data;
+    pd->n = n;
+    return pd;
+  }
+  
+  int main(void) {
+    Data* my_data = get_data(sizeof(Data));
+    std::cout << my_data->n << std::endl;
+    return (int) my_data->n;
+  }
+
+
+## eval_r3_I2:

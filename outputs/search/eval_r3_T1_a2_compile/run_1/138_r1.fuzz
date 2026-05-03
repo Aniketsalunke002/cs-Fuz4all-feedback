@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+int global = 0;
+int x = global;
+void foo() {
+    int i = x;
+    global = 32;
+}
+int main() {
+   global = 23;
+   foo();
+   return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+int main ()
+{
+	char *charr;
+	charr = reinterpret_cast<char*>(malloc(sizeof(char) * 3));
+	if (charr!= NULL)
+	{
+		return 0;
+	}
+	else
+	{
+		return -1;
+	}
+}

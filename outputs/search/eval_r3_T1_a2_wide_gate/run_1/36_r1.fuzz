@@ -1,0 +1,26 @@
+#include <iostream>
+
+#include <algorithm>
+#include <vector>
+#include <string>
+using namespace std;
+
+int main() {
+  int A[] = {1, 0, 1, 1, 0};
+  string S = "abbaaaabbabcbccaabbdd";
+  vector<int> result;
+
+  sort(A, A+5);
+  reverse(S.end()-2, S.end());
+  if (A[0] == 0) result.push_back(S[1]);
+  if (A[1] == 0 && A[2] == 0) {
+    result.push_back(S[2]);
+    result.push_back(S[S.size()-1]);
+  }
+  if (A[3] == 0 && A[4] == 0)
+    result.push_back(S[3]);
+
+  for (int i = 0; i < result.size(); i++)
+    cout << result[i];
+  cout << endl;
+}

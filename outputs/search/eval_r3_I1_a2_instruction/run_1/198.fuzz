@@ -1,0 +1,67 @@
+#include <iostream>
+int main()
+{
+    int num = 44;
+    num++;
+    num = num++;
+    num++;
+    std::cin >> num;
+    std::cout << num << num;
+    return 0;
+}
+ 
+#include <stdio.h>  
+#include <iostream>
+#include <fstream>
+#include <thread>
+#include <mutex>
+#include <chrono>
+#include <condition_variable>
+void thread_function(long count, int num)
+{
+    using namespace std;
+    for (int i=0; i<count; i++) {
+        cout << num << endl; 
+        this_thread::sleep_for(chrono::milliseconds(1000));
+    }
+     
+    cv.notify_all();  
+}
+int num;
+condition_variable cv;  
+mutex mmx;  
+int main() {
+    using namespace std;
+    ifstream file("numbers.txt");
+    long count;
+    int num;
+    char ch;
+    file >> ch;
+    cout << "num: "<< ch << endl; 
+    file >> count;
+    cout << "count: " << count << endl;
+    file >> num;
+    cout << "num: " << num << endl;
+    ifstream file1("output.txt");
+    ofstream file2("newfile.txt");
+    char ch1;
+    cout << "thread " << endl;
+    auto t1 = thread(thread_function, count, num);
+    auto t2 = thread(thread_function, count+1, 666);
+    cout << "main" << endl;
+    while (true) {
+        mutex_lock m(mx);  
+        cv.wait(m);  
+        cout << "1. Threads finished. Joining threads and rejoining main thread...";
+        t1.join();
+        t2.join();
+        mutex_unlock(m);  
+        char ch1;
+        while (file1 >> ch1) {
+            file2 << ch1;
+        }
+        break;
+    }
+    cout << "Files finished" << endl;
+    return 0;
+} */

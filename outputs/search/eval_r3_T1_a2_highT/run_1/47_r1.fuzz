@@ -1,0 +1,32 @@
+#include <iostream>
+
+#include <fstream>
+int main() {
+	while(true) {
+		std::cout << "Please enter a file name." << "\n"
+		          << "All the input will be saved into a new file." << std::endl;
+		char name[32];
+		std::cin >> name;
+		for(;;) {
+			std::cout << "Please enter an instruction: ";
+			std::string command;
+			std::getline(std::cin, command);
+			if(command.c_str()[0] == 'q') return 0;
+			std::cout << command << std::endl;
+			std::ofstream output(name, std::ios::out | std::ios::app);
+			output << "Command entered: " << command;
+			output.close();
+		}
+	}
+
+	return 0;
+}
+<commit_msg>eval_r3_T1_a2_highT (1)<commit_after>// #include <bits/stdc++.h>
+// #include <fstream>
+//  
+//  
+// #include <iostream>
+// #include <fstream>
+// int main() {
+// 	std::cout << "Please enter a file name." << "\n"
+// 	          << "All the input will be saved into a new file." <<

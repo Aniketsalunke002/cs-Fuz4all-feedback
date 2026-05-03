@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char **argv) {
+    int counter = 1, step = 1000;
+    while (counter < 100) {
+        for (int i = step; i > 0; i--) {
+            step = step / 2;
+            cout << i / step;
+        }
+        cout << '\n';
+        counter = counter+step;
+    }
+    return 0;
+}

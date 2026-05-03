@@ -1,0 +1,15 @@
+#include <iostream>
+
+void func(int** arg) { int a = *((*arg)[0]); ++a; (*arg)[0] = a; std::cout << *((*arg)[0]); }
+int main() {
+  int **pa;
+  pa = (int**) malloc(sizeof(int*));
+  if (!pa) {
+    std::cout << "Memory not available." << '\n';
+    return 1;
+  }
+  **pa = malloc(sizeof(int));
+  *(*pa) = 0;
+  func(pa);
+  free((void *)pa);
+}

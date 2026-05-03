@@ -1,0 +1,11 @@
+#include <iostream>
+
+class SomeClass {
+	int *array;
+};
+
+int main() {
+	SomeClass obj;
+	obj.array = new int[ 5 ];
+	delete[] obj.array;
+}

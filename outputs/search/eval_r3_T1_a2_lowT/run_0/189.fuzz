@@ -1,0 +1,46 @@
+#include <iostream>
+int main()
+{
+int a,b;
+std::cout<<"Please enter two numbers:   ";
+std::cin>>a>>b;
+int min=(a+b)/2;
+int max=(a+b)/2;
+while(max-min>1)
+{
+int sum=0;
+int count=0;
+while(min>=0&&min<=b&&count<=a)
+{
+sum+=(count*min);
+count++;
+min++;
+}
+if(sum<a)
+{
+min++;
+}
+if(sum==a)
+{
+max=min;
+break;
+}
+}
+std::cout<<min<<"\t"<<max<<"\t"<<a;
+return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+  int a=1,b=1,temp=0;
+  while(b<100)
+  {
+      temp=a+b;
+      a=b;
+      b=temp;
+      cout<<b;
+      cout<<", ";
+  }
+}

@@ -1,0 +1,50 @@
+#include <iostream>
+int main() { 
+    int t;
+    cin >> t;
+    return 0;
+}
+ 
+#include <iostream>
+#include <list>
+using namespace std;
+int main() { 
+    list <int> li;
+    int cnt=0;
+    int n, a;
+    cin >> n;
+    for (size_t i = 0; i < n; i++) { 
+        cin >> a;
+        if (a) { 
+            li. push_back (a);
+            cnt++;
+        }
+    }
+}
+ 
+#include <iostream>
+#include <list>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main() {
+    list <int> li;
+    int cnt=0;
+    
+}
+ 
+#include <iostream>
+#include <list>
+#include <vector>
+#include <algorithm>
+using namespace std;
+int main() {
+    list <int> li;
+    int cnt=0;
+    vector <int> vec;
+    int a;
+    cin >> a;
+    if (vec.end () == find (vec.begin (), vec.end (), a)) {
+        cout << "false ";
+    }
+}

@@ -1,0 +1,44 @@
+#include <iostream>
+
+#include <vector>
+struct myclass
+{
+  myclass(void)
+  : _i(0)
+  {
+    std::cout << "default constructor called" << std::endl;
+  }
+  myclass(myclass const &t)
+  : _i(t._i)
+  {
+    std::cout << "copy constructor called " << std::endl; 
+  }
+  int _i;
+};
+int main(int argc, char **argv)
+{
+  myclass x;
+  myclass y( x);
+  x._i = 10;
+}
+
+class Rectangle1
+{
+  std::vector<double> _vertices;
+  double _area;
+
+public:
+  Rectangle1(std::vector<double> vertices);
+  static double compute_area(std::vector<double> vertices);
+};
+
+Rectangle1::Rectangle1(std::vector<double> vertices)
+{
+  _vertices = vertices;
+  _area = 0;
+  for (size_t i = 0; i < 4; i++)
+    for (size_t j = 0; j < 2; j++)
+      _area += _vertices[i+j*_area];
+}
+
+double Rectangle1::

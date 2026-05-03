@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int summation[10];
+	for (int a = 0; a < 10; a++) {
+		summation[a] = a * 2;
+	}
+	for (int e = 0; e < 10; e++) {
+			cout << summation[e] << endl;
+	}
+}
+ 

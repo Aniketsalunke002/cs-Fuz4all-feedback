@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int foo;
+	foo=10;
+	while(foo>0){
+        cout.width(3); 
+        cout<<foo--<<endl;
+    }
+}

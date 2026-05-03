@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int add1(int i,int l) { return i + l + 1; }
+int main()
+{
+  int i=5;
+  int l=0;
+  i = i + 127;
+  i = add1(i,l);
+  if (i > 0) 
+  i = i + 147;
+  else
+    l = l - 4;
+  i=i+l;
+  if (i>=0 || l >= 0)
+   

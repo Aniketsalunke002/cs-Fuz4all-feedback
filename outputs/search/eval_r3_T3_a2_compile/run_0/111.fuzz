@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int a = 1;
+    a++;
+  return 0;
+}
+ 
+#include<iostream>
+using namespace std;
+class A
+{
+  protected:
+      int a = 0;
+
+  public:
+      int d = 1;
+       void display()
+      {
+        cout<<"this is class object"<<endl;
+      }
+      friend void swap(A a,A b)
+      {
+        int temp = a.d;
+          a.d = b.d;   
+         b.d=temp;
+
+      }
+      friend class B;
+};
+class B: public A
+{
+  int c = 4;
+
+public:
+   void display()
+   {
+    cout<<"this is object of another class"<<endl;
+    A::d = 5;
+   }
+};
+int main()
+{
+   A aa;
+   B bb;
+   A::swap(aa,bb);
+   aa.display();
+   bb.display();
+   return 0;
+}

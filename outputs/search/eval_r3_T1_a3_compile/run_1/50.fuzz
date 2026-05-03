@@ -1,0 +1,15 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(int argc, char* argv[])
+{
+	string myData;
+	myData = "Mydata";
+	cout << myData;
+
+	myData[2] = '3';
+	myData.replace(2, 3, "Hello");
+	cout << endl << myData;
+
+	return 0;
+}

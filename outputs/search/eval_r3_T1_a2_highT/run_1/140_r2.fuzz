@@ -1,0 +1,18 @@
+#include <iostream>
+
+#include <cstring>
+
+using namespace std;
+
+int main(int argc, char* argv[]) {
+    const char* s1 = "abc";
+    const char* s2 = "123";
+    cout << s1 << " " << s2 << endl;
+    if(strcmp(s1, s2)!= 0) cout << endl;
+    if(strcmp(s1, s2) == 0) cout << " = " << endl;
+    if(strcmp(s1, s2) < 0) cout << " < " << endl;
+    if(strcmp(s1, s2) > 0) cout << " > " << endl;
+    if(strcmp(s1, s2) <= 0) cout << " <= " << endl;
+    if(strcmp(s1, s2) >= 0) cout << " >= " << endl;
+    return 0;
+}

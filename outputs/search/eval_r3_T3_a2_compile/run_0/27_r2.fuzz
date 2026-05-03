@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	{
+		char* s0 = new char[96];
+		for(int i = 0; i < 96; ++i)
+			s0[i] = static_cast<char>('a' + i);
+		delete[] s0;
+	}
+	cout << "Goodbye!\n";
+	return 0;
+}
+// </pre>
+// <h4>Output</h4>
+// <pre>
+// Goodbye!
+// </pre>
+// <h4>Analysis</h4>
+// <p>This program uses the new feature: array initialization. Note how the same code as in the previous generation is used. It is clear that this generation uses C++'s new features very extensively.</p>
+// <p>The final result (which may vary from your implementation) is a one-dimensional array of char initialized to "abc...xyz...xyz...xyz...xyz...xyz..." in which the 48 characters are the lowercase letters ('a', 'b',..., 'y') and the remaining 48 are the uppercase letters ('z', 'z',..., 'z').</p>
+// <p>Note that in the fixed version, the program does not have any type or template errors.</p>
+// <h4>Discussion</h4>
+// <p>In the original version, the for loop has the wrong type. In the fixed version, the for loop has the correct type. If the loop had the wrong type, the generated code would have a type error. In the fixed version, the generated code does not have a type error.</p>
+
+// <pre>
+// #include <iostream>
+// using namespace std;
+// int main() {
+// 	{
+// 		char* s0 = new char[96];
+// 		for(int i = 0; i < 96; ++i)
+// 			s0[i] = static_cast<char>('a' + i);
+// 		delete[] s0;
+// 	}
+// 	cout << "Goodbye!\n";
+// 	return 0;
+// }
+//

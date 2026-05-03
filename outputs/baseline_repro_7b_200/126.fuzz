@@ -1,0 +1,7 @@
+#include <iostream>
+int main(void) {
+ int foo_var = 1;
+ foo_var = foo_var + 1;
+ std::cout << foo_var << " " << "foo_var\n";
+ return 0;
+}

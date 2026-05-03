@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+    char c = 0;
+    char temp;
+    c++;
+    cout << (char)c << " - " << c;
+    while (temp = c, temp + '0' - '0') {
+        c++;
+        cout <<'' << c;
+    }
+    cout << " - ";
+    while (!temp, temp = c) {
+        c--;
+        cout <<'' << c;
+    }
+    cout << " - ";
+    while(temp = 'a') {
+        c--;
+        cout <<'' << c;
+    }
+    cout << " - ";
+    while(temp = (c)), temp) {
+        c--;
+        cout <<'' << c;
+    }
+    return 0;
+    // end of fuzz4all function
+}

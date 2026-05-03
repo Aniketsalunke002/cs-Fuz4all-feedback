@@ -1,0 +1,12 @@
+#include <iostream>
+ using namespace std;
+
+int main()
+{
+	int x=2, y=2, z=4;
+	std::cout<<x*=y+z<<"\n";
+	std::cout<<x%y<<"\n";
+	x=4;
+	std::cout<<x<<"\n";
+	return 0;
+}

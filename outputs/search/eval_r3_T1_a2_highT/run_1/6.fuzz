@@ -1,0 +1,12 @@
+#include <iostream>
+
+
+int main() {
+	int i = 31;
+	decltype(i) j = 39;
+	using size_type = decltype(i);
+	j = 38;
+	size_type l = j;
+	std::cout << "i = " << i << "; j = " << j << "; l = " << l << std::endl;
+        return 0;
+}

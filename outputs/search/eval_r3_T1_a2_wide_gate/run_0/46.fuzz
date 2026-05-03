@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(void) {
+    int *a = new int[10];
+    a[3]=10;
+    cout<<sizeof(a)<<"\t"<<sizeof(*a)<<"*"<<a[3];
+    delete []a;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+
+using namespace std;
+
+template <typename T>
+T stringToInt(string s) {
+    return s.empty()? 0 : (s[0] - '0');
+}
+
+int main() {
+    string s1 = "0";
+    string s2 = "0";
+    cout << stringToInt<int>(s1) << endl;
+    cout << stringToInt<int>(s2) << endl;
+    return 0;
+}

@@ -1,0 +1,56 @@
+#include <iostream>
+  void __VERIFIER_assert(int cond) {
+    if(!(cond)) {
+        ERROR: goto ERROR;
+    }
+  }
+int main()
+{
+    int c;
+    std::cout<<"Hello, world!"<<std::endl;
+    c = 0;
+    __VERIFIER_assert(c == 0);
+    return 0;
+}
+ 
+
+#define __CLAW_SANDBOX__
+
+#ifdef __CLAW_SANDBOX__
+int __attribute__ ((noinline)) foo(int* t){
+ int x = 0;
+  while (*t > 0) {
+  *t   = *t >> 5;
+  x  = x  +  *t;
+ }
+ return x;
+}
+
+int __attribute__ ((noinline)) main(){
+ int a = 0;
+ foo(&a);
+ return 0;
+}
+#else
+void __VERIFIER_assert(int cond) {
+  if(!(cond)) {
+      ERROR: goto ERROR;
+  }
+}
+int main()
+{
+    int* x = new int;
+    int y=0;
+    *x = 0x80000000;
+    y = foo(x);     
+    __VERIFIER_assert(!y);
+     
+    int a_t;
+    a_t = y;          
+     
+    delete x;
+    return 0;
+}
+#endif
+
+ 

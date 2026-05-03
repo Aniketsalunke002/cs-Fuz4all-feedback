@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+    vector<int> myVec;
+    myVec.push_back(9);
+    myVec.push_back(8);
+    myVec.push_back(7);
+    myVec.push_back(6);
+    myVec[1] = myVec[0] + 1;
+    myVec[2] = myVec[1] * 2;
+    for (int i=0; i<myVec.size(); i++) {
+        cout<<myVec[i]<<" ";
+    }
+}

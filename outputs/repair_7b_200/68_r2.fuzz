@@ -1,0 +1,8 @@
+#include <iostream>
+
+int main() {
+    const int value = 0;
+    int* const p = &value;
+    *p = 1;
+    std::cout << *p;
+}

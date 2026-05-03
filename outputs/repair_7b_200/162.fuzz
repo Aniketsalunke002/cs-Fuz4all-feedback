@@ -1,0 +1,12 @@
+#include <iostream>
+#include <map>
+int main()
+{
+    std::map<size_t, size_t> x;
+    {
+        std::map<size_t, size_t> y {x};
+        y.insert({12, 34});
+        x.insert({56, 78});
+    }
+    std::cout << x.size() << std::endl;  
+}

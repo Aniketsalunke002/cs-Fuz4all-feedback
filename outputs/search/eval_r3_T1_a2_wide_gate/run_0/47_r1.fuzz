@@ -1,0 +1,9 @@
+#include <iostream>
+
+#include <cstdlib>
+#ifndef FUZZ_ENTRY
+int main(int, char**) {
+  __builtin_trap();
+  return EXIT_SUCCESS;  
+}
+#endif

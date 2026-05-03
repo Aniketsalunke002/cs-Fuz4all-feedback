@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int iN0 = 66; 
+	cout<<"Hello, World! I am a mutated program! "
+     << "My mutation method was to redeclare a global variable.\n";
+    cout<<" The new value of iN0 is "<< iN0<<" \n";
+return 0;
+}

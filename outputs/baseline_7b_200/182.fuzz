@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    cin.get();
+    return 0;
+}
+ 
+#include <iostream>
+#include <algorithm>
+#include <numeric>
+#include <iterator>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    auto ages = {18,1,2,15,25,26};
+    cout << std::find(ages.cbegin(), ages.cend(), 15) - ages.cbegin() << endl;
+    cout << std::accumulate(ages.cbegin(), ages.cend(), 0) << endl;
+    cout << "Change"

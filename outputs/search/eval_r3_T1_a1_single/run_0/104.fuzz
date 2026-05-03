@@ -1,0 +1,70 @@
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a*a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    int b = 4;
+    std::cout << "the sum of a and b " << a+b << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main ()
+{
+    int x;
+    int z = 2;
+    int y = x+z;
+    if (x>5)
+    {
+        std::cout << "a condition is true" << std::endl;
+    }
+    while (y!= x)
+    {
+        y = y*y - x*x;
+        std::cout << "the value of the variable y is " << y << std::endl;
+    }
+    switch(y)
+    {
+        case 0:
+        std::cout << "the value of y is zero" << std::endl;
+        break;
+        case 1:
+        std::cout << "the value of y is one" << std::endl;
+        break;
+        default:
+        std::cout << "the value of y is neither zero or one" << std::endl;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+double *create_array (int n)
+{
+    int i=0;
+    double *array;
+    array = new double[n];
+    for(i=0; i<n; i++)
+    {
+        array[i] = i*i;
+    }
+    return array;
+}
+int main ()
+{
+    int i=0;
+    double *array;
+    array = create_array(32);
+    for(i=0; i<32; i++)
+    {
+        std::cout << "array[" << i << "] = "<<array[i]<< std::endl;
+    }
+    return 0;
+}

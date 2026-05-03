@@ -1,0 +1,12 @@
+#include <iostream>
+#include <string>
+int foo(std::string name)
+{
+}
+int main()
+{
+    std::string a_str("Hello C++ world!");
+  	 
+foo("C++");
+    return 0;
+}

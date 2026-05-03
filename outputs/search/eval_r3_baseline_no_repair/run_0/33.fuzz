@@ -1,0 +1,9 @@
+#include <iostream>
+int main()
+{
+    unsigned int x;
+    int y;
+    x=240;
+    y=(short)x/100;
+    std::cout << "y=" << y << std::endl;
+}

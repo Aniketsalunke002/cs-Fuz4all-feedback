@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+class Bla {
+public:
+	Bla() {
+	}
+	Bla(bool) {
+	}
+};
+void doTest() {
+	Bla bla;
+	Bla bla2 = Bla(true);
+}
+int main() {
+	doTest();
+	return 0;
+}
+ 

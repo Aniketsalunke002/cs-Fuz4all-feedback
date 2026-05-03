@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	char symbol;
+	do {
+		cout << "Enter symbol: " << endl;
+		cin >> symbol;
+	} while (symbol < 33);
+	cout << "OK Symbol = " << symbol << endl;
+	return 0;
+}
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	return 0;
+}

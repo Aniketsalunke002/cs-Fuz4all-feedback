@@ -1,0 +1,23 @@
+#include <iostream>
+int main() {
+  std::ios::hex;
+  for (int a=0; a<100*1024; a+=1 )
+    std::cout << a;
+  return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+int main() {
+  std::iostream::binary;
+  std::vector<char> v;
+  return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+int main() {
+  std::ios::binary;
+  std::vector<char> v;
+  return 0;
+}

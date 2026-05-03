@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+#define MAX 5
+int main(int argc, char** argv) {
+    int a[MAX], b[MAX], c[MAX];
+    for (auto i = 0; i < sizeof(a) / sizeof(int); ++i) {
+        c[i] = a[i] + b[i];
+    }
+}
+

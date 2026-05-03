@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+template <typename T>
+struct Wrapper { 
+    T data;
+};
+class RefWrapper {
+    int* data;
+public:
+    RefWrapper() : data(nullptr) {}
+    RefWrapper(int& p) : data(&p) {}
+};
+class ValueWrapper {
+    int data;
+public:
+    ValueWrapper() : data(0) {}
+    ValueWrapper(int p) : data(p) {}
+};
+int main(void) {
+    int value{};
+    Wrapper<int> wOne{value};
+    Wrapper<int> wTwo{123456789};
+    RefWrapper rwOne{wOne.data};
+    ValueWrapper vwOne{wOne.data};
+    wOne.data = 123456789;
+    cout << vwOne.data << '\n';
+    cout << wOne.data << '\n';
+    cout << rwOne.data << '\n';
+    return 0;
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+     
+     
+     
+     
+
+     
+     
+     
+     
+
+    std::vector<int> list;
+     
+
+    
+    list.push_back(27);
+    std::cout << list.back();
+    return 0;
+
+}

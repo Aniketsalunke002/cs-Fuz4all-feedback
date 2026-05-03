@@ -1,0 +1,17 @@
+#include <iostream>
+int main( int argc, char **argv ){
+std::cout << "\n\t  This is the first program.\n\n";
+  int a {0,};
+  std::cout<<"\n";
+  for (int i=1 ; i<=100;i++)
+    {if (i <=3 || i%5==0) a++;
+      std::cout<<i*a/(100-a)<<' ';
+   }
+    
+std::cout<<"";
+std::cout<<"";
+std::cin.get();
+void fun() { std::cout << "hi ";}
+  fun();
+}
+

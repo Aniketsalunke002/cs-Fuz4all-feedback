@@ -1,0 +1,14 @@
+#include <iostream>
+int main()
+{
+    std::string* str = nullptr;
+    str = new std::string{ "<NAME>" };
+    std::cout << "Before modification\n";
+    std::cout << *str << '\n';
+    str->append("!?");
+    std::cout << "After modification\n";
+    std::cout << *str << '\n';
+    delete str;  
+    str = nullptr;
+    return 0;
+}

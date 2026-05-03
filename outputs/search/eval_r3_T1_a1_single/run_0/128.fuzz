@@ -1,0 +1,12 @@
+#include <iostream>
+int main ()
+{
+    int a[1];
+    int * b = a;
+    int & c = *b;
+    a[0] = 1;
+    b[0] = 2;
+    c = c + b[0];
+    std::cout << "the results are " << a[0] << " " << b[0] << " " << c;
+    return 0;
+}

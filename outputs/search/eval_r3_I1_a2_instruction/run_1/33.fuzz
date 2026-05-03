@@ -1,0 +1,17 @@
+#include <iostream>
+void bar (int i = 0){}
+int foo (int i=0, char * name = "name")
+{
+  std::cout << "foo: " << name << " " << i << std::endl;
+  return 7;
+}
+int main ()
+{
+    bar ();
+    std::cout << foo() << std::endl;
+    char name[] = "bob";
+    std::cout << foo(name) << std::endl;
+    return 0;
+ 
+}
+```

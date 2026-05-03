@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+void f(int i, unsigned j) {
+  int & ii = i;
+  auto g = [ii, j] {
+    ii += 1;
+    cout << "i= " << ii << " j= " << j << endl;
+  };
+  g();
+}
+int main() {
+  int i=0,j=0;
+  f(i,j);
+  return 0;
+}
+
+// # Repro (8a)
+// 
+// ## [C++11](https://en.cppreference.com/w/cpp/language/lambda)
+// 
+//

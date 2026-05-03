@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	struct test
+	{
+		int a,b,c;
+		int ret();
+	};
+	test *p=new test();
+	p->a=2;
+	p->b=7;
+	p->c=9;
+	cout<<p->ret()<<endl;
+	return 0;
+}
+ 
+#include <iostream>
+#include <unordered_set>
+using namespace std;
+int main()
+{
+	unordered_set<int> un;
+	un.insert(3);
+	un.insert(5);
+	un.insert(4);
+	for(auto p=un.begin();p!=un.end();p++) 
+	{
+		cout<<*p<<",";
+	}
+	cout<<endl;
+	return 0;
+}

@@ -1,0 +1,31 @@
+#include <iostream>
+class Person
+{
+public:
+    Person(int i = 0, int j = 0, int k = 0) : value1{i}, value2{j}, value3{k}
+    {
+    }
+    void update()
+    {
+        ++value1;
+        ++value2;
+        ++value3;
+        std::cout << value1 << " " << value2 << " " << value3 << std::endl;
+    }
+    int value1{0};
+    int value2{0};
+    int value3{0};
+};
+int main()
+{
+    Person person1(1, 2, 3);
+    person1.update();  
+
+    Person person2{};
+    person2.update();  
+
+    Person person3{};
+    person3.update();  
+
+     
+}

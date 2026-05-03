@@ -1,0 +1,28 @@
+#include <iostream>
+int main()
+{
+    int a = 3U;
+    std::cout << a << std::endl;
+}
+ 
+#include <iostream>
+#include <functional>
+
+int main()
+{
+    int result = 0;
+    std::function func = [&result](const int x, const int y) { result = x + y; };
+
+    int x  = 1;
+    int y  = 2;
+    func(x, y);
+    std::cout << result << std::endl;
+}
+ 
+#include <iostream>
+#include <functional>
+
+int main()
+{
+    int result = 0;
+    std::function func

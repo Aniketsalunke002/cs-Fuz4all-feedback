@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int arr [10], n = 10;
+    for (int i = 1; i < n; i *= 2) {
+        for (int j = 0; j < n; j += i) {
+            int temp;
+            for (int k = 0; k < 2; k++) {
+                temp = i - 1;
+                arr[j + k] = temp;
+            }
+        }
+    }
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+int main() {
+    int arr [10], n = 10;
+    for (int i = 1; i < n; i *= 2) {
+        for (int j = 0; j < n; j += i) {
+            for (int k = 0; k < (n + i); k += 2) {
+                arr[k] = i -1;
+            }
+        }
+    }
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+int main()
+{
+	std::cout << "Please enter password\n";
+	std::string password;
+	std::cin >> password;
+	if (password == "password")
+	{
+		std::cout << "access granted\n";
+	}
+	else
+	{
+		std::cout << "access denied\n";
+	}
+	return 0;
+}

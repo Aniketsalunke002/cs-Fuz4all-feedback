@@ -1,0 +1,93 @@
+#include <iostream>
+int main(int argc, char* argv[])
+{
+    short i1, i2, n_bytes<fim_suffix>ut << "Please enter an integer: ";
+        std::cin >> i1;
+        if (i1 == 0)
+        {
+            std::cout << i1 << std::endl;
+            break;
+        }
+        std::cout << "Please enter an integer: ";
+        std::cin >> i2;
+        if (i2 == 0)
+        {
+            std::cout << i2 << std::endl;
+        }
+        else if (i2 == 1)
+        {
+            std::cout << "You got zero!" << std::endl;
+            i1 = 0;
+        }
+        else
+        {
+            std::cout << "The product is: " << i1 * i2 << std::endl;
+        }
+    }
+    return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char* argv[])
+{
+    char * ptr = new char [80];
+    char c1,i;
+    for (c1='A', i=0; i<80; c1++, i++)
+    {
+        ptr[i] = c1;
+    }
+    for (i=0; i<80; i++)
+    {
+        std::cout << ptr[i];
+    }
+    return 0;
+}
+ 
+#include <iostream>
+#include <string.h>
+int main(int argc, char* argv[])
+{
+    char s[]="abcdabcdabcdabcd";
+    char *ptr;
+    char *p_temp;
+    std::string res="";
+    ptr=s;
+    int ctr;
+    std::cout<<"Pointer on array :\n";
+    for(ctr=0 ; ctr<strlen(s); ctr++)
+    {
+        std::cout<<ptr[(ctr*5)]<<"\t";
+    }
+    std::cout<<"\n";
+    ptr=(char*)calloc(strlen(s),sizeof(char));
+    if(ptr==NULL);
+    std::cout<<"allocating memory for dynamic array \n";
+    printf("Memory address of pointer on alloced array: %p\n",ptr);
+    p_temp=ptr;
+    ctr=0;
+    while(( *ptr++ = s[ctr])!=NULL)
+    {
+        ctr++;
+    }
+    std::cout<<"\nMemory Address when array is de-allocated: %p\n";
+    res = p_temp;
+    return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char* argv[])
+{
+    char *s;
+    char a1 [] = {'A', 'B', 'C', 'D', 'E', 'F'};
+    char a2 [] = {'a', 'b', 'c', 'd', 'e', 'f'};
+    s = new char [7];
+    s = a1;
+    strcpy (s, a2);
+    std::cout << s << std::endl;
+    delete[] s;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {

@@ -1,0 +1,16 @@
+#include <iostream>
+
+#include <vector>
+#include <utility>
+int main6() {
+    std::vector<size_t> v(10);
+    for (size_t &i : v) {
+        i = 6;
+    }
+    for (size_t i : v) {
+        std::cout << i << "\n";
+    }
+    std::pair<size_t, float> &p = *(v.data());
+    std::cout << p.first << " " << p.second << "\n";
+    return 0;
+}

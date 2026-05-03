@@ -1,0 +1,18 @@
+#include <iostream>
+
+#include <string>
+class player
+{
+    public:
+        virtual player *clone() = 0;
+        string &getName();
+        player & setName(const string &name);
+        int getScore() const;
+        player &setScore(int score);
+    protected:
+    private:
+        string name;
+        int score;
+};
+
+class playerOne :

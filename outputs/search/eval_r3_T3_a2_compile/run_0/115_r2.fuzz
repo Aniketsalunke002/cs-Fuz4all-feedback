@@ -1,0 +1,23 @@
+#include <iostream>
+
+using namespace std;
+class Int
+{
+public:
+	int * data;
+	Int()
+	{
+		data = new int{ 0 };
+	}
+	Int(int *d)
+	{
+		data = static_cast<int*>(d);
+	}
+	~Int()
+	{
+		cout<<"int class destructor called"<<endl;
+	}
+};
+class Char
+{
+public:

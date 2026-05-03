@@ -1,0 +1,22 @@
+#include <iostream>
+#include <vector>
+void print_list(const std::vector<int>& l)
+{
+    for(std::vector<int>::const_reverse_iterator i = l.rbegin();i!= l.rend();++i)
+        std::cout << *i << " ";
+    std::cout << std::endl;
+}
+int main(void)
+{
+    std::vector<int> l1;
+    l1.push_back(1);
+    l1.push_back(2);
+    l1.push_back(4);
+    l1.push_back(5);
+    l1.push_back(6);
+    l1.push_back(77);
+    l1.push_back(110);
+    l1.push_back(123);
+    l1.push_back(800);
+    print_list(l1);
+}

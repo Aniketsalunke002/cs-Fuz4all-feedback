@@ -1,0 +1,17 @@
+#include <iostream>
+using std:cout
+using std:cin
+using std:endl;
+int main()
+{
+	string a,b;
+	cout<<"Enter paswword:";
+	cin>>a;
+	if(a=="password")
+	{
+		cout<<"password is correct\n";
+	}
+	else
+		cout<<"password incorrect\n";
+	return 0;
+}

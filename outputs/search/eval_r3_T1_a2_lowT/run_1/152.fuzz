@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() {
+	char a;
+	a = 65;
+	if(a!= 65)
+	cout << a << endl;
+}

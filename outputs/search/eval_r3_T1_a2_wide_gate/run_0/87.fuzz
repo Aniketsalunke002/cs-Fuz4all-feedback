@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a = 10;
+	int b = 20;
+	int c = (a + b) * (a - b);
+	cout << "Value of c : " << c << endl;
+	 
+	c = c / 10;
+	return 0;
+}
+ 
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	 
+	int arr[50];
+
+	arr[0] = 0;
+	for (int i = 1; i < 50; ++i)
+	{
+		arr[i] = arr[i - 1] + arr[i - 2];
+		cout << i << " : " << arr[i] << endl;
+	}
+
+	return 0;
+}

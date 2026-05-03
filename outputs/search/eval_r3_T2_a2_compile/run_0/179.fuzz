@@ -1,0 +1,30 @@
+#include <iostream>
+struct Vector
+{
+  unsigned long long size;
+  unsigned long long capacity;
+  int* pointer;
+}
+int main() {
+  Vector v{};
+  return 0;
+}
+ 
+#include <iostream> 
+void myFunction(std::vector<int>& v) {
+  for(int &x : v) {
+    x *= 2;
+  }
+  for(int &x : v) {
+     x += 1;
+  }
+}
+ 
+#include <iostream>
+#include <string>
+void myFunction(std::string strings[]) {
+  for(int i = 0; strings[i]; ++i) {
+    std::cout << strings[i] << " ";
+  }
+  std::cout << std::endl;
+}

@@ -1,0 +1,9 @@
+#include <iostream>
+
+
+int main() {
+  short int foo[64] = {0};
+  foo[550];
+  std::cout << foo[0];
+  return 0;
+}

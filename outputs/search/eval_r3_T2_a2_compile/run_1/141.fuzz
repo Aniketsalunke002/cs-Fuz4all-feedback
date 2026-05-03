@@ -1,0 +1,11 @@
+#include <iostream>
+typedef signed int int32_t;
+typedef unsigned int uint32_t;
+uint32_t fibonacci(uint32_t n) {
+    if (n >= 2) return fibonacci(n - 2) + fibonacci(n - 1);
+    return 1;
+}
+int main() {
+    for (uint32_t n = 1; n <= 10; ++n) std::cout << fibonacci(n) << std::endl;
+    return 0;
+}

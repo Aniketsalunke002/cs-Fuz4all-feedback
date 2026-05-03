@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+int number = 5;
+cout<<number<<endl;
+number*=5;
+cout<<number<<endl;
+number-=9;
+cout<<number<<endl;
+number/=2;
+cout<<number<<endl; 
+cout<<(number+=2)<<endl;
+cout<<(number+=1+2)<<endl;
+cout<<(3+2+number)<<endl;
+return 0;
+}
+ 
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+double value_1=4.7;
+cout<<(string)"This is printing the value: "<<value_1<<endl;
+cout<< "This is printing the value: "<<value_1<<endl;
+value_1=5.2554;
+cout<< "This is printing the value: "<<value_1<<endl;
+cout<< "This is printing the value: "<<value_1<<endl;
+value_1=4.142;
+cout<< "This is printing the value: "<<value_1<<endl;
+cout<<  "This is printing the value: "<<value_1<<endl;
+
+return 0;
+}

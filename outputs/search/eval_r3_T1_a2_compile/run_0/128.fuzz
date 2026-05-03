@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main() {
+  bool b = false, c = true;
+  int x = 0;
+  if (c) {
+    x = 1;
+    while (b && x++ < c) {
+      cout << b++ << '\n';
+    }
+  } else {
+    x = x * 4;
+  }
+  return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+auto f(int i, unsigned j) {
+  return [&i, &j]() {
+    i+=1;
+    j+=1;
+    cout << i << " " << j << endl;
+  };
+}
+int main() {
+  int i=0,j=0;
+  auto fn = f(i, j);
+  fn();
+  return 0;
+}

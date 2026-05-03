@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+ 
+int main(){
+    int temp1 = 1;
+    int temp2 = 5;
+    int temp3 = temp2;
+    temp1 = temp1 + temp2;
+    cout << temp1 << " " << temp3 << "\n";
+    return 0;
+}

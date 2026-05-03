@@ -1,0 +1,52 @@
+#include <iostream>
+int i = 42;
+int main(void) {
+    std::cout << "Hello world" << i << std::endl;
+}
+# --compile_command='chmod a+x./test &&./test' -o /dev/null
+#!/bin/bash
+
+(
+cat << \EOF
+#include <iostream>
+int i = 42;
+int main(void) {
+    std::cout << "Hello world" << i << std::endl;
+}
+# --compile_command='chmod a+x./test &&./test' -o /dev/null
+EOF
+) | docker run ${DOCKER_IMG} ${DOCKER_RUN} -
+
+#!/bin/bash
+
+(
+cat << \EOF
+#include <iostream>
+int i = 42;
+int main(void) {
+    std::cout << "Hello world" << i << std::endl;
+    i = 25;
+}
+EOF
+) | docker run ${DOCKER_IMG} ${DOCKER_RUN} -
+
+#!/bin/bash
+
+(
+cat << \EOF
+#include <iostream>
+int i = 42;
+int main(void) {
+    std::cout << "Hello world" << i << std::endl;
+    i = 25;
+    i = 3;
+}
+# --compile_command='chmod a+x./test &&./test' -o /dev/null
+EOF
+) | docker run ${DOCKER_IMG} ${DOCKER_RUN} -
+
+# check for file output
+# cat a.out
+# Hello world42
+
+git checkout.

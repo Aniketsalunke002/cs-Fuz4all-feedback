@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+class MyClass1
+{
+public:
+    MyClass1()
+    {
+        cout << "Hello World" << endl;
+    }
+    void print()
+    {
+        cout << "Hello World" << endl;
+    }
+    void say()
+    {
+        cout << "Hello World" << endl;
+    }
+};
+int main()
+{
+    MyClass1 object;
+    object.print();
+    object.say();
+    dynamic_cast<MyClass1&>   // line 7
+    return 0;
+}

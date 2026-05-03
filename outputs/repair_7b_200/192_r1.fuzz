@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int a = 10, b = 5, c = 1;
+    cout << (a += b + c) << endl;
+    cout << (a *= (c = b)) << endl;
+    return 0;
+}
+// The output of the program is:
+// 16
+// 50
+//
+//
+//
+//
+//
+//

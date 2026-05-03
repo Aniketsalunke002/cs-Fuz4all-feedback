@@ -1,0 +1,15 @@
+#include <iostream>
+int main(){ 
+	int a=10;
+	cout<<a<<endl<<10<<endl<<20<<endl<<100<<endl;
+	do{
+		cout<<10<<endl;
+	}while(a<5);
+	do{
+		cout<<10<<endl;
+	}while(--a);
+	 
+	 
+	 
+	 
+}

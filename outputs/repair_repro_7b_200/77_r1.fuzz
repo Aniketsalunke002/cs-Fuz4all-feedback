@@ -1,0 +1,78 @@
+#include <iostream>
+
+using namespace std;
+void f(int i, unsigned j) {
+  int & ii = i;
+  auto g = [ii, j] {
+    ii += 1;
+    cout << "i= " << ii << " j= " << j << endl;
+  };
+  g();
+}
+int main() {
+  int i=0,j=0;
+  f(i,j);
+  return 0;
+}
+
+# +
+# %%writefile outputs/repair_repro_7b_200/78.cpp
+#include <iostream>
+using namespace std;
+void f(int i, unsigned j) {
+  int & ii = i;
+  auto g = [=] {
+    ii += 1;
+    cout << "i= " << ii << " j= " << j << endl;
+  };
+  g();
+}
+int main() {
+  int i=0,j=0;
+  f(i,j);
+  return 0;
+}
+
+# +
+# %%bash
+cd outputs/repair_repro_7b_200
+make 78
+./78
+
+# +
+# %%writefile outputs/repair_repro_7b_200/79.cpp
+#include <iostream>
+using namespace std;
+void f(int i, unsigned j) {
+  int & ii = i;
+  auto g = [=, &ii] {
+    ii += 1;
+    cout << "i= " << ii << " j= " << j << endl;
+  };
+  g();
+}
+int main() {
+  int i=0,j=0;
+  f(i,j);
+  return 0;
+}
+
+# +
+# %%bash
+cd outputs/repair_repro_7b_200
+make 79
+./79
+
+# +
+# %%writefile outputs/repair_repro_7b_200/80.cpp
+#include <iostream>
+using namespace std;
+void f(int i, unsigned j) {
+  int & ii = i;
+  auto g = [ii] {
+    ii += 1;
+    cout << "i= " << ii << " j= " << j << endl;
+  };
+  g();
+}
+int main() {

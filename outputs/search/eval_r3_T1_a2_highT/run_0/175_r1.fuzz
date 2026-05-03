@@ -1,0 +1,61 @@
+#include <iostream>
+
+using namespace std;
+class A
+{};
+class B : public A
+{};
+class C
+{ private: static int count; };
+int C::count = 0;
+A::A()
+{
+   
+}
+B::B()
+{
+   ++C::count;
+   cout << "called B::B() count = " << C::count << "\n";
+}
+int main()
+{
+   B b;
+   return 0;
+}
+  
+#include <iostream>
+using namespace std;
+int main()
+{
+   int x = new (int) (10);
+   cout << *x << "\n";
+}
+//  
+// #include<iostream>
+// using namespace std;
+// 
+// int *a = new int(20);
+// int x = new (int) *a;
+// 
+// int main()
+// {
+//    cout<<a<<endl;
+//    cout<<x<<endl;
+//    (new int) a;
+//    return 0;
+// }
+
+//  
+// #include <iostream>
+// using namespace std;
+// 
+// int main()
+// {
+//   int *x = new int;
+//   (*x)++;
+//   ++(*x);
+//   ++(*(x));
+//   ++(**x);  // (*x)->operator++
+//   return 0;
+// }
+//

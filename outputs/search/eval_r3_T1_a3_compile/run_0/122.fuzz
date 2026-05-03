@@ -1,0 +1,79 @@
+#include <iostream>
+int main() {
+  std::string a, b;
+  std::cout << "What are your name? ";
+  std::cin >> a;
+  std::cout << "Who are you? ";
+  std::cin >> b;
+  std::cout << "My name is " << a << " and you named yourself " << b << ".";
+  return 0;
+}
+ 
+#include <iostream>
+
+int main() {
+  std::string input;
+  std::cout << "Input String: ";
+  std::cin >> input;
+  unsigned count = 0;
+  for (int i = 0; i < input.length(); i++) {
+    if ('\n' == input[i])
+      count += 1;
+  }
+  std::cout << "Number of newlines: " << count << ".";
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  std::string name, pet, sentence = "Name: ";
+  std::cout << "Enter your name please: ";
+  std::cin >> name;
+  sentence += name;
+  sentence += "\n";
+  sentence += "Pet: ";
+  std::cout << "Enter your pet: ";
+  std::cin >> pet;
+  sentence += pet;
+  sentence += "\n";
+  std::cout << sentence;
+  return 0;
+}
+ 
+#include <iostream>
+#include <fstream>
+#include <string>
+
+int main(int argc, char** argv) {
+  std::string file_path;
+  if (argc > 1) {
+    file_path = argv[1];
+  } else {
+    std::cout << "Input file path: ";
+    std::cin >> file_path;
+  }
+  std::ifstream file(file_path);
+  if (!file.is_open()) {
+    std::cerr << "Can not read file: " << file_path << std::endl;
+    std::cin.get();
+    return 1;
+  }
+  unsigned words_count = 1;
+  std::string word;
+  std::unordered_map<std::string, int> count;
+  while (file >> word) {
+    std::string word_copy = word;
+    word_copy.erase(std::remove(word_copy.begin(), word_copy.end(), '\n'), word_copy.end());
+    if (count.find(word_copy) == count.end())
+      count[word_copy] = 1;
+    else
+      ++count[word_copy];
+  }
+  for (auto pair : count) {
+    std::cout << pair.first << " " << pair.second << std::endl;
+    words_count += pair.second;
+  }
+  std::cout << words_count << " words were found.";
+  file.close();
+  return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    int x = 10;
+    long long int z = x+1;
+    cout << "change" << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    int a = 10;
+    int b = 10;
+    cout << "change" << endl;
+}

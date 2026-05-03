@@ -1,0 +1,40 @@
+#include <iostream>
+int main () {
+  int i;
+  int* ptr = &i;
+  std::cout << *ptr << std::endl;
+  int* arr = new int[1];
+  *arr = 42;
+  std::cout << *arr << std::endl;
+  delete [] arr;
+}
+ 
+#include <iostream>
+#include <memory>
+#include <vector>
+#include <algorithm>
+int main() {
+}
+ 
+#include <iostream>
+class Complex {
+public:
+  Complex() {}
+  Complex(int i) : value(i) {}
+  Complex(int i, int j) { }
+  int value;
+};
+int main() {
+  Complex c(1, 2);
+  std::cout << 2 << std::endl;
+}
+ 
+#include <iostream>
+int counter = 0;
+void f(int i) {
+  if (++counter < i) f(counter);
+  else std::cout << "Goodbye" << std::endl;
+}
+int main() {
+  f(11);
+}

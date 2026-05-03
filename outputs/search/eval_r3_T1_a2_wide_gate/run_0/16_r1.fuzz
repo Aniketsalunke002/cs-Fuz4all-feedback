@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+int main() { 
+    int foo=1;
+    cout<<foo<<endl;
+    foo++;
+    cout<<foo<<endl;
+    return 0;
+}

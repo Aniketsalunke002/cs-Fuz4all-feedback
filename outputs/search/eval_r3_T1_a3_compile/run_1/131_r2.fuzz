@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+	int i = 0;
+	while (i < 5) {
+		for (; j<5; j++) {
+			i--;
+		}
+		do {
+			i--;
+		} while (i<5)
+		++i;
+		j = 0;
+		if (i<5) {
+			do {
+				i--;
+			} while (i<5)
+			++i;
+		}
+	}
+	cout << i << endl;
+	i--;
+	cout << i << endl;
+	if (i < 5) {
+		i++;
+	}
+	i--;
+	cout << i << endl;
+	return 1;
+}

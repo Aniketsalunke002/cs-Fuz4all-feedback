@@ -1,0 +1,129 @@
+#include <iostream>
+std::istream& operator>>(std::istream&, std::istream&);
+std::istream& operator<<(std::istream&, std::ostream&);
+
+struct InString
+{
+    friend std::istream& operator>>(std::istream& in, InString&)
+    {
+        char next;
+	    while (!in.eof())
+	    {
+	        in.get(next);
+			if (next == '\n')  
+				return in;
+	    }
+		return in;
+    }
+};
+
+int main()
+{
+    {
+        std::string s, t;
+        std::cin >> s >> t;
+    }
+    {
+        std::ifstream ifs("file.txt");
+        std::string s, t;
+        ifs >> s >> t;
+    }
+    {
+        std::ofstream ofs("file.txt");
+        std::string s, t;
+        s = std::string();
+		t = std::string();
+        ofs << s << ";" << t << std::endl;
+    }
+    {
+        std::cout << std::boolalpha;
+ 
+        std::string s, t;
+        std::cin >> s >> t;
+		std::cout << s << " " << t << std::endl;
+    }
+    return 0;
+}
+ 
+#include <cstdint>
+#include <cassert>
+#include <tuple>
+#include <array>
+
+ 
+
+template <typename Seq>
+decltype(auto) front(Seq&& seq) {
+    return std::get<0>(std::forward<Seq>(seq));
+}
+
+std::array<std::uint32_t, 5> test_array{1294, 1232, 12, 1, 123};
+
+void using_decltype()
+{
+    std::uint32_t n = front(test_array);
+    assert(n == 1294);
+}
+
+enum class Number: std::uint32_t
+{
+    A = 0,
+};
+
+struct StringHolder
+{
+    std::string str;
+};
+
+template <typename T>
+void swap(T& a, T& b)
+{
+    T c = std::move(a);
+    a = std::move(b);
+    b = std::move(c);
+}
+
+template <typename E>
+constexpr auto to_underlying(E e) noexcept
+{
+    return static_cast<std::underlying_type_t<E>>(e);
+}
+
+Number from_u32(std::uint32_t value)
+{
+    return static_cast<Number>(value);
+}
+
+Number test_enum(const std::uint32_t value, bool a, bool b = false)
+{
+    const constexpr auto A = to_underlying(Number::A);
+    if ((value & 0x1) && a) return from_u32(A);
+    if ((value & 0x4) && b) return from_u32(A);
+    return from_u32(0);
+}
+
+void using_enums()
+{
+    {
+        std::uint32_t v = from_u32(to_underlying(Number::A));
+        assert(v == 0);
+    }
+    {
+        StringHolder sh;
+        assert(sh.str.empty());
+        std::string copy = "New String";
+        swap(sh.str, copy);
+        assert(sh.str == copy);
+        assert(copy.empty());
+    }
+    {
+        const std::array<std::tuple<bool, bool, Number>, 8> testCases = {{false, false, Number::A},
+                                                                 {false, true, Number::A},
+                                                                 {true, false, Number::A},
+                                                                 {false, false, Number::A},
+                                                                 {true, false, Number::A},
+                                                                 {true, true, 0},  
+                                                                 {false, true, 0},  
+                                                                 {true, true, 0}};  
+        for (const auto& testCase: testCases)
+       

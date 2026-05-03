@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+  int main(int argc, char** argv[]) {
+	cout << "a" << endl;
+    return 0;
+  }
+ 
+#include <iostream>
+class A {
+public:
+    A():
+        i(5)
+    {}
+    int i;
+};
+  int main(int argc, char** argv[]) {
+	A a;
+    return 0;
+  }

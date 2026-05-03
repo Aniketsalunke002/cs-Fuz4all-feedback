@@ -1,0 +1,29 @@
+#include <iostream>
+
+#include <vector>
+std::vector<int> add(const std::vector<int>v1, const std::vector<int> v2)
+{
+    std::vector<int> result(v1.size() + v2.size());
+
+    std::copy(v1.begin(), v1.end(), result.begin());
+    std::copy(v2.begin(), v2.end(), result.begin() + v1.size());
+
+    return result;
+}
+#include <array>
+int main()
+{
+  std::array<int,10> a{0,1,2,3,4,5,6,7,8,9};
+  for(auto i : a)
+  {
+    i*=-1;
+  }
+  std::cout << a << std::endl << std::endl;
+  std::array<int,10> b = (a*=-1)*=-1;
+  std::cout << b << std::endl;
+    
+    return 0;
+}
+// Output:
+// [0, -1, -2, -3, -4, -5, -6, -7, -8, -9]
+// 0

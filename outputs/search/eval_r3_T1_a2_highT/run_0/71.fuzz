@@ -1,0 +1,8 @@
+#include <iostream>
+int main() { char x = 0x7e; std::cin >> x;}
+ 
+#include <iostream>
+int main() { short x; std::cin >> x; x += 3;}
+ 
+#include <iostream>
+int main() { int x, y; std::cin >> x >> y; if (x < y) std::cout << x;}

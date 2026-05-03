@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a, b, c, d;
+    cout << "Hello World!\n" << endl;
+    cout << "Enter Number: ";
+    cin >> a;
+    cout << "Enter Number: ";
+    cin >> b;
+    cout << "Enter Number: ";
+    cin >> c;
+    cout << "Enter Number: ";
+    cin >> d;
+    cout << endl;
+    cout << a + b + c + d << endl;
+    cout << a - b - c - d << endl;
+    cout << a * b * c * d << endl;
+    cout << a / b / c / d << endl;
+    cout << a % b % c % d << endl;
+    return 0;
+}

@@ -1,0 +1,44 @@
+#include <iostream>
+
+namespace {
+const int n = 10;
+int a[n]{};
+int b[n]{};
+}
+int main() {
+    for (int i = 0; i < n; i++)
+        a[i] = 2 * i;
+    for (int i = 0; i < n; i++)
+        a[i] = 3 * a[i];
+    for (int i = 0; i < n; i++)
+        b[i] = 2 * a[i];
+    for (int i = 0; i < n; i++)
+        std::cout << b[i] << " ";
+    std::cout << std::endl;
+    return 0;
+}
+//  
+// #include <iostream>
+// int main() {
+//     std::string input;
+//     while (true) {
+//         std::cin >> input;
+//         if (input[0] == ';') {
+//             break;
+//         }
+//         std::cout << input.length() << '\n';
+//     }
+// }
+#include <iostream>
+namespace {
+int main() {
+    std::string input;
+    while (true) {
+        std::cin >> input;
+        if (input[0] == ';') {
+            break;
+        }
+        std::cout << input.length() << '\n';
+    }
+}
+}

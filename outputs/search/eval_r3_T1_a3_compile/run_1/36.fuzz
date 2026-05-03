@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a=1;
+	cout << "a's original value: " << a << endl;
+	cout << "a's after being modifed: " << (a=(++a+a-a)*a + a * (-a))%10 << endl;
+	return 0;
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+    int x = 10;
+    int y = &x;
+    cout << *y << endl << x << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+     
+    short int a[6] = {1,2,3,4,5,6};
+    short int c[6];
+     
+     

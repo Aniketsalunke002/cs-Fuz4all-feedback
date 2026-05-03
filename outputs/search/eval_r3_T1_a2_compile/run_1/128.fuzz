@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int a = 15;
+    int x = 8;
+    int result;
+    result = a*x;
+    cout << result + 25 << "\n";
+    int r = result + 30;
+    cout << result + 3 + 2*x << "\n";
+    if (result > 6){
+        x = 4;
+        cout << x << "\n";
+    }
+    return 0;
+}
+ 
+
+
+ 
+ 
+ 
+ 
+ 
+

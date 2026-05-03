@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+bool IsPalindrome( char* word )
+{
+    for(int left=0, right=strlen(word)-1; left<right; left++, right--)
+    {
+        if (tolower(word[left])!=tolower(word[right]))
+        {
+            return false;
+        }
+    }
+    return true;
+}
+int main()
+{
+   std::cout<<IsPalindrome("abacaba");
+}
+```

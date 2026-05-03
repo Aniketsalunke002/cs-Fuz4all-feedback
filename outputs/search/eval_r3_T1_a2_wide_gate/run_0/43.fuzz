@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+int main(void) {
+    int *a = new int[2];   
+    a[0] = 1;
+    a[1] = 2;
+    cout<<sizeof(a)<<endl;
+    int *b = new int[10]{1,2,3,4,5,6,7,8,9};
+    cout<<sizeof(b)<<endl;
+    delete []a;
+    delete []b;
+    cout<<sizeof(b)<<endl;
+}
+ 
+ 
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+int i = 5;
+int &f(int &i){
+    return i;
+}
+
+int *g(int *a){
+    return a;
+}
+
+int main() {
+     
+     
+     
+     
+     
+     
+     
+     
+    char arr[10] = {0,1,2,3,4,5,6,7,8,9};
+    char *p = arr;
+    cout<<p<<endl;
+    cout<<*p<<endl;
+    cout<<i<<endl;
+    cout<<f(i)<<endl;
+    cout<<g(p)<<endl;
+    cout<<arr<<endl;
+    cout<<*arr<<endl;
+     
+    *p+=3;
+    *arr = 'a';
+    cout<<*p<<endl;
+    cout<<i<<endl;
+    
+}

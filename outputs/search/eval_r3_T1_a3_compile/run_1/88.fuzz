@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 5, b = 12;
+	b = b - 2;
+	a = a - 2;
+	cout << a + b << endl;
+	return 0;
+}

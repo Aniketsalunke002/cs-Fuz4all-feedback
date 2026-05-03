@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+class Shape{
+    int x, y, width, height;
+public:
+    Shape()
+    {  
+        x = y = 1;
+        width = height = 10;
+    }
+};
+void init(Shape &c)
+{
+    cout << "Setting c.x to 2" << endl;
+    c.x = 2;
+    cout << "Setting c.y to 3" << endl;
+    c.y = 3;
+}
+void copy(const Shape &o, Shape &n)
+{
+   cout << "Setting n.height to o.height" << endl;
+   n.height = o.height;
+   cout << "Setting n.width to o.width" << endl;
+   n.width = o.width;
+}
+int main()
+{
+    Shape s;
+    cout << s.x << " " << s.y << " " << s.width << " " << s.height << endl;
+    init(s);
+    cout << s.x << " " << s.y << " " << s.width << " " << s.height << endl;
+    Shape s2;
+    cout << s2.x << " " << s2.y << " " << s2.width << " " << s2.height << endl;
+    copy(s, s2);
+    cout << s.x << " " << s.y << " " << s.width << " " << s.height << endl;
+    cout << s2.x << " " << s2.y << " " << s2.width << " " << s2.height << endl;
+}

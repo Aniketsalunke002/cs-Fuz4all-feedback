@@ -1,0 +1,17 @@
+#include <iostream>
+void __attribute__ ((noinline)) f(int *g, int* h){
+  h=g;
+}
+int __attribute__ ((noinline)) main(){
+  int a = 0;
+  int b = 0;
+  return 0;
+}
+ 
+#include <iostream>
+int __attribute__ ((noinline)) 
+main(){
+  int a = 0;
+  *(&a) = 0;
+  return a;
+}

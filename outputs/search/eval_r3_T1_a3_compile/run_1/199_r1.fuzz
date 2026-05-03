@@ -1,0 +1,12 @@
+#include <iostream>
+
+#include <utility>
+#include <assert.h>
+#include <map>
+using namespace std;
+int main() {		// map < pair<int,char>,int > m;
+  map < pair<int,char>,int > m;
+  m[make_pair(2,'a')] = 5;
+  assert   ( m[make_pair(2,'a')] == 5 );
+  assert   ( m.count(make_pair(2,'a'))  );
+  }

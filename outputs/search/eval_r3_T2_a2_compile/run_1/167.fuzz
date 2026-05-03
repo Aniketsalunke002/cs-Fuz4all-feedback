@@ -1,0 +1,13 @@
+#include <iostream>
+int main() {
+    int* ptr;
+    int i=6;
+    ptr = new int [i];
+    *ptr = -1. * (i * i);
+    if (*ptr == -1. * (i * i))
+    {
+        std::cout << "OK" << '\n';
+    }
+    delete[] ptr;
+    return 0;
+}

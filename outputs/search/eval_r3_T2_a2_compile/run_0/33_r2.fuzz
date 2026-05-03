@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <fstream>
+using namespace std;
+
+int main(int argc, char** argv) {
+	int a, b;
+	int  a_sum = 0, b_sum = 0, sum_sum = 0;
+
+	ifstream fin("in.txt");
+	if(!fin) {
+		cerr << "Cannot open file" << endl;
+		return -1;
+	}
+
+	while(fin >> a >> b) {
+		a_sum += a;
+		b_sum += b;
+		sum_sum += a_sum * b_sum;
+		a_sum -= a;
+		b_sum -= b;
+	}
+	cout << "a_sum=" <<  a_sum << " b_sum=" <<  b_sum << " sum_sum=" <<  sum_sum << endl;
+	fin.close();
+
+	ofstream fout("output.txt");
+	if(!fout) {
+		cerr << "Cannot open file" << endl;
+		return -1;
+	}
+	fout << "result:" << sum_sum << endl;

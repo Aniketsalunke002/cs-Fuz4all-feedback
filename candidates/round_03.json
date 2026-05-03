@@ -1,0 +1,12 @@
+[
+  {"name": "r3_baseline_no_repair", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": false}},
+  {"name": "r3_T1_a2_compile", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": true, "max_attempts": 2, "template_id": "T1", "error_gate": "compile_error", "temperature": 0.7, "cache": true}},
+  {"name": "r3_T1_a3_compile", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": true, "max_attempts": 3, "template_id": "T1", "error_gate": "compile_error", "temperature": 0.7, "cache": true}},
+  {"name": "r3_T2_a2_compile", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": true, "max_attempts": 2, "template_id": "T2", "error_gate": "compile_error", "temperature": 0.7, "cache": true}},
+  {"name": "r3_T3_a2_compile", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": true, "max_attempts": 2, "template_id": "T3", "error_gate": "compile_error", "temperature": 0.7, "cache": true}},
+  {"name": "r3_T1_a2_lowT", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": true, "max_attempts": 2, "template_id": "T1", "error_gate": "compile_error", "temperature": 0.3, "cache": true}},
+  {"name": "r3_T1_a2_highT", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": true, "max_attempts": 2, "template_id": "T1", "error_gate": "compile_error", "temperature": 1.0, "cache": true}},
+  {"name": "r3_T1_a1_single", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": true, "max_attempts": 1, "template_id": "T1", "error_gate": "compile_error", "temperature": 0.7, "cache": true}},
+  {"name": "r3_T1_a2_wide_gate", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": true, "max_attempts": 2, "template_id": "T1", "error_gate": "all_non_timeout", "temperature": 0.7, "cache": true}},
+  {"name": "r3_I1_a2_instruction", "gen": {"llm": {"batch_size": 4}}, "repair": {"enabled": true, "max_attempts": 2, "template_id": "I1", "error_gate": "compile_error", "temperature": 0.7, "cache": true}}
+]

@@ -1,0 +1,9 @@
+#include <iostream>
+int main() {
+    int i[5] = { 0,1,2,3,4 };
+    if (i[0])
+    {
+        std::cout << "OK" << '\n';
+    }
+    return 0;
+}

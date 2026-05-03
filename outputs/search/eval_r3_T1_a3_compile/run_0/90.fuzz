@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+  int a, b;    
+  a = 10;    
+  b = 12;
+  int c, d;
+  c = a + b;
+  d = c / 5;
+
+  cout << a << b << endl;
+  cout << c << d << endl;
+  return 0;
+}

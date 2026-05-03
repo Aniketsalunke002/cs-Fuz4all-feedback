@@ -1,0 +1,19 @@
+#include <iostream>
+int main(int argc, char* argv[])
+{
+        int x = -100;
+        std::cout << (x+10)*5;
+        if (const char c = std::cin.get())
+        {
+                if (const char d = std::cin.get())
+                {
+                        std::cout << c+d;
+                }
+                else
+                {
+                        std::cout << c << '\n';
+                }
+        }
+        std::cin.get();
+        return 0;
+}

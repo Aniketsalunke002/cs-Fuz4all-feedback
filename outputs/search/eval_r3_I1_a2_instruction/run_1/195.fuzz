@@ -1,0 +1,9 @@
+#include <iostream>
+int main()
+{
+    int num = 44;
+    num++;
+    num = num++;
+    num++;
+    return 0;
+}

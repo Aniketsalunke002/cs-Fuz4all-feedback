@@ -1,0 +1,19 @@
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a + 2;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int add(const int a, const int b)
+{
+    return a + b;
+}
+int main()
+{
+        std::cout << "the value " << add (5, 2) << std::endl;
+        return 0;
+}

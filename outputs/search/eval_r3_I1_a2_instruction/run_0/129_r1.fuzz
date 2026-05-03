@@ -1,0 +1,8 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+  int array[10];
+  array[0]=20;
+  cout << array[0];
+return 0;
+}

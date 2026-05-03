@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	auto x = 1;
+	std::cout<<x << std::endl;
+	std::cout<<x << std::endl;
+	switch (x) {
+		case 1:
+		case 2:
+			break;
+		default:
+			break;
+	}
+}

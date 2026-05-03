@@ -1,0 +1,40 @@
+#include <iostream>
+int main() {
+	int a = 0;
+	auto x = a;
+	++x;
+	std::cout << x << '\n';
+	return 0;
+}
+ 
+#include <iostream>
+int main() {
+	std::cout << 1 + 1 << '\n';
+	return 0;
+}
+ 
+#include <iostream>
+int main() {
+	int x = 7;
+	if (x > 0) {
+		x = 3;
+	}
+	x = 8;
+	std::cout << x << '\n';
+	return 0;
+}
+ 
+#include <iostream>
+#include <exception>
+int main()
+{
+	try {
+		int x = 8;
+		int y = 0;
+		int z = x / y;
+	}
+	catch (const std::exception&) {
+		std::cout << "division failed\n";
+	}
+	return 0;
+}

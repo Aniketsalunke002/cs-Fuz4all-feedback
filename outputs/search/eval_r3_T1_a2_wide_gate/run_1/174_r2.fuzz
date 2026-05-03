@@ -1,0 +1,19 @@
+#include <iostream>
+
+bool lessThan(int first, int second){
+    return first < second;
+}
+int main(void)
+{
+  std::cout << "lessThan(1, 2) is " << (lessThan(1, 2) == true? "true" : "false") << std::endl;
+  
+  bool lessThanZeroToTen(int number){
+    return lessThan(number, 0) < lessThan(number, 10);
+  }
+  std::cout << "lessThanZeroToTen(1) is " << (lessThanZeroToTen(1) == true? "true" : "false") << std::endl;
+  bool lessThanFiveAndOdd(int number){
+    return lessThan(number, 5) && number % 2 == 1;
+  }
+  std::cout << "lessThanFiveAndOdd(6) is " << (lessThanFiveAndOdd(6) == true? "true" : "false") << std::endl;
+  return 0;
+}

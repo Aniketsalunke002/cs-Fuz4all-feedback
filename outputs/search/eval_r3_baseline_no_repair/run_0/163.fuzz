@@ -1,0 +1,78 @@
+#include <iostream>
+int calc(int a1) {
+    int c = 1;
+    for (c = 1; c <= a1; c++ ) c += c;
+    return c;
+}
+int main(int argc, char **argv) {
+    int sum = 0;
+    for (int i = 0; i > -3; i--) {
+        sum += calc(i);
+        std::cout << "sum=" << calc(i) << "\n";
+    }
+    return 0;
+}
+
+ 
+int main(int argc, char **argv) {
+    int sum = 0;
+    for (int i = 0; i <= 0; i++) {
+        if (i == 0) goto next1;
+        sum += i;
+        continue;   
+        sum += i;
+        break;
+    }
+next1:
+        std::cout << "end!\n";
+}
+
+ 
+#include <iostream>
+
+template <typename T>
+class Vec
+{
+    int len;
+    T* vec_arr;
+    template <typename Ty_other>
+    friend std::ostream& operator<<(std::ostream& os, Vec<Ty_other>& vv);
+public:
+    Vec() {
+        vec_arr = nullptr;
+        len = 0;
+    }
+    Vec(int new_len) {
+        len = new_len;
+        vec_arr = new T[len];
+    }
+    Vector<T>& operator=(const Vec& rhs) {
+        delete[] this->vec_arr;
+        this->Len = rhs.Len;
+        this->vec_arr = new T[rhs.Len];
+        for (int i=0; i < this->Len; i++)
+            this->vec_arr[i] = rhs.vec_arr[i];
+        return *this;
+    }
+    ~Vec() {
+        delete[] this->vec_arr;
+        this->Len = 0;
+    }
+};
+template <typename Ty>
+std::ostream& operator<<(std::ostream& os, Vec<Ty>& vv)
+{
+    for (int i=0; i < vv.Len; i++)
+        os << vv.vec_arr[i] << "\n";
+    return os;
+}
+int main(int argc, char **argv) {
+    Vec<int> vv(5);
+    vv.vec_arr[0] = 3;
+    vv.vec_arr[1] = 6;
+    vv.vec_arr[2] = 1;
+    vv.vec_arr[3] = 2;
+    vv.vec_arr[4] = 5;
+    std::cout << vv << "\n";
+    return 0;
+}

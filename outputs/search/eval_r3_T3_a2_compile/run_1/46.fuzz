@@ -1,0 +1,11 @@
+#include <iostream>
+template<typename... Types>
+void print(const Types&... vals)
+{
+	(std::cout <<... << vals) << "\n";
+}
+int main(void)
+{
+	print('a','b','c','d','e');
+	return 0;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+
+namespace foo {
+namespace bar {
+class bar {
+ public:
+  bar() { std::cout << "Constructor called!" << std::endl; }
+  void barMethod() {
+    std::cout << "bar method called" << std::endl;
+  }
+};
+}  // namespace bar
+}  // namespace foo
+
+int main() {
+  foo::bar::bar x;
+
+  auto fn = &foo::bar::barMethod;
+  fn(&x);
+
+  return 0;
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string foo = "1";
+
+void func(string& foo) {
+    foo = foo + ": foo";
+}
+
+int main(int argc, char* argv[]) {
+    cout << foo;
+
+    func(foo);
+
+    cout << foo;
+
+    return 0;
+}
+ 

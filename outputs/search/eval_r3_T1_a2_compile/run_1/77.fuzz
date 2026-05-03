@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string a = "Hello";
+    cout<<a<<endl;
+    cout<<"the length is "<<a.length()<<endl;
+    cout<<"the length is "<<a.size()<<endl;
+    cout<<"the lenght is "<<a.size()*2<<endl;
+    a.pop_back();
+    cout<<a<<endl;
+    cout<<"the length is"<<a.length()<<" and the size is "<<a.size()<<endl;
+    a.push_back('e');
+    cout<<a<<endl;
+    cout<<"the length is"<<a.length()<<" and the size is "<<a.size()<<endl;
+}

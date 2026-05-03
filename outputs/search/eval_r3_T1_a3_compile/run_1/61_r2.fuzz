@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    // cout << (int)(15.4) << endl;
+    // cout << (int)(22.8) << endl;
+    cout << sizeof(double) << endl;
+    double a = 4567;
+    float b = 222.44;
+    // cout << (int)(1.02 / 1.32) << endl;  
+    // cout << (int)(4567) << endl;
+    // cout << (int)(1234 / 2) << endl;
+    int a = 2545;
+    int b = -152;
+    cout << (int)(a + b * 5.3) << endl;
+     return 0;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int i = 1;
+  int *ptr1 = new int[i];
+  int **ptr2 = &ptr1;
+  int **ptr3 = reinterpret_cast<int **>(ptr1) + 1;
+  ptr1 = ptr3;
+  ptr1[0] = 1;
+  cout << *ptr1 << endl;
+  return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+  int **ptr = NULL;
+  int ***ptr2 = &ptr;
+  ptr = ptr2;
+  int y = 1;
+  ptr = new int *[y]();
+  cout << ptr[0][0];
+  return 0;
+}

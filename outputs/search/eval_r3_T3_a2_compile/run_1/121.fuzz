@@ -1,0 +1,46 @@
+#include <iostream>
+int main() {
+	int x;
+	x=2;
+	x=7;
+	std::cout << x << std::endl;
+}	
+ 
+#include <iostream>
+int main() {
+	int x;
+	if(x<2){
+		 cout<<"Smaller than 2";
+	} else {
+		 cout<<"Larger than 2";
+	}	
+	std::cout << x<<std::endl;
+}
+
+ 
+#include <iostream>
+int main() {
+	 char car = 'x'; 
+	 bool big;  
+	 short tiny;  
+	 int d=2;  
+	 float speed = 21.5;  
+	 unsigned long v = 10;  
+
+	 tiny = 2;
+	 big = true;
+	 std::cout<<"char big: " << big <<std::endl; 
+
+ }
+
+
+
+ 
+#include <iostream>
+int main() {
+	char big = true;
+}
+
+
+
+

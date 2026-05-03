@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+cout<<"Please enter a value for x"<<endl;
+int x;
+cin>>x;
+int z,w,y;
+if (x%3==0) z=x%3;
+else w=x%3;
+if (z+w>0)
+{
+ if (x%3==1)
+cout<<"3"<<endl;
+ else
+{
+ y=x%3;
+cout<<y;
+}
+}
+else
+{
+ if (x%3==1)
+{
+ y=x%3;
+w=5-y;
+cout<<y+w;
+}
+else
+cout<<"3";
+
+}
+return 0;
+}
+

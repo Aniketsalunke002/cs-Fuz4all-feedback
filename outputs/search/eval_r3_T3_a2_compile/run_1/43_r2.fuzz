@@ -1,0 +1,33 @@
+#include <iostream>
+
+template<typename T>
+int f(T* &x, int &y) {
+    T a=0;
+    x = (T *) malloc (sizeof(T) * y);
+    y = 2 * y;
+    while (y > 0) {
+        y--;
+        x[y] = y - 1;
+    }
+    free(x);
+    return 0;
+}
+template<typename T>
+int g(T* &x, int &y) {
+    T a=0;
+    x = (T *) malloc (sizeof(T) * y);
+    y = 2 * y;
+    while (y > 0) {
+        y--;
+        x[y] = y - 2;
+    }
+    return 0;
+}
+int main(void) {
+    int x=1;
+    int y=1;
+    int *p=&g;
+    *(p+1)=0;
+    g((int *&)(p+1)-1, y);
+    return 0;
+}

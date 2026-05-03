@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+ 
+int c;
+const int &rc = c;  
+ 
+auto a = 10;  
+auto f = []{return 100;};  
+const int ci = 1024;
+const int &r1 = ci;
+const int &r2 = ci;
+int main()
+{
+    int ci = 1024;
+    int &r1 = ci; 
+    const int &r2 = ci;  
+    auto a = ci+100;  
+     
+    cout << ci << endl;
+     
+    cout << r2 << endl;
+    cout << a << endl;
+    cout << f() << endl;
+    ci = 20;
+     
+    r2 = 30; 
+    cout << ci << endl;
+    cout << r2 << endl;
+    cout << f() << endl;
+    return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+  int array[10];
+  array[0]=20;
+  cout << array[0];
+return 0;
+}
+```
+# C++17
+What is the main reason for the rapid increase of the use of functional programming as a tool for the development of software and software applications?
+
+| Answer |
+| ------ |
+| It's easier to think clearly about programs without a need to think for too long, and the program that solves the problems it was designed to solve can be very clear and not necessarily contain anything other than the main features of the program. |

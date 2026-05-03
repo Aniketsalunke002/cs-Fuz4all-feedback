@@ -1,0 +1,16 @@
+#include <iostream>
+
+
+namespace {
+  int main() {
+    std::cout << 1 << std::endl
+              << 3 << std::endl
+              << 5;
+  }
+}
+
+namespace {
+  int main() {
+    for (int i; i < std::cin);
+  }
+}

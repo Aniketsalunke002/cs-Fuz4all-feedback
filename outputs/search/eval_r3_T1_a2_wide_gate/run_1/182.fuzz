@@ -1,0 +1,9 @@
+#include <iostream>
+int foo(const char* x) {
+  std::cout << x;
+}
+
+void bar() {
+    std::cout << foo("hello");
+}
+

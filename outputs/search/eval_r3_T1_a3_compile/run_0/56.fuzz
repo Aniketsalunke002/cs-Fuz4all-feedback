@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main() {
+  int y = 5;
+  const int z = 10;
+  char c = 'a';
+  const char& p = c;
+  cout << y << " " << z << " " << c << " " << &c << " " << p << endl;   
+
+  cout << ++z << endl;
+  return 0;
+}

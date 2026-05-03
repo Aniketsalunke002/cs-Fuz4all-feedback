@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main() {
+ int n = 1;
+ int p = ++n;
+ int q = n++;
+ cout << p << " " << q << endl;
+ cout << n << endl;
+ return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+ cout << sizeof(true) << endl;
+ int a = 1;
+ if (sizeof(a) % 10 == 0) {
+ cout << sizeof(a) << endl;
+ cout << a << endl;
+ }
+ else {
+ cout << sizeof(a) << endl;
+ cout << (a++) << endl;
+ }
+ return 0;
+}

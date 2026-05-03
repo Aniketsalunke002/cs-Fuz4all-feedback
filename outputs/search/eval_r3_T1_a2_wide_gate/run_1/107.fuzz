@@ -1,0 +1,10 @@
+#include <iostream>
+int main( int argc, char **argv ){
+std::cout << "\n\t  This is the third program.\n\n";
+std::string str;
+std::cout<<"Input a string" ;
+std::cin>>str;
+std::cout<<"Print the string value "<<str;
+std::cin.get();
+}
+

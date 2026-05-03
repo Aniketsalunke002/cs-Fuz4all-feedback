@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x=2, y=2, z=4;
+	cout<<x*=y+z<<"\n";
+	cout<<x%y<<"\n";
+	x=4;
+	cout<<x<<"\n";
+	return 0;
+}

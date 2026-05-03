@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string name;
+   cout << "Please enter your name: ";
+   cin >> name;
+   cout << "Hello, "<< name <<"\n";
+
+   cout << "Your name is " <<  name[0] << "." << name[1] <<" and " << name[2]<<"!\n";
+   return 0;
+}
+ 
+#include <iostream>
+using

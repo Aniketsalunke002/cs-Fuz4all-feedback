@@ -1,0 +1,1265 @@
+[TRACE] Validating outputs/baseline_7b_200/0.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/0.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/1.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/1.fuzz failed validation with error message: outputs/baseline_7b_200/1.fuzz:4:10: fatal error: QCoreApplication: No such file or directory
+    4 | #include <QCoreApplication>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+[TRACE] Validating outputs/baseline_7b_200/2.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/2.fuzz failed validation with error message: outputs/baseline_7b_200/2.fuzz:4:3: error: expected unqualified-id before ‘for’
+    4 |   for (std::list<std::string> l : std::vector<std::list<std::string>>()) {
+      |   ^~~
+outputs/baseline_7b_200/2.fuzz:6:1: error: expected declaration before ‘}’ token
+    6 | }
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/3.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/3.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/4.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/4.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/5.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/5.fuzz failed validation with error message: outputs/baseline_7b_200/5.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/5.fuzz:4:5: note: ‘int main()’ previously defined here
+    4 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/6.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/6.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/7.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/7.fuzz failed validation with error message: outputs/baseline_7b_200/7.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/7.fuzz:5:14: error: ‘unordered_map’ is not a member of ‘std’
+    5 |         std::unordered_map<int, int> dict = { { 1, 2 },{ 3, 4 } };
+      |              ^~~~~~~~~~~~~
+outputs/baseline_7b_200/7.fuzz:3:1: note: ‘std::unordered_map’ is defined in header ‘<unordered_map>’; did you forget to ‘#include <unordered_map>’?
+    2 | #include <vector>
+  +++ |+#include <unordered_map>
+    3 | int main()
+outputs/baseline_7b_200/7.fuzz:5:28: error: expected primary-expression before ‘int’
+    5 |         std::unordered_map<int, int> dict = { { 1, 2 },{ 3, 4 } };
+      |                            ^~~
+outputs/baseline_7b_200/7.fuzz:6:22: error: ‘dict’ was not declared in this scope
+    6 |         std::cout << dict[3] << std::endl;
+      |                      ^~~~
+[TRACE] Validating outputs/baseline_7b_200/8.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/8.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/9.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/9.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/10.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/10.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/11.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/11.fuzz failed validation with error message: outputs/baseline_7b_200/11.fuzz:24:60: error: expected ‘}’ at end of input
+   24 |         cout << "Number of created cars:" << count << endl;
+      |                                                            ^
+outputs/baseline_7b_200/11.fuzz:19:12: note: to match this ‘{’
+   19 | struct car {
+      |            ^
+outputs/baseline_7b_200/11.fuzz: In destructor ‘car::~car()’:
+outputs/baseline_7b_200/11.fuzz:24:43: error: no match for ‘operator<<’ (operand types are ‘std::basic_ostream<char>’ and ‘<unresolved overloaded function type>’)
+   24 |         cout << "Number of created cars:" << count << endl;
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_7b_200/11.fuzz:1:
+/usr/include/c++/11/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:108:36: note:   no known conversion for argument 1 from ‘<unresolved overloaded function type>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+[TRACE] Validating outputs/baseline_7b_200/12.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/12.fuzz failed validation with error message: outputs/baseline_7b_200/12.fuzz:8:5: error: redefinition of ‘int main()’
+    8 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/12.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/13.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/13.fuzz failed validation with error message: outputs/baseline_7b_200/13.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/13.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/14.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/14.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/15.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/15.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/16.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/16.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/17.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/17.fuzz failed validation with error message: outputs/baseline_7b_200/17.fuzz:8:10: fatal error: big.cpp: No such file or directory
+    8 | #include "big.cpp"
+      |          ^~~~~~~~~
+compilation terminated.
+[TRACE] Validating outputs/baseline_7b_200/18.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/18.fuzz failed validation with error message: outputs/baseline_7b_200/18.fuzz:5:63: error: stray ‘#’ in program
+    5 |            return 123;<commit_msg>Updated comments for lab 2. #5<commit_after>
+      |                                                               ^
+outputs/baseline_7b_200/18.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/18.fuzz:5:23: error: expected primary-expression before ‘<’ token
+    5 |            return 123;<commit_msg>Updated comments for lab 2. #5<commit_after>
+      |                       ^
+outputs/baseline_7b_200/18.fuzz:5:24: error: ‘commit_msg’ was not declared in this scope
+    5 |            return 123;<commit_msg>Updated comments for lab 2. #5<commit_after>
+      |                        ^~~~~~~~~~
+outputs/baseline_7b_200/18.fuzz:5:35: error: ‘Updated’ was not declared in this scope
+    5 |            return 123;<commit_msg>Updated comments for lab 2. #5<commit_after>
+      |                                   ^~~~~~~
+In file included from /usr/include/c++/11/iostream:38,
+                 from outputs/baseline_7b_200/18.fuzz:1:
+/usr/include/c++/11/utility:82:15: error: expected ‘=’ before ‘__attribute__’
+   82 | namespace std _GLIBCXX_VISIBILITY(default)
+      |               ^~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/utility:82:15: error: expected identifier before ‘__attribute__’
+In file included from /usr/include/c++/11/algorithm:60,
+[TRACE] Validating outputs/baseline_7b_200/19.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/19.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/20.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/20.fuzz failed validation with error message: outputs/baseline_7b_200/20.fuzz: In function ‘Node* Insert(Node*, Node*, int, char)’:
+outputs/baseline_7b_200/20.fuzz:26:14: error: expected ‘}’ at end of input
+   26 |         else{
+      |             ~^
+outputs/baseline_7b_200/20.fuzz:26:14: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/20.fuzz:7:1: note: to match this ‘{’
+    7 | {
+      | ^
+outputs/baseline_7b_200/20.fuzz:26:14: warning: control reaches end of non-void function [-Wreturn-type]
+   26 |         else{
+      |              ^
+[TRACE] Validating outputs/baseline_7b_200/21.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/21.fuzz failed validation with error message: outputs/baseline_7b_200/21.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/21.fuzz:5:6: error: ‘c’ is not a member of ‘std’
+    5 | std::c;ount>>count;
+      |      ^
+outputs/baseline_7b_200/21.fuzz:5:8: error: ‘ount’ was not declared in this scope; did you mean ‘count’?
+    5 | std::c;ount>>count;
+      |        ^~~~
+      |        count
+[TRACE] Validating outputs/baseline_7b_200/22.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/22.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/23.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/23.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/24.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/24.fuzz failed validation with error message: outputs/baseline_7b_200/24.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/24.fuzz:5:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    5 |            p="string2";
+      |              ^~~~~~~~~
+outputs/baseline_7b_200/24.fuzz:6:12: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    6 |            cout<<*p<<endl;
+      |            ^~~~
+      |            std::cout
+In file included from outputs/baseline_7b_200/24.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/baseline_7b_200/24.fuzz:6:22: error: ‘endl’ was not declared in this scope; did you mean ‘std::endl’?
+    6 |            cout<<*p<<endl;
+      |                      ^~~~
+      |                      std::endl
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_7b_200/24.fuzz:1:
+/usr/include/c++/11/ostream:684:5: note: ‘std::endl’ declared here
+  684 |     endl(basic_ostream<_CharT, _Traits>& __os)
+[TRACE] Validating outputs/baseline_7b_200/25.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/25.fuzz failed validation with error message: outputs/baseline_7b_200/25.fuzz:17:10: warning: missing terminating " character
+   17 |    scanf("%I64
+      |          ^
+outputs/baseline_7b_200/25.fuzz:17:10: error: missing terminating " character
+   17 |    scanf("%I64
+      |          ^~~~~
+outputs/baseline_7b_200/25.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/25.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main(){
+      |     ^~~~
+outputs/baseline_7b_200/25.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/25.fuzz:17:10: error: expected primary-expression at end of input
+   17 |    scanf("%I64
+      |          ^
+outputs/baseline_7b_200/25.fuzz:17:10: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/25.fuzz:15:1: note: to match this ‘{’
+   15 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/26.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/26.fuzz failed validation with error message: outputs/baseline_7b_200/26.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/26.fuzz:4:16: error: ‘vector’ is not a member of ‘std’
+    4 |           std::vector<int> a{1,2,3,4,5,6,7,8};
+      |                ^~~~~~
+outputs/baseline_7b_200/26.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | int main()
+outputs/baseline_7b_200/26.fuzz:4:23: error: expected primary-expression before ‘int’
+    4 |           std::vector<int> a{1,2,3,4,5,6,7,8};
+      |                       ^~~
+outputs/baseline_7b_200/26.fuzz:5:16: error: ‘vector’ is not a member of ‘std’
+    5 |           std::vector<int> b;
+      |                ^~~~~~
+outputs/baseline_7b_200/26.fuzz:5:16: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+outputs/baseline_7b_200/26.fuzz:5:23: error: expected primary-expression before ‘int’
+    5 |           std::vector<int> b;
+      |                       ^~~
+outputs/baseline_7b_200/26.fuzz:6:24: error: ‘a’ was not declared in this scope
+    6 |           for(auto it= a.begin();it!=a.end();it++)
+[TRACE] Validating outputs/baseline_7b_200/27.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/27.fuzz failed validation with error message: outputs/baseline_7b_200/27.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/27.fuzz:5:25: error: ‘get’ was not declared in this scope; did you mean ‘getw’?
+    5 |            std::cout << get(-3) << std::endl;
+      |                         ^~~
+      |                         getw
+[TRACE] Validating outputs/baseline_7b_200/28.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/28.fuzz failed validation with error message: outputs/baseline_7b_200/28.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/28.fuzz:5:11: error: ‘get’ was not declared in this scope; did you mean ‘getw’?
+    5 |           get(data);
+      |           ^~~
+      |           getw
+outputs/baseline_7b_200/28.fuzz: At global scope:
+outputs/baseline_7b_200/28.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/28.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/29.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/29.fuzz failed validation with error message: outputs/baseline_7b_200/29.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/29.fuzz:4:3: error: ‘vector’ was not declared in this scope
+    4 |   vector <int> vct {1,2,3,4,5,6};
+      |   ^~~~~~
+outputs/baseline_7b_200/29.fuzz:4:11: error: expected primary-expression before ‘int’
+    4 |   vector <int> vct {1,2,3,4,5,6};
+      |           ^~~
+outputs/baseline_7b_200/29.fuzz:5:15: error: ‘vct’ was not declared in this scope
+    5 |   for(auto it=vct.begin(); it!=vct.end(); it++)
+      |               ^~~
+outputs/baseline_7b_200/29.fuzz:7:19: error: ‘get’ was not declared in this scope; did you mean ‘getw’?
+    7 |       std::cout <<get(*it) <<" ";
+      |                   ^~~
+      |                   getw
+[TRACE] Validating outputs/baseline_7b_200/30.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/30.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/31.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/31.fuzz failed validation with error message: outputs/baseline_7b_200/31.fuzz:9:5: error: redefinition of ‘int main()’
+    9 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/31.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/31.fuzz:18:5: error: redefinition of ‘int main()’
+   18 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/31.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/31.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/31.fuzz:21:32: error: expected unqualified-id at end of input
+   21 |     std::cout << "Valid"<<std::
+      |                                ^
+outputs/baseline_7b_200/31.fuzz:21:32: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/31.fuzz:19:1: note: to match this ‘{’
+   19 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/32.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/32.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/33.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/33.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/34.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/34.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/35.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/35.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/36.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/36.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/37.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/37.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/38.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/38.fuzz failed validation with error message: outputs/baseline_7b_200/38.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/38.fuzz:6:4: error: ‘cin’ was not declared in this scope; did you mean ‘std::cin’?
+    6 |    cin>>a>>b;
+      |    ^~~
+      |    std::cin
+In file included from outputs/baseline_7b_200/38.fuzz:1:
+/usr/include/c++/11/iostream:60:18: note: ‘std::cin’ declared here
+   60 |   extern istream cin;           /// Linked to standard input
+      |                  ^~~
+outputs/baseline_7b_200/38.fuzz:7:4: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    7 |    cout<<max(a,b);
+      |    ^~~~
+      |    std::cout
+In file included from outputs/baseline_7b_200/38.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+[TRACE] Validating outputs/baseline_7b_200/39.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/39.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/40.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/40.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/41.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/41.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/42.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/42.fuzz failed validation with error message: outputs/baseline_7b_200/42.fuzz:10:2: error: expected unqualified-id before ‘/’ token
+   10 | */
+      |  ^
+[TRACE] Validating outputs/baseline_7b_200/43.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/43.fuzz failed validation with error message: outputs/baseline_7b_200/43.fuzz:12:6: error: redefinition of ‘int main()’
+   12 |  int main()
+      |      ^~~~
+outputs/baseline_7b_200/43.fuzz:3:6: note: ‘int main()’ previously defined here
+    3 |  int main()
+      |      ^~~~
+outputs/baseline_7b_200/43.fuzz:18:6: error: redefinition of ‘int main()’
+   18 |  int main()
+      |      ^~~~
+outputs/baseline_7b_200/43.fuzz:3:6: note: ‘int main()’ previously defined here
+    3 |  int main()
+      |      ^~~~
+outputs/baseline_7b_200/43.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/43.fuzz:20:10: error: scalar object ‘a’ requires one element in initializer
+   20 |      int a={4,2,3};
+      |          ^
+outputs/baseline_7b_200/43.fuzz: At global scope:
+outputs/baseline_7b_200/43.fuzz:24:6: error: redefinition of ‘int main()’
+   24 |  int main()
+      |      ^~~~
+[TRACE] Validating outputs/baseline_7b_200/44.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/44.fuzz failed validation with error message: outputs/baseline_7b_200/44.fuzz:10:2: error: expected unqualified-id before ‘<’ token
+   10 | }<jupyter_output><empty_output>
+      |  ^
+[TRACE] Validating outputs/baseline_7b_200/45.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/45.fuzz failed validation with error message: outputs/baseline_7b_200/45.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/45.fuzz:6:14: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+    6 |         puts(v);
+      |              ^
+      |              |
+      |              int
+In file included from /usr/include/c++/11/cstdio:42,
+                 from /usr/include/c++/11/ext/string_conversions.h:43,
+                 from /usr/include/c++/11/bits/basic_string.h:6608,
+                 from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_7b_200/45.fuzz:1:
+/usr/include/stdio.h:661:30: note:   initializing argument 1 of ‘int puts(const char*)’
+  661 | extern int puts (const char *__s);
+      |                  ~~~~~~~~~~~~^~~
+outputs/baseline_7b_200/45.fuzz:8:14: error: invalid conversion from ‘int’ to ‘const char*’ [-fpermissive]
+[TRACE] Validating outputs/baseline_7b_200/46.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/46.fuzz failed validation with error message: outputs/baseline_7b_200/46.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/46.fuzz:6:14: error: expected unqualified-id before ‘(’ token
+    6 |         cout.(42)<<endl;
+      |              ^
+outputs/baseline_7b_200/46.fuzz: At global scope:
+outputs/baseline_7b_200/46.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/46.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+outputs/baseline_7b_200/46.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/46.fuzz:15:23: error: expected ‘;’ at end of input
+   15 |          a = 123456789
+      |                       ^
+      |                       ;
+outputs/baseline_7b_200/46.fuzz:15:23: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/46.fuzz:12:1: note: to match this ‘{’
+   12 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/47.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/47.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/48.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/48.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/49.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/49.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/50.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/50.fuzz failed validation with error message: outputs/baseline_7b_200/50.fuzz:4:2: error: ‘cout’ does not name a type
+    4 |  cout<<i<<endl;
+      |  ^~~~
+[TRACE] Validating outputs/baseline_7b_200/51.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/51.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/52.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/52.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/53.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/53.fuzz failed validation with error message: outputs/baseline_7b_200/53.fuzz:20:1: error: unterminated comment
+   20 | /* Please create a function which will print
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/54.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/54.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/55.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/55.fuzz failed validation with error message: outputs/baseline_7b_200/55.fuzz:15:10: fatal error: func.h: No such file or directory
+   15 | #include "func.h"
+      |          ^~~~~~~~
+compilation terminated.
+[TRACE] Validating outputs/baseline_7b_200/56.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/56.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/57.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/57.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/58.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/58.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/59.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/59.fuzz failed validation with error message: outputs/baseline_7b_200/59.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/59.fuzz:23:12: error: expected ‘;’ at end of input
+   23 |         add
+      |            ^
+      |            ;
+outputs/baseline_7b_200/59.fuzz:23:12: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/59.fuzz:12:12: note: to match this ‘{’
+   12 | int main() {
+      |            ^
+[TRACE] Validating outputs/baseline_7b_200/60.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/60.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/61.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/61.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/62.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/62.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/63.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/63.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/64.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/64.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/65.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/65.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/66.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/66.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/67.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/67.fuzz failed validation with error message: outputs/baseline_7b_200/67.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/67.fuzz:6:6: error: ‘i’ was not declared in this scope
+    6 |   if(i) cout<<i;
+      |      ^
+outputs/baseline_7b_200/67.fuzz:7:9: error: ‘i’ was not declared in this scope
+    7 |   while(i>10){
+      |         ^
+[TRACE] Validating outputs/baseline_7b_200/68.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/68.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/69.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/69.fuzz failed validation with error message: outputs/baseline_7b_200/69.fuzz:13:1: error: expected unqualified-id before ‘for’
+   13 | for x in open(stdin):
+      | ^~~
+[TRACE] Validating outputs/baseline_7b_200/70.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/70.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/71.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/71.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/72.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/72.fuzz failed validation with error message: outputs/baseline_7b_200/72.fuzz:19:8: warning: missing terminating " character
+   19 |     cp="By
+      |        ^
+outputs/baseline_7b_200/72.fuzz:19:8: error: missing terminating " character
+   19 |     cp="By
+      |        ^~~
+outputs/baseline_7b_200/72.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/72.fuzz:19:8: error: expected primary-expression at end of input
+   19 |     cp="By
+      |        ^
+outputs/baseline_7b_200/72.fuzz:19:8: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/72.fuzz:18:3: note: to match this ‘{’
+   18 |   {
+      |   ^
+outputs/baseline_7b_200/72.fuzz:19:8: error: expected ‘}’ at end of input
+   19 |     cp="By
+      |        ^
+outputs/baseline_7b_200/72.fuzz:4:1: note: to match this ‘{’
+    4 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/73.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/73.fuzz failed validation with error message: outputs/baseline_7b_200/73.fuzz:15:11: warning: missing terminating ' character
+   15 | buff[i++]='\
+      |           ^
+outputs/baseline_7b_200/73.fuzz:15:11: error: missing terminating ' character
+   15 | buff[i++]='\
+      |           ^~
+outputs/baseline_7b_200/73.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/73.fuzz:15:11: error: expected primary-expression at end of input
+   15 | buff[i++]='\
+      |           ^
+outputs/baseline_7b_200/73.fuzz:15:11: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/73.fuzz:4:1: note: to match this ‘{’
+    4 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/74.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/74.fuzz failed validation with error message: outputs/baseline_7b_200/74.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/74.fuzz:16:8: error: expected ‘)’ at end of input
+   16 |   if (l
+      |      ~ ^
+      |        )
+outputs/baseline_7b_200/74.fuzz:16:8: error: expected statement at end of input
+outputs/baseline_7b_200/74.fuzz:16:8: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/74.fuzz:4:1: note: to match this ‘{’
+    4 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/75.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/75.fuzz failed validation with error message: outputs/baseline_7b_200/75.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/75.fuzz:10:5: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+   10 |     cout << "Case 1\n";
+      |     ^~~~
+      |     std::cout
+In file included from outputs/baseline_7b_200/75.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/baseline_7b_200/75.fuzz:19:16: error: expected statement at end of input
+   19 |         if (cp)
+      |                ^
+outputs/baseline_7b_200/75.fuzz:19:16: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/75.fuzz:16:5: note: to match this ‘{’
+   16 |     {
+      |     ^
+outputs/baseline_7b_200/75.fuzz:19:16: error: expected ‘}’ at end of input
+   19 |         if (cp)
+      |                ^
+outputs/baseline_7b_200/75.fuzz:8:3: note: to match this ‘{’
+[TRACE] Validating outputs/baseline_7b_200/76.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/76.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/77.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/77.fuzz failed validation with error message: outputs/baseline_7b_200/77.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/77.fuzz:18:9: error: expected statement at end of input
+   18 |   if (l)
+      |         ^
+outputs/baseline_7b_200/77.fuzz:18:9: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/77.fuzz:4:1: note: to match this ‘{’
+    4 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/78.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/78.fuzz failed validation with error message: outputs/baseline_7b_200/78.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/78.fuzz:5:14: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+    5 |   char *cp = "Hello";
+      |              ^~~~~~~
+outputs/baseline_7b_200/78.fuzz:11:9: error: invalid operands of types ‘float’ and ‘int’ to binary ‘operator&’
+   11 |   if (j & 1)
+      |       ~ ^ ~
+      |       |   |
+      |       |   int
+      |       float
+outputs/baseline_7b_200/78.fuzz:15:9: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   15 |     cp= "Hi";
+      |         ^~~~
+outputs/baseline_7b_200/78.fuzz:20:4: error: expected ‘}’ at end of input
+   20 |   }
+      |    ^
+outputs/baseline_7b_200/78.fuzz:4:1: note: to match this ‘{’
+    4 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/79.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/79.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/80.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/80.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/81.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/81.fuzz failed validation with error message: outputs/baseline_7b_200/81.fuzz:18:1: error: unterminated comment
+   18 | /*
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/82.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/82.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/83.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/83.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/84.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/84.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/85.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/85.fuzz failed validation with error message: outputs/baseline_7b_200/85.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/85.fuzz:11:13: error: unable to find numeric literal operator ‘operator""i’
+   11 |     i = i - 3i;
+      |             ^~
+outputs/baseline_7b_200/85.fuzz:11:13: note: add ‘using namespace std::complex_literals’ (from ‘<complex>’) to enable the C++14 user-defined literal suffixes
+outputs/baseline_7b_200/85.fuzz: At global scope:
+outputs/baseline_7b_200/85.fuzz:20:21: error: expected primary-expression at end of input
+   20 | int generate_random(
+      |                     ^
+[TRACE] Validating outputs/baseline_7b_200/86.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/86.fuzz failed validation with error message: outputs/baseline_7b_200/86.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/86.fuzz:8:3: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    8 |   cout << i << " " << j << endl;
+      |   ^~~~
+      |   std::cout
+In file included from outputs/baseline_7b_200/86.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/baseline_7b_200/86.fuzz:8:28: error: ‘endl’ was not declared in this scope; did you mean ‘std::endl’?
+    8 |   cout << i << " " << j << endl;
+      |                            ^~~~
+      |                            std::endl
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_7b_200/86.fuzz:1:
+/usr/include/c++/11/ostream:684:5: note: ‘std::endl’ declared here
+  684 |     endl(basic_ostream<_CharT, _Traits>& __os)
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/87.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/87.fuzz failed validation with error message: outputs/baseline_7b_200/87.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/87.fuzz:21:16: error: expected primary-expression at end of input
+   21 |     cout << i +
+      |                ^
+outputs/baseline_7b_200/87.fuzz:21:16: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/87.fuzz:4:1: note: to match this ‘{’
+    4 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/88.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/88.fuzz failed validation with error message: outputs/baseline_7b_200/88.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/88.fuzz:15:23: error: expected ‘}’ at end of input
+   15 |     cout << i << endl;
+      |                       ^
+outputs/baseline_7b_200/88.fuzz:4:1: note: to match this ‘{’
+    4 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/89.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/89.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/90.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/90.fuzz failed validation with error message: outputs/baseline_7b_200/90.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/90.fuzz:15:22: error: expected statement at end of input
+   15 |   if (i>=0 || l >= 0)
+      |                      ^
+outputs/baseline_7b_200/90.fuzz:15:22: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/90.fuzz:5:1: note: to match this ‘{’
+    5 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/91.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/91.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/92.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/92.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/93.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/93.fuzz failed validation with error message: outputs/baseline_7b_200/93.fuzz:15:5: error: redefinition of ‘int main()’
+   15 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/93.fuzz:6:5: note: ‘int main()’ previously defined here
+    6 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/94.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/94.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/95.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/95.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/96.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/96.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/97.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/97.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/98.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/98.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/99.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/99.fuzz failed validation with error message: outputs/baseline_7b_200/99.fuzz:3:1: error: ‘::main’ must return ‘int’
+    3 | void main() {
+      | ^~~~
+outputs/baseline_7b_200/99.fuzz:15:2: error: expected ‘;’ after struct definition
+   15 | }
+      |  ^
+      |  ;
+outputs/baseline_7b_200/99.fuzz:22:5: error: redefinition of ‘int main()’
+   22 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/99.fuzz:3:6: note: ‘int main()’ previously defined here
+    3 | void main() {
+      |      ^~~~
+outputs/baseline_7b_200/99.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/99.fuzz:25:13: error: expected ‘}’ at end of input
+   25 |     a.y = 2;
+      |             ^
+outputs/baseline_7b_200/99.fuzz:22:12: note: to match this ‘{’
+   22 | int main() {
+      |            ^
+[TRACE] Validating outputs/baseline_7b_200/100.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/100.fuzz failed validation with error message: outputs/baseline_7b_200/100.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/100.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/100.fuzz:29:5: error: redefinition of ‘int main()’
+   29 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/100.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/100.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/100.fuzz:30:19: error: expected ‘}’ at end of input
+   30 |     bool a = true;
+      |                   ^
+outputs/baseline_7b_200/100.fuzz:29:12: note: to match this ‘{’
+   29 | int main() {
+      |            ^
+[TRACE] Validating outputs/baseline_7b_200/101.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/101.fuzz failed validation with error message: outputs/baseline_7b_200/101.fuzz:21:5: error: redefinition of ‘int main()’
+   21 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/101.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/101.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/101.fuzz:27:42: error: expected unqualified-id at end of input
+   27 |     cout << "The Vehicle has " << mycar2.
+      |                                          ^
+outputs/baseline_7b_200/101.fuzz:27:42: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/101.fuzz:21:12: note: to match this ‘{’
+   21 | int main() {
+      |            ^
+[TRACE] Validating outputs/baseline_7b_200/102.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/102.fuzz failed validation with error message: outputs/baseline_7b_200/102.fuzz:25:11: error: missing terminating > character
+   25 | #include <
+      |           ^
+outputs/baseline_7b_200/102.fuzz:25:10: error: empty filename in #include
+   25 | #include <
+      |          ^
+outputs/baseline_7b_200/102.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/102.fuzz:4:25: error: ‘i’ was not declared in this scope
+    4 |     int& ref_i = (int&) i;
+      |                         ^
+outputs/baseline_7b_200/102.fuzz:5:25: error: ‘j’ was not declared in this scope
+    5 |     int& ref_j = (int&) j;
+      |                         ^
+outputs/baseline_7b_200/102.fuzz: At global scope:
+outputs/baseline_7b_200/102.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main (void)
+      |     ^~~~
+outputs/baseline_7b_200/102.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/103.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/103.fuzz failed validation with error message: outputs/baseline_7b_200/103.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/103.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/103.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/103.fuzz:11:14: error: ‘i’ was not declared in this scope
+   11 |     auto j = i + 25 - 3;
+      |              ^
+[TRACE] Validating outputs/baseline_7b_200/104.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/104.fuzz failed validation with error message: outputs/baseline_7b_200/104.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/104.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/104.fuzz: In function ‘unsigned int calculate_pi(int)’:
+outputs/baseline_7b_200/104.fuzz:19:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   19 | }
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/105.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/105.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/106.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/106.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/107.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/107.fuzz failed validation with error message: outputs/baseline_7b_200/107.fuzz:8:1: error: expected unqualified-id before numeric constant
+    8 | 25 - 3 - i
+      | ^~
+[TRACE] Validating outputs/baseline_7b_200/108.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/108.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/109.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/109.fuzz failed validation with error message: outputs/baseline_7b_200/109.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main() {
+      |     ^~~~
+outputs/baseline_7b_200/109.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/110.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/110.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/111.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/111.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/112.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/112.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/113.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/113.fuzz failed validation with error message: outputs/baseline_7b_200/113.fuzz:3:5: warning: ‘int main(int)’ takes only zero or two arguments [-Wmain]
+    3 | int main(const int input) {
+      |     ^~~~
+outputs/baseline_7b_200/113.fuzz:9:5: warning: first argument of ‘int main(const char*)’ should be ‘int’ [-Wmain]
+    9 | int main(const char* input) {
+      |     ^~~~
+outputs/baseline_7b_200/113.fuzz:9:5: warning: ‘int main(const char*)’ takes only zero or two arguments [-Wmain]
+outputs/baseline_7b_200/113.fuzz:9:5: error: conflicting declaration of C function ‘int main(const char*)’
+outputs/baseline_7b_200/113.fuzz:3:5: note: previous declaration ‘int main(int)’
+    3 | int main(const int input) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/114.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/114.fuzz failed validation with error message: outputs/baseline_7b_200/114.fuzz:3:5: warning: first argument of ‘int main(double)’ should be ‘int’ [-Wmain]
+    3 | int main(double input) {
+      |     ^~~~
+outputs/baseline_7b_200/114.fuzz:3:5: warning: ‘int main(double)’ takes only zero or two arguments [-Wmain]
+outputs/baseline_7b_200/114.fuzz:9:5: error: conflicting declaration of C function ‘int main()’
+    9 | int main(){
+      |     ^~~~
+outputs/baseline_7b_200/114.fuzz:3:5: note: previous declaration ‘int main(double)’
+    3 | int main(double input) {
+      |     ^~~~
+outputs/baseline_7b_200/114.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/114.fuzz:10:14: error: ‘vector’ is not a member of ‘std’
+   10 |         std::vector<std::vector<int>> vector_vector{};
+      |              ^~~~~~
+outputs/baseline_7b_200/114.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | using namespace std;
+outputs/baseline_7b_200/114.fuzz:10:26: error: ‘vector’ is not a member of ‘std’
+   10 |         std::vector<std::vector<int>> vector_vector{};
+[TRACE] Validating outputs/baseline_7b_200/115.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/115.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/116.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/116.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/117.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/117.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/118.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/118.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/119.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/119.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/120.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/120.fuzz failed validation with error message: outputs/baseline_7b_200/120.fuzz: In function ‘void* task1(void*)’:
+outputs/baseline_7b_200/120.fuzz:15:5: error: ‘sleep’ was not declared in this scope
+   15 |     sleep(1);
+      |     ^~~~~
+outputs/baseline_7b_200/120.fuzz:17:16: error: expected primary-expression at end of input
+   17 |   pthread_exit(
+      |                ^
+outputs/baseline_7b_200/120.fuzz:17:16: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/120.fuzz:11:1: note: to match this ‘{’
+   11 | {
+      | ^
+outputs/baseline_7b_200/120.fuzz:17:16: warning: no return statement in function returning non-void [-Wreturn-type]
+   17 |   pthread_exit(
+      |                ^
+[TRACE] Validating outputs/baseline_7b_200/121.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/121.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/122.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/122.fuzz failed validation with error message: outputs/baseline_7b_200/122.fuzz:2:1: error: ‘usind’ does not name a type
+    2 | usind namespace std;
+      | ^~~~~
+[TRACE] Validating outputs/baseline_7b_200/123.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/123.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/124.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/124.fuzz failed validation with error message: outputs/baseline_7b_200/124.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/124.fuzz:4:19: error: no match for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘std::ostream’ {aka ‘std::basic_ostream<char>’})
+    4 |         std::cout << cout << std::endl;
+      |         ~~~~~~~~~ ^~ ~~~~
+      |              |       |
+      |              |       basic_ostream<[...]>
+      |              basic_ostream<[...]>
+outputs/baseline_7b_200/124.fuzz:4:19: note: candidate: ‘operator<<(int, int)’ (built-in)
+    4 |         std::cout << cout << std::endl;
+      |         ~~~~~~~~~~^~~~~~~
+outputs/baseline_7b_200/124.fuzz:4:19: note:   no known conversion for argument 2 from ‘std::ostream’ {aka ‘std::basic_ostream<char>’} to ‘int’
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_7b_200/124.fuzz:1:
+/usr/include/c++/11/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:108:36: note:   no known conversion for argument 1 from ‘std::ostream’ {aka ‘std::basic_ostream<char>’} to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+[TRACE] Validating outputs/baseline_7b_200/125.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/125.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/126.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/126.fuzz failed validation with error message: outputs/baseline_7b_200/126.fuzz:7:1: error: expected unqualified-id before ‘<’ token
+    7 | </code></pre>
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/127.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/127.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/128.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/128.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/129.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/129.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/130.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/130.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/131.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/131.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/132.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/132.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/133.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/133.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/134.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/134.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/135.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/135.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/136.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/136.fuzz failed validation with error message: outputs/baseline_7b_200/136.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/136.fuzz:15:15: error: no match for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘A’)
+   15 |     std::cout << a << std::endl;
+      |     ~~~~~~~~~ ^~ ~
+      |          |       |
+      |          |       A
+      |          std::ostream {aka std::basic_ostream<char>}
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_7b_200/136.fuzz:1:
+/usr/include/c++/11/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:108:36: note:   no known conversion for argument 1 from ‘A’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:117:32: note:   no known conversion for argument 1 from ‘A’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+[TRACE] Validating outputs/baseline_7b_200/137.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/137.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/138.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/138.fuzz failed validation with error message: outputs/baseline_7b_200/138.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/138.fuzz:3:14: error: invalid ‘static_cast’ from type ‘char’ to type ‘int&’
+    3 |     int &x = static_cast<int&>(*argv[1]);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+outputs/baseline_7b_200/138.fuzz:5:14: error: invalid ‘static_cast’ from type ‘char’ to type ‘int&’
+    5 |     int &y = static_cast<int&>(*argv[2]);
+      |              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+[TRACE] Validating outputs/baseline_7b_200/139.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/139.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/140.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/140.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/141.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/141.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/142.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/142.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/143.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/143.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/144.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/144.fuzz failed validation with error message: outputs/baseline_7b_200/144.fuzz:24:1: error: unterminated comment
+   24 | /* Please create a very short program which uses new C++
+      | ^
+outputs/baseline_7b_200/144.fuzz:10:5: error: redefinition of ‘int main(int, char**)’
+   10 | int main(int argc, char *argv[]) {
+      |     ^~~~
+outputs/baseline_7b_200/144.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char *argv[]) {
+      |     ^~~~
+outputs/baseline_7b_200/144.fuzz:18:5: error: redefinition of ‘int main(int, char**)’
+   18 | int main(int argc, char *argv[]) {
+      |     ^~~~
+outputs/baseline_7b_200/144.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char *argv[]) {
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/145.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/145.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/146.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/146.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/147.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/147.fuzz failed validation with error message: outputs/baseline_7b_200/147.fuzz:9:7: error: redefinition of ‘class D’
+    9 | class D: public B {
+      |       ^
+outputs/baseline_7b_200/147.fuzz:7:7: note: previous definition of ‘class D’
+    7 | class D : public B {
+      |       ^
+[TRACE] Validating outputs/baseline_7b_200/148.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/148.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/149.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/149.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/150.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/150.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/151.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/151.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/152.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/152.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/153.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/153.fuzz failed validation with error message: outputs/baseline_7b_200/153.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/153.fuzz:7:15: error: no match for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘std::bad_alloc’)
+    7 |     std::cout << std::bad_alloc() << "\n";
+      |     ~~~~~~~~~ ^~      ~~~~~~~~~~~
+      |          |            |
+      |          |            std::bad_alloc
+      |          std::ostream {aka std::basic_ostream<char>}
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_7b_200/153.fuzz:1:
+/usr/include/c++/11/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:108:36: note:   no known conversion for argument 1 from ‘std::bad_alloc’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:117:32: note:   no known conversion for argument 1 from ‘std::bad_alloc’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+[TRACE] Validating outputs/baseline_7b_200/154.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/154.fuzz failed validation with error message: outputs/baseline_7b_200/154.fuzz:2:26: error: ‘vector’ in namespace ‘std’ does not name a template type
+    2 | using double_iter = std::vector<int>::iterator;
+      |                          ^~~~~~
+outputs/baseline_7b_200/154.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | using double_iter = std::vector<int>::iterator;
+outputs/baseline_7b_200/154.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/154.fuzz:4:10: error: ‘vector’ is not a member of ‘std’
+    4 |     std::vector<int> vec = {1, 2, 3};
+      |          ^~~~~~
+outputs/baseline_7b_200/154.fuzz:4:10: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+outputs/baseline_7b_200/154.fuzz:4:17: error: expected primary-expression before ‘int’
+    4 |     std::vector<int> vec = {1, 2, 3};
+      |                 ^~~
+outputs/baseline_7b_200/154.fuzz:5:5: error: ‘double_iter’ was not declared in this scope
+    5 |     double_iter it {vec.begin()};
+      |     ^~~~~~~~~~~
+outputs/baseline_7b_200/154.fuzz:6:5: error: ‘it’ was not declared in this scope; did you mean ‘int’?
+    6 |     it++;
+[TRACE] Validating outputs/baseline_7b_200/155.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/155.fuzz failed validation with error message: outputs/baseline_7b_200/155.fuzz:6:5: error: ‘size_type’ does not name a type; did you mean ‘size_t’?
+    6 |     size_type size;
+      |     ^~~~~~~~~
+      |     size_t
+outputs/baseline_7b_200/155.fuzz:8:13: error: ‘size_type’ does not name a type; did you mean ‘size_t’?
+    8 |     typedef size_type size_type;
+      |             ^~~~~~~~~
+      |             size_t
+outputs/baseline_7b_200/155.fuzz:9:23: error: expected ‘)’ before ‘n’
+    9 |     MyVector(size_type n)
+      |             ~         ^~
+      |                       )
+outputs/baseline_7b_200/155.fuzz: In destructor ‘MyVector::~MyVector()’:
+outputs/baseline_7b_200/155.fuzz:18:9: error: ‘size_type’ was not declared in this scope; did you mean ‘size_t’?
+   18 |         size_type i;
+      |         ^~~~~~~~~
+      |         size_t
+outputs/baseline_7b_200/155.fuzz:19:14: error: ‘i’ was not declared in this scope
+   19 |         for (i=0; i < size; ++i)
+      |              ^
+[TRACE] Validating outputs/baseline_7b_200/156.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/156.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/157.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/157.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/158.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/158.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/159.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/159.fuzz failed validation with error message: outputs/baseline_7b_200/159.fuzz:6:1: error: stray ‘`’ in program
+    6 | ```
+      | ^
+outputs/baseline_7b_200/159.fuzz:6:2: error: stray ‘`’ in program
+    6 | ```
+      |  ^
+outputs/baseline_7b_200/159.fuzz:6:3: error: stray ‘`’ in program
+    6 | ```
+      |   ^
+[TRACE] Validating outputs/baseline_7b_200/160.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/160.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/161.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/161.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/162.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/162.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/163.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/163.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/164.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/164.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/165.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/165.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/166.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/166.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/167.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/167.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/168.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/168.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/169.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/169.fuzz failed validation with error message: outputs/baseline_7b_200/169.fuzz: In function ‘int my_main()’:
+outputs/baseline_7b_200/169.fuzz:4:1: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    4 | cout << "ciao" << std::endl;
+      | ^~~~
+      | std::cout
+In file included from outputs/baseline_7b_200/169.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/baseline_7b_200/169.fuzz:5:1: warning: no return statement in function returning non-void [-Wreturn-type]
+    5 | }
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/170.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/170.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/171.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/171.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/172.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/172.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/173.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/173.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/174.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/174.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/175.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/175.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/176.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/176.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/177.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/177.fuzz failed validation with error message: outputs/baseline_7b_200/177.fuzz:2:1: error: ‘::main’ must return ‘int’
+    2 | void main() {
+      | ^~~~
+outputs/baseline_7b_200/177.fuzz: In function ‘int main()’:
+outputs/baseline_7b_200/177.fuzz:3:9: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    3 |         cout << "hello world";
+      |         ^~~~
+      |         std::cout
+In file included from outputs/baseline_7b_200/177.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+[TRACE] Validating outputs/baseline_7b_200/178.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/178.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/179.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/179.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/180.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/180.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/181.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/181.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/182.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/182.fuzz failed validation with error message: outputs/baseline_7b_200/182.fuzz:14:5: error: redefinition of ‘int main(int, char**)’
+   14 | int main(int argc, char *argv[])
+      |     ^~~~
+outputs/baseline_7b_200/182.fuzz:3:5: note: ‘int main(int, char**)’ previously defined here
+    3 | int main(int argc, char *argv[])
+      |     ^~~~
+outputs/baseline_7b_200/182.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/182.fuzz:17:28: error: ‘class std::initializer_list<int>’ has no member named ‘cbegin’; did you mean ‘begin’?
+   17 |     cout << std::find(ages.cbegin(), ages.cend(), 15) - ages.cbegin() << endl;
+      |                            ^~~~~~
+      |                            begin
+outputs/baseline_7b_200/182.fuzz:17:43: error: ‘class std::initializer_list<int>’ has no member named ‘cend’; did you mean ‘end’?
+   17 |     cout << std::find(ages.cbegin(), ages.cend(), 15) - ages.cbegin() << endl;
+      |                                           ^~~~
+      |                                           end
+outputs/baseline_7b_200/182.fuzz:17:62: error: ‘class std::initializer_list<int>’ has no member named ‘cbegin’; did you mean ‘begin’?
+   17 |     cout << std::find(ages.cbegin(), ages.cend(), 15) - ages.cbegin() << endl;
+      |                                                              ^~~~~~
+      |                                                              begin
+outputs/baseline_7b_200/182.fuzz:18:34: error: ‘class std::initializer_list<int>’ has no member named ‘cbegin’; did you mean ‘begin’?
+[TRACE] Validating outputs/baseline_7b_200/183.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/183.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/184.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/184.fuzz failed validation with error message: outputs/baseline_7b_200/184.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/184.fuzz:6:5: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    6 |     cout << x << endl;
+      |     ^~~~
+      |     std::cout
+In file included from outputs/baseline_7b_200/184.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/baseline_7b_200/184.fuzz:6:18: error: ‘endl’ was not declared in this scope; did you mean ‘std::endl’?
+    6 |     cout << x << endl;
+      |                  ^~~~
+      |                  std::endl
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/baseline_7b_200/184.fuzz:1:
+/usr/include/c++/11/ostream:684:5: note: ‘std::endl’ declared here
+  684 |     endl(basic_ostream<_CharT, _Traits>& __os)
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/185.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/185.fuzz failed validation with error message: outputs/baseline_7b_200/185.fuzz:15:5: error: redefinition of ‘int main(int, char**)’
+   15 | int main(int argc, char *argv[])
+      |     ^~~~
+outputs/baseline_7b_200/185.fuzz:3:5: note: ‘int main(int, char**)’ previously defined here
+    3 | int main(int argc, char *argv[])
+      |     ^~~~
+outputs/baseline_7b_200/185.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/185.fuzz:21:23: error: expected ‘)’ at end of input
+   21 |     char * result = (x
+      |                     ~ ^
+      |                       )
+outputs/baseline_7b_200/185.fuzz:21:22: error: invalid conversion from ‘int’ to ‘char*’ [-fpermissive]
+   21 |     char * result = (x
+      |                     ~^ 
+      |                      |
+      |                      int
+outputs/baseline_7b_200/185.fuzz:21:23: error: expected ‘,’ or ‘;’ at end of input
+   21 |     char * result = (x
+      |                       ^
+outputs/baseline_7b_200/185.fuzz:21:23: error: expected ‘}’ at end of input
+[TRACE] Validating outputs/baseline_7b_200/186.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/186.fuzz failed validation with error message: outputs/baseline_7b_200/186.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/186.fuzz:6:13: error: invalid conversion from ‘int*’ to ‘int’ [-fpermissive]
+    6 |     int y = &x;
+      |             ^~
+      |             |
+      |             int*
+[TRACE] Validating outputs/baseline_7b_200/187.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/187.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/188.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/188.fuzz failed validation with error message: outputs/baseline_7b_200/188.fuzz:22:20: error: expected identifier at end of input
+   22 |     int add(int v1,
+      |                    ^
+outputs/baseline_7b_200/188.fuzz:22:20: error: expected ‘,’ or ‘...’ at end of input
+outputs/baseline_7b_200/188.fuzz:22:20: error: expected ‘)’ at end of input
+   22 |     int add(int v1,
+      |            ~       ^
+      |                    )
+outputs/baseline_7b_200/188.fuzz:22:19: error: expected ‘;’ at end of member declaration
+   22 |     int add(int v1,
+      |                   ^
+      |                    ;
+outputs/baseline_7b_200/188.fuzz:22:20: error: expected ‘}’ at end of input
+   22 |     int add(int v1,
+      |                    ^
+outputs/baseline_7b_200/188.fuzz:20:26: note: to match this ‘{’
+   20 | class CObject1 : IObject {
+      |                          ^
+outputs/baseline_7b_200/188.fuzz:22:20: error: expected unqualified-id at end of input
+   22 |     int add(int v1,
+[TRACE] Validating outputs/baseline_7b_200/189.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/189.fuzz failed validation with error message: outputs/baseline_7b_200/189.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/189.fuzz:17:18: error: expected ‘;’ at end of input
+   17 |     z = y ++ + 20
+      |                  ^
+      |                  ;
+outputs/baseline_7b_200/189.fuzz:17:18: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/189.fuzz:4:1: note: to match this ‘{’
+    4 | {
+      | ^
+[TRACE] Validating outputs/baseline_7b_200/190.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/190.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/191.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/191.fuzz failed validation with error message: outputs/baseline_7b_200/191.fuzz:12:5: error: redefinition of ‘int main(int, char**)’
+   12 | int main(int argc, char *argv[])
+      |     ^~~~
+outputs/baseline_7b_200/191.fuzz:3:5: note: ‘int main(int, char**)’ previously defined here
+    3 | int main(int argc, char *argv[])
+      |     ^~~~
+[TRACE] Validating outputs/baseline_7b_200/192.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/192.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/193.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/193.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/194.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/194.fuzz failed validation with error message: outputs/baseline_7b_200/194.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/194.fuzz:6:13: error: invalid conversion from ‘int*’ to ‘int’ [-fpermissive]
+    6 |     int y = &x;
+      |             ^~
+      |             |
+      |             int*
+outputs/baseline_7b_200/194.fuzz:7:13: error: invalid type argument of unary ‘*’ (have ‘int’)
+    7 |     cout << *y << endl << x << endl;
+      |             ^~
+outputs/baseline_7b_200/194.fuzz: At global scope:
+outputs/baseline_7b_200/194.fuzz:12:5: error: redefinition of ‘int main(int, char**)’
+   12 | int main(int argc, char *argv[])
+      |     ^~~~
+outputs/baseline_7b_200/194.fuzz:3:5: note: ‘int main(int, char**)’ previously defined here
+    3 | int main(int argc, char *argv[])
+      |     ^~~~
+outputs/baseline_7b_200/194.fuzz: In function ‘int main(int, char**)’:
+outputs/baseline_7b_200/194.fuzz:16:20: error: expected ‘}’ at end of input
+   16 |     short int c[6];
+      |                    ^
+[TRACE] Validating outputs/baseline_7b_200/195.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/195.fuzz is safe
+[TRACE] Validating outputs/baseline_7b_200/196.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/196.fuzz failed validation with error message: outputs/baseline_7b_200/196.fuzz:11:33: error: expected ‘}’ at end of input
+   11 |     int getAge() { return age; }
+      |                                 ^
+outputs/baseline_7b_200/196.fuzz:5:1: note: to match this ‘{’
+    5 | {
+      | ^
+outputs/baseline_7b_200/196.fuzz:11:33: error: expected unqualified-id at end of input
+   11 |     int getAge() { return age; }
+      |                                 ^
+[TRACE] Validating outputs/baseline_7b_200/197.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/197.fuzz failed validation with error message: outputs/baseline_7b_200/197.fuzz:12:17: error: expected unqualified-id at end of input
+   12 | static Student *
+      |                 ^
+[TRACE] Validating outputs/baseline_7b_200/198.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/198.fuzz failed validation with error message: outputs/baseline_7b_200/198.fuzz:11:30: error: expected ‘}’ at end of input
+   11 |     int getAge() { return age
+      |                              ^
+outputs/baseline_7b_200/198.fuzz:4:1: note: to match this ‘{’
+    4 | {
+      | ^
+outputs/baseline_7b_200/198.fuzz: In member function ‘int Student::getAge()’:
+outputs/baseline_7b_200/198.fuzz:11:30: error: expected ‘;’ at end of input
+   11 |     int getAge() { return age
+      |                              ^
+outputs/baseline_7b_200/198.fuzz:11:30: error: expected ‘}’ at end of input
+outputs/baseline_7b_200/198.fuzz:11:18: note: to match this ‘{’
+   11 |     int getAge() { return age
+      |                  ^
+outputs/baseline_7b_200/198.fuzz: At global scope:
+outputs/baseline_7b_200/198.fuzz:11:30: error: expected unqualified-id at end of input
+   11 |     int getAge() { return age
+      |                              ^
+[TRACE] Validating outputs/baseline_7b_200/199.fuzz ...
+[VERBOSE] outputs/baseline_7b_200/199.fuzz failed validation with error message: outputs/baseline_7b_200/199.fuzz:12:11: error: expected initializer at end of input
+   12 | int main()
+      |           ^

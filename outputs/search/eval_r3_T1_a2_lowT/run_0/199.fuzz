@@ -1,0 +1,8 @@
+#include <iostream>
+int main(int argc,char** argv)
+{
+    int i;
+    double d;
+    std::cin>>i>>d;
+    std::cout<<i<<"\t"<<d<<std::endl;
+}

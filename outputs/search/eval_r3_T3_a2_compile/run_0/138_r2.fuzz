@@ -1,0 +1,23 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+int check_pass(const string& pa)
+{
+	cout<<"Please enter password\n";
+	string p;
+	cin>>p;
+	if(pa==p)
+	{
+		return 1;
+	}
+	else
+		return 0;
+}
+int main()
+{
+	string pa("password");
+	check_pass(pa);
+	system("pause");
+	return 0;
+}

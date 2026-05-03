@@ -1,0 +1,18 @@
+#include <iostream>
+
+#include <vector>
+
+struct point_t {
+	int x;
+	int y;
+};
+
+int main() {
+	std::vector<point_t> vec{ point_t(1,2), point_t(3,4) };
+
+	for (auto & p : vec) {
+		++p.x;		 
+	}
+
+	return 0;
+}

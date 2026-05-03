@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+template <typename T> struct Point{
+  T x;
+  T y;
+};
+template <typename T>
+int Distance(Point<T> & P1,Point<T> B)
+{
+  return (int)sqrt(pow(P1.x-B.x,2)+pow(P1.y-B.y,2));
+}
+int main()
+{
+  Point<double> A;
+  A.x=3;
+  A.y=5;
+  Point<int> B;
+  B.x=3;
+  B.y=6;
+  cout << "Distance between points A and B = "<< Distance<double>(A,B)<<endl;
+  cout << "Distance between points A and B = "<< Distance<int>(A,B)<<endl;
+  return 0;
+}

@@ -1,0 +1,41 @@
+#include <iostream>
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <iomanip>
+using namespace std;
+int main(int argc, char *argv[]){
+    int counter=0;
+    if(argc<2){
+        cout<<"Usage: "<<argv[0]<<" <number of lines to repeat>"<<"\n";
+        exit(1);
+    }
+    if(atoi(argv[1])<1){
+        cout<<"Usage: "<<argv[0]<<" <number of lines to repeat>"<<"\n";
+        exit(1);
+    }
+    for(auto line : istream_iterator <string>(cin), {}){
+        string output;
+        double dvalue;
+        int ivalue;
+        if(line.substr(0,1)==">"){
+            vector<string> words=tokenize(line, " \t\n");
+            if(words.size()!=2){
+                cout<<output<<"Error: Bad format"<<"\n";
+            } else {
+                dvalue=stod(words[1]);
+                ivalue=(int)dvalue;
+                for(int i=0; i<ivalue; i++){
+                    output=output+line+newline;
+                }
+            }
+        } else output=output+line;
+        cout<<output;
+        counter++;
+        if(counter==atoi(argv[1])) break;
+    }
+    return 0;
+}
+
+ 
+ 

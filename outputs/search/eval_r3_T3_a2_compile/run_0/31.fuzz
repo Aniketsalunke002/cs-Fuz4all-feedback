@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+	{
+		char *s0 = new char[96];
+		char *s1 = s0;
+		for(char *p = s0; p < s0 + 96; ++p)
+			*p = *(p - s1) + 'a';
+		delete s0;
+	}
+	cout << "Goodbye!\n";
+	return 0;
+}
+```

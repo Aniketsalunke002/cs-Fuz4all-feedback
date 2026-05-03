@@ -1,0 +1,28 @@
+#include <iostream>
+
+#include <map>
+
+int main(int argc, char *argv[]) {
+    char str = 'A';
+    char newStr = str;
+    for (int i = 0; i < 1000; i++) {
+        if (str == 'J') {
+            str++;
+        } else {
+            str--;
+        }
+    }
+    for (int i = 0; i < 1000; i++) {
+        newStr++;
+    }
+}
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+int main(int argc, char *argv[]) {
+    int a[10] = {2, 4, 6, 7, 9, 1, 0, 3, 7, 9};
+    std::vector<int> vec(begin(a), end(a));
+    std::sort(vec.begin(), vec.end());
+}

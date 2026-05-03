@@ -1,0 +1,22 @@
+#include <iostream>
+class Complex
+{
+	int a;
+	public:
+		Complex(int r)
+		{
+			a = r;
+		}
+		Complex operator + (Complex x)
+		{
+			Complex temp;
+			temp.a = a+x.a;
+			return temp;
+		}
+};
+int main()
+{
+	Complex c1(5);
+	Complex c2(10);
+	 
+}

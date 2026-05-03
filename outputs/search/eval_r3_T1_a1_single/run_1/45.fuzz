@@ -1,0 +1,28 @@
+#include <iostream>
+
+using std::cout;
+
+int main(int argc, char **argv)
+{
+	cout << "Hello world" << endl;
+	struct A {
+		int a, b;
+		A() :a(1), b(2) {}
+	} a;
+	cout << a.a << endl;
+	a.a = 0;
+	cout << a.a << endl;
+	a.b = 0;
+	cout << a.b << endl;
+	std::pair<int, int> p(0, 0);
+	cout << p.first << " " << p.second << endl;
+	p.first = 1;
+	cout << p.first << " " << p.second << endl;
+	p.second = 1;
+	cout << p.first << " " << p.second << endl;
+	return 0;
+}
+ 
+
+ 
+ 

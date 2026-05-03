@@ -1,0 +1,11 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+    cout << (argc > 3 && argc < 10? (argc > 5? "5" : "3") : "") << endl;
+    int i = (argc > 2? 2*argc : argc > 5? 2*argc+8 : argc > 3? argv[argc-2]-9 : argc > 1? argv[argc-3]-10 : argv[argc-4]-'0')-20*argc;
+
+    i = 0? 2*argc : argc > 5? 2*argc+8 : argc > 3? argv[argc-2]-9 : argc > 1? argv[argc-3]-10 : argv[argc-4]-'0'-'9';
+
+    for (int i = 0; i < argc-2; i++) {
+      cout << argv[i][0] << endl;
+      if (argv[i

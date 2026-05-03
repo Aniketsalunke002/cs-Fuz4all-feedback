@@ -1,0 +1,25 @@
+#include <iostream>
+
+
+class Person
+{
+public:
+    Person() { m_Age=0; };
+    ~Person(){ };
+    friend void swap(Person & p1, Person & p2)
+    {
+        int t;
+        t = p1.m_Age;
+        p1.m_Age = p2.m_Age;
+        p2.m_Age = t;
+    }
+protected:
+    int m_Age;
+};
+
+int main(int argc, char**argv)
+{
+    Person p1,p2;
+    Person::swap(p1,p2);
+    return 0;
+}

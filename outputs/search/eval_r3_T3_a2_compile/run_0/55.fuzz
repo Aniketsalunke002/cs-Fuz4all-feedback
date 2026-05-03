@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+template<typename T>
+T* get_array(int size)
+{
+     return new T[size];
+}
+int main()
+{
+     auto *s1 = get_array<char>(96);
+     auto *s2 = get_array<char>(96);
+     for(int i=0; i < 96; ++i)
+          s2[i] = s1[i];
+     return 0;
+}

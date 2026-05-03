@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+class Point {
+public:
+    Point(int _x=0,int _y=0) : x(_x), y(_y){}
+    int x, y;
+};
+Point operator + (Point A, Point B){
+    return Point(A.x + B.x, A.y + B.y);
+}
+int main ()
+{
+  Point Ori(10,0),New=Ori + Ori;
+
+  if (New.x == 20 && New.y == 0) return 0;
+
+  return 1;
+}

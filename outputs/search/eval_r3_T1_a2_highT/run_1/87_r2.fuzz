@@ -1,0 +1,57 @@
+#include <iostream>
+
+#include <vector>
+#include <set>
+#include <algorithm>
+class Mutant;
+std::set<Mutant *> Mutants;
+class Human;
+std::set<Human*> Humans;
+class Mutant: public Human
+{
+	double fame;
+public:
+	Mutant() {
+		Mutants.insert(this);
+		fame = 0;
+	}
+	double calcFitness() {
+	
+	}
+	// Note that both overloaded operators < and == (and so on) are implemented because
+	// they are "required" by the C++ standard, even though not all are implemented in an abstract
+	// base class. The ones that are not, will call the default C++ implementations (see 
+	// the C++ reference documentation on "non-inherited virtual functions" or "overridding").
+	// The reason we implement both overloaded operators is that otherwise C++ wouldn't be able
+	// call the "inherited" operator < from the compiler when we'd like to compare two instances of
+	// class Mutant.
+	bool operator<(const Mutant &other) {
+		return fame < other.fame;
+	}
+	bool operator==(const Mutant &other) {
+		return fame == other.fame;
+	}
+};
+class Human {
+protected:
+	double fitness;
+	double fame = 0;
+public:
+	Human() {
+		Humans.insert(this);
+		fame = 0;
+	}
+	virtual double calcFitness() {  }   
+};
+int main()
+{
+	std::vector<Mutant *> mutants;
+	for (auto i : Mutants) {
+		if (i->fame < 0.95) {
+			mutants.push_back(i);
+		}
+	}
+	return 0;
+}
+// See "Note on the use of the'super' keyword of C++", by <NAME>, for an explanation why 
+// the "super" keyword is necessary in the implementation of the overloaded operators.

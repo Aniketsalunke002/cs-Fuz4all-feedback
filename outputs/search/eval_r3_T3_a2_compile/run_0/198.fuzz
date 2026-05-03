@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  cout << "foo.cpp source code in main" << endl;
+  foo((int *)0);
+  foo1(0);
+  return 0;
+}

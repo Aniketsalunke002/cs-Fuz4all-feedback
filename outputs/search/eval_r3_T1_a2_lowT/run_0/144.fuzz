@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+#include <stdio>
+#include <cstring>
+
+int main(){
+	char st[10];
+	string s1="I am Shubhanshu",s2="Hello World",s3="";
+	cout<<"s1= "<<s1<<endl;
+	strcpy(st,s1.c_str());
+	    cout<<st<<endl;
+	return 0;
+	
+}

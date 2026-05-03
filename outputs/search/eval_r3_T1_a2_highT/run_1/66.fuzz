@@ -1,0 +1,58 @@
+#include <iostream>
+ 
+unsigned int mut_var=1;
+unsigned int gen_var=0;
+void mutation() {
+	gen_var++;
+	if (gen_var > mut_var) {
+		mut_var *= 2;
+		std::cin.clear();
+		std::cout << "Generation: " << mut_var << '\n';
+		if (gen_var == mut_var) {
+			std::cout << "Restarting mutations...\n";
+			gen_var = 0;
+			mut_var = 1;
+		}
+	}
+	std::cin.clear();
+}
+int main() {
+	std::string s;
+	while (mut_var!= 0) {
+		do {
+			std::cout.flush();
+			std::cout << "Generation: " << gen_var + 1 << '\n';
+			printf("%d: ", mut_var);
+			std::cin >> s;
+			if (!std::cin) {
+				std::cerr << "Got error: '" << std::cin.rdstate() << "'" << std::endl;
+				continue;
+			} else {
+				if (s=="1") {
+					printf("%d: [1] [1] is live!\n", mut_var);
+				}
+				if (s!="0") {
+					mut_var = atoi(s.c_str());
+				}
+			}
+		} while (mut_var > 1);
+		std::cout << "Last: ";
+		std::cin >> s;
+		if (s=="1") {
+			std::cout << "Mutating...\n";
+			mutation();
+			std::cout << std::flush;
+			if (gen_var==20004) {
+				std::cout << "Restarting mutations...\n";
+				gen_var = 0;
+				mut_var = 1;
+			}
+		}
+		if (mut_var==0 && s!="1" &&!std::cin)  {
+			std::cout << "Restarting mutations...\n";
+			gen_var = 0;
+			mut_var = 1;
+		}
+	}
+return 0;
+}

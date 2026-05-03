@@ -1,0 +1,35 @@
+#include <iostream>
+void test_arrays_functions()
+{
+    int foo[1]{0};
+    std::cout << foo << std::endl;
+    std::cout << sizeof(foo) << std::endl;
+    foo[0] = 1;
+    std::cout << "foo[0] " << foo[0] << std::endl;
+    std::cout << "size of array foo " << sizeof(foo) << std::endl;
+    std::cout << "size of int " << sizeof(int) << std::endl;
+}
+
+int array[1]{0};
+
+int& array_ref(int i)
+{
+    return array[i-1];
+}
+
+int main(void) {
+    std::cout << &array[0] << std::endl;
+    std::cout << sizeof(&array[0])/sizeof(array[0]) << std::endl;
+    std::cout << array_ref(0) << std::endl;
+    std::cout << array_ref(1) << std::endl;
+    std::cout << array_ref(1) = 0 << std::endl;
+    array_ref(1) = 100;
+    array_ref(1)++;
+    void& array_ptr = array;
+    int a = sizeof(array)/sizeof(array[0]);
+    std::cout << sizeof(array)/sizeof(array[0]) << std::endl;
+     array_ptr++;
+     array_ref(1) += 100;
+    std::cout << array_ref(1) << std::endl;
+    std::cout << "a " << a << std::endl;
+}

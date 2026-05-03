@@ -1,0 +1,60 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+   int c = 1+2;
+   c = c*3;
+   c = c+4;
+   return 0;
+}
+// Output: 7
+//  
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//    int m, i;
+//    cout <<" enter the array ";
+//    cin >> m;
+//    int a[m];
+//    for(i=0;i<m;i++){
+//      cout << " enter element "<< a[i] << "\n";
+//    }
+//    cout << "the elements are: "<< a[0]<<", "<<a[1]<<", "<<a[m-1]<<"\n";
+//    cout << " the sum of array elements is "<< a[0]+a[1]+a[m-1]<<"\n";
+//    return 0;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+// cout <<" enter a number to check if odd "; cin>>m;
+//    if(m%2==0){  
+//     cout << "the number is even \n";
+//    } else {
+//    cout << "the number is odd \n";
+//    }
+//    return 0;
+// }
+// Output: enter a number to check if odd 5
+// the number is odd
+//  
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//    int m, i;
+//    cout <<" enter the array ";
+//    cin >> m;
+//    int a[m];
+//    for(i=0;i<m;i++){
+//      cout << " enter element "<< a[i] << "\n";
+//    }
+//    cout << "the elements are: "<< a[0]<<", "<<a[1]<<", "<<a[m-1]<<"\n";
+//    cout << " the sum of array elements is "<< a[0]+a[1]+a[m-1]<<"\n";
+//    return 0;
+// }
+// #include <iostream>
+// using namespace std

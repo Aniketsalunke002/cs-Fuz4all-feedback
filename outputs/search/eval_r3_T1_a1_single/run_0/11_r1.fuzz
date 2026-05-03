@@ -1,0 +1,9 @@
+#include <iostream>
+
+#include <array>
+
+int main() {
+    auto [data, pop, env] = std::array<std::vector<double>, 3>{};
+
+    return 0;
+}

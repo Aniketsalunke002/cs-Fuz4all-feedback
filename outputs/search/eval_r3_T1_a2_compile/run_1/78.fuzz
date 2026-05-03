@@ -1,0 +1,97 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    vector<int> a,b;
+    for(int i = 0;i<10;++i)
+    {
+        a.push_back(i);
+    }
+    cout<<"The size is "<<a.size()<<endl;
+    cout<<"The first element on the third index is "<<a[2]<<endl;
+    cout<<"The last element is "<<a[a.size()-1]<<endl;
+    cout<<"The third element is "<<a[2]<<" and the last element is "<<a[9]<<endl;
+    cout<<"Now I will do the modification"<<endl;
+    cout<<"Delete the third element"<<endl;
+    a.erase(a.begin()+2);
+    cout<<"The size is "<<a.size()<<endl;
+    cout<<a[0]<<endl;
+    cout<<"Now I will do the modification"<<endl;
+    cout<<"Replace the three element with one element"<<endl;
+    a.assign(3,1);
+    cout<<"The size is "<<a.size()<<endl;
+    for(int i:a)
+    {
+        cout<<i<<endl;
+    }
+}
+ 
+#include <iostream>
+using namespace std;
+class test1
+{
+    public:
+    float number_1;
+    float number_2;
+    void input1()
+    {
+        cout<<"Please type in number 1"<<endl;
+        cin>>number_1;
+    }
+    void input2()
+    {
+        cout<<"Please type in number 2"<<endl;
+        cin>>number_2;
+    }
+    void output_num1_and_2_sum()
+    {
+        cout<<"The sum between number 1 and 2 is "<<(number_1+number_2)<<endl;
+    }
+    friend test1 operator+(test1 t1,test1 t2);
+    friend test1 operator-(test1 t1,test1 t2);
+    friend test1 operator*(test1 t1,test1 t2);
+    friend test1 operator/(test1 t1,test1 t2);
+};
+test1 operator+(test1 t1,test1 t2)
+{
+    test1 t3;
+    t3.number_1 = t1.number_1+t2.number_1;
+    t3.number_2 = t1.number_2+t2.number_2;
+    return t3;
+}
+test1 operator-(test1 t1,test1 t2)
+{
+    test1 t3;
+    t3.number_1 = t1.number_1-t2.number_1;
+    t3.number_2 = t1.number_2-t2.number_2;
+    return t3;
+}
+test1 operator*(test1 t1,test1 t2)
+{
+    test1 t3;
+    t3.number_1 = t1.number_1*t2.number_1;
+    t3.number_2 = t1.number_2*t2.number_2;
+    return t3;
+}
+test1 operator/(test1 t1,test1 t2)
+{
+    test1 t3;
+    t3.number_1 = t1.number_1/t2.number_1;
+    t3.number_2 = t1.number_2/t2.number_2;
+    return t3;
+}
+int main()
+{
+    test1 t1,t2,t3;
+    t1.input1();
+    t1.input2();
+    t2.input1();
+    t2.input2();
+    t3=t1+t2;
+    t3=t1-t2;
+    t3=t1*t2;
+    t3=t1/t2;
+    t3.output_num1_and_2_sum();
+}

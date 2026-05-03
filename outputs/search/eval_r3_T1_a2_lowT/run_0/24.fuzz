@@ -1,0 +1,12 @@
+#include <iostream>
+int main()
+{
+     
+    int a[10000] = {1, 2, 3};
+     
+    int* b = a;
+    std::cout << b[0] << std::endl;
+    b[0] = 42;
+    std::cout << a[0] << std::endl;
+    return 0;
+}

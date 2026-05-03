@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+class A
+{
+  public:
+    A()
+    {
+      i = 10;
+    }
+    void Print()
+    {
+      cout << i;
+    }
+    int Inc()
+    {
+      i++;
+      return i;
+    }
+  private:
+    int i;
+};
+int main()
+{
+  A obj1 = A();
+  obj1.Print();
+  cout << endl;
+  obj1.Inc();
+  obj1.Print();
+  return 0;
+}
+ 
+ 
+class B
+{
+  public:
+    B(int num = 0)
+    {
+      i = num;
+      arr = new int[i];
+    }
+    ~B()
+    {
+      delete arr;
+    }
+    void Print()
+    {
+      for(int j = 0; j < i; ++j)
+      {
+        cout << arr[j] << " ";
+      }
+    }
+    int Inc()
+    {
+      for(int j = 0; j < i; ++j)
+      {
+        arr[j] = j + 1;
+      }
+      return i;
+    }
+  private:
+    int i;
+    int* arr;
+};
+int main()
+{
+  B obj1(100);
+  obj1.Print();
+  cout << endl;
+  obj1.Inc();
+  obj1.Print();
+  return 0;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

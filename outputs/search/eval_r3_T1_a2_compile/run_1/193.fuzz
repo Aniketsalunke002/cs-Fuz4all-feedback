@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(int argc,char **argv) {
+   if (argc < 2) {
+      cout << "Please enter a parameter!" << endl;
+      throw;
+   }
+   cout << "My first parameter is " << argv[1] << endl;
+   return 0;
+}

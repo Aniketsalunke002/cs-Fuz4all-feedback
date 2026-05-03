@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+int main() {
+    std::string a("a");
+    std::cout << a.size() << '\n';
+    a += "bbcca";
+    std::cout << a.size() << '\n';
+    a -= 'b';
+    std::cout << a.size() << '\n';
+    return 0;
+}

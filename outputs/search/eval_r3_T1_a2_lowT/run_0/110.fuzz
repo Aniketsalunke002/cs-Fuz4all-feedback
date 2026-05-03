@@ -1,0 +1,33 @@
+#include <iostream>
+int main()
+{
+    unsigned short age = 234;
+    double age01 = age;
+
+    std::cout << age01 << '\n';
+    std::cout << age01 << '\n';
+    std::cout << sizeof(age01) << '\n';
+    std::cout << age01 + 1 << '\n';
+
+    int a = -5;
+    int b = a++;
+    int * pa = a & 3;
+    std::cout << a << '\n';
+    std::cout << *pa << '\n';
+
+    a = 10;
+    *pa++ = a %= 3;
+    std::cout << pa << '\n';
+    std::cout << a << '\n';
+
+    int c = ++pa;
+    std::cout << c << '\n';
+    std::cout << *pa << '\n';
+
+    while (*++pa++ <= 6)
+    {
+
+    }
+
+    return 0;
+}

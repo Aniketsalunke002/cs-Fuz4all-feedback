@@ -1,0 +1,71 @@
+#include <iostream>
+
+using namespace std;
+void printer() {
+    cout << "Done.\n";
+}
+
+int main(void) {
+    printer();
+
+    return 0;
+}
+//  
+// #include <iostream>
+// #include <fstream>
+// void printer(const char* fileName) {
+//     std::ifstream inFile(fileName);
+//     int i = 0;
+//     while (inFile.is_open() && inFile.good()) {
+//       char c;
+//       inFile.get(c);
+//       std::cout << fileName << " contains " <<  i << " characters: " << c << '\n';
+//       i++;
+//     }
+// }
+// int main()
+// {
+// printer("sample.txt");
+// return 0;
+// }
+//  
+// #include <iostream>
+// #include <fstream>
+// void printer(const char* fileName) {
+//     std::ifstream inFile(fileName);
+//     int i = 0;
+//     while (inFile.is_open() && inFile.good()) {
+//       char c;
+//       inFile.get(c);
+//       std::cout << fileName << " contains " <<  i << " characters: " << c << '\n';
+//       i++;
+//     }
+// }
+// int main()
+// {
+// printer("sample.txt");
+// return 0;
+// }
+//  
+// #include <iostream>
+// #include <fstream>
+// void printer(const char* fileName) {
+//     std::ifstream inFile(fileName);
+//     int i = 0;
+//     while (inFile.is_open() && inFile.good()) {
+//       char c;
+//       inFile.get(c);
+//       std::cout << fileName << " contains " <<  i << " characters: " << c << '\n';
+//       i++;
+//     }
+// }
+// int main()
+// {
+// printer("sample.txt");
+// return 0;
+// }
+//  
+// #include <iostream>
+// #include <fstream>
+// void printer(const char* fileName) {
+//     std::ifstream inFile

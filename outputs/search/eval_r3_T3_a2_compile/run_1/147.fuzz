@@ -1,0 +1,13 @@
+#include <iostream>
+#include <vector>
+#include <stdlib.h>  
+class Cell {
+public: 
+ int c; 
+ int f; 
+};
+Cell * cells = (Cell *)malloc(sizeof(Cell));
+int a = rand() % 100; 
+cells -> c = a; 
+ 
+std::cout << cells -> c << '\n';

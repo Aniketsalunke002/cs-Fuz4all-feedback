@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main (){
+    int num=15;
+    while(num>3){
+        if(num%2==1)
+           num-=1;
+        if(num%3==0)
+           num-=2;
+        if(num%4==1)
+           num-=1;
+    }
+    cout<<num<<endl;
+}

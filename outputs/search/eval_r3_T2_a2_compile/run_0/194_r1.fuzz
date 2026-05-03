@@ -1,0 +1,17 @@
+#include <iostream>
+
+namespace std {
+    ostream& operator>>(ostream& out, istream& in) {
+        int a;
+        out >> a;
+        return in >> a;
+    }
+    istream& operator<<(istream& in, ostream& out) {
+        return out << 0;
+    }
+}
+int main() {
+    cin >> 4;
+    0 << cout;
+    return 0;
+}

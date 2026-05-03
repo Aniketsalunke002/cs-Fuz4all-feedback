@@ -1,0 +1,12 @@
+#include <iostream>
+class A {
+ public:
+  int a = 1;
+};
+void f(A& a) {
+  a.a++;
+}
+int main() {
+  A b;
+  return f(b);
+}

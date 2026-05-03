@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b;
+    a = 10;
+    b = a+++10;
+    cout << b;
+    return 0;
+}
+ 
+1: 
+a) Which statement is NOT a valid constructor declaration? 
+b) What does the line "string str3 = str1 + str2" do? 
+c) Which statement could NOT be used to declare 'a' and 'b'? 
+d) Why was it not an error for a to be declared twice?
+2: 
+a) Which version would be more legible/concise?
+b) Where in your solution to question 1 did you use the operator "+++"?
+
+

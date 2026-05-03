@@ -1,0 +1,12 @@
+#include <iostream>
+int foo()
+{
+}
+int main()
+{
+    int (*p)()=foo;
+    std::cout << (void*)p << std::endl;
+    return 0;
+}
+```
+

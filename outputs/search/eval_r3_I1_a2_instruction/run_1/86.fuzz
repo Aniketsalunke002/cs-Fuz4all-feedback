@@ -1,0 +1,62 @@
+#include <iostream>
+#include <string>
+class MyClass2 : protected MyClass1
+{
+    std::string m_name;
+    public:
+    MyClass2()
+    {
+        std::cout<<"In MyClass2 Constructor"<<"\n";
+        m_name = "name";
+    }
+    ~MyClass2()
+    {
+        std::cout<<"In MyClass2 Destructor"<<"\n";
+    }
+    void set_name(const std::string& name)
+    {
+        m_name = name;
+    }
+    virtual void print()
+    {
+        std::cout<<"Hello My name is "<<m_name<<"\n";
+    }
+};
+int main()
+{
+    MyClass2 my_obj;
+     
+    my_obj.set_name("MyName is MyName");
+    my_obj.MyClass1::print();
+    my_obj.MyClass1::say();
+    return 0;
+}
+class MyClass3
+{
+    int m_width;
+    int m_height;
+     
+     
+    public:
+    MyClass3()
+    {
+        std::cout<<"MyClass3 Constructor"<<"\n";
+        m_width = 5;
+        m_height = 5;
+         
+    }
+    ~MyClass3()
+    {
+        std::cout<<"MyClass3 Destructor"<<"\n";
+    }
+    void set_name(const std::string& name)
+    {
+         
+        std::cout<<"In set_name"<<"\n";
+    }
+};
+int main()
+{
+    MyClass3 myClass3;
+    return 0;
+}

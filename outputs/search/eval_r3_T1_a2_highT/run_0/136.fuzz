@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+    float b;
+    cout<<"Enter in integers and floats:";
+    cin>>a>>b;
+    cout<<a<<" + "<<b<<" = "<<a+b<<endl;
+}

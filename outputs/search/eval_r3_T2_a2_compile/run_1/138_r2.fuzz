@@ -1,0 +1,18 @@
+#include <iostream>
+
+namespace mugger {
+void mug() {
+    char *test = "test";
+    *test = 'A';
+    int i = 1;
+    *i = 2;
+    std::cout << "Result: " << test[i] << std::endl;
+}
+}
+int main(){
+    int i = 1;
+    mugger::mug();
+    std::cout << i << std::endl;
+    return 0;
+}
+// Result: A

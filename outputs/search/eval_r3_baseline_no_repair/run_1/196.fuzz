@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main() {
+ int m = 13;
+ float f = 1.2;
+ cout << 3 +3*3/m + f << endl;
+ m = 29;
+ f = 0.7;
+ cout << 3 +3*3/m + f << endl;
+ return 0;
+}
+#include <iostream>
+using namespace std;
+int main() {
+ int m = 13;
+ float f = 1.2;
+ cout << 3 +3*3/m + f << endl;
+ m = 29;
+ f = 0.7;
+ cout << 3 +3*3/m + f << endl;
+ m = 42;
+ f = 0.5;
+ cout << 3 +3*3/m + f << endl;
+ return 0;
+}

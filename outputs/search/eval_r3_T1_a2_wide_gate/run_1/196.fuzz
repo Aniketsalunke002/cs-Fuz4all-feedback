@@ -1,0 +1,15 @@
+#include <iostream>
+ 
+int main(int argc, char** argv) {
+  cout << "hi";
+}
+ 
+#ifndef TEST
+#define TEST 1
+#endif
+#if TEST
+int main(int argc, char** argv) {
+  printf("hi");
+}
+#endif
+

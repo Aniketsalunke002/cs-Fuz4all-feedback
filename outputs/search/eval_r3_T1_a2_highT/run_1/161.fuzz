@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int numa = 5;
+    int numb = 6;
+    int numc = 6;
+
+    if (numc < numb) {  
+        numc++;
+    }
+
+    if (numc >= numb) {
+        ++numb;  
+    }
+    if (numb >= numa) {
+        numa+=5;
+    }
+
+    std::cout << numa << " " << numb << " " << numc << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+     
+     
+
+     
+     
+     
+     
+    std::string name = "Donald";
+    std::string duck = name + " duck";
+
+    cout << duck << endl;
+     
+
+     
+     
+    std::string yearOfBirth = "1945";
+    std::cout << yearOfBirth << std::endl;
+    return 0;  
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    std::cout << "hello world" << std::endl;
+    return 0;
+}
+ 
+#include <stdio.h>
+int main()
+{
+    printf("hello world");
+    return 0;
+}

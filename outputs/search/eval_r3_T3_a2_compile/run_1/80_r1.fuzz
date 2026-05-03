@@ -1,0 +1,24 @@
+#include <iostream>
+
+template<typename T>
+T f(T x) {
+	return x + 1;
+}
+void mutated() {
+	int a = 0;
+	do {
+		f(a);
+	} while (a >= 0);
+}
+int main() {
+	int a = 1;
+	if (f(a) - a < 0) {
+		f(a);
+	}
+	if (f(a) > 0) {
+		f(a);
+	}
+	if (f(a) > 0)
+		return f(a);
+	return -1;
+}

@@ -1,0 +1,4 @@
+#include <iostream>
+
+double f(int x) { return x * 2.34; }
+void main(int argc, char **argv) { f(1234); }

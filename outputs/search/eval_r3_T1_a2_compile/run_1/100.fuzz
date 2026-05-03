@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int onePlusOne() {
+  return 1+1;
+}
+int main() {
+  int num=1;
+  if (num==1) {
+    cout<<"num is 1"<<endl; 
+  } else {
+    int b=num+num+num;
+    int c=onePlusOne()+onePlusOne()+onePlusOne();
+    int a=b+c;
+    cout<<"a is now: "<<a<<endl; 
+  }
+}
+ 
+ 
+ 
+#include <iostream>
+using namespace std;
+int onePlusOne() {
+  return 1+1;
+}
+int main() {
+  int result = onePlusOne();
+  cout<<result<<endl;
+}

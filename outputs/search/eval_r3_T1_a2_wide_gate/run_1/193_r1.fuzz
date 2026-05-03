@@ -1,0 +1,35 @@
+#include <iostream>
+
+namespace mys {
+using std::cout;
+using std::cin;
+using std::endl;
+}
+int main(int argc, char** argv) {
+    
+    int n;
+    cin >> n;
+    if (n!= 0) {
+        mys::cout << "Enter elements in array" << endl;
+        int A[n], min, max;
+        cin >> A[0];
+        min = A[0];
+        max = A[0];
+         
+        for (int i = 1; i < n; ++i) {
+            cin >> A[i];
+            max = A[i] > max? A[i] : max;
+            min = A[i] < min? A[i] : min;
+        }
+         
+        double average = max + min;
+        int i = max;
+        i = max > min? max : min;
+         
+        mys::cout << "Max: " << max;
+        mys::cout << endl;
+        mys::cout << "Min: " << min;
+        mys::cout << endl;
+        mys::cout << "Average: " << average / 2.0 << endl;
+    }
+}

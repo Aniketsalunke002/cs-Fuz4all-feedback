@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+int A[10], B[10], i;
+A[1] = 0;
+
+B[0] = 0;
+cout << A[0] << " " << B[1] << endl;
+for (i = 1;i < 10;i++) {
+	A[i] = i + 1;
+	B[i] = i + 10;
+	cout << A[i] << " " << B[i] << endl;
+}
+	return 1;
+}
+

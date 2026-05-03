@@ -1,0 +1,18 @@
+#include <iostream>
+int main() {
+    int x, y;
+    std::cin >> x;
+    x--;
+    std::cout << x << '\n';
+    return 0;
+}
+ 
+#include <iostream>
+int main() {
+    int x;
+    std::cin >> x;
+    std::cout << y;  
+    return 0;
+}
+
+ 

@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+const int PI=4;
+int main()
+{
+	cout<<"Hello, World! I am an equivalent program! ";
+	cout<<"My mutation method was to add a pi to every print statement!\n";
+   cout<<"4  8"<<endl
+	 <<2*4<<endl
+	 <<1/(double)(4)
+	 <<4!=3*4<<'\n';     
+	return 0; 
+}
+ 
+#include <iostream>
+using namespace std;
+const int PI=4;
+int main()
+{
+	cout<<"Hello, World! I am an similar program! ";
+	cout<<"My mutation method was to use the int keyword with PI!\n";
+	cout<<int(PI)<<'\t'<<(int)2*PI<<endl<<1/(double)PI<<endl;
+	return 0; 
+}

@@ -1,0 +1,8 @@
+#include <iostream>
+int getint();
+int f(int i);
+int main(char **argv) {
+  int size = f(1);
+  std::cerr << size << '\n';
+  exit(0);
+}

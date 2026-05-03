@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include <vector>
+using namespace std;
+
+void fibonacci(int n, vector<int> &v){
+      
+    vector<int> w= {0,1};
+    int k;
+    while (w.size()<n)
+    {
+            for(int i = 0; i+1<w.size(); i++)
+            {
+                 k = w[i] +

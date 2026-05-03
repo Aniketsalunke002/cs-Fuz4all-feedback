@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+double pi;
+int main() {
+  double pi = 3.141592;
+  cout << pi << endl;
+  const double x = 2 * pi;
+  cout << x << endl;
+  return 0;
+}

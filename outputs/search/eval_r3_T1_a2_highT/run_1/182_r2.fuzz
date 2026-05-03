@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int foo,bar;
+    const int &fconst = foo;
+    cout << "Type of fconst " << typeid(fconst).name() << endl;
+    return 0;
+}

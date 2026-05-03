@@ -1,0 +1,75 @@
+#include <iostream>
+using namespace std;
+class Point {
+public:
+	Point(int,int,int,int);
+	virtual ~Point();
+	int x;
+	int y;
+	int z;
+	int w;
+};
+Point::Point(int val1,int val2,int val3,int val4):x(val1),y(val2),z(val3),w(val4)
+{
+}
+Point::~Point()
+{
+}
+int main()
+{
+	Point2 p(4,7,1,2);
+	p.printPoint();
+	return 0;
+}
+ 
+#include <iostream>
+#include <iostream>
+using namespace std;
+int main()
+{
+	int grade ;
+	while(cin >> grade) {
+		cout << "You have successfully entered a number" << endl ;
+		break ;
+	}
+	return 0;
+}
+ 
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main()
+{
+	string name = "Waqas ";
+	cout << name << endl ;
+	cout << name.length() << endl ;
+	name[3] = 'q';
+	name[4] = 'q';
+	name[5] = 'q';
+	name[6] = '\0';
+	cout << name << endl ;
+	return 0;
+	
+}
+int main()
+{
+	int grade ;
+	while(cin >> grade) {
+      
+		if(grade > 100) cout << "You have exceeded the range" << endl ;
+		else if(grade < 0) cout << "Grade can not be negative" << endl ;
+		else if(grade > 90) {
+			cout << "You have a perfect grade " << grade << endl ;
+		}
+		else if(grade > 80) {
+			cout << "You have an average grade " << grade << endl ;
+		}
+		else if(grade > 70) {
+			cout << "You have a pass grade " << grade << endl ;
+		}
+		else cout << "You have a fail grade " << grade << endl ;
+		 
+    break ;
+  }
+  return 0;
+}

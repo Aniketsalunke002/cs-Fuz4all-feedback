@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, m;
+    int i,j,p;
+    cin>>n>>m;
+    for(i=1; i<=n; i++)
+    {
+        p=(2*i-1)*(2*i-1)-1;
+        for(j=(2*i-1)+1; j<=n+(2-i); j++)
+        {
+            cout<<p<<" ";
+            p+=2;
+        }
+        cout+=endl;
+    }
+}
+ 

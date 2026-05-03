@@ -1,0 +1,9 @@
+#include <iostream>
+int main()
+{
+	auto i = "test";
+	const auto &x = i;  
+	*(char*)&x = '*';  
+	std::cout << i << '\n';
+	return 0;
+}

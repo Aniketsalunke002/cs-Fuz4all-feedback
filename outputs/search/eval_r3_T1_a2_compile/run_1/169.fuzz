@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+extern int a;
+int main(){
+   cout << hex << a;
+   return 0;
+}

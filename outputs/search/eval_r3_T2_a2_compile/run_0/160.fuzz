@@ -1,0 +1,9 @@
+#include <iostream>
+#include <iomanip>
+#include <mutex>
+#include <thread>
+using namespace std;
+int main() {
+  int a = 1;
+  cout << a << endl;
+}

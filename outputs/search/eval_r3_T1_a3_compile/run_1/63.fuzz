@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+double getFoo(int x, int y) {
+	return x - (y / 3.0);
+}
+
+int main(int argc, char* argv[]) {
+	int x = 1;
+	int y = 2;
+	double foo = getFoo(x, y);
+	cout << foo;
+	return 0;
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int k=0,p=50;
+	cout<<"value of k "<<k<<endl;
+	cout<<"value of p "<<p<<endl;
+	p++,k++;
+	cout<<"value of k "<<k<<endl;
+	cout<<"value of p "<<p<<endl;
+	k+=++p,++k*=3;
+	 
+	cout<<"value of k "<<k<<endl;
+	cout<<"value of p "<<p<<endl;
+	k+={4,5,6},p++;
+	cout<<"value of k "<<k<<endl;
+	cout<<"value of p "<<p<<endl;
+}

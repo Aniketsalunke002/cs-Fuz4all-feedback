@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+class A
+{
+	int a = 5;
+	public:
+		friend ostream& operator<< (ostream&, A);
+};
+class B
+{
+	int a = 5;
+	public:
+		friend ostream& operator<< (ostream&, B);
+};
+class C:public A, public B
+{
+	int b = 6;
+	public:
+		friend ostream& operator<< (ostream& os, C object)
+		{
+			os << object.a << object.b << object.c;
+			return os;
+		}
+};
+ostream& operator<< (ostream& os, A object)
+{
+	os << "A";
+	return os;
+}
+ostream& operator<< (ostream& os, B object)
+{
+	os << "B";
+	return os;
+}
+C c;
+int main()
+{
+	cout<<c;
+
+	return 0;
+}

@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+#include <vector>
+#include <algorithm>
+
+int main()
+{
+    vector<char> vec;
+    for(int i = 0; i < 10; ++i)
+        vec.push_back(static_cast<char>((i % 26) + 'a'));
+    vector<char>::iterator it = find(vec.begin(), vec.end(), 'j');
+    vec.erase(it);
+    vector<char>::const_reverse_iterator rev_it = vec.rbegin();
+    for_each(rev_it, vec.rend(), [&](char ch){
+        cout << ch;
+    });
+    return 0;
+}

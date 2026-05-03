@@ -1,0 +1,124 @@
+#include <iostream>
+using namespace std;
+int main() {
+	my_type obj;
+	obj.print("hello");
+	obj.print("world");
+	obj.print("!");
+	cout << sizeof(obj) << endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class Person {
+	public:
+		Person() {
+		}
+		~Person() {
+		}
+		void set_name(string name) {
+			this->name = name;
+		}
+		string show_name() {
+			return name;
+		}
+	private:
+		string name;
+};
+class Man {
+	friend class Person;
+	public:
+		Man(string name = "not known") {
+			this->name = name;
+			this->isGood = true;
+		}
+		~Man() {
+		}
+		void set_name(string name) {
+			this->name = name;
+		}
+		string show_name() {
+			return name;
+		}
+		string show_status() {
+			return isGood? "good": "bad";
+		}
+		void set_status(bool value) {
+			this->isGood = value;
+		}
+	private:
+		string name;
+		bool isGood;
+};
+class Woman {
+	friend class Person;
+	public:
+		Woman(string name = "not known") {
+			this->name = name;
+			this->isGood = true;
+		}
+		~Woman() {
+		}
+		void set_name(string name) {
+			this->name = name;
+		}
+		string show_name() {
+			return name;
+		}
+		string show_status() {
+			return isGood? "good": "bad";
+		}
+		void set_status(bool value) {
+			this->isGood = value;
+		}
+	private:
+		string name;
+		bool isGood;
+};
+
+int main() {
+	string line;
+	Man man("man");
+	string message;
+	Person* p;
+	do {
+		cout << man.show_name() << ": ";
+		getline(cin, message);
+		if (message[0] == 'q')
+			break;
+		cout << message << endl;
+		p = new Person();
+		p->set_name("person");
+		man.set_name(p->show_name());
+		cout << "man: " << man.show_name() << endl;
+		cout << "man: " << man.show_status() << endl;
+		delete p;
+	} while (true);
+	return 0;
+}
+
+#include <iostream>
+using namespace std;
+class Human {
+	public:
+		Human() {
+			name = "unknown";
+		}
+		~Human() {
+			cout << "~" << name << endl;
+		}
+		void set_name(string name) {
+			this->name = name;
+		}
+		string show_name() {
+			return name;
+		}
+		virtual int eat(string food, double amount) = 0;
+	private:
+		string name;
+};
+class Man: public Human {
+	public:
+		Man(string name = "unknown"):Human() {
+			

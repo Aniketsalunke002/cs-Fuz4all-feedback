@@ -1,0 +1,22 @@
+#include <iostream>
+
+
+
+struct Car{};
+
+class Foo
+{
+public:
+	 
+	 
+	 
+	Foo(const Foo &rhs) : bar((const Car *) rhs.bar)
+	{
+
+	}
+
+
+	void SetBar(const Car * bar)
+	{
+		this->bar = bar;
+	}

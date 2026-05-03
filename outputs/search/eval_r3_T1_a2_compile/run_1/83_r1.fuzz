@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+  int i,j,k,rowNumber;
+  char sym;
+  char row1=' ', row2=' ';
+  rowNumber=1;  
+  while(rowNumber--)
+  {
+    for(i=0,j=4,k=-1;i<5,j>=0,k++;)
+      {
+        for(;k<j,k+=2;)
+        {
+          cout <<" ";
+        }
+        for(;k>=-j,k-=2;)
+        {
+          cout <<row1;
+        }
+          
+        for(;i>=0,j+i-1<k,j++)
+        {
+          cout <<sym;
+        }
+          
+        for(;i<=j,k<=j,i++)
+        {
+          cout<<sym;
+        }
+        for(;k<=j,k+=2;)
+        {
+          cout <<row2;
+        }
+      }
+    sym++;
+  }
+  return 0;
+}

@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int age = 10;
+	int marks = 100;
+	cout << "My age is " << age << " years and " << marks << " marks." << endl;
+	return 0;
+}

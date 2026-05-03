@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main ()
+{
+    for (int counter = 10; counter > 1; counter = counter - 2)
+    {
+        std::cout << counter;
+    }
+    return 0;
+}

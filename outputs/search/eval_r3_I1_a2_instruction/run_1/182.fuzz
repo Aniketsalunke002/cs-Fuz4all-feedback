@@ -1,0 +1,31 @@
+#include <iostream>
+
+double A()
+{
+    return 2.0;
+}
+
+double B()
+{
+    return A()+2.0;
+}
+
+void F()
+{   
+    double t;
+    t=B();
+    std::cout << t <<std::endl;
+}
+
+int main()
+{
+    F();
+    return 0;
+}
+ 
+'''
+
+output_string.append(str_result) #.format(result)
+
+# output_string.append(str_result) #.format(result)
+print(str_result) #.format(result)

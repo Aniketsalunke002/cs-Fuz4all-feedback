@@ -1,0 +1,13 @@
+#include <iostream>
+int main() {
+  double x[5];
+  int i = 0;
+  x[0] = 2;
+  printf("%f\n%p\n", x[0], &x[0]);
+  printf("%f %d %p\n", x[0], i, &x[0]);
+  double y = 4.0;
+  printf("%f %d %p\n", x[0], i, &x[0]);
+  x[0] = 3;
+  printf("%f %d %p\n", y, i, &y);
+  return 0;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+
+int main(void) {
+    map<int, int> m;
+    {
+        int i = 0, j = 0, k = 0, a = 0, b = 0, l, sum;
+        if (m.find(i + j + k)!= m.end())
+          a = m[i + j + k];
+        else
+          a = 0;
+        if (m.find(j + k)!= m.end())
+          b = m[j + k];
+        else
+          b = 0;
+        a < b? l = a : l = b;
+        sum = l;
+        cout<<sum<<endl;
+    }
+    return 0;
+}

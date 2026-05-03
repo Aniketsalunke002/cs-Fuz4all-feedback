@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main(){
+  char* mycar="Volvo FV400";
+  const char *car=(char *)"volvo xC200";
+  cout<<mycar<<endl;
+  cout<<car<<endl;
+  char* mycar1="Volvo";
+  const char *car1=(char *)"volvo xC200";
+  mycar1[6]='B';
+  car1[7]='S';
+ 
+  cout<<mycar1<<endl;
+  cout<<car1<<endl;
+
+}
+ 
+#include <iostream>
+using namespace std;
+void foo(int& b){cout<<"Inside the function"<<endl;}
+int main(){
+  int a=10,b=5,z;
+  foo(b);  
+  a=5;
+  foo(a);  
+  cout<<b<<endl;
+  myfoo(b);
+  cout<<a<<endl;
+  
+  return 0;
+}
+

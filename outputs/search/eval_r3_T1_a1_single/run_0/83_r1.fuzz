@@ -1,0 +1,35 @@
+#include <iostream>
+
+int main ()
+{
+    std::cout << "Hello World"<< std::endl;
+    int a=444;
+    class A{};
+    A a1=A();
+    int b=22;
+    int c=0;
+    A d1;
+    A *p1=&d1;
+    A *p=&a1;
+    std::cout << "the value of a is " << a << std::endl;
+    a+=1;
+    *p=*p+1;
+    p=&a1;
+    p=&d1;
+    int *p_b=&b;
+    int &r_b=b;
+    std::cout << "a1 has address " << &a1 << std::endl;
+    std::cout << "p1 has address " << &d1 << std::endl;
+    std::cout << "**p1 has address " << &*p1 << std::endl;
+    *p1=*p1+1;
+    b++;
+    c++;
+    r_b++;
+    std::cout << "p has address " << p << std::endl;
+    std::cout << "p_b has address " << p_b << std::endl;
+    std::cout << "the value of a is now " << a << std::endl;
+    std::cout << "the value of b is " << b  << std::endl;
+    std::cout << "the value of c is " << c  << std::endl;
+    std::cout << "the value referenced by r_b is " << r_b << std::endl;
+    return 0;
+}

@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+#define C_CONST 3
+int main() {
+#if C_CONST
+  for (int x : {1,4});
+#endif
+	return 0;
+}

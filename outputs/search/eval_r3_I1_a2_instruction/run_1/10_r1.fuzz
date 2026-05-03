@@ -1,0 +1,31 @@
+#include <iostream>
+#include "Account.h"
+#include "Account.cc"
+
+int main() {
+	 
+	Account *acc = new Account;
+
+	 
+
+	 
+	delete acc;
+
+	return 0;
+}
+ 
+#include <iostream>	 
+
+int main () {
+	int age = 0;			 
+	std::cin >> age;		 
+
+	if (age > -12) {
+		std::cout << "Your age is " << age << "\n";
+	}
+	else {
+		throw std::invalid_argument("Only ages above -12 are allowed");
+	}
+
+	return 0;
+}

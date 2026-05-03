@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main()
+{
+    int a;
+    a = 0xff;
+    std::cout << std::cin.tie(&a);
+    printf("%08X\n", a);
+}

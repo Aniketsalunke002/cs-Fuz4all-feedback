@@ -1,0 +1,14 @@
+#include <iostream>
+    using namespace std;
+    int main() {
+  for(int i=0; i<10; i++) {
+    if(i<5 && i%3!=2) cout << "This text is inside the inner IF-statement" << '\n';  
+    if(i<10 && i%3!=0) {
+      cout << "This text is inside the 2nd IF-statement" << '\n';  
+    } else {  
+      cout << "This text is inside the ELSE-statement (which is never reached)" << "\n";
+    }
+    
+  }
+return 0;
+}

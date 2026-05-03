@@ -1,0 +1,66 @@
+#include <iostream>
+#include <string>
+
+int main (int argc, char **argv)
+{
+  std::string str = "Hello!! :";
+  std::clog << str << std::endl;
+  std::string my_string;
+  std::size_t old_length = std::string("Hello!").size();
+  if (argc > 1){
+    const char *new_string = argv[1];
+    my_string = (new_string);
+    std::clog << "you have provided an input : " << my_string;
+  }else{
+      my_string = "World";
+   }
+  std::size_t new_length = my_string.size();
+  std::clog << std::endl;
+  std::size_t my_size = old_length + new_length+2;
+  str += my_string + "!" ;
+  std::clog << my_size << std::endl;
+   std::clog << my_string.size() << std::endl ;
+  for (size_t i = 0; i < my_size; i++){
+    if (i < old_length){
+      std::clog << std::string("Hello!")[i];
+    }
+    else{
+      std::clog << str[i];
+    }
+   }
+   std::clog << std::endl;
+}
+
+```
+
+## Compiling the programs
+
+Once you created your files, you can compile the programs (if you have a compiler) by running :
+
+```bash
+g++ <the program name that you edited>
+```
+
+Then the executable for your program will be created, run it using the following command:
+```bash
+./a.out
+```
+
+
+## Feedback
+We welcome ideas and feedbacks! Feel free to create a [new issue](https: 
+
+## Contributing
+Please read [CONTRIBUTING.md](https: 
+
+## Versioning
+We use [Github](https: 
+
+## Authors
+* **<NAME>** - *Initial work* - [sourabhbajaj](https: 
+
+## License
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+* [CodingBat](https: 

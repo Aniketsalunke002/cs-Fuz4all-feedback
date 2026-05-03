@@ -1,0 +1,7 @@
+#include <iostream>
+#include <functional>
+#include <vector>
+int main( int argc, char **argv ){
+  std::vector<int> v;
+  std::sort(v.begin(), v.end());
+}

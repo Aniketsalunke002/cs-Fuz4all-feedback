@@ -1,0 +1,17 @@
+#include <iostream>
+
+int main ()
+{
+    int a=1;
+    std::cout << "the value of the integer is " << a << std::endl;
+     
+    const int& b=a;
+    std::cout << "the value of the reference is " << b << std::endl;
+     
+    int temp=999;
+    b=temp;
+    std::cout << "the new value of the reference " << b << std::endl;
+    a=5;
+    std::cout << "the value of the  integer is " << a << std::endl;
+    return 0;
+}

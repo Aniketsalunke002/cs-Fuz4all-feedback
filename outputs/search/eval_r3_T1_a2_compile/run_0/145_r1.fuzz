@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+int sum(int n)
+{
+    int sum {0};
+    for (int i = n; i > 0; i--) {
+        sum += i;
+    }
+    return sum;
+}
+int max(int a, int b)
+{
+    if (a>b) {
+        return a;
+    } else {
+        return b;
+    }
+}
+int main() {
+    int n;
+    std:: cout << "Please choose the number of elements:" << std:: endl;
+    std:: cin >> n;
+    std:: cout << "\nThe sum of all the elements is" << sum(n) << std:: endl;
+    std:: cout << "The maximum value of the two integers

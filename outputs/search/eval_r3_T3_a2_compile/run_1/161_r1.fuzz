@@ -1,0 +1,15 @@
+#include <iostream>
+
+template <typename T, int N, int M> class Array {
+  using arr_t = T[N][M];
+  using value_t = typename T;
+public:
+  void showSize() {
+    std::cout << "size: " << sizeof(arr_t) << '\n';
+  }
+};
+int main(int argc, char * argv[]) {
+  Array<int, 3, 4> a;
+  a.showSize();
+  return 0;
+}

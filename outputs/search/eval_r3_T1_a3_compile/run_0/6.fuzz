@@ -1,0 +1,11 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    int x = 1337;
+    while(x!= 1336)
+        cout << x++ << " ";
+    cout << endl;
+}
+ 
+ 

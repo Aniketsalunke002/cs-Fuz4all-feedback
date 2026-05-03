@@ -1,0 +1,9 @@
+#include <iostream>
+int main(int argc, char* argv[])
+{
+   
+  char c1 = 0x0f;
+  char c2 = 0x10;
+  char c3 = c1|c2;
+  std::cout << c3 << std::endl;
+}

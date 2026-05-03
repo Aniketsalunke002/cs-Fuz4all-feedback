@@ -1,0 +1,32 @@
+#include <iostream>
+
+#include <string>
+#include <vector>
+#include <map>
+using namespace std;
+
+struct C {
+  std::istream &fread(std::istream &is) {
+    is >> str;
+    is.ignore(1, '\n');
+    return is;
+  }
+  string str;
+};
+
+int main(int argc, char** argv) {
+  char c;
+  int i = 0;
+  vector<C> vec(100);
+  map<int, int> map;
+  C &iop = vec[0];
+  do {
+    c = iop.fread().str[0];
+    if (c == '/') {
+      i = -1;
+    } else {
+      cout << (c == '\n'? '\n' : c+i);
+      i++;
+    }
+  } while (c!= '.');
+}

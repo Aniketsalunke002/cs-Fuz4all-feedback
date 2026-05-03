@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int* x;
+	*x = 29;
+	cout << *x;
+	return 0;
+}

@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    a = 5;
+    a += 1;
+    if (a >= a)
+    {
+        a = -a;
+    }
+    cout << a << '\n';
+    while (a > 10)
+    {
+        a = -a;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a;
+    a = 5;
+    a += 1;
+    if (a >= a)
+    {
+        a = -a;
+        cout << a << '\n';
+    }
+    else
+    {
+        cout << -a << '\n';
+    }
+    return 0;
+}

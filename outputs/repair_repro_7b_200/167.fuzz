@@ -1,0 +1,12 @@
+#include <iostream>
+#include <cstring>
+int main() {
+    char buffer[1024];
+    std::cin.getline(buffer, 1024);
+    if (buffer[0]!= '0' || buffer[1] || buffer[2]!= 'O') {
+        std::cout << "Something went wrong";
+    } else {
+        std::cout << buffer << std::endl;
+    }
+    return 0;
+}

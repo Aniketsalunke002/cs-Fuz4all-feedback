@@ -1,0 +1,113 @@
+#include <iostream>
+
+int main()
+{
+     std::string str{"abc"};
+     const char* cstr = str.c_str();
+     for(int i = 0; i < str.size(); ++i)
+     {
+          std::cout << cstr[i] << " ";
+     }
+     str.push_back('d');
+
+     const char* cstr2 = str.c_str();
+     const char* end = cstr2 + str.size();
+     for(const char* cur = cstr2; cur!= end; ++cur)
+          std::cout << *cur;
+     return 0;
+}
+ 
+#include <string>
+#include <iostream>
+#include <tuple>
+#include <filesystem>
+#include <variant>
+#include <queue>
+
+class my_type
+{
+public:
+     int data;
+     static int staticdata;
+
+     my_type(int data):
+          data{data}
+     {}
+
+     int some_fn() const
+     {
+          return data;
+     }
+
+     double dobj(std::string) const
+     {
+          return 10.4567;
+     }
+
+     friend int fn(const my_type& val)
+     {
+          return (val.data % 2 == 0)? 0 : 1;
+     }
+
+     friend std::ostream& operator<<(std::ostream& os, const my_type& val)
+     {
+          return os << "data:" << val.data;
+     }
+
+     friend bool operator==(const my_type& LHS, const my_type& RHS)
+     {
+          return LHS.data == RHS.data;
+     }
+};
+
+int my_type::staticdata = 10;
+
+using my_tuple = std::tuple<int, int, int, std::string, std::string>;
+
+my_type mt1(20), mt2(30), mt3(40), mt4(50), mt5(25);
+
+constexpr bool get_value = std::is_same_v<int, std::tuple_element_t<3, my_tuple>>;
+constexpr bool get_string = std::is_same_v<std::string, std::tuple_element_t<std::tuple_size<my_tuple>::value - 2, my_tuple>>;
+
+int main (int argc, char **argv)
+{
+      
+     auto const & l = []() {
+          std::cout << "Hello C++17" << '\n';
+     };
+
+      
+     int sum(int a, int b)
+     {
+          return a + b;
+     }
+
+     auto sum_lambda = [&, sum](int a, int b) -> int
+     {
+          return sum(a, b);
+     };
+
+     int s = sum_lambda(10, 20);
+
+      
+     int val = 10;
+     const auto & lambda = [&]()
+     {
+          std::cout << val << std::endl;
+     };
+     lambda();
+
+     val = 20;
+     lambda();
+
+      
+      
+
+      
+
+      
+
+      
+
+      
+     int a = 10;

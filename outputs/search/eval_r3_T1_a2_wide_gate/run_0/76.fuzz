@@ -1,0 +1,14 @@
+#include <iostream>
+int main()
+{
+	int age = 3;
+	int mark = 33;
+	std::cout << "My Age in years is " << age * 365 << std::endl;
+	std::cout << "My Marks is " << mark * 10 << std::endl;
+	return 0;
+}
+ 
+C and C++ are basically one language
+C++ is a superset of C
+
+*/

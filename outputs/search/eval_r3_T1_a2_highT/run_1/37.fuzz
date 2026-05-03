@@ -1,0 +1,61 @@
+#include <iostream>
+#include <string>
+#include <cstdlib>
+#include <ctime>
+std::string input = "A";
+double A[40][40];
+const int len = 5;
+char const * alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+void make_grid(int m,int i) {
+	int j = 0;
+	for(i = 0; A[i][0] == 'A'; i++);
+	for(j = 0; A[0][j] == 'A'; j++);
+	for(int k = 0; k < i; k++) {
+		for(int l = 0; l < j; l++)
+			std::cout << " " << ". . . . ";
+		std::cout << std::endl;
+	}
+	for(int n = 0; n < i; n++) {
+		for(int l = 0; l < j; l++)
+			std::cout << " " << " " << alphabet[(n+l)%26] << " | ";
+		std::cout << std::endl;
+	}
+	for(int k = 0; k < i; k+=2) {
+		for(int l = 0; l < j; l++) {
+			int count = 0;
+			double tempsum = 0;
+			if(k == i-1) {
+				for(size_t l_ = l; l_ < len*j-std::pow(l,2); l_ = l*2) {
+					A[k][l_] = 0;
+					tempsum += A[k][l_];
+					count++;
+					if(count == len-1)
+						l=l_;
+				}
+				tempsum += A[k][l];
+				A[k][l] += tempsum;
+			} else if(k == i-2) {
+				for(size_t l_ = l; l_ < len*j-2*std::pow(l,2); l_ = l*2+1) {
+					A[k][l_] = floor( (double)rand() / (std::numeric_limits<double>::max()) - 0.5);
+					tempsum += A[k][l_];
+					count++;
+					if(count == len)
+						l=l_;
+				}
+				tempsum += A[k][l];
+				A[k][l] += tempsum/2;
+			} else if(k < i-2) {
+				tempsum = 0;
+				A[k][l] = floor( (double)rand() / (std::numeric_limits<double>::max()) - 0.5);
+				tempsum += A[k][l];
+				for(size_t l_ = l; l_ < len*j-std::pow(l,2); l_ = l*2+1) {
+					A[k+1][l_] = A[k][l_];
+					A[k][l_] = 0;
+					tempsum += A[k+1][l_];
+				}
+				A[k][l] += tempsum/2;
+			}
+			for(size_t l_ = l; l_ < len*j-std::pow(l+1,2); l_ = l_+std::pow(l,2)) {
+				tempsum = 0;
+				for(size_t m = 0; m < len; m++, l_++) {
+					if(l_ < std::pow

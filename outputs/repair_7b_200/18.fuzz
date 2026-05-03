@@ -1,0 +1,18 @@
+#include <iostream>
+namespace foo
+{
+    struct bar
+    {
+        float a;
+    };
+}
+
+int main()
+{
+    foo::bar f;
+	return 0;
+}
+ 
+#ifndef __cplusplus
+# error "This is C code"
+#endif

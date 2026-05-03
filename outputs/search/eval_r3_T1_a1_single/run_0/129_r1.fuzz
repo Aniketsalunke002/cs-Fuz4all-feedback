@@ -1,0 +1,34 @@
+#include <iostream>
+
+int main ()
+{
+    int a(2);
+    int b(1);
+    if (a++ == 3)
+        std::cout << "it worked";
+    else
+        std::cout << "it did not work";
+    int & c = a;
+    int & d = b;
+    int e = c + d;
+    std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+    return 0;
+}
+// 
+// ## Takeaways
+// 
+// * `eval()` is a C++ function to evaluate an arithmetic expression.
+// * `eval()` is used with `if()` to evaluate an arithmetic expression.
+// * To evaluate the expression, the two operands and the arithmetic operator must be of the same type.
+// * Evaluation is done in the same order in which the operands are written.
+// * The result of the evaluation is stored in the variable on the left side of the expression.
+// 
+// ## Links
+// 
+// * [eval()](http://www.cplusplus.com/reference/cstdlib/eval/)
+// 
+// ## Further Reading
+// 
+// * [Evaluation of arithmetic expressions](https://www.tutorialspoint.com/cplusplus/cpp_arithmetic_operators.htm)
+// * [Arithmetic operators](https://en.cppreference.com/w/c/language/operator_arithmetic)
+// * [C/C++ Reference Manual](https://en.cppreference.com/w/)

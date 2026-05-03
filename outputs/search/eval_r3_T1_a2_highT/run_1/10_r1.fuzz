@@ -1,0 +1,16 @@
+#include <iostream>
+
+
+constexpr int i = 31;
+constexpr int n = 31;
+
+int main() {
+	const int s_i = 43;
+	const int s_j = 42;
+	const unsigned int s_k = s_i + s_i;
+	using size_type = const int;
+	size_type f = s_i;
+	size_type t = s_k;
+	std::cout << s_i << " + " << s_j << " = " << f << ", " << s_i << " + " << s_k << " = " << t << std::endl;
+        //return 0;
+}

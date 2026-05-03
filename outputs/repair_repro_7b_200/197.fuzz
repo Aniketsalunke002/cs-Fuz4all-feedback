@@ -1,0 +1,29 @@
+#include <iostream>
+#include <memory>
+#include <string>
+#include <stdexcept>
+struct SplayList {
+    template<typename T> class Allocator {
+        public:
+        T* allocate(std::size_t n) {
+            auto ptr = std::allocator<T>().allocate(n);
+            if(ptr == nullptr) {
+                throw std::bad_alloc();
+            }
+            return ptr;
+        }
+        void free(T* obj) { std::allocator<T>().deallocate(obj, 1); }
+    };
+    struct Node {
+        int val;
+        std::shared_ptr<Node> next = nullptr, prev = nullptr, left = nullptr, right = nullptr;
+    };
+    SplayList() : head(nullptr) {}
+    void clear() { head = nullptr; }
+    Node* head;
+};
+int main(void) {
+    SplayList a;
+    a.clear();
+    a.clear();
+}

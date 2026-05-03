@@ -1,0 +1,44 @@
+#include <iostream>
+
+int main(int argc, char **argv)
+{
+	int integer = 1;
+	std::cout << integer << std::endl;
+	double doubles = 1.;
+	std::cout << doubles << std::endl;
+	return 0;
+}
+#include <iostream>
+int main(int argc, char **argv)
+{
+	int integer = 1;
+	 
+	int integer4 = const_cast<int> (integer);  
+	std::cout << integer4 << std::endl;
+	 
+
+	return 0;
+}
+#include <iostream>
+void foo() { std::cout << "foo\n"; }
+void bar()
+{
+	std::cout << "bar\n";
+	int* p = (int *)1; 
+	std::cout << *p << std::endl;  
+}
+int main(int argc, char **argv)
+{
+	std::cout << "Hello World!\n";
+	try
+	{
+		foo();
+	}
+	catch (std::exception const& e)
+	{
+		std::cout << e.what() << std::endl;
+	}
+
+	bar();
+	return 0;
+}

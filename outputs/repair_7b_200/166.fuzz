@@ -1,0 +1,15 @@
+#include <iostream>
+int main()
+{
+    auto x = {1, 2};
+    auto y = {3, 4};
+    x = y;
+    std::cout << x.size() << std::endl;
+}
+ 
+#include <iostream>
+int main()
+{
+    std::vector<char> data{'1', '2', '3', 'a', 'b', 'c'};
+    auto num = 0, sum = 0;
+    for (auto &c :

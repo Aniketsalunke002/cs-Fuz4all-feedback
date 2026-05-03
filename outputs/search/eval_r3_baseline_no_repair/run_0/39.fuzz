@@ -1,0 +1,65 @@
+#include <iostream>
+int main()
+{
+    short x = 0;
+    short n_remainder;
+    short y = 100;
+    short n_bytes;
+    y = 4098;
+    n_bytes = x / y;
+    n_remainder = x % y;
+    x = (n_remainder * 10) + 3651;
+    std::cout << "Done" << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+#include <string>
+#include <vector>
+#include <fstream>
+
+#define MAX 8
+
+struct Person
+{
+    char name[50];
+    char surname[50];
+    char country[50];
+    int bornDate;
+    int deathDate;
+};
+
+int main()
+{
+    Person people[MAX];  
+    string inputValue;
+    int x = 0;
+    int n_people = 0;
+    Person buffer;
+
+    cout << "\nEnter the number of people: ";
+    cin >> n_people;
+
+    ifstream file("person.dat", ios::out | ios::binary);
+
+    for (int i = 0; i < n_people; i++)
+    {
+        cout << "Enter the name and surname of the person number " << (i + 1) << ":\n";
+        cin >> people[i].name >> people[i].surname;
+
+        cout << "Enter the country of origin of the person number " << (i + 1) << ":\n";
+        cin >> inputValue;
+        people[i].country = inputValue.c_str();
+
+        cout << "When did the person born in the year " << (i + 1) << "?\n";
+        cin >> people[i].bornDate;
+
+        cout << "When did the person die in the year " << (i + 1) << "?\n";
+        cin >> people[i].deathDate;
+    }
+     
+    file.write((char *)people, sizeof(people[3]));
+    file.close();
+
+    return 0;
+}

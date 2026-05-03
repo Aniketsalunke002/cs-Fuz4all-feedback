@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int a;
+  do
+    cout << "Enter a number: ";
+  while (!(cin >> a));
+  cout << "The number you just entered is " << a << '\n';
+  return 0;
+}

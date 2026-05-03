@@ -1,0 +1,22 @@
+#include <iostream>
+#include <unistd.h>
+using namespace std;
+void print_scoreboard()
+{
+    cout << "Scoreboard" << endl
+    << "Score" << '\t'
+    << "Name" << '\t'
+    << "Time" << endl;
+    for (int i=0; i<10; i++)
+    {
+        cout << "<Player " << i << ">" << '\t'
+            << 42 << '\t'
+            << "12345" << endl;
+        sleep(1);
+    }
+}
+int main()
+{
+    cout << "Scoreboard: " << endl;
+    print_scoreboard();
+}

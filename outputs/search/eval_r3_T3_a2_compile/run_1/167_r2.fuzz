@@ -1,0 +1,9 @@
+#include <iostream>
+
+template<typename T>
+T min(T a, T b, T c) {
+  return (a > b? (a > c? c : a) : (b > c? b : c));
+}
+int main(int argc, char ** argv) {
+   std::cout << min(1,2,3) <<'' << min(2,4, 8) <<'' << min(24, 654, 123) << '\n';
+}

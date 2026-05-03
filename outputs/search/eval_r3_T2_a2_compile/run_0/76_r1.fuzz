@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char** argv) {
+    int a, b, c, d, x;
+    int a = 10;
+    b = a--;
+    --a;
+    cout << "a: " << a << " b " << b << endl;
+    int result = 0;
+    result = a - ++b;
+    cout << "result: " << result << endl;
+    return 0;
+}

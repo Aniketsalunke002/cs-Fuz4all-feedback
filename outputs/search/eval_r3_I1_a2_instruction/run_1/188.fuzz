@@ -1,0 +1,14 @@
+#include <iostream>
+#include <cassert>
+#include <string>
+using namespace std;
+void foo(string name)
+{
+}
+int main()
+{
+    string s("C++");
+    assert(isalpha(s[1]) == true);
+    return 0;
+}
+ 

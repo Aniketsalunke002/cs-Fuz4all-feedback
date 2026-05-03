@@ -1,0 +1,7 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+    float a=1, b=2;
+    a *= b++;  
+    std::cout << a << " ";
+    std::cout << b << std::endl;
+}

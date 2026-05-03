@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+  auto x = int{1};
+  auto& y = x;   
+  auto&& z = x;   
+  int& s = x;     
+  x = 5;
+  return 0;
+}

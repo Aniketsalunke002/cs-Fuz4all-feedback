@@ -1,0 +1,12 @@
+#include <iostream>
+		int main()
+		{ int a=0,b=1,c;
+		while(true)
+		{
+			c=a;
+			a=b;
+			b=c+b;
+		std::cout<<b<<",";
+		a*=c;
+		}
+	}

@@ -1,0 +1,28 @@
+#include <iostream>
+std::istream& read_numbers(std::istream& is)
+{
+    int a,b,c=10;
+    do
+    {   is>>a>>b>>c;
+        a=b=14-(c/1000);
+        c%=(a*1000);
+    }
+    while(!(is));
+    std::cout<<a<<std::endl;
+    std::cout<<b<<std::endl;
+    std::cout<<c<<std::endl;
+    return is;
+}
+int main(){
+    read_numbers(std::cin);
+    int d,e,f=20;
+    do
+    {   std::cin>>d>>e>>f;
+        d=e=23-(f/1000);
+        f%=(d*1000);
+    }
+    while(!(std::cin));
+    std::cout<<d<<std::endl;
+    std::cout<<e<<std::endl;
+    std::cout<<f<<std::endl;
+}

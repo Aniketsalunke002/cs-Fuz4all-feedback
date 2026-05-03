@@ -1,0 +1,56 @@
+#include <iostream>
+int main4(){
+unsigned int a=0;
+std::cout << (a!=a)<< "\\n";
+std::cout<< a/a+3 << "\\n";
+return a+3;
+}
+ 
+#include <iostream>
+int main5(){
+unsigned int a=0;
+std::cout << (a!=a)<< "\\n";
+std::cout<< a/a+3 << "\\n";
+return a+3;
+}
+
+ 
+#include <iostream>
+int main7(){
+unsigned int a=0;
+a/a;
+std::cout << a+a+3 << "\\n";
+return a+3;
+}
+ 
+#include <iostream>
+int main6(){
+unsigned int a=0;
+if ((a!=a)) {
+    a=1;
+}
+std::cout << a+a+3 << "\\n";
+return a+3;
+}
+ 
+#include <iostream>
+int main5(){
+unsigned int a=0;
+std::cout << (a!=a) << "\\n";
+std::cout<< a/a +3 << "\\n";
+return a+3;
+}
+ 
+#include <stdio.h>
+#include <iostream>
+
+int main(int argc, char* argv[]) {
+    float floatX, floatY, floatZ;
+    std::cin >> floatX;
+    char character;
+    std::cin >> character;
+    std::cin >> floatY;
+    std::cin >> floatZ;
+    std::cout << floatX + floatY + floatZ + character << std::endl;
+    return 0;
+}

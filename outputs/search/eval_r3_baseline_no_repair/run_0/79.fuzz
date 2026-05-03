@@ -1,0 +1,17 @@
+#include <iostream>
+int f(int i);
+int main(int argc, char **argv)
+{
+    int i = 1;
+    i = i + 1;
+    printf("%d\n", i + f(i));
+}
+ 
+The previous programs generate the same code as the original one.
+It appears that the compiler has an optimization done somewhere which
+replaces all the i + f(i) by i + f(i) + 1. That's because in C++/STL
+it is assumed that the return value of an expression is equal to the
+input if there is no modification to it by the expression. 
+(In C language, the programmer must explicitly use something like
+ i = i + f(i) in order to get the input without any changes.)
+

@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int sum_1 {0},sum_2 {0},sum_3 {0},sum_4 {0};
+    sum_1=21*130/365;
+    sum_2=21*67/365;
+    sum_3=162*703/365;
+    sum_4= (sum_1+sum_2)/3*21;
+    cout << sum_1 << " " << sum_2 << " " << sum_3 << " " << sum_4 << endl;
+    return 0;
+}

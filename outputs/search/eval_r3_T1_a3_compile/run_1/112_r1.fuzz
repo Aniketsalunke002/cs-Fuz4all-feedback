@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 5, b = 12;
+	cout << a << endl;
+	cout << b << endl;
+	int *p1 = &a, *p2 = &b, *p3 = p1 - p2;
+	a += 2, b -= 3;
+	cout << a << endl;
+	cout << *p3 << endl;
+	cout << b << endl;
+	cout << p2[-1] << endl;
+	return 0;
+}

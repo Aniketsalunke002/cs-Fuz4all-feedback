@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+    int a = 'a';
+    cout << '\n' << (char)a << (a - '0');
+    return 0;
+}

@@ -1,0 +1,8 @@
+#include <iostream>
+int main()
+{
+    short& y = *new short { 20 };
+    std::cout << y << std::endl;
+}
+
+

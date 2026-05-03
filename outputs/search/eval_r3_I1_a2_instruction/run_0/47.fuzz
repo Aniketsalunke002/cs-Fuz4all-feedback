@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+#define foo()
+int main(int argc, char**argv) {
+    cout << "This program is exactly the same as last lesson.";
+}
+#endif

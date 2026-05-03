@@ -1,0 +1,17 @@
+#include <iostream>
+int main()
+{
+    short n_bytes,value_to_print,i1;
+    short* x1,*x2;
+    std::cin >> n_bytes;
+    std::cin >> value_to_print;
+    x1 = (short*)new short[n_bytes+1];
+    x2 = (short*)new short[n_bytes];
+    x1[n_bytes]=value_to_print;
+    x1[1]=n_bytes;
+    x2[0]=n_bytes;
+    delete [] x1;
+    delete [] x2;
+    std::cout << "Done" << std::endl;
+    return 0;
+}

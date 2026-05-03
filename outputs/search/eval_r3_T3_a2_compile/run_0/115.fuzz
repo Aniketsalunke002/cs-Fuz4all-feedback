@@ -1,0 +1,101 @@
+#include <iostream>
+
+int main()
+{
+	new int{ 6 };
+	new class A { 2 };
+	new class B { 7 };
+	new class C : A, B { 1 };
+
+	new (class) short { 1 };
+	new (static_cast<class int *> (class)) char { 'a' };
+	new ((dynamic_cast<class const int *> (class))) signed char { 2 };
+	new (static_cast<class int *> (class)) signed char { 3 };
+	new (static_cast<class int *> (class)) volatile int { 4 };
+	new ((dynamic_cast<class int *> (class))) volatile int { 5 };
+	return 0;
+}
+ 
+#include <iostream>
+#include <memory>
+using std::shared_ptr;
+using namespace std;
+template<typename T>
+class my_new
+{
+public:
+	static void operator()(T * object)
+	{
+		delete object;
+	}
+};
+template<>
+class my_new < class A >
+{
+public:
+	static void operator()(class A * object)
+	{
+		object->~A();
+		delete object;
+	}
+};
+int main()
+{
+	my_new < double > a(new double{ 1.2 });
+	cout<<sizeof(a)<<endl;
+	my_new < class A > b(new class A { 6 });
+	cout<<sizeof(b)<<endl;
+	my_new < class B > c(new class B { 7 });
+	cout<<sizeof(c)<<endl;
+	my_new<shared_ptr<int>> d(new shared_ptr<int>{ new int { 3 } });
+	cout<<sizeof(d)<<endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class Int
+{
+public:
+	int * data;
+	Int()
+	{
+		data = new int{ 0 };
+	}
+	Int(int *d)
+	{
+		data = dynamic_cast<int*>(d);
+	}
+	~Int()
+	{
+		cout<<"int class destructor called"<<endl;
+	}
+};
+class Char
+{
+public:
+	char * data;
+	Char()
+	{
+		data = new char[25];
+	}
+	Char(char * d)
+	{
+		data = dynamic_cast<char*>(d);
+	}
+	~Char()
+	{
+		cout<<"char class destructor called"<<endl;
+	}
+};
+int main()
+{
+	Int x;
+	Int y{ &x };
+	cout<<sizeof(x)<<endl;
+	cout<<sizeof(y)<<endl;
+ 
+ 
+	Char v{'x'};
+	Char z{'y'};
+ 

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[])
+{
+	cout << argc << endl;
+	cout << argv << endl;
+	const char* cargv = argv[0];
+	for (unsigned int i = 0; i < argc; i++)
+		cout << cargv << endl;
+}

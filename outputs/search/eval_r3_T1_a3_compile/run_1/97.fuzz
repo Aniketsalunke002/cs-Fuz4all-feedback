@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void fun2(int &a) {
+	std::cout << a << " ";
+	return;
+}
+int main(int argc, char* argv[]) {
+	int a = 5, b = 12;
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	fun2(a);
+	std::cout << a << std::endl;
+	std::cout << b << std::endl;
+	return 0;
+}

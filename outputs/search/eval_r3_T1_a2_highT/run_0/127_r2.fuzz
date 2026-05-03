@@ -1,0 +1,18 @@
+#include <iostream>
+
+double getDouble(const char *str) {
+    if (str[0] == '\0') {
+        std::cout << "Invalid input\n";
+        return -1;
+    }
+    return strtod(str, nullptr);
+}
+
+int main(int argc, char const *argv[]) {
+    int val1 = 1 * getDouble(argv[1]);
+    int val2 = 2 * getDouble(argv[2]);
+    int val3 = 3 * getDouble(argv[3]);
+
+    std::cout << val1 <<'' << val2 <<'' << val3 << std::endl;
+    return 0;
+}

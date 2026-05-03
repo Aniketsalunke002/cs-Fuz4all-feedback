@@ -1,0 +1,21 @@
+#include <iostream>
+int main() {
+  int atest = 291;
+  std::cout << abs(atest) << "\n";
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  std::cout << 'x';
+  return 0;
+}
+
+ 
+ 
+#include <iostream>
+int main() {
+  std::cout << 20 << std::endl;
+  return 0;
+}
+

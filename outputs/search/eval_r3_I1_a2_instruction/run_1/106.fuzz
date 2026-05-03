@@ -1,0 +1,6 @@
+#include <iostream>
+int main()
+{
+    auto p{std::make_unique<int>(5)};
+    std::cout<<*p<<'\n';
+}

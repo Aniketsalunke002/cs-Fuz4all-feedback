@@ -1,0 +1,54 @@
+#include <iostream>
+
+#include <string>
+#include <vector>
+
+class Student
+{
+	public:
+	std::string name;
+	std::string surname;
+	Student(std::string & _name,std::string & _surname){
+		name=_name;
+		surname=_surname;
+	}
+	std::string getFullName(){
+		return name + " " + surname;
+	}
+};
+
+class Person 
+{
+	public:
+	Person(std::string x){
+		std::cout << x << '\n';
+	}
+};
+
+class Employee 
+{
+	public:
+	Employee(std::string x){
+		std::cout << x << '\n';
+	}
+};
+
+int main() 
+{
+	std::string surname = "Angelica";
+	std::string name = "Carolina";
+	std::cout << "Student's Full Name = " << Student::getFullName() << '\n';
+	delete &surname;
+	delete &name;
+	return 0;
+}
+// In the output obtained for this fixed problem, you find a memory leak, but not the seg fault
+// The function main() is invoked more than once and eventually, when all memory is freed, one of the stack variables is
+// corrupted, as you can see from the stack buffer dump. 
+// When the program tries to read name and surname, it tries to invoke the destructor for the stack variable at some random
+// address. However, since, there are no instances of Student and Person to destroy, it attempts to destroy random memory causing
+// a memory segmentation fault. 
+// This kind of memory segmentation fault indicates that your program is trying to delete incorrect pointers after deallocating memory.
+// For example, while deleting the stack variable "name", the destructor for the "surname" variable, which is now deleted, is invoked,
+// due to the address conflict.
+// To fix this issue you just

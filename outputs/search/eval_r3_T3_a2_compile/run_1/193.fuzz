@@ -1,0 +1,19 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+int main(int argc, char *argv[])
+{
+    auto x = 1000000;
+    auto str = std::string("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+    std::transform(str.begin(), str.end(), str.begin(),
+                   [](const auto &c) { return (c==c)? c+1050 : c; });
+    std::cout << "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    for (auto i = x; i<1000000000; i++)
+    {
+        if (str[i-1]==str[i])str[i-1] = -126;
+        std::cout << str[i-1];
+    }
+    std::cout << std::endl;
+    return 0;
+}

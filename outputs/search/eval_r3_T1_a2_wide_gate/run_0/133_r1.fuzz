@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+struct Person{
+    int age;
+    char* name;
+    int getAge() {
+        return age;
+    }
+    const char* getName() {
+        return name;
+    }        
+};
+int main(int argc, char* argv[]){            
+Person sue;
+int age = sue.getAge();
+char* name = sue.getName();
+    return 0;        
+}

@@ -1,0 +1,7 @@
+#include <iostream>
+int main()
+{
+    bool b = false;
+    b ||= b xor false;
+    std::cout <<!b;
+}

@@ -1,0 +1,68 @@
+#include <iostream>
+
+#include <sstream>
+#include <iomanip>
+#include <chrono>
+#include <thread>
+#include "rppdefs.h"
+#include "rpacketbroker.h"
+#include "rpppayload.h"
+#include "rerror.h"
+#include "rcameracontroller.h"
+
+using namespace std;
+using namespace rppi;
+using namespace rpp;
+
+class RPPClient : public RPacketBroker
+{
+    friend class RPPServer;
+public:
+    RPPClient(std::string clientName, int port = 1500);
+    bool SendFrame(char* buffer, int len, char* bufferout, int& lenout);
+    bool SendControlRequest(RPPPayload payload);
+    bool SendControlResponse(RPPPayload payload);
+
+    RPacketBroker* SetUpServerClient(std::string serverName, int port);
+private:
+    uint32_t m_clientId;
+    string m_name;
+    uint32_t m_currentFrameNumber;
+    RPPPayload m_currentControlRequest;
+    RPPPayload m_currentControlResponse;
+    RQueue m_commands;
+
+    bool GotConnection();
+    bool GotFrame();
+    bool GotDisconnect();
+    bool GotControlRequest();
+    bool GotControlResponse();
+    RPacketBroker* m_listener;
+};
+
+class RPPServer : public RPacketBroker
+{
+public:
+    RPPServer(RPPClient* listener);
+
+    bool GotConnection();
+    bool GotFrame();
+    bool GotDisconnect();
+    bool GotControlRequest();
+    bool GotControlResponse();
+    RPPClient* m_listener;
+};
+
+
+// int main()
+// {
+// 
+//     RPPClient server("server");
+//     RPPServer client(&server);
+//     int serverPort = 2500;
+//     bool done = false;
+//     while(done == false) {
+//         RPPPayload payload = RPPClient::ReadControlRequest(&client);
+//         if (payload.GetActionId()) {
+//             server.WriteControlResponse(&payload);
+//             fprintf(stderr,"Sending reponse %d

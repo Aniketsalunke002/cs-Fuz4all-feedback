@@ -1,0 +1,6 @@
+#include <iostream>
+int main( int argc, char **argv ){
+  if (atoi(argv[1]) == 42){
+    cout << argv[2] << argv[3];
+  }
+}

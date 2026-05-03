@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+  cout << endl;
+}
+ 
+#include <iostream>
+#include <set>
+using namespace std;
+int main() {
+  set<int> s{1};
+}

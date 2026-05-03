@@ -1,0 +1,8 @@
+#include <iostream>
+#include <vector>
+#include <string>
+int main()
+{
+	std::cout << sizeof(int)*2 << std::endl;
+  return EXIT_SUCCESS;
+}

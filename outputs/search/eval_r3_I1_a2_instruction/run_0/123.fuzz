@@ -1,0 +1,25 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+  int j=-1;cout << argv[0] << " is the last\n";
+  while(j++<=2) {
+    int i=1;while(i<=5) {
+      cout << i;
+      if(i&1) cout << argv[0]<< " is even\n";
+      else cout << argv[0] << " is odd\n";
+      i++;
+    }
+  }
+  return 0;
+}
+ 
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv) {
+  int i=5;while(i--) {
+    cout << i << " is the number\n";
+    if(i%2) cout << i << " is odd\n";
+    else cout << i << " is even\n";
+  }
+  return 0;
+}

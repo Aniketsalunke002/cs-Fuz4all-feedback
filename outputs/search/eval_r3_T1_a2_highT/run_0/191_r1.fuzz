@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+class A
+{
+int i = 10;
+  public:
+    A()
+    {
+    }
+    void Print()
+    {
+      cout << i;
+    }
+    int Inc()
+    {
+      i++;
+      return i;
+    }
+};
+int main()
+{
+  A obj1;
+  obj1.Print();
+  cout << endl;
+  obj1.Inc();
+  obj1.Print();
+  return 0;
+}
+#endif
+#endif // __VCC__

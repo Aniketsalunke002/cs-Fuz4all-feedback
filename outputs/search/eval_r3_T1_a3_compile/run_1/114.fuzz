@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 5, b = 12;
+	cout << a << endl;
+	cout << b << endl;
+	int *p1 = &a, *p2 = &b;
+	a = p1[1] + p2[-1];
+	p1[0] = 45;
+	p2[0] = 30;
+	cout << a << endl;
+	cout << p1[0] << endl;
+	cout << b << endl;
+	cout << p2[0] << endl;
+	return 0;
+}
+
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+
+	return 0;
+}

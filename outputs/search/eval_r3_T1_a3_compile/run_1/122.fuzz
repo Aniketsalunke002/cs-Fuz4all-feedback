@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 11, b = 3, c = 7;
+	int d = 20, e = 25, f = 35;
+	if (a > b) {
+		a++;
+	}
+	else {
+		if (a > c) {
+			c++;
+		}
+		e++;
+	}
+	cout << c << endl;
+	return 1;
+}

@@ -1,0 +1,46 @@
+#include <iostream>
+#include <memory>
+struct foo
+{
+  static constexpr int value = 32;
+};
+int main ()
+{
+	auto autoarr = new int(32);
+	auto autocpp = std::make_unique<int>();
+	return 0;
+}
+ 
+ 
+ 
+
+ 
+template <class T>
+struct foo
+{
+	static constexpr int value = sizeof(f);
+	static int f;
+};
+int foo<int>::f = 32;
+int main ()
+{
+	return foo<int> ::value;
+}
+ 
+#include "sample.h"
+int main()
+{
+	auto a = new sample;
+	std::cout << a->foo() << std::endl;
+}
+
+ 
+struct foo {
+	int bar = 0;
+	int foo (int) {
+		return bar;
+	}
+} myobj;
+void main(void) {
+   myobj.foo(5);
+}

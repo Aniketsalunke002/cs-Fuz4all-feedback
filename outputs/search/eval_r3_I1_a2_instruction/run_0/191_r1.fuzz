@@ -1,0 +1,64 @@
+#include <iostream>
+#include <vector>
+void f() { }
+int main(void)
+{
+  std::cout << "a";
+  int n;
+  try
+  {
+    n++;
+  }
+  catch(std::exception &e)
+  {
+    std::cout << e.what() << std::endl;
+  }
+   
+  return 0;
+}
+class C6
+{
+public:
+C6();
+};
+class C7 : public C6
+{
+};
+class C8
+{
+public:
+const C8 &operator =(const C8 &);
+};
+class C9 : public C8
+{
+};
+ 
+#include <iostream>
+#include <vector>
+class C8_1
+{
+public:
+std::vector<int> v;
+};
+struct C8_2
+{
+
+};
+ 
+class C10
+{
+public:
+char c;
+C10(int = 0);
+};
+class C11 : public C10
+{
+};
+class C12
+{
+public:
+C12(const C12 &, const C12 &);
+};
+
+
+## Rule 3 : A2: Fuzz Instruction

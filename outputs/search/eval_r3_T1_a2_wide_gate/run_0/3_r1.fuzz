@@ -1,0 +1,8 @@
+#include <iostream>
+
+
+int main(){
+    std::cin >> std::noskipws;
+    std::cin >> "Hello world!\n";
+    return 0;
+}

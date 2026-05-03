@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+int main (){
+char array[10]="Hello Word";
+int i=10;  
+while(i>2){
+  if(array[i-1]=='l')
+    array[i-1]='z';
+i-=1;
+
+}
+for(int i=0;i<10;i++){
+      cout<<array[i] <<endl;
+}
+
+return 0;
+
+}

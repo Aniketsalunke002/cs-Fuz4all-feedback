@@ -1,0 +1,35 @@
+#include <iostream>
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <tuple>
+
+#include <sys/sysinfo.h>
+
+class C
+{
+public:
+    C() {};
+    int x;
+    ~C() {};
+};
+
+void foo0(int x)
+{
+    printf("foo0(%d)\n", x);
+}
+
+void foo1(int x)
+{
+    printf("foo1(%d)\n", x);
+}
+
+int main(int argc, char *argv[])
+{
+    C *c = new C();
+    c->x = 1;
+    foo0(c->x);
+    delete c;
+
+}

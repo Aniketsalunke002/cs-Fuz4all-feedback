@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+ int *ptr1[10];
+ 
+ cout << "Mutant: Hello, World!" << endl;
+ return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+
+int main() {
+ int **ptr1[10];
+ 
+ cout << "Mutant: Hello, World!" << endl;
+ return 0;
+}
+</code></pre>
+        </div>
+    </div>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    
+    <script>
+    $(document).ready(function(){
+        $('#mutantTable').hide();
+        $('#mutantList').hide();
+
+        $('#showMutants').on('click', function(e){
+        $('#mutantTable').toggle('fast');
+        $('#mutantList').toggle('fast');
+        });
+    });
+    </script>
+  </body>
+</html>

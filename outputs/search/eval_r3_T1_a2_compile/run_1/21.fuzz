@@ -1,0 +1,92 @@
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <initializer_list>
+using namespace std;
+void transform(){
+    vector<string> i="1234";
+    i.push_back("5678");
+    i.insert(i.begin(),"0123");
+    string res="";
+    res+=accumulate(i.begin(),i.end(),string(),vector_to_string());
+    cout<<res<<endl;
+}
+int main()
+{
+    transform();
+    transform();
+}
+ 
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+#include <initializer_list>
+
+using namespace std;
+
+#include <map>
+void hamming(const std::string& x, const std::string& y){
+    auto char_cnt = [] (const std::string& s) {
+            std::map<char, double> c;
+            for (const char c : s){
+                c[c] += 1;
+            }
+            return c;
+        };
+    
+    auto char_cmp = [] (const std::pair<char, double>& a, const std::pair<char, double>& b){
+        return a.second < b.second;
+    };
+    std::map<char, double> m1 = char_cnt(x);
+    std::map<char, double> m2 = char_cnt(y);
+     
+    std::map<char, double>::iterator i;
+    for (i=m1.begin(); i!= m1.end();i++)
+    {
+        m2[i->first]+=i->second;
+    }
+    std::cout<<std::accumulate(m2.begin(),m2.end(),0.0,[] (double a, const std::pair<char, double>& b){
+        return a+b.second-b.second/2;
+    })<<std::endl;
+}
+int main()
+{
+
+    hamming("10", "10");
+    hamming("10", "100100");
+    hamming("101011101110101110101110", "100100");
+    hamming("", "");
+    hamming("101010101", "101010");
+    hamming("1", "1");
+}
+ 
+#include <iostream>
+#include <string>
+#include <vector>
+#include <algorithm>
+#include <numeric>
+#include <initializer_list>
+#include <map>
+using namespace std;
+std::vector<int> cards(const std::string& i);
+template<typename T> void getSum(const T& x){
+    cout<<accumulate(x.begin(),x.end(),0)<<endl;
+}
+int main()
+{
+    getSum(cards("ABC0"));
+    getSum(cards("0BC"));
+    getSum(cards("A0B"));
+    getSum(cards("A0BC0D0EF1G2H3I"));
+}
+std::vector<int> cards(const std::string& s){
+    vector<int> v;
+    int card;
+    for(char c : s){
+        card = int(c)-int('A');
+        v.push_back(card);
+    }
+   

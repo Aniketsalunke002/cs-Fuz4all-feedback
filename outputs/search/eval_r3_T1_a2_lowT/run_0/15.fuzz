@@ -1,0 +1,11 @@
+#include <iostream>
+class MutatedNumber1 : public __FlashObjectClass
+{
+public:
+};
+int main(int argc, char const *argv[])
+{
+    __FlashObjectClass *object = new MutatedNumber1;
+    std::cout << "Hello, World!" << '\n';
+    return 0;
+}

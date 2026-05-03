@@ -1,0 +1,11 @@
+#include <iostream>
+namespace mys {
+using std::cout;
+int i[10];
+}   
+int main_mut(int argc, char** argv) {
+   mys::i[0] = 42;
+   mys::cout << mys::i;
+}
+ 
+ 

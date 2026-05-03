@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+		int main()
+		{
+			cout << "Enter the marks of 3 subjects" << endl;
+			cout << "Enter marks of 1st subject: ";
+			double  s1;
+			cin >> s1;
+			cout << "Enter marks of 2nd subject: ";
+			double  s2;
+			cin >> s2;
+			cout << "Enter marks of 3rd subject: ";
+			double  s3, summa, avg;
+			cin >> s3;
+			 summa = s1 + s2 + s3;
+			avg = summa/3;
+			cout << endl << "Average is : " << avg;
+			return 0;
+		}
+ 
+#include <iostream>
+using namespace std;
+ 		int main()
+		{
+			double pi, radius;
+				cout << "Enter Radius of Circle : ";
+				cin >> radius;
+				double area;
+					area = pi * radius * radius;
+					cout << "Area of Circle : "  << area ;
+			return 0;
+		}
+ 
+#include <string>
+using namespace std;
+		int main()
+		{
+			string  s;
+				cout << "Enter words" << endl;
+			int length, count = 0;
+			do {
+					getline(cin, s);
+				++count;
+			} while (s!= "end of string");
+				cout << "Number of Strings : " << count;
+			return 0;
+		}

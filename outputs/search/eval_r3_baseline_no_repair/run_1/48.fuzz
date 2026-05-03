@@ -1,0 +1,51 @@
+#include <iostream>
+using namespace std;
+static void foo(int i)
+{
+}
+void bar()
+{
+    int x = 3, y = 5, z = 6, s;
+    int n;
+    for(int k = 0; k < 10; k++)
+    {
+        n = x * y;  
+        foo(x - y);  
+        s = x + y + z;  
+        foo(++n);  
+        foo(x++);  
+        x = 10;  
+        s = (x + 3) / (++y) + 6 * z;  
+        if (z > 0)
+        {
+            z = z + s;
+        }
+        foo(s = y++);  
+        foo(foo(++z++));  
+        s = y < z;  
+        foo(n -= ++x);  
+        y = ++x + 4;  
+        n = -3;  
+    }
+    foo(n);  
+}
+int main()
+{
+    std::cout << "Start\n";
+    bar();
+    std::cout << "End\n";
+    return 0;
+}
+```
+
+To compile and run `test.cpp`
+
+```bash
+$ g++ --std=c++11 -c test.cpp
+$ g++ --std=c++11 test.o
+$./a.out
+Start
+End
+```
+
+The solution is available in [main.cpp](main.cpp)

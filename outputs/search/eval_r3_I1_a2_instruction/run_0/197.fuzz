@@ -1,0 +1,13 @@
+#include <iostream>
+#include <vector>
+int i;
+void test(int) {
+  i= 1;
+}
+int main(void)
+{
+  std::cout << "a";
+  i = 1;
+  std::cout<<(i = 2);
+  return i; 
+}

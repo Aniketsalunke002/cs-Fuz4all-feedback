@@ -1,0 +1,12 @@
+#include <iostream>
+int main()
+{
+int a = 1;
+int b = 2;
+int c = 3;
+std::cout << "Original Values: a : " << a << "\tb:" << b << "\tc:" << c << std::endl;
+b = a + c;
+c = b - a;
+a = b / c;
+std::cout << "New Values: a : " << a << "\tb:" << b << "\tc:" << c << std::endl;
+}

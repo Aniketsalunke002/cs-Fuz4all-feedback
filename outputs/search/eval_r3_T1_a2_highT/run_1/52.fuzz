@@ -1,0 +1,55 @@
+#include <iostream>
+
+struct cell {
+	bool alive;
+	cell() : alive(false){}
+};
+
+class game {
+	cell *cells;
+	unsigned size;
+	int get_mut() {
+		int mut;
+		std::cin >> mut;
+		std::cin.get();
+		return mut;
+	}
+
+public:
+	game(unsigned newsize) :
+		cells(new cell[newsize]),
+		size(newsize/2) {
+
+	}
+
+	~game() {
+		delete[] cells;
+	}
+
+	cell &get(unsigned x,unsigned y) {
+		return (x<size)&&(y<size)? cells[(x+y)*2+(y&y)] : cells[0];
+	}
+};
+
+int main() {
+	unsigned size;
+	std::cout << "please enter the size of the game grid: ";
+	std::cin >> size;
+	std::cin.get();
+	game g(size);
+	int mut;
+	for(;g.get(size/2+1,size/2+1).alive;mut=g.get_mut()) {
+		std::cout << mut << " turn" << std::endl;
+		int wx = size/2;
+		int wy = size/2;
+		 
+		g.get(wx,(wy+mut)&0b11).alive ^= g.get(wx,(wy+(0b1+mut))&0b11).alive;
+		g.get((wx+mut)&0b11,wy).alive ^= g.get((wx+1-mut)&0b11,wy).alive;
+		g.get((wx+mut)&0b11,(wy+mut)&0b11).alive ^= g.get((wx+1-mut)&0b11,(wy+1-mut)&0b11).alive;
+		g.get(wx,(wy+mut)&0b11).alive ^= g.get((wx+1-mut)&0b11,wy).alive;
+		g.get((wx+mut)&0b11,(wy+mut)&0b11).alive ^= g.get((wx+1-mut)&0b11,(wy+1-mut)&0b11).alive;
+	}
+	goto dead;
+	while(mut=g.get_mut()) {
+		std::cout << mut << " turn" << std::endl;
+		

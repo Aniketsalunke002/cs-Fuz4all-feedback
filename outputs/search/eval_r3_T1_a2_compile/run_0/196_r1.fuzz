@@ -1,0 +1,13 @@
+#include <iostream>
+
+using std::cout; using std::endl;
+#include <string>
+using std::string;
+int main () {
+    string name = "Aleksandr";
+    for (string::size_type i=0;i<name.size();++i) {
+        cout<<name[i];
+    }
+}
+
+#include <iostream

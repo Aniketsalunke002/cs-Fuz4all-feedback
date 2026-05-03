@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(){
+    void fun(int a){
+        a=0;
+    }
+    cout << "New C++ features is awesome" << endl;
+}

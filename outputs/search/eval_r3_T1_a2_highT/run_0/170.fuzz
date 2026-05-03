@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  bool cond = 1;
+  while (cond) {
+    int n = 0;
+    int x;
+    int y = n;
+    n++;
+    if (n > 5) {
+      x = y;
+      y = x + y;
+    } else {
+      x = y;
+      y = x - y;
+    }
+    cond = y!= x;
+  }
+  return 0;
+}

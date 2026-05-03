@@ -1,0 +1,15 @@
+#include <iostream>
+void foo(const bool &var)
+{
+    std::cout << var << " ";
+}
+void foo(bool var)
+{
+    std::cout << var << " ";
+}
+int main()
+{
+    foo(true);
+    foo(false);
+}
+

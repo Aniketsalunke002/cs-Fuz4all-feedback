@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+struct array_t {
+    char* first;
+    int   size;
+    char* last;
+};
+array_t get_array(int size)
+{
+    return {new char[size], size, new char[size]};
+}
+int main(){
+    array_t ar = get_array(96);
+    array_t ar2 = get_array(92);
+    for(int i = 0; i < ar.size; ++i)
+        ar2.first[i] = ar.first[i];
+    array_t ar3 = get_array(96);
+    array_t ar4 = get_array(86);
+    for(int i = 0; i < min(ar3.size, ar4.size); ++i)
+        ar3.last[i] = ar4.last[i];
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+template<typename T>
+class array_t
+{
+public:
+    int first; int last; int size;
+    T* data;
+    array_t(int size): first(0), last(size), size(size)
+    {
+        data = new T[size];
+        for(int i = 0; i < size; ++i)
+            data[i]  = i;
+    }
+    void fill(T value) { for(int i = 0; i < size; ++i) data[i] = value; }
+    array_t<T>& operator=(const T value)
+    {
+        fill(data);
+        return *this;
+    }
+};
+int main()
+{
+    array_t<int> ar = array_t<int>(5,5);
+    cout << ar.data[4] << endl;
+    ar = -1;
+    cout << ar.data[4] << endl;
+    return 0;
+}

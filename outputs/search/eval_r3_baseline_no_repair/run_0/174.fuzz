@@ -1,0 +1,17 @@
+#include <iostream>
+int main(int argc, char **argv) {
+    int a3 = 5;
+    std::cout << (a3 += 5) << '\n';
+    std::cout << a3 << '\n';
+    std::cout << a3 << '\n';
+    return 0;
+}
+ 
+int main(int argc, char **argv) {
+    auto a6 = (int*) malloc(1 * sizeof(int));
+    *a6 = 5;
+    std::cout << *a6 << '\n';
+    return 0;
+}
+
+

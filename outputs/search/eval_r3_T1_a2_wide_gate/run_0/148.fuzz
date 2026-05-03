@@ -1,0 +1,64 @@
+#include <iostream>
+using namespace std;
+
+void fun(int& x){
+int a = 1;
+x = a;
+
+}
+
+int main() {
+
+    int b = 2;
+    fun(b);
+    
+    cout << "Now the value of b is : " << b <<endl;
+    cout <<"Please create a real world example" << endl;
+
+    
+}
+ 
+
+ 
+
+ 
+#include <iostream>
+using namespace std;
+class A{
+public:
+    int c;
+    A(A&){
+        cout<<"Copy Consruct Called"<<endl;
+    }
+    A& operator=(A&);
+    A(A&);
+    A(int);
+
+};
+
+
+A::A(A& obj) : A() {
+    this->c = obj.c;
+}
+
+A& A::operator=(A& obj) {
+    this->c = obj.c;
+}
+
+A::A(A& obj) :c(obj.c){
+    cout<<"\nMove constructor called"<<endl;
+
+}
+
+A::A(int obj) : A() {
+    this->c = obj;
+}
+
+
+int main() {
+
+    
+}
+
+
+ 

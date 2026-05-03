@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+     
+    Struct s1();
+    s1.setValue(889);
+    return 0;
+}
+
+struct Struct
+{
+    int value = 0;
+    void setValue(int newValue)
+    {
+        value = newValue * 4;
+    }
+};

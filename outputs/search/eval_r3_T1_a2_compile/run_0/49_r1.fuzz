@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+int y=7;
+static const float y2 = 7.0;
+void foo(float x)
+{
+}	
+
+int main ()  
+{
+cout <<"Hello world!";
+while (true)  
+{
+  cout<<y2;
+  foo(y2);
+}  
+}
+// 
+// 
+// *   ¿Qué hace el compilador?
+// 
+// *   ¿Cuál es el significado de cada línea?
+//

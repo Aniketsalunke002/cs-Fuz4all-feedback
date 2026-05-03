@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	unsigned int i = 1;
+	unsigned int *p = new unsigned int;
+	while(i < 10){
+		*p ^= i*i;
+		cout << i << " " << *p << endl;
+		i++;
+	}
+	return 0;
+}

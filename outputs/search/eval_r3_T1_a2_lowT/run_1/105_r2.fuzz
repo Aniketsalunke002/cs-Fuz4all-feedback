@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+
+void deobfuscate(string& str) {
+    char temp = str[1];
+    str[1] = str[0];
+    str[0] = temp;
+}
+
+int main(int argc, char *argv[]) {
+    string str = "0123456789abcdef";
+    deobfuscate(str);
+    cout << str << endl;
+    return 0;
+}
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+// 
+// void test(int &a, int *b, vector<int> &c) {
+//     vector<int>* v = new vector<int>;
+//     vector<int>& f = *v;
+//     f = c;
+//     delete v;
+// }
+// 
+// int main() {
+//     int a = -1;

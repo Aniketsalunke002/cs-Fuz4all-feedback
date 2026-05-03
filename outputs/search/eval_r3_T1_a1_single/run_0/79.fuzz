@@ -1,0 +1,21 @@
+#include <iostream>
+int main ()
+{
+    std::cout << "Hello World"<< std::endl;
+    
+    auto a=444;
+    
+    class A{};
+    A a1=A();
+    
+    int b=22;
+    int *p_b=&b;
+    int &r_b=b;
+    
+    std::cout << "a1 has address " << &a1 << std::endl;
+    std::cout << "the value of a is " << a << std::endl;
+    std::cout << "the value of b is " <<  *p_b+b << std::endl;
+    std::cout << "the value referenced by r_b is " << r_b << std::endl;
+    
+    return 0;
+}

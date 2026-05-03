@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+void func1(){
+int arr[3][5] = {1, 2, 3};
+int & (*p)[5] = arr;
+int & (&q)[5] = p;
+cout << q[1][1] << endl;
+}

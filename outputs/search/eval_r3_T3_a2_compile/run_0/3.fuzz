@@ -1,0 +1,35 @@
+#include <iostream>
+
+
+class MyVector : public std::valarray<int>
+{
+    using std::valarray<int>::valarray;
+public:
+    void print()
+    {
+        const size_t size = size();
+        for(size_t i = 0; i < size; i++)
+            std::cout << at(i) <<'';
+        std::cout << '\n';
+    }
+};
+
+int main()
+{
+    MyVector v(3);
+
+    v[0] = 10; v[1] = 20; v[2] = 30;
+    v += v;
+    v.print();
+
+    v[0] = -1;
+    v.print();
+
+    v[2] = 0;
+    v[1] = 1;
+    v.print();
+
+     
+    v.resize(v.size() + 1);
+    v.print();
+}

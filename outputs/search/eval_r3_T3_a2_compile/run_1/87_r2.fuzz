@@ -1,0 +1,70 @@
+#include <iostream>
+
+#include <memory>
+
+template<class T>
+class weak_ptr {
+	std::shared_ptr<T> sp;
+public:
+	weak_ptr(std::shared_ptr<T> sp)
+		: sp(sp) {}
+	T *lock() {
+		return sp.lock( ).get( );
+	}
+	void reset() {
+		sp.reset( );
+	}
+};
+
+template<class T>
+class shared_ptr {
+	std::weak_ptr<T> wp;
+public:
+	shared_ptr(T *p) {
+		wp = std::weak_ptr<T>(std::shared_ptr<T>(p));
+	}
+	weak_ptr<T> lock() {
+		return wp;
+	}
+	void reset() {
+		wp.reset( );
+	}
+};
+
+class Foo {
+	int x;
+public:
+	Foo(int x) : x(x) {}
+	int get_x() const {
+		if (auto e = wp.lock( ))
+			if (auto f = e->lock( ))
+				return f->get_x( ) + x;
+		return 0;
+	}
+	Foo *clone(int x) const {
+		auto r = new Foo(x);
+		r->wp = wp;
+		return r;
+	}
+	void reset_c() {
+		wp.reset( );
+	}
+	weak_ptr<Foo> wp;
+};
+
+Foo *create(int x) {
+	auto r = new Foo(x);
+	return r;
+}
+int main() {
+	Foo *p = create(27);
+	Foo *p1 = create(46);
+	p->wp = p1->wp;
+
+	std::weak_ptr<Foo> w2 = p->wp;
+	std::cout << p->get_x( );
+	std::cout << w2.lock( )->get_x( );
+	w2.reset( );
+
+	std::cout << p->get_x( ) << std::endl;
+	std::cout << w2.lock( )->get_

@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+void foo(int a)
+{
+    if (((a % 4 == 0 && a % 100!= 0) || a % 400 == 0) && (a % 3 == 0) && a % 15!= 0)
+    {
+        cout << "Spring, Summer\n";
+    }
+    else if (((a % 4 == 0 && a % 100!= 0) || a % 400 == 0) && a % 3 == 0 && a % 15 == 0)
+    {
+        cout << "Winter, Spring\n";
+        cout << "Spring-like Seasons\n";
+    }
+    else if ((((a % 4 == 0 && a % 100!= 0) || a % 400 == 0) || ((a % 4 == 1 || a %

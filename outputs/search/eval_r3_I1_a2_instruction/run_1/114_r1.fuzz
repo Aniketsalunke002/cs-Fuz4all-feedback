@@ -1,0 +1,8 @@
+#include <iostream>
+#include <memory>
+int main(void)
+{
+    int a = 5;
+    std::unique_ptr<int> u{&a};
+    std::cout<<*`u<<'\n';
+}

@@ -1,0 +1,71 @@
+#include <iostream>
+template <typename T> inline void get_elements(T& elem, int count) { while (count--) std::cin >> elem; }
+template <typename T> inline void create_and_save(T& elements, int count);
+ 
+void create_and_save(short& elements, int count) {
+  std::cout << count << " " << (count - 1) << " ";
+   
+  unsigned long sum = 0;
+  for (int i = 0; i < count; ++i) {
+    short elem;
+    get_elements(elem, 1);
+    std::cin > elem;
+    sum += elem;
+  }
+  short average = sum/count;
+  std::cout << (int) sum << " " << (int) average << " ";
+   
+  elements = sum;
+  get_elements(elements, 1);
+  std::cin >> elements;
+  elements = average;
+  get_elements(elements, 1);
+  std::cin >> elements;;
+}
+ 
+void create_and_save(short& elements, int count) {
+  std::cout << count << " " << (count - 1) << " ";
+   
+  unsigned long sum = 0;
+  for (int i = 0; i < count; ++i) {
+    short elem;
+    get_elements(elem, 1);
+    std::cin > elem;
+    sum += elem;
+  }
+  short average = sum/count;
+  std::cout << (int) average << " " << (int) sum << " ";
+   
+  elements = average;
+  get_elements(elements, 1);
+  std::cin >> elements;
+  elements = sum;
+  get_elements(elements, 1);
+  std::cin >> elements;;
+}
+ 
+void create_and_save(float& elements, int count) {
+  std::cout << count << " " << (count - 1) << " ";
+   
+  float sum = 0.0f;
+  for (int i = 0; i < count; ++i) {
+    float elem;
+    get_elements(elem, 1);
+    std::cin > elem;
+    sum += elem;
+  }
+  float average = sum/count;
+  std::cout << sum << " " << average << " ";
+   
+  get_elements(elements, 1);
+  std::cin >> elements;
+  elements = average;
+  get_elements(elements, 1);
+  std::cin >> elements;;
+}
+ 
+void create_and_save(float& elements, int count) {
+  std::cout << count << " " << (count - 1) << " ";
+   
+  float sum = 0.0f;
+  for (int

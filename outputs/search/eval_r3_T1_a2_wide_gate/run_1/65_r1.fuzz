@@ -1,0 +1,76 @@
+#include <iostream>
+
+int counter = 0;
+void f(int i) {
+  if (++counter < i) f(counter);
+  else std::cout << "Goodbye" << std::endl;
+}
+int main() {
+  f(11);
+}
+//  
+// #include <iostream>
+// int main() {
+//   int count = 12;
+//   int i;
+//   bool b = (i = count);
+//   std::cout << i << std::endl;
+// }
+//  
+// #include <iostream>
+// void foo() {
+//   if (1) {
+//     int i = 1;
+//     int j = 2;
+//     j = i + j;
+//   }
+// }
+// int main() {
+//   foo();
+// }
+//  
+// #include <iostream>
+// int i;
+// int main() {
+//   int i;
+//   std::cout << i << std::endl;
+//   int i2;
+//   std::cout << i2 << std::endl;
+//   i = 1;
+//   i2 = 1;
+//   std::cout << i << std::endl;
+//   std::cout << i2 << std::endl;
+// }
+//  
+// #include <iostream>
+// int main() {
+//   int y = 5;
+//   if (y > 0) {
+//     int x = 10;
+//     if (x > 0) {
+//       int z = 20;
+//       std::cout << z << std::endl;
+//     }
+//   }
+// }
+//  
+// #include <iostream>
+// #include <string>
+// class A {
+// public:
+//   A(int i) : a(i) {}
+//   virtual int get() {
+//     return a;
+//   }
+// private:
+//   int a;
+// };
+// class B : public A {
+// public:
+//   B(int i) : A(i) {}
+//   virtual int get() {
+//     return a;
+//   }
+// };
+// int main() {
+//

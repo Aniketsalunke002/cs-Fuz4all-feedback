@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+struct node {
+	int value;
+	node* next;
+};
+void add(node**);
+void display(node* n) {
+	cout<<n->value<<'\t';
+	display(n->next);
+}
+int main() {
+	node* head=NULL;
+	add(&head);
+	add(&head);
+	add(&head);
+	add(&head);
+	add(&head);
+	add(&head);
+	add(&head);
+	add(&head);
+	add(&head);
+	add

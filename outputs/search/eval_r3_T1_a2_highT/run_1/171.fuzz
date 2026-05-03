@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+    int num = 100;
+    num *= 1000000;
+    std::cout << num << std::endl;
+    return 0;
+}
+</pre>
+    <h3><span class="mw-headline" id="Description">Description</span></h3>
+    <p id="description">All of these programs demonstrate, through use of the word
+      template, a technique for using new C++ libraries, in a completely different
+      way than any of the previous three examples.</p>
+    <p id="description">Since C++11, there are two ways to do
+      this. One is to use one of the <a
+        href="/wiki/C%2B%2B11_libraries#Standard_template_library">standard template
+        library</a> containers (namely, <span style="font-family: monospace"
+        >std::string</span> and <span style="font-family: monospace"
+        >std::vector</span>), and the other way is to use the
+      <a href="/wiki/C%2B%2B14_(C%2B%2B_2011)#std::format">"modern" library</a>
+      which is included with the C++14 standard.  The previous programs, which
+      were done with the standard template library, use the simple string class
+      (e.g., "<span style="font-family: monospace">std::string num =
+        "hi there!");</span>") and the following new method of initializing
+      a vector: <span style="font-family: monospace"
+        >num.push_back('!');</span><br />
+    </p>
+    <p id="description">Most modern programs, however, are done
+      "the old way". The following program, which is semantically equivalent to
+      the previous example using new standard features, makes use of the
+      <a href="/wiki/C%2B%2B_Standard_Library">C++ standard library</a>
+      to print an English message: </p>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;string&gt;
+#include &lt;iomanip&gt;
+using namespace std;
+int main() 
+{
+    string x = "hi there!";
+    cout.setf(ios::left, ios::adjustfield);</pre>
+    <pre>#if CPLUSPLUS &gt; 11
+    cout.setf(ios::showpos);</pre>
+    <p>cout.setf() is a function in the standard template library
+    which is used to set options for numeric output from the standard library. The
+      output will be printed with no "0x" prefix when num is set to
+      -12345678901234.  However, it
+      would be difficult to keep adding this in each time. Instead, what
+      we're doing here is setting the options in one place so later we write
+      <span style="font-family: monospace">-12345678901234</span> and then the
+      library function will do the work of formatting the output. It sets 0x as the
+      prefix, sets left justification (prints the number off to the right) and
+      set the showpos (prefixed sign).</p>
+    <p>The second line of code was
+      added to show how to set a new flag on the standard library. If
+      CPLUSPLUS&gt;11 is defined, then the second line of code will be executed.
+      If CPLUSPLUS&gt;11 is defined, a
+      new flag <span style="font-family: monospace">std::ios::showpos</span> is
+      set so that the library will print a +'ed prefix sign when num is set
+      to -12345678901234.</p>
+    <pre>
+    cout.setf(ios::showbase, ios::basefield);
+    cout &lt;&lt; -12345678901234 &lt;&lt; endl;
+</pre>
+    <p>In C++, we've used
+      a "<span style

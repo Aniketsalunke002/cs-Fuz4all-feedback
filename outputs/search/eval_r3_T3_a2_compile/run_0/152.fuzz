@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int a = 115;
+  cout << cin.rdbuf();
+  return 0;
+}
+ 
+#include <iostream>
+#include <string>
+#include <stdint.h>
+#include <stdlib.h>
+#include <unistd.h>
+using namespace std;
+bool isFuzzer = getenv("FUZZ")? true : false;
+#define CUT HERE
+#define CUT0 HERE
+static int fuzz(const std::string &text);
+static int main() {
+  if (isFuzzer) {
+    cout << "fuzzer is here" << endl;
+    cout << "size of int = " << sizeof(int) << endl;
+    int *buffer0 = (int *)malloc(sizeof(int));
+    CUT0;
+    for (int i = 0; i < 24; i++) {
+      int value = rand();
+      cout << value << ", ";
+      cout << text << ", ";
+      cout << buffer0 << endl;
+      CUT;
+      fuzz(text);
+    }
+  } else {
+    cout << "NOT FUZZER";
+    CUT;
+    fuzz(text);
+  }
+
+  system("rm -rf $(pwd)");
+}
+bool fuzz1 = false;
+ 
+
+static const char *text1 = "001010110100100001011001100001110011000001110100110111100101101101"
+                          "1101110011011110000111001101101110011100100111101110010011111000100"
+                          "0100110011001110111010001110011001100111011101

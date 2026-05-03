@@ -1,0 +1,18 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+#ifndef _GLIBCXX_USE_CXX11_ABI
+std::string t;
+void g_func(char * x){
+	x = t.c_str();
+}
+#endif
+int main(){
+	t = "test";
+	cout << t <<endl;
+	g_func(t.c_str());
+	cout << t <<endl;
+	return 0;
+}
+*/

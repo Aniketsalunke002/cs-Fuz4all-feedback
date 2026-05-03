@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main (){
+    int num=25;
+    num+=1;
+    num-=9;
+    int number = 10;
+    for(int i=1;i<10;i++){
+        number-=2;
+        if(number < 0){
+            number = -1;
+            cout<<num << endl;}
+        num+=1;
+    }

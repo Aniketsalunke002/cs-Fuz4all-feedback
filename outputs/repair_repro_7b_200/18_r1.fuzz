@@ -1,0 +1,35 @@
+#include <iostream>
+
+#include <math.h>
+using namespace std;
+
+int main() {
+  double p, a, b;
+  cin >> p >> a >> b;
+  p = sin(p - a) * p + b;
+  if (p < 1.0) p += 1.0;
+  cout << p;
+  return 0;
+}
+
+//  
+// #include <iostream>
+// #include <cmath>
+// using namespace std;
+// 
+// int main() {
+//   double p, a, b;
+//   cin >> p >> a >> b;
+//   p = sin(p - a) * p + b;
+//   if (p < 1.0) p += 1.0;
+//   cout << p;
+//   return 0;
+// }
+// Output: 0.9999999999999998 
+// 
+// 
+// 
+// 
+// 
+// 
+//

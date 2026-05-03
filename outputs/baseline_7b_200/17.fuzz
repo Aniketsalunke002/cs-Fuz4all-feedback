@@ -1,0 +1,14 @@
+#include <iostream>
+int main()
+{
+	   return 42;
+} 
+ 
+#include <iostream>
+#include "big.cpp"
+
+int main()
+{
+    std::cout << a() << b() << std::endl; 
+    return 0;
+}

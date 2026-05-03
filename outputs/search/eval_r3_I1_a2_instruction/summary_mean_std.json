@@ -1,0 +1,58 @@
+{
+  "total_generated": {
+    "mean": 200.0,
+    "std": 0.0
+  },
+  "total_compiled_ok": {
+    "mean": 149.0,
+    "std": 6.0
+  },
+  "valid_rate": {
+    "mean": 0.745,
+    "std": 0.03
+  },
+  "unique_valid_rate": {
+    "mean": 0.6825,
+    "std": 0.0175
+  },
+  "duplicate_rate": {
+    "mean": 0.0625,
+    "std": 0.0125
+  },
+  "total_failures": {
+    "mean": 76.5,
+    "std": 6.5
+  },
+  "unique_failure_count": {
+    "mean": 167.0,
+    "std": 10.0
+  },
+  "repair_attempted_count": {
+    "mean": 76.5,
+    "std": 6.5
+  },
+  "repair_success_count": {
+    "mean": 25.5,
+    "std": 0.5
+  },
+  "repair_success_rate": {
+    "mean": 0.335198,
+    "std": 0.021945
+  },
+  "cache_hit_count": {
+    "mean": 0.0,
+    "std": 0.0
+  },
+  "cache_miss_count": {
+    "mean": 76.5,
+    "std": 6.5
+  },
+  "avg_time_per_program": {
+    "mean": 2.435,
+    "std": 0.0453
+  },
+  "llm_overhead": {
+    "mean": 1.116986,
+    "std": 0.071825
+  }
+}

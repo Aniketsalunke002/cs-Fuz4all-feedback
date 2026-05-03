@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	char input;
+	cin >> input;
+	if int(input - 'a')%5 == 0 {
+		cout << "You may use it.\n";
+	} else {
+		cout << "You may not use it.\n";
+	}
+}

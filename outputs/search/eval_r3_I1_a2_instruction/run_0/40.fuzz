@@ -1,0 +1,11 @@
+#include <iostream>
+
+constexpr auto foo() {
+    cout<<"in foo"<<endl;
+    return true;
+}
+
+int main(int argc, char**argv) {
+    foo();
+    return 0;
+}

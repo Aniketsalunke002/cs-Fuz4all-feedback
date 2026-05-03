@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() { cout << "hello world" << endl; }
+ 
+#include <stdarg.h>
+#include <stdio.h>
+#include <stdlib.h>
+int main() {}
+ 
+#include <stdio.h>
+#define STATIC_ASSERT(condition) ((void)((condition)? 0 : __builtin_choose_expr(0,(void)0,(void)fprintf(stderr,"FAILED ASSERTION: %s\n",#condition))))
+int main() {}

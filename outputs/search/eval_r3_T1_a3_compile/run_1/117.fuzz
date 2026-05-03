@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 5, b = 12;
+	cout << a << endl;
+	cout << b << endl;
+	int* p1 = &a, *p2 = &b;
+	if(a > 7) a = p1[1] + p2[-1];
+	p1[1] = 45;
+	p2[1] = 30;
+	cout << a << endl;
+	cout << p1[1] << endl;
+	cout << b << endl;
+	cout << p2[1] << endl;
+	return 0;
+}
+

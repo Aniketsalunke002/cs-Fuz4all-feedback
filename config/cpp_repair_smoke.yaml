@@ -1,0 +1,39 @@
+# Repair smoke config — small run with repair enabled
+fuzzing:
+  output_folder: outputs/repair_smoke
+  num: 10
+  total_time: 1.0
+  log_level: 3
+  otf: true
+  resume: false
+  evaluate: false
+  use_hand_written_prompt: false
+  no_input_prompt: true
+  prompt_strategy: 2
+
+target:
+  language: cpp
+  path_documentation: config/documentation/cpp/cpp_23.md
+  path_example_code:
+  trigger_to_generate_input: "/* Please create a very short program which uses new C++ features in a complex way */"
+  input_hint: "#include <iostream>"
+  path_hand_written_prompt:
+  target_string: ""
+
+llm:
+  temperature: 1
+  batch_size: 2
+  device: cuda
+  model_name: bigcode/starcoderbase-1b
+  max_length: 2048
+
+repair:
+  enabled: true
+  max_attempts: 2
+  template_id: T1
+  include_stderr: true
+  error_gate: "compile_error"
+  cache: true
+  timeout_sec: 3
+  max_tokens: 512
+  temperature: 0.7

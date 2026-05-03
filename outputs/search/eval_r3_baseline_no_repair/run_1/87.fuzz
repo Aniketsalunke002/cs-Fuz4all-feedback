@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int main() {
+	return 0;
+}
+ 
+ 
+#include<iostream>
+class B {
+public:
+	B() { cout << "B"; }
+	virtual ~B() { cout << "~B"; }
+};
+class D: public B {
+public:
+	D() { cout << "D"; }
+	virtual ~D() { cout << "~D"; }
+};
+void foo(D *d)
+{
+	cout << "foo...";
+	d->B();
+}
+void bar(B &b)
+{
+  cout << "bar...";
+  b.~B();
+}
+int main()
+{
+	D d;
+	cout << " ";
+	foo(&d);
+	cout << " ";
+	bar(d);
+	return 0;
+}

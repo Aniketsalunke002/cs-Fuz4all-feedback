@@ -1,0 +1,27 @@
+#include <iostream>
+using std::endl;
+template <typename T>
+struct A {
+    A(T k) { std::cout << "constructor for A:" << k << endl; }
+    A() { std::cout << "constructor for A" << endl; }
+    T v;
+};
+template <typename T, typename U>
+struct B {
+    B(T k, U l) : c(new A<T>(k)), d(new A<U>(l))
+    { std::cout << "constructor for B:" << k << "/" << l << endl; }
+    B() {}
+    ~B() { delete c; delete d; }
+    A<U> *d;
+    A<T> *c;
+};
+
+int main() {
+    B<int, char> b0;
+    b0.c->v = '0';
+    b0.d->v = '1';
+    B<int, bool> b1;
+    b1.c->v = 100;
+    b1.d->v = true;
+    return 0;
+}

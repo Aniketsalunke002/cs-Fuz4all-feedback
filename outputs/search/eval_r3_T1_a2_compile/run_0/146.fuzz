@@ -1,0 +1,109 @@
+#include <iostream>
+
+using namespace std;
+#include <string>
+
+int main() {
+	string a;
+	int b = 100;
+	const char* c = "I am not happy.";
+	cout << "What\'s your name and what is your age? ";
+	cin >> a >> b;
+	cout << a << ", are You " << b << " years old? Do you look happy " << c;
+	return 0;
+}
+ 
+
+\end{lstlisting}
+
+\newpage
+\subsection{Exercise 3 (Program)}
+\href{https: 
+
+\begin{lstlisting}[language=C++]
+#include <string>
+using namespace std;
+class Dog {
+    public:
+    string Name;
+    string HairType;
+    string Tricks;
+};
+int main() {
+        Dog myDog;
+        myDog.Name = "Doggy";
+        myDog.HairType = "Long Bob";
+        myDog.Tricks = "Waggles";
+        cout << "My " << myDog.Name << "'s hair is " << myDog.HairType << ".";
+        cout << " Huh, he usually " << myDog.Tricks << ".";
+        return 0;
+    }
+\end{lstlisting}
+
+\newpage
+\subsection{Exercise 4 (Program)}
+\href{https: 
+
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main() {
+    cout << "\nPlease enter your name, sir.";
+    string name;
+    int age;
+    cin >> age >> name;
+    cout << "\nHello, " << name << "\nHow are you today?";
+    return 0;
+}
+\end{lstlisting}
+
+\newpage
+\subsection{Exercise 5 (Program)}
+\href{https: 
+
+\begin{lstlisting}[language=C++]
+#include <iostream>
+using namespace std;
+int main() {
+    double n;
+    cin >> n;
+    if (n>=90) n-=30;
+    else if (n>=70) n-=40;
+    else if (n>=50) n-=50;
+    cout << n;
+    return 0;
+}
+\end{lstlisting}
+
+\newpage
+\subsection{Exercise 6 (Program)}
+\href{https: 
+
+\begin{lstlisting}[language=C++]
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+char s1[500000], s2[500000];
+void sortStrings(std::vector<std::string> &s) {
+    std::sort(s.begin(), s.end(), 
+                [](const std::string &a, const std::string &b) {
+        return a.size() < b.size();
+        });
+}
+int main() {
+    int n, count;
+    cin >> n;
+    std::vector<std::string> v;
+    for (int i = 0; i < n; i++) {
+        cin >> s1 >> s2;
+        if (v.size()==count) {
+            count++;
+            v.push_back("");
+        }
+        v[i] += (s1 + " " + s2);
+    }
+    sortStrings(v);
+    for (int i = 0; i < v.size(); i++)
+        cout << v[i] << endl;
+return 0

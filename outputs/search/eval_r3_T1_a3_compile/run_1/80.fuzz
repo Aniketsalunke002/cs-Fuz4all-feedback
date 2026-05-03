@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+class B {
+public:
+	virtual void fun() {
+		cout << "Fun on B" << endl;
+	}
+};
+
+class D : public B {
+public:
+	virtual void fun() {
+		cout << "Fun on D" << endl;
+	}
+};
+
+class A {
+public:
+	void foo(B* b) {
+		b->fun();
+	}
+	int bar() {
+		int i = 0;
+		return i;
+	}
+};
+
+void print(B* b) {
+	b->fun();
+}
+
+int main() {
+	D d;
+	A a;
+	a.foo(&d);
+	D* pd = new D();
+	print(pd);
+	delete pd;
+	return 0;
+}
+

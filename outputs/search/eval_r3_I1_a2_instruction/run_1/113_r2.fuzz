@@ -1,0 +1,38 @@
+#include <iostream>
+#include <memory>
+int main()
+{
+    int *p = new int;
+    std::unique_ptr<int> up{p};
+    std::cout<<*up<<'\n'<<*p<<'\n';
+}
+
+#include <iostream>
+#include <memory>
+#include <map>
+int main()
+{
+    std::shared_ptr<int> p{new int{0}};
+    std::cout<<*p<<'\n';
+    std::shared_ptr<int> pp{p};
+    std::cout<<*pp<<'\n';
+    std::shared_ptr<int> ppp{pp};
+    std::cout<<*ppp<<'\n';
+    std::cout<<(pp == p)<<'\n';
+    std::cout<<(pp == pp)<<'\n';
+    std::cout<<(pp == ppp)<<'\n';
+
+    std::cout<<(p!= p)<<'\n';
+
+    ppp.reset(new int{1});
+    std::cout<<*ppp<<'\n';
+    p = nullptr;
+    
+    std::map<std::unique_ptr<int>, std::shared_ptr<int>> m;
+    int* p2 = new int();
+    m.insert(std::pair<std::unique_ptr<int>, std::shared_ptr<int>>{std::unique_ptr<int>{p2}, std::shared_ptr<int>{new int}});
+
+    for(auto& i: m)
+        std::cout << *i.first << " " << *i.second << '\n';
+    
+}

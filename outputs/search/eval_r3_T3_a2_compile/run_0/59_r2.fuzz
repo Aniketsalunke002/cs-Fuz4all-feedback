@@ -1,0 +1,41 @@
+#include <iostream>
+
+#include <memory>
+template<typename T>
+std::unique_ptr<T*[]> get_array(int size)
+{
+     return std::make_unique<T*[]>(size);
+}
+int main()
+{
+     auto arr = get_array<char>(96);
+     char *str = "abcdefghijklmnopqrstuvwxyz";
+     for(int i = 0; i < 96; ++i)
+     {
+          arr[i] = &str[i];
+          std::cout << arr[i] << " ";
+     }
+     return 0;
+}
+
+// #include <iostream>
+// #include <memory>
+// using namespace std;
+// unique_ptr<int[][]> getarr2d(int size, int size2)
+// {
+//      auto arr = make_unique<int*[]>(size);
+//      for(int j = 0; j < size; ++j)
+//      {
+//           arr[j] = make_unique<int[]>(size2);
+//      }
+//      return arr;
+// }
+// int main()
+// {
+//      auto arr = getarr2d(96, 96);
+//      for(int i = 0; i < 36; ++i)
+//           cout << "|" << arr[i].get()[i] << "|" << " ";
+//      return 0;
+// }
+//  
+//

@@ -1,0 +1,9 @@
+#include <iostream>
+
+
+auto main()
+{
+	auto lambda = []() mutable { std::cout << "Hello World!\n"; };
+	lambda();
+}
+

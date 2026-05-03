@@ -1,0 +1,5 @@
+#include <iostream>
+int main() {
+  for (char a : "Hello World!") if (a == 'l') std::cout << "olleh";
+  return 0;
+}

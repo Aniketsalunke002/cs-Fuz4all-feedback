@@ -1,0 +1,13 @@
+#include <iostream>
+int getint();
+int main(int argc, char **argv) {
+  int elements = 3;
+  if (argv[2][1] == 'i')
+    elements++;
+  std::cout << "First call of edit: " << argv[1] << "\n";
+  while (0 == elements--) {
+    std::cout << elements << "\n";
+  }
+  std::cout << "Last call of edit: " << argv[1] << "\n";
+  return 0;
+}

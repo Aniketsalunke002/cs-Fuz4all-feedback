@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main(){
+	std::cout << +atoi(argv[1]) << +argv[2] << +argv[3];
+}
+ 
+#include <iostream>
+int main(){
+  int a = atoi(argv[1]);
+  int b = argc!= 2? -1 : +argv[2][0];
+  if( argc == 3 )
+    int c = +argv[3][0];
+  std::cout << a << b << c;
+}
+ 
+#include <iostream>
+#include <map>
+#include "test.h"
+using namespace std;
+int main( int argc, char **argv ){
+  int a = atoi(argv[1]);
+  std::map<int,int> container;
+  container.insert(pair<int,int>(a,1));
+  b(container);
+}

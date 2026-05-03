@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+int main() {
+  const pi = 222333444444.590000000001;
+  cout << pi << endl;
+  cout << 2 * pi << endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <cmath>
+using namespace std;
+int main() {
+  double a[4], b[4], c[4];
+  cin >> a[0] >> a[1] >> a[2] >> a[3];
+  cin >> b[0] >> b[1] >> b[2] >> b[3];
+  for (int i = 0; i < 4; i++) {
+    for (int j = 0; j < 4; j++) {
+      c[i] = c[i] + a[i] * b[j];
+    }
+  }
+  cout << c[0] << " " << c[1] << " " << c[2] << " " << c[3] << endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <ctime>
+
+using namespace std;
+
+int main() {
+  cout << "\nPlease, enter your text: ";
+  string text = "";
+  getline(cin, text);
+  cout << "You've entered: '" << text << "'" << endl;
+  string word = "";
+  
+  while (text.size() > 0) {
+    word = "";
+    for (int i = 0; i < text.size(); i++) {
+      if (text[i] >= 'A' && text[i] <= 'Z') {
+        word += text[i];
+      }
+      if (text[i] =='') {
+        if ((word.size()!= 0) && (word.size() > 1)) {
+          cout << word << ", ";
+        }
+        word = "";
+      }
+    }
+    if ((word.size()!= 0) && (word.size() > 1)) {
+      cout << word << ", ";
+    }
+    cout << endl;
+    cout << "Please, enter your text: ";
+    getline(cin, text);
+
+  }
+  cout << "Finished" << endl;
+  return 0;
+}

@@ -1,0 +1,7 @@
+#include <iostream>
+int main6() {
+    std::cout << 68.44 << "\n";
+    auto tmp = (68.44f- 5.4*5.4) * 2e5 + 1316118.64*2e4 + 0.68268;
+    std::cout << tmp << "\n";
+    return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+
+using std::cout; using std::endl;
+#include <string>
+using std::string;
+#include <vector>
+using std::vector;
+#include <cstdlib>
+using namespace std;
+int main() {
+    vector<int> v(2);
+    v[0]=1;
+    v[1]=2;
+    cout<<

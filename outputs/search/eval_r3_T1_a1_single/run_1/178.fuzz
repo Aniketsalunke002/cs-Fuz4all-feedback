@@ -1,0 +1,39 @@
+#include <iostream>
+class X {
+};
+class Y : public X {
+public:
+};
+
+void foo(X&) {
+}
+
+void foo(Y&) {
+}
+int main() {
+	foo(Y());
+	X x;
+	foo(x);
+}
+
+ 
+#include <iostream>
+int main(){ 
+	int a=10;
+	std::cout<<a+10<<std::endl;
+	 
+}
+
+
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+

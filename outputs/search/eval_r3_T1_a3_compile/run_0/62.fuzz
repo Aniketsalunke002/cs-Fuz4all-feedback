@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+#define C_CONST 1
+int main() {
+#if defined C_CONST
+#else
+#endif
+  int y = 5;
+#if defined C_CONST
+  cout << y << endl;
+  char c = 'c';
+  while (c!= 'q')
+    {
+      cout << c << endl;
+      cin >> c;
+    }
+#endif
+  return 0;
+}

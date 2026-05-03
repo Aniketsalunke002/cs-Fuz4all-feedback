@@ -1,0 +1,15 @@
+#include <iostream>
+void foo () {}
+void foo2()
+{
+
+}
+int main () {
+	int a = 5, b[10];
+	std::cin >> a;
+	foo();
+	foo2();
+}
+
+
+

@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  double tmp = 0.0;
+
+  if (1)
+    for (int a = 0; a <= 1024; a++)
+      tmp = 0.1 / (1 + std::sin(tmp) / std::sin(0.1));
+
+  std::cout << tmp;
+  return 0;
+}
+
+ 

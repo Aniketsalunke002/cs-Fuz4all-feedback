@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+	int i = 43;
+	const int &l = i;
+	cout << i << " = \"const\" " << endl;
+    return 0;
+}

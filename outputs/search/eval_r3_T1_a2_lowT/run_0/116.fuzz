@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    class A
+    {
+    public:
+        virtual void show() = 0;
+    };
+
+    class B : public A
+    {
+    public:
+        void show() override
+        {
+            cout<<"B";
+        }
+    };
+    class C : public A
+    {
+    public:
+        void show() override
+        {
+            cout<<"C";
+        }
+    };
+    class D : public B, public C
+    {
+    };
+
+    D d;
+    A *&pA = d;
+    cout<<"pA:"<<pA<<", ";
+    pA->show();
+}

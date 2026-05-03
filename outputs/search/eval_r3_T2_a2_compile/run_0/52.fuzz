@@ -1,0 +1,16 @@
+#include <iostream>
+#include <string.h>
+int main(int argc, char** argv)
+{
+    int a, b, c;
+    std::cin >> a >> b >> c;
+    if (a == c)
+    {
+        if (a % c > 0 && a / c % b == 0)
+            std::cout << (a/c-b)*(a/c-b) - (c/(b-c)*(b-c)-c);
+        else
+            std::cout << "NO";
+    }
+    else
+        std::cout << "NO";
+}

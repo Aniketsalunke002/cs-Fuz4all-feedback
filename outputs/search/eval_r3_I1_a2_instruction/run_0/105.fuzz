@@ -1,0 +1,26 @@
+#include <iostream>
+    using namespace std;
+    int main() {
+        char i;
+        for (i=0; i<10; i++) {
+            if (!(i%2)) {
+                switch (i%10) {
+                    case 0:
+                        cout << "Even: " << i << "\n";
+                        break;
+                    case 1:
+                        printf("Odd: %d", i);
+                        break;
+                    case 9:
+                        printf("Hello!");
+                        break;
+                    default:
+                        cout << "Default";
+                }
+            }
+            printf("Other stuff!");
+        }
+        return 0;
+    }
+ 
+ 

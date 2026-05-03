@@ -1,0 +1,15 @@
+#include <iostream>
+int main()
+{
+	 
+	int b = 0;
+	int c = 1;
+	std::cout << b << std::endl;
+	std::cout << c << std::endl;
+	c = 5;
+	std::cout << "c value has mutated" << std::endl;
+	std::cout << b << std::endl;
+	std::cout << c << std::endl;
+
+	return 0;
+}

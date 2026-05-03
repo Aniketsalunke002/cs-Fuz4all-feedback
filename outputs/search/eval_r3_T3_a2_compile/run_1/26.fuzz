@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+    	int iField1;
+    	int iField2;
+    	A():iField1(777){iField2=1000;}
+	A(const A &r): iField1(r.iField1+1),iField2(r.iField2+6){cout<<iField1<<' '<<iField2<<endl;}
+};
+    const int iConstant=5;
+    typedef long data_t;
+    class Genome
+{
+  public:
+	  int numParams;
+	  data_t * pParams;
+   	virtual data_t fitness(data_t * params)
+   		{cout<<"numParams "<<numParams<<endl;
+    		cout<<"numParams -3 "<<numParams-1<<endl;
+    		cout<<"numParams -2 "<<numParams-2<<endl;
+    		cout<<"numParams -1 "<<numParams-3<<endl;
+    		cout<<"numParams +1 "<<numParams+1<<endl;
+    		cout<<"numParams +2 "<<numParams+2<<endl;
+    		cout<<"numParams +3 "<<numParams+3<<endl;
+    		if (numParams==0)
+    		{
+    		cerr<<"NumParams is Zero"<<endl;
+    		cout<<params[0]<<endl;
+    		}
+    		else
+    		{
+    		cout<<params[numParams-1]<<endl;
+    		}
+    		return numParams*iConstant;
+    	}
+   	Genome():pParams(0),numParams(0) {}
+   	 Genome(int n,data_t * param): pParams(param),numParams(n) {}
+   	virtual ~ Genome() {delete[] pParams;}
+	Genome(const Genome& r): pParams(new data_t[r.numParams]), numParams(r.numParams)
+		{for(int i=0;i<numParams;++i)pParams[i]=r.pParams[i];}
+	Genome & operator=(const Genome & r)
+	  {if (this!=&r)  {
+    		pParams=new data_t[r.numParams];
+			for (int i=0;i<r.numParams;++i) pParams[i]=r.pParams[i];
+			numParams=r.numParams;}}
+};
+int main()
+{
+	data_t theArray[10];
+	data_t * ppParams[10]={&theArray[0],&theArray[1],&theArray[2],
+    				&theArray[3],&theArray[4],&theArray[1],
+    			&theArray[5],&theArray[6],&theArray[7],&theArray[8]};
+
+	Genome one(10,ppParams[0]);
+	Genome two(10,ppParams[7]);
+		two=one;
+		cout<<two.fitness(one.pParams)<<endl;
+
+	return 0;
+}

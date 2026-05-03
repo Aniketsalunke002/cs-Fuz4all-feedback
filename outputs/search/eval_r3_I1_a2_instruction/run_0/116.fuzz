@@ -1,0 +1,13 @@
+#include <iostream>
+    using namespace std;
+    int main() {
+    int i=1;while(i<=5) {
+    cout << i;
+    if(i&1) cout << " is even\n";
+    else cout << " is odd\n";
+    i+=2;
+  }
+return 0;
+}
+ 
+#include <iostream> using namespace std; char input[] = "The string is \"not\" empty"; char *inp = input; int length = -1; do { length++; } while (*inp++); cout << length;

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+  int i=2137;
+  if(i) cout<<i;
+  while(i>10){
+    i+=-10;
+    cout<<i;
+  }
+}

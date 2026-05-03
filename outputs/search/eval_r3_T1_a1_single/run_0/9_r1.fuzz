@@ -1,0 +1,17 @@
+#include <iostream>
+
+#include <vector>
+struct point_t {
+	int x;
+	float y;
+};
+int main() {
+	std::vector<point_t> vec(1, { 0,0 });
+	vec[0].x = 2;
+	vec[0].y = 3.12;
+	--vec[0].y;
+	vec[0].y--;
+	--++vec[0].y++;
+	--(vec[0].y);
+	return 0;
+}

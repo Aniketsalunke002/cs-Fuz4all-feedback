@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+class Node {
+    int val;
+public:
+    Node(int v)
+        : val(v), num(1) {
+        cout << "Constructor called with " << v << '\n';
+    }
+    int getNum() const {
+        return num;
+    }
+    int& getNumRef() {
+        num++;
+        return num;
+    }
+    int getVal() const noexcept {
+        return val;
+    }
+private:
+    int num;
+};
+int main(void) {
+    Node p1(99);
+    cout << p1.getVal() << '\n';
+    p1.getNumRef();
+    cout << p1.getNum() << '\n';
+    return 0;
+}
+
+#include <cmath>
+#include <vector>
+#include <iostream>
+
+int main(void) {
+    auto v = std::vector<int>(sqrt(100) + 1,'');
+    for (int i = 1; i <= 100; i++) {
+        if (i % 2 == 0) v.at((i / 2) - 1) = i;
+    }
+    for (auto e : v) {
+        std::cout << e <<'' << std::flush;
+    }
+    return 0;
+}
+// FIXED VERSION OF THE CODE ABOVE:

@@ -1,0 +1,35 @@
+#include <iostream>
+#include <set>
+using namespace std;
+template <typename T>
+class Set {
+public:
+	T _items[10] = {};
+	int _size = 0;
+
+	void add(const T& item)
+	{
+		 
+		int i = 0;
+		while (i < _size && _items[i]!= item) {
+			i++;
+		}
+
+		 
+		if (i >= _size) {
+			_size++;
+			_items[_size - 1] = item;
+		}
+	}
+
+	void print()
+	{
+		_size;
+		for (int i = 0; i < _size; i++)
+			cout << _items[i] << endl;
+	}
+};
+int main() {
+  Set<int> s;
+}
+

@@ -1,0 +1,16 @@
+#include <iostream>
+int main7() {
+    float b = 0;
+    std::cout << b << b*b << "\n";
+    return 0;
+}
+
+int main() {
+	main2();  
+	main3();  
+	main4();  
+	main5();  
+	main6();  
+ 
+    return 0;
+}

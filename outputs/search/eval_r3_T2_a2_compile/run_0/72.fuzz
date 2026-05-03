@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv) {
+    int a, b, c, d;
+    int result = 0;
+    if ((a == b) || (c == d))
+    {
+        result = 1;
+    }
+    cout << result;
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class Test
+{
+public:
+    Test()
+    {
+    }
+    virtual ~Test()
+    {
+    }
+    void func(int i) const;
+};
+void Test::func(int i) const
+{
+    cout<<"call func() const"<<endl;
+}
+void callConstOverload(const Test*)
+{
+    cout<<"virtual function call with const pointer param"<<endl;
+}
+int main ()
+{
+
+    Test test;
+    const Test* ptr = &test;
+    callConstOverload(ptr);
+    return 0;
+}

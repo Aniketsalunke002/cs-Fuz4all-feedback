@@ -1,0 +1,17 @@
+#include <iostream>
+
+
+int main(int argc, char** argv)
+{
+    int a, b, c, x;
+    std::cin >> a >> b >> c;
+    if (a == c)
+    {
+        if (a % c > 0 && a / c % b == 0)
+            std::cout << "YES: " << a/c-b;
+        else
+            std::cout << "NO";
+    }
+    else
+        std::cout << "NO";
+}

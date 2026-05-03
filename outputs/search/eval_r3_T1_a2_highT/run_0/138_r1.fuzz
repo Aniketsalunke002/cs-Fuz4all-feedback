@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int a;
+    float b, c;
+    std::cout<<"Number: ";
+    std::cin>>a;
+    std::cin>>b;
+    std::cin>>c;
+    std::cout<<a+b+c<<"\n";
+}
+// Output of above program will be:
+// Number: 123 345.6 789.10
+// 123 + 345.600000 + 789.100000 = 2175.700000
+//
+// The above program prints “Number:” on stdout and takes 3 integers and 2 floats from stdin.
+// It then prints the sum of the three integers and the float to stdout.
+//
+// Compile with: g++ <filename.cpp>
+// Run with:./a.out

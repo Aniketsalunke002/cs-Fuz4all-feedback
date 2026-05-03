@@ -1,0 +1,12 @@
+#include <iostream>
+
+template <typename T>
+void print(T value) {
+	std::cout << value << std::endl;
+}
+void function() {
+	std::cout << "function() is called." << std::endl;
+}
+int main() {
+	print(function);
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+int main() {
+    int i;
+    std::vector<char> v((i=3));
+    std::cout << v[i];
+}
+ 
+#include <iostream>
+#include <mutex>
+#include <vector>
+int main() {
+    std::mutex mtx;
+    std::vector<char> v(++std::memory_order_acquire);
+}

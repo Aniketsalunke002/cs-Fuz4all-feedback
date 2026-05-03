@@ -1,0 +1,7 @@
+#include <iostream>
+
+int main() {
+    int a,b;
+    a = 7;
+    b = a+1;
+    std::cout << a << '+' << b << '=' << a + b << std

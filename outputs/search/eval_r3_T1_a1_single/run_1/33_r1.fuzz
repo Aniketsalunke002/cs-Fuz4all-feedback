@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main(int argc, char **argv)
+{
+	TemplatedFoo<int> myint;
+	myint.PrintStuff();
+	myint.a = 3;
+	myint.PrintStuff();
+	return 0;
+}
+template <typename T>
+class TemplatedFunction {
+public:
+	TemplatedFunction()
+	{
+		T c = 3.45;
+	}
+};

@@ -1,0 +1,112 @@
+#include <iostream>
+using namespace std;
+class A
+{
+protected:
+	int x;
+public:
+	A(): x(999){}
+};
+class B:protected A
+{
+	int y;
+public:
+	B():y(1000){}
+};
+int main()
+{
+     A one, two(one);
+     one=two;
+     ++one;
+     B three, four(three);
+     ++three;
+     ++four;
+     cout << one.x<<endl;
+     cout << two.x<<endl;
+     cout << three.y<<endl;
+     cout << four.y<<endl;
+     return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+	int *a=&10, b=20;
+	auto x=a; 
+	++x;
+	cout<< *a + *x <<endl;
+	cout<< a + b <<endl;
+	cout<< ++a << endl<< ++b << endl;
+	
+	int &y=a;
+	++y;
+
+	cout<< y+++b <<endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+	int aarr= {1,2,3,4,5}[];
+	int barr= {6,7,8,9,10,11}[];
+	int carr;
+	carr= {aarr + barr}[];
+	cout<< carr <<endl;	
+
+	auto darr={10,20,30,40,50,60,70,80,90,100}[];
+	cout<<darr[0]<<endl;
+
+	cout<< darr.size() << endl;
+
+	const int *earr={1,2,3};
+
+	earr+=1;
+	cout<<earr[0] << endl;
+
+	 
+	
+
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+	int f(int x)
+	{
+		return x + 10;
+	}
+	cout<< f(100);
+	cout<< endl;
+	cout<< ([](int x) { return x + 10; })(10);
+	cout<< f(10) << endl;
+	cout<< ([](auto x) { return x + 10; })(10) << endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+#include <cstring>
+#include <vector> 
+
+int main()
+{
+	int x=1;
+	int c;
+	char choice[100]; 
+	string menu[]={ "add","delete","edit", "list"};
+	cout<<"1 - add, 2- delete, 3 - edit, 4 - list"<< endl;
+	cin>> c;
+	
+	switch(c)
+	{
+	case 1: 
+	case '1': 
+		cout<<"Enter Name "<< endl;
+		cin>> choice;
+		cout<<"Enter Year "<< endl;
+		unsigned int year;

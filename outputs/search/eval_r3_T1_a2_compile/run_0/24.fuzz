@@ -1,0 +1,16 @@
+#include <iostream>
+
+struct X { int foo, bar; };
+struct Y { int baz; };
+
+template <class T> X* f(T* t) { return t; }
+Y* g() { return (Y*)f(static_cast<X*>(new X{ 123, 456 })); }
+
+int main() {
+	X x = { 111, 222 };
+	X* px = &x;
+	Y* py = g();
+
+	py->baz = 42;
+	std::cout << x.foo << " " << x.bar << " " << py->baz << std::endl;
+}

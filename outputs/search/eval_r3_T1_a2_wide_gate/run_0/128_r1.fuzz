@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+int b = 1;
+int main(int argc, char* argv[])    
+{
+    cout<<argv[0];
+    cin>>b;     
+    return 0;    
+}

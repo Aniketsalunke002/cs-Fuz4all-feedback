@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+int main( int argc, char *argv[] ) {
+    int a[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int b[10];
+    int t;
+    int bcnt;
+    int p[10] = {1};
+    bcnt = 1;
+    cout << "enter the number:" << endl;
+    cin >> t;
+    for ( int i = 1; i <= t; i++) {
+        int c = 0;
+        c =  p[1];
+        for ( int j = 1; j <= i; j++) {
+            p[j] = p[j] + p[j - 1];
+        }
+        b[bcnt ++] = c;
+    }
+    while ( t!= 0 ) {
+        for ( int i = 0; i < 10; i ++) {
+            p[t] = p[t] * a[i];
+        }
+    }
+    for ( int i = 0; i < bcnt; i++ ) {
+        cout << b[i] << " ";
+    }
+    cout << endl;
+    return 0;
+}

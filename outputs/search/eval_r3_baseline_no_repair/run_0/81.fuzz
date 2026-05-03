@@ -1,0 +1,103 @@
+#include <iostream>
+int * pi;
+int * & ri = pi;
+int main(int argc, char **argv) {
+    pi = new int(argc);
+    ri = new int(argc);
+    pi = new int(10);
+    delete ri;
+    printf("%d\n", *pi);
+}
+ 
+#include <iostream>
+#define DEBUG 1
+struct Person {
+    enum Gender { Male, Female };
+    char * name;
+    int birthday;
+    Gender gender;
+    void Print() const {
+        printf("%s, Gender = %d\n", name, gender);
+    }
+    void ~Person() {
+        delete[] name;
+        name = NULL;
+    }
+};
+Person * GetPerson() {
+    return new Person();
+}
+struct Parent {
+private:
+    int age;
+    Person * p;
+public:
+    Parent(int b, Person * parent) {
+        age = b + 8;
+        p = parent;
+    }
+    void Print(const Person * p) const {
+        printf("[Parent.age = %d]\t", age);
+        printf("[Parent.Person] ", p->Print());
+    }
+};
+struct Child : public Parent {
+private:
+    int age;
+    Person * p;
+    Parent f;
+public:
+    void Print(const Person * p) const {
+        printf("[Child.age = %d]\t", age);
+        printf("[Child.Person] ", p->Print());
+        printf("[Child.Parent] ", f.Print(p));
+    }
+};
+int main(int argc, char **argv) {
+    Person p;
+    p.name = new char[6];
+    strcpy(p.name, "Kim");
+    p.gender = Person::Male;
+    p.birthday = 2001;
+
+    Parent mom(12, &p);
+    Parent dad(40, &p);
+
+    Child kid(14, &p);
+
+    Parent * pp[3] = { &mom, &dad, &kid };
+
+    for (auto item = pp; item < pp + 3; item++) {
+        (*item)->Print(p);
+    }
+    return 0;
+}
+ 
+#include <iostream>
+typedef struct Struct
+{
+    int a;
+    int b;
+    int c;
+    int d;
+    int e;
+}Struct;
+int * f(Struct * s)
+{
+    s->a = 1;
+    s->b = 2;
+    s->c = 3;
+    s->d = 4;
+    s->e = 5;
+    int * ret = new int(10);
+    return ret;
+}
+int main(int argc, char ** argv)
+{
+    Struct s;
+    int * ret = f(&s);
+    ret = new int(20);
+    (*ret) = 30;
+    printf("%d\n", s.a);
+    return 0;
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+
+int mutant1() {
+	int a = -5;
+	return a;
+}
+
+bool mutant2() {
+	if (int a = 80; a + 700 * 133 == 80) {
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+
+double mutant3() {
+	if (int a = 80; a >= 80) {
+		return 123.4;
+	}
+	{
+		return 123.4;
+	}
+}
+
+int main() {
+	int a = 1;
+	if (int a = 0; a >= 0) {
+		return 42;
+	}
+	else {
+		return 142;
+	}
+}

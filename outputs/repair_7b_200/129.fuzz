@@ -1,0 +1,31 @@
+#include <iostream>
+int main()
+{
+    char *a = new char[2] {1, 2};
+    std::cout << a << std::endl;
+}<commit_msg>Added more tests of C++11<commit_after>#include <iostream>
+
+
+bool operator!(const bool& right)
+{
+    return!right;
+}
+double sqrt(const double& right)
+{
+    return std::sqrt(right);
+}
+double operator+(const double& left, const double& right)
+{
+    return left+right;
+}
+double operator-(const double& left, const double& right)
+{
+    return left - right;
+}
+double operator*(const double& left, const double& right)
+{
+    return left*right;
+}
+double operator/(const double& left, const double& right)
+{
+    return left/

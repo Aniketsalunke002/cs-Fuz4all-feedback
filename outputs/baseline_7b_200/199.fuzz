@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+class Student
+{
+    string name;
+    int age;
+  public:
+    Student(const string &s, int a) : name(s), age(a) {}
+    const string &getName() const { return name; }
+    int getAge() { return age; }
+};
+int main()

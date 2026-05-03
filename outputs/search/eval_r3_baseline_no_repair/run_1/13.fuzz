@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main()
+{	double a = 17.18;
+	cout << a << endl;
+	cin >> a;
+	return 0;
+}

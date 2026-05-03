@@ -1,0 +1,56 @@
+#include <iostream>
+std::vector<int> Vector;
+int main(int argc, char const *argv[])
+{
+	int i;
+	int random = (std::rand()%10);
+	Vector.push_back(random);
+	std::cout << "Random = " << random << '\n';
+	std::cin >> i;
+	std::cout << "Popped out = " << Vector.at(0) << '\n';
+	for(int j = 0;j < 10;j++){
+		std::cout << Vector.at(j) << '\n';
+	}
+	return 0;
+}
+ 
+#include <iostream>
+#include <string>
+class Student
+{
+	private:
+	std::string name;
+	std::string surname;
+	private:
+	public:
+	Student(std::string & _name,std::string & _surname){
+		name=_name;
+		surname=_surname;
+	}
+	std::string getFullName(){
+		return name + " " + surname;
+	}
+};
+class Person 
+{
+	public:
+	Person(std::string x){
+		std::cout << x << '\n';
+	}
+};
+class Employee 
+{
+	public:
+	Employee(std::string x){
+		std::cout << x << '\n';
+	}
+};
+int main() 
+{
+	std::string surname = "Angelica";
+	std::string name = "Carolina";
+	std::cout << "Student's Full Name = " << Student::getFullName() << '\n';
+	delete &surname;
+	delete &name;
+	return 0;
+}

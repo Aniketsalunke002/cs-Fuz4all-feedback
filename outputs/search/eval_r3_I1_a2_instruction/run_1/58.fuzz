@@ -1,0 +1,39 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+    for (int i = 0; i < argc; ++i){
+        std::cout << i << " "sv << argv[i] << '\n';
+    }
+}
+ 
+#include <iostream>
+#include <string>
+#include <string_view>
+#include <vector>
+#include <algorithm>
+using namespace std::literals::string_view_literals;
+int foo (char *argv){}
+ 
+#include <iostream>
+#include <string>
+#include <string_view>
+#include <vector>
+using namespace std::literals::string_view_literals;
+ 
+#include <iostream>
+#include <string>
+#include <string_view>
+#include <vector>
+#include <algorithm>
+using namespace std::literals::string_view_literals;
+int main(int argc, char* argv[]) {
+    for (int i = 0; i < argc; ++i) {
+        if ("--num"sv == argv[i]) {
+            foo(argv[i]);
+            foo(argv[i - 2]);
+        } else {
+            std::cout << "Not Found\n";
+        }
+    }
+}
+ 
+

@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int a[6] = {1,2,3,4,5,6};
+    int *p = &a[0], *q = &a[5];
+    for (; p<q; p++) {
+        if (*p==5) {
+            *p = 42;
+        }
+    }
+    for (int c=0; c<6; c++) {
+        cout << a[c] << " ";
+    }
+    cout << "\n";
+}
+
+template <typename T> void fizzbuzz(int limit) {
+    auto fizz=0, buzz=0;
+    for (T i=0; i<limit; i=i+1) {
+        cout << i << "\n";
+    }
+}
+
+ int main() {
+     cout << "Fizz Buzz\n";
+     cout << "-------------------------------------------------------\n";
+     cout << "Using integers as types: ";
+     fizzbuzz<int>(100);
+     cout << "Using strings as types:\n";
+     cout << "-------------------------------------------------------\n";
+     cout << "Please use string \"Fizz\", \"Buzz\", and \"Fizzbuzz\"\n";
+     cout << "for the result of the number when divisible by 3, by 5 and by 15\n";
+     fizzbuzz<string>("FizzBuzz");
+     cout << "-------------------------------------------------------\n";
+     return 0;
+ }

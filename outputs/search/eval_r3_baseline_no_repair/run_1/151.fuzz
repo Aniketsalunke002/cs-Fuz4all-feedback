@@ -1,0 +1,41 @@
+#include <iostream>
+class Complex {
+  int _a, _b;
+ public:
+  Complex(int a, int b) :_a(a), _b(b) {}
+  Complex() : _a(0), _b(0) {}
+  Complex(const Complex &complex) {
+    _a = complex._a;
+    _b = complex._b;
+  }
+   
+   
+   
+   
+   
+   
+  Complex& operator=(const Complex& complex) {
+    if (this!= &complex) {
+      _a = complex._a;
+      _b = complex._b;
+    }
+    return *this;
+  }
+  int *ptr() {
+    return &_a;
+  }
+};
+Complex f() {
+  Complex c1(1, 2);
+  Complex c2(c1);
+  Complex &c3 = c1;
+  return c1 = c2;
+}
+int main() {
+  Complex c1(1, 2);
+  Complex c2(c1);
+  Complex *c3 = &c1;
+  printf("%d %d %d\n", c1.ptr()[0], c2.ptr()[0], c3->ptr()[0]);
+  f();
+  return 0;
+}

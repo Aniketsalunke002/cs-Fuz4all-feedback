@@ -1,0 +1,15 @@
+#include <iostream>
+int main() {
+    struct a {};
+    struct b{a a;};
+    struct c{b b;};
+    struct d{c c;};
+    struct e{d d;};
+    struct f{e e;};
+    struct g{f f;};
+    struct h{g g;};
+    struct i{};
+    i.g.f.e.d.c.b.a.a=2;
+    std::cout<<i.g.f.e.d.c.b.a.a<<"\n";
+    return 0;
+}

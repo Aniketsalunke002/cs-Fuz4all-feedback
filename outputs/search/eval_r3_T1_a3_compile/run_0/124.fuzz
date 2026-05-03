@@ -1,0 +1,21 @@
+#include <iostream>
+int main()
+{
+    int a = 0;
+    int b;
+    int c;
+
+    b = ++a++;
+    std::cout << "Hello, " << b << "! I am so hungry\nMy last meal was made using " << c << " bread.\n";
+    return 0;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

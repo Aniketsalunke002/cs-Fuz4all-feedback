@@ -1,0 +1,42 @@
+#include <iostream>
+
+#include <string>
+
+using namespace std;
+
+namespace foo {
+    class Test {
+        public:
+        Test(){};
+        Test(string name){
+            cout << "Class Test Created" << endl;
+            str = name;
+            this->name = name;
+            cout << "Passed by value: " << str << endl;
+            cout << "Passed by reference: " << name << endl;
+        }
+        
+        void print(){
+            cout << str << " - " << this->name << endl;
+        }
+        
+        private:
+        string name;
+    };
+}
+
+
+
+
+int main()
+{
+    foo::Test test1("one");
+    foo::Test test2("Two");
+    test2 = test1;
+    test1.print();
+    test2.print();
+    test1 = foo::Test("Three");
+    test1.print();
+    return 0;
+}
+

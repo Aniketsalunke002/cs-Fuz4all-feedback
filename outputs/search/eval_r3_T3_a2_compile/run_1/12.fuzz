@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+class A
+{
+    public:
+	int iField;
+    private:
+	int jField;
+};
+int main()
+{
+    A temp;
+    A* pA = (A*) &temp;
+    (*pA).iField = 1;
+    cout << temp.iField << " " << temp.jField << endl;
+    return 0;
+}

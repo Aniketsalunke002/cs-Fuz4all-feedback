@@ -1,0 +1,8 @@
+#include <iostream>
+int main(int argc, char **argv)
+{ 
+  std::cout << "sizeof myclass = "<< sizeof(int) << std::endl;
+  int x = 0;
+  int y = x;
+}
+ 

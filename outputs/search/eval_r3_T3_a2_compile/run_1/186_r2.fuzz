@@ -1,0 +1,45 @@
+#include <iostream>
+
+template<typename T>
+class A
+{
+    public:
+        A(T t):val(t)
+        {}
+        auto& getVal()
+        {
+            return val;
+        }
+    private:
+        T val;
+};
+void print_A(const A<std::string>& object)
+{
+    std::cout << object.getVal();
+}
+int main(int argc, char *argv[])
+{
+    print_A(A<std::string>("HOLA"));
+    return 0;
+}
+
+// Test 3
+// #include <iostream>
+// class A
+// {
+//     public:
+//         A():val(34)
+//         {}
+//         A(const int& val_)
+//         :val(val_)
+//         {}
+//         auto& getVal()
+//         {
+//             return val;
+//         }
+//         void setValue(const int& val_)
+//         {
+//             val = val_;
+//         }
+//     private:
+//         int val;

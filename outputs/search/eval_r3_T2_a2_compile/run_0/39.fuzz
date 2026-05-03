@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    char c;
+    do {
+        cin >> c;
+        switch(c) {
+        case '\n':
+        cout << '\n';
+        break;
+        case '+':
+        cout << 'I';
+        break;
+        case '-':
+        cout << 'D';
+        break;
+        case '*':
+        cout << 'W';
+        break;
+        case '/':
+        cout << 'Q';
+        break;
+        }
+    } while (c!='.');
+}

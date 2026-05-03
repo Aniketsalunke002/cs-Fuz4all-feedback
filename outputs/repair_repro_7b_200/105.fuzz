@@ -1,0 +1,13 @@
+#include <iostream>
+int array[] { 10, 20, 30 };
+int& array_ref(int i)
+{
+    return array[i + 1];
+}
+int main(void) {
+    std::cout << array[1] << std::endl;
+    array_ref(0) = 100;
+    std::cout << array[1] << std::endl;
+    return 0;
+}
+ 

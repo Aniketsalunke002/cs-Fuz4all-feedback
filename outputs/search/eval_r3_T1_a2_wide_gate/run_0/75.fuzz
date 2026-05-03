@@ -1,0 +1,64 @@
+#include <iostream>
+class Student
+{
+	int age;
+	int marks;
+
+public:
+	Student(int age, int marks) {
+		this->age = age;
+		this->marks = marks;
+	}
+	void print();
+	void mark();
+	int getAge() {
+		return this->age;
+	}
+	int getMarks() {
+		return this->marks;
+	}
+};
+void Student::print() {
+	std::cout << "My Age : " << this->age;
+	std::cout << " My Marks : " << this->marks;
+	std::cout << std::endl;
+}
+void Student::mark() {
+	this->marks;
+}
+int main() {
+	Student Mark (10, 100);
+	Mark.print();
+	Mark.mark();
+	return 0;
+}
+#include <iostream>
+#include <thread>
+#include <chrono>
+std::mutex mt;
+int main() {
+	std::chrono::steady_clock::time_point a = std::chrono::steady_clock::now();
+	std::thread t1 ( [] () {
+		for(int i = 1; i<=10;i++) {
+			mt.lock();
+			std::cout << i << ";";
+			mt.unlock();
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+		}
+	});
+	std::thread t2 ( [] () {
+		for (int i = 11; i<=20; i++) {
+			mt.lock();
+			std::cout << i << ";";
+			mt.unlock();
+			std::this_thread::sleep_for(std::chrono::seconds(1));
+		}
+	});
+	std::chrono::steady_clock::time_point b = std::chrono::steady_clock::now();
+	std::chrono::milliseconds elapsed_time =
+		std::chrono::duration_cast<std::chrono::milliseconds>(b - a);
+	std::cout << "Thread 1 =\t" << elapsed_time.count() << std::endl;
+	t1.join();
+	t2.join();
+	return 0;
+}

@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+  double value = 5.682;
+  printf("%.4f ", pow(value, value));
+  return 0;
+}

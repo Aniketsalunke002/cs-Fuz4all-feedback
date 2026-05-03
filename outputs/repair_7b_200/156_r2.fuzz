@@ -1,0 +1,7 @@
+#include <iostream>
+
+#include <map>
+int main()
+{
+    std::map<size_t, size_t> x{ std::initializer_list<std::map<size_t, size_t>::value_type>{} };
+}

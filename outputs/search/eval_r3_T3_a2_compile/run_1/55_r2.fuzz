@@ -1,0 +1,16 @@
+#include <iostream>
+
+template <typename TT>
+void print(const TT& val) {
+	std::cout << val << std::endl;
+}
+template <typename TT, typename... Types>
+void print(const TT& val, const Types&... vals) {
+	std::cout << val << " ";
+	print(vals...);
+}
+int main(void) {
+	auto str = "Hello";
+	auto x = print<int,double,int,char>(1111,444.4,121315, str);
+	return 0;
+}

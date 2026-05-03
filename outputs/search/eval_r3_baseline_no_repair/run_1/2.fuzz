@@ -1,0 +1,23 @@
+#include <iostream>
+
+
+using namespace std;
+
+template<typename E> class Vector {
+public:
+    E& at(index index) {return array[index];}
+    E& operator[](index index) {return array[index];}
+    
+    friend ostream& operator<<(ostream& os, const Vector& v) {
+        copy(v.begin(), v.end(), ostream_iterator<E>(os));
+        return os;
+    }
+};
+
+int main() {
+    Vector<int> vec(10);
+    fill(vec.begin(), vec.end(), 0);
+    copy_if(vec.begin(), vec.end(), vec.begin(), greater<int>());  
+    
+    cout << vec << endl;
+}

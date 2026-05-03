@@ -1,0 +1,11 @@
+#include <iostream>
+int main()
+{
+int x = 30; if(x > 7); {
+	x = x * 2; 
+} else if(x < -3)
+	x = x - 5;
+
+return 1;
+}
+

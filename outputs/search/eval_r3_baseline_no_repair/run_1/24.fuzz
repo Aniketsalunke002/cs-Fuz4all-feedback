@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    unsigned int a = 2;
+    int b = -2;
+    a+=3;
+    b+=1;
+    cout << "a=" << a << endl;
+    cout << "b=" << b << endl;
+    b-=2;
+    a-=2;
+    cout << "a=" << a << endl;
+    cout << "b=" << b << endl;
+    return 0;
+  
+}

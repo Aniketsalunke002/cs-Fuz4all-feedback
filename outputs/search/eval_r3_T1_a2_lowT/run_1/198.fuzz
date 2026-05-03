@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int summation[10];
+	for (int a = 0; a < 10; a++) {
+		summation[a] = a * 2;
+	}
+	int counter = 0;
+	do {
+		if (summation[counter] % 2 == 0) {
+			summation[counter]++;
+		} 
+		else {
+			summation[counter]--;
+		}
+		
+		
+	} while (counter++ < 10);
+	for (int e = 0; e < 10; e++) {
+			cout << summation[e] << endl;
+	}
+}
+ 
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+int main() {
+	int count = 0;
+	while (count < 10){
+		printf("I am the most useless game I've ever seen.");
+		printf("It's time for me to shut up.");
+		printf("Count: %d\n", count++);
+	}
+	printf("This is how useless I get.");
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+	try {
+		throw 1/0;
+	} catch (int a) {
+		printf("Divide by zero caught!");
+	}
+}

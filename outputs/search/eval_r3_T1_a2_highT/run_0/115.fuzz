@@ -1,0 +1,107 @@
+#include <iostream>
+int main() {
+  ::std::cout << 291 << "\n";
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  ::std::cout << 291 << "\n";
+  return 0;
+}
+ 
+#include <iostream>
+
+ 
+class Complex {};
+
+ 
+#if defined(__GNUC__) || defined(__clang__)
+ 
+auto int main() -> int
+#elif defined(_MSC_VER)
+ 
+auto __stdcall int, wchar_t* -> int
+#else
+#error no suitable compiler platform detected
+#endif
+{
+   
+  ::std::cout << ::Complex().sin() << "\n";
+}
+ 
+#include <iostream>
+#include <filesystem>
+#include <sstream>
+
+int main()
+{
+     
+    auto fs = std::filesystem::path("test").parent_path();
+    auto result = std::filesystem::exists(fs);
+    if (result) {
+        std::cout << fs.string() << '\n';
+    }
+
+     
+    auto input = std::string("test");
+    auto output = input;
+    for (auto &c : output) {
+        c = std::toupper(c);
+    }
+
+    std::cout << output << '\n';
+}
+ 
+#include <iostream>
+
+extern "C" void my_c_function();
+
+int main(int argc, char **args)
+{
+  std::ifstream my_file("./test.txt");
+  std::string line;
+  std::getline(my_file, line);
+
+  my_c_function(line);
+}
+ 
+#include <iostream>
+
+int main(int argc, char *args[])
+{
+  ::std::cout << "You can see how cxx does not break your code\n";
+}
+ 
+#include <algorithm>
+#include <iostream>
+#include <string>
+int main(int argc, char *args[])
+{
+    std::string value("test_value");
+    if (std::all_of(value.begin(), value.end(), ::toupper))
+        std::cout << value << std::endl;
+
+     
+    for (auto &c : value) {
+        c = std::toupper(c);
+    }
+    if (std::all_of(value.begin(), value.end(), ::toupper))
+        std::cout << value << std::endl;
+}
+ 
+#if __has_builtin(__builtin_strlen)
+#include <cstring>
+#endif
+#include <iostream>
+int main(int argc, char *args[])
+{
+#if __has_builtin(__builtin_strlen)
+    ::std::cout << ::strlen("test") << "\n";
+#endif
+}
+/* Try to be very careful when you are using the #include <...> syntax.
+   For example, code often depends on other files being included to work
+   correctly. If a third party file is included, you must ensure that it does
+   not break the compile for the users of cxx. This can be difficult if you
+   do not use include

@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int max = 0;
+    for (int i = 2; i <= 100; i++) {
+        if (max < i * 10) {
+            max = i * 10;
+        }
+    }
+    cout << "Max is " << max << endl;
+    return 0;
+}

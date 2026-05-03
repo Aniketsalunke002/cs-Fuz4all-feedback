@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+void doTest() {
+	int x = 10;
+	int y = 10;
+	int &z = x;
+	if (y == ++x) {
+		z++;
+	} else std::cout << "Hello world!" << std::endl;
+}
+int main() {
+	doTest();
+	return 0;
+}
+ 
+#ifndef STRUCTURE_HPP
+#define STRUCTURE_HPP
+
+class MyFirstClass {
+public:
+	int variable;
+	MyFirstClass(int var) {
+		variable = var;
+	}
+	int aFunctionToReturn(int varOne, float varTwo){
+		float varThree = varTwo * varTwo;
+		return varOne + varTwo;
+	};
+	
+};
+#endif
+ 
+
+int main() {
+	return 0;
+}

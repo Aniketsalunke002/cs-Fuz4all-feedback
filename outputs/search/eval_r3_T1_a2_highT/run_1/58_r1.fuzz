@@ -1,0 +1,20 @@
+#include <iostream>
+
+
+int main() {
+  int mut_var;
+  std::cin >> mut_var;
+  int sum = mut_var;
+  std::cout << sum;
+  return 0;
+}
+
+int summation(int &mut_var, int a, int old) {
+  int sum = a + old;
+  if (mut_var > 0) {
+    mut_var -= 1;
+    std::cout << mut_var;
+    return a - a + summation(mut_var, a, sum + old);
+  }
+  return sum;
+}

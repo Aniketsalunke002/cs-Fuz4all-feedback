@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+  int array_674_16[16] = {0.674, 2.6456, 2.834, 5.5559, 4.987, 5.02332, 3.546, 2.934, 5.023, 2.93498, 4.5935, 95.2, 96.23};
+  int* q_674_16 = &array_674_16[6];
+  int* r_674_16 = nullptr;
+  cout << "array_674_16 = " << array_674_16 << endl;
+  cout << "array_674_16[6] = " << array_674_16[6] << endl;
+  cout << "array_674_16[14] = " << array_674_16[14] << endl;
+  cout << q_674_16 << " = " << *q_674_16 << endl;
+  cout << r_674_16 << " = " << *r_674_16 << endl;
+  *r_674_16 = 899;
+  cout << "*r_674_16 = " << *r_674_16 << endl;
+  cout << "array_674_16[6] = " << array_674_16[6] << endl;
+  cout << "array_674_16[14] = " << array_674_16[14] << endl;
+  return 0;
+}
+// and some variables renamed for clarity. Added a comment that array is a
+// one-dimensional array.
+// #include <iostream>
+// using namespace std;
+// int main() {
+//   int array[16] = {0.674, 2.

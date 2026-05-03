@@ -1,0 +1,22 @@
+#include <iostream>
+int main() {
+	int x = 5;
+	int y = 3;
+	if(y > x) x = y;
+	std::cout << x;
+	std::cout << y;
+}
+ 
+#include <iostream>
+#include <string>
+int main() {
+	std::string word = "Gary";
+	for(int i = 0; i < word.size(); ++i) {
+		word[i] = word[i] + 1;
+		std::cout << word << " ";
+	}
+	for(int i = 0; i < word.size(); ++i) {
+		word[i] = word[i] - 1;
+		std::cout << word << " ";
+	}
+}

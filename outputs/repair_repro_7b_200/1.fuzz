@@ -1,0 +1,16 @@
+#include <iostream>
+
+
+class A {
+public:
+    std::string getName()
+    {
+        static auto name = "Test";
+        return name;
+    }
+
+    void say()
+    {
+        std::cout << getName() << " says";
+    }
+};

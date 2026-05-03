@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+  float x = 1.0, y = 0, z = 2.0;
+  cout << x << y << z << endl;
+  cin >> x;
+  cout << x << y << z << endl;
+  return 0;
+}
+// Compiler command:
+// clang++ -c -o /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T1_a3_compile/run_0/46.o /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T1_a3_compile/run_0/46.fuzz -fsanitize=address -fno-omit-frame-pointer -D_FORTIFY_SOURCE=2 -std=c++11
+// # 0 0x4102e1 in __sanitizer::internal_memcpy(void*, void const*, unsigned long) (/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T1_a3_compile/run_0/46+0x4102e1)
+// # 1 0x4066e5 in __asan_memcpy /tmp/final/llvm.src/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:25
+// # 2 0x4066e5 in __asan_memcpy4 /tmp/final/llvm.src/projects/compiler-rt/lib/asan/asan_interceptors_memintrinsics.cc:25
+// # 3 0x408225 in __interceptor_memcpy /tmp/final/llvm.src/projects/compiler-rt/lib/asan/asan_interceptors.cc:244
+// # 4 0x4024d6 in main /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T1_a3_compile/run_0/46.fuzz:10
+// # 5 0x7f5a3588

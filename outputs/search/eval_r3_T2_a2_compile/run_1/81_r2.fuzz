@@ -1,0 +1,7 @@
+#include <iostream>
+
+int main4() {
+  int a = 2, b;
+  a? b = -5 : std::cout << -7 << std::endl;
+  return 0;
+}

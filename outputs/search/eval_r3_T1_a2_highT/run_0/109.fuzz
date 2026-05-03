@@ -1,0 +1,5 @@
+#include <iostream>
+int main() {
+  ::std::cout << 250 + 500 + 750 + 850 + 1100 + 1000 << "\n";
+  return 0;
+}

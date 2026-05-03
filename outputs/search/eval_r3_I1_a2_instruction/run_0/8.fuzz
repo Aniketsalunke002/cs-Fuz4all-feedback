@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main (int argc, char** argv) {
+    int a; int b; int c; int n; int h=0;
+    a=100; b=200;
+    a+=b;
+    b=a^2^2;
+    a*=8;
+    h+=(a+b);
+    cerr<<a<<" "<<b<<" "<<c;
+    return 0;
+}

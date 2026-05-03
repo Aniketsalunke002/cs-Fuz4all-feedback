@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+#include <math.h>
+double myPI = 3.1415;
+int main()
+{
+double x1,y1,z1,g;
+cin>>x1>>y1>>z1>>g;
+double t = (x1+y1+z1)/2;
+t = sqrt(t);
+t = t - (x1*x1+y1*y1+z1*z1);
+g = g*0.5;
+x1 += g*(y1+z1-x1);
+y1 += g*(x1+z1-y1);
+z1 += g*(y1+x1-z1);
+t = sqrt(x1 * x1 + y1 * y1);
+t = t - (x1 * x1 + y1 * y1 + z1_z1);
+cout << myPI * t << " " << myPI * t * t * t / 3 << endl;
+return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+#include <iostream>
+using namespace std;
+double c, r;
+void circle(double input, double input2){
+    c = input;
+    r = input2;
+}
+main()
+{
+    double c,r;
+    circle(5,5);
+    double pi = 3.1415;
+    double a = 1;
+    double res = a*r*r*pi;
+    cout<<"The area of "<<c<<" circle is "<<res<<endl;
+}
+ 
+#include <iostream>
+using namespace std;
+double c,r;
+void circle(double l, double radius) 
+{
+    c=l;
+    r=radius;
+}
+void circle2(double l, double radius,double pi) 
+{
+    c=l;
+    r=radius;
+    circle(pi*r*r);
+    cout<<"The area is "<<area<<endl;
+}
+main()
+{
+    circle(5,5);
+    circle2(3,3);
+}
+ 
+class Student{
+       public: 
+        Student(){Name = "",ID = 0,Marks = 0.0};
+        Student(string x, int y, double z){Name = x;ID = y;Marks = z;}
+        void show(){
+          cout<<"Name: "<<Name<<endl<<"ID: "<<ID<<endl<<"Mark: "<<Marks<<endl

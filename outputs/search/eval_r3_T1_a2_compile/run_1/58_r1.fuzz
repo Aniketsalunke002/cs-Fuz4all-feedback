@@ -1,0 +1,23 @@
+#include <iostream>
+
+void f()
+{
+    std::cout<<sizeof(int)<<' ';
+    unsigned short x=500;
+    unsigned char c='a';
+    std::cout<<sizeof(c)<<' ';
+    std::cout<<sizeof(x)<<' ';
+    int *p;
+    double *q;
+    p=&x;
+    q=&x;
+    std::cout<<p<<std::endl;
+    ++p;
+    std::cout<<*q<<std::endl;
+}
+
+int main(int argc, char *argv[])
+{
+    f();
+    return 0;
+}

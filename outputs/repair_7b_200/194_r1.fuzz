@@ -1,0 +1,15 @@
+#include <iostream>
+
+#include <map>
+using namespace std;
+int main()
+{
+    string s = "Hello World!";
+    map<char,int> counts;
+    for (const char &c : s)
+    {
+        counts[c]++;
+    }
+    cout << counts['o'];
+    return 0;
+}

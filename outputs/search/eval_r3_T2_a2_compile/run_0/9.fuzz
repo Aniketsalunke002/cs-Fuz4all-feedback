@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+class MyClass 
+{
+   int a;
+   MyClass( int aa) : a(aa) {};
+   friend int foo(int c)
+   {
+     MyClass aa;
+   }
+};
+int bar(int c) 
+{
+   MyClass aa;
+}
+int foo(int c)
+{
+   MyClass aa;
+}
+int main ()
+{
+  return -1;
+}

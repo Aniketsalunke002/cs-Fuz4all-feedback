@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+template<class T1,class T2,class T3>
+class test
+{
+	int a,b,c;
+	public:
+	test(T1 aa,T2 bb,T3 cc):a(aa),b(bb),c(cc){}
+	T3 ret();
+};
+template<class T1,class T2,class T3>
+T3 test<T1,T2,T3>::ret()
+{
+	return (a+b+c);
+}
+int main()
+{
+	test<int,int,int> obj(2,7,9);
+	test<double,double,double> objd(2,7,9);
+	cout<<obj.ret()<<endl;
+	cout<<objd.ret()<<endl;
+	return 0;
+}

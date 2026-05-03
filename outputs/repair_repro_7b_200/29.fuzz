@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main(void) {
+    int x = 10, y = 20;
+	cout << "Hello World!" << '\n';
+
+}
+ 
+#include <iostream>
+using namespace std;
+int main(void) {
+    int x = 10, y = 20;
+	cout << "Hello World!" << endl;
+
+}
+ 
+#include <iostream>
+using namespace std;
+int main(void) {
+    int x = 10, y = 20;
+    int z = 5 + 10 / 3;
+    cout << "Hello World!" << endl;
+
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+	int x = 10, y = 20;
+    const int z = 5 + 10 / 3;
+    cout << "Hello World!" << endl;
+
+}

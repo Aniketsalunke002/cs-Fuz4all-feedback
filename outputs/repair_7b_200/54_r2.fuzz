@@ -1,0 +1,9 @@
+#include <iostream>
+
+template <typename T> struct A{
+    int value;
+    A(){}
+    A(T t){
+        value = t.value;
+    }
+    friend std::ostream& operator << (std::ostream& o, const A& a){

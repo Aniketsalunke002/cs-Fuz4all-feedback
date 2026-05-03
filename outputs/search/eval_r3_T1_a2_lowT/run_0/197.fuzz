@@ -1,0 +1,22 @@
+#include <iostream>
+int main()
+{
+    int a;
+    double b;
+    std::cin>>a;
+    std::cin>>b;
+    std::cout<<a<<std::endl<<b<<std::endl;
+}
+ 
+#include <iostream>
+int main()
+{
+    int a, b;
+    float x, y;
+    std::cin>>a;
+    std::cin>>b;
+    std::cout<<a+b<<std::endl;
+    std::cin>>x;
+    std::cin>>y;
+    std::cout<<x+y<<std::endl;
+} 

@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+class MyClass2 : protected MyClass1
+{
+    std::string m_name;
+    public:
+    MyClass2()
+    {
+        std::cout<<"In MyClass2 Constructor"<<"\n";
+        m_name = "name";
+    }
+    ~MyClass2()
+    {
+        std::cout<<"In MyClass2 Destructor"<<"\n";
+    }
+    void set_name(const std::string& name)
+    {
+        m_name = name;
+    }
+    virtual void print()
+    {
+        std::cout<<"Hello My name is "<<m_name<<"\n";
+    }
+};
+int main()
+{

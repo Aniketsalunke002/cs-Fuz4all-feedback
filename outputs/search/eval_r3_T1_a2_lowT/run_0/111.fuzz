@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    vector int v;
+    int* ptr;
+    ptr = &*v.begin();
+    
+}

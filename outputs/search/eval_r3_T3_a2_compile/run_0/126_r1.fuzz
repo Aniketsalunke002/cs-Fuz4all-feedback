@@ -1,0 +1,25 @@
+#include <iostream>
+
+template <typename T>
+class Complex
+{
+	T a;
+	public:
+		Complex(T r)
+		{
+			a = r;
+		}
+		Complex operator + (Complex x)
+		{
+			Complex temp;
+			temp.a = a+x.a;
+			return temp;
+		}
+};
+int main()
+{
+	Complex<int> c1(5);
+	Complex<int> c2(10);
+	Complex<char> c3('a');
+	Complex<char> c4('c');
+}

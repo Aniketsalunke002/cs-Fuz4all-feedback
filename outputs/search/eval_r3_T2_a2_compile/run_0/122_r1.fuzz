@@ -1,0 +1,10 @@
+#include <iostream>
+
+#include <string>
+int main(){
+  int a,b,c,d,e,f,g;
+  std::string h;
+  std::cin>>a>>b>>c>>d>>e>>f>>g>>h;
+  std::cout<<d*e*f-(a+b*g)*h<<std::endl;
+  return 0;
+}

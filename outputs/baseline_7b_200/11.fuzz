@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    string a("Hello world");
+    cout << "Before: " << a << endl;  
+     
+    for (int count = 1; count <= 5; count++) 
+        a[count] = 'x';  
+                       
+    cout << "After: " << a << endl;  
+     
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+
+struct car {
+    int maxSpeed;
+    int maxDistance;
+    int maxGear;
+    ~car(){
+        cout << "Number of created cars:" << count << endl;
+   

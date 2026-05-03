@@ -1,0 +1,21 @@
+#include <iostream>
+int f() {
+    int i = 42;
+    std::cout << "Hello world" << i << std::endl;
+    i = 43;
+    return i;
+}
+
+int main() {
+    int x = f();
+    return x;
+}
+ 
+#include <iostream>
+
+int main(void){
+  int i = 42;
+  std::cout << "Hello world" << i << std::endl;
+  i = 43;
+}
+

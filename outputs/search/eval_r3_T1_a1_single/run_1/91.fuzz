@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+struct Point {
+	Point(int,int);
+	virtual ~Point();
+	int x;
+	int y;
+};
+Point::Point(int val1,int val2):x(val1),y(val2)
+{
+}
+Point::~Point()
+{
+}
+class MutatedPoint : public Point
+{
+public:
+	MutatedPoint(int,int);
+	void printPoint();
+	virtual ~MutatedPoint();
+};
+MutatedPoint::MutatedPoint(int val1,int val2):Point(val1,val2)
+{
+}
+void MutatedPoint::printPoint()
+{
+	cout << " x = " << x << " y = " << y << endl;
+}
+MutatedPoint::~MutatedPoint()
+{
+}
+ 

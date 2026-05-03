@@ -1,0 +1,12 @@
+#include <iostream>
+using std::cout;
+using std::endl;
+int foo_new(int a, int b) {
+    return a +b;
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7;
+    foo_new(a, a);
+    cout << foo_new(b, b) << endl;
+}

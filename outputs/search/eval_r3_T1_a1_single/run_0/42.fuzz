@@ -1,0 +1,5 @@
+#include <iostream>
+int main() {
+  int z{0}, q{12}, r{4};
+  std::cout << (std::make_tuple(q, r, z)); 
+}

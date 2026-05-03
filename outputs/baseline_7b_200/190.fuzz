@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+
+    int x = 10;
+    int y = 40;
+    int z = x;
+
+    x = z;
+
+    cout << x << endl;
+    cout << z << endl;
+}

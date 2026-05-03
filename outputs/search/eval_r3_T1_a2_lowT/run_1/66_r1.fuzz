@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << argc << " ";
+    struct Data
+    {
+        ~Data()
+        {
+            cout << "~Data\n";
+        }
+        void doSomething()
+        {
+            cout << "Data::doSomething\n";
+        }
+    };
+    struct Data2
+    {
+        ~Data2()
+        {
+            cout << "~Data2\n";
+        }
+        void doSomething()
+        {
+            cout << "Data2::doSomething\n";
+        }
+    };
+    Data2 cdt;
+#ifdef TEST_COMPILER
+    std::auto_ptr<Data2> pd = std::auto_ptr<Data2>(new Data2);
+    pd->doSomething();
+    pd.reset(new Data2);
+    pd->doSomething();
+#else
+    Data2* pd = new Data2;
+    pd->doSomething();
+    delete pd;
+#endif
+    Data2 dt(std::move(cdata));
+    Data2 cdt2(std::move(dt));
+    dt.doSomething();
+    cdt2.doSomething();
+    cdt2 = std::move(dt);
+    cdt2.doSomething();
+    cout << "end of main\n";
+    return 0;
+}

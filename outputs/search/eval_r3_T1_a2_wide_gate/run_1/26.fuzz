@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+class Bla bla;
+void doTest() {
+	cout << "Hello World";
+}
+int main() {
+	doTest();
+	return 0;
+}

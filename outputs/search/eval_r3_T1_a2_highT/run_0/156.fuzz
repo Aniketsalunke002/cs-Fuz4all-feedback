@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int n = 0;
+  int x;
+  int y = n;
+  while (1) {
+    n += 2;
+    x = n % 4;
+    if (x == 0 && n >= 3) {
+      y = n;
+    }
+    if (x == 2) {
+      cout << "3" << endl;
+    } else {
+      cout << x + 1 << endl;
+    }
+  }
+}

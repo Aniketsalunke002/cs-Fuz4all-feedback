@@ -1,0 +1,19 @@
+#include <iostream>
+int main(void)
+{
+	char test[] = "hello world";
+	char a = test[0];
+	std::cout << a << std::endl;
+	return 0;
+}
+ 
+#include <iostream>
+
+int main() {
+    return 0;
+}
+ 
+ 
+
+
+

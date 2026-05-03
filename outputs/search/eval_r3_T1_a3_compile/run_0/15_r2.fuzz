@@ -1,0 +1,44 @@
+#include <iostream>
+
+using namespace std;
+
+struct Foo {
+    int bar(int);
+};
+
+int Bar::bar(int y) {return x*y;}
+
+int Foo::bar(int y) {return x*y;}
+
+int main() {
+    int x = 1337;
+    Foo f1;
+    Bar b1;
+    cout<< f1.bar(x)+b1.bar(x) << endl;
+    
+    return 0;
+}
+// #include <iostream>
+// using namespace std;
+// int main(int argc, char **argv) {
+//     const double ratio = 2;
+//     if (std::stoi(argv[1])/ratio%2 == 0) {
+//         cout << std::stoi(argv[1])/ratio;
+//     } else {
+//         cout << std::stoi(argv[1])/ratio/3;
+//     }
+//     std::cout << std::std::endl;
+// 
+//     return 0;
+// }
+//  
+// #include <iostream>
+// 
+// int main() {
+//     int x=0,y=10,z=9;
+// 
+//     std::cout << x + y + z << std::endl;
+//     std::cout << (x+y+z)/3 << std::endl;
+// 
+//     return 0;
+// }

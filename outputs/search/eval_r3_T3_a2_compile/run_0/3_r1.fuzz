@@ -1,0 +1,37 @@
+#include <iostream>
+
+
+template <typename T>
+class MyVector : public std::valarray<T>
+{
+    using std::valarray<T>::valarray;
+public:
+    void print()
+    {
+        const size_t size = size();
+        for(size_t i = 0; i < size; i++)
+            std::cout << this->at(i) <<'';
+        std::cout << '\n';
+    }
+};
+
+int main()
+{
+    MyVector<int> v(3);
+
+    v[0] = 10; v[1] = 20; v[2] = 30;
+    v += v;
+    v.print();
+
+    v[0] = -1;
+    v.print();
+
+    v[2] = 0;
+    v[1] = 1;
+    v.print();
+
+    v.resize(v.size() + 1);
+    v.print();
+}
+// Verified by running the following command:
+// $ CXX=g++-10./a.out

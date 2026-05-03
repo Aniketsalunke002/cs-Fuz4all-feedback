@@ -1,0 +1,10 @@
+#include <iostream>
+int main ()
+{
+    int input;
+    std::cout << "please enter any integer ";
+    std::cin >> input;
+    int *p= new int[input];
+    std::cout << "the allocation is at location " <<p << " and size is "<<sizeof *p << " byte";
+    return 0;
+}

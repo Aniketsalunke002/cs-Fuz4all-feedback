@@ -1,0 +1,28 @@
+#include <iostream>
+ void __VERIFIER_assert(int cond) {
+  if(!(cond)) {
+      ERROR: goto ERROR;
+  }
+ }
+int main()
+{
+    std::cout<<"Hello, world!"<<std::endl;
+    return 0;
+}
+ 
+ 
+#include <iostream>
+ void __VERIFIER_assert(int cond) {
+  if(!(cond)) {
+      ERROR: goto ERROR;
+  }
+ }
+int main()
+{
+    int i = 0;
+    do {
+        std::cout << "Halloo world2!" << std::endl;
+        i++;
+    } while (i < 10000000000);
+    return 0;
+}

@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+int mutator(std::vector<int>* v) {
+	v->push_back(std::rand());
+	return v->size() - 1;
+}
+int main() {
+	std::vector<int>* v = new std::vector<int>();
+	 std::rand();
+	 std::vector<int>::iterator it;
+	for (it = v->begin(); it!= v->end();it++) {
+		std::rand();
+	}
+	 return v->size();
+}
+ 
+#include <iostream>
+#include <algorithm>
+#include <vector>
+int mutator(std::vector<int>* v) {
+	v->push_back(std::rand());
+	return v->size() - 1;
+}
+int main() {
+	std::vector<int>* v = new std::vector<int>();
+	std::rand();
+	 std::generate(v->begin(), v->end(), std::rand);
+	 return v->size();
+}

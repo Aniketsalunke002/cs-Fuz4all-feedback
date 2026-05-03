@@ -1,0 +1,29 @@
+#include <iostream>
+
+#include <limits>
+int main() {
+	int x,y;
+	do {
+		std::cout << "Please enter a number: ";
+		std::cin >> x;
+		std::cin.clear();
+		if(x!= -1) {
+			switch(x & 3) {
+			case 0:
+			case 1:
+				std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+				std::cout << "Please enter another number: ";
+				std::cin >> y;
+				std::cin.clear();
+				std::cout << "The result is " << ((x&1)? y : ~y) << std::endl;
+				break;
+			case 2:
+				std::cout << ((y = ~y, y)? "YES" : "NO") << std::endl;
+				break;
+			}
+		}
+	} while(x!= -1);
+	return 0;
+}
+// gcc 4.9.3 20150529 (Debian 4.9.3-9+deb8u1)
+// Note: I was unable to run "gcc ~/code/fuzz-data/A/bin/eval_r3_T1_a2_highT > A &&./A". It seems like no library is linked in A.

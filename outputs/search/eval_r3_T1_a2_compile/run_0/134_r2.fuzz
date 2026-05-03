@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+int addX(int n, int x){
+    return n + x;
+}
+
+int main(){
+    cout << "sum: " << addX(5,5) << endl;
+}
+#include <iostream>
+using namespace std;
+int addX(int n, int x){
+    return n + x;
+}
+
+int main(){
+    cout << "sum: " << addX(10,2) << endl;
+}
+#include <iostream>
+using namespace std;
+int addX(int n, int x){
+    return n + x;
+}
+
+int main(){
+    cout << "sum: " << addX(10,4) << endl;
+}
+#include <iostream>
+using namespace std;
+int addX(int n, int x){
+    return n + x;
+}
+
+int main(){
+    cout << "sum: " << addX(10,8) << endl;
+}

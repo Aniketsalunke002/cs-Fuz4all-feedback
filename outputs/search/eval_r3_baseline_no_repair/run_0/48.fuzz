@@ -1,0 +1,13 @@
+#include <iostream>
+void foo(int *a)
+{
+    *a = 10;
+}
+int main()
+{
+    int a;
+    a = 5;
+    std::cout << a << std::endl;
+    foo(&a);
+    std::cout << a << std::endl;
+}

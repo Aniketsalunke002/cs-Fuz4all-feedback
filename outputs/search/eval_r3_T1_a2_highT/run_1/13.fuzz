@@ -1,0 +1,13 @@
+#include <iostream>
+int main(void)
+{
+    int i = 31;
+    int &l = i;
+	i = 39;
+    cout << i << " " << l << " ";
+	int i1 = 35;
+	i += i1;
+	l += i1;
+	cout << i << " " << l << endl;
+    return 0;
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+int main(int argc, char *argv[]) {
+    int &x = static_cast<int&>(*argv[1]);
+    std::cout << x << std::endl;
+    int &y = static_cast<int&>(*argv[2]);
+    for(int i = 3; y > 0; ++i) {
+        if(x > y) {
+            int t = x;
+            x = y;
+            y = t;
+        }
+        std::cout << x << " " << y << std::endl;
+        y--;
+    }
+    std::cout << x << " " << y << std::endl;
+}

@@ -1,0 +1,4 @@
+#include <iostream>
+#include <vector>
+int main() { std::vector<int> t(20); t[20] = 1; std::cout << t[19]; }
+uint8_t fuzzme[16] = {0xe4, 0x0f,0x35, 0x46, 0xfe, 0x73, 0x0b};

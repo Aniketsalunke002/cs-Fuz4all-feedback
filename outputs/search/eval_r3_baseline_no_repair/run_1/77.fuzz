@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i = 0;
+	if (i < 42) {
+		cout << "Hello world!\n";
+	}
+
+	return 0; 
+}

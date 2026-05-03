@@ -1,0 +1,67 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+	long long res = 0;
+	const long long N = 2147483647;  
+	for (long long i = 0; i < N; i++) {
+		res += (i % 2) * N;  
+	}
+    std::cout << res << '\n';
+	return 0;
+}
+
+ 
+ 
+
+ 
+#include <chrono>
+using namespace std::chrono;
+const long long N = 2147483647;  
+inline unsigned long long factorial(unsigned long long n) {
+    return n <= 1? n : n*factorial(n-1);
+}
+long long modularPower(long long n, long long k) {
+    static long long m = N, mod = 1e9+7;
+    return (k == 0)? 1 : (n*modularPower(n, k-1) % mod);
+}
+long long modularExponentiation(long long a, long long k, long long p, long long s) {
+    static long long mod = 1e9+7;
+    unsigned long long ktmp = k;
+    long long r = 1;
+    while (ktmp > 0) {
+        long long t = modularPower(a, ktmp-1, p);
+        long long q = (t == 1)? 1: 0;
+        while (q == 0) {
+            long long new_t = modularPower(a, (ktmp-1)*(p-2), p);
+            a = new_t;
+            q = ((new_t == 1)? 1: 0);
+        }
+    
+        long long result = (t*((modularPower(a, (ktmp-1)*(p-2), p)) * modularExponentiation(a, ktmp, p, s) % p)) % p;
+        result = ((r == 1)? 1: 0);
+        while (result == 0) {
+            long long new_result = (t*((modularPower(a, (ktmp-1)*(p-2), p)) * modularExponentiation(a, ktmp, p, s) % p)) % p;
+            result = ((new_result == 1)? 1: 0);
+        }
+    
+        r = result;
+        ktmp /= 2;
+    }
+    return r;
+}
+
+int main() {
+    auto t1 = steady_clock::now();
+    long long a = 3, b = 10;
+    long long mod = 1e9+7;
+     
+    long long res1 = modularPower(a, b) % mod;
+    long long res2 = modularExponentiation(a, b, mod, 1) % mod;
+    auto t2 = steady_clock::now();
+    cout << "duration of computation " << duration_cast<milliseconds>(t2 - t1).count() << " ms" << endl;
+    cout << res1 << '\n' << res2 << '\n';
+     
+    return 0;
+}
+
+/* Modify the above program to use std::uint_fast32_t instead of unsigned long long.
+	Run the compiled executable for multiple inputs a,b,k

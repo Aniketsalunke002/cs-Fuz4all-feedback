@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+void f(int *a) {
+    *a = 0;
+}
+int main() {
+    int i;
+    f(&i);
+    cout << i << endl;
+}
+ 
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+    string s;
+    cin >> s;
+    cout << s << endl;
+}

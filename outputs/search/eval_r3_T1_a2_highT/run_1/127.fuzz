@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+void func(string &foo)
+{
+     foo += " bar";
+}
+void func(string &foo)
+{
+     foo += " bar bar";
+}
+int main()
+{
+    string s;
+    func(s);
+    cout << s << endl;
+    return 0;
+}
+string foo = "1";
+void func(string &foo)
+{
+     foo = foo + " bar";
+}
+int main()
+{
+    string s = "2";
+    func(s);
+    cout << s << endl;
+    return(0);
+}

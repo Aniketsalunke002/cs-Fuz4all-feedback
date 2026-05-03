@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+struct Node {
+    int val = 10;
+};
+Node* createNode(int v) {
+    auto n = new Node{v};
+    return n;
+}
+Node* createNode(int v, const char* msg) {
+    cout << msg << '\n';
+    return createNode(v);
+}
+Node* createNode(int v, const char* msg, int x) {
+    printf("%i %s %i\n", v, msg, x);  
+    auto n = new Node{x};
+    return n;
+}
+int main(void) {
+      
+    Node* a = createNode(2, "First");
+    Node* b = createNode(3, "Second");
+    Node* c = createNode(4, "Third", 5);
+
+    cout << a <<'' << b <<'' << c;  
+
+    return 0;
+}

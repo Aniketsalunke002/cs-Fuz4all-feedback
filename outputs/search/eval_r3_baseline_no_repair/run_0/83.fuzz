@@ -1,0 +1,26 @@
+#include <iostream>
+int f(int i);
+int main(int argc, char **argv) {
+    int & i = argc;
+    i = 0001;
+    printf("%d\n", f(i));
+}
+ 
+#include <iostream>
+int f(int i);
+int main(int argc, char **argv) {
+    int & i = argc;
+    i = 007;
+    printf("%d\n", f(i));
+}
+ 
+#include <iostream>
+int f(int i);
+int main(int argc, char **argv) {
+     
+    int tmp = 0137482647;
+     
+    int i = -125;
+    i = tmp += 100;
+    printf("%d\n", f(i));
+}

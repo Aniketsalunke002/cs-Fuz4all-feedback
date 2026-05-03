@@ -1,0 +1,116 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x = 5;
+    x += 1;
+    if (x > 0)  
+    {   
+        x = -x;  
+    }
+    cout << x << '\n';
+    if ((x > 7))
+    {
+        x--;
+    }
+    if ((-x!= 8))
+    {
+        x++;
+    }
+    if ((x > 6))
+    {
+        x += 2;
+        x &= 7;
+    }
+    do 
+    {
+        x++;
+        if (x < 10)
+        {
+            cout << x;
+        }
+        else
+        {
+            cout << '\n';
+        }
+    } while ((x < 10));
+    x = int(x) / -2 + 4 + -int(x) % 3 + (int(x) + 1) / -2;
+    return 0;
+}
+ 
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+	string a;
+	cin >> a;
+	for (int i = 0; i < a.size(); i++) {
+		for (int e = 0; e < 3; e++) {
+			cout << "*" << endl;
+		}
+	}
+	for (int j = a.size(); j > 0; j--) {
+		for (int f = 0; f < a.size() - j; f++) {
+			cout << " ";
+		}
+		for (int h = 0; h < j * 2; h++) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+	for (int k = 0; k < a.size(); k++) {
+		for (int g = 0; g < 3; g++) {
+			cout << "*" << endl;
+		}
+	}
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+    int x = 5;
+    if (x > 0)  
+    {   
+        x = -x;  
+    }
+    cout << x << '\n';
+    if (!(!(-x == 8)))
+    {
+        x++;
+    }
+    if ((!(x < 6)) && (x > 1))
+    {
+        x += 2;
+        x &= 7;
+    }
+    do 
+    {
+        x++;
+        if (x < 10)
+        {
+            cout << x;
+        }
+        else
+        {
+            cout << '\n';
+        }
+    } while ((!(x < 10)));
+    x = int(x) / -2 + 4 + -int(x) % 3 + (int(x) + 1) / -2;
+    return 0;
+}
+ 
+#include <iostream>
+#include <string>
+class car {
+    double liters;
+public:
+    car(double t) : liters(t) {}
+    double fuel_consumption(void) {return ((0-19*(liters - 40)*1.25)/(2000*2.205)-0.004)*480/1.250; }
+};
+int main() {
+    car c(5663);
+    return 0;
+}
+
+/* Please create a 

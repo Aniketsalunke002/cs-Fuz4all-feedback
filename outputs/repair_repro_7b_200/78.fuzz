@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int i[5] = {1, 2, 3, 4, 5};
+  for(int value : i) cout << value << endl;
+  vector<int> a(5);
+  a.push_back(1);
+  a.push_back(2);
+  a.push_back(3);
+  a.push_back(4);
+  for(int value : a) cout << value << endl;
+  vector<int> b = a;
+  vector<int> c = i;
+  for(const int & value : a) cout << value << endl;
+  for(int & value : i) value += 1;
+  for(const int & value : i) cout << value << endl;
+  return 0;
+}

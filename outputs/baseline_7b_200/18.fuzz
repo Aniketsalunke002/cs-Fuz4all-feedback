@@ -1,0 +1,30 @@
+#include <iostream>
+int main()
+{
+	   std::cout << "Hello World!";
+	   return 123;<commit_msg>Updated comments for lab 2. #5<commit_after> 
+ 
+#include <iostream>
+#include <algorithm>
+int main()
+{
+    return 0;
+}
+ 
+ 
+#include <iostream>
+#include <algorithm>
+#include <utility>
+#include <vector>
+#include <iomanip>
+
+class Point 
+{
+  public:
+     double x, y;
+};
+
+Point createPoint(double x = 0, double y = 0) 
+{
+    Point p;
+    p.x

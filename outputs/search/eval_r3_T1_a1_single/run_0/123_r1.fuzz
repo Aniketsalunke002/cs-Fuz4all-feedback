@@ -1,0 +1,26 @@
+#include <iostream>
+
+int sum(int a,int b){
+    return a+b;
+}
+int multiply(int b,int c){
+    return b*c;
+}
+using namespace std;
+int main ()
+{
+    int a1,b1,c1;
+    int a2,b2,c2;
+      
+    void (*add)(int,int,int,int)=sum;
+    cout << "sum= ";
+      
+    add(a1,b1,c1)
+    printf("\nand add= %d\n",c1);
+    void (*mult)(int,int,int,int)=multiply;
+    cout << "multiply= ";
+      
+    c2=mult(b1,a1);
+    printf("\nmultiply= %d\n",c2);   
+    return 0;
+}

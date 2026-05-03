@@ -1,0 +1,7 @@
+#include <iostream>
+#include <exception>
+#include <vector>
+int main( int argc, char **argv ){
+  std::vector<int> v;
+  throw std::exception();
+}

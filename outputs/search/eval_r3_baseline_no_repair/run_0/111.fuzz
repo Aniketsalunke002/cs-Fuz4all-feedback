@@ -1,0 +1,34 @@
+#include <iostream>
+int getint();
+int f(int i);
+int main(int argc, char **argv) {
+  long n;
+  getint(); n = getint();
+  for(long i = 0; i < n; i++) {
+    getint();
+    if(getint() > f(getint()))
+      std::cout << getint() << " ";
+  }
+  std::cout << std::endl;
+  exit(0);
+}
+
+
+
+ 
+ 
+#include <iostream>
+int getint();
+int f(int i);
+int main(int argc, char **argv) {
+  long n;
+  getint(); n = getint();
+  for(long i = n; i > 0; i--) {
+    getint();
+    if(getint() > f(getint()))
+      std::cout << getint() << " ";
+  }
+  std::cout << std::endl;
+  exit(0);
+}
+

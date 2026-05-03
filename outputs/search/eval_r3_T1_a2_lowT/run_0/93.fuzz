@@ -1,0 +1,8 @@
+#include <iostream>
+int main()
+{
+    short y = 30;
+    y += 2;
+    std::cout << y << std::endl;
+}
+

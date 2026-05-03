@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+   for (float f1 = -1E10f; f1 < 1E10; f1 *= 10) {
+      for (float f2 = -1E10f; f2 < 1E10; f2 *= 10) {
+         cout << f1 << "   " << f2 << "   " << f1 + f2 << "   " << f1 - f2
+              << endl;
+      }
+   }
+}
+ 
+ 
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+   for (float f1 = -1E10f; f1 < 1E10; f1 *= 10) {
+      for (float f2 = -1E10f; f2 < 1E10; f2 *= 10) {
+         cout << f1 << "   " << f2 << "   " << f1 + f2 << "   " << f1 - f2
+              << " " << a*10 << endl;
+      }
+   }
+}

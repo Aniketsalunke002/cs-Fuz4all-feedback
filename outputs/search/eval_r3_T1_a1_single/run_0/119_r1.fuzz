@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main ()
+{
+    int a = 5;
+    a = a + 2;
+    if (a > 4)
+        std::cout << "a is greater than 4 " << std::cin >> a;
+    else
+        std::cout << "a is smaller than or equal to 4";
+    return 0;
+}

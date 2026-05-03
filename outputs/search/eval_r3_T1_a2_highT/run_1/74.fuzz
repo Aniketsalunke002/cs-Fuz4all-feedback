@@ -1,0 +1,9 @@
+#include <iostream>
+int main() {
+	int mut_var;
+	std::cin >> mut_var;
+	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+	while ((std::cin >> mut_var), std::cout << mut_var,std::cin.good()) {
+	}
+	std::cout << '\n';
+}

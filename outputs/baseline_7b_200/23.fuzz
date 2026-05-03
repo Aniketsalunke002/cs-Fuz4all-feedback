@@ -1,0 +1,23 @@
+#include <iostream>
+int main()
+{
+	   int r= -5;
+	   std::cout << abs(r) << std::endl;
+	   return 0; 
+}
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
+int get(int data)
+{
+  int l=7;
+  int length=l;
+ 
+  if(data>=0 && data<=l)
+  {
+	  std::cout << data <<"Valid"<<std::endl;
+	  return data;
+	  }
+	return -1;
+}

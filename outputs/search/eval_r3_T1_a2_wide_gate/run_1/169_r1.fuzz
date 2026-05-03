@@ -1,0 +1,11 @@
+#include <iostream>
+
+#include <map>
+#include "test.h"
+using namespace std;
+int main( int argc, char **argv ){
+  int a = atoi(argv[1]);
+  std::map<int,int> container;
+  container.insert(pair<int,int>(a,1));
+  b(container);
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+int getint();
+int f(int i);
+int main(int argc, char **argv) {
+	int i = getint();
+}
+ 
+#include <iostream>
+int getint();
+int f(int i);
+int main(int argc, char **argv) {
+	int i = {getint()};
+	return 0;
+}
+ 
+ 
+ 
+#include <iostream>
+int getint();
+int f(int i);
+int main(int argc, char **argv) {
+	int i = getint();
+	return 0;
+}

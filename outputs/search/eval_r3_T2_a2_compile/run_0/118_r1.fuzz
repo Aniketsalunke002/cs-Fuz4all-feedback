@@ -1,0 +1,11 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+
+int main() {
+  int a, b, c, d, e, f;
+  cin >> a >> b >> c >> d;
+  cout << c*d - b*f << endl;
+  return 0;
+}

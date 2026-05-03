@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+  int **ptr = NULL;
+  int ***ptr2 = &ptr;
+  int ****ptr3 = reinterpret_cast<int ****>(ptr2) + 1;
+  ptr = ptr3;
+  ptr = new int *[1]();
+  cout << ptr[0][0];
+  return 0;
+}
+int main() {
+  int **ptr = NULL;
+  int ***ptr2 = (int ***)(int *)(&ptr);
+  int ****ptr3 = *((int ****)(int *)(&ptr2)+1);
+  ptr = ptr3;
+  ptr = new int *[1]();
+  cout << ptr[0][0];
+}

@@ -1,0 +1,69 @@
+#include <iostream>
+int main() {
+  std::cout << "It's been a really good day for the party" << "\n";
+  return 0;
+}
+ 
+#include <iostream>
+#include <string>
+#include <cctype>
+using namespace std;
+int main() {
+  string s1;
+  char c = 'a';  
+
+  cout << "Please enter a word: " << endl;
+  getline( cin, s1 );
+
+  for( c = 'a'; c <= 'z'; c++ )
+  {
+    if( c == 'a'  || c == 'e' || c == 'i' || c == 'o' || c == 'u' )   
+    {
+      s1.erase( find(s1.begin(),s1.end(),c), s1.end() );  
+    }
+  }
+  cout << s1 << endl;
+
+
+  return 0;
+}
+
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+  double speed,total = 0;
+  int count = 0;
+  int x = 5, y = 5;
+  cout << "Please enter a speed: " << endl;  
+  cin >> speed;
+  while (1)  
+  {
+    total+= speed;  
+    count+=1;  
+    cout << "Please enter a speed: " << endl;  
+    cin >> speed;
+    if( count == 1 )  
+    {
+      x = 0;
+      y = 0;
+    }
+    else if( count == 2 )
+    {
+      x = 1;
+      y = 1;
+    }
+    else
+    {
+      x++;  
+      y++;
+    }
+    if( cin.eof() ) return 0;  
+  }
+
+  double average = total / count;  
+  cout << "Average speed at point " << x << ", " << y << " is " << average << " m/s." << endl;
+
+  return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	cout << 5 << endl;
+	int a = 7, *p1 = &a;
+	p1 = &p1;
+	cout << p1 << endl;
+	cout << *p1 << endl;
+	cout << 8 << endl;
+	p1++;
+	cout << p1 << endl;
+	cout << *p1 << endl;
+	return 0;
+}

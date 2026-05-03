@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int a[4], b[4], c[4];
+    cin >> a[0] >> a[1] >> a[2] >> a[3];
+    cin >> b[0] >> b[1] >> b[2] >> b[3];
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            c[i] = c[i] + a[i] * b[j];
+        }
+    }
+    cout << c[0] << " " << c[1] << " " << c[2] << " " << c[3] << endl;
+    return 0;
+}<jupyter_output><empty_output><jupyter_text>1.1.2.3. Inlining<jupyter_code>%%bash
+# 1.1.2.3. Inlining
+python./tools/fuzz_single.py -n 100 -s 1 \
+    -f./inputs/search/eval_r3_T1_a3_compile/80__T1_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0__a3_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0.0_0

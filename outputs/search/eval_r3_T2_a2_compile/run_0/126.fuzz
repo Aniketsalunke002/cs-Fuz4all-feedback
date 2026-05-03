@@ -1,0 +1,12 @@
+#include <iostream>
+void
+test(int a, int b, int c, int d){
+    int a1, 
+        b1, 
+        c1;
+    a1=a, 
+    b1=b+2,
+    c1 = c+d*588;
+    std:clog << "result is: "<< a1 + b1 * c1 <<std::endl;
+    return;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+struct Node {
+    int val;
+    Node()
+        : Node(0) {
+        cout << "Constructor called with 0\n";
+    }
+    explicit Node(int v)
+        : val(v) {
+        cout << "Constructor called with " << v << '\n';
+    }
+    int getVal() const {
+        return val;
+    }
+};
+int main(void) {
+    Node ptr = Node (99);
+    cout << ptr.getVal() << '\n';
+    return 0;
+}

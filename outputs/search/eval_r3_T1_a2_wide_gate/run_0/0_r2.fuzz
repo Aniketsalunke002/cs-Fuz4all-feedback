@@ -1,0 +1,47 @@
+#include <iostream>
+
+#include <vector>
+
+class S {
+    std::initializer_list<int> is;
+public:
+    S():is({0}) {
+        std::cout << "S(): " << is << std::endl;
+    }
+    S(std::initializer_list<int> ois){
+        is = ois;
+        std::cout << "S(): " << is << std::endl;
+    }
+
+    S(const S &o){
+        is = o.is;
+        std::cout << "copy constructor " << is << std::endl;
+    }
+
+    S operator=(const S &o) {
+        is = o.is;
+        return *this;
+    }
+
+    friend void foo(S& s) {
+        s = S(std::initializer_list<int>{1, 2, 3});
+    }
+};
+
+int main() {
+    std::cout << "Starting program..." << std::endl;
+
+    int arr[] = {10, 20, 30, 40, 50, 60};
+    S ss_1(arr, 6);
+
+    foo(ss_1);
+    std::cout << "foo() finished " << std::endl;
+
+    std::vector<int> va(arr, arr + 6);
+    for (auto value : va){
+        std::cout << value << std::endl;
+    }
+
+
+    std::cout << "Exiting program.." << std::endl;
+}

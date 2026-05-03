@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main()
+{
+    int arr[]={4,9,15,24,37,52,79};
+    std::cout<<arr[13]<<std::endl;
+    arr[13]=arr[13]+28;
+}
+//  
+// #include<iostream>
+// int main()
+// {
+//      
+//     int arr[3]={1,9,10};
+//     int sum=0;
+//     int x=2;
+//     for(int i=0;i<3;i++) {
+//         sum+=arr[i];
+//         if(arr[i]>x)
+//         {
+//             x=arr[i];
+//         }
+//     }
+//     std::cout<<sum<<" "<<x<<std::endl;
+// }

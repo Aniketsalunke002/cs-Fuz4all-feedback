@@ -1,0 +1,69 @@
+#include <iostream>
+using namespace std;
+class Parent
+{
+	public:
+		Parent(double f)
+		{
+			m_df=f;
+			cout << "Parent constructor called.\n";
+		}
+		double df() const { return m_df; }
+		Parent* clone() const 
+		{
+		return new Parent(m_df);	
+		}
+		virtual ~Parent() {};
+		
+	void virtual print() const 
+	{
+	cout << "Parent: " << m_df << '\n';
+	}
+	private:
+	double m_df;
+};
+class Child: public Parent
+{
+	public:
+		Child(double f,double g):Parent(f), m_dg(g)
+		{
+			 
+			Parent::print();
+			m_str="I am a child";
+			cout << m_str << '\n';
+		}
+		Child(const Child&r):Parent(r.df()), m_str(r.m_str),m_dg(r.m_dg){}
+		virtual ~Child() {};
+		Child& operator=(const Child&r) 
+		{ 
+			Parent::operator=(r); 
+			m_str=r.m_str;
+			m_dg=r.m_dg; 
+
+			return *this;	
+		}
+
+	void virtual print() const 
+		{ 
+			cout << "Child " << m_str << endl;
+		}
+	private:
+	char m_str[32];
+	double m_dg;
+};
+int main()
+{
+	Parent *pt1=new Parent(5.9);
+	Parent *pt2=new Child(5.9,8.89);
+	Child* cpt=(Child*)(pt2->clone());
+	cout << "\nParent and Child pointers:\n";
+	pt1->print();
+	pt2->print();
+	Child *clone=new Child(*((Child*)pt2));
+ 
+	cout << "\nCloned Child pointer:\n";
+	clone->print();
+	delete clone;
+	 
+	return 0;
+}

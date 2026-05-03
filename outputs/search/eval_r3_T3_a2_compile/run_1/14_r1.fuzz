@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+template <typename T>
+class A {
+public:
+    static const int IField = 10;
+    static const int JField = 20;
+    T iField, jField;
+    T function() { return iField + jField; }
+};
+int main() {
+    int i = 0;
+    A<int> one= { i };
+    cout << "Size of one :" << sizeof(one) << " contents: " << one.iField << one.jField << endl;
+    return onne.function();
+}

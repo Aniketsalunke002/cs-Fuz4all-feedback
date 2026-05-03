@@ -1,0 +1,15 @@
+#include <iostream>
+template<typename... Types>
+void mutate_print(const Types&... vals)
+{
+	 
+	auto arr = {vals...};
+	(arr[0] = arr[0]+1,'/', arr[1] = arr[1] + 2, '/',  arr[n] = arr[n]+n)
+	(std::cout <<... << arr);
+}
+int main(void)
+{
+	var = a, b, c;
+ 	mutate_print(a, b, c);
+	return 0;
+}

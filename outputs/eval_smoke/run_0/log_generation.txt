@@ -1,0 +1,163 @@
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+
+int main()
+{
+	std::cout << "hello c++ 219145\n";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+
+#include <string>
+
+void print_string(std::string a, std::string b);
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <string>
+void print_string(std::string a, std::string b);
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <string>
+struct MyClass {
+ public:
+  MyClass(int i) : i_(i), s_() {}
+ public:
+  std::string to_string();
+  static MyClass from_string(const std::string &);
+  int i_;
+  std::string s_;
+};
+typedef std::vector<MyClass> my_class_v;
+MyClass get_class();
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <string>
+void print_string(std::string a, std::string b);
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <string>
+void print_string(std::string a, std::string b);
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <string>
+using namespace std;
+int main(void)
+ 
+{
+    print_string("hello", "world");
+    return 0;
+};
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <string>
+template<typename T>
+void print_string(T a, T b) {
+  std::cout << a << " " << b << std::endl;
+}
+
+main() {
+  print_string("A", "B");
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <string>
+template<typename T>
+void print_string(T a, T b) {
+  std::cout << a << " " << b << std::endl;
+}
+main() {
+  print_string("A", "B");
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <array>
+#include <string>
+template<typename T>
+void print_string(T a, T b) {
+  std::cout << a << " " << b << std::endl;
+}
+template<typename T, typename... S>
+void print_string(array<T, sizeof...(S)> a, S... b) {
+  print_string(a[sizeof...(S)], b...);
+}
+int main() {
+  std::array<int,10> arr{32,48,64,80,96,112,128,144,160,176};
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::string str;
+template<typename T>
+void print_string(T a, T b) {
+   
+  std::cout << str << " " << str << '\n';
+}
+main() {
+  print_string("A", "B");
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+std::string str;
+template<typename T>
+void print_string(T a, T b) {
+  std::cout << str << " " << str << '\n';
+}
+main() {
+  print_string("A", "B");
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <utility>
+template<typename T>
+void print_string(T a, const T& b) {
+  std::cout << str << " " << std::get<1>(a)  << '\n';
+}
+main() {
+  print_string("A", "A");
+}
+ 
+ 
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::string str;
+template<typename T>
+void print_string_mutated(T a, T b) { 
+  str = a; 
+  str = b; 
+}
+main() {
+  print_string_mutated("A", "B");
+   
+   
+}
+
+[VERBOSE] ========== sample =========

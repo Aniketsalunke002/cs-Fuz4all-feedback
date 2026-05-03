@@ -1,0 +1,20 @@
+#include <iostream>
+int main() {
+	int x;
+	int y = ((x++)+1);
+	std::cout << y << std::endl;
+}	
+ 
+#include <iostream>
+int main() {
+	char a[]={1,2,3};
+	int b[]={1,2,3};
+	if(sizeof(a)/sizeof(char)>=100)
+		std::cout<<"a is big"<<endl;
+	else
+		std::cout<<"a isn't big"<<endl;
+	if(sizeof(b)/sizeof(int)>=100)
+		std::cout<<"b is big"<<endl;
+	else
+		std::cout<<"b isn't big"<<endl;
+}

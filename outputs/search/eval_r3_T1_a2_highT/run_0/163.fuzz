@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  bool cond = 1;
+  bool tmp01;
+  while (cond) {
+    int n = 0;
+    int x;
+    int y = 0;
+    n++;
+    x = n % 4;
+    y = n;
+    if (x == 2) {
+      y = y + 2;
+    }
+    if (x == 3) {
+      y = y - 3;
+    }
+    cond = y > 0;
+  }
+  return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+int main3(int argc, char* argv[]) {
+    int A=0, B=0;
+    std::cin >> A;
+    std::cin >> B;
+    B = A;
+    std::cout << A << ',' << B << '\n';
+    return 0;
+}
+int main() {
+    std::cout << '0';
+    return 0;
+}
+

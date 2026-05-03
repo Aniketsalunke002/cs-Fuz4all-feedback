@@ -1,0 +1,9 @@
+#include <iostream>
+#include <cstdint>
+using namespace std;
+int8_t foo = 3;
+int main(int argc, char* argv[]) {
+	cout << foo;
+	return 0;
+}
+ 

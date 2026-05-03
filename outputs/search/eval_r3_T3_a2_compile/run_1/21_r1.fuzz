@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+template <class T>
+class Parent
+{
+public:
+    Parent(double f)
+    {
+        m_df=f;
+        cout << "Parent constructor called.\n";
+    }
+    double df() const { return m_df; }
+    Parent* clone() const 
+    {
+        return new Parent(m_df);	
+    }
+    virtual ~Parent() {};
+    
+    void virtual print() const 
+    {
+        cout << "Parent: " << m_df << '\n';
+    }
+    
+private:
+    double m_df;
+};
+template <class T>
+class Child: public Parent<T>
+{
+public:
+    Child(double f,double g):Parent<T>(f), m_dg(g)
+    {
+         
+        Parent<T>::print();
+        m_str="I am a child";
+        cout << m_str << '\n';
+    }
+    Child(const Child&r):Parent<T>(r.df()), m_str(r.m_str),m_dg(r.m_dg){}
+    virtual ~Child() {};
+    Child& operator=(const Child&r) 
+    { 
+        Parent<T>::operator=(r); 
+        m_str=r.m_str;
+        m_dg=r.m_dg; 
+
+        return *this;	
+    }
+
+    void virtual print()

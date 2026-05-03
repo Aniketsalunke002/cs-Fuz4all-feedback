@@ -1,0 +1,84 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, m;
+    cin>>n;
+    cin>>m;
+    int b = 1,p;
+    int c=1;
+    if((m<=n) && (n>=1) )
+    {
+        if(n==m)
+        {
+            cout<<1<<endl;
+            while(c<=n)
+            {
+                b=b+1;
+                c++;
+            }
+        }
+        else
+        {
+            if((n/m)==(n/m))
+            {
+                p=n-(n-(c-1)*(m-1));
+                while(p>0)
+                {
+                    if(b%2==0)
+                    {
+                        b=b+1;
+                    }
+                    else
+                    {
+                        b=2*p+1;
+                    }
+                    p=p-((m-1));
+                }
+            }
+            if((n/m)==(n/m))
+            {
+                cout<<b<<endl;
+            }
+        }
+    }
+    else 
+    {
+        cout<<"-1"<<endl;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n1 = 0,n2 =1,n,i;
+    cout<<n1<<" "<<n2<<" ";
+    for(i = 2; i <= 100; i++)
+    {
+        n = n1+n2;
+        cout<<n<<" ";
+        n1 = n2;
+        n2 = n;
+    }
+    cout<<endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n1 = 0,n2 =1,n,i;
+    cout<<n1<<" "<<n2<<" ";
+    for(i = 2; i <= 10; i++)
+    {
+        n = n1+n2;
+        cout<<n<<" ";
+        n1 = n2;
+        n2 = n;
+    }
+    cout<<endl;
+    return 0;
+}

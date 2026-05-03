@@ -1,0 +1,8 @@
+#include <iostream>
+int main()
+{
+    int a =125;
+    int *p{std::addressof(a)};
+    std::cout<<a<<*p<<'\n';
+}
+

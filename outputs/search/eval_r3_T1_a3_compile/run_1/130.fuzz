@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	const int x = 4; char s[x];
+	s[0] = '\0';
+	const char* s_array = s;
+	return 1;
+}

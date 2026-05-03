@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+int main() {
+    std::vector<int> v(10);
+    std::cout << ++v[0];
+}
+
+using namespace std;
+
+int main() {
+    int var = 12;
+    double* val = &var;
+    cout << *val;
+    return 0;
+}
+
+using namespace std;
+
+class Solution {
+private:
+    unordered_map<long, int> memory;
+
+public:
+    int numberOfSubstrings(string s) {
+        int res = s.length(), n = s.length();
+        memory.clear();
+        memory[0] = 0;
+        for (int i = 0; i < n; i++) {
+            res -= (1 - isCountInMap(s.at(i))) * memory[1 - s.at(i)];
+            if (res < 0) {
+                res = 0;
+                break;
+            }
+            memory[s.at(i)] ^= 1;
+        }
+        return res + 1 - isCountInMap(0);
+    }
+
+    bool isCountInMap(char number) {
+        return (memory.find(number)!= memory.end());
+    }
+};

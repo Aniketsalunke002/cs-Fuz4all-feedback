@@ -1,0 +1,25 @@
+#include <iostream>
+
+template <typename T>
+T f(T x)
+{
+	return x;
+}
+
+int n = 1;
+while (true) {
+	int a = 1;
+	int t = a + n;
+	int tt = f(t);
+	int tt1 = f(tt);
+	int tt2 = f(tt1);
+	int tt3 = f(tt2);
+	int tt4 = f(tt3);
+	if (tt4 == t) {
+		break;
+	} else {
+		a = t;
+		n++;
+	}
+}
+std::cout << a << std::endl;

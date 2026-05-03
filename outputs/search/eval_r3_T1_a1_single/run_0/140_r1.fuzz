@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main(int argc, char *argv[]) {
+  unsigned char a = 150;
+  short b = 1;
+  int c[9];
+  short i = 2;
+  c[0] = argc;
+  c[1] = b;
+  goto label;
+  std::cout << (sizeof(i) | (a >> b) << c[0]) + c[1];
+  label:
+}

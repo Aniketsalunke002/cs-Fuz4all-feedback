@@ -1,0 +1,27 @@
+#include <iostream>
+
+#include <ctime>
+#include <unistd.h>
+using namespace std;
+void print_scoreboard()
+{
+    cout << "Scoreboard" << endl
+    << "Score" << '\t'
+    << "Name" << '\t'
+    << "Time" << endl;
+
+    srand(time(0));
+    for (int i=0; i<10; i++)
+    {
+        cout << (rand() % 10 + 1) << '\t'
+        << "<Player " << endl
+        << ">" << '\t'
+        << (rand() % 10 + 1) << endl;
+        sleep(1);
+    }
+}
+int main()
+{
+    cout << "Scoreboard: " << endl;
+    print_scoreboard();
+}

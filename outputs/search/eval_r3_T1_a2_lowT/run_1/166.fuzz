@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int v[] = {1, 2, 3, 4, 5, 6};
+	for(int n=0; n < 5 ;++n) {
+	cout << v[n] << " ";
+	}
+	cout << endl;
+	 
+	for(int i=0; i < 5 ;++i) {
+	cout << v[i] << " ";
+	}
+	cout << endl;
+}

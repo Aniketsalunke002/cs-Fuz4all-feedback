@@ -1,0 +1,20 @@
+#include <iostream>
+using std::endl;
+class X {
+public:
+    int a;
+    void operator++()
+    {
+        a = 1;
+    }
+};
+int main()
+{
+    X x;
+    x++; 
+    std::cout << x.a << endl;
+    return 0;
+}
+
+
+

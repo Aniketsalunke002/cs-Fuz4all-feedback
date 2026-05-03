@@ -1,0 +1,8 @@
+#include <iostream>
+  using namespace std;
+  int main(int argc, char** argv[]) {
+    cout << "a" << endl;
+  }
+
+We can observe that the issue is a result of the fix for the previous issue.
+In this case, the parser thinks that the closing

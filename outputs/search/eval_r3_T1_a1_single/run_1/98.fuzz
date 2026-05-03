@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+class Point {
+public:
+	Point(int,int,int);
+	virtual ~Point();
+	int y;
+	int z;
+};
+Point::Point(int v1,int v2,int v3):y(v2),z(v3)
+{
+}
+Point::~Point()
+{
+}
+class MutatedPoint1 : public Point
+{
+public:
+	MutatedPoint1(int,int);
+	void printPoint();
+	void showy();
+	virtual ~MutatedPoint1();
+private: int a;
+};
+MutatedPoint1::MutatedPoint1(int v1,int v2):Point(v2,10,200)
+{
+	a = 5;
+}
+MutatedPoint1::~MutatedPoint1()
+{
+}
+void MutatedPoint1::showy()
+{
+}
+void MutatedPoint1::printPoint()
+{
+	 
+	Point::printPoint();
+	return (0);
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, a = 100, b = 20, c = 210, d = 21;
+    cout << n << endl;
+    cout << a << endl;
+    cout << b << endl;
+    a += b;
+    cout << a << endl;
+    cout << c << endl;
+    c -= d;
+    cout << c;
+    return 0;
+}
+ 
+#include <iostream>
+class A {
+public:
+    void b() {
+        for(int k = 0; k < 100; k++) {
+            for(int j = 0; j < 100; j++) {
+                cout << " "; 
+            }
+            for(int j = 0; j < 100; j++) {
+                cout << "*"; 
+            }
+            cout << "\n"; 
+        }
+    }
+};
+int main() {
+    A a;
+    a.b();
+}

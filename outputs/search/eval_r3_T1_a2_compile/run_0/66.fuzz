@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    const char  firstLetter = 'B';
+    const char  secondLetter = 'A';
+    const bool areTheyEqual = (firstLetter == secondLetter);
+
+    cout << "areTheyEqual = " << areTheyEqual << endl;
+
+    bool areTheyNotEqual = (firstLetter!= secondLetter);
+    cout << "areTheyNotEqual = " << areTheyNotEqual << endl;
+
+    bool areTheyGreater = (firstLetter > secondLetter);
+    cout << "areTheyGreater = " << areTheyGreater << endl;
+
+    bool areTheySmaller = (firstLetter < secondLetter);
+    cout << "areTheySmaller = " << areTheySmaller << endl;
+
+    if (firstLetter!= secondLetter) {
+        cout << "firstLetter = " << firstLetter << endl;
+        cout << "secondLetter = " << secondLetter << endl;
+        cout << "firstLetter is not equal to secondLetter" << endl;
+    }
+
+
+    return 0;
+}

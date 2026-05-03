@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+  string a, b = "password";
+  cout << "Enter paswword:";
+  cin >> a;
+  if (a == b) {
+    cout << "password is correct\n";
+  } else
+    cout << "password incorrect\n";
+  return 0;
+}

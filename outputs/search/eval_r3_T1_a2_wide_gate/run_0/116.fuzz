@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+void fun();
+int main()
+{
+    static int i=0;
+    fun();
+    cout << i + 1 << endl;
+    return 0;
+}
+void fun()
+{
+}

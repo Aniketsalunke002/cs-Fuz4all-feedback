@@ -1,0 +1,47 @@
+#include <iostream>
+#include <ctime>
+#include <fstream>
+using namespace std;
+int main(int argc, char** argv)
+{
+ofstream out("somefile.txt");
+for (int i=40000; i>2; i--)
+{
+cout << i << "... ";
+out << i << " ";
+for (int j=40000; j>2; j--)
+{
+if (i%j == 0)
+{
+out << " ***  ";
+cout << "***";
+break;
+}
+else {
+out << j << " ";
+}
+}
+cout << endl;
+out << endl;
+}
+cout << "Finished";
+return 0;
+}
+ 
+#include <iostream>
+
+template<class T>
+void printArray(T* array, const int& arraylength)
+{
+    for(int i=0;i<arraylength;++i)
+        std::cout<<array[i]<<",";
+    std::cout<<std::endl;
+}
+int main(int argc, char** argv)
+{
+    int myarray[]={1,3,4,5,88,89,90,91};
+    int length=sizeof(myarray)/sizeof(myarray[0]);
+    printArray(myarray,length);
+    char mychararray[]={"asdsd"};
+    printArray(mychararray,sizeof(mychararray)/sizeof(mychararray[0]));
+}

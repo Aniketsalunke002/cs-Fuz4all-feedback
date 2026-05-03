@@ -1,0 +1,17 @@
+#include <iostream>
+int main() {
+	int number = 0;
+	std::cout << number++ << std::endl;
+	return 0;
+}
+ 
+#include <iostream>
+#define PRINT(x) std::cout << #x << "=" << x << std::endl
+int main()
+{
+	PRINT(1);
+	PRINT(2);
+	PRINT(3);
+	PRINT(4);
+	return 0;
+}

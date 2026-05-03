@@ -1,0 +1,64 @@
+#include <iostream>
+using std::cout;
+using std::cin;
+using namespace std;
+int main()
+{
+string s;
+cin >> s;
+cout << "you input " << s;
+return 0;
+}
+
+ 
+#include <iostream>
+using std::cin;
+int main()
+{
+cout << "enter a value";
+int val;
+cin >> val;
+if (val>10)
+cout << "greater";
+else
+cout << "smaller";
+return 0;
+}
+ 
+ #include <iostream>
+#include <vector>
+#include <algorithm>
+using std::find;
+using std::vector;
+using std::sort;
+using std::reverse;
+using namespace std;
+
+vector<int> vec(100, 0);
+
+ 
+for(int c = 0; c < 100; c++){
+  vec[c] = c;
+
+}
+cout << "original array: "<<vec.at(1) << endl;
+sort(vec.begin(), vec.end());
+cout << "sorted array:" << vec.at(2) <<endl;
+ 
+
+for(int c = 0; c < 100; c++){
+  vec[c] = c;
+
+}
+cout << "original array: "<<vec.at(1) << endl;
+reverse(vec.begin(), vec.end());
+cout << "original array: "<<vec.at(100) << endl;
+
+exit(0);
+
+}
+
+
+
+
+

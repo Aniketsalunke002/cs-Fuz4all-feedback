@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int i=3;
+  int l=0;
+  l = l + 1;
+  if (i < 0) 
+    i = -i;
+  else
+    i = i - 3i;
+  i = i - l;
+  if (i <=0 || l <= 0)
+    cout << i << endl;
+}
+ 
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int generate_random(

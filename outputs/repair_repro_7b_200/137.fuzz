@@ -1,0 +1,11 @@
+#include <iostream>
+float foo(float x) {
+    return x*20-10;
+}
+int main() {
+    using namespace std;
+    float x;
+    cin >> x;
+    cout << foo(x) << '\n';
+    return 0;
+}

@@ -1,0 +1,24 @@
+#include <iostream>
+int main()
+{
+int x = 30/5+(x>7?1:0);
+return 1;
+}
+```
+The program should produce 135
+## The task
+Your task is to create an equivalent program that calculates the same result, i.e. the same number.
+* Write the code so that it would compile with the g++ compiler in unix/linux environment
+* Execute the resulting program in command line and check the results
+    * **A hint**: the g++ compiler outputs the result to the stdout. You can find it by using `ls` command
+* What is the advantage of using C++ features in such way?
+* Now remove all usages of C++ features (or replace them with the existing code), so that the code would look and behave the same as before it was converted
+* Execute the program again to make sure that it would return 7
+## Note
+Your code should have **0** comments. There is no need to put the g++ commands or the other things just for your own sake. Don’t forget to use the IDE for the task and do not use an online editor for the task – it’s your personal work and you should feel free to use any tools or resources you want.
+## Deadline and hints
+The deadline for submitting this task is November 2nd at 23:59
+## About the teacher
+Teacher: *Your teacher*
+Teacher contacts: *Your email*
+Teacher Slack: *Teacher-slack*

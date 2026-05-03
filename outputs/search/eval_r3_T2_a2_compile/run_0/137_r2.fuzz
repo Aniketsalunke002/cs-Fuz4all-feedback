@@ -1,0 +1,60 @@
+#include <iostream>
+
+
+class C {
+public:
+    void* p_;   
+};
+
+void C::init() {   }
+void C::destroy() {   }
+C* createC() {   }
+
+int main() {
+    std::set<C*> s;
+    C* p = createC();
+    s.insert(p);
+    delete p;
+    return 0;
+}
+
+// #include <iostream>
+// #include <memory>
+// 
+// class MyClass {
+//  private:
+//    int numFoo;
+//    std::shared_ptr<int> baz;
+//  public:
+//   MyClass();
+//   ~MyClass(); 
+// };
+// 
+// MyClass::MyClass(){
+//   numFoo=0;
+//   baz = std::make_shared<int>();
+// }
+// MyClass::~MyClass(){
+//    
+// }
+// 
+// std::auto_ptr<MyClass> createMyClass() {   }
+// 
+// int main() {
+//   std::auto_ptr<MyClass> myptr(createMyClass());
+//   return 0;
+// }
+#include <iostream>
+#include <memory>
+
+class C {
+public:
+    void* memory_;   
+};
+
+C::C(): memory_(malloc(sizeof(C))) {
+
+}
+
+C::~C() {
+    free

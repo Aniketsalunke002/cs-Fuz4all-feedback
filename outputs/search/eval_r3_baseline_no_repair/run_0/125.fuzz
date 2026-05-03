@@ -1,0 +1,30 @@
+#include <iostream>
+int getint();
+int main(int argc, char **argv) {
+  int elements = 3;
+  for (;;) {
+    int value = getint();
+    elements += value;
+    std::cout << elements << "\n";
+  }
+  return 0;
+}
+ 
+#include <iostream>
+struct getint {
+  int *p;
+  getint() { p = new int(); }
+  operator int() {
+    int value = *p;
+    *p = 0;
+    return value;
+  }
+} operator*;
+int main(int argc, char **argv) {
+  int elements = 3;
+  for (;;) {
+    int *value = elements++;
+    std::cout << *value << "\n";
+  }
+  return 0;
+}

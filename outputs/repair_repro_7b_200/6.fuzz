@@ -1,0 +1,96 @@
+#include <iostream>
+#include <vector>
+#include <cmath>
+#include <iomanip>
+#include <algorithm>
+#include <tuple>
+#include <string>
+#include <algorithm>
+using namespace std;
+int main() {
+  int n,t,k;
+  cin>>n>>t>>k;
+  bool s = true;
+  if (t % 2 == 1) {
+    s = false;
+  }
+  if (s) {
+    for (int i = 0; i < k && (n > 0); i++) {
+      cout<<n--<<endl;
+    }
+  } else {
+    int m = 0;
+    while (n > 0) {
+      cout<<++m<< endl;
+      n--;
+    }
+  }
+  return 0;
+}
+ 
+#include <iostream>
+#include <string>
+#include <algorithm>
+#include <unordered_map>
+#include <vector>
+#include <cmath>
+#include <numeric>
+#include <unordered_set>
+using namespace std;
+string str;
+int f(string a){
+    int n = a.size();
+    int res=0;
+    while(n){
+        if(n < 2) return 0;
+        res = 0;
+        res += a[n-2];
+        res += a[n-1];
+        n-=2;
+    }
+    return res;
+}
+void solve(){
+    cout<<f(str);
+}
+int main(){
+    cin>>str;
+    solve();
+    return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(int argc, const char * argv[]) {
+   
+    const int N  = 3;
+    int arr[N] = { -1, -1, 3 };
+ 
+    int expected[4] = { 0, 1, 1, 2 };
+     
+    if (sizeof(&arr[0]) == 4) {
+         
+        cout << sizeof(&arr[0]) << endl;
+        cout << "expected" << endl;
+        cout << "0: " << expected[0] << endl;
+        cout << "1: " << expected[1] << endl;
+        cout << "2: " << expected[2] << endl;
+        cout << "3: " << expected[3] << endl;
+        cout << "actual" << endl;
+        cout << "0: " << arr[0] << endl;
+        cout << "1: " << arr[1]<< endl;
+        cout << "2: " << arr[2]<< endl;
+        cout << "3: " << arr[3]<< endl;
+    } else {
+         
+        cout << sizeof(&arr[0]) << endl;
+        cout << "expected" << endl;
+        cout << "0: " << expected[0] << endl;
+        cout << "1: " << expected[1] << endl;
+        cout << "2: " << expected[2] << endl;
+        cout << "3: " << expected[3] << endl;
+        cout << "actual" << endl;
+        cout << "0: " << arr[0] << endl;
+        cout << "1: " << arr[1]<< endl;
+        cout << "2: " <<

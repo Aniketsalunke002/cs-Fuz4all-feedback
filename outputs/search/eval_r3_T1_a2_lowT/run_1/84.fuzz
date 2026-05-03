@@ -1,0 +1,16 @@
+#include <iostream>
+int main(int argc, char** argv)
+{
+    std::cout << "welcome to mutant++" << std::endl;
+    
+    using namespace std;
+    int a = 6;
+    int b = a++;
+    cout << "the value of b is " <<b << endl;
+    
+    cout << "the value of a is " << a << endl;
+    cout << "the value of a is " << a++ << endl;
+    cout << "the value of a is " << a << endl;
+    cout << "the value of a is " << ++a << endl;
+    return 0;
+}

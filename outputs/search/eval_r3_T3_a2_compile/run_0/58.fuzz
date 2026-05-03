@@ -1,0 +1,65 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+     for (auto i=0; i < 10; i+=2)
+     {
+          cout << i << ";";
+     }
+     cout << i << ";";
+     return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+bool  condition(int num)
+{
+     if(num == 0)
+          return true;
+     else if (num % 2 == 0)
+          return condition(num - 1);
+     else
+          {
+            bool result = condition(num + 1);
+            if(result == true)
+                 {
+                    cout << num << ";";
+                    return true;
+                 }
+           }
+     return false;
+}
+int main()
+{
+     condition(0);
+     return 0;
+}
+
+ 
+
+#include <iostream>
+class myclass {
+     int state;
+public:
+     myclass(void) {
+          state = 0;
+     }
+     int get(void) {
+          return state;
+     }
+     void set(int num) {
+          state = num;
+     }
+};
+void myfunc(void)
+{
+     cout << "{ ";
+     myclass a;
+     cout << "}";
+}
+int main()
+{
+     myfunc();
+}
+ 

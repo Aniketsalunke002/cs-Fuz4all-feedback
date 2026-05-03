@@ -1,0 +1,10 @@
+#include <iostream>
+std::ostream &operator <<(std::ostream &out, const int &value) {
+  out << "hello world!";
+  return out;
+}
+int main() {
+  int a;
+  a << std::cout;
+}
+```

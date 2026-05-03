@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+int main()
+{	double a;
+	cout << "Please input a double: ";
+	cin >> a;
+	cout << "You input a double:" << a << endl;
+	return 0;
+}
+
+ 
+#include <iostream>
+
+class simple_class
+{
+public:
+	simple_class();   
+	~simple_class();  
+	void show();     
+private:
+	int a1, a2;
+};
+
+simple_class::simple_class()  
+{
+	cout << "Constructor has been called" << endl;
+}
+
+simple_class::~simple_class()  
+{
+	cout << "Destructor has been called" << endl;
+}
+
+void simple_class::show()
+{
+	cout << "a1=" << a1 << endl;
+	cout << "a2=" << a2 << endl;
+}
+
+int main()
+{
+	simple_class my_object;
+	return 0;
+}

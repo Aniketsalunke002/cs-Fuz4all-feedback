@@ -1,0 +1,32 @@
+#include <iostream>
+int calc(int a1) {
+    int c = 1;
+    for (int i = 0; i <= a1; i++ ) c += i;
+    return c;
+}
+int main(int argc, char **argv) {
+    int sum = 0;
+    std::cout << "input: ";
+    for (int i=0;i < 100; i++) {
+        std::cout << i << " ";
+        sum += calc(i);
+    }
+    std::cout << "sum=" << sum << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+#include <string>
+int calc(std::string &s1) {
+    int c = 1;
+    for (int i = 0; i <= s1.size(); i++ ) {
+        c += s1[i];
+    }
+    return c;
+}
+int main(int argc, char **argv) {
+    std::string c;
+    std::cin >> c;
+    int sum = calc(c);
+    std::cout << "input: " << c << " output: " << sum <<"\n";
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+namespace fuzz {
+void matrix_multiply(double A[4][4]);
+}
+void mutate_function_1();
+namespace fuzz {
+void matrix_multiply(double A[4][4]) { }
+}
+ 
+#include <bitset>
+#include <iostream>
+#include <stdlib.h>
+namespace fuzz {
+void matrix_multiply(double A[4][4]);  
+}
+namespace {
+char* mem_area = NULL;
+}
+void mutate_function_2() {
+    if (mem_area == NULL) mem_area = (char*)malloc(FUZZ_TARGET_SIZE);
+    for (int i = 0; i < FUZZ_TARGET_SIZE; i++) {
+        int bit = rand() % 8;
+        mem_area[i] = 1 << bit;
+        bool fuzz_bool = ((rand() % 2) == 1);
+        FUZZ_TEST(fuzz_bool, FUZZ_TARGET(mem_area));
+    }
+}
+ 
+#include <stdio.h>
+void generate_random_input_file();

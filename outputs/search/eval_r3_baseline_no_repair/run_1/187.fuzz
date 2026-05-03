@@ -1,0 +1,85 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+class XYZ {
+  public:
+    XYZ();
+  protected:
+    int a;
+  public:
+    int b;
+};
+XYZ::XYZ() {
+  a = 7;
+}
+int main() {
+  cout << "Mutant:" << endl;
+  XYZ c;
+  c.a = 3;
+  c.b = 2;
+  XYZ d;
+  c.a = 3;
+  c.b = 2;
+  cout << c.a << " " << c.b << endl;
+  cout << d.a << " " << d.b << endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
+class XYZ {
+  public:
+    XYZ();  
+  protected:
+    int a;
+  public:
+    int b;
+};
+XYZ::XYZ() {
+  a = 7;
+}
+XYZ foo(int a) {
+  XYZ obj;
+  obj.a = 3;
+  obj.b = a;
+  return obj;
+}
+XYZ bar(int a) {
+  XYZ obj;
+  obj.b = 2;
+  return obj;
+}
+int main() {
+  cout << "Mutant:" << endl;
+  XYZ c = foo(2);
+  XYZ d = bar(1);
+  cout << c.a << " " << c.b << endl;
+  cout << d.a << " " << d.b << endl;
+  cout << foo(2).a << " " << foo(2).b << endl;
+  cout << bar(1).a << " " << bar(1).b << endl;
+  return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+namespace bread {
+  class XYZ {
+    public:
+      int a;
+  };
+  class foo {
+    public:
+      int b;
+      void baz() {
+        cout << "Baz" << endl;
+      }
+  };
+}
+int main() {
+  cout << "Mutant:" << endl;
+  bread::foo obj = bread::foo();
+  obj.baz();
+  cout << obj.b << endl;
+  return 0;
+}

@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+struct Memory {
+	double x;
+	int y;
+};
+int main() {
+	Memory ma[1000000];
+	int p;
+	cout << 1 << endl;
+}

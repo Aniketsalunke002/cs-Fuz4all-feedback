@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]){
+    int i = 3, m =7, n=2;   
+    if(m>=i){
+        i+=(i+n);
+    }
+    return 0;
+}

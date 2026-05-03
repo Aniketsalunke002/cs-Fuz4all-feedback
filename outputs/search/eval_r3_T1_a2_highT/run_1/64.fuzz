@@ -1,0 +1,42 @@
+#include <iostream>
+int mut_value=1;
+int main()
+{
+	bool stop=false;
+	do {
+		if (mut_value!=2) {
+			std::string input;
+			std::cin >> input;
+			if (std::cin) {
+				if (input!="0") {
+					mut_value = atoi(input.c_str());
+				}
+			}
+		}
+
+		if (mut_value==2) {
+			std::cout << "111" << std::endl;
+			std::cout << "111" << std::endl;
+			std::cout << "111" << std::endl;
+			std::cout << "111" << std::endl;
+			mut_value = 4;
+		} else if (mut_value==4) {
+			std::cout << "111" << std::endl;
+			std::cout << "-1-1" << std::endl;
+			mut_value = 1;
+		}
+		std::cout << mut_value << std::endl;
+
+		if (std::cin) {
+			std::string input;
+			std::cin >> input;
+			if (std::cin) {
+				if (input=="-1") {
+					stop = true;
+				}
+			}
+		}
+	} while (!stop);
+	std::cout << "Goodbye world\n";
+	return 0;
+}

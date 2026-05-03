@@ -1,0 +1,13 @@
+#include <iostream>
+int main(int argc, char** argv){
+    try{
+        {
+            throw 10;
+        }
+    }
+    catch(int & i){
+        std::cout << i << std::endl;
+    }
+    return 0;
+}
+

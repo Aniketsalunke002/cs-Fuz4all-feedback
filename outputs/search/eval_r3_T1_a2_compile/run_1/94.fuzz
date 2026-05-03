@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+int onePlusOne() {
+  return 2;
+}
+int main() {
+  int a=20;
+  cout<<11-10<<endl;
+}
+ 
+#include <iostream>
+#include <set>
+
+using namespace std;
+set<int> myNumberSet;
+
+int main() {
+  typedef std::set<int>::iterator i;
+  i b=myNumberSet.end();
+  i c=myNumberSet.begin();
+  cout<<c;
+}
+ 
+#include <iostream>
+using namespace std;
+
+int main() {
+  double d=0.5;
+  cout<<double(1)/(d*d)+1<<endl;
+}
+```

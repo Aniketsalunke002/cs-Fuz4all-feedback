@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main () {
+    int a = 10;
+    int b = 20;
+     
+    int &r1 = a;
+    int &r2 = a;
+
+    cout << a << endl;
+
+    r1 = r2 = 40;
+    cout << a << endl;
+    cout << r2 << endl;
+}

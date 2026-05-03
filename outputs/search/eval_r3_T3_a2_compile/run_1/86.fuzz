@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+int mutator(std::vector<int>* v) {
+	v->push_back(std::rand());
+	return v->size() - 1;
+}
+int main() {
+	std::vector<int>* v = new std::vector<int>();
+	std::rand();
+	int x = 0;
+	int y = mutator(v);
+	v->push_back(x);
+	int z = v->front();
+	return y;
+}

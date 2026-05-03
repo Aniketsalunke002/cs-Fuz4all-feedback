@@ -1,0 +1,19 @@
+#include <iostream>
+std::string get_upper_cased(std::string s)
+{
+    std::string answer = s;
+    int x = 65;  
+    for (std::string::iterator it = s.begin(); it < s.end(); it++)
+    {
+        std::string temp = answer;
+        *it = *it-32;
+        if (*it<x++) answer = temp;
+    }
+    return answer;
+}
+int main(int argc, char *argv[])
+{
+    std::cout << get_upper_cased(argv[1]);
+    return 0;
+}
+

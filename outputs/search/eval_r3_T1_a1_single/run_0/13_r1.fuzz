@@ -1,0 +1,133 @@
+#include <iostream>
+
+#include <utility>
+void draw(std::pair<void*, int> colorInfo){
+	if (colorInfo.second == 3){
+		 
+	 	void * red = static_cast<void*>(static_cast<int*>(&1));
+	 	colorInfo_red = {red, 2};
+		draw(colorInfo_red);		
+
+	} else {
+		 
+	 	void * red = static_cast<void*>(static_cast<int*>(&1));
+	 	colorInfo_red = {red, 2};
+		draw(colorInfo_red);		
+
+	}
+}
+int main(){
+	void * red = static_cast<void*>(static_cast<int*>(&1));
+	colorInfo_red = {red, 2};
+	draw(colorInfo_red);
+	return 0;
+}
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//  
+//

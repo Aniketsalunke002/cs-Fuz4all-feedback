@@ -1,0 +1,18 @@
+#include <iostream>
+
+#include <stdexcept>
+using namespace std;
+int main(int argc, char* argv[]) {
+	char arr[4];
+	const int max = sizeof arr;
+	if (max < 1) throw std::out_of_range("Negative array size");
+	arr['a'] = '0';
+	arr[static_cast<size_t>(max)] = '0';
+	char* p = &arr[1];
+	try {
+		p[max] = '\0';
+	} catch (...) {
+		cout << "Caught exception" << endl;
+	}
+	return 1;
+}

@@ -1,0 +1,7 @@
+#include <iostream>
+int main()
+{
+    std::cout << std::tie(std::cin) << std::endl;
+    std::cout << std::tie(std::cin) << std::endl;
+}
+#pragma clang version reset

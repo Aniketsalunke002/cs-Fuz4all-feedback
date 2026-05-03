@@ -1,0 +1,13 @@
+#include <iostream>
+
+template <typename T>
+T* ptr_to(T& t)
+{
+    return &t;
+}
+int main() {
+	int a=3;
+	int *ptr_a = ptr_to(a);
+    *ptr_a=1;
+    std::cout << "a" << a <<"\n";
+}

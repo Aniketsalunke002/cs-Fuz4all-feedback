@@ -1,0 +1,5 @@
+#include <iostream>
+float * ptr_float = new float[5];
+std::cout << ptr_float[4] << '\n';
+delete[] ptr_float;
+ptr_float = nullptr;

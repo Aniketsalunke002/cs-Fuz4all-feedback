@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+
+struct Foo {
+    int id = 101;
+    bool mutated = false;
+};
+
+void add(std::vector<Foo*>& vec) {
+    Foo *tmp = new Foo;
+    vec.push_back(tmp);
+}
+
+int main() {
+  std::vector<Foo*> foo_vec;
+  std::vector<Foo*>::iterator it;
+  it = foo_vec.begin();
+  Foo& f = **it;
+  f.id = 102;
+    
+  std::cout<<f.id<<"-"<<f.mutated<<std::endl;
+  return 0;
+}

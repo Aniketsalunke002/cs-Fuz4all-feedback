@@ -1,0 +1,36 @@
+#include <iostream>
+
+#include <cstring>
+
+template <size_t N>
+class Person {
+	char name[N];
+	int age;
+public:
+	Person(const char* name, int age) : age(age) {
+		std::strncpy(this->name, name, N);
+	}
+
+	void print() {
+		std::cout << name <<'' << age << std::endl;
+	}
+};
+
+class Greeter {
+	Person<40> m_person;
+public:
+	Greeter(const char* name, int age) : m_person(name, age) {}
+
+	void greet() {
+		std::cout << "Hi, " << m_person.name <<'' << m_person.age;
+	}
+};
+
+int main() {
+	char name[40];
+	int age;
+	std::cin >> name >> age;
+	Greeter greeter(name, age);
+	greeter.greet();
+	return 0;
+}

@@ -1,0 +1,7 @@
+#include <iostream>
+using std::cout;
+int main(void) {
+	int n =[]() { return new int[10](); };
+	cout << n << std::endl;
+	return 0;
+}

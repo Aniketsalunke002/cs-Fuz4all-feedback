@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+#include <vector>
+#include <stack>
+int main() {
+	vector<bool> v = {1,2,3,4,5,6,7};
+	bool flag = true;
+	int pos = 1;
+	for (int i=0;i<v.size();i++) {
+		if (flag) {
+			for (;pos<v.size();pos++) {
+				if (v[pos]) {
+					flag = false;
+					break;
+				}
+			}
+			swap(v[0],v[pos]);
+		}
+		else {
+			for (;0<pos;pos--) {
+				if (v[pos]) {
+					flag = true;
+					break;
+				}
+			}
+			swap(v[v.size()-1],v[pos]);
+		}
+	}
+	for (auto i:v) {
+		cout << i << endl;
+	}
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
+string int_to_string(int a) {
+	char* buffer = new char[1000];
+	sprintf(buffer, "%d", a);
+	string outString(buffer, strlen(buffer));
+	return outString;
+}
+int main() {
+	for (int i=0;i<=9;i++) {
+		cout << int_to_string(i) << "\t";
+	}
+	return 0;
+}

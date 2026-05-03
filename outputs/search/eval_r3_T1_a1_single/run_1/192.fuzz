@@ -1,0 +1,4 @@
+#include <iostream>
+int main(){
+	std::cout<<(*new int(11111))<<std::endl;
+}

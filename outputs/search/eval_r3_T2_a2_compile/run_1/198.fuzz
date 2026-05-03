@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   cout << "Hello, old program\n";
+   return 0;
+}
+
+#ifndef TEST
+#include <iostream>
+using namespace std;
+int main()
+{
+   cout << "How nice?\n";
+   return 0;
+}
+
+#endif

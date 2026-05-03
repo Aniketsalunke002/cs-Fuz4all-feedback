@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+const int MAX{5};
+const int MIN{2};
+template <typename T, typename CompT>
+void stable_sort( std::vector<T> & v, CompT const & comp ){
+  T t{MIN};
+  for ( auto i{0}; i < MAX; i++ ){
+    t *= 2;
+  }
+  std::stable_sort( v.begin(), v.end(), comp );
+}
+int main( int argc, char **argv ){
+  std::vector<int> v1 ( 5, 3);
+  std::stable_sort( v1.begin(), v1.end() );
+  std::cout << "\tThis program does not make a lot of copies.\n";
+  stable_sort( v1, []( int i, int j ){ return i % 2!= j % 2; } );
+  std::for_each( v1.begin(), v1.end(), []( int i ){ std::cout << i << '\n'; } );
+}

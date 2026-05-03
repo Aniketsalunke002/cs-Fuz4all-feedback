@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+typedef struct {
+	int x;
+	int y;
+} position;
+void getFoo(position po[]) {
+	cout << "Please don't get Fooled!" << endl;
+	return;
+}
+int main(int argc, char* argv[]) {
+	position po[] = {
+		{1, 2},
+		{3, 4},
+		{5, 6}
+	};
+	getFoo(po);
+	return 0;
+}

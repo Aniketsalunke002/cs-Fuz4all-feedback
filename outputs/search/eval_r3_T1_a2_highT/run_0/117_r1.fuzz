@@ -1,0 +1,7 @@
+#include <iostream>
+
+int main() {
+  int atest = 291;
+  std::cout << abs(atest) << "\n";
+  return 0;
+}

@@ -1,0 +1,43 @@
+#include <iostream>
+class MyClass3
+{
+    private:
+        int data[10][10]{};
+    public:
+    void get_data()
+    {
+        for(int i{0}; i<10; i++)
+        {
+            for(int j{0}; j<10; j++)
+            {
+                data[i][j]=i*i+9*j-3;
+            }
+        }
+    }
+    void print()
+    {
+        for(int i{0}; i<10; i++)
+        {
+            for(int j{0}; j<10; j++)
+            {
+                std::cout<<data[i][j]<<" ";
+            }
+            std::cout<<std::endl;
+        }
+    }
+    void say()
+    {
+        std::cout<<"Hi!\n";
+    }
+    ~MyClass3()
+    {
+        get_data();
+    }
+};
+int main()
+{
+    MyClass3* m1 = new MyClass3;
+    m1->say();
+    m1->print();
+    return 0;
+}

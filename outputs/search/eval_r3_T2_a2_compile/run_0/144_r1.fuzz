@@ -1,0 +1,9 @@
+#include <iostream>
+
+using namespace std;
+  
+int main(char* argv[]) {
+    cout << "Hello from hello: "<< argv[0] << endl;
+    cout << "Hello from world: "<< argv[1] << endl;   
+    return 0;
+}

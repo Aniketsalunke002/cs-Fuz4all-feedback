@@ -1,0 +1,95 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int numele = 10;
+    int numarray[] = {30, 3, 4, 30, 20, 3, 7, 430, 230, 3000};
+    char celsius[] = "C";
+    char fahrenheit[] = "F";
+    char text[] =  "Hello World";
+    
+    cout << endl << numarray[0] << endl;
+    cout << text << endl;
+    cout << celsius << cout << fahrenheit << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int numele = 10;
+    int numarray[] = {30, 3, 4, 30, 20, 3, 7, 430, 230, 3000};
+    char celsius[] = "C";
+    char fahrenheit[] = "F";
+    char text[] =  "Hello World";
+    int i;
+    while (i < numele) {
+        cout << numarray[i] << endl;
+        ++i;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int numa = 6;
+    int numb = 2;
+    int numc = 5;
+    int numd = numa % numc;
+    int numg = 5;
+    int numh = 6;
+    int numi = numg + numh;
+    if ((numg == 5) || (numa!= numb)) {
+        ++numd;
+    } else if (numd > 8) {
+        --numc;
+        ++numa;
+    } else if (1 + numa < numc) {
+       numi = numc - 5;
+    }
+    cout << numa << " " << numb << " " << numc << " " << numd << endl;
+    cout << numg << " " << numh << " " << numi << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    double price;
+    double cost;
+    double profit;
+    cout << "What's the unit price?" << endl;
+    cin >> price;
+    printf("What's the unit cost?" << endl;
+    cin >> cost);
+    if (price > cost) {
+        profit = price - cost;
+        printf("The profit is %.2f\n", profit);
+    } else { printf("No profit\n"); }
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    double numa = 200.0;
+    double numb = 900.0;
+    printf("The first num: %.2f\n", numa);
+    printf("The second num: %.2f", numb);
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int num[] = {5, 4, 3, 2, 1};
+    int size = 5;
+    int numf = 0;
+    int i;
+    for (i = 0; i <= size; i++)

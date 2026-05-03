@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+class test
+{
+	int a,b,c;
+	public:
+	test():a(2),b(7),c(9){}
+	int ret();
+};
+int test::ret()
+{
+	return a+b+c;
+}
+int main()
+{
+	test obj;
+	cout<<obj.ret()<<endl;
+	return 0;
+}

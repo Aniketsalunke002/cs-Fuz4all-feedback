@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char **argv) {
+   cout << "We now have " << argc << " arguments" << endl;
+   cout << "Our first parameter is " << argv[0] << endl;
+   if (argc > 1) {
+      argv[0] = "secondargument";
+      cout << "Our second parameter changed!" << endl;
+      if (argc > 2) {
+         delete[] argv;
+         cout << "Argument list empty." << endl << "We do not have two arguments.\n";
+         return 1;
+      }
+   }
+   return 0;
+}

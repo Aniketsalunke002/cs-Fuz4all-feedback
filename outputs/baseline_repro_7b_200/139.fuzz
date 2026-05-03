@@ -1,0 +1,9 @@
+#include <iostream>
+int main(void) {
+ int a;
+  
+ std::cin >> a;
+ a+=10;
+ return 0;
+}
+ 

@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main() {
+  int array[256];
+  int i;
+  for (i = 0; i < 256; i++)
+    array[i] = (0 << i) + (0 << i) + (0 << i) + (0 << i) + (0 << i) + (0 << i);
+  for (i = 0; i < 256; i++)
+    if (array[i]!= 0) {
+      array[i] = (0 << i) + (0 << i) + (0 << i) + (0 << i) + (0 << i) + (0 << i);
+    } else
+      array[i] = (0 << i) + (0 << i) + (0 << i) + (0 << i) + (0 << i) + (0 << i);
+  return 0;
+}

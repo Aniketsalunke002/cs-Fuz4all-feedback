@@ -1,0 +1,13 @@
+#include <iostream>
+    using namespace std;
+    int main() {
+  for(int i=0; i<=10; i++) {
+    cout << "Loop iteration " << i;
+    if (i<=5) cout << ": This text is inside inner IF-statement";
+    if (i%3==2) cout << ": This text is inside an odd-numbered IF-statement";
+    if (i<10) cout << ": This text is inside IF-statement with comparison with 10";
+    cout << '\n';
+  }
+return 0;
+}
+

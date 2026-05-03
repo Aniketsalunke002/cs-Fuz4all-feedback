@@ -1,0 +1,16 @@
+#include <iostream>
+class myclass_old
+{
+  myclass_old(int i)
+  {
+    std::cout << "constructor called" << std::endl;
+    _i = i;
+  }
+  int _i;
+};
+int main()
+{
+  myclass_old x(10);
+   
+  return 0;
+}

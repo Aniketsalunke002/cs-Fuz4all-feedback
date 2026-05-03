@@ -1,0 +1,19 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+
+int main(int argc, char *argv[]) {
+   
+  cout << "Hurray! This is the first main!" << endl;
+  std::string text(argv[1]);
+  string::iterator iter = text.begin();
+  while (iter!= text.end()) {
+    int num = (int) *iter;
+    num++;
+    *iter = (char)num;
+    iter++;
+  }
+  cout << text << endl;
+  return 0;
+}

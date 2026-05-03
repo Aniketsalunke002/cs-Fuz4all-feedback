@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+struct Foo {
+  int n1, n2, n3;
+};
+void foo() {
+  cout << "foo.cpp source code in foo" << endl;
+  Foo a;
+  cout << a.n1 << a.n2 << a.n3 << endl;
+}
+int main() {
+  cout << "foo.cpp source code in main" << endl;
+  foo<int>();
+  return 0;
+}

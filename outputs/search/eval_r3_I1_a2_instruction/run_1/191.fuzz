@@ -1,0 +1,171 @@
+#include <iostream>
+#include <string>
+int foo(std::string name) {}
+int main() {
+    std::string a_str = "Hello C++ world!";
+    return 0;
+}
+ 
+#include <iostream>
+#include <string>
+std::string foo(std::string name) {
+   return name;
+}
+
+int main() {
+    std::cout<< foo("");
+}
+ 
+#include <iostream>
+#include <string>
+std::string foo(std::string name) {
+   std::cout << "foo called with name: " << name << std::endl;  
+   return name;
+}
+
+int main() {
+    std::cout<< foo("");
+}
+ 
+#include <iostream>
+#include <string>
+extern std::string foo(std::string name);
+int main() {
+    std::cout << foo("");
+}
+ 
+#include <iostream>
+#include <string>
+std::string foo() {
+    return "";
+}
+int main() {
+    std::cout << foo();
+}
+ 
+#include <iostream>
+#include <string>
+template<typename Str>
+Str foo(Str name) {
+}
+
+int main() {
+    std::cout<< foo("C++");
+}
+ 
+#include <iostream>
+#include <string>
+class foo {
+private:
+   foo() {
+   }
+
+   struct bar;
+   bar* get_ptr_to_bar_struct() {
+    return static_cast<bar*>(this);
+   }
+
+public:
+    bar* get_ptr_to_bar() {
+        return get_ptr_to_bar_struct();
+    
+  }
+
+   ~foo() {
+   }
+};
+struct bar {
+    ~bar() {
+    }
+};
+    int main() {
+        foo a;
+        a.get_ptr_to_bar()->~bar();
+    }
+ 
+#include <iostream>
+#include <string>
+struct foo {
+   foo()
+   {
+   }
+   ~foo()
+   {
+   }
+};
+
+int main()
+{
+    foo a;
+}
+ 
+#include <iostream>
+#include <string>
+class foo {
+private:
+   foo() {
+   }
+
+   struct bar {
+   };
+public:
+    bar& get_bar() {
+        return bar();
+   }
+
+   ~foo() {
+   }
+};
+
+int main()
+{
+    foo().get_bar().~bar(); 
+}
+ 
+#include <iostream>
+#include <string>
+class foo {
+private:
+   int a_num;
+
+public:
+    int get_num() const {
+        return a_num;
+   }
+
+   foo(int num) : a_num(num) {
+   }
+
+   ~foo() {
+   }
+};
+
+int main()
+{
+    foo(5).get_num();  
+}
+ 
+#include <iostream>
+#include <string>
+class foo {
+   int a_num;
+public:
+    foo(int num) : a_num(num) {
+    }
+    int get_num() const {
+        return a_num;
+   }
+
+   class bar :  public foo {
+   public:
+    bar(int num) : foo(num) {
+    }
+    ~bar() {
+    }
+   };
+};
+
+int main()
+{
+    foo::bar b(5);
+    b.get_num

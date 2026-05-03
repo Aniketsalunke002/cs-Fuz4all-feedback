@@ -1,0 +1,10 @@
+#include <iostream>
+
+#include <algorithm>
+#include <iterator>
+
+char alphabet[] = { 'A','E','H', 'T','O', 'L' };
+std::string s1(alphabet, alphabet + 6);
+std::cout << s1 << std::endl;
+
+return 0;

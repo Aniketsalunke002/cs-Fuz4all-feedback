@@ -1,0 +1,15 @@
+#include <iostream>
+int main()
+{
+    short n_bytes,i1;
+    short* x1,*x2;
+    std::cin >> n_bytes;
+    x1 = (short*)new short[n_bytes];
+    x2 = (short*)new short[n_bytes];
+    x1[n_bytes]=n_bytes-1;
+    x1[0]=x2[n_bytes]=0;
+    delete [] x1;
+    delete [] x2;
+    std::cout << "Done" << std::endl;
+    return 0;
+}

@@ -1,0 +1,77 @@
+#include <iostream>
+#include <vector>
+void init(double *a, int d) {
+    std::cout << "init\n";
+    for(int i = 0; i!= d; i++) a[i] = 0.5*i;
+ }
+void calc(double *a) {
+  std::cout << "calc\n";
+    for(int i = 0; i!= 1000000; i++) a[i] *= 1.5;
+ }
+class A {
+    double *a;
+public:
+    A() { std::cout << "A\n"; }
+    A(A &a) { std::cout << "A copy\n"; a.init(4); }
+    A(int x) {
+      std::cout << "A\n"; a = new double[x];
+      init(a, x);
+    }
+    A(A &&a) {
+      std::cout << "A move\n"; a = new double[10];
+      a = std::move(a);
+    }
+    void do_calc(double *b, int d) {
+      std::cout << "calc\n";
+      if (d++==0) std::swap(a, b);
+      for(int i = 0; i!= d; i++) b[i] *= -0.5;
+    }
+};
+int main(int argc, char **argv){
+  A f1(10000000);
+  A f2(10000000);
+  f1.do_calc(f2.a, f2.a[0]);
+  delete [] f1.a;
+
+   
+  std::vector<int> v;
+  v.emplace_back(1);
+  v.emplace_back(2);
+  v.emplace_back(3);
+  std::cout << v.size() << '\n';
+  
+  return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+class A {
+    int *p;
+public:
+    A() { 
+        std::cout << "A()\n"; 
+        p = new int(4); 
+        *p = 3; 
+    }
+    A(A &a) { std::cout << "A(A&)\n"; a.p = new int(*a.p); *a.p += 2; }
+    A(int i) {
+      std::cout << "A(int)\n"; p = &i;
+    }
+    ~A() {
+        std::cout << "~A()\n"; 
+        delete p; 
+    }
+    
+    void print() {
+      std::cout << *p << '\n';
+    }
+};
+A get_ref() {
+	std::cout << "getter\n";
+	return A();
+}
+int main() {
+	A a = get_ref();
+  a.print();
+	return 0;
+}

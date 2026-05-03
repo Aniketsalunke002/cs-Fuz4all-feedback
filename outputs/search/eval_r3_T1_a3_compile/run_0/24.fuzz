@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char alphabet[] = { 'A','E','H', 'T','O', 'L' };
+    string str = alphabet;
+    cout << str;
+    return 0;
+}

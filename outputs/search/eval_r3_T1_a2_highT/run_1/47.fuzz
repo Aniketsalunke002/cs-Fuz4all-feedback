@@ -1,0 +1,56 @@
+#include <iostream>
+#include <fstream>
+int main() {
+	std::cout << "Please enter a file name." << "\n"
+	          << "All the input will be saved into a new file." << std::endl;
+	char name[32];
+	std::cin >> name;
+	for(;;) {
+		std::cout << "Please enter an instruction: ";
+		std::string command;
+		std::getline(std::cin, command);
+		if(command.c_str()[0] == 'q') return 0;
+		std::cout << command << std::endl;
+		std::ofstream output(name, std::ios::out | std::ios::app);
+		output << "Command entered: " << command;
+		output.close();
+	}
+	return 0;
+}
+ 
+#include <iostream>
+#include <fstream>
+int main() {
+	 
+	double number;
+	std::cout << "Please enter a double number: ";
+	std::cin >> number;
+	std::ofstream file("numbers.bin", std::ios::out | std::ios::binary);
+	file.write((char*)&number, 8);
+	if(file.is_open()) std::cout << "The file was just written." << std::endl;
+	else std::cout << "An error occured." << std::endl;
+	return 0;
+}
+ 
+#include <iostream>
+int main() {
+	int index;
+	std::cin >> index;
+	for(int iteration = 1; iteration <= index; iteration++) {
+		std::for_each(std::begin(iteration), std::end(iteration), [](const int &x) { std::cout << x; });
+		std::cout << "." << std::endl;
+	}
+	return 0;
+}
+ 
+#include <iostream>
+#include <fstream>
+int main() {
+	std::string test = "This is a test";
+	std::cout << test << std::endl;
+	std::cout << &test[0] << " and " << &test.data()[0] << std::endl;
+	 
+	 
+	std::cout << test.data() << std::endl;
+	 
+	std::for_each(test.cbegin(), test.cend(), [](char x) { std

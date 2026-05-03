@@ -1,0 +1,50 @@
+#include <iostream>
+
+#include <cmath>
+int main()
+{
+    int i, sum, counter_limit;
+    std::cin >> i;
+    std::cin >> counter_limit;
+    sum = i * (i + 1)/2;
+    while (counter_limit < i) {
+        int square = counter_limit*counter_limit;
+        int factor = (int)(sqrt(square));
+        // std::cin >> factor;
+        if (i % factor == 0) {
+            sum += i;
+            --counter_limit;
+        }
+        --i;
+    }
+    std::cout << sum;
+	return EXIT_SUCCESS;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 
+// 
+// #include <iostream>

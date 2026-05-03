@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+  bool x;
+  int n = 5000;
+  while (true) {
+    x = false;
+    cout << "x=" << x << endl;
+    if (x) {
+      cout << "turing n=" << n << endl;
+      n++;
+      if (n % 4 == 0) {
+        x = true;
+      }
+    } else {
+      cout << "turing n=" << n << endl;
+      n++;
+      if (n % 4!= 0) {
+        x = false;
+      }
+    }
+  }
+}

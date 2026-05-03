@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int max = 0;
+    for (int i = 2; i <= 100; i++) {
+        int s = i * 10;
+        if (max < s) {
+            max = s;
+        }
+    }
+    cout << "Max is " << max << endl;
+    return 0;
+}
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int l1 = 0;
+//     int l2 = 0;
+//     int max = 0;
+//     while (l1 < 201) {
+//         l2 = l1 + 1;
+//         if (l2 > l1) {
+//             max = l2;
+//         }
+//         l1 = l2;
+//     }
+//     cout << "Max is " << max << endl;
+//     return 0;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main() {
+//     int l1 = 0;
+//     int l2 = 0;
+//     int max = 0;
+//     while (l1 < 201) {
+//         l2 = l1 + 1;
+//         if (max < l2) {
+//             max = l2;
+//         }
+//         l1 = l2;
+//     }
+//     cout << "Max is " << max << endl;
+//     return 0;
+// }
+#include <iostream>
+using namespace std;
+int main() {
+    int l1 = 0;
+    int l2 = 0;
+    int max = 0;
+    while (l1 < 201) {
+        l2 = l1 + 1;
+        int s = l2;
+        if (max

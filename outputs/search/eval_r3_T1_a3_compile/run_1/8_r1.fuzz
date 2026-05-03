@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char *argv[]) {
+	for (float f1 = -1E10f; f1 < 1E10; f1 *= 10) {
+		for (float f2 = -1E10f; f2 < 1E10; f2 *= 10) {
+			float a = f1 + (f2 * 10);
+			float b = f1 - (f2 * 0.1);
+			float c = 0;
+			cout << f1 << "   " << f2 << "   " << a << "   " << b << " " << c << endl;
+		}
+	}
+}

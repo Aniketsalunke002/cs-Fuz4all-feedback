@@ -1,0 +1,136 @@
+#include <iostream>
+class A
+{
+public:
+  A &operator=(const A &b)
+  {
+    b.c = 4;
+    return *this;
+  }
+
+  int c;
+};
+int main()
+{
+  A a;
+  a.c = 3;
+  A a2 = a;
+  std::cout << a2.c << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <stdlib.h>
+
+int main()
+{
+  srand(time(NULL));
+
+  const int numberOfSolutions = 3;
+  const int size = 5;
+  int solution[size][size];
+
+  for (int i = 0; i < size; i++)
+  {
+    solution[0][i] = rand() % size;
+  }
+
+  for (int i = 1; i < size; i++)
+  {
+    solution[i][0] = rand() % size;
+    int k = 0;
+    for (k = 1; k < i; k++)
+    {
+      if (solution[k][i - 1] < solution[i - 1][0])
+      {
+        break;
+      }
+    }
+    int y = i - 1;
+    int x = k;
+    while (y!= 0 && x!= 0)
+    {
+      std::swap(solution[x][y], solution[y][x]);
+
+      y = y - 1, x = x - 1;
+      if (x == 0)
+      {
+        x = size - 1;
+      }
+    }
+  }
+
+  int flag = 1;
+
+  for (int i = 0; i < size; i++)
+  {
+    for (int j = 0; j < size; j++)
+    {
+      if (solution[i][j]!= i + j)
+      {
+        flag = 0;
+      }
+    }
+  }
+
+  if (flag == 1)
+  {
+    std::cout << "Solution" << std::endl;
+    for (int i = 0; i < size; i++)
+    {
+      for (int j = 0; j < size; j++)
+      {
+        std::cout << solution[i][j] <<'';
+      }
+      std::cout << std::endl;
+    }
+  }
+  else
+  {
+    std::cout << "Solution doesn't exist" << std::endl;
+  }
+
+  return 0;
+}
+ 
+#include <iostream>
+
+void bestSolution()
+{
+  int n, m, q, x, y;
+  std::cin >> n;
+  std::cin >> m;
+  int matrix[n][m];
+  std::cin >> q;
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < m; j++)
+    {
+      matrix[i][j] = 0;
+    }
+  }
+  for (int i = 0; i < q; i++)
+  {
+    std::cin >> x >> y >> matrix[x - 1][y - 1];
+  }
+  int max = 0;
+  int maxR, maxC;
+  for (int i = 0; i < n; i++)
+  {
+    for (int j = 0; j < m; j++)
+    {
+      if (matrix[i][j] > max)
+      {
+        maxR = i + 1;
+        maxC = j + 1;
+        max = matrix[i][j];
+      }
+    }
+  }
+  std::cout << maxR <<'' << maxC;
+}
+int main()
+{
+  bestSolution();
+  return 0;
+}

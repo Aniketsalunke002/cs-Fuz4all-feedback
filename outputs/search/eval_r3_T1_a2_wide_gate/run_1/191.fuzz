@@ -1,0 +1,14 @@
+#include <iostream>
+#include <string_view>
+#include <vector>
+#include <algorithm>
+
+void f(std::vector<std::string_view>& vec, char x) {
+  std::for_each(std::begin(vec), std::end(vec),
+                [](std::string_view&& s) -> void {});
+}
+int main(int argc, char** argv) {
+  std::vector<std::string_view> vec;
+  vec.emplace_back(argv[1]);
+  f(vec, 'c');
+}

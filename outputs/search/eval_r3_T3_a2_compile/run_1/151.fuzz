@@ -1,0 +1,13 @@
+#include <iostream>
+using std::cout;
+using std::endl;
+ 
+int main(int argc, char ** argv) {
+  int a = rand() % 100; 
+  Cell<int> *c = new Cell<int> {
+    a, 99
+  };
+  cout << c->c;
+  cout << c->f;
+  delete c;
+}

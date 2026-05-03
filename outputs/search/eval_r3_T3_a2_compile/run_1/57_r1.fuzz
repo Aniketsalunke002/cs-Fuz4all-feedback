@@ -1,0 +1,33 @@
+#include <iostream>
+
+template<typename T>
+void print(T const& t) { std::cout << t << std::endl; }
+int main(void)
+{
+	char c;
+	char* ptr;
+	c = 'c';
+	ptr = &c;
+	std::char_t a = '*';
+	print(ptr);
+	print(&a);
+	print(a);
+	print(c);
+	return 0;
+}
+//  
+// #include <iostream>
+// #include <cstdio>
+// template<typename T>
+// void print(T const& t) { std::cout << t << std::endl; }
+// int main(void)
+// {
+// 	const char c = 'c';
+// 	char const* ptr = &c;
+// 	std::char_t a = '*';
+// 	print(ptr);
+// 	print(&a);
+// 	print(a);
+// 	print(c);
+// 	std::printf("%p\n", &c);
+// }

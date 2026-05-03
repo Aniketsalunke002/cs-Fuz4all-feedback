@@ -1,0 +1,13 @@
+#include <iostream>
+using std::cout;
+using std::cin;
+using namespace std;
+int main()
+{
+string s;
+cin >> s;
+cout << "you input " << s;
+return 0;
+}
+
+

@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int *p = nullptr;
+    if(!p)
+        cout << "nullptr" << endl;
+    else
+        cout << "not nullptr" << endl;
+    return 0;
+}
+ 
+

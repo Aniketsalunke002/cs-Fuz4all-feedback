@@ -1,0 +1,106 @@
+#include <iostream>
+using namespace std;
+
+int main(void){
+    ios_base::sync_with_stdio(false);
+    int N;
+    cin>>N;
+    int **a = new int*[N];
+    for(int i = 0; i < N; i++){
+        a[i] = new int[N];
+        for(int j = 0; j < N; j++){
+            cin>>a[i][j];
+        }
+    }
+    for(int i = 0; i < N; i++){
+        for(int j = 0; j < N; j++){
+            if(a[i][j]){
+                cout<<i+1<<" "<<j+1<<" "<<"1"<<endl;
+            }
+        }
+    }
+}
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void fibonacci(int n, vector<int> &v){
+     
+    vector<int> w= {0,1};
+    int k;
+    while (w.size()<n)
+    {
+            for(int i = 0; i+1<w.size(); i++)
+            {
+                 k = w[i] + w[i+1];
+                 w.push_back(k);
+            }
+    }
+     
+    for(int i=0;i<n;i++)
+    {
+    cout << w[i] << " ";
+    }
+} 
+
+ 
+int main()
+{
+    int n;
+        cin>>n;
+    vector<int> v;
+    fibonacci(n,v);
+}
+ 
+#include <iostream>
+#include <unordered_set>
+using namespace std;
+void maxandmin(int a[], int n)
+{
+ 
+ 
+int Min[10];
+int Max[10];
+for (int i = 0; i < n; i++)
+{
+    if(i==0)
+    {
+        Min[i] = a[0];
+        Max[i] = a[0];
+    }
+    else
+    {
+        if(Min[i-1]>a[i])
+        {
+            Min[i]=Min[i-1];
+        }
+        else if(Max[i-1]<a[i])
+        {
+            Min[i]=a[i];
+        }
+    }
+    for (int l = i; l < n; l++)
+    {
+        if (Min[i]>a[l])
+        {
+            Min[i]=a[l];
+        }
+        if (Max[i]<a[l])
+        {
+            Max[i]=a[l];
+        }
+    }
+}
+float Avg[10];
+
+  float sum=0;
+  for(int i=0;i<n;i++)
+  {
+    sum+=a[i];
+  }
+  Avg[0]=float(sum)/n;
+  cout<<Max[0]<<endl;
+  cout<<Max[0]<<endl;
+  cout<<Avg[0]<<endl;
+}

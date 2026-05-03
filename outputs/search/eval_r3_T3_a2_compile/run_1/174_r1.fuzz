@@ -1,0 +1,23 @@
+#include <iostream>
+
+
+template <typename T>
+class A {
+
+private:
+    T val;
+
+public:
+    A(T val) : val{val} { }
+    T getVal() { return val; }
+    void setValue(T val) { this->val = val; }
+};
+
+int main(int argc, char *argv[])
+{
+    A<double> object{10.0};
+    std::cout << object.getVal();
+    object.setValue(20.0);
+    std::cout << object.getVal();
+    return 0;
+}

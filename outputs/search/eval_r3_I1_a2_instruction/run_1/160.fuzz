@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i=0,b=0;
+    do
+    {
+        i=i+1;
+        cout<<'S';
+    }
+    while(i<5);
+    {
+        cout<<'\n';
+        do
+        {
+            b=b+1;
+            cout << 'R';
+        }while(b<4);
+    }
+    cout << 'R';
+ 
+    return 0;
+}

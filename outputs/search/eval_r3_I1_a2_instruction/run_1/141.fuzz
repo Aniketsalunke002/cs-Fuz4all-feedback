@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int x = 5;
+    cout << x + 1 << endl;
+    if (x >= x)
+    {
+        x = -x;
+    }
+    cout << x << endl;
+    while (x > 10)
+    {
+        x = -x;
+    }
+    return 0;
+}

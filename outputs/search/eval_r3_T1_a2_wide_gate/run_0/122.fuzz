@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+using namespace std;
+struct b  
+{
+    string name;
+};
+struct a  
+{
+    string name="Nameless";
+};
+struct c  
+{
+    string a="Nameless";
+    string b="Nameless";
+    string c="Nameless";
+};
+class d  
+{
+    string name="Nameless";
+};
+class e  
+{
+    string a="Nameless";
+    string b="Nameless";
+    string c="Nameless";
+};
+class f  
+{
+    string a_name="Nameless";
+    string &b_name=a_name;  
+};
+int main()
+{
+    a object_a;  
+    b object_b;  
+    c object_c;  
+    d object_d;  
+    e object_e;  
+    f object_f;  
+    return 0;
+}

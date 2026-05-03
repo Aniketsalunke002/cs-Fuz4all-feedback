@@ -1,0 +1,20 @@
+#include <iostream>
+
+
+#include "../../../Chapter 1/1-6-4.h"
+#include "../../Chapter 8/8-14-f.h"
+#include "8-14-f/8-14-f-2.h"
+
+using std::cout;
+using std::endl;
+
+int main(){
+  cout << "\nC++\t1\n";
+  cout << "\n-----8-14-f 8-14-f-2-----\n";
+
+  cout << m(6) << "\t" << n(6) << endl;
+  cout << m(6) << "\t" << n2(6) << endl;
+  cout << endl;
+
+  return 0;
+}

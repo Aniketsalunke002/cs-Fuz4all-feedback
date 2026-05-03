@@ -1,0 +1,1509 @@
+[TRACE] Validating outputs/repair_7b_200/0.fuzz ...
+[VERBOSE] outputs/repair_7b_200/0.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/2.fuzz failed validation with error message: outputs/repair_7b_200/2.fuzz: In constructor ‘foo::Test::Test(std::string)’:
+outputs/repair_7b_200/2.fuzz:13:13: error: ‘str’ was not declared in this scope; did you mean ‘std’?
+   13 |             str = name;
+      |             ^~~
+      |             std
+outputs/repair_7b_200/2.fuzz: In member function ‘void foo::Test::print()’:
+outputs/repair_7b_200/2.fuzz:20:21: error: ‘str’ was not declared in this scope; did you mean ‘std’?
+   20 |             cout << str << " - " << this->name << endl;
+      |                     ^~~
+      |                     std
+[TRACE] Validating outputs/repair_7b_200/3.fuzz ...
+[VERBOSE] outputs/repair_7b_200/3.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/4.fuzz ...
+[VERBOSE] outputs/repair_7b_200/4.fuzz failed validation with error message: outputs/repair_7b_200/4.fuzz:10:2: error: #endif without #if
+   10 | #endif
+      |  ^~~~~
+[TRACE] Validating outputs/repair_7b_200/5.fuzz ...
+[VERBOSE] outputs/repair_7b_200/5.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/6.fuzz ...
+[VERBOSE] outputs/repair_7b_200/6.fuzz failed validation with error message: outputs/repair_7b_200/6.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main()
+      |     ^~~~
+outputs/repair_7b_200/6.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/6_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/6_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/7.fuzz ...
+[VERBOSE] outputs/repair_7b_200/7.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/8.fuzz ...
+[VERBOSE] outputs/repair_7b_200/8.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/9.fuzz ...
+[VERBOSE] outputs/repair_7b_200/9.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/10.fuzz ...
+[VERBOSE] outputs/repair_7b_200/10.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/11.fuzz ...
+[VERBOSE] outputs/repair_7b_200/11.fuzz failed validation with error message: outputs/repair_7b_200/11.fuzz:9:5: warning: ‘int main(int)’ takes only zero or two arguments [-Wmain]
+    9 | int main(int arg1)
+      |     ^~~~
+outputs/repair_7b_200/11.fuzz:9:5: error: conflicting declaration of C function ‘int main(int)’
+outputs/repair_7b_200/11.fuzz:2:5: note: previous declaration ‘int main()’
+    2 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/11_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/11_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/12.fuzz ...
+[VERBOSE] outputs/repair_7b_200/12.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/13.fuzz ...
+[VERBOSE] outputs/repair_7b_200/13.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/14.fuzz ...
+[VERBOSE] outputs/repair_7b_200/14.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/15.fuzz ...
+[VERBOSE] outputs/repair_7b_200/15.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/16.fuzz ...
+[VERBOSE] outputs/repair_7b_200/16.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/17.fuzz ...
+[VERBOSE] outputs/repair_7b_200/17.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/18.fuzz ...
+[VERBOSE] outputs/repair_7b_200/18.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/19.fuzz ...
+[VERBOSE] outputs/repair_7b_200/19.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/20.fuzz ...
+[VERBOSE] outputs/repair_7b_200/20.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/21.fuzz ...
+[VERBOSE] outputs/repair_7b_200/21.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/22.fuzz ...
+[VERBOSE] outputs/repair_7b_200/22.fuzz failed validation with error message: outputs/repair_7b_200/22.fuzz:17:3: warning: #warning "This is C++ code" [-Wcpp]
+   17 | # warning "This is C++ code"
+      |   ^~~~~~~
+outputs/repair_7b_200/22.fuzz:19:2: error: #endif without #if
+   19 | #endif
+      |  ^~~~~
+outputs/repair_7b_200/22.fuzz:23:13: warning: #pragma system_header ignored outside include file
+   23 | #pragma GCC system_header
+      |             ^~~~~~~~~~~~~
+[TRACE] Validating outputs/repair_7b_200/22_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/22_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/23.fuzz ...
+[VERBOSE] outputs/repair_7b_200/23.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/24.fuzz ...
+[VERBOSE] outputs/repair_7b_200/24.fuzz failed validation with error message: outputs/repair_7b_200/24.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/24.fuzz:4:13: error: expected initializer before numeric constant
+    4 |     float a 1.0f;
+      |             ^~~~
+[TRACE] Validating outputs/repair_7b_200/24_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/24_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/25.fuzz ...
+[VERBOSE] outputs/repair_7b_200/25.fuzz failed validation with error message: outputs/repair_7b_200/25.fuzz:6:2: error: #endif without #if
+    6 | #endif
+      |  ^~~~~
+outputs/repair_7b_200/25.fuzz: In function ‘void foo()’:
+outputs/repair_7b_200/25.fuzz:4:15: error: ‘sin’ was not declared in this scope
+    4 |    double y = sin(42.0);
+      |               ^~~
+[TRACE] Validating outputs/repair_7b_200/25_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/25_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/26.fuzz ...
+[VERBOSE] outputs/repair_7b_200/26.fuzz failed validation with error message: outputs/repair_7b_200/26.fuzz:8:3: error: #error "This is C++ code"
+    8 | # error "This is C++ code"
+      |   ^~~~~
+[TRACE] Validating outputs/repair_7b_200/26_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/26_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/27.fuzz ...
+[VERBOSE] outputs/repair_7b_200/27.fuzz failed validation with error message: outputs/repair_7b_200/27.fuzz:7:2: error: #endif without #if
+    7 | #endif
+      |  ^~~~~
+[TRACE] Validating outputs/repair_7b_200/27_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/27_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/28.fuzz ...
+[VERBOSE] outputs/repair_7b_200/28.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/29.fuzz ...
+[VERBOSE] outputs/repair_7b_200/29.fuzz failed validation with error message: outputs/repair_7b_200/29.fuzz:5:12: error: cannot declare ‘::main’ to be static
+    5 | static int main() {
+      |            ^~~~
+outputs/repair_7b_200/29.fuzz: In function ‘int main1()’:
+outputs/repair_7b_200/29.fuzz:17:18: error: request for member ‘release’ in ‘* ptr’, which is of non-class type ‘float’
+   17 |             ptr->release();
+      |                  ^~~~~~~
+outputs/repair_7b_200/29.fuzz:24:21: error: invalid conversion from ‘const float*’ to ‘std::unique_ptr<float>::pointer’ {aka ‘float*’} [-fpermissive]
+   24 |             a.reset(const_ptr);
+      |                     ^~~~~~~~~
+      |                     |
+      |                     const float*
+In file included from /usr/include/c++/11/memory:76,
+                 from outputs/repair_7b_200/29.fuzz:2:
+/usr/include/c++/11/bits/unique_ptr.h:452:21: note:   initializing argument 1 of ‘void std::unique_ptr<_Tp, _Dp>::reset(std::unique_ptr<_Tp, _Dp>::pointer) [with _Tp = float; _Dp = std::default_delete<float>; std::unique_ptr<_Tp, _Dp>::pointer = float*]’
+  452 |       reset(pointer __p = pointer()) noexcept
+      |             ~~~~~~~~^~~~~~~~~~~~~~~
+outputs/repair_7b_200/29.fuzz:25:10: error: expected ‘}’ at end of input
+   25 |         }
+      |          ^
+[TRACE] Validating outputs/repair_7b_200/30.fuzz ...
+[VERBOSE] outputs/repair_7b_200/30.fuzz failed validation with error message: outputs/repair_7b_200/30.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/30.fuzz:5:5: note: ‘int main()’ previously defined here
+    5 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/30.fuzz:17:5: error: redefinition of ‘int main()’
+   17 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/30.fuzz:5:5: note: ‘int main()’ previously defined here
+    5 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/30.fuzz:21:5: error: redefinition of ‘int main()’
+   21 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/30.fuzz:5:5: note: ‘int main()’ previously defined here
+    5 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/30_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/30_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/31.fuzz ...
+[VERBOSE] outputs/repair_7b_200/31.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/32.fuzz ...
+[VERBOSE] outputs/repair_7b_200/32.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/33.fuzz ...
+[VERBOSE] outputs/repair_7b_200/33.fuzz failed validation with error message: outputs/repair_7b_200/33.fuzz:6:1: error: stray ‘`’ in program
+    6 | ```
+      | ^
+outputs/repair_7b_200/33.fuzz:6:2: error: stray ‘`’ in program
+    6 | ```
+      |  ^
+outputs/repair_7b_200/33.fuzz:6:3: error: stray ‘`’ in program
+    6 | ```
+      |   ^
+[TRACE] Validating outputs/repair_7b_200/33_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/33_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/34.fuzz ...
+[VERBOSE] outputs/repair_7b_200/34.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/35.fuzz ...
+[VERBOSE] outputs/repair_7b_200/35.fuzz failed validation with error message: outputs/repair_7b_200/35.fuzz:8:5: error: redefinition of ‘int main()’
+    8 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/35.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/35_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/35_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/36.fuzz ...
+[VERBOSE] outputs/repair_7b_200/36.fuzz failed validation with error message: outputs/repair_7b_200/36.fuzz:13:5: error: redefinition of ‘int main()’
+   13 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/36.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/36_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/36_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/37.fuzz ...
+[VERBOSE] outputs/repair_7b_200/37.fuzz failed validation with error message: outputs/repair_7b_200/37.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/37.fuzz:5:5: note: ‘int main()’ previously defined here
+    5 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/37.fuzz:20:5: error: redefinition of ‘int main()’
+   20 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/37.fuzz:5:5: note: ‘int main()’ previously defined here
+    5 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/37.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/37.fuzz:29:12: error: expected primary-expression at end of input
+   29 |     int j =
+      |            ^
+outputs/repair_7b_200/37.fuzz:29:12: error: expected ‘}’ at end of input
+outputs/repair_7b_200/37.fuzz:20:12: note: to match this ‘{’
+   20 | int main() {
+      |            ^
+[TRACE] Validating outputs/repair_7b_200/38.fuzz ...
+[VERBOSE] outputs/repair_7b_200/38.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/39.fuzz ...
+[VERBOSE] outputs/repair_7b_200/39.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/40.fuzz ...
+[VERBOSE] outputs/repair_7b_200/40.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/41.fuzz ...
+[VERBOSE] outputs/repair_7b_200/41.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/42.fuzz ...
+[VERBOSE] outputs/repair_7b_200/42.fuzz failed validation with error message: outputs/repair_7b_200/42.fuzz:23:5: error: conflicting declaration of C function ‘int main(int, char**)’
+   23 | int main(int, char **) {
+      |     ^~~~
+outputs/repair_7b_200/42.fuzz:2:5: note: previous declaration ‘int main()’
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/43.fuzz ...
+[VERBOSE] outputs/repair_7b_200/43.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/44.fuzz ...
+[VERBOSE] outputs/repair_7b_200/44.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/45.fuzz ...
+[VERBOSE] outputs/repair_7b_200/45.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/46.fuzz ...
+[VERBOSE] outputs/repair_7b_200/46.fuzz failed validation with error message: outputs/repair_7b_200/46.fuzz:3:31: error: empty character constant
+    3 |     std::cout << 10.2 + 20.3 +'';
+      |                               ^~
+[TRACE] Validating outputs/repair_7b_200/47.fuzz ...
+[VERBOSE] outputs/repair_7b_200/47.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/48.fuzz ...
+[VERBOSE] outputs/repair_7b_200/48.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/49.fuzz ...
+[VERBOSE] outputs/repair_7b_200/49.fuzz failed validation with error message: outputs/repair_7b_200/49.fuzz:8:2: error: expected ‘;’ after class definition
+    8 | }
+      |  ^
+      |  ;
+[TRACE] Validating outputs/repair_7b_200/49_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/49_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/50.fuzz ...
+[VERBOSE] outputs/repair_7b_200/50.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/51.fuzz ...
+[VERBOSE] outputs/repair_7b_200/51.fuzz failed validation with error message: outputs/repair_7b_200/51.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/51.fuzz:10:22: error: no match for ‘operator+’ (operand types are ‘int’ and ‘B<int>’)
+   10 |     std::cout << b.x + b + 224;
+      |                  ~~~ ^ ~
+      |                    |   |
+      |                    int B<int>
+[TRACE] Validating outputs/repair_7b_200/52.fuzz ...
+[VERBOSE] outputs/repair_7b_200/52.fuzz failed validation with error message: outputs/repair_7b_200/52.fuzz:7:1: error: stray ‘`’ in program
+    7 | ```
+      | ^
+outputs/repair_7b_200/52.fuzz:7:2: error: stray ‘`’ in program
+    7 | ```
+      |  ^
+outputs/repair_7b_200/52.fuzz:7:3: error: stray ‘`’ in program
+    7 | ```
+      |   ^
+outputs/repair_7b_200/52.fuzz:9:1: error: stray ‘##’ in program
+    9 | ## 注意事项
+      | ^~
+outputs/repair_7b_200/52.fuzz:13:1: error: stray ‘##’ in program
+   13 | ## 提交内容
+      | ^~
+outputs/repair_7b_200/52.fuzz:15:22: error: stray ‘`’ in program
+   15 | 请提交源码的文件名为 `cpp_basic.cpp` 并提交至 **Problem 04/task/code**
+      |                      ^
+outputs/repair_7b_200/52.fuzz:15:36: error: stray ‘`’ in program
+   15 | 请提交源码的文件名为 `cpp_basic.cpp` 并提交至 **Problem 04/task/code**
+[TRACE] Validating outputs/repair_7b_200/52_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/52_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/53.fuzz ...
+[VERBOSE] outputs/repair_7b_200/53.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/54.fuzz ...
+[VERBOSE] outputs/repair_7b_200/54.fuzz failed validation with error message: outputs/repair_7b_200/54.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/54.fuzz:11:15: error: no match for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘A<int>’)
+   11 |     std::cout << a;
+      |     ~~~~~~~~~ ^~ ~
+      |          |       |
+      |          |       A<int>
+      |          std::ostream {aka std::basic_ostream<char>}
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_7b_200/54.fuzz:1:
+/usr/include/c++/11/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:108:36: note:   no known conversion for argument 1 from ‘A<int>’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:117:32: note:   no known conversion for argument 1 from ‘A<int>’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+[TRACE] Validating outputs/repair_7b_200/55.fuzz ...
+[VERBOSE] outputs/repair_7b_200/55.fuzz failed validation with error message: outputs/repair_7b_200/55.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/55.fuzz:21:19: error: conversion from ‘int’ to non-scalar type ‘A<double>’ requested
+   21 |     A<double> b = 1;
+      |                   ^
+outputs/repair_7b_200/55.fuzz:21:21: error: expected ‘}’ at end of input
+   21 |     A<double> b = 1;
+      |                     ^
+outputs/repair_7b_200/55.fuzz:19:12: note: to match this ‘{’
+   19 | int main() {
+      |            ^
+[TRACE] Validating outputs/repair_7b_200/56.fuzz ...
+[VERBOSE] outputs/repair_7b_200/56.fuzz failed validation with error message: outputs/repair_7b_200/56.fuzz:16:1: error: unterminated comment
+   16 | /* Please create a program that uses the
+      | ^
+outputs/repair_7b_200/56.fuzz:6:5: error: redefinition of ‘int main()’
+    6 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/56.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/56.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/56.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/56.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/56.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+[TRACE] Validating outputs/repair_7b_200/56_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/56_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/57.fuzz ...
+[VERBOSE] outputs/repair_7b_200/57.fuzz failed validation with error message: outputs/repair_7b_200/57.fuzz:19:19: error: expected nested-name-specifier at end of input
+   19 | template <typename
+      |                   ^
+outputs/repair_7b_200/57.fuzz:19:19: error: expected ‘>’ at end of input
+outputs/repair_7b_200/57.fuzz:19:19: error: expected unqualified-id at end of input
+outputs/repair_7b_200/57.fuzz: In instantiation of ‘T A<T>::operator+(T) [with T = int]’:
+outputs/repair_7b_200/57.fuzz:14:22:   required from here
+outputs/repair_7b_200/57.fuzz:7:5: warning: no return statement in function returning non-void [-Wreturn-type]
+    7 |     }
+      |     ^
+[TRACE] Validating outputs/repair_7b_200/58.fuzz ...
+[VERBOSE] outputs/repair_7b_200/58.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/59.fuzz ...
+[VERBOSE] outputs/repair_7b_200/59.fuzz failed validation with error message: outputs/repair_7b_200/59.fuzz:6:3: error: expected unqualified-id before ‘/’ token
+    6 | }*/
+      |   ^
+[TRACE] Validating outputs/repair_7b_200/59_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/59_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/60.fuzz ...
+[VERBOSE] outputs/repair_7b_200/60.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/61.fuzz ...
+[VERBOSE] outputs/repair_7b_200/61.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/62.fuzz ...
+[VERBOSE] outputs/repair_7b_200/62.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/63.fuzz ...
+[VERBOSE] outputs/repair_7b_200/63.fuzz failed validation with error message: outputs/repair_7b_200/63.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/63.fuzz:4:54: error: expected ‘}’ at end of input
+    4 |     std::cout << (value + 5) / 3 * ((value - 3) / 4);
+      |                                                      ^
+outputs/repair_7b_200/63.fuzz:2:12: note: to match this ‘{’
+    2 | int main() {
+      |            ^
+[TRACE] Validating outputs/repair_7b_200/63_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/63_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/64.fuzz ...
+[VERBOSE] outputs/repair_7b_200/64.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/65.fuzz ...
+[VERBOSE] outputs/repair_7b_200/65.fuzz failed validation with error message: outputs/repair_7b_200/65.fuzz:13:1: error: stray ‘`’ in program
+   13 | ```
+      | ^
+outputs/repair_7b_200/65.fuzz:13:2: error: stray ‘`’ in program
+   13 | ```
+      |  ^
+outputs/repair_7b_200/65.fuzz:13:3: error: stray ‘`’ in program
+   13 | ```
+      |   ^
+outputs/repair_7b_200/65.fuzz:15:1: error: stray ‘##’ in program
+   15 | ## Additional information
+      | ^~
+outputs/repair_7b_200/65.fuzz:17:121: warning: missing terminating ' character
+   17 | - Some of the exercises in this module could be difficult for beginners. You may need additional knowledge about C++. It's your task to figure out how to solve most of the exercises. Try to use documentation, code reviews, etc, as much as possible.
+      |                                                                                                                         ^
+outputs/repair_7b_200/65.fuzz:17:121: error: missing terminating ' character
+   17 | - Some of the exercises in this module could be difficult for beginners. You may need additional knowledge about C++. It's your task to figure out how to solve most of the exercises. Try to use documentation, code reviews, etc, as much as possible.
+      |                                                                                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+outputs/repair_7b_200/65.fuzz:8:5: error: redefinition of ‘int main()’
+    8 | int main() {
+[TRACE] Validating outputs/repair_7b_200/66.fuzz ...
+[VERBOSE] outputs/repair_7b_200/66.fuzz failed validation with error message: outputs/repair_7b_200/66.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/66.fuzz:5:7: error: ‘int foo::value’ is private within this context
+    5 |     x.value = 4;
+      |       ^~~~~
+outputs/repair_7b_200/66.fuzz:2:26: note: declared private here
+    2 | class foo { private: int value = 0; };
+      |                          ^~~~~
+outputs/repair_7b_200/66.fuzz:6:7: error: ‘int foo::value’ is private within this context
+    6 |     y.value = 8;
+      |       ^~~~~
+outputs/repair_7b_200/66.fuzz:2:26: note: declared private here
+    2 | class foo { private: int value = 0; };
+      |                          ^~~~~
+outputs/repair_7b_200/66.fuzz:7:22: error: ‘int foo::value’ is private within this context
+    7 |     std::cout << ((x.value - 5) / 3) * ((y.value - 11) / 4);
+      |                      ^~~~~
+outputs/repair_7b_200/66.fuzz:2:26: note: declared private here
+    2 | class foo { private: int value = 0; };
+      |                          ^~~~~
+outputs/repair_7b_200/66.fuzz:7:44: error: ‘int foo::value’ is private within this context
+[TRACE] Validating outputs/repair_7b_200/67.fuzz ...
+[VERBOSE] outputs/repair_7b_200/67.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/68.fuzz ...
+[VERBOSE] outputs/repair_7b_200/68.fuzz failed validation with error message: outputs/repair_7b_200/68.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/68.fuzz:4:20: error: invalid conversion from ‘const int*’ to ‘int*’ [-fpermissive]
+    4 |     int* const p = &value;
+      |                    ^~~~~~
+      |                    |
+      |                    const int*
+[TRACE] Validating outputs/repair_7b_200/69.fuzz ...
+[VERBOSE] outputs/repair_7b_200/69.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/70.fuzz ...
+[VERBOSE] outputs/repair_7b_200/70.fuzz failed validation with error message: outputs/repair_7b_200/70.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/70.fuzz:5:3: error: ‘vector’ was not declared in this scope
+    5 |   vector<int> vec(10);
+      |   ^~~~~~
+outputs/repair_7b_200/70.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | int main() {
+outputs/repair_7b_200/70.fuzz:5:10: error: expected primary-expression before ‘int’
+    5 |   vector<int> vec(10);
+      |          ^~~
+outputs/repair_7b_200/70.fuzz:8:23: error: ‘vec’ was not declared in this scope
+    8 |   for (auto& element: vec)
+      |                       ^~~
+outputs/repair_7b_200/70.fuzz:11:23: error: ‘vec’ was not declared in this scope
+   11 |   for (const auto &x: vec)
+      |                       ^~~
+[TRACE] Validating outputs/repair_7b_200/70_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/70_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/71.fuzz ...
+[VERBOSE] outputs/repair_7b_200/71.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/72.fuzz ...
+[VERBOSE] outputs/repair_7b_200/72.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/73.fuzz ...
+[VERBOSE] outputs/repair_7b_200/73.fuzz failed validation with error message: outputs/repair_7b_200/73.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/73.fuzz:15:7: error: ‘int main()::Some::x’ is private within this context
+   15 |     s.x = 30;
+      |       ^
+outputs/repair_7b_200/73.fuzz:5:17: note: declared private here
+    5 |             int x, y;
+      |                 ^
+outputs/repair_7b_200/73.fuzz:16:20: error: ‘int main()::Some::x’ is private within this context
+   16 |     std::cout << s.x << " " << s.y;
+      |                    ^
+outputs/repair_7b_200/73.fuzz:5:17: note: declared private here
+    5 |             int x, y;
+      |                 ^
+outputs/repair_7b_200/73.fuzz:16:34: error: ‘int main()::Some::y’ is private within this context
+   16 |     std::cout << s.x << " " << s.y;
+      |                                  ^
+outputs/repair_7b_200/73.fuzz:5:20: note: declared private here
+    5 |             int x, y;
+      |                    ^
+outputs/repair_7b_200/73.fuzz: At global scope:
+[TRACE] Validating outputs/repair_7b_200/74.fuzz ...
+[VERBOSE] outputs/repair_7b_200/74.fuzz failed validation with error message: outputs/repair_7b_200/74.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/74.fuzz:2:13: error: expected ‘}’ at end of input
+    2 | int main() {
+      |            ~^
+[TRACE] Validating outputs/repair_7b_200/74_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/74_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/75.fuzz ...
+[VERBOSE] outputs/repair_7b_200/75.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/76.fuzz ...
+[VERBOSE] outputs/repair_7b_200/76.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/77.fuzz ...
+[VERBOSE] outputs/repair_7b_200/77.fuzz failed validation with error message: outputs/repair_7b_200/77.fuzz:16:5: error: redefinition of ‘int main()’
+   16 | int main()
+      |     ^~~~
+outputs/repair_7b_200/77.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/77.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/77.fuzz:23:10: error: expected ‘}’ at end of input
+   23 |         }
+      |          ^
+outputs/repair_7b_200/77.fuzz:20:19: note: to match this ‘{’
+   20 |     while (i<=10) {
+      |                   ^
+outputs/repair_7b_200/77.fuzz:23:10: error: expected ‘}’ at end of input
+   23 |         }
+      |          ^
+outputs/repair_7b_200/77.fuzz:17:1: note: to match this ‘{’
+   17 | {
+      | ^
+[TRACE] Validating outputs/repair_7b_200/78.fuzz ...
+[VERBOSE] outputs/repair_7b_200/78.fuzz failed validation with error message: outputs/repair_7b_200/78.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/78.fuzz:14:14: error: expected ‘;’ at end of input
+   14 |     std::cout
+      |              ^
+      |              ;
+outputs/repair_7b_200/78.fuzz:14:14: error: expected ‘}’ at end of input
+outputs/repair_7b_200/78.fuzz:2:12: note: to match this ‘{’
+    2 | int main() {
+      |            ^
+[TRACE] Validating outputs/repair_7b_200/79.fuzz ...
+[VERBOSE] outputs/repair_7b_200/79.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/80.fuzz ...
+[VERBOSE] outputs/repair_7b_200/80.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/81.fuzz ...
+[VERBOSE] outputs/repair_7b_200/81.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/82.fuzz ...
+[VERBOSE] outputs/repair_7b_200/82.fuzz failed validation with error message: outputs/repair_7b_200/82.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/82.fuzz:6:16: error: cannot convert ‘int**’ to ‘int*’ in initialization
+    6 |         int *b=&a;
+      |                ^~
+      |                |
+      |                int**
+outputs/repair_7b_200/82.fuzz:7:9: error: lvalue required as left operand of assignment
+    7 |         &a=b;
+      |         ^~
+[TRACE] Validating outputs/repair_7b_200/83.fuzz ...
+[VERBOSE] outputs/repair_7b_200/83.fuzz failed validation with error message: outputs/repair_7b_200/83.fuzz:13:5: error: redefinition of ‘int main()’
+   13 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/83.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/83.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/83.fuzz:14:17: error: expected ‘,’ or ‘;’ at end of input
+   14 |     int a=0, b=1
+      |                 ^
+outputs/repair_7b_200/83.fuzz:14:17: error: expected ‘}’ at end of input
+outputs/repair_7b_200/83.fuzz:13:12: note: to match this ‘{’
+   13 | int main() {
+      |            ^
+[TRACE] Validating outputs/repair_7b_200/84.fuzz ...
+[VERBOSE] outputs/repair_7b_200/84.fuzz failed validation with error message: outputs/repair_7b_200/84.fuzz:15:5: error: redefinition of ‘int main()’
+   15 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/84.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/84.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/84.fuzz:18:4: error: expected ‘(’ before ‘:’ token
+   18 | for:  a =
+      |    ^
+      |    (
+outputs/repair_7b_200/84.fuzz:18:4: error: expected primary-expression before ‘:’ token
+outputs/repair_7b_200/84.fuzz:18:10: error: expected primary-expression at end of input
+   18 | for:  a =
+      |          ^
+outputs/repair_7b_200/84.fuzz:18:10: error: expected ‘;’ at end of input
+   18 | for:  a =
+      |          ^
+      |          ;
+outputs/repair_7b_200/84.fuzz:18:10: error: expected primary-expression at end of input
+[TRACE] Validating outputs/repair_7b_200/85.fuzz ...
+[VERBOSE] outputs/repair_7b_200/85.fuzz failed validation with error message: outputs/repair_7b_200/85.fuzz:16:5: error: redefinition of ‘int main()’
+   16 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/85.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/85.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/85.fuzz:18:18: error: expected ‘;’ at end of input
+   18 |     std::cout <<a
+      |                  ^
+      |                  ;
+outputs/repair_7b_200/85.fuzz:18:18: error: expected ‘}’ at end of input
+outputs/repair_7b_200/85.fuzz:16:12: note: to match this ‘{’
+   16 | int main() {
+      |            ^
+[TRACE] Validating outputs/repair_7b_200/86.fuzz ...
+[VERBOSE] outputs/repair_7b_200/86.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/87.fuzz ...
+[VERBOSE] outputs/repair_7b_200/87.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/88.fuzz ...
+[VERBOSE] outputs/repair_7b_200/88.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/89.fuzz ...
+[VERBOSE] outputs/repair_7b_200/89.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/90.fuzz ...
+[VERBOSE] outputs/repair_7b_200/90.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/91.fuzz ...
+[VERBOSE] outputs/repair_7b_200/91.fuzz failed validation with error message: outputs/repair_7b_200/91.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/91.fuzz:14:16: error: expected primary-expression at end of input
+   14 |    std::cout <<
+      |                ^
+outputs/repair_7b_200/91.fuzz:14:16: error: expected ‘}’ at end of input
+outputs/repair_7b_200/91.fuzz:2:12: note: to match this ‘{’
+    2 | int main() {
+      |            ^
+[TRACE] Validating outputs/repair_7b_200/92.fuzz ...
+[VERBOSE] outputs/repair_7b_200/92.fuzz failed validation with error message: outputs/repair_7b_200/92.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/92.fuzz:8:29: error: ‘i’ was not declared in this scope
+    8 |         std::cout << '|' << i << ':' << b << '=' << a << '+' << b << '|' <<std::endl;
+      |                             ^
+outputs/repair_7b_200/92.fuzz:9:13: error: ‘i’ was not declared in this scope
+    9 |     } while(i++ < 6);
+      |             ^
+[TRACE] Validating outputs/repair_7b_200/92_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/92_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/93.fuzz ...
+[VERBOSE] outputs/repair_7b_200/93.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/94.fuzz ...
+[VERBOSE] outputs/repair_7b_200/94.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/95.fuzz ...
+[VERBOSE] outputs/repair_7b_200/95.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/96.fuzz ...
+[VERBOSE] outputs/repair_7b_200/96.fuzz failed validation with error message: outputs/repair_7b_200/96.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/96.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/96.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/96.fuzz:16:12: error: expected primary-expression at end of input
+   16 |     int b =
+      |            ^
+outputs/repair_7b_200/96.fuzz:16:12: error: expected ‘}’ at end of input
+outputs/repair_7b_200/96.fuzz:14:12: note: to match this ‘{’
+   14 | int main() {
+      |            ^
+[TRACE] Validating outputs/repair_7b_200/97.fuzz ...
+[VERBOSE] outputs/repair_7b_200/97.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/98.fuzz ...
+[VERBOSE] outputs/repair_7b_200/98.fuzz failed validation with error message: outputs/repair_7b_200/98.fuzz:12:1: error: unterminated comment
+   12 | /*
+      | ^
+[TRACE] Validating outputs/repair_7b_200/99.fuzz ...
+[VERBOSE] outputs/repair_7b_200/99.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/100.fuzz ...
+[VERBOSE] outputs/repair_7b_200/100.fuzz failed validation with error message: outputs/repair_7b_200/100.fuzz:14:1: error: unterminated comment
+   14 | /* Please create a program which uses a mutated part of an earlier generation. What has happened to the value of 'a' since then?
+      | ^
+[TRACE] Validating outputs/repair_7b_200/101.fuzz ...
+[VERBOSE] outputs/repair_7b_200/101.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/102.fuzz ...
+[VERBOSE] outputs/repair_7b_200/102.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/103.fuzz ...
+[VERBOSE] outputs/repair_7b_200/103.fuzz failed validation with error message: outputs/repair_7b_200/103.fuzz:18:1: error: unterminated comment
+   18 | /* Please create a modified
+      | ^
+[TRACE] Validating outputs/repair_7b_200/104.fuzz ...
+[VERBOSE] outputs/repair_7b_200/104.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/105.fuzz ...
+[VERBOSE] outputs/repair_7b_200/105.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/106.fuzz ...
+[VERBOSE] outputs/repair_7b_200/106.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/107.fuzz ...
+[VERBOSE] outputs/repair_7b_200/107.fuzz failed validation with error message: outputs/repair_7b_200/107.fuzz:12:1: error: unterminated comment
+   12 | /* Please write program that has a number between 0 and 100 and when pressed return will print a text
+      | ^
+[TRACE] Validating outputs/repair_7b_200/108.fuzz ...
+[VERBOSE] outputs/repair_7b_200/108.fuzz failed validation with error message: outputs/repair_7b_200/108.fuzz:16:5: error: redefinition of ‘int main()’
+   16 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/108.fuzz:6:5: note: ‘int main()’ previously defined here
+    6 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/108.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/108.fuzz:19:69: error: narrowing conversion of ‘2.5e+7’ from ‘double’ to ‘int’ [-Wnarrowing]
+   19 |     std::uniform_int_distribution<int> dist{2, 2.5 * std::pow(10, 7)};
+      |                                                                     ^
+outputs/repair_7b_200/108.fuzz:23:52: error: expected primary-expression at end of input
+   23 |         for (int j = 2; j < std::ceil(std::sqrt(std
+      |                                                    ^
+outputs/repair_7b_200/108.fuzz:23:52: error: expected ‘;’ at end of input
+   23 |         for (int j = 2; j < std::ceil(std::sqrt(std
+      |                                                    ^
+      |                                                    ;
+outputs/repair_7b_200/108.fuzz:23:52: error: expected primary-expression at end of input
+outputs/repair_7b_200/108.fuzz:23:52: error: expected ‘)’ at end of input
+   23 |         for (int j = 2; j < std::ceil(std::sqrt(std
+[TRACE] Validating outputs/repair_7b_200/109.fuzz ...
+[VERBOSE] outputs/repair_7b_200/109.fuzz failed validation with error message: outputs/repair_7b_200/109.fuzz:5:2: error: expected ‘;’ after class definition
+    5 | }
+      |  ^
+      |  ;
+[TRACE] Validating outputs/repair_7b_200/109_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/109_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/110.fuzz ...
+[VERBOSE] outputs/repair_7b_200/110.fuzz failed validation with error message: outputs/repair_7b_200/110.fuzz:9:5: error: no declaration matches ‘int A::b()’
+    9 | int A::b() {
+      |     ^
+outputs/repair_7b_200/110.fuzz:3:10: note: candidate is: ‘void A::b()’
+    3 |     void b() {};
+      |          ^
+outputs/repair_7b_200/110.fuzz:2:7: note: ‘class A’ defined here
+    2 | class A {
+      |       ^
+[TRACE] Validating outputs/repair_7b_200/110_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/110_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/111.fuzz ...
+[VERBOSE] outputs/repair_7b_200/111.fuzz failed validation with error message: outputs/repair_7b_200/111.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/111.fuzz:3:5: error: ‘A’ was not declared in this scope
+    3 |     A* a = new A();
+      |     ^
+outputs/repair_7b_200/111.fuzz:3:8: error: ‘a’ was not declared in this scope
+    3 |     A* a = new A();
+      |        ^
+outputs/repair_7b_200/111.fuzz:3:16: error: expected type-specifier before ‘A’
+    3 |     A* a = new A();
+      |                ^
+outputs/repair_7b_200/111.fuzz: At global scope:
+outputs/repair_7b_200/111.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main()
+      |     ^~~~
+outputs/repair_7b_200/111.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/111.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/111.fuzz:20:37: error: expected primary-expression at end of input
+   20 |     int* num = new int[10] {1, 2, 3,
+[TRACE] Validating outputs/repair_7b_200/111_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/111_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/112.fuzz ...
+[VERBOSE] outputs/repair_7b_200/112.fuzz failed validation with error message: outputs/repair_7b_200/112.fuzz:8:5: error: redefinition of ‘int main()’
+    8 | int main() {
+      |     ^~~~
+outputs/repair_7b_200/112.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/112_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/112_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/113.fuzz ...
+[VERBOSE] outputs/repair_7b_200/113.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/114.fuzz ...
+[VERBOSE] outputs/repair_7b_200/114.fuzz failed validation with error message: outputs/repair_7b_200/114.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/114.fuzz:3:5: error: ‘A’ was not declared in this scope
+    3 |     A* a = malloc(sizeof(A));
+      |     ^
+outputs/repair_7b_200/114.fuzz:3:8: error: ‘a’ was not declared in this scope
+    3 |     A* a = malloc(sizeof(A));
+      |        ^
+[TRACE] Validating outputs/repair_7b_200/115.fuzz ...
+[VERBOSE] outputs/repair_7b_200/115.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/116.fuzz ...
+[VERBOSE] outputs/repair_7b_200/116.fuzz failed validation with error message: outputs/repair_7b_200/116.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/116.fuzz:10:11: error: conversion from ‘int’ to non-scalar type ‘A’ requested
+   10 |     A a = 1;
+      |           ^
+[TRACE] Validating outputs/repair_7b_200/117.fuzz ...
+[VERBOSE] outputs/repair_7b_200/117.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/118.fuzz ...
+[VERBOSE] outputs/repair_7b_200/118.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/119.fuzz ...
+[VERBOSE] outputs/repair_7b_200/119.fuzz failed validation with error message: outputs/repair_7b_200/119.fuzz:13:7: error: pasting "A" and "(" does not give a valid preprocessing token
+   13 |     F(A);
+      |       ^
+outputs/repair_7b_200/119.fuzz:9:17: note: in definition of macro ‘F’
+    9 | #define F(DECL) DECL##()
+      |                 ^~~~
+outputs/repair_7b_200/119.fuzz:2:10: error: ‘A’ in namespace ‘::’ does not name a type
+    2 | static ::A a{};
+      |          ^
+outputs/repair_7b_200/119.fuzz:9:24: error: expected primary-expression before ‘)’ token
+    9 | #define F(DECL) DECL##()
+      |                        ^
+outputs/repair_7b_200/119.fuzz:10:21: note: in expansion of macro ‘F’
+   10 | struct F { explicit F() {} };
+      |                     ^
+outputs/repair_7b_200/119.fuzz:10:25: error: expected unqualified-id before ‘{’ token
+   10 | struct F { explicit F() {} };
+      |                         ^
+outputs/repair_7b_200/119.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main()
+[TRACE] Validating outputs/repair_7b_200/120.fuzz ...
+[VERBOSE] outputs/repair_7b_200/120.fuzz failed validation with error message: outputs/repair_7b_200/120.fuzz:9:5: error: redefinition of ‘int main()’
+    9 | int main()
+      |     ^~~~
+outputs/repair_7b_200/120.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/120_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/120_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/121.fuzz ...
+[VERBOSE] outputs/repair_7b_200/121.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/122.fuzz ...
+[VERBOSE] outputs/repair_7b_200/122.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/123.fuzz ...
+[VERBOSE] outputs/repair_7b_200/123.fuzz failed validation with error message: outputs/repair_7b_200/123.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/123.fuzz:10:7: error: invalid use of non-static member function ‘void A::show()’
+   10 |     a.show;
+      |     ~~^~~~
+outputs/repair_7b_200/123.fuzz:5:10: note: declared here
+    5 |     void show() { std::cout << a << std::endl; }
+      |          ^~~~
+[TRACE] Validating outputs/repair_7b_200/123_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/123_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/124.fuzz ...
+[VERBOSE] outputs/repair_7b_200/124.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/125.fuzz ...
+[VERBOSE] outputs/repair_7b_200/125.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/126.fuzz ...
+[VERBOSE] outputs/repair_7b_200/126.fuzz failed validation with error message: outputs/repair_7b_200/126.fuzz:7:1: error: stray ‘`’ in program
+    7 | ```
+      | ^
+outputs/repair_7b_200/126.fuzz:7:2: error: stray ‘`’ in program
+    7 | ```
+      |  ^
+outputs/repair_7b_200/126.fuzz:7:3: error: stray ‘`’ in program
+    7 | ```
+      |   ^
+outputs/repair_7b_200/126.fuzz:9:1: error: stray ‘##’ in program
+    9 | ## Questions?
+      | ^~
+outputs/repair_7b_200/126.fuzz:9:4: error: ‘Questions’ does not name a type
+    9 | ## Questions?
+      |    ^~~~~~~~~
+[TRACE] Validating outputs/repair_7b_200/126_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/126_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/127.fuzz ...
+[VERBOSE] outputs/repair_7b_200/127.fuzz failed validation with error message: outputs/repair_7b_200/127.fuzz:12:1: error: stray ‘`’ in program
+   12 | ```
+      | ^
+outputs/repair_7b_200/127.fuzz:12:2: error: stray ‘`’ in program
+   12 | ```
+      |  ^
+outputs/repair_7b_200/127.fuzz:12:3: error: stray ‘`’ in program
+   12 | ```
+      |   ^
+outputs/repair_7b_200/127.fuzz:14:1: error: stray ‘##’ in program
+   14 | ## 5.8.6 Function Pointer vs Function Call
+      | ^~
+outputs/repair_7b_200/127.fuzz:14:4: error: too many decimal points in number
+   14 | ## 5.8.6 Function Pointer vs Function Call
+      |    ^~~~~
+outputs/repair_7b_200/127.fuzz:15:21: error: stray ‘`’ in program
+   15 | (14 Points) In C++, `int()` and `printf()` are different. In C, they are actually the same functions, and have the same calling conventions. Explain the difference accurately.
+      |                     ^
+outputs/repair_7b_200/127.fuzz:15:27: error: stray ‘`’ in program
+   15 | (14 Points) In C++, `int()` and `printf()` are different. In C, they are actually the same functions, and have the same calling conventions. Explain the difference accurately.
+[TRACE] Validating outputs/repair_7b_200/128.fuzz ...
+[VERBOSE] outputs/repair_7b_200/128.fuzz failed validation with error message: outputs/repair_7b_200/128.fuzz:8:1: error: stray ‘`’ in program
+    8 | ```
+      | ^
+outputs/repair_7b_200/128.fuzz:8:2: error: stray ‘`’ in program
+    8 | ```
+      |  ^
+outputs/repair_7b_200/128.fuzz:8:3: error: stray ‘`’ in program
+    8 | ```
+      |   ^
+outputs/repair_7b_200/128.fuzz:11:1: error: stray ‘##’ in program
+   11 | ## C++ 17 - 20
+      | ^~
+outputs/repair_7b_200/128.fuzz:11:4: error: ‘C’ does not name a type
+   11 | ## C++ 17 - 20
+      |    ^
+[TRACE] Validating outputs/repair_7b_200/128_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/128_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/129.fuzz ...
+[VERBOSE] outputs/repair_7b_200/129.fuzz failed validation with error message: outputs/repair_7b_200/129.fuzz:6:53: error: stray ‘#’ in program
+    6 | }<commit_msg>Added more tests of C++11<commit_after>#include <iostream>
+      |                                                     ^
+outputs/repair_7b_200/129.fuzz:6:2: error: expected unqualified-id before ‘<’ token
+    6 | }<commit_msg>Added more tests of C++11<commit_after>#include <iostream>
+      |  ^
+outputs/repair_7b_200/129.fuzz: In function ‘double sqrt(const double&)’:
+outputs/repair_7b_200/129.fuzz:15:17: error: ‘sqrt’ is not a member of ‘std’; did you mean ‘sort’?
+   15 |     return std::sqrt(right);
+      |                 ^~~~
+      |                 sort
+outputs/repair_7b_200/129.fuzz: At global scope:
+outputs/repair_7b_200/129.fuzz:17:8: error: ‘double operator+(const double&, const double&)’ must have an argument of class or enumerated type
+   17 | double operator+(const double& left, const double& right)
+      |        ^~~~~~~~
+outputs/repair_7b_200/129.fuzz:21:8: error: ‘double operator-(const double&, const double&)’ must have an argument of class or enumerated type
+   21 | double operator-(const double& left, const double& right)
+      |        ^~~~~~~~
+outputs/repair_7b_200/129.fuzz:25:8: error: ‘double operator*(const double&, const double&)’ must have an argument of class or enumerated type
+   25 | double operator*(const double& left, const double& right)
+[TRACE] Validating outputs/repair_7b_200/130.fuzz ...
+[VERBOSE] outputs/repair_7b_200/130.fuzz failed validation with error message: outputs/repair_7b_200/130.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main()
+      |     ^~~~
+outputs/repair_7b_200/130.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+outputs/repair_7b_200/130.fuzz:25:5: error: redefinition of ‘int main()’
+   25 | int main()
+      |     ^~~~
+outputs/repair_7b_200/130.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+outputs/repair_7b_200/130.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/130.fuzz:28:23: error: expected initializer at end of input
+   28 |     std::function func
+      |                       ^
+outputs/repair_7b_200/130.fuzz:28:23: error: expected ‘}’ at end of input
+outputs/repair_7b_200/130.fuzz:26:1: note: to match this ‘{’
+   26 | {
+      | ^
+[TRACE] Validating outputs/repair_7b_200/131.fuzz ...
+[VERBOSE] outputs/repair_7b_200/131.fuzz failed validation with error message: outputs/repair_7b_200/131.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/131.fuzz:5:7: error: ‘::cout’ has not been declared; did you mean ‘std::cout’?
+    5 |     ::cout << a << ::endl;
+      |       ^~~~
+      |       std::cout
+In file included from outputs/repair_7b_200/131.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+outputs/repair_7b_200/131.fuzz:5:22: error: ‘::endl’ has not been declared; did you mean ‘std::endl’?
+    5 |     ::cout << a << ::endl;
+      |                      ^~~~
+      |                      std::endl
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_7b_200/131.fuzz:1:
+/usr/include/c++/11/ostream:684:5: note: ‘std::endl’ declared here
+  684 |     endl(basic_ostream<_CharT, _Traits>& __os)
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/131_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/131_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/132.fuzz ...
+[VERBOSE] outputs/repair_7b_200/132.fuzz failed validation with error message: outputs/repair_7b_200/132.fuzz:17:1: error: stray ‘`’ in program
+   17 | ```
+      | ^
+outputs/repair_7b_200/132.fuzz:17:2: error: stray ‘`’ in program
+   17 | ```
+      |  ^
+outputs/repair_7b_200/132.fuzz:17:3: error: stray ‘`’ in program
+   17 | ```
+      |   ^
+outputs/repair_7b_200/132.fuzz:20:17: error: empty character constant
+   20 | <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+      |                 ^~
+outputs/repair_7b_200/132.fuzz:20:27: warning: character constant too long for its type
+   20 | <!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+      |                           ^~~~~~~~~~~~~~~
+outputs/repair_7b_200/132.fuzz:21:3: error: invalid preprocessing directive #Conclusions
+   21 | # Conclusions
+      |   ^~~~~~~~~~~
+outputs/repair_7b_200/132.fuzz:22:1: error: stray ‘##’ in program
+   22 | ##  The C++ Programming Language
+[TRACE] Validating outputs/repair_7b_200/133.fuzz ...
+[VERBOSE] outputs/repair_7b_200/133.fuzz failed validation with error message: outputs/repair_7b_200/133.fuzz:4:22: error: empty character constant
+    4 |     std::cout << a <<'';
+      |                      ^~
+[TRACE] Validating outputs/repair_7b_200/134.fuzz ...
+[VERBOSE] outputs/repair_7b_200/134.fuzz failed validation with error message: outputs/repair_7b_200/134.fuzz:33:21: warning: missing terminating " character
+   33 |     var_2.m_sting = "
+      |                     ^
+outputs/repair_7b_200/134.fuzz:33:21: error: missing terminating " character
+outputs/repair_7b_200/134.fuzz:25:5: error: redefinition of ‘int main()’
+   25 | int main()
+      |     ^~~~
+outputs/repair_7b_200/134.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+outputs/repair_7b_200/134.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/134.fuzz:33:20: error: expected primary-expression at end of input
+   33 |     var_2.m_sting = "
+      |                    ^
+outputs/repair_7b_200/134.fuzz:33:20: error: expected ‘}’ at end of input
+outputs/repair_7b_200/134.fuzz:26:1: note: to match this ‘{’
+   26 | {
+      | ^
+[TRACE] Validating outputs/repair_7b_200/135.fuzz ...
+[VERBOSE] outputs/repair_7b_200/135.fuzz failed validation with error message: outputs/repair_7b_200/135.fuzz:10:10: fatal error: VectorInt.hh: No such file or directory
+   10 | #include "VectorInt.hh"
+      |          ^~~~~~~~~~~~~~
+compilation terminated.
+[TRACE] Validating outputs/repair_7b_200/136.fuzz ...
+[VERBOSE] outputs/repair_7b_200/136.fuzz failed validation with error message: outputs/repair_7b_200/136.fuzz:36:1: error: unterminated comment
+   36 | /* Please consider, which would be the best language
+      | ^
+outputs/repair_7b_200/136.fuzz:31:5: error: redefinition of ‘int main()’
+   31 | int main()
+      |     ^~~~
+outputs/repair_7b_200/136.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/137.fuzz ...
+[VERBOSE] outputs/repair_7b_200/137.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/138.fuzz ...
+[VERBOSE] outputs/repair_7b_200/138.fuzz failed validation with error message: outputs/repair_7b_200/138.fuzz:8:1: error: stray ‘`’ in program
+    8 | ```
+      | ^
+outputs/repair_7b_200/138.fuzz:8:2: error: stray ‘`’ in program
+    8 | ```
+      |  ^
+outputs/repair_7b_200/138.fuzz:8:3: error: stray ‘`’ in program
+    8 | ```
+      |   ^
+[TRACE] Validating outputs/repair_7b_200/138_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/138_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/139.fuzz ...
+[VERBOSE] outputs/repair_7b_200/139.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/140.fuzz ...
+[VERBOSE] outputs/repair_7b_200/140.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/141.fuzz ...
+[VERBOSE] outputs/repair_7b_200/141.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/142.fuzz ...
+[VERBOSE] outputs/repair_7b_200/142.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/143.fuzz ...
+[VERBOSE] outputs/repair_7b_200/143.fuzz failed validation with error message: outputs/repair_7b_200/143.fuzz: In function ‘int myFun()’:
+outputs/repair_7b_200/143.fuzz:17:32: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   17 |         throw new MyException {"This message won't do.\n"};
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+outputs/repair_7b_200/143.fuzz: At global scope:
+outputs/repair_7b_200/143.fuzz:22:5: error: redefinition of ‘int main()’
+   22 | int main()
+      |     ^~~~
+outputs/repair_7b_200/143.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+outputs/repair_7b_200/143.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/143.fuzz:27:20: error: expected ‘}’ at end of input
+   27 |     } catch (...) {
+      |                   ~^
+outputs/repair_7b_200/143.fuzz:27:20: error: expected ‘}’ at end of input
+outputs/repair_7b_200/143.fuzz:23:1: note: to match this ‘{’
+   23 | {
+      | ^
+[TRACE] Validating outputs/repair_7b_200/144.fuzz ...
+[VERBOSE] outputs/repair_7b_200/144.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/145.fuzz ...
+[VERBOSE] outputs/repair_7b_200/145.fuzz failed validation with error message: outputs/repair_7b_200/145.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main(){
+      |     ^~~~
+outputs/repair_7b_200/145.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+outputs/repair_7b_200/145.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/145.fuzz:14:21: warning: ISO C++ forbids converting a string constant to ‘char*’ [-Wwrite-strings]
+   14 |     char* message = "Hello C++\n" ;
+      |                     ^~~~~~~~~~~~~
+outputs/repair_7b_200/145.fuzz: At global scope:
+outputs/repair_7b_200/145.fuzz:25:5: error: redefinition of ‘int main()’
+   25 | int main()
+      |     ^~~~
+outputs/repair_7b_200/145.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/146.fuzz ...
+[VERBOSE] outputs/repair_7b_200/146.fuzz failed validation with error message: outputs/repair_7b_200/146.fuzz:16:7: error: redefinition of ‘class MyClass’
+   16 | class MyClass{
+      |       ^~~~~~~
+outputs/repair_7b_200/146.fuzz:2:7: note: previous definition of ‘class MyClass’
+    2 | class MyClass{
+      |       ^~~~~~~
+outputs/repair_7b_200/146.fuzz:23:5: error: redefinition of ‘int main()’
+   23 | int main()
+      |     ^~~~
+outputs/repair_7b_200/146.fuzz:8:5: note: ‘int main()’ previously defined here
+    8 | int main()
+      |     ^~~~
+outputs/repair_7b_200/146.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/146.fuzz:28:37: error: expected ‘{’ at end of input
+   28 |     catch(const std::exception& exc)
+      |                                     ^
+outputs/repair_7b_200/146.fuzz:28:37: error: expected ‘}’ at end of input
+outputs/repair_7b_200/146.fuzz:24:1: note: to match this ‘{’
+   24 | {
+      | ^
+[TRACE] Validating outputs/repair_7b_200/147.fuzz ...
+[VERBOSE] outputs/repair_7b_200/147.fuzz failed validation with error message: outputs/repair_7b_200/147.fuzz:36:1: error: unterminated comment
+   36 | /* Please write a program which defines constructors,
+      | ^
+outputs/repair_7b_200/147.fuzz:20:5: error: redefinition of ‘int main()’
+   20 | int main()
+      |     ^~~~
+outputs/repair_7b_200/147.fuzz:8:5: note: ‘int main()’ previously defined here
+    8 | int main()
+      |     ^~~~
+outputs/repair_7b_200/147.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/147.fuzz:23:8: error: ‘void MyClass1::f(int)’ is private within this context
+   23 |     x.f(10);
+      |     ~~~^~~~
+outputs/repair_7b_200/147.fuzz:17:10: note: declared private here
+   17 |     void f(int k){}
+      |          ^
+outputs/repair_7b_200/147.fuzz: At global scope:
+outputs/repair_7b_200/147.fuzz:30:5: error: redefinition of ‘int main()’
+   30 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/148.fuzz ...
+[VERBOSE] outputs/repair_7b_200/148.fuzz failed validation with error message: outputs/repair_7b_200/148.fuzz:16:5: error: redefinition of ‘int main()’
+   16 | int main()
+      |     ^~~~
+outputs/repair_7b_200/148.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/149.fuzz ...
+[VERBOSE] outputs/repair_7b_200/149.fuzz failed validation with error message: outputs/repair_7b_200/149.fuzz:6:1: error: stray ‘`’ in program
+    6 | ```
+      | ^
+outputs/repair_7b_200/149.fuzz:6:2: error: stray ‘`’ in program
+    6 | ```
+      |  ^
+outputs/repair_7b_200/149.fuzz:6:3: error: stray ‘`’ in program
+    6 | ```
+      |   ^
+[TRACE] Validating outputs/repair_7b_200/149_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/149_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/150.fuzz ...
+[VERBOSE] outputs/repair_7b_200/150.fuzz failed validation with error message: outputs/repair_7b_200/150.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/150.fuzz:5:21: error: too many initializers for ‘MyClass’
+    5 |         MyClass x(42);
+      |                     ^
+outputs/repair_7b_200/150.fuzz: At global scope:
+outputs/repair_7b_200/150.fuzz:9:5: error: redefinition of ‘int main()’
+    9 | int main()
+      |     ^~~~
+outputs/repair_7b_200/150.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/150_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/150_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/151.fuzz ...
+[VERBOSE] outputs/repair_7b_200/151.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/152.fuzz ...
+[VERBOSE] outputs/repair_7b_200/152.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/153.fuzz ...
+[VERBOSE] outputs/repair_7b_200/153.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/154.fuzz ...
+[VERBOSE] outputs/repair_7b_200/154.fuzz failed validation with error message: outputs/repair_7b_200/154.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/154.fuzz:16:10: error: invalid initialization of non-const reference of type ‘MyStruct&’ from an rvalue of type ‘MyStruct*’
+   16 |     test(&(y));
+      |          ^~~~
+outputs/repair_7b_200/154.fuzz:6:20: note: in passing argument 1 of ‘int test(MyStruct&)’
+    6 | int test(MyStruct &tmp)
+      |          ~~~~~~~~~~^~~
+outputs/repair_7b_200/154.fuzz: In function ‘void sumVector(T, T)’:
+outputs/repair_7b_200/154.fuzz:31:9: error: expected ‘;’ at end of input
+   31 |     cout
+      |         ^
+      |         ;
+outputs/repair_7b_200/154.fuzz:31:9: error: expected ‘}’ at end of input
+outputs/repair_7b_200/154.fuzz:26:1: note: to match this ‘{’
+   26 | {
+      | ^
+[TRACE] Validating outputs/repair_7b_200/155.fuzz ...
+[VERBOSE] outputs/repair_7b_200/155.fuzz failed validation with error message: outputs/repair_7b_200/155.fuzz:2:6: error: ‘map’ in namespace ‘std’ does not name a template type
+    2 | std::map<size_t, size_t> x{};
+      |      ^~~
+outputs/repair_7b_200/155.fuzz:2:1: note: ‘std::map’ is defined in header ‘<map>’; did you forget to ‘#include <map>’?
+    1 | #include <iostream>
+  +++ |+#include <map>
+    2 | std::map<size_t, size_t> x{};
+[TRACE] Validating outputs/repair_7b_200/155_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/155_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/156.fuzz ...
+[VERBOSE] outputs/repair_7b_200/156.fuzz failed validation with error message: outputs/repair_7b_200/156.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/156.fuzz:5:93: error: no matching function for call to ‘std::map<long unsigned int, long unsigned int>::map(<brace-enclosed initializer list>)’
+    5 |     std::map<size_t, size_t> x{ std::initializer_list<std::map<size_t, size_t>::iterator>{} };
+      |                                                                                             ^
+In file included from /usr/include/c++/11/map:61,
+                 from outputs/repair_7b_200/156.fuzz:2:
+/usr/include/c++/11/bits/stl_map.h:290:9: note: candidate: ‘template<class _InputIterator> std::map<_Key, _Tp, _Compare, _Alloc>::map(_InputIterator, _InputIterator, const _Compare&, const allocator_type&) [with _InputIterator = _InputIterator; _Key = long unsigned int; _Tp = long unsigned int; _Compare = std::less<long unsigned int>; _Alloc = std::allocator<std::pair<const long unsigned int, long unsigned int> >]’
+  290 |         map(_InputIterator __first, _InputIterator __last,
+      |         ^~~
+/usr/include/c++/11/bits/stl_map.h:290:9: note:   template argument deduction/substitution failed:
+outputs/repair_7b_200/156.fuzz:5:93: note:   candidate expects 4 arguments, 1 provided
+    5 |     std::map<size_t, size_t> x{ std::initializer_list<std::map<size_t, size_t>::iterator>{} };
+      |                                                                                             ^
+In file included from /usr/include/c++/11/map:61,
+                 from outputs/repair_7b_200/156.fuzz:2:
+/usr/include/c++/11/bits/stl_map.h:273:9: note: candidate: ‘template<class _InputIterator> std::map<_Key, _Tp, _Compare, _Alloc>::map(_InputIterator, _InputIterator) [with _InputIterator = _InputIterator; _Key = long unsigned int; _Tp = long unsigned int; _Compare = std::less<long unsigned int>; _Alloc = std::allocator<std::pair<const long unsigned int, long unsigned int> >]’
+  273 |         map(_InputIterator __first, _InputIterator __last)
+      |         ^~~
+/usr/include/c++/11/bits/stl_map.h:273:9: note:   template argument deduction/substitution failed:
+outputs/repair_7b_200/156.fuzz:5:93: note:   candidate expects 2 arguments, 1 provided
+[TRACE] Validating outputs/repair_7b_200/156_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/156_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/157.fuzz ...
+[VERBOSE] outputs/repair_7b_200/157.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/158.fuzz ...
+[VERBOSE] outputs/repair_7b_200/158.fuzz failed validation with error message: outputs/repair_7b_200/158.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/158.fuzz:4:10: error: ‘map’ is not a member of ‘std’
+    4 |     std::map<size_t, size_t> x{};
+      |          ^~~
+outputs/repair_7b_200/158.fuzz:2:1: note: ‘std::map’ is defined in header ‘<map>’; did you forget to ‘#include <map>’?
+    1 | #include <iostream>
+  +++ |+#include <map>
+    2 | int main()
+outputs/repair_7b_200/158.fuzz:4:20: error: expected primary-expression before ‘,’ token
+    4 |     std::map<size_t, size_t> x{};
+      |                    ^
+outputs/repair_7b_200/158.fuzz:4:28: error: expected primary-expression before ‘>’ token
+    4 |     std::map<size_t, size_t> x{};
+      |                            ^
+outputs/repair_7b_200/158.fuzz:4:30: error: ‘x’ was not declared in this scope
+    4 |     std::map<size_t, size_t> x{};
+      |                              ^
+[TRACE] Validating outputs/repair_7b_200/158_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/158_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/159.fuzz ...
+[VERBOSE] outputs/repair_7b_200/159.fuzz failed validation with error message: outputs/repair_7b_200/159.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main()
+      |     ^~~~
+outputs/repair_7b_200/159.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/159_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/159_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/160.fuzz ...
+[VERBOSE] outputs/repair_7b_200/160.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/161.fuzz ...
+[VERBOSE] outputs/repair_7b_200/161.fuzz failed validation with error message: outputs/repair_7b_200/161.fuzz:9:5: error: redefinition of ‘int main()’
+    9 | int main()
+      |     ^~~~
+outputs/repair_7b_200/161.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+outputs/repair_7b_200/161.fuzz:17:5: error: conflicting declaration of C function ‘int main(int, const char**)’
+   17 | int main(int argc, char const *argv[]) {
+      |     ^~~~
+outputs/repair_7b_200/161.fuzz:2:5: note: previous declaration ‘int main()’
+    2 | int main()
+      |     ^~~~
+outputs/repair_7b_200/161.fuzz:25:30: error: expected ‘,’ or ‘...’ at end of input
+   25 | int main(int argc, char const
+      |                              ^
+outputs/repair_7b_200/161.fuzz:25:30: error: expected ‘)’ at end of input
+   25 | int main(int argc, char const
+      |         ~                    ^
+      |                              )
+outputs/repair_7b_200/161.fuzz:25:30: error: expected initializer at end of input
+[TRACE] Validating outputs/repair_7b_200/162.fuzz ...
+[VERBOSE] outputs/repair_7b_200/162.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/163.fuzz ...
+[VERBOSE] outputs/repair_7b_200/163.fuzz failed validation with error message: outputs/repair_7b_200/163.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/163.fuzz:4:10: error: ‘map’ is not a member of ‘std’
+    4 |     std::map<size_t, size_t> x;
+      |          ^~~
+outputs/repair_7b_200/163.fuzz:2:1: note: ‘std::map’ is defined in header ‘<map>’; did you forget to ‘#include <map>’?
+    1 | #include <iostream>
+  +++ |+#include <map>
+    2 | int main()
+outputs/repair_7b_200/163.fuzz:4:20: error: expected primary-expression before ‘,’ token
+    4 |     std::map<size_t, size_t> x;
+      |                    ^
+outputs/repair_7b_200/163.fuzz:4:28: error: expected primary-expression before ‘>’ token
+    4 |     std::map<size_t, size_t> x;
+      |                            ^
+outputs/repair_7b_200/163.fuzz:4:30: error: ‘x’ was not declared in this scope
+    4 |     std::map<size_t, size_t> x;
+      |                              ^
+[TRACE] Validating outputs/repair_7b_200/163_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/163_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/164.fuzz ...
+[VERBOSE] outputs/repair_7b_200/164.fuzz failed validation with error message: outputs/repair_7b_200/164.fuzz:16:1: error: stray ‘`’ in program
+   16 | ```
+      | ^
+outputs/repair_7b_200/164.fuzz:16:2: error: stray ‘`’ in program
+   16 | ```
+      |  ^
+outputs/repair_7b_200/164.fuzz:16:3: error: stray ‘`’ in program
+   16 | ```
+      |   ^
+[TRACE] Validating outputs/repair_7b_200/165.fuzz ...
+[VERBOSE] outputs/repair_7b_200/165.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/166.fuzz ...
+[VERBOSE] outputs/repair_7b_200/166.fuzz failed validation with error message: outputs/repair_7b_200/166.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main()
+      |     ^~~~
+outputs/repair_7b_200/166.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main()
+      |     ^~~~
+outputs/repair_7b_200/166.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/166.fuzz:13:10: error: ‘vector’ is not a member of ‘std’
+   13 |     std::vector<char> data{'1', '2', '3', 'a', 'b', 'c'};
+      |          ^~~~~~
+outputs/repair_7b_200/166.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | int main()
+outputs/repair_7b_200/166.fuzz:13:17: error: expected primary-expression before ‘char’
+   13 |     std::vector<char> data{'1', '2', '3', 'a', 'b', 'c'};
+      |                 ^~~~
+outputs/repair_7b_200/166.fuzz:15:19: error: expected primary-expression at end of input
+   15 |     for (auto &c :
+      |                   ^
+[TRACE] Validating outputs/repair_7b_200/167.fuzz ...
+[VERBOSE] outputs/repair_7b_200/167.fuzz failed validation with error message: outputs/repair_7b_200/167.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/167.fuzz:15:13: error: base operand of ‘->’ has non-pointer type ‘std::istream’ {aka ‘std::basic_istream<char>’}
+   15 |     std::cin->ignore();
+      |             ^~
+[TRACE] Validating outputs/repair_7b_200/168.fuzz ...
+[VERBOSE] outputs/repair_7b_200/168.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/169.fuzz ...
+[VERBOSE] outputs/repair_7b_200/169.fuzz failed validation with error message: outputs/repair_7b_200/169.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/169.fuzz:5:5: error: ‘y’ was not declared in this scope
+    5 |     y = x;
+      |     ^
+[TRACE] Validating outputs/repair_7b_200/169_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/169_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/170.fuzz ...
+[VERBOSE] outputs/repair_7b_200/170.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/171.fuzz ...
+[VERBOSE] outputs/repair_7b_200/171.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/172.fuzz ...
+[VERBOSE] outputs/repair_7b_200/172.fuzz failed validation with error message: outputs/repair_7b_200/172.fuzz: In lambda function:
+outputs/repair_7b_200/172.fuzz:6:26: error: assignment of read-only variable ‘x’
+    6 |         auto y = [x] { x += 2;};
+      |                        ~~^~~~
+[TRACE] Validating outputs/repair_7b_200/172_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/172_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/173.fuzz ...
+[VERBOSE] outputs/repair_7b_200/173.fuzz failed validation with error message: outputs/repair_7b_200/173.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/173.fuzz:4:17: error: ‘x’ was not declared in this scope
+    4 |   std::cout << (x = 1) + 2 << std::endl;
+      |                 ^
+[TRACE] Validating outputs/repair_7b_200/173_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/173_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/174.fuzz ...
+[VERBOSE] outputs/repair_7b_200/174.fuzz failed validation with error message: outputs/repair_7b_200/174.fuzz:8:1: error: expected ‘,’ or ‘;’ before ‘int’
+    8 | int main()
+      | ^~~
+[TRACE] Validating outputs/repair_7b_200/174_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/174_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/175.fuzz ...
+[VERBOSE] outputs/repair_7b_200/175.fuzz failed validation with error message: outputs/repair_7b_200/175.fuzz:26:20: error: expected ‘}’ at end of input
+   26 |     char name[256];
+      |                    ^
+outputs/repair_7b_200/175.fuzz:24:15: note: to match this ‘{’
+   24 | struct student{
+      |               ^
+outputs/repair_7b_200/175.fuzz:26:20: error: expected unqualified-id at end of input
+   26 |     char name[256];
+      |                    ^
+[TRACE] Validating outputs/repair_7b_200/176.fuzz ...
+[VERBOSE] outputs/repair_7b_200/176.fuzz failed validation with error message: outputs/repair_7b_200/176.fuzz:2:6: error: ‘map’ in namespace ‘std’ does not name a template type
+    2 | std::map<std::string, int> my_map = {{"key", 42}};
+      |      ^~~
+outputs/repair_7b_200/176.fuzz:2:1: note: ‘std::map’ is defined in header ‘<map>’; did you forget to ‘#include <map>’?
+    1 | #include <iostream>
+  +++ |+#include <map>
+    2 | std::map<std::string, int> my_map = {{"key", 42}};
+outputs/repair_7b_200/176.fuzz: In lambda function:
+outputs/repair_7b_200/176.fuzz:4:12: error: ‘my_map’ was not declared in this scope
+    4 |   auto x = my_map["key"];
+      |            ^~~~~~
+outputs/repair_7b_200/176.fuzz: At global scope:
+outputs/repair_7b_200/176.fuzz:11:6: error: conflicting declaration ‘auto y’
+   11 | auto y = [](){
+      |      ^
+outputs/repair_7b_200/176.fuzz:3:6: note: previous declaration as ‘<lambda()> y’
+    3 | auto y = [] {
+      |      ^
+outputs/repair_7b_200/176.fuzz: In lambda function:
+outputs/repair_7b_200/176.fuzz:18:6: error: expected ‘;’ before ‘}’ token
+[TRACE] Validating outputs/repair_7b_200/176_r2.fuzz ...
+[VERBOSE] outputs/repair_7b_200/176_r2.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/177.fuzz ...
+[VERBOSE] outputs/repair_7b_200/177.fuzz failed validation with error message: outputs/repair_7b_200/177.fuzz:13:22: error: empty character constant
+   13 |   std::cout << --x <<'' << y <<'' << z << "Hello";
+      |                      ^~
+outputs/repair_7b_200/177.fuzz:13:32: error: empty character constant
+   13 |   std::cout << --x <<'' << y <<'' << z << "Hello";
+      |                                ^~
+outputs/repair_7b_200/177.fuzz: In function ‘void greetings()’:
+outputs/repair_7b_200/177.fuzz:19:29: error: expected ‘;’ at end of input
+   19 | void greetings() { std::cout
+      |                             ^
+      |                             ;
+outputs/repair_7b_200/177.fuzz:19:29: error: expected ‘}’ at end of input
+   19 | void greetings() { std::cout
+      |                  ~          ^
+[TRACE] Validating outputs/repair_7b_200/178.fuzz ...
+[VERBOSE] outputs/repair_7b_200/178.fuzz failed validation with error message: outputs/repair_7b_200/178.fuzz:11:1: error: stray ‘`’ in program
+   11 | ```
+      | ^
+outputs/repair_7b_200/178.fuzz:11:2: error: stray ‘`’ in program
+   11 | ```
+      |  ^
+outputs/repair_7b_200/178.fuzz:11:3: error: stray ‘`’ in program
+   11 | ```
+      |   ^
+outputs/repair_7b_200/178.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/178.fuzz:10:24: error: no match for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘void’)
+   10 | int main() { std::cout << y()(); }
+      |              ~~~~~~~~~ ^~ ~~~~~
+      |                   |          |
+      |                   |          void
+      |                   std::ostream {aka std::basic_ostream<char>}
+In file included from /usr/include/c++/11/iostream:39,
+                 from outputs/repair_7b_200/178.fuzz:1:
+/usr/include/c++/11/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+[TRACE] Validating outputs/repair_7b_200/179.fuzz ...
+[VERBOSE] outputs/repair_7b_200/179.fuzz failed validation with error message: outputs/repair_7b_200/179.fuzz: In lambda function:
+outputs/repair_7b_200/179.fuzz:5:11: warning: capture of variable ‘x’ with non-automatic storage duration
+    5 |   return [x]() mutable { return x; };
+      |           ^
+outputs/repair_7b_200/179.fuzz:3:15: note: ‘int x’ declared here
+    3 |   static auto x = 0;
+      |               ^
+outputs/repair_7b_200/179.fuzz: At global scope:
+outputs/repair_7b_200/179.fuzz:10:6: error: conflicting declaration ‘auto y’
+   10 | auto y = [] {
+      |      ^
+outputs/repair_7b_200/179.fuzz:2:6: note: previous declaration as ‘<lambda()> y’
+    2 | auto y = [] {
+      |      ^
+outputs/repair_7b_200/179.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main() { std::cout << y()(); }
+      |     ^~~~
+outputs/repair_7b_200/179.fuzz:7:5: note: ‘int main()’ previously defined here
+    7 | int main() { std::cout << y()(); }
+      |     ^~~~
+[TRACE] Validating outputs/repair_7b_200/180.fuzz ...
+[VERBOSE] outputs/repair_7b_200/180.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/181.fuzz ...
+[VERBOSE] outputs/repair_7b_200/181.fuzz failed validation with error message: outputs/repair_7b_200/181.fuzz:3:1: error: stray ‘`’ in program
+    3 | ```
+      | ^
+outputs/repair_7b_200/181.fuzz:3:2: error: stray ‘`’ in program
+    3 | ```
+      |  ^
+outputs/repair_7b_200/181.fuzz:3:3: error: stray ‘`’ in program
+    3 | ```
+      |   ^
+[TRACE] Validating outputs/repair_7b_200/181_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/181_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/182.fuzz ...
+[VERBOSE] outputs/repair_7b_200/182.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/183.fuzz ...
+[VERBOSE] outputs/repair_7b_200/183.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/184.fuzz ...
+[VERBOSE] outputs/repair_7b_200/184.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/185.fuzz ...
+[VERBOSE] outputs/repair_7b_200/185.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/186.fuzz ...
+[VERBOSE] outputs/repair_7b_200/186.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/187.fuzz ...
+[VERBOSE] outputs/repair_7b_200/187.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/188.fuzz ...
+[VERBOSE] outputs/repair_7b_200/188.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/189.fuzz ...
+[VERBOSE] outputs/repair_7b_200/189.fuzz failed validation with error message: outputs/repair_7b_200/189.fuzz:3:1: error: ‘map’ does not name a type
+    3 | map<int, int> map;
+      | ^~~
+outputs/repair_7b_200/189.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/189.fuzz:6:3: error: ‘map’ was not declared in this scope
+    6 |   map["1abc"];
+      |   ^~~
+outputs/repair_7b_200/189.fuzz:2:1: note: ‘std::map’ is defined in header ‘<map>’; did you forget to ‘#include <map>’?
+    1 | #include <iostream>
+  +++ |+#include <map>
+    2 | using namespace std;
+[TRACE] Validating outputs/repair_7b_200/190.fuzz ...
+[VERBOSE] outputs/repair_7b_200/190.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/191.fuzz ...
+[VERBOSE] outputs/repair_7b_200/191.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/192.fuzz ...
+[VERBOSE] outputs/repair_7b_200/192.fuzz failed validation with error message: outputs/repair_7b_200/192.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/192.fuzz:7:20: error: invalid operands of types ‘int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+    7 |     cout << a *= b << endl;
+      |                  ~~^~~~~~~
+[TRACE] Validating outputs/repair_7b_200/192_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/192_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/193.fuzz ...
+[VERBOSE] outputs/repair_7b_200/193.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/194.fuzz ...
+[VERBOSE] outputs/repair_7b_200/194.fuzz failed validation with error message: outputs/repair_7b_200/194.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/194.fuzz:9:16: error: ‘map’ does not name a type
+    9 |         static map<char,int> counts = {};
+      |                ^~~
+outputs/repair_7b_200/194.fuzz:10:9: error: ‘counts’ was not declared in this scope
+   10 |         counts[c] = counts[c] + 1;
+      |         ^~~~~~
+outputs/repair_7b_200/194.fuzz:12:13: error: ‘counts’ was not declared in this scope
+   12 |     cout << counts['o'];
+      |             ^~~~~~
+[TRACE] Validating outputs/repair_7b_200/194_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/194_r1.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/195.fuzz ...
+[VERBOSE] outputs/repair_7b_200/195.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/196.fuzz ...
+[VERBOSE] outputs/repair_7b_200/196.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/197.fuzz ...
+[VERBOSE] outputs/repair_7b_200/197.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/198.fuzz ...
+[VERBOSE] outputs/repair_7b_200/198.fuzz is safe
+[TRACE] Validating outputs/repair_7b_200/199.fuzz ...
+[VERBOSE] outputs/repair_7b_200/199.fuzz failed validation with error message: outputs/repair_7b_200/199.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main()
+      |     ^~~~
+outputs/repair_7b_200/199.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+outputs/repair_7b_200/199.fuzz:25:5: error: redefinition of ‘int main()’
+   25 | int main()
+      |     ^~~~
+outputs/repair_7b_200/199.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+outputs/repair_7b_200/199.fuzz: In function ‘int main()’:
+outputs/repair_7b_200/199.fuzz:30:14: error: expected ‘}’ at end of input
+   30 |     return 0;
+      |              ^
+outputs/repair_7b_200/199.fuzz:26:1: note: to match this ‘{’
+   26 | {
+      | ^
+[TRACE] Validating outputs/repair_7b_200/199_r1.fuzz ...
+[VERBOSE] outputs/repair_7b_200/199_r1.fuzz is safe

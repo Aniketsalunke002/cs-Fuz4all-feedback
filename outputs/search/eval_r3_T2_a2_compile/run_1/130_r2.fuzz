@@ -1,0 +1,9 @@
+#include <iostream>
+
+void foo(int a, double b, int* c, double fun(int, int)) {
+    *c = a + (int) b;
+    if (sizeof(int) == sizeof(char*)) {
+        int** x = (int**) c;
+        *x = (int**) fun;
+    }
+}

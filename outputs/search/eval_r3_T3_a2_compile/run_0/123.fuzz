@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+class Complex
+{
+	int a,b;
+public:
+	void set_values(int r,int i)
+	{
+		a = r;
+		b = i;
+	}
+	void print_values()
+	{
+		cout<<a<<"+"<<b<<"i\n";
+	}
+	Complex operator-(Complex x)
+	{
+		Complex temp;
+		temp.a = a-x.a;
+		temp.b = b-x.b;
+		return temp;
+	}
+};
+int main()
+{
+	Complex c1,c2,result;
+	c1.set_values(5,5);
+	c2.set_values(10,10);
+	result = c1-c2;
+	result.print_values();
+	return 0;
+}

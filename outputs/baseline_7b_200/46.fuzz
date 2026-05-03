@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout<<42<<endl;
+	cout.(42)<<endl; 
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+	long int a = 0;
+	long long int b = 0;
+	 a = 123456789

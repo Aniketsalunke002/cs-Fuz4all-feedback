@@ -1,0 +1,7 @@
+#include <iostream>
+using std::cout;
+int main() {
+    auto ctest = "Hello World";
+    cout << ctest << "\n";
+    return 0;
+}

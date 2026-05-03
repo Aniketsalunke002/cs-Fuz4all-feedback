@@ -1,0 +1,23 @@
+#include <iostream>
+
+#include <fstream>
+std::string output = "Hello World again";
+void hello() {
+  std::ofstream outfile("file_name.txt", std::ios::out);
+  output = "Hello World again!" + std::string("\n");
+  outfile.close();
+}
+ 
+#include <iostream>
+#include <fstream>
+std::string output;
+void hello(const char* file_name) {
+  std::string number_of_bytes;
+  std::fstream s(file_name, std::ios::in | std::ios::binary | std:: ios::ate);
+  number_of_bytes = std::to_string(s.tellg());
+  s.seekg(0, s.beg);
+
+  output += s.rdbuf();
+  std::cout << output << std::endl;
+  s.close();
+}

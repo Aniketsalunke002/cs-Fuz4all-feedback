@@ -1,0 +1,15 @@
+#include <iostream>
+
+using std::endl;
+int count;
+count = "Cats!";
+#include <iostream>
+using std::endl;
+int main()
+{
+    double x = 0.9;
+    float fx = 3.14;
+    int y = reinterpret_cast<int&>(x);
+    int fx1 = reinterpret_cast<int&>(fx);
+    std::cout << y << endl;
+    std::cout

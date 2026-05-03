@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main ()
+{
+    std::cout << "\n";
+    int a = 5;
+    int & b = a;
+	b = 20;
+	std::cout << "The value of the variable a is " << a << "\n";
+	std::cout << "The value of the variable b is " << b << "\n";
+	std::cout << "\n";
+    int a1{5};  
+    int b1{5};
+    std::cout << "The values of the variables a1 and b1 are " << a1 << " and " << b1 << "\

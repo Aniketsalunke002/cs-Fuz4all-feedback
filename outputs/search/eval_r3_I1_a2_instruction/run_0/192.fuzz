@@ -1,0 +1,46 @@
+#include <iostream>
+std::vector<std::vector<char>*> b;
+std::vector<int> x;
+int main(void)
+{
+  int a;
+  while (a < 2)
+  {
+    ;
+  }
+  for (;;)
+  {
+    std::cin >> a;
+    if (a >= 2)
+    {
+      break;
+    }
+  }
+  while (std::cin.get()!= ';')
+  {
+    ;
+  }
+  for (int i = 0; i < 2; i++)
+  {
+    b.push_back(&x);
+    b[i].push_back(&i);
+  }
+  for (size_t i = 0; i < b.size(); i++)
+  {
+    if (i == 0)
+    {
+      for (size_t j = 0; j < b[i]->size(); j++)
+      {
+        std::cout << *((*b[i])[j]);
+      }
+    }
+    else if (i == 1)
+    {
+      for (std::vector<char>::iterator it = (b[i])->begin(); it!= b[i]->end(); ++it)
+      {
+        std::cout << (*it);
+      }
+    }
+  }
+  return 0;
+}

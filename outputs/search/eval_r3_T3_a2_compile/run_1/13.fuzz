@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+	int iField, jField;
+};
+int main()
+{
+    int i = 0;
+    A one = { i };
+    A temp = one;
+    A two;
+    cout << "Size of one:  " << sizeof(one) <<  ";  contents: " << one.iField << " "
+         <<  temp.jField << " " <<  temp.iField << endl; 
+    cout << "Size of two:  " << sizeof(two) << endl;
+    return 0;
+}

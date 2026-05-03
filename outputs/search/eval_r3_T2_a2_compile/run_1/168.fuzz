@@ -1,0 +1,32 @@
+#include <iostream>
+int main()
+{
+    int *ptr;
+    int i = 6;
+    ptr = new int[i];
+    for (int i = 0; i < 6; i++)
+        ptr[i] = -(6 - i + (i * i));
+    for (int i = 0; i < 6; i++)
+    {
+        ptr[i]? std::cout << "OK" << '\n' : std::cout << "NO";
+    }
+    delete[] ptr;
+    return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+    int *ptr;
+    int i;
+    scanf("%d", &i);
+    for (int i = 0; i < 6; i++)
+        ptr[i] = -(6 - i + (i * i));
+    for (int i = 0; i < 6; i++)
+    {
+        ptr[i]? std::cout << "OK" << '\n' : std::cout << "NO";
+    }
+    delete[] ptr;
+    return 0;
+}
+}

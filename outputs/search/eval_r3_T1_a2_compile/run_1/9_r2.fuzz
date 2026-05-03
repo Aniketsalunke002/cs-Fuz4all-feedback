@@ -1,0 +1,12 @@
+#include <iostream>
+
+#include <list>
+template <class T> void erase(T& a,std::list<typename T::value_type>::iterator iter){a.erase(iter);}
+void erase_std(std::list<std::string>& a,std::list<std::string>::iterator iter){a.erase(iter);}
+int main(void)
+{
+    std::list<int> l1,l2;
+    append_list(l1,1);
+    append_list(l1,2);
+    append_list(l1,4);
+    append

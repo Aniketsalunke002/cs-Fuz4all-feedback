@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+	double d;
+	double *pd = &d;
+	int *pi = new int;
+	pi = &d;
+	cout<<*pd<<endl;
+	cout<<*pi<<endl;
+	return 0;
+}
+#include<iostream>
+using namespace std;
+using funcptr=int (*)();
+class myclass
+{
+	public:
+		int x=20,y;
+		void set_y(int n)
+		{
+			y=n;
+		}
+};
+myclass myobj;
+funcptr myptr = &myobj.set_y;
+int main()
+{
+	myptr=&myobj.x;
+	(*myptr)(30);
+	cout<<myobj.x<<endl;
+	return 0;
+}
+#include<iostream>
+#include<cstring>
+using namespace std;
+int main()
+{

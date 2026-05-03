@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int numa = 5;
+    int numb = 6;
+    int numc = 6;
+    int numd = numb;
+    numd = 6;
+    numd = numb;
+    numd = numb + 1;
+    numa = numb;
+    int numf = numa + numb;
+    int numg = numc;
+    numg = numg + 2;
+    std::cout << "Num a: " << numa << std::endl;
+    std::cout << "Num b: " << numb << std::endl;
+    std::cout << "Num c: " << numc << std::endl;
+    std::cout << "Num d: " << numd << std::endl;
+    std::cout << "Num f: " << numf << std::endl;
+    std::cout << "Num g: " << numg << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+std::string input_from_user() {
+    string userinput {};
+    cout << "Enter Something! ";
+    cin >> userinput;
+    return userinput;
+}
+int main()
+{
+    do{
+        cout << "My input is " << input_from_user() << endl;
+    } while(true);
+    return 0;
+}

@@ -1,0 +1,8 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    cout << setw(5) << "<NAME>" << endl;
+    return 0;
+}

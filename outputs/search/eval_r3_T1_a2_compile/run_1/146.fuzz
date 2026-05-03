@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int a;
+    if(!(cin >>a)){
+        cout << "No" << endl;
+    }
+    else{
+        cout << "Have" << endl;
+    }
+    return 0;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+

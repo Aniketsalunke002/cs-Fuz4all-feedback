@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int a;
+    int result;
+    int x = 5;
+    cout << a << "\n";
+    result = a*5;
+    cout << a + result << "\n";
+    x += a + 7;
+    cout << a + x << "\n";
+    result = 7*result;
+    cout << result << "\n";
+    return 0;
+}

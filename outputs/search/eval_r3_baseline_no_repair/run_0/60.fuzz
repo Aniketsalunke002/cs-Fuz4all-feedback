@@ -1,0 +1,34 @@
+#include <iostream>
+void foo2(char &str)
+{
+    str = 'a';
+}
+int main()
+{
+    char a[10];
+    foo2(a[4]);
+    std::cout << a << std::endl;
+}
+ 
+#include <iostream>
+void foo3(char &str)
+{
+    str = 'b';
+}
+int main()
+{
+    char a[10];
+    foo3(a[5]);
+    std::cout << a << std::endl;
+}
+ 
+#include <iostream>
+void foo4(char &str)
+{
+    str = 'c';
+}
+int main()
+{
+    char &a = foo4(a[5]);
+    std::cout << a << std::endl;
+}

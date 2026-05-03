@@ -1,0 +1,17 @@
+#include <iostream>
+
+ using namespace std;
+ class C { };
+ class D : public C { };
+ class E : public C, public D { };
+ void __VERIFIER_assert(int);
+ void f() {
+  D q;
+  __VERIFIER_assert(dynamic_cast<C*>(&q)!= 0);
+  __VERIFIER_assert(dynamic_cast<D*>(&q)!= 0);
+  __VERIFIER_assert(dynamic_cast<E*>(&q)!= 0);
+ }
+ 
+ int main() {
+   f();
+ }

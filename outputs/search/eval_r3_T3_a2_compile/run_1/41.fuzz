@@ -1,0 +1,28 @@
+#include <iostream>
+int main (void) {
+	int arr[]={1,2,3,4,5,6};
+	int size=sizeof(arr)/sizeof(arr[0]);
+	arr[2]=0;
+	for (size_t i=0; i<size; i++) {
+		std::cout << arr[i] << std::endl;
+	}
+	return 0;
+}
+ 
+#include <iostream>
+std::string getStr(std::string str) {
+	std::cout<<"Function str is called"<<std::endl;
+	std::string str2=str;
+	return str2;
+}
+int main (void) {
+	const int array[]={"My","name","is","Wang"};
+	 
+	const char *ptr=&array[12];
+	std::string str(ptr);
+	 
+	getStr(str);
+	std::cout<<str<<std::endl;
+
+	return 0;
+}

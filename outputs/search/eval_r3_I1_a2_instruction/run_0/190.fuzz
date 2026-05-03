@@ -1,0 +1,22 @@
+#include <iostream>
+void f() {}
+int main(void)
+{
+  std::cout << "a";
+  int n;
+  do
+  {
+    n++;
+  }
+  while(n > 0);
+  return 0;
+}
+class C5
+{
+public:
+C5();
+};
+ 
+
+
+

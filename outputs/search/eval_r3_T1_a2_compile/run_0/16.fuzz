@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+void hello() {
+	cout << "Hello World" << endl;
+}
+
+int main() {
+	hello();
+	return 0;
+}
+
+```
+
+- Old C Code
+
+This is an example of the old C code!
+```C {6}
+ 
+#include <stdio.h>
+int main() {
+	printf("Hello World\n");
+	return 0;
+}
+ 
+#include <stdio.h>
+namespace old_world {
+	void hello() {
+		printf("Hello World\n");
+	}
+}
+
+int main(int argc, char* argv[]) {
+	old_world::hello();
+	return 0;
+}
+
+```

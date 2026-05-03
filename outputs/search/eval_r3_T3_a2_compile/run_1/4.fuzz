@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+class MyPoint
+{
+private:
+    double x, y, z;
+public:
+    MyPoint(double x1, double y1, double z1) : x(x1), y(y1), z(y1) {}
+    double getX() { return x; }
+    double getY() { return y; }
+    double getZ() { return z; }
+    double sum() { return getX() + getY() + getZ(); }
+    bool operator==(MyPoint& a) { return x == a.getX() && y == a.getY() && z == a.getZ();}
+    MyPoint& operator = (const MyPoint &a)                
+    {
+        x = a.getX();
+        y = a.getY();
+        z = a.getZ();
+        return *this;
+    }
+
+};
+int main()
+{
+    MyPoint a(3, 5, 4), b(4, 5, 4.5), c(2, 6.87, 22);
+    if(a == c)
+        cout << "a equals c" << endl;
+    else
+        cout << "a not equals c" << endl;
+    if(a == b)
+        cout << "a equals b" << endl;
+    else
+        cout << "a not equals b" << endl;
+    return 0;
+}

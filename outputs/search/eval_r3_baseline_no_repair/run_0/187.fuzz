@@ -1,0 +1,12 @@
+#include <iostream>
+int main(int argc, char **argv) {
+    std::string vowels_in_word("aeiou");
+    int counter = 0;
+    char word[40] = {};
+    std::cin >> word;
+    for (int i = 0; i < std::strlen(word); i++) {
+        counter = counter+vowels_in_word.find(word[i]);
+    }
+    std::cout << counter << '\n';
+    return 0;
+}

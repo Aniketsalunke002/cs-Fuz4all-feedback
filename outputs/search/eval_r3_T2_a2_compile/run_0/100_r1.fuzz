@@ -1,0 +1,16 @@
+#include <iostream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+int foo(int a, int b) {
+    cout << b << ',' << a << '\n';
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7, c;
+    while(cin >> c)
+        if (c!= b)
+            foo(a, b);
+    foo(a, b);
+}

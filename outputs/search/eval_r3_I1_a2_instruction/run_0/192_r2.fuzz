@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+std::vector<std::vector<char>*> b;
+std::vector<int> x;
+int main(void)
+{
+  int a;
+  while (a < 2)
+  {
+    ;
+  }
+  for (;;)
+  {
+    std::cin >> a;
+    if (a >= 2)
+    {
+      break;
+    }
+  }
+  while (std::cin.get()!= ';')
+  {
+    ;
+  }

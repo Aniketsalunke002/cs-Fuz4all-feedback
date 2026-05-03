@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main()
+{
+    float a = 1.0f;
+    return 0;
+}
+#if defined(__cplusplus)
+#error "This is C++ code"
+#endif
+// Now the program compiles properly
+//
+// Regression test for https://github.com/google/fuzzing/issues/370

@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include <vector>
+
+int main(int argc, char * argv[]) {
+  std::vector<int> v = std::vector<int>();
+  for (int i = 0; i < 1000; i++) { 
+    v.push_back(i); 
+  }
+  for (int item : v) { 
+    std::cout << item << '\n'; 
+  }
+  return 0;
+}

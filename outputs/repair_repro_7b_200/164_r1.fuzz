@@ -1,0 +1,30 @@
+#include <iostream>
+
+#include <cstdlib>
+#include <cstring>
+
+int main() {
+    char buffer[1024];
+    std::cin.getline(buffer, 1024);
+    if (strcmp(buffer, "Ok") == 0) {
+        std::cout << buffer << std::endl;
+    } else {
+        std::cout << "Something went wrong";
+    }
+    return 0;
+}
+// New version of the code above:
+#include <iostream>
+#include <cstdlib>
+#include <cstring>
+
+int main() {
+    char buffer[1024];
+    std::cin.getline(buffer, 1024);
+    if (strcmp(buffer, "Ok") == 0) {
+        std::cout << buffer << std::endl;
+    } else {
+        std::cout << "Something went wrong";
+    }
+    return 0;
+}

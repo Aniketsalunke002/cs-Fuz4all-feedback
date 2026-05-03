@@ -1,0 +1,14 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main(void)
+{
+	int i = 7;
+	const int j = 7;
+	float f = 0.777;
+	cout << setw(20) << "Before" << setw(15) << "Value" << setw(30) << "After" << endl;
+	cout << setw(20) << "i" << setw(15) << i << setw(30) << i-- << endl;
+	cout << setw(20) << "j" << setw(15) << j <<  setw(30) << j++ <<  endl;
+	cout << setw(20) << "f" << setw(15) << f << setw(30) << f += 0.8888 << endl;
+    return 0;
+}

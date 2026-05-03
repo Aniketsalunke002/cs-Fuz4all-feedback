@@ -1,0 +1,30 @@
+#include <iostream>
+#include<math.h>
+#include <string>
+using namespace std;
+
+int main() {
+	int x = 5;
+	string string = "5";
+	while (x < 10) {
+		cout << x << " " << pow(x++, 2) << " " << x << endl;
+		system("pause");
+	}
+	if (string[2] > string[0]) {
+		cout << "true" << endl;
+	}
+	else {
+		cout << "false" << endl;
+	}
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class int : public short {}
+int main() {
+	if (int) {
+		cout << "if";
+	}
+	return 0;
+}

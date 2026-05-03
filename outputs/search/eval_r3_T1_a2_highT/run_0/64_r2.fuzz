@@ -1,0 +1,29 @@
+#include <iostream>
+
+#include <string>
+using namespace std;
+
+void fuzzme(const char* data, size_t size){
+  const int buf_size = 8388608; // (8^2^2) - 1;
+  if (size!= buf_size) {
+    cout << "The buffer passed is too small." << endl;
+    return;
+  }
+
+  char buffer[buf_size];
+  strncpy(buffer, data, sizeof(buffer));
+  const char* c;
+  c = buffer;
+  cout << "Here is the buffer" << buffer << endl;
+  if ('J' == *c) {
+    cout << "Got the J" << endl;
+  } else {
+    cout << "Did not get the J" << endl;
+  }
+}
+
+int main() {
+  const char data[] = {0xd9, 0x41, 0x7e};
+  const size_t size = sizeof(data);
+  fuzzme(data, size);
+}

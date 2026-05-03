@@ -1,0 +1,21 @@
+#include <iostream>
+void f(int * x) { (*x)++;}  
+int main()
+{
+  int a;
+  f(&a);  
+  std::cout << a << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+void f(int & x) { x++; }  
+void f(int * x) { (*x)++;} 
+void f(int ** x) { (*x)++;} 
+int main()
+{
+  int a;
+  f(&a);  
+  std::cout << a<<std::endl;
+  return 0;
+}

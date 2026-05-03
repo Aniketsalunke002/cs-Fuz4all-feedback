@@ -1,0 +1,33 @@
+#include <iostream>
+int main()
+{
+    int num1{ 7 };
+    int& num2 = num1;
+    ++num2;
+    std::cout << "num1 = " << num1 << '\n';
+    std::cout << "num2 = " << num2 << '\n';
+    num1 = static_cast<decltype(num1)>(num2);
+    ++num1;
+    num2 = static_cast<decltype(num2)>(num1);
+    std::cout << "num1 = " << num1 << '\n';
+    std::cout << "num2 = " << num2 << '\n';
+    return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+    int arr[10][10][2];
+    for (int i=0; i<10; ++i)
+    {
+        for (int j=0; j<10; ++j)
+        {
+            for (int k=0; k<2; ++k)
+            {
+                arr[i][j][k] = i + j;
+            }
+        }
+    }
+    for(int i=0; i<10; ++i)
+    {
+        for (int j=

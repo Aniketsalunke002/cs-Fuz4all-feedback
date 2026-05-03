@@ -1,0 +1,30 @@
+#include <iostream>
+
+using namespace std;
+#include <string>
+
+int main() {
+	char * b = "test";
+	int a = 11;
+	string a = "String";
+	string * b = new string("String");
+	cout << (*b) << endl;
+	delete b;
+	b = "Test";
+
+	if (!(*b))
+		cout << "Not empty" << endl;
+	else 
+		cout << "Empty" << endl;
+	{
+	}
+	if (*b == "Test")
+		cout << "Test" << endl;
+	else 
+		cout << "Empty" << endl;
+	
+	if(a > 10){
+		cout<< "Biger" <<endl;
+	}
+	else {
+		cout << "Lesser"

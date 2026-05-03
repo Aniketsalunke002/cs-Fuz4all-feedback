@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int age, height, weight, tdee;
+    age = 21;
+    tdee = age * height / 365;
+    cout << "Age: " << age << "   "
+    << "TDEE: " << tdee << endl;
+
+    return 0;
+}

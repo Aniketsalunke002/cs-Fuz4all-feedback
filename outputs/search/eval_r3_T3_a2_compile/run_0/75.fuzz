@@ -1,0 +1,142 @@
+#include <iostream>
+struct X
+{
+  X()
+    : m_val(new int)
+  {
+    *m_val = 0;
+  }
+  void moo()
+  {
+    std::cout << "hello" << std::endl;
+  }
+  int* m_val;
+};
+int main()
+{
+  X x;
+  *x.m_val = 1;
+  x.moo();
+  return 0;
+}
+
+ 
+#include <algorithm>
+#include <iostream>
+#include <vector>
+#include <cmath>
+
+class Prime;
+std::ostream& operator<<(std::ostream&, std::vector<Prime> const&);
+
+using namespace std;
+
+class Prime
+{
+  friend ostream& operator<<(std::ostream&, std::vector<Prime> const&);
+
+public:
+  Prime() = default;
+  Prime(int n, bool p = false)
+    : _value(n)
+   , _prime(p)
+  {
+  }
+
+  int value() const { return _value; }
+  bool is_prime() const { return _prime; }
+
+private:
+  int _value;
+  bool _prime;
+};
+
+std::ostream& operator<<(std::ostream& out,
+                         const std::vector<Prime>& vec)
+{
+  if (vec.size())
+  {
+    for (auto i : vec)
+      out << i << " ";
+    out << std::endl;
+  }
+  else
+  {
+    out << "empty" << std::endl;
+  }
+  return out;
+}
+
+class PrimeGenerator
+{
+public:
+  using iterator = PrimeGenerator;
+  explicit PrimeGenerator(int n = 1, bool p = false)
+    : _value(n)
+   , _prime(p)
+  {
+  }
+  Prime get()
+  {
+    return Prime(_value, _prime);
+  }
+   
+  PrimeGenerator operator++(int)
+  {
+    int v = _value;
+    _prime = _prime && v % 3? true : (_value / 2 == 1);
+    _value++;
+    return PrimeGenerator(v, _prime);
+  }
+
+  Prime& operator++()
+  {
+    return ++(*this);
+  }
+
+  bool operator!=(const PrimeGenerator& that)
+  {
+    return _value <= that._value;
+  }
+
+private:
+  int _value{1};
+  bool _prime{false};
+};
+
+int main()
+{
+
+   
+  PrimeGenerator primes{2};
+  int count{3};  
+  std::vector<Prime> v;
+  using iterator = PrimeGenerator::iterator;
+  iterator cur = primes;
+  while (primes!= primeGenerator())
+  {
+    Prime p = primes++;
+    cout << "(" << p.value() << "," << p.is_prime() << ")";
+    if ((count%2 == 0) && (count % 5 == 0))
+    {
+      cout << " " << std::flush;
+    }
+    if (!(count % 5 == 0))
+    {
+      cout << std::endl;
+    }
+    v.push_back(p);
+    count++;
+  }
+  cout << std::endl;
+  cout << "v=" << v << std::endl;
+  cout << "-----" << std::endl;
+  vector<int> vec = getPrimes(2);
+  cout << vec << std::endl;
+  return 0;
+}
+
+ 
+int isPrime(vector<int>& vec, int& i)
+{
+  if (i <=

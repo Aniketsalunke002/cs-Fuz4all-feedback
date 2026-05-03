@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int **arr,**arr2;
+    int x,y,z;
+    cin>>x>>y>>z;
+    arr = new int*[x];
+    for(int i=0; i<x; ++i)
+        arr[i] = new int[y];
+    arr2 = new int*[x];
+    for(int i=0; i<x; ++i)
+    {
+        for(int j=0; j<y; ++j)
+        {
+            if((i==j) OR (i==0) OR (j==0))
+            {
+                arr[i][j] = 1;
+            }
+            else 
+            {
+                arr[i][j] = 0;
+            }
+        }
+    }
+    for(int i=0; i<x; ++i)
+    {
+        if(i%2)
+        {
+        for(int j=0; j<y; ++j)
+            {
+                if(i==z)
+                    arr2[i][j] = -1;
+                else if ((i+j+z)%3==0) 
+                    arr2[i][j] = 1;
+                else 
+                    arr2[i][j] = arr[i][j];
+            }
+        }
+        if((i+y)%2)
+        {
+        for(int j=0; j<y; ++j)
+            {
+                arr2[i][j] = arr[i][y-j-1];
+            }
+        }
+    }
+    for(int i=0; i<x; ++i)
+    {
+        for(int j=0; j<y; ++j)
+        {
+            if(arr[i][j]==-1)
+            {
+                cout<<"x";
+            }
+            else if (arr[i][j]==1)
+            {
+                if(i==x-1)
+                    cout<<"y";
+                else if((arr[i+1][j]==1) && (arr2[i][j]==0))
+                    cout<<"w";
+                else 
+                    cout<<"*";
+            }
+        }
+        if((i+1)!=x)
+        {
+            cout<<endl;
+        }
+    }
+    for(int i=0; i<x; ++i)
+    {
+        for(int j=0; j<y; ++j)
+        {
+            delete[] arr[j];
+        }
+        delete[] arr;
+    }
+    return 0;
+}
+

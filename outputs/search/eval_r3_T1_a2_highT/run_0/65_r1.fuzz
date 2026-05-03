@@ -1,0 +1,15 @@
+#include <iostream>
+
+#include <string>
+int main() { return 0; }
+uint8_t fuzzme[128] = {};
+#include <iostream>
+#include <string>
+int main() {
+  std::string s("Hello World");
+  s += "!";
+  std::cout << s;
+}
+#include <iostream>
+#include <string>
+int main() {}

@@ -1,0 +1,63 @@
+#include <iostream>
+
+
+using namespace std;
+
+class A {
+public:
+	A(int m) : a(m), b(m + 1) {}
+	
+	void boo() {
+		int z = 0;
+		cout << typeid(z).name();
+	}
+
+	virtual void foo() {
+		cout << "A::foo - foo";
+	};
+	 	
+	int a;
+protected:
+	int b;
+	void f() {}
+	int boo(int x) { return x; }
+};
+
+class B : public A {
+public:
+	
+	B(int m) : A(m) {
+		z = 42;
+	}
+	
+	virtual void foo() {
+		cout << "A::foo - f";
+	};
+	
+	int boo(int x) { return x - 1; }
+	
+	int z;
+};
+
+class C : virtual public A {
+public:
+	
+	C(int m) : A(m) {
+		z = 43;
+	}
+	
+	void foo() {
+		cout << "A::foo - f";
+	}
+	
+	int z;
+};
+
+int main(int argc, char ** argv) {
+	B x(1);
+	
+	x.boo();
+	x.foo();
+	
+	return 0;
+}

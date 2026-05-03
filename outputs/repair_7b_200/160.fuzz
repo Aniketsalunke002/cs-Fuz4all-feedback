@@ -1,0 +1,14 @@
+#include <iostream>
+#include <map>
+int main()
+{
+    size_t x = 1;
+    std::map<size_t, size_t> y;
+    y[x] = x * 2;
+
+    x = x + 1;
+
+    if (y.size() == 1) {
+        y[x] = x * 2;
+    }
+}

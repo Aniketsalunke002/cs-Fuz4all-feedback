@@ -1,0 +1,70 @@
+#include <iostream>
+
+using namespace std;
+ 
+public class myclass {
+  int _i;
+  myclass(int i) { _i =i; }
+}
+public class myclass1 { 
+  myclass _myclass; 
+  myclass1(int i) { _myclass = myclass(i); }
+  bool equal(myclass1 y) { return _myclass  == y._myclass; }
+};
+public class driver {
+  public static void main(String[] a){
+    myclass1 x(10), y(11);
+    if (x.equal(y)) 
+      System.out.println("1: equal");
+    else 
+      System.out.println("1: notEqual");
+    myclass2 z(10), w(10); 
+  }
+}
+ 
+ 
+#include <utility>
+#include <iostream>
+
+using vector<int>::value_type;
+
+int main()
+{
+   vector<int>::value_type ival = 100;
+   cout << ival << endl;
+}
+ 
+#include <type_traits>
+#include <iostream>
+#include <vector>
+using namespace std;
+ 
+template<typename T> void printType() {
+ int x;
+ if(T is_pointer<T>::value)
+    cout << "T is pointer type" << endl;
+ if(T is_const<T>::value)
+    cout << "T is const type" << endl;
+ if(T is_integral<T>::value)
+    cout << "T is integral type" << endl;
+ if(T is_floating_point<T>::value)
+    cout << "T is floating point type" << endl;
+ if(T is_class<T>::value)
+    cout << "T is class type" << endl;
+ if(T is_void<T>::value)
+    cout << "T is void type" << endl;
+  if(T is_reference<T>::value)
+    cout << "T is reference type" << endl;
+}
+int main() {
+cout << "int" << endl;
+printType<int>();
+cout << "double" << endl;
+printType<double>();
+cout << "float" << endl;
+printType<float>();
+cout << "char" << endl;
+printType<char>();
+cout << "void" << endl;
+printType<void>();
+}

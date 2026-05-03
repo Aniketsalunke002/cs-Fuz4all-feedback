@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+void printInt(int v)
+{
+   cout << "the number is: " << v << endl;      
+}
+int main()
+{
+   printInt(5);
+   cout << "printing using char* " << endl;
+   char* string = (char*)"5";
+   printInt(string);
+   return 0;
+}

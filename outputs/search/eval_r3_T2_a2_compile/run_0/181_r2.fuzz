@@ -1,0 +1,12 @@
+#include <iostream>
+
+namespace std {
+  template<typename T> struct pair {
+    T first;
+    T second;
+  };
+}
+int main() {
+  std::pair<char,int> p(1,2);
+  return 0;
+}

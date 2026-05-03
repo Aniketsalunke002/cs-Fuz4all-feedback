@@ -1,0 +1,24 @@
+#include <iostream>
+#include <string>
+#include <iomanip>
+#include <vector>
+#include<math.h>
+using namespace std;
+int main() {
+	vector<double> test_vec_2 = { 1.00,1.09,1.21};
+	vector<double> test_vec_1 = { 6.00,6.80,7.78};
+	test_vec_1.swap(test_vec_2);
+	cout << setprecision(5) << fixed << endl;
+	 
+	for (double d : test_vec_1) {
+		cout << test_vec_1[1] << endl;
+	}
+}
+ 
+#include <iostream>
+#include <string_view>
+using namespace std;
+int main() {
+	for (const auto &c : string_view("abacab"))
+		cout << c << ',' << endl;
+}

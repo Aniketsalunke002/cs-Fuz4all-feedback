@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include <list>
+using namespace std;
+int main(){
+  int x=0, y=0, z=30;
+  bool c=false;
+  list<int> l;
+  l.push_back(x);
+  l.push_back(y);
+  l.push_back(z);
+  l.push_back(c);
+  cout<<l.front();
+}

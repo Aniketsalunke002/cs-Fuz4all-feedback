@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main5() {
+    int i=0,sum=0,n=0;
+    std::cin >> n;
+    while (i<n){
+        int num = 0;
+        sum += (num+sum)/2;
+    }
+    std::cout << sum << "\n";
+    return 0;
+}

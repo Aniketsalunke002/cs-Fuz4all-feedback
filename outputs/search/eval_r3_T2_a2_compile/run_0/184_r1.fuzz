@@ -1,0 +1,17 @@
+#include <iostream>
+
+namespace std::Foo::Bar {}
+namespace Foo::Bar {
+  struct Foo {
+    virtual ~Foo();
+  };
+  struct Bar {
+    virtual ~Bar();
+  };
+}
+int main() {
+  Foo::Bar::Foo foo;
+  Foo::Bar::Bar bar;
+  return 0;
+}
+#endif

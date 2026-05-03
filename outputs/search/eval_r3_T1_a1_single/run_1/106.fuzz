@@ -1,0 +1,113 @@
+#include <iostream>
+using namespace std;
+class MyPoint {
+public:
+	MyPoint();
+	MyPoint(int,int);
+	MyPoint(MyPoint const&);
+	MyPoint& operator=(MyPoint const&);
+	virtual ~MyPoint();
+	int x;
+	int y;
+	int z;
+};
+
+MyPoint::MyPoint()
+{
+	x=y=z=0;
+}
+MyPoint::MyPoint(int val1,int val2)
+{
+	x=val1;
+	y=val2;
+	z=0;
+}
+ 
+ 
+ 
+int main()
+{
+	MyPoint p1;
+	MyPoint p2(1,2);
+	cout << "The value of myPoint is ";
+	p1.printPoint();
+	cout << "The value of myPoint2 is ";
+	p2.printPoint();
+
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class Shape {
+public:
+	int width;
+	int height;
+	void printShape(int);
+	virtual void printArea()=0;
+};
+class Triangle : public Shape {
+	
+	int area;
+public:
+	int length; 
+	void printArea();
+	void setSide(int, int);
+};
+
+void Shape::printArea()
+{
+	cout << "I am base class\n";
+}
+void Triangle::printArea()
+{
+
+ 
+	int a;
+	a = (width*height)*2;
+
+	cout << a << "\n";
+}
+void Triangle::setSide(int l, int h) {
+	length = l;
+	height = h;
+}
+void Triangle::printShape(int flag)
+{
+	switch (flag) {
+    case 1:
+        cout << "\nI am triangle\n";
+        cout << "length: "<< length <<"; ";
+        cout << "height: "<< height <<"\n";
+        printArea();
+	break;
+    case 2:
+        cout << "I am triangle with flag 2\n";
+	break;
+
+    default:
+        break;
+    }
+}
+int main() {
+	int a, b;
+	while (1) {
+		cout << "\nenter length: ";
+		cin>>a;
+		cout << "enter height: ";
+		cin>>b;
+		Triangle Tri;
+		Tri.setSide(a, b);
+		Tri.printShape(1);
+		cout << "enter a number: ";
+		cin>>a;
+		if (a==0) {
+	    break;
+	    }
+	}
+	return 0;
+}
+ 
+
+
+

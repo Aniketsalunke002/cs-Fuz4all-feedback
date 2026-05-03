@@ -1,0 +1,31 @@
+#include <iostream>
+int main(int argc, char *argv[]) {
+  int c;
+  int d;
+  int array[] = {1, 2, 3, 4, 5};
+  c = 0;
+  d = 0;
+   
+  while (c < 5) {
+    if (c == 3) {
+      c = c + 4;
+    }
+    d = 0;
+    while (d < 5) {
+      if (d == 1) {
+        d = 3;
+      }
+      printf("%d\t", array[c] + d * 10);
+      d = d + 1;
+    }
+    c = c + 1;
+  }
+  printf("\n");
+  return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char *argv[]) {
+  std::cout << "Hello world!" << std::endl;
+  return 0;
+}

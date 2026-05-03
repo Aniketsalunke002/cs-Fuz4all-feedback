@@ -1,0 +1,77 @@
+#include <iostream>
+
+using namespace std;
+class Car {
+	int car_color;
+	int car_length;
+	int car_width;
+
+	public:
+		int change(){
+			car_color = 7;
+			car_length = 20;
+			car_width = 15;
+			return car_color;
+        }
+        
+		int getCarWidth(){
+			return car_width;
+		}
+        
+		int getCarLength(){
+			return car_length;
+		}
+        
+		int getCarColor(){
+			return car_color;
+		}
+        
+		double getCarArea() {
+			return car_width * car_length;
+		}
+		void printCarInfo() {
+			cout << "Car color is " << car_color << "Car length is " << car_length << ", Car width is " << car_width << "." << endl;
+		}
+};
+int main (){
+ Car car;
+   car.printCarInfo();  
+   car.change();
+   int length = car.getCarLength();
+
+   return 0;
+}
+
+// #include <iostream>
+// using namespace std;
+// class Car {
+//   int car_color;
+//   int car_height;
+//   int car_width;
+// 
+//   public:
+// 	int change(){
+// 		car_color = 7;
+// 		car_height = 20;
+// 		car_width = 15;
+// 		return car_color;
+//     }
+//     
+//     int getCarWidth(){
+// 		return car_width;
+// 	}
+//     
+// 	int getCarHeight(){
+// 		return car_height;
+// 	}
+//     
+//     int getCarColor(){
+//     	return car_color;
+//     }
+//     
+//     double getCarArea() {
+// 		return car_width * car_height;
+// 	}
+//     void printCarInfo() {
+// 		cout << "Car color is " << car_color << "Car height is " << car_height << ", Car width is " << car_width << "." << endl;
+//

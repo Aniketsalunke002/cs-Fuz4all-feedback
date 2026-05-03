@@ -1,0 +1,27 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+  using namespace std;
+  constexpr int k {42};
+  static_assert(k==42, "[error]: This program will not compile!");
+  return 0;
+}
+ 
+#include <iostream>
+int f1() {
+  int dummy;
+  return dummy;
+}
+int f2() {
+  int dummy;
+  return!(dummy&42);
+}
+int main(int argc, char* argv[]) {
+  using namespace std;
+  volatile int k = f1();
+  cout << "dummy = " << k << endl;
+  volatile int k2 = f2();
+  cout << "!k&42 = "  <<!(k2&42) << endl;
+}
+ 
+
+ 

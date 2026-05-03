@@ -1,0 +1,9 @@
+#include <iostream>
+int main() {
+	int y = 0;
+	{
+		std::vector<int>* v = new std::vector<int>();
+		int z = 1;
+		v->push_back(y);
+	}
+}

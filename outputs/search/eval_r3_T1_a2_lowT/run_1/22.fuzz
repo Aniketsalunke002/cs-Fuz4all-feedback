@@ -1,0 +1,28 @@
+#include <iostream>
+class myclass
+{
+  int _i;
+public:
+  myclass(int n = 0)
+  : _i(n)
+  {
+    std::cout << "default constructor called " << n << std::endl;
+  }
+  myclass(const myclass &t)
+    :_i(t._i)
+  {
+    std::cout << "copy constructor called " << _i << std::endl; 
+  }
+
+
+};
+myclass x;  
+myclass y = x;  
+myclass z(x);  
+
+x._i = 0;
+
+std::cout << x._i << std::endl;
+
+
+}  

@@ -1,0 +1,8 @@
+#include <iostream>
+
+int main() {
+  double test = 1.2;
+  int i = 2;
+  test *= i;
+  return 0;
+}

@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+void displayMenu(){
+    std::cout << "Welcome to your menu!\n"
+              << "1. Add a dish\n"
+              << "2. Add a table\n"
+              << "3. Exit program";
+}
+int main()
+{
+	displayMenu();     
+    return 0;    
+}

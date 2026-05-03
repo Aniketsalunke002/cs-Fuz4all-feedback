@@ -1,0 +1,19 @@
+#include <iostream>
+
+#include <cstdint>
+#include <thread>
+#include <pthread.h>
+int main(int argc, char **argv)
+{
+	std::thread t1(worker, (void *) NULL);
+	std::thread t2(worker, (void *) NULL);
+	t1.join();
+	t2.join();
+	std::cout << "\n\tThis program demonstrates a race condition - it may work\n\tsometimes but will be inefficient\n\nor non-functioning correctly in some cases.\n\n";
+}
+ 
+#include <iostream>
+#include <thread>
+#include <chrono>
+#include <unistd.h>
+#include <stdio.h

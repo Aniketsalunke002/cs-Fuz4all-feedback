@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+
+    constexpr int s = 1025-1-1+1+1+' ';
+    char str[s];
+    std::cin.getline(str, s);
+    std::cout << str << '\n';
+
+}

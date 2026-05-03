@@ -1,0 +1,19 @@
+#include <iostream>
+int main() {
+    int value = 0;
+    std::cout << ((value + 5) / 3) * ((value - 3) / 4);
+}
+ 
+#include <iostream>
+int main() {
+    int value = 0;
+    std::cin >> value;
+    std::cout << value;
+}
+```
+
+## Additional information
+
+- Some of the exercises in this module could be difficult for beginners. You may need additional knowledge about C++. It's your task to figure out how to solve most of the exercises. Try to use documentation, code reviews, etc, as much as possible.
+- Use C++ 17 when solving these exercises.
+- Use meaningful

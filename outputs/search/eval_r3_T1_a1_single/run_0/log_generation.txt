@@ -1,0 +1,4204 @@
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+
+
+void test() {
+ 
+  const Point point1(3, 4);
+ 
+  std::cout << "point1 x: " << point1.x << '\n';
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+
+#include <fstream>
+using namespace std;
+
+ 
+
+int main()
+{
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+
+#include <vector>
+
+struct point_t {
+	int x;
+	int y;
+};
+
+int main() {
+	std::vector<point_t> vec{ point_t(1,2), point_t(3,4) };
+
+	for (auto & p : vec) {
+		++p.x;		 
+	}
+
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+
+
+class Person
+{
+public:
+    Person(std::string name, int age);
+    std::string toString() const;
+    
+
+private:
+    std::string m_name;
+    int m_age;
+};
+
+#endif
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <vector>
+struct point_t {
+	int x;
+	int y;
+};
+int main() {
+	std::vector<point_t> vec{ point_t(1,2), point_t(3,4) };
+	for (auto & p : vec) {
+		++p.x;		 
+	}
+	return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+struct point_t {
+	int x;
+	int y;
+};
+int main() {
+	point_t p1{ 1,2 };
+	--p1.x;
+	int x1{ 1 };
+	--x1;
+	auto p2 = &p1;
+	--(*p2).x;
+	std::cout << "Hello World!\n";  
+	return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+struct point_t {
+	int x;
+	int y;
+};
+int main() {
+	point_t p1, p2;
+	p1.x = 1;
+	p1.y = 2;
+	p2.x = 3;
+	p2.y = 4;
+	p1.x = p2.x;
+	p1.y = p2.y;	
+	std::cout << "x is: " << p1.x << std::endl;
+	std::cout << "y is: " << p1.y << std::endl;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+struct point_t {
+	int x{ 1 };
+	int y{ 2 };
+};
+int main() {
+	std::vector<point_t> vec{ point_t(), point_t() };
+	for (auto & p : vec) {
+		++p.x;		
+	}
+	return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+struct point_t {
+	int x{ 1 };
+	int y{ 2 };
+};
+int main() {
+	std::vector<point_t> vec{ point_t(), point_t() };
+	for (auto & p : vec) {
+		p.x += 1;		
+	}
+	return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+struct point_t {
+	point_t() : x{ 1 }, y{ 2 } {}
+	int x;
+	int y;
+};
+int main() {
+	std::vector<point_t> vec{ point_t(), point_t() };
+	for (auto & p : vec) {
+		p.x += 1;		
+	}
+	return 0;
+}
+
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+struct point_t {
+	int x;
+	int y;
+};
+int main() {
+	std::vector<point_t> vec(2, { 0,0 });
+	vec[0].x = 2;
+	vec[0] = { 1 };
+	vec.at(1).y = 3;
+	vec[1].y = 4;
+	vec.front() = {6};
+	return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <vector>
+struct point_t {
+	int x;
+	int y;
+};
+int main() {
+	std::vector<point_t> vec(2, { 0,0 });
+	vec[0].x = 2;
+	vec[0] = { 1 };
+	vec.at(1).y = 3;
+	vec[1].y = 4;
+	vec.front() = {6};
+	return 0;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+struct point_t {
+	int x;
+	int y;
+};
+int main() {
+	
+	
+	 
+	
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+struct point_t {
+	int x;
+	float y;
+};
+int main() {
+	std::vector<point_t> vec(1, { 0,0 });
+	vec[0].x = 2;
+	vec[0].y = 3.12;
+	--vec[0].y;
+	vec[0].y--;
+	--++vec[0].y++;
+	--(vec[0].y);
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int x = 5;
+	return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+ 
+ 
+ 
+int main() {  
+	auto [data, pop, env] = std::array<std::vector<double>, 3>{};
+	 
+	return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+	int x = 5;
+	return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+	auto x { 5 };
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	 
+	color.rgb = {1, 0, 0};
+	 
+	void draw(color color){
+		 
+		 
+	}
+	draw(color);  
+	std::cout << "Hey look! this is cool!";
+	return 0;
+}
+ 
+#include <iostream>
+#include <utility>
+void draw(std::pair<void*, int> colorInfo){
+	if (colorInfo.second == 3){
+		 
+	} else {
+		 
+	}
+}
+int main(){
+	void * red = static_cast<void*>(static_cast<int*>(&1));
+	colorInfo_red = {red, 2};
+	draw(colorInfo_red);
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int x;
+	x = 0;
+	std::cout << x;
+	return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+	int x;
+	x = 0;
+	std::cout << x;
+	return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int x;
+	x = 0;
+	std::cout << x;
+	return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int x;
+	char c;
+	std::cin >> x >> c;
+	std::cout << c;
+	return 0;
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int x;
+	std::cout << x;
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int i;
+	i = 0;
+	char * p;
+	p = new char[i]();
+	std::cout << *p;
+	return 0;
+}
+ 
+#include <iostream>
+
+int main() {
+	int x = new int[10];
+	std::cout << x;
+}
+ 
+#include <iostream>
+
+class TestClass {
+public:
+	int Value;
+};
+
+int main() {
+	TestClass * pTest;
+	pTest = new TestClass();
+	std::cout << pTest;
+	std::cout << *pTest;
+	std::cout << pTest->Value;
+}
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+	int i;
+	i = 0;
+	char * p;
+	p = new char[i]();
+	std::cout << *p;
+	return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int i = 0;
+	char * p;
+	p = new char[i]();
+	std::cout << *p;
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int i;
+	i = 0;
+	char * p;
+	p = new char[4]();
+	std::cout << *p;
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int i;
+	i = 0;
+	char * p;
+	p = new char[i]();
+	std::cout << *p;
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int i;
+	i = 0;
+	std::vector<char> v(i+1);
+	v[i] = '0';
+	std::cout << v[i-1];
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <vector>
+int main() {
+	int i;
+	i = 0;
+	std::vector<char> v(i+1);
+	v[i] = '0';
+	std::cout << v[i-1];
+	return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+int main() {
+	int i = 0;
+	std::vector<char> v;
+	v.push_back(*('0'+i));
+	std::cout << v[i-1];
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	int i;
+	i = 0;
+	char v[1];
+	v[--i] = '0';
+	std::cout << v[i-1];
+	return 0;
+}
+ 
+#include <iostream>
+int main() {
+	int i; int *j = &i;
+	int *const p = j;
+	const int *q = &i;
+	std::cout << *q <<'' << i;
+	return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+int main() {
+	int i;
+	i = 0;
+	std::vector<char> v(i + 1);
+	if (i > 0) {
+		v[i + 1] = '0';
+		std::cout << v[i];
+	}
+	{
+		char x= v[0];
+		std::cout << x;
+	}
+}
+ 
+ 
+#include <iostream>
+
+int main() {
+	std::string x;
+	x = "Hello world, this is an amazing day!";
+	std::cout << x[0] << " " << x[1];
+	return 0;
+}
+ 
+ 
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+int main() {
+	char* p = &std::vector<char>::at(std::begin(v),i);
+	i = 0;
+	*p = '0';
+	std::cout << v[i-1];
+	return 0;
+}
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <vector>
+int main() {
+	int i;
+	i = 0;
+	std::vector<char> v(i + 1);
+	if (i > 0) {
+		v[i+1] = '0';
+		std::cout << v[i];
+	}
+	{
+		char x= v[0];
+		std::cout << x;
+	}
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+	{
+		char x = '0';
+		std::cout << x;
+		std::cout << x;
+	}
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+int main() {
+	int i;
+	i = 0;
+	std::vector<char> v(i + 1);
+	v[i+1] = '0';
+	if (i > 0) {
+		std::cout << v[i];
+	}
+	{
+		char x= v[0];
+		std::cout << x;
+	}
+}
+ 
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+int main() {
+	bool flag = 0;
+	std::vector<char> v(flag + 1);
+	if (flag > 0) {
+		v.push_back('0');
+		std::cout << v[flag - 1];
+	}
+	{
+		char x = v[0];
+		std::cout << x;
+	}
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+int main() {
+    int i;
+    std::vector<char> v(++i);
+    std::cout << v[i];
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <vector>
+int main() {
+    int i;
+    std::vector<char> v(++i);
+    std::cout << v[i];
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+int main() {
+    std::vector<int> v(10);
+    std::cout << ++v[0];
+}
+
+using namespace std;
+
+int main() {
+    int var = 12;
+    double* val = &var;
+    cout << *val;
+    return 0;
+}
+
+using namespace std;
+
+class Solution {
+private:
+    unordered_map<long, int> memory;
+
+public:
+    int numberOfSubstrings(string s) {
+        int res = s.length(), n = s.length();
+        memory.clear();
+        memory[0] = 0;
+        for (int i = 0; i < n; i++) {
+            res -= (1 - isCountInMap(s.at(i))) * memory[1 - s.at(i)];
+            if (res < 0) {
+                res = 0;
+                break;
+            }
+            memory[s.at(i)] ^= 1;
+        }
+        return res + 1 - isCountInMap(0);
+    }
+
+    bool isCountInMap(char number) {
+        return (memory.find(number)!= memory.end());
+    }
+};
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+int main() {
+    int i;
+    std::vector<char> v((i=3));
+    std::cout << v[i];
+}
+ 
+#include <iostream>
+#include <mutex>
+#include <vector>
+int main() {
+    std::mutex mtx;
+    std::vector<char> v(++std::memory_order_acquire);
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <vector>
+int main() {
+    int i{};
+    std::vector<char> v(++i);
+    std::cout << v[i];
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+    std::cout << "hello world!";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+    std::cout << "hello world!";
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int c00 () {
+  cout << "Hello World!";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::ostream& operator<<(std::ostream& ostr, const char* str) {
+    std::cout << str << std::endl;
+}
+int main() {
+    "Hello world!";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+    std::cout << "hello world!";
+}
+
+ 
+ 
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+
+ 
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "hello world!";
+}
+ 
+#include <tuple>
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  std::cout << "hello world!";
+}
+#include <tuple>
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+void main(int argc, char** argv) {
+  std::tuple<int, char, bool> t(12, '1', true);
+}
+#include <tuple>
+ 
+#include <tuple>
+int main() {
+  int t1; char t2; bool t3;
+  std::tuple<char, int, bool> t = std::make_tuple(t1, t2, t3);
+}
+#include <chrono>
+#include <iostream>
+int main() {
+    using namespace std::chrono;
+    system_clock::time_point t1 = system_clock::now();
+    usleep(10);
+    system_clock::time_point t2 = system_clock::now();
+    std::time_t t3;
+    std::chrono::system_clock::to_time_t(t2);
+    duration<double> duration1 = duration_cast<duration<double>>(t2 - t1);
+    std::cout << "Program Duration (Seconds): " << duration1.count() << std::endl;
+}
+#include <chrono>
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "hello world!";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int z{0}, q{12}, r{4};
+  std::cout << (std::make_tuple(q, r, z)); 
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << get<1>("abcabcabc");
+}
+
+\vspace{2cm}
+
+\end{center}
+
+%
+% 
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  std::cout << "hello world!";
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "hello world!";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "hello world!";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <iomanip>
+int main() {
+  std::cout << "hello world!";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "hello world!";
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <iomanip>
+int main() {
+  std::cout << "hello world!";
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int a = 1;
+  
+}
+```
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "hello world!";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+using namespace std;
+int main(){
+ 
+ 
+ 
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    cout << "Hello, C++\n";
+    return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world!";
+}
+int main() {
+  print(std::cout);  
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world!";
+}
+int main() {
+  print(std::cout);  
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world!";
+}
+int main() {
+  std::cout << print;
+}
+```
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "hello world!";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world!";
+}
+int main() {
+  std::cout << print;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::ostream &operator <<(std::ostream &out, const int &value) {
+  out << "hello world!";
+  return out;
+}
+int main() {
+  int a;
+  a << std::cout;
+}
+```
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world!";
+}
+int main() {
+  std::cout << print;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world from new line!";
+}
+int main() {
+  std::cout.put('\n');
+  std::cout << print;
+}
+ 
+#include <iostream>
+#include <vector>
+
+int main()
+{
+    int number = 0;
+    std::cin >> number;
+
+    std::vector<int> numbers;
+    int numbersCount = 0;
+    for (int i = 0; i <= number; i++)
+    {
+        numbers.push_back(i);
+        numbersCount = numbers.size();
+    }
+
+    int minValue = numbers[0], temp = 0;
+    for (int i = 0; i <= numbersCount; i++)
+    {
+        minValue = numbers[i];
+        for (int j = 0; j < i; j++)
+        {
+            if (minValue > numbers[j])
+            {
+                minValue = numbers[j];
+            }
+        }
+        if (temp!= minValue)
+        {
+            numbers[i] = numbers[numbers.size() - 1];
+        }
+        numbers.pop_back();
+        temp = minValue;
+    }
+
+    for (int i = 0; i < numbersCount; i++)
+    {
+        std::cout << numbers[i] << " ";
+    }
+    return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::ostream &print(std::ostream &os) {
+  int a, b;
+	std::cout << a; 
+	return os << b; 
+}
+int main() {
+  std::cout << print;
+}
+ 
+#include <iostream>
+char *print(char *arr,int length) {
+	for (int i = 0;i < length;i++){
+		std::cout << arr[i];
+	}
+	return arr;
+}
+int main() {
+  char arr[5] = {(char) 'H',(char) 'e',(char) 'l',(char) 'l',(char) 'o'}; 
+  std::cout << std::endl << print(arr,5);
+}
+ 
+#include <iostream>
+#include "mut.h"
+int main() {
+  std::cout << myprint;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world!";
+}
+int main() {
+  std::cout << print; 
+  print("Goodbye");
+}
+ 
+#include <iostream>
+void print(std::ostream &os) {
+  os << "hello world!";
+}
+void print(std::ostream &os, std::string s) {
+    os << s.length() << " ";
+}
+int main() {
+  print("hello world\n"); 
+  print(std::cout, "hello world"); 
+  print(std::string("hello world"));
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world!";
+}
+int main() {
+  std::cout << print;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  std::cout << "hello world from new line!" << std::endl;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "hello again world!" << std::endl;
+}
+```
+
+```
+[main  ]: [2022-01-17T13:55:38.338Z] Started
+[main  ]: [2022-01-17T13:55:38.339Z] Isolating process...
+[main  ]: [2022-01-17T13:55:38.365Z] Launching process with args [/home/me/src/a.out]
+[main  ]: [2022-01-17T13:55:38.379Z] Process launched to PID: 123
+[process]: [2022-01-17T13:55:38.407Z] [123] Replacing a
+[process]: [2022-01-17T13:55:39.382Z] [123] Replacing again
+[process]: [2022-01-17T13:55:40.595Z] [123] Isolated by main
+[main  ]: [2022-01-17T13:55:40.608Z] Process exited, code: 0, signal: undefined
+[main  ]: [2022-01-17T13:55:40.609Z] Killing process 123
+```
+
+**Notice** This is for learning purposes only, and it is **very not recommended** for real usage.
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "Hello World From New Line!" << std::endl;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "Hello World!" << '\n';
+}
+ 
+for (i = 0; i < 1000; i++) {
+  std::cout << "Hello World!";
+}
+
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+
+int main(){
+  std::cout << "C++ is an Object-Oriented Language" << std::endl;
+  std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+}
+
+ 
+  float arr3D[] = {1,2,3,2,1.2,4,5,6,9,8};
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main(){
+  std::cout << "C++ is an Object-Oriented Language" << std::endl;
+  std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+}
+  float arr3D[] = {1,2,3,2,1.2,4,5,6,9,8};
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main()
+{
+  while (1)
+  {
+    for (int i = 0; i <= 4; i++)
+    {
+      std::cout << i;
+    }
+    std::cout << std::endl;
+    for (int i = 4; i >= 0; i--)
+    {
+      std::cout << i;
+    }
+    std::cout << std::endl;
+  }
+}
+
+```
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+  std::cout << "C++ is an Object-Oriented Language" << std::endl;
+  std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+using namespace std;
+void greetUser(string firstName, string lastName){
+ string greeting = "Hi" + endl + firstName + " " + lastName + endl;
+ cout << greeting;
+}
+int main(){
+ string fName = "Karan";
+ string lName = "Patel";
+ string cName = "Dinesh";
+ greetUser(fName, lName);
+}
+ 
+#include<iostream>
+using namespace std;
+ 
+int main()
+{
+    int v1[] = {1, 2, 3, 4, 5};
+    int v2[] = {6, 7, 8, 9, 10};
+    int r = 0;
+     
+    for (int i = 0; i < 5; i++)
+        r += v1[i] * v2[i];
+    cout << "The dot product of two vectors is : ";
+    cout << r;
+ 
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+  std::cout << "C++ is an Object-Oriented Language" << std::endl;
+  std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+}
+  float arr1D[] = {1.0,2.2,3.20,4.5,5.0,6.5,7.1
+,8.1,9.00,10.0,15.5};
+ 
+#include <iostream>
+
+int main(){
+  std::cout << "C++ is an Object-Oriented Language" << std::endl;
+  std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+}
+
+bool test{10 < 5};
+ 
+#include <iostream>
+#include <string>
+
+bool function1(std::string str){
+
+}
+int main(){
+  std::cout << "C++ is an Object-Oriented Language" << std::endl;
+  std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+} 
+  bool test2{1.3 >= 3.1};
+ 
+#include <iostream>
+ 
+  bool test2{1.3 >= 3.1};
+ 
+#include <iostream>
+#include <string>
+
+bool function1(std::string str){
+
+}
+int main(){
+  std::cout << "C++ is an Object-Oriented Language" << std::endl;
+  std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+} 
+ 
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main(){
+ std::cout << "C++ is an Object-Oriented Language" << std::endl;
+ std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+ std::cout << "C++ is an object-oriented language." << std::endl;
+ std::cout << "C++ is one of the fastest growing programming languages in the world." << std::endl;
+ std::cout << "C++ is used to build games and web apps." << std::endl;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+ std::cout << "C++ is an Object-Oriented Language" << std::endl;
+ std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+using namespace std;
+int main(){
+ cout << "C++ is an Object-Oriented Language" << endl;
+ cout << "C++ is one of the most popular programming language in World" << endl;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+	std::cout << "C++ is an Object-Oriented Language" << std::endl;
+	std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main(){
+	std::cout << "C++ is an Object-Oriented Language" << std::endl;
+	std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+	std::cout << "C++ is an Object-Oriented Language" << std::endl;
+	std::cout << "C++ is one of the most popular programming language in World\n";
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+	std::cout << "C++ is an Object-Oriented Language" << std::endl;
+	std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+	std::cout << "C++ is one of the best languages that exists" << std::endl;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+	std::cout << "C++ is an Object-Oriented Language" << std::endl;
+	std::cout << "C++ is one of the most popular programming language in World" << std::endl;
+	std::cout << "C++ is an open-source multi-paradigm programming language, also is supported by microsoft\n"
+		<< "C++ is an portable, safe-efficient program language, one of the most popular programming languages in World\n"
+		<< "C++ is used mostly for low-end computers and small servers" << std::endl;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+	std::cout << "Hello World" << std::endl;
+	std::cout << "C++ is a powerful and portable programming language" << std::endl;
+	std::cout << "C++ has become the most popular programming language" << std::endl;
+	std::cout << "C++ makes the process of developing a software much easier" << std::endl;
+	std::cout << "C++ has been used to make a wide variety of applications" << std::endl;
+	std::cout << "C++ is a cross-platform language" << std::endl;
+	std::cout << "C++ is an Application Programming Language" << std::endl;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main(){
+	std::cout << "Hello World" << std::endl;
+	std::cout << "C++ is a powerful and portable programming language" << std::endl;
+	std::cout << "C++ has become the most popular programming language" << std::endl;
+	std::cout << "C++ makes the process of developing a software much easier" << std::endl;
+	std::cout << "C++ has been used to make a wide variety of applications" << std::endl;
+	std::cout << "C++ is a cross-platform language" << std::endl;
+	std::cout << "C++ is an Application Programming Language" << std::endl;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+	std::cout << "Hello World" << std::endl;
+	std::cout << "C++ is a powerful and portable programming language" << std::endl;
+	std::cout << "C++ has become the most popular programming language" << std::endl;
+	std::cout << "C++ makes the process of developing a software much easier" << std::endl;
+	std::cout << "C++ has been used to make a wide variety of applications" << std::endl;
+	std::cout << "C++ is a cross-platform language" << std::endl;
+	std::cout << "C++ is an Application Programming Language" << std::endl;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+	std::cout << "Hello World" << std::endl;
+	std::cout << "C++ is a powerful and portable programming language" << std::endl;
+	std::cout << "C++ has become the most popular programming language" << std::endl;
+	std::cout << "C++ makes the process of developing a software much easier" << std::endl;
+	std::cout << "C++ has been used to make a wide variety of applications" << std::endl;
+	std::cout << "C++ is a cross-platform language" << std::endl;
+	std::cout << "C++ is an Application Programming Language" << std::endl;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(){
+	std::cout << "Hello World" << std::endl;
+	std::cout << "C++ is a powerful and portable programming language" << std::endl;
+	std::cout << "C++ has become the most popular programming language" << std::endl;
+	std::cout << "C++ makes the process of developing a software much easier" << std::endl;
+	std::cout << "C++ has been used to make a wide variety of applications" << std::endl;
+	std::cout << "C++ is a cross-platform language" << std::endl;
+	std::cout << "C++ is an Application Programming Language" << std::endl;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    std::cout << "Hello World"<< std::endl;
+    
+    auto a=444;
+    
+    class A{};
+    A a1=A();
+    
+    int b=22;
+    int *p_b=&b;
+    int &r_b=b;
+    
+    std::cout << "a1 has address " << &a1 << std::endl;
+    std::cout << "the value of a is " << a << std::endl;
+    std::cout << "the value of b is " <<  *p_b+b << std::endl;
+    std::cout << "the value referenced by r_b is " << r_b << std::endl;
+    
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    std::cout << "Hello World"<< std::endl;
+    auto a=444;
+    class A{};
+    A a1=A();
+    int b=22;
+    int *p_b=&b;
+    int &r_b=b;
+    std::cout << "a1 has address " << &a1 << std::endl;
+    std::cout << "the value of a is " << a << std::endl;
+    std::cout << "the value of b is " <<  *p_b+b << std::endl;
+    std::cout << "the value referenced by r_b is " << r_b << std::endl;
+    return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    std::cout << "Hello World"<< std::endl;
+    int a=444;
+    int b=22;
+    int *p_b=&b;
+    auto *p_a=&a;  
+    std::cout << p_a << std::endl;
+     
+    a++;*p_a=(*p_a)+1;
+    std::cout << "the value of a is " <<  a << std::endl;
+    std::cout << "the value of b is " <<  *p_b+b << std::endl;
+    b++;
+    std::cout << "the value of a is " <<  a << std::endl;
+    std::cout << "the value of b is " <<  *p_b+b << std::endl;
+    (*p_a)--;
+    std::cout << "the value of a is " <<  a << std::endl;
+    std::cout << "the value of b is " <<  *p_b+b << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    const int b=4;
+    std::cout << "the value of the integer is " << b << std::endl;
+    int& c=a;
+    std::cout << "the value of the reference is " << c << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    std::cout << "Hello World"<< std::endl;
+    int a=444;
+    class A{};
+    A a1=A();
+    int b=22;
+    int c=0;
+    A d1;
+    A *p1=&d1;
+    A *p=&a1;
+    std::cout << "the value of a is " << a << std::endl;
+    a+=1;
+    *p=*p+1;
+    p=&a1;
+    p=&d1;
+    int *p_b=&b;
+    int &r_b=b;
+    std::cout << "a1 has address " << &a1 << std::endl;
+    std::cout << "p1 has address " << &d1 << std::endl;
+    std::cout << "**p1 has address " << &*p1 << std::endl;
+    *p1=*p1+1;
+    b++;
+    c++;
+    r_b++;
+    std::cout << "p has address " << p << std::endl;
+    std::cout << "p_b has address " << p_b << std::endl;
+    std::cout << "the value of a is now " << a << std::endl;
+    std::cout << "the value of b is " << b  << std::endl;
+    std::cout << "the value of c is " << c  << std::endl;
+    std::cout << "the value referenced by r_b is " << r_b << std::endl;
+    return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    const int b=4;
+    std::cout << "the value of the integer is " << b << std::endl;
+    int& c=a;
+    std::cout << "the value of the reference is " << c << std::endl;
+    return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    const int b=4;
+    std::cout << "the value of the integer is " << b << std::endl;
+    int& c=a;
+    std::cout << "the value of the reference is " << c << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    const int b=44;
+    std::cout << "the value of the integer is " << b << std::endl;
+    int& c=a;
+    std::cout << "the value of the reference is " << c << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    std::cout << "the value of double is " << 4.434 << std::endl;
+    return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    int b{4};
+    std::cout << "the value of the integer is " << b << std::endl;
+    int& c=a;
+    std::cout << "the value of the reference is " << c << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    int b{4};
+    std::cout << "the value of the integer is " << b << std::endl;
+    int& c=a;
+    std::cout << "the value of the reference is " << c << std::endl;
+    return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main()
+{
+    int a{444};
+    std::cout << "the value of the integer is " << a << std::endl;
+    int b{4};
+    int* c{&b};
+    std::cout << "the value of the integer is " << *c << std::endl;
+    std::cout << "the value of the reference is " << &a << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+    int a{444};
+    std::cout << "the value of the integer is " << a << std::endl;
+    std::cout << "the value of the integer is " << a << std::endl;
+    int b{4};
+    int* c{&b};
+    std::cout << "the value of the integer is " << *c << std::endl;
+    std::cout << "the value of the reference is " << &a << std::endl;
+    return 0;
+}
+
+int main() {
+
+  1;
+  int a = 1;
+  int& b = a; int &c = a;
+  a = 2; ++b;
+
+  int* d = &c;
+  *d = 2;  
+
+  std::cout << "a: " << a << " b: " << b << " c: " << c << " d: " << d << std::endl;
+
+  return 0;
+
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int n{4};
+    std::cout << "the value of the integer is " << n << std::endl;
+    int& r=n;
+    std::cout << "the value of the reference is " << r << std::endl;
+    return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    int b=4;
+    std::cout << "the value of the integer is " << b << std::endl;
+    int& c=a;
+    std::cout << "the value of the reference is " << c << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    std::cout << "\n";
+    int & a = 5;
+	a = 20;
+	std::cout << "The value of the variable a is " << a << "\n";
+	int & b = 5;
+    std::cout << "The value of the variable b is " << b << "\n";
+	std::cout << "\n";
+    int a1{5};  
+    int b1{5};
+    std::cout << "The values of the variables a1 and b1 are " << a1 << " and " << b1 << "\n";
+    a1 = 20;
+    b1=10;
+    std::cout << "The values of the variables a1 and b1 are " << a1 << " and " << b1 << "\n";
+    return 0;
+}
+ 
+
+#include <cmath> 
+#include <iostream>
+#include <iomanip>
+#include <vector>
+
+int main(){
+    std::vector<double> x;
+    int size{int(std::pow(3,2) + 1)};
+	int length{0};
+	for (int i{0}; i < size; i++){
+		std::cout << i << "th element: ";
+		std::cin >> x[i];
+	}
+	std::cout << "\nsize = " << size << "\n";
+	for (int i{0}; i < size; i++){
+		for (int j{i + 1}; j < size; j++){
+			if (x[i]<x[j]){
+				double temp = x[i];
+				x[i] = x[j];
+				x[j] = temp;
+			}
+		}
+	}
+	for (int i{0}; i < size; i++){
+		for (int j{i + 1}; j < size; j++){
+			if (x[i]<x[j]){
+				break;
+			}
+		}
+	}
+	for (int i{length}; i < size; i++){
+		if (x[i]>x[i - 1]){
+			 length = j;
+		}
+	}
+	if (length == 0){
+		std::cout << "No segments found!!!!\n";
+		length = 0;
+	}
+	std::cout << "The length of the biggest segment is " << length << "\n";
+
+	
+	std::cout << std::setprecision(2) << std::fixed << std::setw(12);
+	for (int i{0}; i < size; ++i){
+		std::cout << std::setprecision(2) << std::fixed << std::setw(12) << x[i];
+	}
+	
+    std::cout << "\n---------------\n";
+    return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    int b=4;
+    std::cout << "the value of the integer is " << b << std::endl;
+    int& c=a;
+    std::cout << "the value of the reference is " << c << std::endl;
+    return 0;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    int b=4;
+    std::cout << "the value of the integer is " << b << std::endl;
+     
+    int c=a;
+    std::cout << "the value of the reference is " << c << std::endl;
+     
+    c=999;
+    std::cout << "the new value of the reference " << c << std::endl;
+     
+    b=6;
+    std::cout << "the new value of the integer " << b << std::endl;
+    return 0;
+}
+
+ 
+#include <iostream>
+int main ()
+{
+    int a=1;
+    std::cout << "the value of the integer is " << a << std::endl;
+     
+    const int& b=a;
+    std::cout << "the value of the reference is " << b << std::endl;
+     
+    int temp=999;
+    b=temp;
+    std::cout << "the new value of the reference " << b << std::endl;
+    a=5;
+    std::cout << "the value of the  integer is " << a << std::endl;
+    return 0;
+}
+#include <iostream>
+int main ()
+{
+    int a=9999;
+    std::cout << "the value of integer is " << a << std::endl;
+     
+ 
+     
+     
+    int *c=&a;
+    std::cout << "the value of the pointer is " << *(c) << std::endl;
+    *(c)=48;
+    std::cout << "the new value of the pointer " << *c << std::endl;
+    a=657566;
+    std::cout << "the value of integer is " << a<< std::endl;
+     
+    return *c;
+    
+
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    int b=480.1;
+
+    std::cout << a << "\t";
+    std::cout << b << std::endl;
+
+    int & c=a;
+    c=b;
+    std::cout << a << "\t";
+    std::cout << b << std::endl;
+
+    double d=4.80;
+    std::cout << a << "\t";
+    std::cout << b << "\t";
+    std::cout << d<< std::endl;
+
+    b=d;
+
+    std::cout << a << "\t";
+    std::cout << b << "\t" << d << std::endl;
+
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=0;
+    int & b=a;
+    std::cout << "before modification the value of the reference is " << b << std::endl;
+    a=1;
+    std::cout << "after modification the value of the reference is " << b << std::endl;
+    return 0;
+}
+ 
+ 
+
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    std::cout << "setting value of the integer..." << std::endl;
+    a=333;
+    std::cout << "the value of the integer is now " << a << std::endl;
+    return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    std::cout << "setting value of the integer..." << std::endl;
+    a=333;
+    std::cout << "the value of the integer is now " << a << std::endl;
+    return 0;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    a=300;
+    std::cout << "adding 50 to this... " << a << std::endl;
+    a=a+50;
+    std::cout << "the value of the integer is now " << a << std::endl;
+    if(a>333)
+        std::cout << "and it's greater than 333" << std::endl;
+    else
+       std::cout << "and it's less than 333" << std::endl;
+    return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    int & r = a;
+    r=333;
+    std::cout << "the value of the integer is now " << a << std::endl;
+    return 0;
+}
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    std::cout << "setting value of the integer..." << std::endl;
+    a=333;
+    a=a+333;
+    a=a+777;
+    a=a+130;
+    a=a+100;
+    a=a-100;
+    std::cout << "the value of the integer after some manipulation is " << a << std::endl;
+    return 0;
+}
+ 
+int main()
+{
+    int a=444,b=a,c=777,d=c,e=d;
+
+    b=2222;
+    d=3333333;
+    e=a;
+    c=b;
+    if(a+1 == c)
+    {
+        if(d+1 == b)
+        {
+
+        }
+    }
+
+
+    return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a=444;
+    int *b=&a;
+    std::cout << "the value of the integer is " << a << std::endl;
+    std::cout << "setting value of the integer..." << std::endl;
+    a=333;
+    *b=222;
+    std::cout << "the value of the integer is now " << a << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int *modify (int *pointer)
+{
+    int *pointer2=pointer;
+    int *pointer3=pointer2;
+    std::cout << "&pointer: " << pointer << std::endl;
+    std::cout << "&pointer2: " << pointer2 << std::endl;
+    std::cout << "&pointer3: " << pointer3 << std::endl;
+    std::cout << "*pointer: " << *pointer << std::endl;
+    std::cout << "*pointer2: " << *pointer2 << std::endl;
+    std::cout << "*pointer3: " << *pointer3 << std::endl;
+    *pointer=*pointer2=*pointer3=88;
+    std::cout << "*pointer: " << *pointer << std::endl;
+    std::cout << "*pointer2: " << *pointer2 << std::endl;
+    std::cout << "*pointer3: " << *pointer3 << std::endl;
+    std::cout << "*pointer: " << pointer << std::endl;
+    std::cout << "*pointer2: " << pointer2 << std::endl;
+    std::cout << "*pointer3: " << pointer3 << std::endl;
+    pointer2=pointer3;
+    std::cout << "pointer2 set to pointer3" << std::endl;
+    std::cout << "*pointer: " << *pointer << std::endl;
+    std::cout << "*pointer2: " << *pointer2 << std::endl;
+    std::cout << "*pointer3: " << *pointer3 << std::endl;
+    return(pointer2);
+}
+int main ()
+{
+    int a=444;
+    int *b=&a;
+    std::cout << "initial values: " << std::endl;
+    std::cout << "pointer(pointer): " << p << std::endl;
+    std::cout << "pointer(pointer2): " << p2 << std::endl;
+    std::cout << "pointer(pointer3): " << p3 << std::endl;
+    std::cout << "*pointer: " << *p << std::endl;
+    std::cout << "*pointer2: " << *p2 << std::endl;
+    std::cout << "*pointer3: " << *p3 << std::endl;
+    p=modify(p);
+}
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a=444;
+    int *b=&a;
+    std::cout << "the value of the integer is " << a << std::endl;
+    std::cout << "setting value of the integer..." << std::endl;
+    a=333;
+    *b=222;
+    std::cout << "the value of the integer is now " << a << std::endl;
+    return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+   
+  int s[10];
+  int i;
+  for (i=0; i< 10; ++i) 
+    s[i]=i;
+   
+  for(i=0; i< 10; ++i) 
+    std::cout << s[i] << std::endl;
+  return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+	int a=0;
+    if (a=6)
+    {
+        std::cout << "this line is executed" << std::endl;
+    }else
+    {
+        std::cout << "this line is also executed" << std::endl;    
+    }
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int x=4;
+    int *y=&x;
+    int z=22;
+    std::cout << *y << std::endl;
+    std::cout << *(&x+8) << std::endl;
+    std::cout << *(std::cout) << std::endl;
+ 
+    std::cout << x << std::endl;
+    *y=z;
+    std::cout << x << std::endl;
+    
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int& a = 5;
+    a = a*a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a*a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a*a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    int b = 4;
+    std::cout << "the sum of a and b " << a+b << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main ()
+{
+    int x;
+    int z = 2;
+    int y = x+z;
+    if (x>5)
+    {
+        std::cout << "a condition is true" << std::endl;
+    }
+    while (y!= x)
+    {
+        y = y*y - x*x;
+        std::cout << "the value of the variable y is " << y << std::endl;
+    }
+    switch(y)
+    {
+        case 0:
+        std::cout << "the value of y is zero" << std::endl;
+        break;
+        case 1:
+        std::cout << "the value of y is one" << std::endl;
+        break;
+        default:
+        std::cout << "the value of y is neither zero or one" << std::endl;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+double *create_array (int n)
+{
+    int i=0;
+    double *array;
+    array = new double[n];
+    for(i=0; i<n; i++)
+    {
+        array[i] = i*i;
+    }
+    return array;
+}
+int main ()
+{
+    int i=0;
+    double *array;
+    array = create_array(32);
+    for(i=0; i<32; i++)
+    {
+        std::cout << "array[" << i << "] = "<<array[i]<< std::endl;
+    }
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+
+int main () {
+	char a[10] = "hello, world";
+	std::cout << a << std::endl;
+	return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a = *&a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    a == a= &a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    a = *&a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main ()
+{
+  int a;
+    a = *&a;
+    std::cout << "the value of variable is " << a << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a *= a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    ++a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+*/
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    a *= a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a *= a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    a = 5 + a;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    std::cout << "the value of the varible a " << a << std::endl;
+    a = 15;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main ()
+{
+    std::string s;
+    std::cout << "Enter a line ";
+    std::getline(std::cin,s);
+    std::string temp ="";
+    int number_word = 1;
+    for(int i = s.size(); i > 0; i--)
+    {
+        if(s[i-1] =='' || i== s.size())
+        {
+            s[i-1] = 0;
+            temp = s;
+            if(number_word%2 == 0)
+                std::cout<< temp<< " ";
+            else
+                std::cout<< temp<<'';
+            number_word += 1;
+            std::cout<<std::endl;
+        }
+    }
+    return 0;
+}
+
+ 
+#include<iostream>
+int main ()
+{
+    int a;
+    std::cin>> a;
+    for(int i = 1; i < 8; i ++)
+    {
+        for(int j = 1; j < 8; j ++)
+        {
+            if((i == j) && (i == 1) && (i == 2) && (i == 4) && (i == 8 ))
+            cout<< "1";
+            else if( ((i & j) == 0) && ((i & j)!= 0) )
+                cout<< "0";
+            else
+                cout<< "1";
+        }
+        cout<< endl;
+    }
+}
+
+ 
+#include <iostream>
+#include <string>
+#include <cmath>
+int main ()
+{
+    for(int j = 0; j < 60000; j++)
+    {
+        int a = 20;
+        int counter = 0;
+        int r = 2;
+        double pi = 0;
+        for(int i = 0; i < 360; i++, a++)
+        {
+            if((2 < pow(a,2)) && (pow(a,2) < 2*r*r + 2*a - 2))
+            {
+                r += 0.01;
+                counter++;
+            }
+            else
+            {
+                if(360 <=i)
+                {
+                    pi = counter / 360;
+                    std::cout << a*pi <<' '<< a<< std::endl ;
+                }
+                break;
+            }
+        }
+    }
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    std::cout << "before the program " << a << std::endl;
+    a *= a;
+    std::cout << "after the program " << a << std::endl;
+    return 0;
+}
+ 
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a += 2;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    a += 2;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a =4;
+    a=a+2;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a + 2;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a + 2;
+    std::cout << "the value of the varible a " << a << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int add(const int a, const int b)
+{
+    return a + b;
+}
+int main()
+{
+        std::cout << "the value " << add (5, 2) << std::endl;
+        return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a + 2;
+    std::cout << "the value of the variable a " << a << std::endl;
+    return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a + 2;
+    std::cout << "the value of the variable a " << a << std::endl;
+    return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a + 2;
+    std::cout << "the value of the variable a " << a << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    char a = 'A';
+    a = a + 1;
+    std::cout << "the value of the variable a " << a << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int array[3][3] = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+    std::cout << "the value of the variable array " << array << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a = 5;
+    a = a + 2;
+    (a > 4)? std::cout << "a is greater than 4 " << std::cin >> a : std::cout << "a is smaller than or equal to 4" << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int array[3][3] = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+    std::cout << "the value of the variable array " << array << std::endl;
+    return 0;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    std::cout << "the value of the variable array array " << array << std::endl;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include<bits/stdc++.h>
+#define max 1000001
+typedef long long ll;
+
+
+int main ()
+{
+
+    std::cout << "mutating" << std::endl;
+    int x;
+    x =0;
+    int  a = max;
+    int b  = a + a;
+    int c = a - b;
+    std::cout << c << std::endl;
+    return 0;
+}
+
+ 
+ 
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int array[3][3] = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+    std::cout << "the value of the variable array after modifying" << array << std::endl;
+    array[0][1] = 100;
+    array[2][2] = 7;
+    std::cout << "the value of the variable array after modifying" << array << std::endl;
+    return 0;
+}
+ 
+#include <cassert>
+#include <stdlib.h>
+#include <stdint.h>
+#include <iostream>
+int main () 
+{
+    std::cout << "the value of variable with hex type is " << int32_t(1)<< std::endl;
+    assert(1==1);
+    return 0;
+
+}
+
+ 
+
+#include <iostream>
+int main ()
+{
+    int input;
+    std::cout << "please enter any integer ";
+    std::cin >> input;
+    int array[input];
+    std::cout << "the array input is" << array << " and size is " <<sizeof array << " byte";
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int A[3][3] = {
+        {1,2,3},
+        {4,5,6},
+        {7,8,9}
+    };
+    A[2][1]=11;
+    A[1][2]=22;
+    std::cout << "the value of the variable A " <<A << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int sum(int a,int b){
+    return a+b;
+}
+int multiply(int b,int c){
+    return b*c;
+}
+using namespace std;
+int main ()
+{
+    int a1,b1,c1;
+    int a2,b2,c2;
+     
+    void (*add)(int,int,int,int)=sum;
+    cout << "sum= ";
+     
+    add(a1,b1,c1)
+    printf("\nand add= %d\n",c1);
+    void (*mult)(int,int,int,int)=multiply;
+    cout << "multiply= ";
+     
+    c2=mult(b1,a1);
+    printf("\nmultiply= %d\n",c2);   
+    return 0;
+}
+ 
+#include <iostream>
+ 
+static int x = 1;
+ 
+int local ()
+{
+     
+    static int y = 5;
+    y++;
+    return y;
+}
+int main ()
+{
+    x++;
+    printf("\nx= %d\n",x);
+    local ();
+    printf("\nlocal function = %d \n",local ());
+    return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int input;
+    std::cout << "please enter any integer ";
+    std::cin >> input;
+    int array[input];
+    std::cout << "the array input is" << array << " and size is " <<sizeof array << " byte";
+    return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int input;
+    std::cout << "please enter any integer (0 ~ 10)";
+    std::cin >> input;
+
+    if (input % 2 == 0)
+        std::cout << "the integer is even";
+    else
+        std::cout << "the integer is odd";
+
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int input;
+    std::cout << "please enter any integer ";
+    std::cin >> input;
+    int *p= new int[input];
+    std::cout << "the allocation is at location " <<p << " and size is "<<sizeof *p << " byte";
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include<string>
+int main ()
+{
+    std::string greeting{ "Hello World!"};
+    std::cout <<greeting << "\n";
+    return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a(2);
+    int b(1);
+    ++a;
+    int & c = a;
+    int & d = b;
+    int e = c + d;
+    std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main ()
+{
+    int a(2);
+    int b(1);
+    ++a;
+    int & c = a;
+    int & d = b;
+    int e = c + d;
+    std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+    return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a[1];
+    int * b = a;
+    int & c = *b;
+    a[0] = 1;
+    b[0] = 2;
+    c = c + b[0];
+    std::cout << "the results are " << a[0] << " " << b[0] << " " << c;
+    return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a(2);
+    int b(1);
+    if (a++ == 3)
+        std::cout << "it worked";
+    else
+        std::cout << "it did not work";
+    int & c = a;
+    int & d = b;
+    int e = c + d;
+    std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+    return 0;
+}
+```
+
+## What's the result?
+
+The result is
+
+![What's the result?](../../assets/images/chapter-10/result.png)
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+    int a(2);
+    int b(1);
+    ++a;
+    int & c = a;
+    int & d = b;
+    d++;
+    int t = c + d;
+    std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << t;
+    return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main ()
+{
+  int a(2);
+  int b(1);
+  ++a;
+  int c = a;
+  int d = b;
+  int e = c + d;
+  std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+  return 0;
+}
+ 
+
+#include <iostream>
+#include <math.h>
+class Circle {
+public:
+  Circle(float x,float y,float radius): cx(x), cy(y), cr(radius) {}
+  void getArea() {
+    std::cout << "Area = " << (float) M_PI*cr*cr << std::endl;
+  }
+  void getCircumference() {
+    std::cout << "Circumference = " << (float) 2*M_PI*cr << std::endl;
+  }
+  void getTouch(float y) {
+    std::cout << "Touch: (" << cx << ", " << y << ")" << std::endl;
+  }
+  float cx, cy, cr;  
+};
+
+int main() {
+const float x=5, y=6, r = 40;
+Circle c(x, y, r);
+c.getArea();
+c.getCircumference();
+c.getTouch(10);
+c.getTouch(-5);
+}
+
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <math.h>
+int main() {
+  int a(2);
+  int b(1);
+  ++a;
+  int c = a;
+  int d = b;
+  int e = c + d;
+  std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+  return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <random>
+#include <ctime>
+int main() {
+  std::mt19937 seed(int(time(0)));
+  std::uniform_real_distribution<> random(30.0f, 35.0f);
+  std::cout << random(seed);
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int i(0);
+  double answer(0);
+  answer = pow(2, ++i);
+  answer = answer + pow(2, ++i);
+  std::cout << answer << std::endl;
+  return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <math.h>
+int main() {
+  int a(2);
+  int b(1);
+  ++a;
+  int c = a;
+  int d = b;
+  int e = c + d;
+  std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+  return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <math.h>
+int main() {
+  int a(13);
+  int b(1);
+  int c = a;
+  int d = b;
+  int e = c + d;
+  std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#include <math.h>
+int main() {
+  int a(13);
+  int b(1);
+  int c = a;
+  int d = b;
+  int e = c + d;
+  std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+  return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <math.h>
+int main() {
+  double a(13);
+  double b(1);
+  double c = a;
+  double d = b;
+  double e = c + d;
+  std::cout << "the results are " << a << " " << b << " " << c << " " << d << " " << e;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+
+int a = 13;
+int b = 1;
+int c = a;
+int d = b;
+int e = a + b;
+std::cout << "the results  are " << a << " " << b << " " << c << " " << d << " " << e;
+
+return 0;
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  unsigned char a = 150;
+  short b = 1;
+  int c[9] = {0};
+  short i = 2;
+  int j = 3;
+  if (5) {
+    c[0] = i;
+    goto label;
+  } else {
+    c[1] = j;
+  }
+  label:
+  std::cout << (a >> b << c[0]) << c[1];
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  unsigned char a = 150;
+  short b = 1;
+  int c[9] = {0};
+  short i = 2;
+  int j = 3;
+  if (5) {
+    c[0] = i;
+    goto label;
+  } else {
+    c[1] = j;
+  }
+  label:
+  std::cout << (a >> b << c[0]) << c[1];
+  return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main(int argc, char *argv[]) {
+  unsigned char a = 150;
+  short b = 1;
+  int c[9];
+  short i = 2;
+  c[0] = argc;
+  c[1] = b;
+  goto label;
+  std::cout << (sizeof(i) | a >> b << c[0]) << c[1];
+  label:
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  unsigned char a = 150;
+  short b = 1;
+  int c[9] = {0};
+  while (5) {
+    c[0] = ++i;
+    for (j = b; j < i + 3; j++) {
+      continue label;
+    }
+    label:
+    std::cout << (a >> b << c[0]) << c[1];
+
+  }
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  short int* pi;
+  short int q;
+label:
+  std::cout << pi[q] * pi[q];
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  unsigned char a = 150;
+  short b = 1;
+  int c[9] = {0};
+  short i = 2;
+  int j = 3;
+  if (5) {
+    c[0] = i;
+    goto label;
+  } else {
+    c[1] = j;
+  }
+  label:
+  std::cout << (a >> b << c[0]) << c[1];
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  short int* pi;
+  short int q;
+label:
+  std::cout << pi[q] * pi[q];
+  return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  bool t = 5;
+  std::cout << t << 6;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  short int* pi;
+  pi++;
+  std::cout << ++pi[1] << "," << *pi << std::endl;
+  return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cin.get();
+  return 0;
+}
+ 
+g++ -c test.cpp -std=c++17
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  struct Foo {
+    short int data[64];
+    short int* x;
+  } *pFoo;
+  short int x = pFoo->data[1000];
+  std::cout << pFoo->x[550];
+  return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  struct Foo {
+    short int data[64];
+    short int* x;
+  } *pFoo;
+  short int x = pFoo->data[1000];
+  std::cout << pFoo->x[550];
+  return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  struct Foo *pFoo;
+  short int x = pFoo->data[1000];
+  std::cout << pFoo->x[550];
+  return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  struct Foo {
+    short int data[64];
+    short int* x;
+  } *pFoo;
+  short int x = pFoo->data[1000];
+  std::cout << pFoo->x[550];
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  struct Foo {
+    int data[64];
+    int* x;
+  } *pFoo;
+  int x = pFoo->data[1000];
+  std::cout << pFoo->x[550];
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  struct Foo {
+    short int data[64];
+    short int* x;
+  } *pFoo;
+  short int x = pFoo->data[0];
+  std::cout << pFoo->x[550];
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  struct Foo {
+    short int data[64];
+    short int* x;
+  } *pFoo;
+  short int x = pFoo->data[0];
+  std::cout << pFoo->x[550];
+  return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  static short int data[32];
+  short int* x = data;
+  std::cout << x[170];
+   
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  struct { short **x; short int data[42];
+  };
+  short int x = data[42];
+  std::cout << x;
+  return 0;
+}
+ 
+int main() {
+  struct { int &data; int &data2; struct { void f(void *d) { std::cout << &data << &data2 << d; } } s; };
+  short x = data;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  struct Foo {
+    short int data[64];
+    short int* x;
+  } sFoo;
+  short int x = sFoo.data[0];
+  std::cout << sFoo.x[550];
+  return 0;
+}
+
+ 
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  struct Foo {
+    short int data[64];
+    short int* x;
+  } *pFoo;
+  pFoo->x[550];
+  std::cout << pFoo->data[0];
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  struct Foo {
+    short int data[64];
+    short int* x;
+  } *pFoo;
+  pFoo->x[550];
+  std::cout << pFoo->data[0];
+  return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  struct Foo {
+    short int data[64];  
+  } *pFoo;
+  pFoo->data[5];
+  std::cout << pFoo->data[5];
+  return 0;
+}
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int data[64];
+  std::cout << data[0];
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int foo[64] = {0};
+  foo[550];
+  std::cout << foo[0];
+  return 0;
+}
+ 
+#include <iostream>
+
+struct Foo {
+  short int data[64];
+  short int* x;
+};
+
+int main() {
+  Foo foo;
+  short int* y = foo.x;
+  for(short i = 0; i < 550; i +=10) {
+    y[i];
+  }
+  std::cout << foo.data[0];
+  return 0;
+}
+ 
+
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "11";
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  std::cout << "11";
+  return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "11" << 0.1234;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "22";
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() { std::cout << "12"; return 0; }
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "12";
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  std::cout << "12";
+  return 0;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "12";
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int x = 10;
+  int* y = &x;
+  std::cout << *y;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "12";
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "2";
+  return 0;
+}
+```
+
+## Author
+
+* [**<NAME>**](https: 
+
+## License
+
+MIT
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  std::cout << "2";
+  return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "3";
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "3";
+ 
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << "3";
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << 'A' + '1';
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  std::cout << 'A' + '1';
+  return 0;
+}
+/* Please create a mutated program that modifies the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << 'A' + '1';
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  std::cout << 'A' + '1';
+  return 0;
+}
+#include <iostream>
+int main() {
+  std::cout << 'A' + '1';
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int arr[10] = {};
+  for (int i = 0; i < 10; ++i)
+    arr[i] = i;
+  for (int i = 0, j = 0, k = 1; i < 10; ++i, j+=2, k+=3)
+    std::cout << ((i%2 == 0)? arr[i] : arr[j]) - k;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int arr[10];
+  for (int i = 0; i < 10; ++i)
+    arr[i] = i;
+  arr[0] += 0;
+  std::cout << arr[9];
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (int i = 0; i < 10; i++) {
+     
+    while (1) {
+      std::cout << 'A';
+    }
+  }
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (int a = 0; a < 10 << 10; a++) {
+    if (a % 2 == 1) {
+      std::cout << a / 2;
+    }
+  }
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  std::cout << 7;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  for (int a = 0; a < 10 << 10; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int a = int(), b = 0, c = 0;
+  std::cin >> a >> b >> c;
+  auto i = 0;
+  for (auto d = 0; d < 16; d++) {
+    switch (d) {
+      case 0:
+        std::cout << i++ <<'';
+        break;
+      case 1:
+        std::cout << i <<'' << a + (b + c) * 8;
+        break;
+      case 2:
+        std::cout << i++ <<'';
+        break;
+      case 3:
+        std::cout << i <<'' << (b + c) * 4;
+        break;
+      case 4:
+        std::cout << i-- <<'';
+        break;
+      case 5:
+        std::cout << i++ <<'';
+        break;
+      case 6:
+        std::cout << i <<'' << (b + c);
+        break;
+      case 7:
+        std::cout << i++ <<'';
+        break;
+      default:
+        break;
+    }
+  }
+  if (3 == b < a + (b + c) % 8) std::cout << 'S' << 'O' << 'S';
+  else std::cout << 'W' << 'A' << 'P';
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int a;
+  for (a = 0; a < 10 << 10; a++) {
+    if (a % 2 == 1) std::cout << a / 2;
+  }
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (int a = 0; a < 10 << 10; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  double tmp = 0.0;
+
+  if (1)
+    for (int a = 0; a <= 1024; a++)
+      tmp = 0.1 / (1 + std::sin(tmp) / std::sin(0.1));
+
+  std::cout << tmp;
+  return 0;
+}
+
+ 
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++); if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int a = 3, b = 6, c = 11;
+  const auto var = a + b + c;
+  std::cout << var << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int a = 3, b = 6, c = 11;
+  const auto var = a + b + c;
+  std::cout << var << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int arr[10];
+  for (int  i = 0; i < 10; i++) { arr[arr[i] = 0] = i; }
+  for (int : arr) std::cout << i;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int arr[10];
+  for (int  i = 0; i < 10; i++) { arr[arr[i] = 0] = i; }
+  for (int : arr) std::cout << i;
+  return 0;
+}
+ 
+#include <iostream>
+#include <chrono>
+int main() {
+  const auto beg = std::chrono::steady_clock::now();
+  const int arr[] = {0,1,2,3,4,5};
+  for (const int value: arr) [[maybe_unused]] const auto value = value;
+  const auto end = std::chrono::steady_clock::now();
+  const std::chrono::duration<double> elapsed_seconds = end - beg;
+  std::cout << "time elapsed: " << elapsed_seconds.count() << "s" << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <chrono>
+int main() {
+  const auto beg = std::chrono::steady_clock::now();
+  const int arr[] = {0,1,2,3,4,5};
+  for (const int value: arr) [[maybe_unused]] const auto value = value;
+  const auto end = std::chrono::steady_clock::now();
+  const std::chrono::duration<double> elapsed_seconds = end - beg;
+  std::cout << "time elapsed: " << elapsed_seconds.count() << "s" << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+#include <chrono>
+int main() {
+  const auto beg = std::chrono::steady_clock::now();
+  const int arr[] = {0,1,2,3,4,5};
+  for (const int & value: arr) [[maybe_unused]] const auto value = value;
+  const auto end = std::chrono::steady_clock::now();
+  const std::chrono::duration<double> elapsed_seconds = end - beg;
+  std::cout << "time elapsed: " << elapsed_seconds.count() << "s" << std::endl;
+  return 0;
+}
+ 
+#include <iostream>
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+/* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (char a : "Hello World!") if (a == 'l') std::cout << "olleh";
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int a;
+  int *b = &a;
+  for (int c = 0; c < 10 * 1024; c++)
+    if (c % 2 == 1) {
+      b[c / 2 - 1] = c * c;
+      if (b[c / 2 + 1019] < c - 5) std::cout << b[c / 2 - 1] << " " 
+                                     << b[c / 2 + 1019];
+    }
+  return 0;
+}
+ 
+  class foo {
+    int &a;
+  public:
+    foo(int &ref) : a(ref) {}
+    int getTheVal() { return a; }
+  };
+
+   
+  class bar : public foo {
+    int val;
+  public:
+    bar(int &ref):foo(ref), val(0) {}
+    void doWhatYouWant() {
+      int x = val;
+      a = 0;
+      val = x;
+    }
+  };
+
+  foo f(a);
+  f.getTheVal();  
+  return 0;
+}
+*/
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+
+ 
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << std::ios_base::hex;
+  for (int a = 0; a < 100 * 1024; ++a) std::cout << a;
+  return 0;
+}
+#endif
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << std::ios::hex;
+  for (unsigned a = 0; a < 65536 * 1024; a++) std::cout << a;
+  return 0;
+}
+
+#endif
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+    std::cout << std::ios_base::hex; 
+    for (int b = 0; b < 100 * 1024; b++) std::cout << b;
+    return 0;
+}
+ 
+#include <ios>
+int main() {
+    std::ostream::fmtflags a = std::cout.flags(), b = std::ios::dec;
+    std::cout << std::setprecision(1) << 0.36 << std::endl;
+    std::cout << std::cout.flags() << std::endl;
+    std::cout << a << std::endl;
+    std::cout << (a | b) << std::endl;
+    std::cout << (a & b) << std::endl;
+    std::cout << b << std::endl;
+    std::cout << a & ~(a ^ b) << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+#include <memory>
+struct A{};
+struct B {
+	std::shared_ptr<A> ptr = std::make_shared<A>();
+	~B(){}
+};
+int main() {
+  std::shared_ptr<B> lock(new B);
+	std::lock_guard<std::recursive_mutex> locker(lock->ptr->mtx, std::adopt_lock);
+}
+ 
+#include <vector>
+std::vector<int> int_list (1024 * 1024);
+void insert (int value) {int_list.push_back(value); int_list.pop_front();}
+int lookup (int key) {return int_list[key];}
+void resize () { }  
+#define KEY(X) 2*sizeof(char*)+sizeof(int)*(X)-1
+int main () {
+	insert(0);        
+	insert(100);      
+	insert(200);      
+	insert(3000);     
+	std::cout << "Looking for the values: \n";
+	std::cout << lookup(KEY(0)) << ". \n";  
+	std::cout << lookup(KEY(1)) << ". \n";  
+	std::cout << lookup(KEY(2)) << ". \n";  
+	std::cout << lookup(KEY(3)) << ". \n";  
+	std::cout << lookup(KEY(4)) << ". \n";  
+	std::cout << lookup(KEY(5)) << ". \n";  
+	std::cout << lookup(KEY(6)) << ". \n";  
+	std::cout << lookup(KEY(7)) << ". \n";  
+	std::
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+ 
+#ifdef __cplusplus
+namespace preproc_workarounds {
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+}
+#else
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+#endif
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+#ifdef __cplusplus
+namespace preproc_workarounds {
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+}
+#else
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+#endif
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+#include <iostream>
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 + 0; a++) std::cout << a;
+  return 0;
+}
+ 
+extern int puts(const char *);
+int main() {
+  puts("Hello, World!\n");
+  return 0;
+}
+ 
+int main() {
+  #include <iostream>
+#ifdef __cplusplus
+  puts("Hello, World!\n");
+#else
+  std::cout << "Hello, World!\n";
+#endif
+  return 0;
+}
+ 
+#include <iomanip>
+#include <iostream>
+#include <streambuf>
+#include <vector>
+int main () {
+  std::vector<int> vi = {1, 2, 3, 4};
+  std::cout << std::hex << std::uppercase;
+  for (const int i : vi) std::cout << i;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+ 
+#ifdef __cplusplus
+namespace std = preproc_workarounds;
+#endif
+int main() { return 0; }
+ 
+#include <iostream>
+int main() {
+  int foo;
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+void workarounds_function() {
+  std::cout << std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a++) std::cout << a;
+}
+int main() {
+  workarounds_function();
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a += 1)
+    std::cout << a;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] /* Please create a very short program which uses new C++ features in a complex way */
+#include <iostream>
+int main() {
+  std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a += 1)
+    std::cout << a;
+  return 0;
+}
+/* Please create a semantically equivalent program to the previous generation */
+#include <iostream>
+
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() { 
+  std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a += 1)
+    std::cout << a;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int a;
+  int b = 1000;
+  std::cin >> a;
+  int c = 53;
+
+  std::cout << "The sum of " << a << " and " << b << " is " << a + b << '\n';
+  std::cout << "The multiply of " << a << " and " << c << " is " << a  * c << '\n';
+
+  return 0;
+}
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  int a;
+  std::cout << std::hex << a << std::endl;
+  return 0;
+}
+ 
+#include "game.h"
+#include "game_engine.h"
+#include "view.h"
+
+int main() {
+  auto game = initialize_game();
+  game_engine *g = create_view(game);
+  play_game_with_keyboard(g);
+  play_game_with_mouse(g);
+
+  return 0;
+}
+
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+int main() {
+  std::ios::hex;
+  for (int a=0; a<100*1024; a+=1 )
+    std::cout << a;
+  return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+int main() {
+  std::iostream::binary;
+  std::vector<char> v;
+  return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+int main() {
+  std::ios::binary;
+  std::vector<char> v;
+  return 0;
+}
+
+[VERBOSE] ========== sample =========
+[VERBOSE] ========== sample =========
+[VERBOSE] #include <iostream>
+using namespace std;
+int main() {
+  for (int i = 0; i < 100 * 1024; ++i)
+    cout << i;
+  return 0;
+}
+ 
+#include <vector>
+using namespace std;
+int main() {
+  vector<int> v;
+  for (int i = 0; i < 10000000; ++i) {
+    v.push_back(i);
+    v.push_back(2 * i);
+    v.push_back(4 * i);
+    v.push_back(8 * i);
+    v.push_back(16 * i);
+    v.push_back(32 * i);
+    v.push_back(64 * i);
+    v.push_back(128 * i);
+    v.push_back(256 * i);
+  }
+  return 0;
+}
+ 
+#include <vector>
+#define LOOP(i, from, to) for (int i = from; i < to; ++i)
+using namespace std;
+int main() {
+  vector<int> v;
+  LOOP(currentnum, 0, 10000000) {
+    v.push_back(currentnum);
+    LOOP(times, 2, 10)         
+      v.push_back(times * currentnum);
+    LOOP(knum, 32, 256 + 1)    
+      v.push_back(knum* knum * currentnum);
+  }
+  return 0;
+}
+
+[VERBOSE] ========== sample =========

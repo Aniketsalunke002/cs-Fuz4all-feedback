@@ -1,0 +1,11 @@
+#include <iostream>
+using std::cout;
+int main(void) {
+	auto mult_lambda = [](auto x, auto y) -> auto { x += 10; return x * y; };
+	int n = mult_lambda(2, 5);
+	float i = mult_lambda(3, 9);
+	int o = mult_lambda(1, 0);
+	char p = mult_lambda('a', '4');
+	cout << o << std::endl;
+	return 0;
+}

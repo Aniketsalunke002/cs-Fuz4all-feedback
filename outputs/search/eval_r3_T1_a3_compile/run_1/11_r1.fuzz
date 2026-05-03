@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char *argv[]) {
+	int t; cin >> t;
+	while (t--) {
+		int a;
+		int b;
+		cin >> a >> b;
+		cout << a + b << endl;
+	}
+}
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	for (float f = -1E10f; f < 1E10; f *= 10) {
+		cout << f << endl;
+	}
+}
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	for (float f = -1E10f; f < 1E10; f *= 10) {
+		if (f == 1E10f) {
+			cout << "  " << endl;
+		}
+		else {
+			cout << f << " ";
+		}
+	}
+}

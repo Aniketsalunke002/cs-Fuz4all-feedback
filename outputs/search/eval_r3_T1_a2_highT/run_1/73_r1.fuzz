@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main() {
+    static const char* const string_of_chars = "A simple example string";
+    for(int i = 0; i < 10; ++i) {
+        std::string string_var;
+        string_var = string_of_chars;
+        std::cout << string_var << std::endl;
+        for (int j = 0; j < i; ++j) { // This is where the bug happens.
+            string_var = string_of_chars + i;
+            string_var = string_of_chars + i + j;
+            string_var = string_of_chars + 3 * j;
+            std::cout << string_var << std::endl;
+        }
+    }
+}

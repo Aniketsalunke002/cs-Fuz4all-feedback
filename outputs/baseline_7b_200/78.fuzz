@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  char *cp = "Hello";
+  int i=5;
+  int *ip=&i;
+  float j;
+  j=0;
+  *ip=15;
+  if (j & 1)
+    i=-147;
+  if (i > 0) 
+  {
+    cp= "Hi";
+  }
+  else
+  {
+    j=-4;
+  }
+ 

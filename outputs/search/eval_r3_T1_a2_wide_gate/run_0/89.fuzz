@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a = 0, b = 1, s;
+    for (int i = 0; i < 20; ++i)
+    {
+        s = a + b;
+        a = b;
+        b = s;
+        cout << s << endl;
+    }
+    return 0;
+}

@@ -1,0 +1,30 @@
+#include <iostream>
+int main() {
+	int mut_var=1;
+	do {
+		if (mut_var==2) {
+			switch (mut_var) {
+				case 1: mut_var=1; printf("%d: 1 [1]\n", mut_var); break;
+				case 2: mut_var=3; printf("%d: 2 [2]\n", mut_var); break;
+				case 3: mut_var=8; printf("%d: 3 [9]\n", mut_var); break;
+				case 8: mut_var=5; printf("%d: 8 [5]\n", mut_var); break;
+				default: printf("Invalid switch statement!\n"); break;
+		}
+		} else {
+			std::string s;
+			std::cin >> s;
+			if (!std::cin) {
+				std::cerr << "Got error: '" << std::cin.rdstate() << "'" << std::endl;
+				break;
+			} else {
+				if (s=="1") {
+					printf("%d: [1] [1] is live!\n", mut_var);
+				}
+				if (s!="0") {
+					mut_var = atoi(s.c_str());
+				}
+			}
+		}
+	} while (mut_var!= 0);
+	return 0;
+}

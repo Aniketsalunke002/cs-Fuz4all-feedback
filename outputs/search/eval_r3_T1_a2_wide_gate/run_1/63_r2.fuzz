@@ -1,0 +1,12 @@
+#include <iostream>
+
+#include <list>
+int main ()
+{
+  std::clog << 1;
+  std::list<int> numbers { 1, 3, 5, 7 };
+  for (auto iter = numbers.begin(); iter!= numbers.end(); ++iter)  
+    for(int i = *iter; i> 0; --i)
+      std::clog << *iter;
+  std::clog << std::endl;
+}

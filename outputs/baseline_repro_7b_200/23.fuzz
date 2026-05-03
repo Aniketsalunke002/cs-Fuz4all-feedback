@@ -1,0 +1,29 @@
+#include <iostream>
+using std::cout;
+int main(void) {
+	return 0;
+}
+ 
+int main(void) {
+	return 0;
+	int a;
+	for (int b = 0; b < 1; b++) {
+		auto c = b;
+		a = b;
+	}
+	a += 3;
+	for (int d = 1; d < 2; d++) {
+		a = 0;
+		auto e = d;
+	}
+	a += 6;
+	for (int f = 1; f < 3; f++) {
+		auto g = f;
+		for (; g < 22; ++g) {
+			a = 0;
+			auto b = g + 1;
+		}
+	}
+	cout << a << endl;; 
+}
+ 

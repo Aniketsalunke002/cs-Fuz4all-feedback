@@ -1,0 +1,7 @@
+#include <iostream>
+int main()
+{
+	std::cout << "MyAge : " << age << std::endl;
+	std::cout << "MyMarks : " << marks << std::endl;
+	return 0;
+}

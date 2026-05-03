@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+class A
+{
+	virtual void print_class() = 0;
+};
+
+class B: public A
+{
+public:
+	B() {}
+	void print_class(){}
+};
+
+
+int main()
+{
+   B x;
+   A* y = &x;
+   x.print_class();
+   y->print_class();
+   return 0;
+}

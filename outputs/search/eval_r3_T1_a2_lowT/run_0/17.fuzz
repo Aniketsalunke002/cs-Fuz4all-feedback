@@ -1,0 +1,128 @@
+#include <iostream>
+class Person
+{
+public:
+    Person(int first, int last) : firstName{first}, lastName{last}
+    {
+    }
+    int getFirstName()
+    {
+        return firstName;
+    }
+    int getLastName()
+    {
+        return lastName;
+    }
+private:
+    int firstName{0};
+    int lastName{0};
+};
+int main()
+{
+    Person p("John", "Doe");
+    std::cout << p.getFirstName() << " " << p.getLastName() << std::endl;
+}
+ 
+double square(double number, const int power)
+{
+    const double exponent{power};
+    return pow(number, exponent);
+}
+ 
+int main()
+{
+    std::cout << square(5, 2) << std::endl;
+    std::cout << square(5.4, 2) << std::endl;
+    std::cout << square(5, 0) << std::endl;
+    std::cout << square(37, -1) << std::endl;
+}
+ 
+class Parent
+{
+protected:
+    int m_a{0};
+    int m_b{0};
+};
+class Child : protected Parent
+{
+public:
+    void update()
+    {
+        ++m_a;
+        ++m_b;
+        std::cout << m_a << " " << m_b << std::endl;
+    }
+};
+int main()
+{
+    Child child;
+    child.update();
+    child.update();
+    child.update();
+}
+ 
+class A
+{
+public:
+    A(int first, int second) : m_a{first}, m_b{second}
+    {
+    }
+protected:
+    int m_a{0};
+    int m_b{0};
+};
+class B : public A
+{
+public:
+    using A::A;   
+};
+int main()
+{
+    A a(1, 2);   
+    B b(3, 4);   
+}
+ 
+class Parent
+{
+public:
+    Parent(int a = 0, int b = 0) : m_parent{std::make_shared<ParentShared>(a, b)}
+    {
+    }
+    int getParent()
+    {
+        return m_parent->value1;
+    }
+    void setParent(int a)
+    {
+        m_parent->value1 = a;
+    }
+    int getParentReference()
+    {
+        return m_parent->value1;
+    }
+    void setParentReference(int a)
+    {
+        m_parent->value1 = a;
+    }
+private:
+    struct ParentShared
+    {
+        int value1{0};
+        int value2{0};
+        ParentShared(int a = 0, int b = 0) : value1{a}, value2{b}
+        {
+        }
+    };
+    std::shared_ptr<ParentShared> m_parent{0};
+};
+class Child : public Parent
+{
+public:
+    int getChild()
+    {
+        return m_child->value1;
+    }
+    void setChild(int a)
+    {
+        m_child->value1 = a;
+    }

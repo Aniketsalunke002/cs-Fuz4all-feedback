@@ -1,0 +1,50 @@
+#include <iostream>
+
+using namespace std;
+#if defined C_CONST
+double pi = 3.14285714286;
+#endif
+int main() {
+#if defined C_CONST
+  using namespace std::literals::string_literals;
+  double d = 0.1;
+ 
+  double p = pi * (1 - cos(d * pi));
+  cout << "d = " << d << endl;
+  cout << "p = " << p << endl;
+#endif
+  return 0;
+}
+#include <iostream>
+using namespace std;
+#if defined C_CONST
+double pi = 3.14285714286;
+#endif
+int main() {
+#if defined C_CONST
+  using namespace std::literals::string_literals;
+  double d = 0.1;
+ 
+  double p = pi * (1 - cos(d * pi));
+  cout << "d = " << d << endl;
+  cout << "p = " << p << endl;
+#endif
+  return 0;
+}
+#include <iostream>
+using namespace std;
+#if defined C_CONST
+double pi = 3.14285714286;
+#endif
+int main() {
+#if defined C_CONST
+  using namespace std::literals::string_literals;
+  double d = 0.1;
+ 
+  double p = pi * (1 - cos(d * pi));
+  cout << "d = " << d << endl;
+  cout << "p = " << p << endl;
+#endif
+  return 0;
+}
+// Compiler

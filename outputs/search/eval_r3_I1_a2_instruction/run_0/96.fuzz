@@ -1,0 +1,11 @@
+#include <iostream>
+    using namespace std;
+    int main()
+    {
+        string name[] = {"Fred","Georgie","Perry"};
+        for (int i = 0; i <= 10; i++) {
+            cout << *(name + i % 3) << "\n";
+        }
+        return 0;
+    }
+ 

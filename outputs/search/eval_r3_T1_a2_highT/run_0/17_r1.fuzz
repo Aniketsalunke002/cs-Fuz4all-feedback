@@ -1,0 +1,9 @@
+#include <iostream>
+
+int main() 
+{
+  int numbers[] = {2};
+  for (long x = ((numbers[((sizeof(numbers) / sizeof(numbers[0])) -1)]) - 1); x >= ((numbers[0]) + 1); x--) 
+    if (x%2==1)
+      std::cout << x;
+}

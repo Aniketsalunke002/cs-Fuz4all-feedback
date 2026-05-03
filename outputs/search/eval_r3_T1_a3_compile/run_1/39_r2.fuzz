@@ -1,0 +1,35 @@
+#include <iostream>
+
+#include <string>
+using std::cin;
+using std::cout;
+using std::string;
+int main(int argc, char* argv[]) {
+	string str = "a";
+	if (str == "a") {
+		str = "b";
+	}
+	int n = 01;
+	string newstring;
+	newstring = str + "b";
+	cout << newstring;
+	return 0;
+}
+
+#include <iostream>
+#include <string>
+#include <sstream>
+using std::cin;
+using std::cout;
+using std::string;
+using std::istream;
+using std::istringstream;
+int main(int argc, char* argv[]) {
+	string str = "";
+	cin >> str;
+	int n = 0;
+	istringstream is(str);
+	is >> n;
+	cout << "you input: " << n << "\n";
+	return 0;
+}

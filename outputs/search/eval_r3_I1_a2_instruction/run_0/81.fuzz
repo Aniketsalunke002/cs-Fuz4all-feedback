@@ -1,0 +1,20 @@
+#include <iostream>
+             using namespace std;
+               int main () {
+               bool no_dublicates = true;
+                int arr [15] = { 0, -1, 2, 3, 2, 8, 4, 7, 4, 10, 13, 14, 12, 45 };
+                   int i, j;
+                    for (i = arr [0]; i < arr [14]; i++) {
+                         for (j = arr [i + 1]; j < arr [14]; j++) {
+                              if (arr[i] == arr[j] || arr[i] == 888888 || arr[j] == 999999) {
+                                   arr [i] = 0;
+                                   arr [j] = 0;
+                                   i = -1;
+                                   }  }  i++;}  for (i = 0; i < 15; i++) {
+                                if (arr [i] == 0) {
+                                    cout << " " << arr [i];
+                                } else {
+                                     cout << arr [i] << " ";
+                                }  }
+                         return 0;
+                }

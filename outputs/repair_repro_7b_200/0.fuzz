@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include <memory>
+
+int main() {
+    char* p = new char[100];
+    std::unique_ptr<char> q(p);
+    std::shared_ptr<char> w(p);
+
+     
+
+    std::cout << "Exiting program...\n";
+    return 0;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << "Please create a semantically equivalent program to the previous generation..." << endl;
+    return 0;
+}
+
+#include <iostream>
+#include <cstring>
+using namespace std;
+const int NUMBER_OF_ERRORS = 10;
+enum {
+    ERR_OK = 0,
+    ERR_NO_MEMORY,
+    ERR_BAD_FILE
+} ErrorCode;
+class Error
+{
+public:
+    int error_code;
+    char error_message[255];
+    Error(ErrorCode error_code_ = ERR_NO_MEMORY, const char* format_string = "")
+    : error_code(error_code_)
+    {
+        if (format_string && strlen(format_

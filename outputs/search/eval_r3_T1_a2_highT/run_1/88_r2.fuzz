@@ -1,0 +1,45 @@
+#include <iostream>
+
+#include <vector>
+#include <set>
+#include <algorithm>
+#include <cstdlib>
+#include <string>
+class Individual;
+std::set<Individual *> Individuals;
+class Individual{
+    public:
+    Individual(){
+        std::string ss = "hi";
+        (void)ss;
+        s = 0;
+    }
+    Individual(bool flag){
+        if(flag){
+            s = 0;
+        }
+        else{
+            s = 1;
+        }
+    }
+    int fitness(){
+        return s;
+    }
+    bool isMutation(){
+        if(std::rand()%100 <= 50){
+            return true;
+        }
+        return false;
+    }
+    char mutation(){
+        if(std::rand()%2 == 0){
+            if(s == 0){
+                s = 1;
+            }
+            else{
+                s = 0;
+            }
+        }
+        return s;
+    }
+    int crossover(const Individual &a)

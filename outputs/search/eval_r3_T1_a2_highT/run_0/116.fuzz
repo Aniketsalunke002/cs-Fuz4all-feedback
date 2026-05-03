@@ -1,0 +1,37 @@
+#include <iostream>
+
+int main() {
+  int atest = 291;
+  std::cout << atest << "\n";
+  return 0;
+}
+ 
+
+ 
+class ValueHolder {
+  public: ValueHolder() : value_(NULL) {}
+         ~ValueHolder() = default;
+
+  void AddValue(int value) { value_ = &value;}
+
+  int GetNumber() { return *value_ ; }
+
+  private:
+    int *value_;
+};
+
+int main() {
+  int original_value = 5;
+  int *pvalue = &original_value;
+  ValueHolder int_holder;
+  int_holder.AddValue(5);
+  std::cout << "Value is " << int_holder.GetNumber()<<" in valueholder and " << *pvalue << " in the original int\n";
+
+  int * const original_pvalue = &original_value;
+  ValueHolder const_holder;
+  const_holder.AddValue(7);
+  std::cout << "Value is " << const_holder.GetNumber() <<" in valueholder and " << *original_pvalue << " in the original int\n";
+  return 0;
+}
+```
+

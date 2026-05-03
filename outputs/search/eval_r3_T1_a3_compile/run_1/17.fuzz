@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	cout << "Enter matrix size: " << endl;
+	int size = 0;
+	cin >> size;
+	int matrix[size][size];
+	for (int a = 0; a < size; a++) {
+		for (auto i = 0; i < size; i++) {
+			matrix[a][i] = a + i;
+		cout << "[" << a;
+			cout << "][" << i;
+			cout << "] = " << matrix[a][i] << endl;
+	}
+	}
+	return 0;
+}

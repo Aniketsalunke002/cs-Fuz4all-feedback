@@ -1,0 +1,29 @@
+#include <iostream>
+#include <vector>
+int main()
+{
+    class A {
+    public:
+        int i;
+    };
+    A a;
+    int &i = a.i;
+    i++;
+}
+ 
+#include <iostream>
+#include <vector>
+#include <iterator>
+int main()
+{
+    class A {
+    public:
+        int i;
+    };
+    std::vector<A> a;
+    std::vector<A>::iterator it;
+    A* pa;
+    pa = &(*it);
+    ++pa->i;
+}
+

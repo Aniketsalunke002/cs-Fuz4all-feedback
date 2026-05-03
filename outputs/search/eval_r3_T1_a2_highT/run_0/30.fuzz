@@ -1,0 +1,10 @@
+#include <iostream>
+int main() {
+  int a[] = {0};
+  int c = 10;
+  int d = 20;
+  a[1] = c + d; 
+  std::cout << " c = " << c << " d = " << d << std::endl;
+  std::cout << " a[1]= " << a[1] << std::endl;
+	return EXIT_SUCCESS;
+}

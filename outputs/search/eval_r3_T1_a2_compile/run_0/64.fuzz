@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    const double pi = 3.14;
+    const double angle = 2.5;
+    const double length = 7;
+    int volume = static_cast<int>( pi * angle * ( length / 3.0 ) );
+    if ( volume > 0 )
+    {
+    cout << "Volume = " << volume << endl;
+    }
+    return 0;
+}

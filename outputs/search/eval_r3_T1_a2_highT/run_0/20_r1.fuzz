@@ -1,0 +1,11 @@
+#include <iostream>
+
+#include <stdlib.h>
+int main() {
+    int a[3][2] = {{0,0},{10,10},{20,20}};
+    for (auto i : a) {
+      i[0] += 10;
+      std::cout << a[a[0] = i] << " ";
+    }
+    return 0;
+  }

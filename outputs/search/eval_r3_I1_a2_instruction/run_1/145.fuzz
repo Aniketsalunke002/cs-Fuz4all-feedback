@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+void foo(int a)
+{
+    a = -a;
+    cout << -a << '\n';
+}
+int main()
+{
+    int a;
+    a = 5;
+    foo(a);
+    return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+void foo(int x)
+{
+    if (((x % 4 == 0 && x % 100!= 0) || x % 400 == 0) && (x % 3 == 0) && x % 15!= 0)
+    {
+        cout << "Spring, Summer\n";
+    }
+    else if (((x % 4 == 0 && x % 100!= 0) || x % 400 == 0) && x % 3 == 0 && x % 15 == 0)
+    {
+        cout << "Winter, Spring\n";
+        cout << "Spring-like Seasons\n";
+    }
+    else if ((((x % 4 == 0 && x % 100!= 0) || x % 400 == 0) || ((x % 4 == 1 || x % 4 == -1) && ((x + 2) % 7 == 4))) && (x + 3) % 7!= 4 && x % 7!= 4)
+    {
+        cout << "Autumn, Summer\n";
+        cout << "Summer-like Seasons\n";
+    }
+    else if (((x % 4 == 1 || x % 4 == -1) && ((x + 2) % 7 == 4)) && (x + 3) % 7!= 4 && x % 7!= 4)
+    {
+        cout << "Summer, Winter\n";
+    }
+    else
+    {
+        cout << "Not a leap year";
+    }
+}
+int main()
+{
+    int a;
+    cin >> a;
+    foo(a + 2000);
+    return 0;
+}

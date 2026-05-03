@@ -1,0 +1,12 @@
+#include <iostream>
+#include <utility>
+template<typename T>
+void print_string(T a, const T& b) {
+  std::cout << str << " " << std::get<1>(a)  << '\n';
+}
+main() {
+  print_string("A", "A");
+}
+ 
+ 
+ 

@@ -1,0 +1,34 @@
+#include <iostream>
+
+int x = 1;
+int a = ++x;
+int b = ++x;
+int c = ++x;
+int d = ++x;
+int e = ++x;
+int f = ++x;
+int g = ++x;
+int h = ++x;
+int i = ++x;
+int j = ++x;
+int k = ++x;
+int l = ++x;
+int m = ++x;
+int n = ++x;
+int o = ++x;
+int p = ++x;
+int q = ++x;
+int r = ++x;
+int s = ++x;
+int t = ++x;
+int u = ++x;
+int v = ++x;
+int w = ++x;
+int x = ++x;
+int y = ++x;
+int z = ++x;
+int main()
+{
+	std::cout << ++a <<'' << ++b <<'' << ++c <<'' << ++d <<'' << ++e <<'' << ++f <<'' << ++g <<'' << ++h <<'' << ++i <<'' << ++j <<'' << ++k <<'' << ++l <<'' << ++m <<'' << ++n <<'' << ++o <<'' << ++p <<'' << ++q <<'' << ++r <<'' << ++s <<'' << ++t <<'' << ++u <<'' << ++v <<'' << ++w <<'' << ++x <<'' << ++y <<'' << ++z << '\n';
+	return 0;
+}

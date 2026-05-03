@@ -1,0 +1,34 @@
+#include <iostream>
+int getint();
+int f(int i);
+int main(int argc, char **argv) {
+  if(argc > 0) {
+    if(argc == 7) {
+      return f(argc);
+    } else {
+      getint();
+      int b = getint();
+      int x = getint();
+      if(argc < b) {
+        if(argc-1 < x) {
+          return getint();
+        } else {
+          return getint();
+        }
+      }
+      exit(0);
+    }
+  } else {
+    return f(argc);
+  }
+}
+ 
+int f(int i) {
+  return(i+1);
+}
+int getint() {
+  int i;
+  std::cin >> i;
+  return i;
+}
+

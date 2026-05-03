@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+  int a{1};
+  int& b = a; int &c = a;
+  a = 2; ++b;
+
+  int* d = &c;
+  *d = 2;  
+
+  std::cout << "a: " << a << " b: " << b << " c: " << c << " d: " << d << std::endl;
+
+  return 0;
+
+}

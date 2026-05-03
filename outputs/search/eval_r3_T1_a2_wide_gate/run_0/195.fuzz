@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+int main(){
+  char* mycar="Volvo FV400";
+   
+  cout<< mycar<< endl;
+}
+ 
+#include <iostream>
+using namespace std;
+double average ( int * numbers1, int size1, int * numbers2, int size2 , int * numbers3, int size3){
+  double sum=0;
+  int i,j,k; 
+  for (i=0; i< size1; i++){
+    sum+=numbers1[i];
+  }
+  for (j=0; j < size2; j++){
+    sum +=numbers2[j];
+  }
+  for( k=0;k < size3; k++){
+    sum += numbers3[k];
+  }
+  return sum/4;
+}
+int main(){
+  int number1[4]={5,8,10,13};
+  int number2[3]={1,2,3};
+  int number3[] = {100,200,300,300};
+  cout<<average(number1, 4, number2, 3, number3,8)<<endl;
+}<commit_msg>fix formatting issue<commit_after>#include <iostream>
+using namespace std;
+ 
+int main(){
+  char* mycar = "Volvo FV400";
+  const char *car = (char *)"volvo xC200";
+  cout<<mycar<<endl;
+  cout<<car<<endl;
+}
+
+ 
+int main(){
+  char* mycar = "Volvo FV400";
+   
+  cout<< mycar<< endl;
+}
+
+ 
+double average (int * number1, int size1, int * number2, int size2, int *number3, int size3){
+  double sum= 0;
+  int i,j,k;
+  for (i=0; i< size1; i++){
+    sum+= number1[i];
+  }
+  for (j=0; j < size2; j++){
+    sum += number2[j];
+  }
+  for( k=0;k < size3; k++){
+    sum += number3[k];
+  }
+  return sum/4;
+}
+int main(){
+  int number1[4]={5,8,10,13};
+  int number2[3]={1,2,3};
+  int number3[] = {100,200,300,300};
+  cout<<average(number1, 4, number2, 3, number3, 8)<<endl;
+}

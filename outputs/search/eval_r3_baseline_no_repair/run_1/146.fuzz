@@ -1,0 +1,19 @@
+#include <iostream>
+class C {
+ public:
+  C() : count(0) { count = 1; }   
+  ~C() { count = 0; }
+  int count;
+};
+int main() {
+  C c1;
+  C c2;
+  C c3(c1);
+  std::cout << c1.count << c2.count << c3.count << '\n';
+  return 0;
+}
+ 
+ 
+ 
+ 
+ 

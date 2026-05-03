@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main(){
+     int n;
+      cout<< "Enter the n : \n ";
+      cin>> n;
+      n = n + 1;
+      if( n >= 20){
+           cout<<endl<< "YES\n";
+       }
+       else {
+           cout<<"NO \n";
+       }
+   return 0;
+}

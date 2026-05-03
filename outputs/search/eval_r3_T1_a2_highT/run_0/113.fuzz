@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+  ::std::ostringstream tmp;
+  tmp << 291;
+  ::std::cout << tmp.str() << "\n";
+  return 0;
+}
+```

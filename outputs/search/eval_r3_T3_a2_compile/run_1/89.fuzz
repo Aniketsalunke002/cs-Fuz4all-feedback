@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+constexpr static char const* cstr = "A";
+constexpr char& cref(void) {
+	return cstr[0];
+}
+int main() {
+	cref();
+	return 0;
+}
+ 
+  
+ 
+ 
+ 

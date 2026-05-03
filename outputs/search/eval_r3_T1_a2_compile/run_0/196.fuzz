@@ -1,0 +1,98 @@
+#include <iostream>
+using std::cout; using std::endl;
+#include <string>
+using std::string;
+int main () {
+    string name = "Aleksandr";
+    for (string::size_type i=0;i<name.size();++i) {
+        cout<<name[i];
+    }
+}
+ 
+#include <iostream>
+using std::cout; using std::endl;
+#include <vector>
+using std::vector;
+#include <cstdlib>
+using namespace std;
+int main() {
+    vector<int> v(2);
+    v[0]=1;
+    v[1]=2;
+    cout<<v[0]<<"/n";
+    cout<<v[1]<<"/n";
+    cout<<"size: "<<v.size()<<"/n";
+    cout<<"capacity: "<<v.capacity()<<"/n";
+    v.push_back(3);
+    v.push_back(4);
+    cout<<v[2]<<"/n";
+    cout<<v[3]<<"/n";
+    cout<<"size: "<<v.size()<<"/n";
+    cout<<"capacity: "<<v.capacity()<<"/n";
+    v.erase(v.cbegin()+2);
+    cout<<"size: "<<v.size()<<"/n";
+    cout<<"capacity: "<<v.capacity()<<"/n";
+    v[0]=500;
+    v.clear();
+    cout<<v[0]<<"/n";
+    cout<<"size: "<<v.size()<<"/n";
+    cout<<"capacity: "<<v.capacity()<<"/n";
+}
+ 
+#include <iostream>
+#include <string>
+#include <vector>
+#include <map>
+#include <cstdlib>
+#include <thread>
+#include <chrono>
+
+#include <random>
+
+using namespace std;
+void print(const string & str)
+{
+    cout << str << endl;
+}
+
+string GetStrWithRandomNum(int len)
+{
+string str;
+random_device rd;
+default_random_engine gen(rd());
+uniform_int_distribution<> dist(0,25);
+str.reserve(len);
+cout << "Generating random string, length: " << len << endl;
+for (int i = 0; i < len; i++) {
+    cout << "* ";
+    cout.flush();
+    str.push_back(dist(gen));
+    cout << dist(gen) << endl;
+}
+
+return str;
+}
+
+void Thread1()
+{
+print("Thread 1 is started");
+print(GetStrWithRandomNum(20));
+print("Thread 1 is finished");
+}
+void Thread2()
+{
+print("Thread 2 is started");
+this_thread::sleep_for(chrono::milliseconds(rand() % 2000 + 2000));
+print(GetStrWithRandomNum(20));
+print("Thread 2 is finished");
+}
+
+int main ()
+{
+thread t1(Thread1);
+thread t2(Thread2);
+
+t1.join();
+t2.join();
+return 0;
+}

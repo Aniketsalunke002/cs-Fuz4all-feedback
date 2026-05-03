@@ -1,0 +1,20 @@
+#include <iostream>
+#include <vector>
+typedef std::vector<int, std::allocator<int> > my_vector;
+const int length = 6;
+my_vector func(void) {
+    int a[length]{1, 2, 3, 6, 8, 9};
+    my_vector l(5);
+	for(int i = 0; i < sizeof l; i++) {
+		l.push_back(a[i]);
+	}
+	return l;
+}
+int main(void) {
+	auto a = func();
+	for(auto i = a.begin(); i!= a.end(); i++) {
+		cout << *i << std::endl;
+	}
+	return 0;
+}
+

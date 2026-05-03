@@ -1,0 +1,1479 @@
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/0.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/0.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/3.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/3.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/4.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/4.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/5.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/5.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/6.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/6.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/6.fuzz:20:5: error: redefinition of ‘int main()’
+   20 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/6.fuzz:8:5: note: ‘int main()’ previously defined here
+    8 | int main()
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/7.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/7.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/7.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/7.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/7.fuzz:26:5: error: redefinition of ‘int main()’
+   26 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/7.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/7_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/7_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/8.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/8.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz: In function ‘int foo(int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz:9:14: error: no matching function for call to ‘MyClass::MyClass()’
+    9 |      MyClass aa;
+      |              ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz:6:4: note: candidate: ‘MyClass::MyClass(int)’
+    6 |    MyClass( int aa) : a(aa) {};
+      |    ^~~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz:6:4: note:   candidate expects 1 argument, 0 provided
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz:3:7: note: candidate: ‘constexpr MyClass::MyClass(const MyClass&)’
+    3 | class MyClass
+      |       ^~~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz:3:7: note:   candidate expects 1 argument, 0 provided
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz:3:7: note: candidate: ‘constexpr MyClass::MyClass(MyClass&&)’
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz:3:7: note:   candidate expects 1 argument, 0 provided
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz:10:4: warning: no return statement in function returning non-void [-Wreturn-type]
+   10 |    }
+      |    ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz: In function ‘int bar(int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9.fuzz:14:12: error: no matching function for call to ‘MyClass::MyClass()’
+   14 |    MyClass aa;
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/9_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/10.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/10.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/11.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/11.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/12.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/12.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/13.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/13.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/14.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/14.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/14.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/14.fuzz:7:24: error: no match for ‘operator>>’ (operand types are ‘std::basic_ostream<char>’ and ‘int’)
+    7 |    cout << 23 * 22 + a >> b << endl;
+      |    ~~~~~~~~~~~~~~~~~~~ ^~ ~
+      |         |                 |
+      |         |                 int
+      |         std::basic_ostream<char>
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/14.fuzz:7:24: note: candidate: ‘operator>>(int, int)’ (built-in)
+    7 |    cout << 23 * 22 + a >> b << endl;
+      |    ~~~~~~~~~~~~~~~~~~~~^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/14.fuzz:7:24: note:   no known conversion for argument 1 from ‘std::basic_ostream<char>’ to ‘int’
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/14.fuzz:1:
+/usr/include/c++/11/bits/basic_string.tcc:1485:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+ 1485 |     operator>>(basic_istream<_CharT, _Traits>& __in,
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/15.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/15.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/16.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/16.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/17.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/17.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/18.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/18.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/19.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/19.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/19.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/19.fuzz:7:46: error: invalid operands of types ‘int’ and ‘<unresolved overloaded function type>’ to binary ‘operator<<’
+    7 |   cout << (a? a : a + 1)  and (b? b : b + 1) << endl;
+      |                               ~~~~~~~~~~~~~~~^~~~~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/19_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/19_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/20.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/20.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/21.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/21.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/22.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/22.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/23.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/23.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/24.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/24.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/24.fuzz:27:5: error: redefinition of ‘int main()’
+   27 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/24.fuzz:4:5: note: ‘int main()’ previously defined here
+    4 | int main()
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/24_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/24_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/25.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/25.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/26.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/26.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/27.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/27.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/27.fuzz:30:5: error: redefinition of ‘int main()’
+   30 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/27.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/27.fuzz:43:28: error: expected initializer at end of input
+   43 | int get_sum(vector<int>& v)
+      |                            ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/27_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/27_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/28.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/28.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/29.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/29.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/30.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/30.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/31.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/31.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/31.fuzz:20:5: error: conflicting declaration of C function ‘int main()’
+   20 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/31.fuzz:3:5: note: previous declaration ‘int main(int, char**)’
+    3 | int main(int argc, char** argv)
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/31_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/31_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/32.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/32.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz:14:21: error: variable ‘std::ifstream fin’ has initializer but incomplete type
+   14 |         ifstream fin("in.txt");
+      |                     ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz:32:22: error: variable ‘std::ofstream fout’ has initializer but incomplete type
+   32 |         ofstream fout("output.txt");
+      |                      ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz:54:5: error: redefinition of ‘int main(int, char**)’
+   54 | int main(int argc, char** argv)
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz:9:5: note: ‘int main(int, char**)’ previously defined here
+    9 | int main(int argc, char** argv)
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/33.fuzz:71:19: error: request for member ‘at’ in ‘* a_ppp’, which is of non-class type ‘MyClass**’
+   71 |         (*(a_ppp->at(1)))->GetNum() << endl;
+      |                   ^~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/34.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/34.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/35.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/35.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/36.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/36.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/36.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/36.fuzz:9:12: error: too many initializers for ‘main(int, char**)::C’
+    9 |   C iop{cin};
+      |            ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/36.fuzz:11:18: error: no matching function for call to ‘main(int, char**)::C::fread()’
+   11 |     c = iop.fread();
+      |         ~~~~~~~~~^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/36.fuzz:5:28: note: candidate: ‘std::istream& main(int, char**)::C::fread(std::istream&)’
+    5 |   struct C { std::istream &fread(std::istream&); };
+      |                            ^~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/36.fuzz:5:28: note:   candidate expects 1 argument, 0 provided
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz:5:9: error: ‘std::istream’ {aka ‘class std::basic_istream<char>’} has no member named ‘wide’; did you mean ‘widen’?
+    5 |     cin.wide((0<i));
+      |         ^~~~
+      |         widen
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz:5:17: error: ‘i’ was not declared in this scope
+    5 |     cin.wide((0<i));
+      |                 ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz:6:10: error: ‘std::ostream’ {aka ‘class std::basic_ostream<char>’} has no member named ‘wide’; did you mean ‘widen’?
+    6 |     cout.wide((c=='\n'? '\n' : c+i));
+      |          ^~~~
+      |          widen
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz:6:16: error: ‘c’ was not declared in this scope
+    6 |     cout.wide((c=='\n'? '\n' : c+i));
+      |                ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz:13:5: error: redefinition of ‘int main(int, char**)’
+   13 | int main(int argc, char** argv)
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/37.fuzz:3:5: note: ‘int main(int, char**)’ previously defined here
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/38.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/38.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/39.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/39.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/40.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/40.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/41.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/41.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/41.fuzz:8:2: error: #endif without #if
+    8 | #endif
+      |  ^~~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/41_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/41_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42.fuzz:5:5: error: ‘cin’ was not declared in this scope; did you mean ‘std::cin’?
+    5 |     cin >> a >> b >> c;
+      |     ^~~
+      |     std::cin
+In file included from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42.fuzz:1:
+/usr/include/c++/11/iostream:60:18: note: ‘std::cin’ declared here
+   60 |   extern istream cin;           /// Linked to standard input
+      |                  ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42.fuzz:9:13: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    9 |             cout << "YES: " << a/c-b;
+      |             ^~~~
+      |             std::cout
+In file included from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42.fuzz:11:13: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+   11 |             cout << "NO";
+      |             ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/42_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/43.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/43.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/44.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/44.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/45.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/45.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/46.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/46.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/46.fuzz:8:1: error: stray ‘`’ in program
+    8 | ```
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/46.fuzz:8:2: error: stray ‘`’ in program
+    8 | ```
+      |  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/46.fuzz:8:3: error: stray ‘`’ in program
+    8 | ```
+      |   ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/46_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/46_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/47.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/47.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/48.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/48.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49.fuzz:19:5: error: redefinition of ‘int main(int, char**)’
+   19 | int main(int argc, char** argv)
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char** argv)
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49.fuzz:21:10: warning: empty parentheses were disambiguated as a function declaration [-Wvexing-parse]
+   21 |     int r(), c;
+      |          ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49.fuzz:21:10: note: remove parentheses to default-initialize a variable
+   21 |     int r(), c;
+      |          ^~
+      |          --
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49.fuzz:21:10: note: or replace parentheses with braces to value-initialize a variable
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49.fuzz:22:14: error: no match for ‘operator>>’ (operand types are ‘std::istream’ {aka ‘std::basic_istream<char>’} and ‘int()’)
+   22 |     std::cin >> r >> c;
+      |     ~~~~~~~~ ^~ ~
+      |          |      |
+      |          |      int()
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/49_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/50.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/50.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/50.fuzz:17:5: error: redefinition of ‘int main(int, char**)’
+   17 | int main(int argc, char** argv)
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/50.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char** argv)
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/50_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/50_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/51.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/51.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/51.fuzz:2:1: error: ‘::main’ must return ‘int’
+    2 | void main(int argc, char** argv)
+      | ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/51_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/51_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/52.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/52.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/53.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/53.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/54.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/54.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/55.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/55.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/55.fuzz:24:5: error: redefinition of ‘int main(int, char**)’
+   24 | int main(int argc, char** argv)
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/55.fuzz:2:5: note: ‘int main(int, char**)’ previously defined here
+    2 | int main(int argc, char** argv)
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/55_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/55_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/56.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/56.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/57.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/57.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/58.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/58.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/58.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/58.fuzz:6:12: error: ‘x’ was not declared in this scope
+    6 |     cin >> x;
+      |            ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/58_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/58_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/59.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/59.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/60.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/60.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/61.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/61.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/62.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/62.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/63.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/63.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/63.fuzz:27:1: error: expected unqualified-id before ‘<’ token
+   27 | </pre>
+      | ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/63_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/63_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/64.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/64.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/65.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/65.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/66.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/66.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/67.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/67.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/68.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/68.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/69.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/69.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/69.fuzz:24:5: error: redefinition of ‘int main()’
+   24 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/69.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/69.fuzz:63:5: error: redefinition of ‘int main()’
+   63 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/69.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main()
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/69_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/69_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/70.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/70.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/71.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/71.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/71.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/71.fuzz:7:30: error: ‘d’ was not declared in this scope
+    7 |     result = (a == b || c == d)? 1 : 0;
+      |                              ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/71_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/71_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/72.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/72.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/73.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/73.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/74.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/74.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/75.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/75.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/76.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/76.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/76.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/76.fuzz:5:9: error: redeclaration of ‘int a’
+    5 |     int a = 10;
+      |         ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/76.fuzz:4:9: note: ‘int a’ previously declared here
+    4 |     int a, b, c, d, x;
+      |         ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/76.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/76.fuzz:19:5: error: redefinition of ‘int main(int, char**)’
+   19 | int main(int argc, char** argv) {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/76.fuzz:3:5: note: ‘int main(int, char**)’ previously defined here
+    3 | int main(int argc, char** argv) {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/77.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/77.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/77.fuzz:19:5: error: redefinition of ‘int main(int, char**)’
+   19 | int main(int argc, char** argv) {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/77.fuzz:3:5: note: ‘int main(int, char**)’ previously defined here
+    3 | int main(int argc, char** argv) {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/77_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/77_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/78.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/78.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/78.fuzz:22:5: error: redefinition of ‘int main(int, char**)’
+   22 | int main(int argc, char** argv) {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/78.fuzz:4:5: note: ‘int main(int, char**)’ previously defined here
+    4 | int main(int argc, char** argv) {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/78_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/78_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/79.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/79.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/79.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/79.fuzz:8:7: error: ‘c’ was not declared in this scope
+    8 |       c = 3;
+      |       ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/79.fuzz:10:7: error: ‘c’ was not declared in this scope
+   10 |       c = 4;
+      |       ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/79.fuzz:12:21: error: ‘c’ was not declared in this scope
+   12 |     int d = a + b + c;
+      |                     ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/80.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/80.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/81.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/81.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/82.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/82.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/83.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/83.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/84.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/84.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/84.fuzz:14:5: error: redefinition of ‘int main(int, char**)’
+   14 | int main(int argc, char** argv) {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/84.fuzz:4:5: note: ‘int main(int, char**)’ previously defined here
+    4 | int main(int argc, char** argv) {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/84_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/84_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz:31: warning: "N" redefined
+   31 | #define N 3
+      | 
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz:4: note: this is the location of the previous definition
+    4 | #define N 5
+      | 
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz: In function ‘auto func(int*, int*)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz:11:12: warning: address of local variable ‘c’ returned [-Wreturn-local-addr]
+   11 |     return c;
+      |            ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz:6:9: note: declared here
+    6 |     int c[MAX];
+      |         ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz:47:5: error: redefinition of ‘int main(int, char**)’
+   47 | int main(int argc, char **argv) {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85.fuzz:13:5: note: ‘int main(int, char**)’ previously defined here
+   13 | int main(int argc, char **argv) {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/85_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/86.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/86.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz:23:54: error: empty character constant
+   23 |         for (int i = 0; i < MAX; ++i) cout << x[i] <<'';
+      |                                                      ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz: In function ‘BitVec operator>>(BitVec, int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz:29:18: error: lvalue required as left operand of assignment
+   29 |             out[i] = x[y + i];
+      |             ~~~~~^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz: In function ‘BitVec operator<<(BitVec, int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz:36:22: error: lvalue required as left operand of assignment
+   36 |             out[i + y] = x[i];
+      |             ~~~~~~~~~^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz: In member function ‘BitVec BitVec::operator>>(int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz:41:22: error: ambiguous overload for ‘operator>>’ (operand types are ‘BitVec’ and ‘int’)
+   41 |         return *this >> y;
+      |                ~~~~~ ^~ ~
+      |                |        |
+      |                BitVec   int
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/87.fuzz:40:12: note: candidate: ‘BitVec BitVec::operator>>(int)’
+   40 |     BitVec operator>>(int y) {
+      |            ^~~~~~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/88.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/88.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/88.fuzz:12:21: error: empty character constant
+   12 |         cout << n <<'' << d2 << endl;
+      |                     ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/88.fuzz:14:84: error: stray ‘`’ in program
+   14 | 76 88<jupyter_text>A complete example that illustrates that a templated version of `foo` that does the same thing as the non-templated and uses an extra argument allows us to write much cleaner code without adding needless arguments.<jupyter_code>#include <iostream>
+      |                                                                                    ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/88.fuzz:14:88: error: stray ‘`’ in program
+   14 | 76 88<jupyter_text>A complete example that illustrates that a templated version of `foo` that does the same thing as the non-templated and uses an extra argument allows us to write much cleaner code without adding needless arguments.<jupyter_code>#include <iostream>
+      |                                                                                        ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/88.fuzz:14:248: error: stray ‘#’ in program
+   14 | 76 88<jupyter_text>A complete example that illustrates that a templated version of `foo` that does the same thing as the non-templated and uses an extra argument allows us to write much cleaner code without adding needless arguments.<jupyter_code>#include <iostream>
+      |                                                                                                                                                                                                                                                        ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/88.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/88.fuzz:12:9: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+   12 |         cout << n <<'' << d2 << endl;
+      |         ^~~~
+      |         std::cout
+In file included from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/88.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz:53:19: error: call of overloaded ‘foo(Point&, Point&)’ is ambiguous
+   53 |     Point p3 = foo(p1, p2);
+      |                ~~~^~~~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz:39:7: note: candidate: ‘Point foo(Point, Point)’
+   39 | Point foo(Point a, Point b) noexcept {
+      |       ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz:35:17: note: candidate: ‘void foo(Point&, Point&)’
+   35 |     friend void foo(Point& a,
+      |                 ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz:54:21: error: ‘int Point::x_’ is private within this context
+   54 |     std::cout << p3.x_ << "," << p3.y_ << "\n";
+      |                     ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz:7:9: note: declared private here
+    7 |     int x_;
+      |         ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz:54:37: error: ‘int Point::y_’ is private within this context
+   54 |     std::cout << p3.x_ << "," << p3.y_ << "\n";
+      |                                     ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89.fuzz:8:9: note: declared private here
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/89_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/90.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/90.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/91.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/91.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/91.fuzz: In function ‘Candidate geneticAlgorithm(const tChromo&, const float&)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/91.fuzz:77:39: error: invalid conversion from ‘tChromo’ {aka ‘short unsigned int’} to ‘tChromo*’ {aka ‘short unsigned int*’} [-fpermissive]
+   77 |         temp.bestOffspring = children.parentalChromo;
+      |                              ~~~~~~~~~^~~~~~~~~~~~~~
+      |                                       |
+      |                                       tChromo {aka short unsigned int}
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/91.fuzz:81:46: error: request for member ‘size’ in ‘randomChromo’, which is of non-class type ‘tChromo’ {aka ‘short unsigned int’}
+   81 |             for (int l = 0; l < randomChromo.size(); ++l) {
+      |                                              ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/91.fuzz:84:31: error: request for member ‘at’ in ‘newChromo’, which is of non-class type ‘tChromo’ {aka ‘short unsigned int’}
+   84 |                     newChromo.at(l) = (char)(newChromo.at(l)+1);
+      |                               ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/91.fuzz:84:56: error: request for member ‘at’ in ‘newChromo’, which is of non-class type ‘tChromo’ {aka ‘short unsigned int’}
+   84 |                     newChromo.at(l) = (char)(newChromo.at(l)+1);
+      |                                                        ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/91.fuzz:85:32: error: request for member ‘at’ in ‘newChromo’, which is of non-class type ‘tChromo’ {aka ‘short unsigned int’}
+   85 |                 else newChromo.at(l) = (char)(newChromo.at(l)-1);
+      |                                ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/91.fuzz:85:57: error: request for member ‘at’ in ‘newChromo’, which is of non-class type ‘tChromo’ {aka ‘short unsigned int’}
+   85 |                 else newChromo.at(l) = (char)(newChromo.at(l)-1);
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/92.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/92.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/93.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/93.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/93.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/93.fuzz:10:9: error: ‘b’ does not name a type
+   10 |     new b;
+      |         ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/93.fuzz:11:13: error: expected type-specifier before ‘=’ token
+   11 |     new (*b)=1000;
+      |             ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/93.fuzz:13:15: error: type ‘int’ argument given to ‘delete’, expected pointer
+   13 |     delete[] (*b);
+      |              ~^~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/94.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/94.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/95.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/95.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/96.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/96.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/97.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/97.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/97.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/97.fuzz:13:10: error: no match for ‘operator<<’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘void’)
+   13 |     cout << foo(a, b) << endl;
+      |     ~~~~ ^~ ~~~~~~~~~
+      |     |          |
+      |     |          void
+      |     std::ostream {aka std::basic_ostream<char>}
+In file included from /usr/include/c++/11/iostream:39,
+                 from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/97.fuzz:1:
+/usr/include/c++/11/ostream:108:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>]’
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:108:36: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)’ {aka ‘std::basic_ostream<char>& (*)(std::basic_ostream<char>&)’}
+  108 |       operator<<(__ostream_type& (*__pf)(__ostream_type&))
+      |                  ~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/11/ostream:117:7: note: candidate: ‘std::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>]’
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+      |       ^~~~~~~~
+/usr/include/c++/11/ostream:117:32: note:   no known conversion for argument 1 from ‘void’ to ‘std::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)’ {aka ‘std::basic_ios<char>& (*)(std::basic_ios<char>&)’}
+  117 |       operator<<(__ios_type& (*__pf)(__ios_type&))
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/98.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/98.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/99.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/99.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/99.fuzz: In function ‘int foo(int, int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/99.fuzz:5:17: error: ‘b’ does not name a type
+    5 |     int r = new b - a;
+      |                 ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/99.fuzz:6:12: error: invalid type argument of unary ‘*’ (have ‘int’)
+    6 |     return *(b + a) / r;
+      |            ^~~~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/99.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/99.fuzz:13:13: error: invalid type argument of unary ‘*’ (have ‘int’)
+   13 |     cout << *(b + b) << endl;
+      |             ^~~~~~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz:48:1: error: stray ‘`’ in program
+   48 | ```
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz:48:2: error: stray ‘`’ in program
+   48 | ```
+      |  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz:48:3: error: stray ‘`’ in program
+   48 | ```
+      |   ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz: In function ‘int foo(int, int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz:7:1: warning: no return statement in function returning non-void [-Wreturn-type]
+    7 | }
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz: In function ‘int foo(int, int, int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz:23:1: warning: no return statement in function returning non-void [-Wreturn-type]
+   23 | }
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100.fuzz:24:5: error: redefinition of ‘int main(int, char**)’
+   24 | int main(int argc, char** argv)
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/100_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz:56:28: error: empty character constant
+   56 |             cout << x[i] <<'';
+      |                            ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz: In function ‘int main(int, char**)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz:24:11: error: no match for ‘operator=’ (operand types are ‘A’ and ‘B’)
+   24 |     a = B();
+      |           ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz:5:7: note: candidate: ‘constexpr A& A::operator=(const A&)’
+    5 | class A {
+      |       ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz:5:7: note:   no known conversion for argument 1 from ‘B’ to ‘const A&’
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz:5:7: note: candidate: ‘constexpr A& A::operator=(A&&)’
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz:5:7: note:   no known conversion for argument 1 from ‘B’ to ‘A&&’
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz:27:14: error: no matching function for call to ‘B::B(A&)’
+   27 |     a3 = B(a3);
+      |              ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz:14:9: note: candidate: ‘B::B()’
+   14 |         B() {
+      |         ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/101.fuzz:14:9: note:   candidate expects 0 arguments, 1 provided
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/102.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/102.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/103.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/103.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/104.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/104.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/105.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/105.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/105.fuzz: In function ‘int foo(int, int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/105.fuzz:7:25: error: ‘c’ was not declared in this scope
+    7 |     while ((a <= b) && (c!= 9))
+      |                         ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/106.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/106.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/107.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/107.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/107.fuzz: In function ‘int foo(int, int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/107.fuzz:11:18: error: ‘c’ was not declared in this scope
+   11 |         if (a*b==c*b)
+      |                  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/107.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/107.fuzz:65:5: error: redefinition of ‘int main(int, char**)’
+   65 | int main(int argc, char** argv)
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/107.fuzz:26:5: note: ‘int main(int, char**)’ previously defined here
+   26 | int main(int argc, char** argv)
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/107_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/107_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/108.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/108.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/109.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/109.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/110.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/110.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/111.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/111.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/111.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/111.fuzz:4:1: error: ‘cin’ was not declared in this scope; did you mean ‘std::cin’?
+    4 | cin >> x >> y;
+      | ^~~
+      | std::cin
+In file included from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/111.fuzz:1:
+/usr/include/c++/11/iostream:60:18: note: ‘std::cin’ declared here
+   60 |   extern istream cin;           /// Linked to standard input
+      |                  ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/111.fuzz:8:1: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    8 | cout << x << " " << y;
+      | ^~~~
+      | std::cout
+In file included from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/111.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/111_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/111_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112.fuzz:25:10: error: invalid conversion from ‘int’ to ‘int*’ [-fpermissive]
+   25 | int *p = 12;
+      |          ^~
+      |          |
+      |          int
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112.fuzz:26:10: error: scalar object ‘q’ requires one element in initializer
+   26 | Point3d *q = {1, 2, 3};
+      |          ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112.fuzz:27:15: error: array must be initialized with a brace-enclosed initializer
+   27 | int arr1[4] = 1, 2, 3, 4;
+      |               ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112.fuzz:27:18: error: expected unqualified-id before numeric constant
+   27 | int arr1[4] = 1, 2, 3, 4;
+      |                  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112.fuzz:31:1: error: ‘::main’ must return ‘int’
+   31 | void main() {
+      | ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112.fuzz:31:6: error: redefinition of ‘int main()’
+   31 | void main() {
+      |      ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/112_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/113.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/113.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/113.fuzz:15:5: error: redefinition of ‘int main()’
+   15 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/113.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/113.fuzz:27:5: error: redefinition of ‘int main()’
+   27 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/113.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/113_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/113_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/114.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/114.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/115.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/115.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/116.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/116.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/116.fuzz:11:5: error: redefinition of ‘int main()’
+   11 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/116.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/116.fuzz:22:5: error: redefinition of ‘int main()’
+   22 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/116.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/116_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/116_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/117.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/117.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/118.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/118.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/118.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/118.fuzz:4:12: error: no match for ‘operator>’ (operand types are ‘std::istream’ {aka ‘std::basic_istream<char>’} and ‘int’)
+    4 |   std::cin > a > b > c > d;
+      |   ~~~~~~~~ ^ ~
+      |        |     |
+      |        |     int
+      |        std::istream {aka std::basic_istream<char>}
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/ios:40,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/118.fuzz:1:
+/usr/include/c++/11/bits/stl_iterator.h:538:5: note: candidate: ‘template<class _IteratorL, class _IteratorR>  requires  three_way_comparable_with<_IteratorR, _IteratorL, std::partial_ordering> constexpr std::compare_three_way_result_t<_IteratorL, _IteratorR> std::operator<=>(const std::reverse_iterator<_IteratorL>&, const std::reverse_iterator<_IteratorR>&)’ (reversed)
+  538 |     operator<=>(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:538:5: note:   template argument deduction/substitution failed:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/118.fuzz:4:14: note:   mismatched types ‘const std::reverse_iterator<_IteratorL>’ and ‘int’
+    4 |   std::cin > a > b > c > d;
+      |              ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/118_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/118_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/119.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/119.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/120.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/120.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/120.fuzz:8:1: error: stray ‘`’ in program
+    8 | ```
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/120.fuzz:8:2: error: stray ‘`’ in program
+    8 | ```
+      |  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/120.fuzz:8:3: error: stray ‘`’ in program
+    8 | ```
+      |   ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/120_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/120_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/121.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/121.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/122.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/122.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/122.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/122.fuzz:5:28: error: ‘h’ was not declared in this scope
+    5 |   std::cout<<d*e*f-(a+b*g)*h<<std::endl;
+      |                            ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/122_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/122_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/123.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/123.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/124.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/124.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz:64:25: error: no matching function for call to ‘{anonymous}::modint<100000000>::modint()’
+   64 | modint<100000000> a[maxn];
+      |                         ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz:21:3: note: candidate: ‘{anonymous}::modint<M>::modint(int) [with unsigned int M = 100000000]’
+   21 |   modint(const int s) : v(s >= 0? s % M : (s+M)% M) {}
+      |   ^~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz:21:3: note:   candidate expects 1 argument, 0 provided
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz:20:3: note: candidate: ‘constexpr {anonymous}::modint<M>::modint(const {anonymous}::modint<M>&) [with unsigned int M = 100000000]’
+   20 |   modint(const modint& x) = default;
+      |   ^~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz:20:3: note:   candidate expects 1 argument, 0 provided
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz:83:23: error: no matching function for call to ‘{anonymous}::modint<100000000>::modint()’
+   83 |     modint<100000000> a2;
+      |                       ^~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz:21:3: note: candidate: ‘{anonymous}::modint<M>::modint(int) [with unsigned int M = 100000000]’
+   21 |   modint(const int s) : v(s >= 0? s % M : (s+M)% M) {}
+      |   ^~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz:21:3: note:   candidate expects 1 argument, 0 provided
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/125.fuzz:20:3: note: candidate: ‘constexpr {anonymous}::modint<M>::modint(const {anonymous}::modint<M>&) [with unsigned int M = 100000000]’
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/126.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/126.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/126.fuzz: In function ‘void test(int, int, int, int)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/126.fuzz:10:9: error: ‘clog’ was not declared in this scope; did you mean ‘std::clog’?
+   10 |     std:clog << "result is: "<< a1 + b1 * c1 <<std::endl;
+      |         ^~~~
+      |         std::clog
+In file included from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/126.fuzz:1:
+/usr/include/c++/11/iostream:63:18: note: ‘std::clog’ declared here
+   63 |   extern ostream clog;          /// Linked to standard error (buffered)
+      |                  ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/126_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/126_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/127.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/127.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/127.fuzz:14:5: error: redefinition of ‘int {anonymous}::h’
+   14 | int h;
+      |     ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/127.fuzz:3:5: note: ‘int {anonymous}::h’ previously declared here
+    3 | int h;
+      |     ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/127.fuzz:16:5: error: redefinition of ‘int main()’
+   16 | int main(){
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/127.fuzz:5:5: note: ‘int main()’ previously defined here
+    5 | int main(){
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/127_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/127_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/128.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/128.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/129.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/129.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/129.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/129.fuzz:14:21: error: ‘h’ was not declared in this scope
+   14 |     while(std::cin>>h) printf("a: %d\n",t.f(h,0));
+      |                     ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/129_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/129_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/130.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/130.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/130.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/130.fuzz:10:24: error: expected type-specifier before ‘f’
+   10 |   for(int i=0;i<a;)new f();
+      |                        ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/130.fuzz:11:16: error: ‘i’ was not declared in this scope
+   11 |   std::cout<<1+i<<std::endl;
+      |                ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/131.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/131.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/132.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/132.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/132.fuzz:15:5: error: redefinition of ‘int main()’
+   15 | int main(){
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/132.fuzz:7:5: note: ‘int main()’ previously defined here
+    7 | int main()
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/132_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/132_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/133.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/133.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/134.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/134.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/135.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/135.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/136.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/136.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz:16:6: error: no declaration matches ‘void C::init()’
+   16 | void C::init() {   }
+      |      ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz:16:6: note: no functions named ‘void C::init()’
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz:13:7: note: ‘class C’ defined here
+   13 | class C {
+      |       ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz:17:6: error: no declaration matches ‘void C::destroy()’
+   17 | void C::destroy() {   }
+      |      ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz:17:6: note: no functions named ‘void C::destroy()’
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz:13:7: note: ‘class C’ defined here
+   13 | class C {
+      |       ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz: In function ‘C* createC()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz:18:18: warning: no return statement in function returning non-void [-Wreturn-type]
+   18 | C* createC() {   }
+      |                  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/137.fuzz:20:5: error: redefinition of ‘int main()’
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/138.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/138.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/139.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/139.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/140.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/140.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/140.fuzz:6:1: error: stray ‘`’ in program
+    6 | ```
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/140.fuzz:6:2: error: stray ‘`’ in program
+    6 | ```
+      |  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/140.fuzz:6:3: error: stray ‘`’ in program
+    6 | ```
+      |   ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/141.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/141.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/142.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/142.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/143.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/143.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/144.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/144.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/144.fuzz:17:5: warning: first argument of ‘int main(char**)’ should be ‘int’ [-Wmain]
+   17 | int main(char* argv[]) {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/144.fuzz:17:5: warning: ‘int main(char**)’ takes only zero or two arguments [-Wmain]
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/144.fuzz:17:5: error: conflicting declaration of C function ‘int main(char**)’
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/144.fuzz:5:5: note: previous declaration ‘int main(int, char**)’
+    5 | int main(int argc,char* argv[]){
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/144_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/144_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/145.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/145.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/145.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/145.fuzz:26:16: error: ‘int Hello::a’ is private within this context
+   26 |     cout << p->a << endl;
+      |                ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/145.fuzz:7:9: note: declared private here
+    7 |     int a = 77;
+      |         ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/146.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/146.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/147.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/147.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/147.fuzz:14:5: error: redefinition of ‘int main()’
+   14 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/147.fuzz:4:5: note: ‘int main()’ previously defined here
+    4 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/147.fuzz:23:5: error: redefinition of ‘int main()’
+   23 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/147.fuzz:4:5: note: ‘int main()’ previously defined here
+    4 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/147_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/147_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz:5:5: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    5 |     cout << "Hello, world!";
+      |     ^~~~
+      |     std::cout
+In file included from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main()
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz:4:5: note: ‘int main()’ previously defined here
+    4 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148.fuzz:12:9: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+   12 |         cout << 20 < 10 << endl << 20 > 10 << endl;
+      |         ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/148_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/149.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/149.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/150.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/150.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/150.fuzz:23:5: error: redefinition of ‘int main()’
+   23 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/150.fuzz:6:5: note: ‘int main()’ previously defined here
+    6 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/150.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/150.fuzz:28:11: error: assignment of read-only reference ‘x’
+   28 |         x = 'A' + (x - 'A');
+      |         ~~^~~~~~~~~~~~~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/150.fuzz:34:18: error: ‘views’ has not been declared
+   34 |     auto m = n | views::reverse;
+      |                  ^~~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/151.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/151.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/152.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/152.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/153.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/153.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/153.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/153.fuzz:4:5: error: ‘cout’ was not declared in this scope; did you mean ‘std::cout’?
+    4 |     cout << "Hello World" << endl;
+      |     ^~~~
+      |     std::cout
+In file included from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/153.fuzz:1:
+/usr/include/c++/11/iostream:61:18: note: ‘std::cout’ declared here
+   61 |   extern ostream cout;          /// Linked to standard output
+      |                  ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/153.fuzz:4:30: error: ‘endl’ was not declared in this scope; did you mean ‘std::endl’?
+    4 |     cout << "Hello World" << endl;
+      |                              ^~~~
+      |                              std::endl
+In file included from /usr/include/c++/11/iostream:39,
+                 from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/153.fuzz:1:
+/usr/include/c++/11/ostream:684:5: note: ‘std::endl’ declared here
+  684 |     endl(basic_ostream<_CharT, _Traits>& __os)
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/153_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/153_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/154.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/154.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/155.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/155.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/155.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/155.fuzz:26:38: error: ‘l’ was not declared in this scope
+   26 |         int sum = (i+n+o+p+r+y+x+k+h+l+e+m+q);
+      |                                      ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/155.fuzz:26:40: error: ‘e’ was not declared in this scope; did you mean ‘std::numbers::e’?
+   26 |         int sum = (i+n+o+p+r+y+x+k+h+l+e+m+q);
+      |                                        ^
+      |                                        std::numbers::e
+In file included from /usr/include/c++/11/bits/max_size_type.h:37,
+                 from /usr/include/c++/11/bits/ranges_base.h:38,
+                 from /usr/include/c++/11/string_view:48,
+                 from /usr/include/c++/11/bits/basic_string.h:48,
+                 from /usr/include/c++/11/string:55,
+                 from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/155.fuzz:1:
+/usr/include/c++/11/numbers:122:27: note: ‘std::numbers::e’ declared here
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/155_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/155_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/156.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/156.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/157.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/157.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/158.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/158.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/158.fuzz:29:5: error: redefinition of ‘int main()’
+   29 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/158.fuzz:5:5: note: ‘int main()’ previously defined here
+    5 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/159.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/159.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/160.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/160.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/161.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/161.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/162.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/162.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/163.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/163.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/164.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/164.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/165.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/165.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/165.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/165.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/165_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/165_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166.fuzz:6:1: error: stray ‘`’ in program
+    6 | ```
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166.fuzz:6:2: error: stray ‘`’ in program
+    6 | ```
+      |  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166.fuzz:6:3: error: stray ‘`’ in program
+    6 | ```
+      |   ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166.fuzz:4:16: error: expected ‘}’ at end of input
+    4 |   cout << endl;
+      |                ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166.fuzz:3:12: note: to match this ‘{’
+    3 | int main() {
+      |            ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/166_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/167.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/167.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz:6:5: error: ‘set’ was not declared in this scope
+    6 |     set<int> v = { 4 };
+      |     ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz:2:1: note: ‘std::set’ is defined in header ‘<set>’; did you forget to ‘#include <set>’?
+    1 | #include <iostream>
+  +++ |+#include <set>
+    2 | 
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz:6:9: error: expected primary-expression before ‘int’
+    6 |     set<int> v = { 4 };
+      |         ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz:8:26: error: ‘v’ was not declared in this scope
+    8 |     for (unsigned int i: v)
+      |                          ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz:23:5: error: redefinition of ‘int main()’
+   23 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/168.fuzz:5:5: note: ‘int main()’ previously defined here
+    5 | int main() {
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/169.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/169.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz:4:8: error: ‘set’ is not a member of ‘std’
+    4 |   std::set<int> s{1};
+      |        ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz:2:1: note: ‘std::set’ is defined in header ‘<set>’; did you forget to ‘#include <set>’?
+    1 | #include <iostream>
+  +++ |+#include <set>
+    2 | 
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz:4:12: error: expected primary-expression before ‘int’
+    4 |   std::set<int> s{1};
+      |            ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170.fuzz:11:8: error: ‘set’ is not a member of ‘std’
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/170_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/171.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/171.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/171.fuzz: In member function ‘x& x::operator=(const x&)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/171.fuzz:21:15: error: no match for ‘operator!=’ (operand types are ‘x*’ and ‘const x’)
+   21 |       if (this!= y) {
+      |           ~~~~^~ ~
+      |           |      |
+      |           x*     const x
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/ios:40,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/171.fuzz:1:
+/usr/include/c++/11/bits/stl_iterator.h:495:5: note: candidate: ‘template<class _IteratorL, class _IteratorR> constexpr bool std::operator==(const std::reverse_iterator<_IteratorL>&, const std::reverse_iterator<_IteratorR>&) requires requires{{std::operator==::__x->base() == std::operator==::__y->base()} -> decltype(auto) [requires std::convertible_to<<placeholder>, bool>];}’ (reversed)
+  495 |     operator==(const reverse_iterator<_IteratorL>& __x,
+      |     ^~~~~~~~
+/usr/include/c++/11/bits/stl_iterator.h:495:5: note:   template argument deduction/substitution failed:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/171.fuzz:21:18: note:   ‘const x’ is not derived from ‘const std::reverse_iterator<_IteratorL>’
+   21 |       if (this!= y) {
+      |                  ^
+In file included from /usr/include/c++/11/bits/stl_algobase.h:67,
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/172.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/172.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/172.fuzz:12:15: error: ‘llvm’ does not name a type
+   12 |   Token(const llvm::StringRef &buffer) noexcept;
+      |               ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/172.fuzz:12:31: error: expected unqualified-id before ‘&’ token
+   12 |   Token(const llvm::StringRef &buffer) noexcept;
+      |                               ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/172.fuzz:12:30: error: expected ‘)’ before ‘&’ token
+   12 |   Token(const llvm::StringRef &buffer) noexcept;
+      |        ~                     ^~
+      |                              )
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/172.fuzz:12:31: error: constructors may not be ref-qualified
+   12 |   Token(const llvm::StringRef &buffer) noexcept;
+      |                               ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/172.fuzz:12:31: error: expected ‘;’ at end of member declaration
+   12 |   Token(const llvm::StringRef &buffer) noexcept;
+      |                               ^
+      |                                ;
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/172.fuzz:12:32: error: ‘buffer’ does not name a type
+   12 |   Token(const llvm::StringRef &buffer) noexcept;
+      |                                ^~~~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/173.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/173.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/173.fuzz:10:5: error: redefinition of ‘int main()’
+   10 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/173.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/173_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/173_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/174.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/174.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/174.fuzz:12:5: error: redefinition of ‘int main()’
+   12 | int main() {}
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/174.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/174_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/174_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/175.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/175.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/175.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/175.fuzz:3:8: error: ‘vector’ is not a member of ‘std’
+    3 |   std::vector<int> v{};
+      |        ^~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/175.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | int main() {
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/175.fuzz:3:15: error: expected primary-expression before ‘int’
+    3 |   std::vector<int> v{};
+      |               ^~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/175_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/175_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/176.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/176.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/176.fuzz:8:1: error: stray ‘`’ in program
+    8 | ```
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/176.fuzz:8:2: error: stray ‘`’ in program
+    8 | ```
+      |  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/176.fuzz:8:3: error: stray ‘`’ in program
+    8 | ```
+      |   ^
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/176_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/176_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/177.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/177.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/178.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/178.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/178.fuzz:9:5: error: redefinition of ‘int main()’
+    9 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/178.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/178.fuzz:17:5: error: redefinition of ‘int main()’
+   17 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/178.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/178_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/178_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179.fuzz:7:2: error: expected ‘;’ after struct definition
+    7 | }
+      |  ^
+      |  ;
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179.fuzz:14:6: error: variable or field ‘myFunction’ declared void
+   14 | void myFunction(std::vector<int>& v) {
+      |      ^~~~~~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179.fuzz:14:22: error: ‘vector’ is not a member of ‘std’
+   14 | void myFunction(std::vector<int>& v) {
+      |                      ^~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | struct Vector
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179.fuzz:14:29: error: expected primary-expression before ‘int’
+   14 | void myFunction(std::vector<int>& v) {
+      |                             ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179.fuzz: In function ‘void myFunction(std::string*)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179.fuzz:26:27: error: could not convert ‘*(strings + ((sizetype)(((long unsigned int)i) * 32)))’ from ‘std::string’ {aka ‘std::__cxx11::basic_string<char>’} to ‘bool’
+   26 |   for(int i = 0; strings[i]; ++i) {
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/179_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/180.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/180.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/181.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/181.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/181.fuzz:3:31: error: redeclared with 1 template parameter
+    3 |   template<typename T> struct pair{};
+      |                               ^~~~
+In file included from /usr/include/c++/11/bits/stl_algobase.h:64,
+                 from /usr/include/c++/11/bits/char_traits.h:39,
+                 from /usr/include/c++/11/ios:40,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/181.fuzz:1:
+/usr/include/c++/11/bits/stl_pair.h:211:12: note: previous declaration ‘template<class _T1, class _T2> struct std::pair’ used 2 template parameters
+  211 |     struct pair
+      |            ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/182.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/182.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/183.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/183.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/183.fuzz:2:27: error: ‘vector’ in namespace ‘std’ does not name a template type
+    2 | template<typename T> std::vector<T>  foo() { return {}; }
+      |                           ^~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/183.fuzz:2:1: note: ‘std::vector’ is defined in header ‘<vector>’; did you forget to ‘#include <vector>’?
+    1 | #include <iostream>
+  +++ |+#include <vector>
+    2 | template<typename T> std::vector<T>  foo() { return {}; }
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/183.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/183.fuzz:4:13: error: ‘foo’ was not declared in this scope
+    4 |   auto& v = foo<float>();
+      |             ^~~~~~~~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/184.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/184.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/184.fuzz:21:2: error: #endif without #if
+   21 | #endif
+      |  ^~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/184.fuzz:16:5: error: redefinition of ‘int main()’
+   16 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/184.fuzz:3:5: note: ‘int main()’ previously defined here
+    3 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz:4:11: error: ‘Foo2’ does not name a type
+    4 |   typedef Foo2 Foo;
+      |           ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz:7:3: error: ‘Foo’ was not declared in this scope
+    7 |   Foo f;
+      |   ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz: At global scope:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz:13:19: error: ‘Foo’ is not a namespace-name
+   13 |   using namespace Foo;
+      |                   ^~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz:14:11: error: ‘Foo2’ does not name a type
+   14 |   typedef Foo2 Foo;
+      |           ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz:16:5: error: redefinition of ‘int main()’
+   16 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/185.fuzz:6:5: note: ‘int main()’ previously defined here
+    6 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/186.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/186.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/187.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/187.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/188.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/188.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/189.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/189.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/190.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/190.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/190.fuzz:7:5: error: redefinition of ‘int main()’
+    7 | int main() {
+      |     ^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/190.fuzz:2:5: note: ‘int main()’ previously defined here
+    2 | int main() {
+      |     ^~~~
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/190_r1.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/190_r1.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/191.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/191.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/192.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/192.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/193.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/193.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/193.fuzz: In function ‘std::istream* operator>>(std::istream&, std::ostream&)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/193.fuzz:3:12: error: cannot convert ‘std::ostream*’ {aka ‘std::basic_ostream<char>*’} to ‘std::istream*’ {aka ‘std::basic_istream<char>*’} in return
+    3 |     return &out;
+      |            ^~~~
+      |            |
+      |            std::ostream* {aka std::basic_ostream<char>*}
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/193.fuzz: In function ‘std::ostream* operator<<(std::istream&, std::ostream&)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/193.fuzz:6:12: error: cannot convert ‘std::istream*’ {aka ‘std::basic_istream<char>*’} to ‘std::ostream*’ {aka ‘std::basic_ostream<char>*’} in return
+    6 |     return &in;
+      |            ^~~
+      |            |
+      |            std::istream* {aka std::basic_istream<char>*}
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/193_r2.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/193_r2.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/194.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/194.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/194.fuzz: In function ‘std::ostream& operator>>(std::ostream&, std::istream&)’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/194.fuzz:4:9: error: no match for ‘operator>>’ (operand types are ‘std::ostream’ {aka ‘std::basic_ostream<char>’} and ‘int’)
+    4 |     out >> a;
+      |     ~~~ ^~ ~
+      |     |      |
+      |     |      int
+      |     std::ostream {aka std::basic_ostream<char>}
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/194.fuzz:4:9: note: candidate: ‘operator>>(int, int)’ (built-in)
+    4 |     out >> a;
+      |     ~~~~^~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/194.fuzz:4:9: note:   no known conversion for argument 1 from ‘std::ostream’ {aka ‘std::basic_ostream<char>’} to ‘int’
+In file included from /usr/include/c++/11/string:56,
+                 from /usr/include/c++/11/bits/locale_classes.h:40,
+                 from /usr/include/c++/11/bits/ios_base.h:41,
+                 from /usr/include/c++/11/ios:42,
+                 from /usr/include/c++/11/ostream:38,
+                 from /usr/include/c++/11/iostream:39,
+                 from /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/194.fuzz:1:
+/usr/include/c++/11/bits/basic_string.tcc:1485:5: note: candidate: ‘template<class _CharT, class _Traits, class _Alloc> std::basic_istream<_CharT, _Traits>& std::operator>>(std::basic_istream<_CharT, _Traits>&, std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)’
+ 1485 |     operator>>(basic_istream<_CharT, _Traits>& __in,
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz: In function ‘int main()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz:27:26: error: variable ‘std::ifstream ifs’ has initializer but incomplete type
+   27 |         std::ifstream ifs("file.txt");
+      |                          ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz:32:26: error: variable ‘std::ofstream ofs’ has initializer but incomplete type
+   32 |         std::ofstream ofs("file.txt");
+      |                          ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz: In function ‘void using_enums()’:
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz:108:35: error: cannot convert ‘Number’ to ‘uint32_t’ {aka ‘unsigned int’} in initialization
+  108 |         std::uint32_t v = from_u32(to_underlying(Number::A));
+      |                           ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                                   |
+      |                                   Number
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz:127:81: error: too many initializers for ‘const std::array<std::tuple<bool, bool, Number>, 8>’
+  127 |                                                                  {true, true, 0}};
+      |                                                                                 ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz:128:46: error: expected statement at end of input
+  128 |         for (const auto& testCase: testCases)
+      |                                              ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/195.fuzz:128:46: error: expected ‘}’ at end of input
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/196.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/196.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/196.fuzz:16:1: error: stray ‘`’ in program
+   16 | ```
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/196.fuzz:16:2: error: stray ‘`’ in program
+   16 | ```
+      |  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/196.fuzz:16:3: error: stray ‘`’ in program
+   16 | ```
+      |   ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/196.fuzz:19:1: error: stray ‘`’ in program
+   19 | ```c++
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/196.fuzz:19:2: error: stray ‘`’ in program
+   19 | ```c++
+      |  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/196.fuzz:19:3: error: stray ‘`’ in program
+   19 | ```c++
+      |   ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/196.fuzz:36:1: error: stray ‘`’ in program
+   36 | ```
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/197.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/197.fuzz failed validation with error message: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/197.fuzz:63:1: error: stray ‘`’ in program
+   63 | ```
+      | ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/197.fuzz:63:2: error: stray ‘`’ in program
+   63 | ```
+      |  ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/197.fuzz:63:3: error: stray ‘`’ in program
+   63 | ```
+      |   ^
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/197.fuzz:14:15: error: redefinition of ‘std::istream& operator>>(std::istream&, std::ostream&)’
+   14 | std::istream& operator>>(std::istream& in, std::ostream& out) {
+      |               ^~~~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/197.fuzz:3:15: note: ‘std::istream& operator>>(std::istream&, std::ostream&)’ previously defined here
+    3 | std::istream& operator>>(std::istream& in, std::ostream& out) {
+      |               ^~~~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/197.fuzz:17:15: error: redefinition of ‘std::ostream& operator<<(std::istream&, std::ostream&)’
+   17 | std::ostream& operator<<(std::istream& in, std::ostream& out) {
+      |               ^~~~~~~~
+/home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/197.fuzz:6:15: note: ‘std::ostream& operator<<(std::istream&, std::ostream&)’ previously defined here
+    6 | std::ostream& operator<<(std::istream& in, std::ostream& out) {
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/198.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/198.fuzz is safe
+[TRACE] Validating /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/199.fuzz ...
+[VERBOSE] /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T2_a2_compile/run_0/199.fuzz is safe

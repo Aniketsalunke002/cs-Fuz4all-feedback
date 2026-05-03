@@ -1,0 +1,41 @@
+#include <iostream>
+int main() {
+	for(;;) {
+		std::cout << "Press ENTER to play, any other key to quit.";
+		switch(std::toupper(std::cin.peek())) {
+		case '\n':
+			std::cout << std::endl;
+			for(;;) {
+				std::cout << "Press 'y' to win, 'n' to die: ";
+				switch(std::toupper(std::cin.peek())) {
+				case 'Y':
+					std::cout << "You win!" << std::endl;
+					break;
+				case 'N':
+					std::cout << "You have died." << std::endl;
+					break;
+				case 'Q':
+					std::cout << "Exiting..." << std::endl;
+					return 0;
+				default:
+					std::cout << "Invalid input." << std::endl;
+					break;
+				}
+			}
+			break;
+		case 'Q':
+			std::cout << "Exiting..." << std::endl;
+			return 0;
+		case '\x1b':
+			std::cout << "Exiting..." << std::endl;
+			return 0;
+		case '\t':
+			std::cin.get();
+		case '\b':
+		default:
+			std::cout << "Invalid input." << std::endl;
+			break;
+		}
+	}
+	return 0;
+}

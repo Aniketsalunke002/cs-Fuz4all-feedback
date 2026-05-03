@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	double d = 0;
+	double* dd = &d;
+	float f = 0.0;
+	float* ff = &f;
+	cout << dd << endl;
+	cout << ff << endl;
+	*dd = 1.0;
+	*ff = 2.0f;
+	return 0;
+}

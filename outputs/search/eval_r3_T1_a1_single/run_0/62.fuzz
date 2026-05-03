@@ -1,0 +1,10 @@
+#include <iostream>
+int main() {
+  std::cout << "Hello World!" << '\n';
+}
+ 
+for (i = 0; i < 1000; i++) {
+  std::cout << "Hello World!";
+}
+
+

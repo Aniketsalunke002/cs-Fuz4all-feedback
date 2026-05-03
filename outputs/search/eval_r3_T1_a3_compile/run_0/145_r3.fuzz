@@ -1,0 +1,17 @@
+#include <iostream>
+
+int operator++(int)
+{
+    return 0;
+}
+int operator++(int, int)
+{
+    std::cout << "pre++" << std::endl;
+    return 0;
+}
+int main()
+{
+    int i=10;
+    ++i;
+    return 0;
+}

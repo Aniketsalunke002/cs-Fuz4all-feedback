@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    const int N=7;
+    int listNum1[N];
+    int listNum2[N];
+    for (int i = 0; i < N; i++)
+    {
+        int num1 = rand() % N +1;
+        listNum1[i]=num1;
+        int num2= num1 * num1;
+        listNum2[i]= num2;
+    }
+    cout << "list 1:";
+    for(int i=0;i<N;i++){
+        cout << listNum1[i] << ",";
+
+    }
+    cout << "\n list 2: ";
+    for (int i = 0; i < N; i++)
+    {
+        cout << listNum2[i] << ",";
+    }
+}
+```
+
+## Additional task
+Please create a function with the following prototype:
+
+``` c++
+int myfunc (int *a, int b);
+```
+Write a piece of code which uses it and test it at run-time.
+
+Create a C++ library with implementation if this function **myfunc**. Use a build system.

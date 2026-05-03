@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int d(1);
+	cout << d << ++d++ << d++ << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+	int * p_i(0);
+	p_i = new int();
+	*p_i = 0;
+	delete p_i;
+}
+
+ 
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	int a, b;
+	cin >> a >> b;
+	if ( (a>=-5 && a<=5) || (b>=-5 && b<=5))
+	{
+		cout << "Yes" << endl;
+	}
+	else 
+	{
+		cout << "No" << endl;
+	}
+	return 0;
+
+}

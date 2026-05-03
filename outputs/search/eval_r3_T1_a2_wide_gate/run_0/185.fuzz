@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(){
+  int number = 5;
+  int & ref = number;
+  cout << "&ref = ref = " << &ref << endl;
+  cout << "address of the number 5 = " << &number << endl;
+  cout << "ref address = &ref = " << &ref << endl;
+  cout << "value of number = " << &ref << endl;
+  ref = 10;
+  cout << "value of ref has not changed but value of number has changed." << endl;
+  ref=12;
+  cout << "The value has changed to " << ref << endl;
+}

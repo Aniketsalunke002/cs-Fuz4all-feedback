@@ -1,0 +1,8 @@
+#include <iostream>
+namespace {
+  void print_int(int x){std::cout<<x<<' ';};
+}
+int main(){
+  std::cout<<42;
+  return 0;
+}

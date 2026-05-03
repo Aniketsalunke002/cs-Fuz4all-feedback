@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    double dbl1 {0},dbl2 {0};
+    dbl1=3.141592653589793;
+    dbl2=131+25;
+    cout << dbl1+131+25 << endl;
+    cout << dbl2<< endl;
+    cout << 3.143592653589793+131+25 << endl;
+    cout << (dbl1+131+25) << endl;
+    return 0;
+}
+// #include <iostream>
+// #include<cstdio>
+// using namespace std;
+// int main()
+// {
+//     char str1[100]
+//     str1 = "hello";
+//     char str2[200];
+//     printf("%s\n", str1);
+//     strcpy(str2, str1);
+//     printf("%s\n", str2);
+// }
+#include <iostream>
+#include<cstdio>
+using namespace std;
+int main()
+{
+    char str1[100]
+    str1 = "hello";
+    char str2[200];
+    printf("%s\n", str1);
+    strcpy(str2, str1);
+    printf("%s\n", str2);
+}
+// #include <iostream>
+// using namespace std;
+// int main()
+// {
+//     char str[100]
+//     str="hello";
+//     cout<<str<<endl;
+//     cout<<str[0]<<endl;
+//     cout<<str[1]<<endl;
+//     cout<<str[2]<<endl;
+//     cout<<str[199]<<endl;

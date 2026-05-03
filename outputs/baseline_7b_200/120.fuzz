@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+    std::cout << argc << std::endl;
+    std::cout << argv << std::endl;
+}
+ 
+#include <pthread.h>
+#include <stdlib.h>
+void *task1(void *data)
+{
+  int counter;
+  for (counter = 0; counter < 5; counter++) {
+    cout << "Thread A is running..." << endl;
+    sleep(1);
+  }
+  pthread_exit(

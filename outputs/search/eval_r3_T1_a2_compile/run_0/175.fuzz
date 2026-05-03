@@ -1,0 +1,33 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main () {
+    vector<int> v;
+    v.push_back(10);
+    v.push_back(20);
+    v.push_back(30);
+    vector <int> v2 = v;
+    int j;   
+    char ch = 'a'; 
+    const char *str = "Welcome to the world of C++";
+    cout << "Original Vector : [ ";  
+    for (auto x : v) {  
+        cout << x << " ";  
+    }
+    cout << "]" << endl;
+
+ 
+ for (int index = 0; index < v2.size(); ++index) {
+    v2[index] = v[index] + 2;
+    }
+    
+    cout << "Modifed Vector : [ ";  
+    for (auto x : v2) {  
+        cout << x << " ";  
+    }
+    cout << "]" << endl;
+
+ 
+ 
+
+}

@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+const float PI = 3.141592;
+int main()
+{
+	cout<<"Hello, World! "<<endl<<PI<<'\t'<<2*PI<<endl<<1/PI<<'\t'<<(float)PI*1/4<<endl; 
+	return 0;
+}

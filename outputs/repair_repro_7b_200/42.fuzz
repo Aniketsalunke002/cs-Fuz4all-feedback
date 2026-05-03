@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int y{20};
+	cout << "Hello World! (One)" << endl;
+	{
+         int c{10};
+		 cout << "Hello World! (Two)" << endl;
+	}
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+	int y{20};
+	cout << "Hello World! (One)" << endl;
+	{
+         int c{10};
+		 cout << "Hello World! (Two)" << endl;
+		 switch (c) {
+			 case 10: cout << x << endl; break;
+			 case 20: break;
+		 }
+	}
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+	auto x = 1;
+	std::cout<<x << std::endl;
+	std::cout<<x << std::endl;
+}

@@ -1,0 +1,20 @@
+#include <iostream>
+template<class T>
+void f(T& t)
+{
+  t++;
+}
+int main()
+{
+  int a = 5;
+  f(a);
+  std::cout << a << std::endl;
+  return 0;
+}
+ 
+#include <vector>
+std::vector<int> add(const std::vector<int>& v1, const std::vector<int>& v2);
+
+
+#endif
+ 

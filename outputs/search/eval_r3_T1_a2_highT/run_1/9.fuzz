@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+	int i = 31;
+	int j = (i = 39) = 38;
+	int l = j;
+	std::cout << "i = " << i << "; j = " << j << "; l = " << l << std::endl;
+        return 0;
+}

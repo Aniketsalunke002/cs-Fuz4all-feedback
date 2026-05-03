@@ -1,0 +1,41 @@
+#include <iostream>
+
+#include <vector>
+#include <set>
+#include <algorithm>
+#include <cstdlib>
+class Individual;
+std::set<Individual *> Individuals;
+class Individual{
+	public:
+	Individual(){
+		f=0;
+	}
+	Individual(bool flag){
+		if(flag){
+			f = 0;
+		}
+		else{
+			f = 1;
+		}
+	}
+	int fitness(){
+		return f;
+	}
+	bool isMutation(){
+		if(std::rand()%100 <= 50){
+			return true;
+		}
+		return false;
+	}
+	char mutation(){
+		if(std::rand()%2 == 0){
+			if(f == 0){
+				f = 1;
+			}
+			else{
+				f = 0;
+			}
+		}
+		return f;
+	}

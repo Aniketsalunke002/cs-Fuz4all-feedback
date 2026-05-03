@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+const double PI = 3.14159;
+int main()
+{
+	cout<<"Hello, World! I am a mutated program! My mutation method was to modify the PI constant!\n";
+	cout<<endl<<PI<<'\t'<<2*PI<<endl<<1/PI<<endl;
+   cout<<(PI!= 3*PI)<<endl;  
+	return 0; 
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc,char*argv[])
+{
+	int n = argc;
+	cout<<"argv[0] = "<<argv[0]<<endl<<endl; 
+   cout<<n<<endl;
+
+	cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+	cout<<endl<<n-1<<endl;
+	cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+	cout<<endl<<n*n<<endl;
+	cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+	cout<<endl<<(long long int)n*n<<endl;
+	cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+	cout<<endl<<(float)n*n<<endl;
+	cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+	cout<<endl<<(double)n*n<<endl;
+	cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+	cout<<endl<<((long long int)n*n)*(PI!= 3*PI)<<endl;
+	cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+	cout<<endl<<(argc*2)*(n!= 3*n)<<endl;
+	return 0; 
+}
+
+ 
+#include <iostream>
+using namespace std;
+void modify(int& v)
+{
+	v += 1;
+}
+int main(int argc,char*argv[])
+{
+	int n = argc;
+	cout<<"argv[0] = "<<argv[0]<<endl<<endl;
+	modify(n); 
+	cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+   cout<<endl<<n-1<<endl;
+   modify(n); 
+   cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+   cout<<endl<<n*n<<endl;
+   modify(n); 
+   cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+   cout<<endl<<(long long int)n*n<<endl;
+   modify(n); 
+   cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+   cout<<endl<<(float)n*n<<endl;
+   modify(n); 
+   cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+   cout<<endl<<(double)n*n<<endl;
+   modify(n); 
+   cout<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t'<<'\t';
+   cout<<endl<<((long long int)n*n)*(PI!= 3*PI)<<endl;
+   modify

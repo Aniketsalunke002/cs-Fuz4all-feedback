@@ -1,0 +1,23 @@
+#include <iostream>
+
+#include <string.h>
+#include <cctype>
+bool IsPalindrome(char* word)
+{
+    int index1=0;
+    int index2=strlen(word)-1;
+    while (index1<index2)
+    {
+        if(word[index1]==0 && word[index2]== 0)
+            return true;
+        if(tolower(word[index1])!=tolower(word[index2]))
+            return false;
+        index1++;
+        index2--;
+    }
+    return true;
+}
+int main()
+{
+   std::cout<<IsPalindrome("adada");
+}

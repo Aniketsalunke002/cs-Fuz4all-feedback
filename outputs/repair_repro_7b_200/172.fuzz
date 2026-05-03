@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class Node {
+    int val;
+    Node* next;
+public:
+    int getVal() {
+        return val;
+    }
+};
+class ListNode {
+    Node* head;
+public:
+    int getVal() {
+        return val;
+    }
+    Node* getTail() {
+        return next;
+    }
+};
+class LinkedList {
+private:
+     
+public:
+    

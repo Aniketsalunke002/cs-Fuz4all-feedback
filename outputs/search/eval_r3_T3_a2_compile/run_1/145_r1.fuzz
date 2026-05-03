@@ -1,0 +1,18 @@
+#include <iostream>
+
+
+template<typename T>
+class X
+{ 
+  public:
+    constexpr static T x = 10; 
+};
+
+#define MUTE
+constexpr X<int>::x;
+MUTE X<int>::x = 20;
+
+int main()
+{ 
+  std::cout << X<int>::x << '\n'; 
+}

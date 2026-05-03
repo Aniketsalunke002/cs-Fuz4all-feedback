@@ -1,0 +1,81 @@
+#include <iostream>
+int foo()
+{
+}
+int main()
+{
+    int foo()=foo;
+    std::cout << foo() << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+class Base
+{
+public:
+    Base()
+    {
+        std::cout << "Base constructed" << std::endl;
+        m_var = 1;
+    }
+    virtual ~Base()
+    {
+        std::cout << "Base destructed" << std::endl;
+    }
+private:
+    int m_var;
+} ;
+class Derived1: public Base
+{
+public:
+    Derived1()
+    {
+        std::cout << "Derived1 constructed" << std::endl;
+        m_var = 2;
+    }
+    void print()
+    {
+        std::cout << "derived1 var: " << m_var << std::endl;
+    }
+    int var(int n = 0)
+    {
+        while(n < m_var){ m_var++; }
+        std::cout << "derived1 set var:" << std::endl;
+        std::cout << m_var << std::endl;
+        return m_var;
+    }
+private:
+    int m_var;
+} ;
+class Derived2: public Base
+{
+public:
+    Derived2()
+    {
+        std::cout << "Derived2 constructed" << std::endl;
+        m_var = 3;
+    }
+    int var(int n = 0)
+    {
+        while(n < m_var){ m_var++; }
+        std::cout << "derived2 set var:" << std::endl;
+        std::cout << m_var << std::endl;
+        return m_var;
+    }
+private:
+    int m_var;
+} ;
+Derived2 * Derived2_ptr = new Derived2();
+void test(Derived1 & d)
+{
+    std::cout << "calling d's ref" << std::endl;
+    std::cout << d.m_var;
+}
+void main()
+{
+    test(Derived2 { });
+    Derived1 d(Derived2_ptr);  
+    test(d);
+    std::cout << "hello world" << std::endl;
+    return 0;
+}

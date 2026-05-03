@@ -1,0 +1,87 @@
+#include <iostream>
+int main6() {
+    int n=0;
+    std::cin >> n;
+    for (int i=1; i<=n; ++i)
+        std::cout << i << "\n";
+    return 0;
+}
+ 
+#include <array>
+#include <exception>
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <vector>
+int main7() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(0);
+    std::cout.tie(0);
+    int q,n,x;
+    std::cin >> q;
+    while (q--) {
+        std::cout << "[" << n<< "]";
+        std::cin >> n;
+        std::string s;
+        std::cin >> s;
+        std::cout << "-->";
+        std::cin >> x;
+        std::cout.setf(std::ios::fixed);
+        std::vector<int> v(n);
+        std::array<double, 4> A{{1,0,0,0},
+                              {0,1,-1,0},
+                              {0,1,-1,0},
+                              {1,0,0,0}};
+        std::array<double, 4> U{{1,0,0,0},
+                              {0,1,-1,0},
+                              {0,1,-1,0},
+                              {1,0,0,0}};
+        std::array<double, 4> C{{1,0,1,1},
+                              {0,1,-1,-1},
+                              {1,0,1,1},
+                              {1,0,1,1}};
+        std::array<double, 4> D{{1,0,0,0},
+                              {0,1,-1,0},
+                              {0,1,-1,0},
+                              {1,0,0,0}};
+        try{
+            if (s.find("C")!= std::string::npos){
+                for (auto &i : v) std::cin >> i;
+                s.erase(s.find("C"),1);
+                n*=4;
+            }
+            if (s.find("D")!= std::string::npos){
+                D = A;
+                s.erase(s.find("D"),1);
+                n*=4;
+            }
+            for (int i=0; i<n; ++i) {
+                if (s.find("U")!= std::string::npos) {
+                    if (i==5) for (auto &j : A) j *= -1;
+                    U = A;
+                    s.erase(s.find("U"),1);
+                }
+                std::stringstream ss;
+                ss << i+1;
+                std::array<double,4> *a = &C;
+                if (s.find(ss.str())!= std::string::npos) {
+                    s.erase(s.find(ss.str()),1);
+                    a = &A;
+                }
+                std::vector<double> b(4);
+                for (int j=0; j<4; ++j)
+                    b[j] = x;
+                std::array<double,4> *r = rmult(*a,b);
+                for (auto &j : v) std::cout << r->at(j) << " ";
+                std::cout << "\n ";
+            }
+        }
+        catch (std::exception &e) {
+            std::cout << e.what();
+            exit(E_INVALID_EXPRESSION);
+        }
+    }
+    return 0;
+}
+
+

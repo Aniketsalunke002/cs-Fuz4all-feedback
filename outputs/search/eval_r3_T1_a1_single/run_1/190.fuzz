@@ -1,0 +1,9 @@
+#include <iostream>
+void print(int const& x){
+	std::cout<<x<<std::endl;
+}
+
+int main(){ 
+	int a;
+	print(a=2);
+}

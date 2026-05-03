@@ -1,0 +1,12 @@
+#include <iostream>
+
+my_typedef int MyInt;
+int main(void)
+{
+  std::cout << 10 << std::endl;
+  std::cout << 20 << std::endl;
+  std::cout << 30 << std::endl;
+  int nums[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+  for (int value : nums)
+    std::cout << value << " ";
+}

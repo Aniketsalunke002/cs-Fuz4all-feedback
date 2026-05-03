@@ -1,0 +1,13 @@
+#include <iostream>
+int main(void)
+{
+	char c = 'c';
+	char** ptr = nullptr;
+	ptr = &c;
+	char a = '*';
+	std::cout << *ptr << std::endl;
+	std::cout << &a << std::endl;
+	std::cout << c << std::endl;
+	std::cout << a << std::endl;
+	return 0;
+}

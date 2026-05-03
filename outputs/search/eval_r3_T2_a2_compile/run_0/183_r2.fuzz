@@ -1,0 +1,8 @@
+#include <iostream>
+
+#include <vector>
+template<typename T> std::vector<T>  foo() { return {}; }
+int main() {
+  auto& v = foo<float>();
+  return 0;
+}

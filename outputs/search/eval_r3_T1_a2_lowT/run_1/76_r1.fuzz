@@ -1,0 +1,15 @@
+#include <iostream>
+
+#include <fstream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    ifstream ifile(argv[1]);
+    int a, b, c;
+    ifile >> a >> b >> c;
+    ofstream ofile("out", ofstream::out);
+    ofile << a-- << " " << b++ << " " << c--;
+    ifile >> a;b++;c--;ofile << a << "\n";
+    delete[] a;delete[]&b;a=(b++)++;c--;ofile << a << "\n";
+    return 0;
+}

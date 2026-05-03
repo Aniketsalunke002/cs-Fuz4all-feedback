@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    long x = 5;
+    x++;
+    if (x > x)
+    {
+        x = -x;
+    }
+    cout << x << '\n';
+    while (x < -10)
+    {
+        x = -x;
+    }
+    return 0;
+}
+ 
+14 + -7

@@ -1,0 +1,94 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n, i = 0;
+    cin >> n;
+    int a[100] = {0};
+    while(i<=n){
+        cin >> a[i];
+        i++;
+        while(a[i-1]){
+            a[i] = (a[i]+a[i-1])/2;
+            i++;
+        }
+    }
+}
+ 
+
+
+
+ 
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main(){
+    char tst[] = "0";
+    char w[100], ch ='';
+    cin >> w;
+    while(strlen(tst)!= 1)
+    {
+        string tt(w);
+        string st(tst);
+        int mx = abs(tt.length()-st.length());
+        for(long k = strlen(tst); k > 0; k--){
+            if(abs(tt.length()-st.length()) < mx)
+                mx = abs(tt.length()-st.length());
+            for(int i = 0; i < tt.length();){
+                if(tt[i] == ch){
+                    i++;
+                    continue;
+                }
+                ch = tt[i];
+                st.push_back(tt[i]);
+                i++;
+            }
+        }
+        strcpy(tst,st.c_str());
+        cout << w << " " << tst << endl;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+#include <time.h>
+#include <stdlib.h>
+
+using namespace std;
+
+void nextDay(char *str){
+    time_t rawtime;
+    struct tm *timeinfo;
+    char date[100];
+    time (&rawtime);
+    timeinfo = localtime (&rawtime);
+    timeinfo->tm_sec+=24;
+    strftime(date, 100, "%d.%m.%Y", timeinfo);
+    strcpy(str,date);
+}
+
+int main()
+{
+    char date[100];
+    cout << "Today's date: ";
+    time_t rawtime;
+    rawtime = 0;
+    strftime(date, 100, "%d.%m.%Y", localtime(&rawtime));
+    cout << date << endl;
+    nextDay(date);
+    cout << "Next day: " << date << endl;
+
+    time_t rawtime1;
+    time (&rawtime1);
+    rawtime1+=604800;
+    strftime(date, 100, "%d.%m.%Y", localtime(&rawtime1));
+    cout << "Next week: " << date << endl;
+    system("pause");
+
+    time_t rawtime2;
+    time (&rawtime2);
+    rawtime2+=604800*24*10;
+    strftime(date, 100, "%d.%m.%Y", localtime(&rawtime2));
+    cout << "Decade: " << date << endl;
+    
+    system("pause");
+}

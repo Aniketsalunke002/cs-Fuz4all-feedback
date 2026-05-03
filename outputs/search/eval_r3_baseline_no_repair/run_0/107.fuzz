@@ -1,0 +1,17 @@
+#include <iostream>
+int getint();
+int f(int i);
+int main(int argc, char **argv) {
+  if(argc > 0) {
+    if(argc == 7) {
+      return f(argc);
+    } else {
+      getint();
+      int b = getint();
+      return f(getint(), argc);
+    }
+  } else {
+    int b = f(argc);
+    return f(argc,b);
+  }
+}

@@ -1,0 +1,34 @@
+#include <iostream>
+
+int main(void)
+{
+    myclass x;
+    myclass y(x);
+    x->_i = 10;
+}
+
+class person 
+{
+public:
+  person(std::string const &f_name, int f_age, std::string const &f_language, std::string const &f_food)
+    :_name(f_name),_age(f_age),_language(f_language),_food(f_food)
+  {
+    std::cout << "a person is born in the planet he inhabited" << std::endl;
+  }
+  std::string _name;
+  int _age;
+  std::string _language;
+  std::string _food;
+};
+class shopping_list 
+{
+public:
+  shopping_list(std::string const &f_item, std::string const &f_type, int f_amount)
+  :_item(f_item),_type(f_type),_cost_of_item(f_amount)
+  {
+    std::cout << "a product in a shopping list is born in the planet he inhabited." << std::endl;
+  }
+  std::string _item;
+  std::string _type;
+  int _cost_of_item;
+};

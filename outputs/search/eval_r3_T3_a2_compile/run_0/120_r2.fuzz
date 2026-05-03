@@ -1,0 +1,29 @@
+#include <iostream>
+
+#include<cstring>
+using namespace std;
+int main()
+{
+	char *p;
+	string s1="good morning",s2="good day",s3="good night";
+	int n;
+	cout<<"1 for char,2 for int,3 for double,4 for string? :";
+	cin>>n;
+	if(n==1)
+	{
+		p=new char[strlen(s1)+1];
+		strcpy(p,s1.c_str());
+		cout<<"Enter the number you want to delete:";
+		cin>>n;
+		if(n>p[0])
+			cout<<(n-1)<<endl;
+		else
+			cout<<n-1<<endl;
+		delete p;
+		p=NULL;
+	}
+	else if(n==2)
+	{
+		int *p1;
+		p1=new int[2];
+		p1[0]=3

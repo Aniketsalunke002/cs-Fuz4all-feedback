@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+    int a = 0;
+    int b = 1;
+     
+    a = b + a;
+    b = a - b;
+    a = b + a;
+    b = a - b;
+    std::cout << '0' << '=' << b << std::endl;
+    std::cout << '1' << '=' << a << std::endl;
+    return 0;
+}
+/* Please create a program which uses a mutated part of an earlier generation. What has happened to the value of 'a' since then?

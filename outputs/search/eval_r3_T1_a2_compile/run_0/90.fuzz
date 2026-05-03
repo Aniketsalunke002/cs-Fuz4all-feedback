@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int age =7;
+    cout<<"the age is "<<age<<endl;
+    if(++age >30 && age <=100)
+    {
+    age=18;
+    cout<<"the age is now "<<age;
+    }
+    cout<<endl;
+    return 0;
+
+}

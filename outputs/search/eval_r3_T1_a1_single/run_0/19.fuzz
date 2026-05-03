@@ -1,0 +1,32 @@
+#include <iostream>
+int main() {
+	int i;
+	i = 0;
+	char * p;
+	p = new char[i]();
+	std::cout << *p;
+	return 0;
+}
+ 
+#include <iostream>
+
+int main() {
+	int x = new int[10];
+	std::cout << x;
+}
+ 
+#include <iostream>
+
+class TestClass {
+public:
+	int Value;
+};
+
+int main() {
+	TestClass * pTest;
+	pTest = new TestClass();
+	std::cout << pTest;
+	std::cout << *pTest;
+	std::cout << pTest->Value;
+}
+ 

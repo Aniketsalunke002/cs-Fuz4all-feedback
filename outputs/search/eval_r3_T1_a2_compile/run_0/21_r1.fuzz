@@ -1,0 +1,12 @@
+#include <iostream>
+
+void namespace_world::hello() {
+	std::cout << "Hello worlddddddd" << std::endl;
+}
+#endif
+int main() {
+#ifdef LINUX
+	namespace_world::hello();
+#endif
+	return 0;
+}

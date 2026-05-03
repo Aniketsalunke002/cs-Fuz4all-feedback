@@ -1,0 +1,16 @@
+#include <iostream>
+int main(int argc, char **argv) {
+  int i = 1;
+  int counter = 1;
+  int step = 6;
+  while (counter <= 100) {
+    while (i <= step) {
+      std::cout << i / step;
+      i = i + 1;
+    }
+    std::cout << std::endl;
+    counter = counter + 1;
+  }
+  exit(0);
+}
+ 

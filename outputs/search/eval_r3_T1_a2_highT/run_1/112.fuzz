@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+     
+
+    auto number = 10;
+     cout<<typeof(number)<<endl;  
+   number = "hi";  
+     return 0;
+}

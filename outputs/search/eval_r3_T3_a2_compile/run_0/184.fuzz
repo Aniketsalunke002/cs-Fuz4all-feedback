@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int foo_0()
+{
+  cout << "foo_0.cpp source code in foo" << endl;
+  return 0;
+}
+int foo_1()
+{
+  cout << "foo_1.cpp source code in foo" << endl;
+  return 0;
+}
+int main() {
+  cout << "foo.cpp source code in main" << endl;
+  foo_0();
+  return 0;
+}
+ 

@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+int onePlusOne() {
+  return 1+1;
+}
+int main() {
+  int a=3;
+  cout<<"Before: "<<a<<"   After: "<<onePlusOne()<<endl;
+  cout<<1+1<<endl;
+}

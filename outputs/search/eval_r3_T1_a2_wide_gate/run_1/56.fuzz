@@ -1,0 +1,6 @@
+#include <iostream>
+#include <cstdio>
+int main() {
+	std::clog << 1;
+	printf( "%d", 1 );
+}

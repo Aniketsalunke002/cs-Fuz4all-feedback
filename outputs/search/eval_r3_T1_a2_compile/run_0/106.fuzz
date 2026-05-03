@@ -1,0 +1,72 @@
+#include <iostream>
+using namespace std;
+int main() {
+   int n =0;
+   switch(n)
+     {
+      case 0:  case 1: case 2:case 3: case 4: case 5:case 6: switch(n)
+         {
+          case 0:
+            break;
+          case 1:
+           for(int i=0;i<7;i++)
+             {
+              cout<<i<<endl;
+             }
+           break;
+          case 2:
+           break;
+          case 3:
+           break;
+          case 4:
+           for(int i=0;i<8;i++)
+             {
+              cout<<i<<endl;
+             }
+           break;
+         }
+       case 7:
+        cout<<"i'm out"<<endl;
+    default:cout<<"DEFAULT"<<endl;
+      }
+   return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+   int n =0;
+   switch(n)
+     {
+      case 0:  case 1: case 2:case 3:
+      case 4: case 5:case 6:
+      for(int i=0;i<7;i++)
+        {
+         cout<<i<<endl;
+        }
+   default:cout<<"DEFAULT"<<endl;
+     }
+   return 0;
+}
+ 
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main() {
+   int n = 0;
+   char str [20] = {"0496-7391-08"}; 
+    cout<<str<<endl;
+   switch(n)
+     {
+      case 0:  case 1: case 2:case 3:
+      case 4: case 5:case 6:
+       {
+         for(int i =0; i<strlen(str); i++)
+          {
+             cout<<str[i];
+          };}
+      break;
+      default:cout<<"DEFAULT"<<endl; 
+     }
+   return 0;
+}

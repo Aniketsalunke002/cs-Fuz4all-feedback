@@ -1,0 +1,6 @@
+#include <iostream>
+int main()
+{
+    short y = 85;
+    std::cout << y--;
+}

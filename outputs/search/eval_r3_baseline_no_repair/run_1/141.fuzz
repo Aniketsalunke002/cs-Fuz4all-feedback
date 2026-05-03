@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+class test
+{
+	int a,b,c;
+	public:
+	test() {a=2;b=7;c=9;}
+	test(int a1) {a=a1;b=7;c=9;}
+	int ret()
+	{
+		switch (a+b+c)
+		{
+			case 1:return 1;
+			case 4:return 10;
+			default: return 11;
+		}
+	}
+};
+int main()
+{
+	test obj4,obj=-3;
+	cout<<obj4.ret()<<endl<<obj.ret()<<endl;
+	return 0;
+}

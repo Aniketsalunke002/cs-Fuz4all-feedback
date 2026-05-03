@@ -1,0 +1,13 @@
+#include <iostream>
+int main(int argc, char **argv) {
+  int sum = 0;
+  int i=0;
+  std::cout << "input: ";
+  for (;;i++) {
+    std::cout << i << " ";
+    sum += i;
+    if (i > 8) break;
+  }
+  std::cout << "sum=" << sum << "\n";
+  return 0;
+}

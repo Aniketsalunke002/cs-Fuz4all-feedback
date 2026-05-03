@@ -1,0 +1,68 @@
+#include <iostream>
+
+#include <string>
+#include <memory>
+#include <sstream>
+
+template<typename T>
+const T& max(const T& a, const T& b) {
+    return b < a? a : b;
+}
+
+template <typename T1, typename T2, typename C = std::less<T1> >
+void test(const T1& a, const T2& b, const C& comp = C())
+{
+    if (comp(a,b)) { std::cout << "max(" << a << ", " << b << ") = " << b << '\n';} else { std::cout << "max(" << a << ", " << b << ") = " << a << '\n';}
+}
+
+void test(const std::string& a, const std::string& b, const bool & ignore = false)
+{
+    std::cout << "The length of " << a << " : " << a.length() << std::endl;
+    std::cout << "The length of " << b << " : " << b.length() << std::endl;
+    std::cout << "The equality: " << a == b << ", should be: " <<!ignore << std::endl;
+}
+
+void test(const std::string& a, const std::string& b, const char & ignore = '.'){
+    if (a.find(ignore) == std::string::npos && b.find(ignore) == std::string::npos) { std::cout << "The equality: " << a == b << ", should be: " << false << std::endl; } else
+                                                                                { std::cout << "The equality: " << a == b << ", should be: " << true << std::endl;}
+}
+
+enum Color
+{
+    RED,
+    GREEN,
+    BLUE
+};
+
+std::shared_ptr<std::string> teste(std::shared_ptr<std::string> p)
+{
+    return p;
+}
+
+class MyString {
+public:
+    MyString(const char & c) {};
+    MyString(const MyString &) {std::cout << "Copy constructor: MyString(const MyString &)" << '\n';};
+    MyString(const std::string & s) {std::cout << "Copy constructor: MyString(const std::string &)" << '\n';std::cout << *this;};
+    ~MyString() {std::cout << "~MyString()" << '\n';};
+    MyString & operator++() {std::cout << "MyString::operator++(int)" << '\n'; std::cout << *this;return *this;};
+    void PrintString(const char * msg, const MyString & str) { std::cout << msg << str << '\n'; }
+};
+
+struct MyBigString
+{
+    int length;
+    char * buff;
+    ~MyBigString()
+    {
+        delete buff;
+        buff = nullptr;
+    }
+};
+
+template <typename T>
+bool testMe(T && a)
+{
+    std::cout << "Size of " << a << " is: " <<  sizeof(a) << '\n';
+    return false;
+}

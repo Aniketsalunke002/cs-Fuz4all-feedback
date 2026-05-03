@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	{
+		char[] = new char[32];
+		delete[] char[];
+	}
+	cout << "Goodbye!\n";
+	return 0;
+}

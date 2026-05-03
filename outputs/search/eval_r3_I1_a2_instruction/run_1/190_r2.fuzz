@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+int foo(std::string name)
+{
+}
+int main()
+{
+    std::string hello("Hello C++ world!");
+    std::cout << hello << std::endl;
+    return 0;
+}
+
+#include <iostream>
+#include <string>
+bool foo(std::istream &is, std::string &word)
+{
+}
+
+struct person
+{
+    std::string name(void) const
+    {
+    }
+}
+
+int main()
+{
+    using namespace std;
+
+    istringstream

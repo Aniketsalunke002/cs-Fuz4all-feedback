@@ -1,0 +1,36 @@
+#include <iostream>
+int main ()
+{
+    int a=444;
+    std::cout << "the value of the integer is " << a << std::endl;
+    std::cout << "setting value of the integer..." << std::endl;
+    a=333;
+    a=a+333;
+    a=a+777;
+    a=a+130;
+    a=a+100;
+    a=a-100;
+    std::cout << "the value of the integer after some manipulation is " << a << std::endl;
+    return 0;
+}
+ 
+int main()
+{
+    int a=444,b=a,c=777,d=c,e=d;
+
+    b=2222;
+    d=3333333;
+    e=a;
+    c=b;
+    if(a+1 == c)
+    {
+        if(d+1 == b)
+        {
+
+        }
+    }
+
+
+    return 0;
+}
+

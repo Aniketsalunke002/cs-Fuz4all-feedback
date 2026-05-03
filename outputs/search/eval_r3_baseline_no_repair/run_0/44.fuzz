@@ -1,0 +1,23 @@
+#include <iostream>
+
+struct point
+{
+    float x;
+    float y;
+};
+
+point p = {2,2};
+
+point operator+(point a, point b)
+{
+    return {a.x + b.y, a.y + b.x};
+}
+
+
+int main()
+{
+    point p1 = {2, 5};
+    point p2 = {3, 5};
+    point result = p1 + p2;
+    std::cout << result.x << " " << result.y << std::endl;
+}

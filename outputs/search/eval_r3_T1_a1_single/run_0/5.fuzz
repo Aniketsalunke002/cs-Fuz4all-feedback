@@ -1,0 +1,16 @@
+#include <iostream>
+struct point_t {
+	int x;
+	int y;
+};
+int main() {
+	point_t p1, p2;
+	p1.x = 1;
+	p1.y = 2;
+	p2.x = 3;
+	p2.y = 4;
+	p1.x = p2.x;
+	p1.y = p2.y;	
+	std::cout << "x is: " << p1.x << std::endl;
+	std::cout << "y is: " << p1.y << std::endl;
+}

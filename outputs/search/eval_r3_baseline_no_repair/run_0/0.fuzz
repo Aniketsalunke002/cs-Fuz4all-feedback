@@ -1,0 +1,39 @@
+#include <iostream>
+
+#include <vector>
+using namespace std;
+int main() {
+	vector<int> a=vector<int>();
+	int n;
+	cin>>n;
+	for(int i=0;i<n;i++) {
+		int m;
+		cin>>m;
+		a.push_back(m);
+	}
+	
+	long sum=0,max=0;
+	cout<<"Input: ";
+	for(int i=0;i<n;i++) {
+		cout<<" "<<a[i];
+	}
+	
+	for(int i=1;i<(int)a.size();i++) {
+		
+		if(a[i]==1) {
+			if(a[i-1]!= a[i] and a[i-1]) {
+				sum+=i;
+			}
+		}
+		if(a[i]<0) {
+			max-=a[i];
+		}
+		else if(a[i]>0) {
+			max+=a[i];
+		}
+	}
+	
+	cout<<"\nSum of all positive number indexes: "<<sum<<endl;
+	cout<<"Max difference of + and - elements: "<<max;
+	cout<<endl<<endl;
+}

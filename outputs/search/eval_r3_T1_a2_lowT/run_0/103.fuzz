@@ -1,0 +1,7 @@
+#include <iostream>
+int main()
+{
+    int y = 2;
+    y /= 3, y *= 5;
+    std::cout << y / y;
+}

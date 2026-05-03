@@ -1,0 +1,92 @@
+#include <iostream>
+using namespace std;
+class A
+{
+public:
+  A(int i) : a(i) {}
+  int a;
+};
+int main()
+{
+  A *p = new A(100);
+  cout << p->a << endl;
+  p->a++;
+  cout << p->a << endl;
+  A *q = new A(*p);
+  cout << q->a << endl;
+  delete p;
+  delete q;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+  int a[] = {1, 2, 3};
+  int b[5] = {1, 2, 3};
+  int c[12] = {1, 2, 3, 4};
+  int d[5][3] = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+  int e[][3][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {9}};
+}
+ 
+#include <iostream>
+#include <cstring>
+using namespace std;
+void foo(int a)
+{
+  cout << "foo:" << a << endl;
+}
+int main()
+{
+  int a;
+  a = 10;
+  void (*fptr)(int);
+  ftptr = foo;
+  (*fptr)(a);
+  ftptr(30);
+  void (*fptr1)(int, int);
+  struct AA
+  {
+    AA(int v) : a(v) {}
+    void foo(int a)
+    {
+      cout << "foo:" << a << " " << this->a << endl;
+    }
+    int a;
+  };
+  AA *pr = new AA(20);
+  fptr1 = &(AA::foo);
+  fptr1->foo(25);
+  (*pr).foo(40);
+}
+ 
+ 
+class A
+{
+public:
+  A(int i) : a(i) {}
+  virtual int f()
+  {
+    return a;
+  }
+  int a;
+};
+class B : public A
+{
+public:
+  B(int i) : A(i)
+  {
+    b = i + 1;
+  }
+  int f()
+  {
+    return a + 1;
+  }
+  int b;
+};
+int main()
+{
+  B *pr = new B(10);
+  cout << pr->f() << " " << pr->a << " " << pr->b << endl;
+  cout << pr->f() << " " << pr->a << " " << pr->b << endl;
+}

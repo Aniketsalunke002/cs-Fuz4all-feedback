@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+#if defined C_CONST
+const double pi = 4.0 / 3.0 * atan2((sqrt(5.0)), 1.0) + pi;
+#endif
+int main() {
+#if defined C_CONST
+  const double phi = 12 * pi / 3;
+#endif
+#if defined C_CONST
+  using namespace std::literals::string_literals;
+  cout << "sin(" << phi << ") = " << sin(phi) << endl;
+#endif
+  double theta = -5 * log(1 / 5);
+#if defined C_CONST
+  cout << "2^" << theta << " = " << exp(theta) << endl;
+#endif
+  cout << "sqrt(7) = " << sqrt(7) << endl;
+  double x = cos(theta * pi);
+#if defined C_CONST
+  cout << "sin^2(" << phi << "+0.5x) = " << (sin(phi) * sin(phi)) + (0.5 * x * x) << endl;
+#endif
+  return 0;
+}
+ 

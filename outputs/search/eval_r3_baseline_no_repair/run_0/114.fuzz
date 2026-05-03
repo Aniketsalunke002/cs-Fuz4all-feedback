@@ -1,0 +1,10 @@
+#include <iostream>
+int main(int argc, char **argv) {
+  int size = 3;
+  char *buffer;
+  buffer = (char *) malloc(sizeof(char)*(size + 1));
+  memcpy(buffer, argv[1], size);
+  buffer[size] = '\0';
+  std::cout << buffer << '\n';
+  exit(0);  
+}

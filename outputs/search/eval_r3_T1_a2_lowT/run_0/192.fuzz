@@ -1,0 +1,23 @@
+#include <iostream>
+int modify(int a)
+{
+    const bool const_val = (a>0);
+    if(const_val and a==3)
+    {
+        return 7;
+    }
+    else
+    {
+        return a;
+    }
+}
+int main()
+{
+    int a=-7;
+    int res=(std::abs(modify(a)));
+    std::cout<<res<<std::endl;
+    modify(a);
+    res=(std::abs(modify(a)));
+    std::cout<<res<<std::endl;
+}
+ 

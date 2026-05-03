@@ -1,0 +1,15 @@
+#include <iostream>
+int main(int argc, char **argv)
+{
+	std::cout << "Hello world!\n";
+	return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char **)
+{
+	auto x = 500000000000;
+	for (int i = 0; i < x ; ++i)
+		std::cout << "Hello world!\n";
+	return 0;
+}

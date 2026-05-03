@@ -1,0 +1,75 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+int foo(int a, int b) {
+    while(a<b)
+        b--;
+    int tmp2;
+    while(tmp2<b)
+    {
+        if (a*b==c*b)
+        {
+                tmp2 = b;
+        }
+        else if (a*b>c*b)
+        {
+                tmp2++;
+        }
+        else if (a*b<c*b)
+        {
+                b--;
+        }
+    }
+    return b/a;
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7, c;
+    while(cin >> c)
+        if (c!= b)
+            if (c!= a)
+                a = b = c;
+    cout << foo(a, b) << endl;
+}
+ 
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+int foo(int a, int b, int c) {
+    while(a<b)
+        b--;
+    int tmp2 = 1;
+    while(tmp2<b)
+    {
+        while(a<b)
+            b--;
+        if (a/b==c/b)
+        {
+                tmp2 = b;
+        }
+        else if (a/b>c/b)
+        {
+                tmp2++;
+        }
+        else if (a/b<c/b)
+        {
+                b--;
+        }
+    }
+    while(a!= b)
+        b--;
+    return b;
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7, c;
+    while(cin >> c)
+    {
+        a = b;
+        b=c;
+    }
+    cout << foo(a, b, c) << endl;
+}
+ 

@@ -1,0 +1,31 @@
+#include <iostream>
+struct MyStruct
+{
+    int x;
+};
+int test(MyStruct &tmp)
+{
+    tmp.x = 42;
+    return 42;
+}
+int main()
+{
+    MyStruct y;
+
+    test(y);
+    test(&(y));
+    test(const_cast<MyStruct &>(y));
+}
+ 
+#include <iostream>
+#include <numeric>
+#include <vector>
+using namespace std;
+template<typename T>
+void sumVector(T a, T b)
+{
+    for (int j = 0; j < b.size(); j++)
+    {
+        cout << a.at(j) + b.at(j) << " ";
+    }
+    cout

@@ -1,0 +1,11 @@
+#include <iostream>
+class X2 {
+public:
+};
+int main()
+{
+	std::cout << "Hallo world" << std::endl;
+	X2*x2 =new X2[10];
+	delete[] x2;
+}
+ 

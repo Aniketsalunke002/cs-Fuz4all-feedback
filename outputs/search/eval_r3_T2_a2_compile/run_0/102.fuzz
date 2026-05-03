@@ -1,0 +1,13 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+#include <cstdlib>
+int main(int argc, char** argv)
+{
+    int a, b=0;
+    cin >> a;
+    while(a!= 0)
+        b++, a--;
+    printf("the amount of inputs was %i\n", b);
+}

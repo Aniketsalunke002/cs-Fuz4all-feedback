@@ -1,0 +1,29 @@
+#include <iostream>
+
+int main() {
+    char *p = (char*) malloc(20);
+    free(p);
+    if (p)
+        printf("OK\n");
+}
+int func(char *p) {
+    printf("%d\n", p[3]);
+    return p;
+}
+void freefunc(char *p) {
+    free(p);
+}
+int main(int argc, char **argv) {
+    char *p = new char[10];
+    func(p);
+    freefunc(p);
+    p = (char*) malloc(20);
+    free(p);
+    if (p) {
+        printf("OK\n");
+    }
+}
+ 
+int main(int argc, char **argv) {
+    cout << "valgrind" << flush;
+}

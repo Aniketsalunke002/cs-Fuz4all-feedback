@@ -1,0 +1,19 @@
+#include <iostream>
+
+
+class MyClass
+{
+public:
+    MyClass()
+    {
+    }
+
+    MyClass(int value)
+    {
+    }
+};
+
+int main()
+{
+    MyClass x(42);
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main()
+{
+	const auto i = "test";
+	auto &x = i;  
+	x = "hello";  // this line won't work
+	std::cout << x << '\n';  // but this one will work
+	return 0;
+}

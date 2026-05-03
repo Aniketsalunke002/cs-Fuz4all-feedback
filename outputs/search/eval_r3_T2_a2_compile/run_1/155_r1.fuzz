@@ -1,0 +1,17 @@
+#include <iostream>
+
+#include <limits>
+#include <algorithm>
+using namespace std;
+int main(){
+      int n,n2,n3;
+      int result;
+      int max = numeric_limits<int>::min();  
+      cout << "Please enter 3 integers:" << endl;
+      cin >> n;
+      cin >> n2;
+      cin >> n3;
+      result = max({n,n2,n3});
+      cout << "The maximum number is: " << result << endl;
+      return 0;
+}

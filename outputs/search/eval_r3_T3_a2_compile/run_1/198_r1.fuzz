@@ -1,0 +1,38 @@
+#include <iostream>
+
+#include <fstream>
+#include <string>
+#include <vector>
+typedef unsigned char byte_t;
+byte_t getByte(std::string fileName)
+{
+    using namespace std;
+    ifstream ifs(fileName);
+    streamsize count;
+    ifs >> count;
+    ifs.close();
+    return count; 
+}
+void writeByte(std::string fileName, byte_t count)
+{
+    using namespace std;
+    std::ofstream ofs(fileName);
+    ofs << count;
+    ofs.close();
+    return;
+}
+int main(int argc, char *argv[])
+{
+    byte_t tmp;
+    int x = 0;
+    std::string fileName = std::string(argv[1]);
+    writeByte(fileName, x);
+    x = getByte(fileName);
+    std::cout << x << std::endl;
+    for (int i = 0; i<x; i++)
+    {
+        tmp = getByte(fileName);
+    }
+    std::cout << getByte(fileName);
+    return 0;
+}

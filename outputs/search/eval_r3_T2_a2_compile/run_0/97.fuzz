@@ -1,0 +1,14 @@
+#include <iostream>
+using std::cout;
+using std::endl;
+void foo(int& a, int& b) {
+    cout << "-- foo --\n";
+    a = 1;
+    b = 7; 
+}
+int main(int argc, char** argv)
+{
+    int a=2, b=8;
+    foo(a, b);
+    cout << foo(a, b) << endl;
+}

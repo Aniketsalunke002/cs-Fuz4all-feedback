@@ -1,0 +1,27 @@
+#include <iostream>
+    using namespace std;
+
+struct MyClass {
+int x, y;
+double z;
+};
+
+int main() {
+MyClass* myclassvar=&(MyClass); 
+MyClass** myclassptr=&myclassvar;  
+
+cout << myclassptr << endl; 
+MyClass* myclass=&*myclassptr; 
+
+myclass->x=20;	
+myclass->y=30;
+myclass->z=15.25;
+
+cout << myclass->x << endl;
+cout << myclass->y << endl;
+cout << myclass->z << endl;
+ 
+cout << myclassvar->x << endl; 
+
+ return 0;
+}

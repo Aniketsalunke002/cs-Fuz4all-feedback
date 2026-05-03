@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	{
+		char *char_array = new char[('a' + 32)];
+		delete[] char_array;
+	}
+	cout << "Goodbye!\n";
+	return 0;
+}

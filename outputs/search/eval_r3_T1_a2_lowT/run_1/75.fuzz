@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int a;
+    cout << "start of main" << endl;
+    __asm__ __volatile__("" ::: "memory");
+    a = 100;
+    cout << a << endl;
+    a++;
+    cout << a << endl;
+    cout << "end of main" << endl;
+    return 0;
+}
+ 
+#include <stdio.h>
+int main(void)
+{
+    printf("start of main.\n");
+    __asm__ __volatile__("" ::: "memory");
+    printf("end of main.\n");
+    return 0;
+}
+

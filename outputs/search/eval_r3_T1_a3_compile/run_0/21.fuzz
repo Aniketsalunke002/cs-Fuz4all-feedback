@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+int main() {
+    char* text = new char[512];
+    cin.getline(text,512);
+    cout << text << endl;
+}

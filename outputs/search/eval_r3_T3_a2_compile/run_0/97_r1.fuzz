@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+template<typename T>
+void f(T & x)
+{
+    x++;
+}
+
+int main()
+{
+    long a;  
+    f(a);
+    cout << a << endl;
+    return 0;
+}

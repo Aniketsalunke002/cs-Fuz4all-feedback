@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string name;
+   cout << "Please enter your name: ";
+   cin >> name;
+   cout << "Hello, "<< name <<"\n";
+
+   cout << "Your name is " <<  name[0] << "." << name[1] <<" and " << name[2]<<"!\n";
+   return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    int n, i=0;
+    cout << "How many elements do you want in your list? : ";
+    cin >> n;
+    int list[n];
+    for( i = 1; i <= n; ){
+       cin >> list[i];
+       ++i;
+     }
+     ofstream myfile;
+     myfile.open("output.txt", ios::app);
+     for(int i = 1; i <= n; ++i){
+        myfile << i << ":" << list[i] << "\n";
+     }
+     myfile.close();
+     return 0;
+}
+ 
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(){
+ vector<int> myvector;
+ int n, i = 0;
+ cout << "How many integers do you want to input for this vector? : ";
+ cin >> n;
+ for( i = 1; i <= n; ){
+       cin >> myvector[i];
+       ++i;
+     }
+     cout << "You entered " << myvector.size() << " integers into the vector.\n";
+     cout << "You have entered the following integers into the vector:\n";
+     for(int i = 1; i <= myvector.size(); ++i){
+     cout << " " << myvector[i];
+     }
+     cout << endl;
+     return 0;
+}

@@ -1,0 +1,102 @@
+#include <iostream>
+using namespace std;
+int main(bool argc, char const *argv[])
+{
+  int *ptr = nullptr;
+  int x[] = {1, 2, 3};
+  ptr = x;
+  x[1] = 7;
+  cout << *ptr << endl;
+  return 0;
+}
+ 
+#include <iostream>
+class Test
+{
+public:
+  Test()
+  {
+    cout << "Constructing Test" << endl;
+  }
+  void method()
+  {
+    int *ptr = generate(4);
+    for (int i = 1; i <= 4; i++) {
+       
+      delete[] ptr;
+    }
+    cout << endl;
+  }
+
+private:
+  int *generate(int y)
+  {
+    int *ptr;
+    ptr = new int[y];
+    for (int i = 0; i < y; i++) {
+      ptr[i] = i;
+    }
+    return ptr;
+  }
+};
+int main(bool argc, char const *argv[])
+{
+  Test temp;
+  cout << temp.method() << endl;
+  return 0;
+}
+
+ 
+ 
+#include <iostream>
+using namespace std;
+class One
+{
+private:
+  int num;
+
+public:
+  One() : num(0) { cout << "One Constructing" << endl; }
+  int getNum() const { return num; }
+  void setNum(int x) { this->num = x; }
+};
+class Two : public One
+{
+private:
+  int num2;
+
+public:
+  Two(int i)
+  {
+    cout << "Two Constructing" << endl;
+    setNum(i);
+    num2 = i;
+  }
+  Two() { this->num = 10; }
+  void function() { cout << "Two" << endl; }
+};
+class Three : public Two
+{
+private:
+  int num3;
+
+public:
+  Three() { this->num3 = 15; }
+  Three(int i)
+  {
+    cout << "Three Constructing" << endl;
+    Two(i * 100);
+    num3 = i;
+  }
+  void function() { cout << "Two" << endl; }
+};
+
+int main(bool argc, char const *argv[])
+{
+   
+   
+
+  Three *t = new Three(4);
+  delete t;
+  return 0;
+}

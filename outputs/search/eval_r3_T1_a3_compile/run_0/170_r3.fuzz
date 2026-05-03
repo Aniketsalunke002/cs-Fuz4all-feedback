@@ -1,0 +1,65 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    char c = 'H';
+    short s = 10;
+    int i = 20;
+    unsigned int u = 30;
+    long long ll = 40;
+    unsigned long long ull = 50;
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+    cout << "Hello, World!\n" << endl;
+    cout << c << endl;
+    cout << c << " " << s << endl;
+    cout << c << " " << s << " " << i << endl;
+    cout << c << " " << s << " " << i << " " << u << endl;
+    cout << c << " " << s << " " << i << " " << u << " " << ll << endl;
+    cout << c << " " << s << " " << i << " " << u << " " << ll << " " << ull << endl;
+
+    cout << endl << c << " " << s << " " << i << " " << u << " " << ll << " " << ull << endl;
+    cout << c << " " << s << " " << i << " " << u << " " << ll << " " << ull << endl;
+
+    return 0;
+}

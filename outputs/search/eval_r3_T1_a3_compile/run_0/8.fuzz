@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int myvar = 6;
+    while(myvar <= 5)
+        cout << myvar << " ";
+    cout << endl;
+}
+ 
+#include <iostream>
+using namespace std;
+void printHello()  {
+    cout << "Hello World!" << endl;
+}
+int main() {  
+    printHello();
+}
+ 

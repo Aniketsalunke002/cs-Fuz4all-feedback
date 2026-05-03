@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[])
+{
+   for (float f1 = 1E10f; f1 > 0; f1 /= 10) {
+      for (float f2 = 1E10f; f2 >= 0; f2 /= 10) {
+         cout.width(3);
+         cout << f1 << "   " << f2 << "   " << f1 + f2 << "   " << f1 - f2
+              << endl;
+      }
+   }
+}

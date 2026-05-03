@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int m = 5;
+    m = ++m + m++ + m--;
+    m = m + m++ + ++m;
+    cout << m << endl;
+}

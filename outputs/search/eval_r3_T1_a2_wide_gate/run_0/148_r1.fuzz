@@ -1,0 +1,34 @@
+#include <iostream>
+
+using namespace std;
+class A{
+public:
+    int c;
+    A(A&){
+        cout<<"Copy Consruct Called"<<endl;
+    }
+    A& operator=(A&);
+    A(A&);
+    A(int);
+
+};
+
+A::A(A& obj) : A() {
+    this->c = obj.c;
+}
+
+A& A::operator=(A& obj) {
+    this->c = obj.c;
+}
+
+A::A(A& obj) :A() {
+    cout<<"\nMove constructor called"<<endl;
+
+}
+
+A::A(int obj) : A() {
+    this->c = obj;
+}
+
+int main() {
+}

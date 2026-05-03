@@ -1,0 +1,16 @@
+#include <iostream>
+int main()
+{
+    int a = 5;
+    ++a;
+
+    if (++a == 10)
+        std::cout << "<10" << std::endl;
+    else
+        std::cout << ">10" << std::endl;
+
+    if (++a == 10)
+        std::cout << "<10" << std::endl;
+    else
+        std::cout << ">10" << std::endl;
+}

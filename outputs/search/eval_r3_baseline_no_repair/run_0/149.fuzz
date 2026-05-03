@@ -1,0 +1,16 @@
+#include <iostream>
+ 
+void foo() { 
+  int local = 0;
+    for(int i = 10000; i--; global++) {
+        (local += global);
+   }
+   return local;
+ }
+int main(int argc, char **argv) {
+  int global = 123;
+  std::cout << "global = " << global << "\n";
+  foo();
+  std::cout << "foo = " << foo() << "\n";
+  return 0;
+}

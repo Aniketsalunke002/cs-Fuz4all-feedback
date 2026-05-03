@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int a[] = {2, 4, 6, 8}, j=2, b, c=8;
+    a[2]=j;
+    cout<<c>>4;
+    for(char i : a)
+    {
+        cout<<i*i;
+    }
+    return 0;
+}

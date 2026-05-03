@@ -1,0 +1,11 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+int main () {
+    double pi = 3.14;
+    for (int i = 0; i < 10; i++) {
+        cout << "i = " << i << endl;
+    }
+}
+// Compiler success: /home/aniket.salunke/fuzz4all-cs-final/outputs/search/eval_r3_T1_a2_compile/run_0/185.fuzz

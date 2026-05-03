@@ -1,0 +1,86 @@
+#include <iostream>
+ 
+#define AA 0
+#define AC 1
+#define AD 2
+#define AG 3
+#define CA 4
+#define CC 5
+#define CD 6
+#define CG 7
+#define DA 8
+#define DC 9
+#define DG 10
+#define GA 11
+#define GC 12
+#define GD 13
+#define GG 14
+
+ 
+#define CGA -1
+#define GCA -2
+#define GAC -3
+#define GCC -4
+#define ACG -5
+#define ACC -6
+#define GGC -7
+#define GGD -8
+
+ 
+#define GGAA -11
+#define AGAA -12
+#define GAAG -13
+#define GGGC -14
+#define CCAA -15
+#define AAAC -16
+#define CAAA -17
+#define CCCC -18
+
+ 
+int complement(int n) {
+	switch(n) {
+	case AA:
+		return AC; 
+	case AC:
+		return AAC;
+	case AD:
+		return AAC;	 
+	case AG:
+		return AGAA;
+	case CA:
+		return CCAA;
+	case CC:
+		return CCCC;
+	case CD:
+		return CCAA;	 
+	case CG:
+		return CGA;
+	case DA:
+		return GGAA;
+	case DC:
+		return AA;
+	case DG:
+		return GGA;
+	case GA:
+		return GAAG;
+	case GC:
+		return GAC;
+	case GD:
+		return GGAA;	 
+	case GG:
+		return GGAA;
+	default:
+		break;   
+	}
+}
+
+main() {
+	int a = 0;
+	bool n;
+	if (complement(a) > 0)
+		n = true;
+	else
+		n = false;
+	std::cout << "I'm just a little program which returns true or false" <<std::endl;
+	return 0;
+}

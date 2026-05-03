@@ -1,0 +1,25 @@
+#include <iostream>
+
+
+template <typename T>
+void swap(T &x, T &y)
+{
+  T tmp = x;
+  x = y;
+  y = tmp;
+}
+
+int main() {
+  int k = 0, p = 50;
+  std::cout << "value of k " << k << std::endl;
+  std::cout << "value of p " << p << std::endl;
+  swap(k, p), ++k;
+  std::cout << "value of k " << k << std::endl;
+  std::cout << "value of p " << p << std::endl;
+  k += ++p, ++k *= 3;
+  std::cout << "value of k " << k << std::endl;
+  std::cout << "value of p " << p << std::endl;
+  k += {4, 5, 6}, ++p;
+  std::cout << "value of k " << k << std::endl;
+  std::cout << "value of p " << p << std::endl;
+}

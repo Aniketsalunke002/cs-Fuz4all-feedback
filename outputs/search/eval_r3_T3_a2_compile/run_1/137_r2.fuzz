@@ -1,0 +1,28 @@
+#include <iostream>
+
+class Greeter {
+  public:
+	struct Person {
+		char *name;
+		int age;
+	};
+	Greeter(char *, int);
+	void greet(Person);
+	void print() { std::cout << m_person.name <<'' << m_person.age << std::endl; }
+
+  private:
+	char *m_name;
+	int m_age;
+	Person m_person;
+};
+
+Greeter::Greeter(char *name, int age) : m_name(name), m_age(age) { m_person.name = m_name; m_person.age = m_age; }
+
+void Greeter::greet(Person p) { std::cout << "Hi, " << p.name <<'' << p.age; }
+int main() {
+	char name[40];
+	int age;
+	std::cin >> name >> age;
+	Greeter greeter(name, age);
+	greeter.greet(greeter.m_person);
+}

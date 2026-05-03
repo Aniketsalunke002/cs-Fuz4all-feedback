@@ -1,0 +1,15 @@
+#include <iostream>
+#include <list>
+
+class Node
+{
+public:
+  int value;
+  std::list<Node *> nodes;
+
+  Node() = default;
+  Node(const Node &) = default;
+  Node(Node &&) = default;
+  Node &operator=(const Node &) = default;
+  Node &operator=(Node &&) = default;
+};

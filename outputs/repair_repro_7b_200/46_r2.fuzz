@@ -1,0 +1,14 @@
+#include <iostream>
+
+using namespace std;
+struct Point001 {
+	int x{};
+	double y{};
+};
+const int Point001::*x002;
+int main() {
+	Point001 coopt;
+	Point001 point1;
+	cout << "Hello World!" << endl;
+}
+// This version compiles and runs fine.

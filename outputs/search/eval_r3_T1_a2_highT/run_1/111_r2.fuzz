@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+#include <vector>
+#include <algorithm>
+#include <list>
+#include <iterator>
+#include <string>
+#include <queue>
+#include <functional>
+using namespace std;
+int main()
+{
+    using namespace std::placeholders;
+    int arr1[] = {1,2,3,4,5,6,7,8,9,10};  
+    string str = "Hi there!";  
+    vector<int> arr( arr1, arr1+10 );
+    vector<string> strarr(str.begin(), str.end());  
+    queue<int> que(arr.begin(), arr.end() );  
+    list<int> lst(que);
+    int i = 0;
+    while ( i < 5 )
+    {
+        if ( i ) lst.push_front(i);
+        cout << lst.front() << arr[i++] << '\n';
+        if ( i == 5 ) break;
+        lst.push_back(i * 2);
+    }
+    vector<double> carr( 100,99.99 );
+    transform( carr.begin(), carr.end(), carr.begin(), carr.begin(), [](double x, double y){
+        return x * y;
+    });
+    cout << "Hello, World." << '\n';
+    return 0;
+}

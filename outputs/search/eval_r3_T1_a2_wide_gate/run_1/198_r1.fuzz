@@ -1,0 +1,25 @@
+#include <iostream>
+
+namespace mys {
+namespace new_n {
+using std::cout;
+int i[100];
+}
+}
+int main(int argc, char** argv) {
+  mys::new_n::cout << mys::new_n::i;
+}
+
+// #include <iostream>
+// #include <stdlib.h>
+// 
+// namespace n {
+//  
+//  
+// }   
+// int main(int argc, char** argv) {
+//   std::srand(time(0));
+//   for (int i=0; i<10; i++) {
+//     n::i[i]=rand()%100;
+//   }
+// }

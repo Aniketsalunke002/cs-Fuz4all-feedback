@@ -1,0 +1,16 @@
+#include <iostream>
+namespace foo
+{
+    class bar
+    {
+    public:
+        bar() {};
+    };
+}
+int main(void) {
+    foo::bar a;
+    foo::bar b(12);
+    foo::bar c = b;
+    foo::bar d = a;
+    return 0;
+}

@@ -1,0 +1,11 @@
+#include <iostream>
+
+int data = 42;
+int main() {
+    data += 12;
+    return 0;
+}
+// 
+// ## 评测结果
+// 
+// 1. 请使用 `cpp_basic.cpp` 并提交至 **Problem 04/task

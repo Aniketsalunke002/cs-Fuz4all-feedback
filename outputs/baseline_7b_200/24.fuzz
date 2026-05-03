@@ -1,0 +1,19 @@
+#include <iostream>
+int main()
+{
+	   char *p;
+	   p="string2";
+	   cout<<*p<<endl;
+	   return 0; 
+}
+#include <stack>
+#include <iostream>
+
+using namespace std;
+
+bool isPalindrome(string s)
+{
+	int n = s.size(), left = 0, right = n - 1;
+
+	while (left <= right) {
+		if (

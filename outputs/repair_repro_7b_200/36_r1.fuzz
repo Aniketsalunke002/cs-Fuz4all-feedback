@@ -1,0 +1,52 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+	int foo{10};
+	auto x{10};
+	auto y{20};
+	cout << "Hello World! (Same)" << endl;
+	cout << x*2 << endl;
+	cout << std::to_string(x);
+	int *foo_ptr{&foo};
+}
+//  
+// #include <iostream>
+// using namespace std;
+// int main() {
+// 	int foo{10};
+// 	auto x{10};
+// 	auto y{20};
+// 	cout << "Hello World! (Same)" << endl;
+// 	cout << x*2 << endl;
+// 	cout << std::to_string(x);
+// 	int *foo_ptr{&foo};
+// 	cout << *foo_ptr << endl;
+// }
+// Output: outputs/repair_repro_7b_200/36.fuzz:17:22: warning: suggest parentheses around arithmetic in operand of ‘*’ [-Wparentheses]
+// 	cout << *foo_ptr << endl;
+// 					   ^
+// 					   (
+//  
+// #include <iostream>
+// using namespace std;
+// int main() {
+// 	int foo{10};
+// 	auto x{10};
+// 	auto y{20};
+// 	cout << "Hello World! (Same)" << endl;
+// 	cout << x*2 << endl;
+// 	cout << std::to_string(x);
+// 	int *foo_ptr{&foo};
+// 	cout << *foo_ptr << endl;
+// 	cout << y << endl;
+// }
+// Output: outputs/repair_repro_7b_200/36.fuzz:20:22: warning: suggest parentheses around arithmetic in operand of ‘*’ [-Wparentheses]
+// 	cout << *foo_ptr << endl;
+// 					   ^
+// 					   (
+//  
+// #include <iostream>
+// using namespace std;
+// int main() {
+// 	int foo{10

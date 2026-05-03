@@ -1,0 +1,26 @@
+#include <iostream>
+int getint();
+int f(int i);
+int main(int argc, char **argv) {
+  if(argc == 7) {
+    f(getint());
+    f(getint());
+    f(getint());
+  }
+}
+ 
+#include <iostream>
+#include <cstdio>
+#include <utility>
+#include <set>
+using namespace std;
+
+set <pair <int, int> > make_pair(int i) {
+  set <pair <int, int> > s;
+  return s;
+}
+
+int main() {
+  int n;
+  scanf("%d", &n);
+}

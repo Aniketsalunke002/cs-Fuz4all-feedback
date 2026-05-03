@@ -1,0 +1,11 @@
+#include <iostream>
+int main()
+{
+   int a[2] = {0,4};
+   a[1] = 6;
+   a[0] = 1;
+   a[1] += a[0];
+   std::cout << a[0] << " + " << a[1] << " = " << (a[0] + a[1]) << std::endl;
+	return EXIT_SUCCESS;
+}
+

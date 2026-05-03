@@ -1,0 +1,32 @@
+#include <iostream>
+int main()
+{
+    int x;
+    x = 24;
+    x = x + 5;
+    std::cin >> x;
+    std::cout << x << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+void funDoubleDouble(double double1)
+{
+    double double2;
+    double2 = double1 * 2.0;
+    std::cout << double2 << std::endl;
+}
+void funDoubleInt(double double1)
+{
+    int int1;
+    double double2;
+    double2 = static_cast<double>((int) double1);
+    int1 = int(double2);
+    std::cout << int1 << std::endl;
+}
+int main()
+{
+    funDoubleDouble(24.2);
+    funDoubleInt(24.2);
+    return 0;
+}

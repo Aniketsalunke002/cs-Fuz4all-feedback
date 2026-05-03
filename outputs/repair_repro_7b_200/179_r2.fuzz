@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+class Node {
+    int val;
+    Node* next;
+    public: 
+    constexpr Node(int v, Node* l) : val(v), next(l) {}
+    constexpr int getVal() const {
+        return val;
+    }
+};
+Node f(Node* p) {
+    return new Node { p->getVal(), {} };
+}
+int main(void) {
+    Node ptr(99, nullptr);
+    cout << f(&ptr).getVal() << '\n';
+     
+    return 0;
+}

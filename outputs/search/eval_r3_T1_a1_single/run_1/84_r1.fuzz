@@ -1,0 +1,90 @@
+#include <iostream>
+
+using namespace std;
+struct Point
+{
+    Point(int,int);
+    int x;
+    int y;
+};
+Point::Point(int val1,int val2)
+{
+    x = val1;
+    y = val2;
+}
+class ImmutablePoint
+{
+    public:
+        ImmutablePoint(int,int);
+        void printPoint();
+        Point point;
+    private:
+        int x;
+        int y;
+};
+ImmutablePoint::ImmutablePoint(int val1,int val2) 
+{
+    x = val1;
+    y = val2;
+    point.x = x;
+    point.y = y;
+
+}
+void ImmutablePoint::printPoint()
+{
+    cout << x << " " << y << endl;
+}
+int main()
+{
+    ImmutablePoint iPoint(50,48);
+    iPoint.printPoint();
+}
+//  
+// class DefaultConstructor
+// {
+//     public:
+//         DefaultConstructor()
+//         {
+//         }
+// };
+// int main()
+// {
+//     cout << (sizeof(DefaultConstructor))<<endl;
+// }
+//  
+// class CopyConstructor
+// {
+//     public:
+//         CopyConstructor(CopyConstructor const&);
+// };
+// CopyConstructor::CopyConstructor(CopyConstructor const &)
+// {
+// }
+// int main()
+// {
+//     cout << (sizeof(CopyConstructor))<<endl;
+// }
+#include <iostream>
+using namespace std;
+struct Point
+{
+    Point(int,int);
+    int x;
+    int y;
+};
+Point::Point(int val1,int val2)
+{
+    x = val1;
+    y = val2;
+}
+class ImmutablePoint
+{
+    public:
+        ImmutablePoint(int,int);
+        void printPoint();
+        Point point;
+    private:
+        int x;
+        int y;
+};
+ImmutablePoint::ImmutablePoint(int val1,int val2

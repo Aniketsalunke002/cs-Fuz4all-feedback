@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main() {
+ char a[15], b[15];
+ cout << "\n\nEnter password:";
+ cin >> a >> b;
+ if ( (a[0] == 'p') && (a[1] == 'a') && (a[2] =='s') && (a[3] == 'w') && (a[4] == 'o') && (a[5] == 'r') && (a[6] == 'd'))
+  cout << "Password correct";
+ else
+  cout << "The password is incorrect.\n";
+ return 0;
+}
+ 
+class Point2D {
+  int x1, y1, x2, y2;
+};
+ 
+Point2D::~Point2D() {
+  cout << "x1,y1,x2,y2: " << x1 << ", " << y1 << ", "<< x2 << ", "<< y2<<endl;
+}
+ 
+ 
+ 
+Point2D:: Point2D(int a, int b) {
+  x1=a; y1=b;
+}
+Point2D::~Point2D(int a, int b) {
+  x2=a; y2=b;
+}
+Point2D::Point2D() {
+
+}
+

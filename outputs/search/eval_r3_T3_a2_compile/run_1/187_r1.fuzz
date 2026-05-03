@@ -1,0 +1,16 @@
+#include <iostream>
+
+template<typename T>
+using A = std::pair<int,T>;
+
+using Pair = A<std::string>;
+int main(int argc, char *argv[])
+{
+   Pair p;
+   auto &f = std::get<1>(p);
+   f = "HOLA";
+   std::cout << "El valor de la primera posición es: " << std::get<0>(p) << std::endl;
+   std::cout << "El valor del segundo es:" << std::get<1>(p) << std::endl;
+
+   return 0; 
+}

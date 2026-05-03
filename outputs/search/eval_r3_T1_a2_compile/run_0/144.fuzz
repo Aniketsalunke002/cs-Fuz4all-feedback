@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+const int num{5};
+int x{1};
+int main() {
+    for (int i = 0; i < num; i++) {
+        x = x * 3 + x % 2;
+    }
+    cout << "The value of the first num is ";
+    cout << x << endl;
+    return 0;
+}

@@ -1,0 +1,22 @@
+#include <iostream>
+
+std::ostream &print(std::ostream &os) {
+	return os << "hello world!";
+}
+int main() {
+  std::cout << print; 
+  print("Goodbye");
+}
+
+#include <iostream>
+void print(std::ostream &os) {
+  os << "hello world!";
+}
+void print(std::ostream &os, std::string s) {
+    os << s.length() << " ";
+}
+int main() {
+  print("hello world\n"); 
+  print(std::cout, "hello world"); 
+  print(std::string("hello world"));
+}

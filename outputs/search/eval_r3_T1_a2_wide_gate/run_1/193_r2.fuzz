@@ -1,0 +1,34 @@
+#include <iostream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+
+int main(int argc, char** argv) {
+     
+  int n;
+  cin >> n;
+  if (n!= 0) {
+      cout << "Enter elements in array" << endl;
+      int A[n], min, max;
+      cin >> A[0];
+      min = A[0];
+      max = A[0];
+          
+        for (int i = 1; i < n; ++i) {
+            cin >> A[i];
+            max = A[i] > max? A[i] : max;
+            min = A[i] < min? A[i] : min;
+        }
+          
+        double average = max + min;
+        int i = max;
+        i = max > min? max : min;
+          
+        cout << "Max: " << max;
+        cout << endl;
+        cout << "Min: " << min;
+        cout << endl;
+        cout << "Average: " << average / 2.0 << endl;
+  }
+}

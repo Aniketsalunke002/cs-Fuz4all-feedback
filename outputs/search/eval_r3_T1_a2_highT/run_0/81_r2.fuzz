@@ -1,0 +1,23 @@
+#include <iostream>
+
+ void __VERIFIER_assume(int cond) {
+  if(!(cond)) {
+     ERROR: goto ERROR;
+  }
+ }
+ long main() {
+   long x;
+   std::cin >> x;
+   __VERIFIER_assume(x >= 0 && x <= 2147483647);
+   long xx;
+   if(x > 0) {
+        xx = x;
+   } else {
+        xx = 0;
+   }
+   if(xx <= 2147483647) {
+  long __tmp_invariant_var_1369;
+   if(xx >= 0) {
+         __tmp_invariant_var_1369 = 1;
+   } else {
+         __tmp_invariant_var_1369 =

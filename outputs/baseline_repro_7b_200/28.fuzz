@@ -1,0 +1,9 @@
+#include <iostream>
+#include <functional>
+using std::cout;
+int main(void) {
+	std::function<int()> func;
+    int t = func();
+	cout << t << std::endl;
+	return 0;
+}

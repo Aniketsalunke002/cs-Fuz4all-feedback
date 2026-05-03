@@ -1,0 +1,26 @@
+#include <iostream>
+
+using namespace std;
+class A {
+	private:
+		int iField1;
+		int iField2;
+	public:
+		template<typename T>
+		A(T a):iField1(a-777),iField2(1000-3-a){cout<<iField1<<' '<<iField2<<endl;}
+		template<typename T>
+		A& operator=(T r)
+		{
+			iField1=r-10;
+			iField2=r+4-3;
+			r-=3;
+			return *this;
+		}
+
+};
+int main()
+{
+	A one, two(one);
+	one=two;
+	return 0;
+}

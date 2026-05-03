@@ -1,0 +1,18 @@
+#include <iostream>
+
+namespace std {
+    template <typename T>
+    struct thread {
+    };
+    template <typename F>
+    thread<void> thread(F f) {
+        f();
+        return {};
+    }
+}
+
+int main() {
+    std::thread thread([&] {
+        std::cout << "Hello World\n";
+    });
+}

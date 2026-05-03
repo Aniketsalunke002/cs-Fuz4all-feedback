@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, a = 100, b = 20, c = 210, d = 21;
+    int z;
+    int aux;
+    z = n;
+    a = b+a;
+    c = c-d;
+    cout << z << endl;
+    z = a+c;
+    cout << z << endl;
+    return 0;
+}

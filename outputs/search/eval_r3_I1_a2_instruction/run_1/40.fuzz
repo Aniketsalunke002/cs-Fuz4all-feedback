@@ -1,0 +1,55 @@
+#include <iostream>
+int foo (){}
+int main(){
+	int a = 4;
+	std::string text = "some string";
+	std::cin >>a;
+	std::cout << a;
+	foo ();
+	x ();
+	return 0;
+}
+ 
+#include <iostream>
+int foo (){}
+void b (){}
+int main (){
+	int a = 4;
+	std::string text = "some string";
+	std::cin >>a;
+	std::cout << a;
+	return 0;
+}
+ 
+#include <iostream>
+int main ()
+{
+	std::cout << "some text" << std::endl;
+	std::cout << "some other text" << std::endl;
+}
+int a = 4;
+int functiona;
+int main ()
+{
+	std::cout << "some text" <<std::endl;
+	std::cin >>functiona;
+}
+ 
+#include <iostream>
+int a=4;
+int function(){};
+int main ()
+{
+	std::cin >> a;
+	for (int i= 1; i< a; ++i)
+		{
+			for(int j=1; j<=a;j++)
+			{
+				if (i==j)
+					std::cout << a << " " << j <<" " << i;
+				else
+				std::cout << i <<" "<< j <<" " << a;
+			};
+		};
+		std::cout <<i << "," << j;
+}

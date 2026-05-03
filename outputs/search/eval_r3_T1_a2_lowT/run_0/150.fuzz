@@ -1,0 +1,15 @@
+#include <iostream>
+class A {
+public:
+    int id;
+    A(int id) {
+        this->id = id;
+    }
+};
+int main() {
+    cout<<"Start!!\n";
+    A obj(101);
+    cout<<obj.id<<endl;
+    cout<<"End!!\n";
+    return 0;
+}

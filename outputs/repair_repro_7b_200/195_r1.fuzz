@@ -1,0 +1,19 @@
+#include <iostream>
+
+
+struct Node {
+    int val;
+    Node(int val) : val(val) {}
+    int getVal() {
+        return val;
+    }
+};
+
+int main(void) {
+    auto p = new int(99);
+    auto ptr = new Node(*p); // *p is copied into ptr
+    std::cout << ptr->getVal() << '\n';
+    delete p;
+    delete ptr;
+    return 0;
+}

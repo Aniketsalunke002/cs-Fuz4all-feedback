@@ -1,0 +1,30 @@
+#include <iostream>
+int main() {
+	int i = 31;
+	unsigned int j = 39;
+	using size_type = unsigned int;
+	j = 38;
+	size_type l = j;
+	std::cout << "i = " << i << "; j = " << j << "; l = " << l << std::endl;
+        return 0;
+}
+int main() {
+	const int s_i = 43;
+	const int s_j = 42;
+	const unsigned int s_k = s_i + s_i;
+	using size_type = const int;
+	size_type f = s_i;
+	size_type t = s_k;
+	std::cout << s_i << " + " << s_j << " = " << f << ", " << s_i << " + " << s_k << " = " << t << std::endl;
+        return 0;
+}
+ 
+#include <iostream>
+          int main() {
+                        constexpr int i = 31;
+                        constexpr int n = 31;
+                        n = 38;
+                        constexpr int m = n - i;
+                        std::cout << "i = " << i << "; n = " << n << "; m = " << m << std::endl;
+                        return 0;
+}

@@ -1,0 +1,44 @@
+#include <iostream>
+class A {
+public:
+    int id;
+    A(int id) {
+        this->id = id;
+    }
+    A &getobj() {
+         
+        return *this;
+    }
+};
+int main() {
+    std::cout<<"Start!!\n";
+    A obj(101);
+    std::cout<<obj.id<<std::endl;
+    std::cout<<"End!!\n";
+    return 0;
+}
+ 
+#include <iostream>
+#include <algorithm>
+
+class A {
+public:
+    int id;
+    A(int id) {
+        this->id = id;
+    }
+    A &getobj() {
+         
+        return *this;
+    }
+};
+int main() {
+    std::cout<<"Start!!\n";
+    A obj(101);
+    std::cout<<obj.id<<std::endl;
+
+     
+     
+    std::cout<<"End!!\n";
+    return 0;
+}

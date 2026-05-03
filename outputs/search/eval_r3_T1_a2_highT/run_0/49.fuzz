@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int factorial(int param)
+{
+  int res=1;
+  for(int i=1; i<=param; i++)
+    res*=i;
+  return res;
+}
+int main(int argc, char const *argv[])
+{
+  int x=3;
+  cout << factorial(x);
+  return 0;
+}

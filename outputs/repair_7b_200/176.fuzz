@@ -1,0 +1,22 @@
+#include <iostream>
+std::map<std::string, int> my_map = {{"key", 42}};
+auto y = [] {
+  auto x = my_map["key"];
+  my_map["key"] = 99;
+  return x;
+};
+int main() { std::cout << y(); }
+ 
+#include <iostream>
+auto y = [](){
+    const int x(42);
+    int* const z = new int(1337);
+    return [=](){
+        const int a = *z;
+        *z += x;
+        return a;
+    }
+};
+int main()
+{
+    y

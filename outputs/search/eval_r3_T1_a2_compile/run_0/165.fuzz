@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double l1 = 5.4, l2 = 3.6;
+    cout << "The lenght of l1 is " << l1 << endl;
+    cout << "The lenght of l1 is " << l2 << endl;
+    return 0;
+}

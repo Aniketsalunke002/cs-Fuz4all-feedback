@@ -1,0 +1,12 @@
+#include <iostream>
+
+#include <vector>
+#include <string>
+int main() {
+	std::vector<std::string> v;
+	std::string s = "Hello";
+	v.push_back(s);
+	std::cout << v[0] << std::endl;
+	v[0] = "<NAME>";
+	std::cout << v[0] << std::endl;
+}

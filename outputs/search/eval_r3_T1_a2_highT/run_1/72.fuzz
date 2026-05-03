@@ -1,0 +1,15 @@
+#include <iostream>
+int main() {
+	int mut_var;
+	std::cin >> mut_var;
+	mut_var++;
+	while (mut_var!= 1001) {
+		std::cout << mut_var;
+		if (std::cin.good()) {
+			std::cin >> mut_var;
+		} else {
+			break;
+		} 
+	}
+	std::cout << '\n';
+}

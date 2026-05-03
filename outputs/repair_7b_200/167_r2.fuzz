@@ -1,0 +1,6 @@
+#include <iostream>
+
+int *addOne(int *ptr, int inc)
+{
+    *ptr += inc;
+    return ptr + 1;

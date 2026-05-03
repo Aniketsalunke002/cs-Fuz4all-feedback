@@ -1,0 +1,18 @@
+#include <iostream>
+ 
+void mutate(int& mut_var) {
+	std::cin >> mut_var;
+	if (std::cin.rdstate()!= std::ios_base::eofbit) {
+		std::cout << mut_var;
+	}
+}
+
+int main() {
+	int mut;
+	do {
+	mutate(mut);
+    } while (mut!=-1);
+    std::cout << '\n';
+	return 0;
+}
+

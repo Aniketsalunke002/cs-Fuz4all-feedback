@@ -1,0 +1,13 @@
+#include <iostream>
+int main ()
+{
+	int a=0;
+    if (a=6)
+    {
+        std::cout << "this line is executed" << std::endl;
+    }else
+    {
+        std::cout << "this line is also executed" << std::endl;    
+    }
+    return 0;
+}

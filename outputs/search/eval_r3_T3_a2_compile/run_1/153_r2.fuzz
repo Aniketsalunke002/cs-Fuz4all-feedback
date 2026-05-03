@@ -1,0 +1,24 @@
+#include <iostream>
+
+#include <vector>
+#include <cstdlib>
+#include <ctime>
+#define rand() ((time(NULL)*rand()) % 1000000000)
+template<typename T>
+class C{
+public:
+  T value_;
+};
+template<typename T>
+class C<T*>{
+public:
+  T* value_;
+};
+template<typename T>
+int main(int argc, char * argv[]) {
+  for (int i = 0; i <= 100; i++) {
+    C<T*> * p = new C<T*>(); 
+    p->value_ = new T(rand());
+    std::cout << p->value_->value() << '\n';
+  }
+}

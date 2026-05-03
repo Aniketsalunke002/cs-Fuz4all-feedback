@@ -1,0 +1,11 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+  std::cout << "Please enter a number:\n";
+  int num;
+  std::cin >> num;
+  if (num == 0)
+    std::cout << "Zero!";
+  else if (num%10 == 0)
+    std::cout << "Multiple of 10!";
+  std::cout << "\n";
+}

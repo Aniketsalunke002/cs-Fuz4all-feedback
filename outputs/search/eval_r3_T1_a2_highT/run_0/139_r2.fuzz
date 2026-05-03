@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+        int arr[] = {20,19,18};
+	for(int iter = 0; iter<3; iter++) {
+		cout<<arr[iter];
+	}
+	return 0;
+}

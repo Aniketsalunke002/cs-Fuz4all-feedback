@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a = 10;
+	int b = 20;
+	a +=1;
+	b -= 1;
+	cout << "Value of a : " << a << endl;
+	cout << "Value of b : " << b << endl;
+	int c = a + b;
+	int d = a - b;
+	int e = a * b;
+	cout << "Value of c : " << c << endl;
+	cout << "Value of d : " << d << endl;
+	cout << "Value of e : " << e << endl;
+	return 0;
+}
+

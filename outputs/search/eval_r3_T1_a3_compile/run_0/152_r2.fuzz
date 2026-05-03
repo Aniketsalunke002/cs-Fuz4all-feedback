@@ -1,0 +1,42 @@
+#include <iostream>
+
+using std::endl;
+class Square {
+public:
+    Square() {
+        a = 5;
+    }
+
+//     int a;
+    int a = 5;
+};
+class Cube {
+public:
+
+//      
+//      
+//     Cube(Square s) {
+//         b = s.a * s.a * s.a;
+//     }
+//      
+//     Square s;
+    Cube(Square s) : s(s) {
+        b = s.a * s.a * s.a;
+    }      
+    Square s;
+    Cube(int x, int y) {
+        s.a = x;
+        b = s.a * s.a * s.a;
+    }
+
+// 
+//     int b;
+    int b;
+};
+int main() {
+    Cube m(10);  
+    Cube n(m.s.a, m.s.a);  
+    std::cout << m.b << endl;
+    std::cout << n.b << endl;
+    return 0;
+}

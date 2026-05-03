@@ -1,0 +1,37 @@
+#include <iostream>
+int main()
+{
+    int a = 3;
+    std::cout << a << std::endl;
+}
+
+ 
+#include <iostream>
+
+ 
+#include <iostream>
+using namespace std;
+class Base{
+public:
+    void method (int i){
+        cout<<i<<endl;
+    }
+};
+
+Base * getMe(){
+    static  Base b;
+    return &b;
+};
+
+void f (){
+for (int i=0;i<1000;i++)
+    getMe()->method(i);
+};
+
+int main()
+{
+    f();
+}
+
+/* Please consider, which would be the best language 
+ * in terms of number of

@@ -1,0 +1,11 @@
+#include <iostream>
+
+
+int main()
+{
+	auto x = unique_ptr<int>(new int(0));
+	new (&x.get()) int(1);
+	std::cout << x.get() << std::endl;
+
+	return 0;
+}

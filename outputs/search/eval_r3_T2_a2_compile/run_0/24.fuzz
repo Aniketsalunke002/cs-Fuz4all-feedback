@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  int a = 4;
+  int b = 4; 
+  return 0;
+}
+
+ 
+
+#include <iostream>
+using namespace std;
+
+ 
+
+
+char ch;
+
+ 
+
+ 
+
+ 
+
+int main()
+{
+  char *ptr;
+  ptr = (char*)malloc(sizeof(char)*5);
+  *ptr = 'A';
+  *(ptr+1) = 'B';
+  *(ptr+2) = 'C';
+  *(ptr+3) = 'D';
+  *(ptr+4) = 'E';
+  cout<<*ptr<<endl;
+
+  char charArray[]="ABCDE";
+  cout<<charArray<<endl;
+
+  free(ptr);
+  return 0;
+}
+
+ 
+

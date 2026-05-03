@@ -1,0 +1,24 @@
+#include <iostream>
+
+using namespace std;
+
+struct bar 
+{
+	int w = 10; 
+};
+
+bar b = { 5 };
+int main() {
+	int foo=1;
+	cout<<foo<<endl;
+	b.w = b.w + 5;
+	cout<<foo<<endl;
+	bar c=b;
+	cout<<c.w<<endl;
+	bar& x = b;
+	cout<<x.w<<endl;
+	int bar::* mem = &bar::w;
+	cout<<b.*mem<<endl;
+	bar* y=&b;
+	cout<<y->w<<endl;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+namespace fuzz {
+    void mutate(char*& str, int index) {
+        if (str[index]!= 0) {
+            int c = static_cast<char>(str[index]);
+            c = c++;
+            str[index] = static_cast<char>(c);
+        	++c;
+        }
+    }
+}
+ 

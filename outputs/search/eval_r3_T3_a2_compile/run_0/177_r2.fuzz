@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+typedef int (*foo)(const char *);
+typedef foo *bar;
+int i = 56;
+const char *str = "Hello";
+int foo_function(const char *) { cout << "Hello world" << endl; }
+void foo_function1(const char *) { cout << "Hello world1" << endl; }
+int main()
+{
+    bar x = foo_function1;
+    x(str);
+    x = (foo)((void*)(x) = foo_function);
+    x(str);
+    return 0;
+}
+// Output:
+// Hello world
+// Hello world

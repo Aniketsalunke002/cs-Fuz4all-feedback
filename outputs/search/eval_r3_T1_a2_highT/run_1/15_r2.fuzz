@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+int main(void)
+{
+	int i = 7;
+	const int j = 7;
+	float f = 0.777;
+	cout << "Before\tValue\tAfter" << endl;
+	cout << "-------------\t----\t-------------" << endl;
+	cout << "i\t\t" << i << "\t\t" << i-- << endl;
+	cout << "j\t\t" << j << "\t\t" << j++ <<  endl;
+	cout << "f\t\t" << f << "\t\t" << f += 0.8888 << endl;
+    return 0;
+}

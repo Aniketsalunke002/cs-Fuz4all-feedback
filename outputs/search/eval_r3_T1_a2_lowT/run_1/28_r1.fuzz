@@ -1,0 +1,21 @@
+#include <iostream>
+
+class myclass{
+public :
+     myclass(void): _i (0){}
+     myclass(const myclass& t){
+        std::cout << "copy constructor called" <<std::endl;
+        *this = t;
+    }
+myclass& operator=(const myclass& t){
+    _i = t._i ;
+    return *this;
+}
+int _i;
+};
+int main(int argc, char** argv){
+    myclass x;
+    myclass y(x);
+    x._i = 10;
+    y = x;
+}

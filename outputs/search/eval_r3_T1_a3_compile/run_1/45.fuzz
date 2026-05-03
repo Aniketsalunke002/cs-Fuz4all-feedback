@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int i;
+	do {
+		i = 0;
+		cout << "i: " << i << endl;
+		i++;
+	} while (i < 10);
+	
+	return 0;
+}

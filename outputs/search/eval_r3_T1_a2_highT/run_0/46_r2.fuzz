@@ -1,0 +1,12 @@
+#include <iostream>
+
+template <typename A> class A
+{
+public:
+void add(int, int) {};
+int& operator[](int x) { return a[x]; }
+A a;
+};
+int main()
+{
+int a[100],b[20]; A<int> c;c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.add(0,1);c.a.

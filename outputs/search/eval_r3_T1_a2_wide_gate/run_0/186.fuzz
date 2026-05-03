@@ -1,0 +1,7 @@
+#include <iostream>
+using namespace std;
+int main(){
+  char* mycar="volvo xC200";
+  mycar[0];
+  cout<<mycar<<endl;
+}

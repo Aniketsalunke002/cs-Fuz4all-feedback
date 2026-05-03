@@ -1,0 +1,7 @@
+#include <iostream>
+int main() {
+	int x;
+	char c;
+	std::cin >> x >> c;
+	std::cout << c;
+	return 0;

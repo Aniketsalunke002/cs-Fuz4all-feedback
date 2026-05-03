@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int num = 1;
+	int* pntr = &num;
+	cout << *pntr << endl;
+	*pntr += 10;
+	cout << num << endl;
+	num++;
+	cout << --num << endl;
+	++*(&num + 2);
+	cout << num << endl;
+	cout << *pntr++ << endl;
+	++num;
+	cout << *pntr << endl;
+	cout << (*pntr)-1 << endl;
+	return 0;
+}

@@ -1,0 +1,4 @@
+#include <iostream>
+int mutator(int* v, int x) {
+	int a = v[x];
+	if (a > 0) v[x] = -v[x];

@@ -1,0 +1,12 @@
+#include <iostream>
+ 
+#include <atomic>
+void foobar() {
+    std::atomic<int> x{0};
+    x = 0;
+    if (true) {
+    x = 1;
+} else if (false) {
+    x = 2;
+}
+}

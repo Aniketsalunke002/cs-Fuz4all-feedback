@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main()
+{
+	std::string i = "test";
+	std::string &x = i;
+	x = "hello";
+	std::cout << x << '\n';
+	return 0;
+}

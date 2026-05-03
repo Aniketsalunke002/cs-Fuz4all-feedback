@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+  char a[100];
+  cout << "NASA";
+  strcpy(a, "    IS     A");
+  strcat(a, "    BEST STUDY    ");
+  strcat(a, "CADEMY\n");
+  cout << a;
+}

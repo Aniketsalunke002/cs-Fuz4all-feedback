@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	cout << "Hello" << endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a,b;
+	cout << "enter first int: \n";
+	cin >> a;
+	b = static_cast<int>(a & 0xffffffff);
+	cout << "First int: " << b << endl;  
+	char c;
+	cout << "Enter char: \n";
+	cin >> c;
+	b = static_cast<int>(static_cast<char>(c + c));
+	cout << "char * char: " << b << endl;
+
+	float d;
+	cout << "Enter int: \n";
+	cin >> d;
+	long l = static_cast<long>(static_cast<double>(d));
+	cout << "int * double: " << l << endl;
+
+	uint32_t u32;
+	cout << "Input uint32: \n";
+	cin >> u32;
+	u32 = u32 << 10;
+	cout << u32 << endl;  
+	return 0;
+}
+ 
+

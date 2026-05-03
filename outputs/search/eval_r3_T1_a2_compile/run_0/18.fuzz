@@ -1,0 +1,9 @@
+#include <iostream>
+bool hello() {
+	std::cout << "Hello world" << std::endl;
+	return true;
+}
+int main() {
+	hello();
+	return 0;
+}

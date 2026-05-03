@@ -1,0 +1,30 @@
+#include <iostream>
+int main() {
+    const auto n = 10;
+    int a[n]{};
+    int b[n]{};
+    for (auto i = 0; i < n; i++)
+        a[i] = 2 * i;
+    for (auto i = 0; i < n; i++) {
+        a[i] = 3 * a[i];
+    }
+    for (auto i = 0; i < n; i++) {
+        b[i] = 2 * a[i];
+    }
+    for (auto i = 0; i < n; i++)
+        std::cout << b[i] << " ";
+    std::cout << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+int main() {
+    std::string input;
+    while (true) {
+        getline(std::cin, input);
+        if (input[0] == ';') {
+            break;
+        }
+        std::cout << input.length() << '\n';
+    }
+}

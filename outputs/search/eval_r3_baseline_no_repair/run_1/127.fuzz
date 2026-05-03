@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+template <class T>
+struct mystruct
+{
+	T x;
+};
+int main()
+{
+mystruct<float> a;
+a.x = 4.5;
+cout<<a.x<<endl;
+mystruct<int> b;
+b.x = 5;
+cout<<b.x<<endl;
+return 0;
+}

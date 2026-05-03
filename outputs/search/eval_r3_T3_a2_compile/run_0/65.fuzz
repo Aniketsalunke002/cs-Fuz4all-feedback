@@ -1,0 +1,19 @@
+#include <iostream>
+#include <cstring>
+#include <memory>
+#include <vector>
+constexpr size_t N = 96;
+int main()
+{
+     std::vector<char*> vec(N);
+     char *str = "abcdefghijklmnopqrstuvwxyz";
+     for(size_t i = 0; i < N; ++i)
+     {
+          vec[i] = str + i;
+     }
+     for(auto p : vec)
+     {
+          std::cout << p << std::endl;
+     }
+     return 0;
+}<jupyter_output><empty_output>

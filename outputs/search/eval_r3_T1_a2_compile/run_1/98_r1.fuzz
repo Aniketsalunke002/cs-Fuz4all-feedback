@@ -1,0 +1,9 @@
+#include <iostream>
+
+int onePlusOne() { return 1+1; }
+int main() {
+  int a=3;
+  std::cout<<a<<std::endl;
+  a=onePlusOne();
+  std::cout<<a<<std::endl;
+}

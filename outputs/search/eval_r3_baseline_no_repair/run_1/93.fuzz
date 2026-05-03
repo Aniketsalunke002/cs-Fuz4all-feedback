@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+const double PI = 3.1416;
+int main(){
+	cout << "The mutation change was to increment one more 1.0\n";
+	cout << 1.01*PI <<"\n";
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class A{
+	int a;
+public:
+	A(int b){
+		a = b;
+	}
+	void print(){
+		cout <<a <<endl;
+	}
+	friend ostream& operator<< (ostream &out, A obj);
+};
+ostream &operator<< (ostream &out, A obj){
+	out << obj.a;
+	return out;
+}
+A g = A(10);
+g.print();
+ 
+#include <iostream>
+using namespace std;
+struct B
+{
+	void print()
+	{
+		cout<< "This is the print method\n";
+	}
+};
+
+int main()
+{
+	B obj = B();
+	obj.print();
+	return 0;
+}

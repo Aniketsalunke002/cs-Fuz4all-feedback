@@ -1,0 +1,13 @@
+#include <iostream>
+
+#include <memory>
+
+int main()
+{
+    int x(1);
+    {
+        std::shared_ptr<int> y(std::make_shared<int>(x));
+        std::cout << *y << std::endl;
+    }
+    std::cout << x << std::endl;
+}

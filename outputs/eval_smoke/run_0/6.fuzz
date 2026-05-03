@@ -1,0 +1,13 @@
+#include <iostream>
+#include <array>
+#include <string>
+template<typename T>
+void print_string(T a, T b) {
+  std::cout << a << " " << b << std::endl;
+}
+template<typename T, typename... S>
+void print_string(array<T, sizeof...(S)> a, S... b) {
+  print_string(a[sizeof...(S)], b...);
+}
+int main() {
+  std::array<int,10> arr{32,48,64,80,96,112,128,144,160,176};

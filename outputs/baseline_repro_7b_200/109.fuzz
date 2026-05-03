@@ -1,0 +1,6 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+  assert(argc == 3);
+  using namespace std;
+  return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+#include <vector>
+int sub(int A, int B, int* C)
+{
+	return A-B;
+}
+int main() {
+	std::vector<int>* v = new std::vector<int>();
+	int x = 1;
+	int y = 1;
+	int z = sub(x, y, &v);
+	v->back() = z;
+	int z2 = v->front();
+	return z2;
+}

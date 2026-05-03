@@ -1,0 +1,14 @@
+#include <iostream>
+template<typename T>
+void print(const T& t)
+{
+	std::cout << t << std::endl;
+}
+int main(void)
+{
+	char c = '*';
+	char* ptr = &c;
+	print(ptr);
+	print(c);
+	return 0;
+}

@@ -1,0 +1,21 @@
+#include <iostream>
+int main() {
+  int a;
+  for (int i=0; i<1000; i++) {
+    a = a + 1;
+    if (a<=0) continue;
+    if (a>=10) break;
+  }
+  return 0;
+}
+ 
+#include <iostream>
+int *create_int[]() {
+  int a = 1;
+  return &a;
+}
+int main() {
+  int *p = create_int[0];
+  delete p; p = nullptr;
+  return 0;
+}

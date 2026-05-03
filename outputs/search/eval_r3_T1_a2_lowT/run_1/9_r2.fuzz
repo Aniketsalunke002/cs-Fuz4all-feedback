@@ -1,0 +1,19 @@
+#include <iostream>
+
+
+class myclass
+{
+public:
+  myclass(void) { std::cout << "Default constructor called\n"; }
+   
+  myclass(const myclass &a) : myclass (a) {
+    std::cout << "Copy constructor called\n";
+  }
+};
+
+int main(int argc, char **argv)
+{
+  std::cout << "sizeof myclass = "<< sizeof(myclass) << std::endl;
+  myclass x;
+  myclass y(x);
+}

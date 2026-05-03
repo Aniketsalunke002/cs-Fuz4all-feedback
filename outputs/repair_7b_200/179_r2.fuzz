@@ -1,0 +1,8 @@
+#include <iostream>
+
+int modify(auto& v) {
+  if (v == 0) {
+    v = 1;
+    return 1;
+  }
+  return

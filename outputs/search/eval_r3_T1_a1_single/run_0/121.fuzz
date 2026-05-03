@@ -1,0 +1,22 @@
+#include <iostream>
+#include<bits/stdc++.h>
+#define max 1000001
+typedef long long ll;
+
+
+int main ()
+{
+
+    std::cout << "mutating" << std::endl;
+    int x;
+    x =0;
+    int  a = max;
+    int b  = a + a;
+    int c = a - b;
+    std::cout << c << std::endl;
+    return 0;
+}
+
+ 
+ 
+

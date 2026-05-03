@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+
+struct A {
+    static const int IField = 10;
+    static const int JField = 20;
+    int iField, jField;
+    int function() { return iField + jField; }
+};
+
+int main() {
+    int i = 0;
+    A one= { i };
+    cout << "Size of one :" << sizeof(one) << " contents: " << one.iField << one.jField << endl;
+    return one.function();
+}

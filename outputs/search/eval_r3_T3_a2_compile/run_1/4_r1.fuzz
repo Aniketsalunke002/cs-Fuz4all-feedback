@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+template <class T>
+class MyPoint
+{
+private:
+    T x, y, z;
+public:
+    MyPoint(T x1, T y1, T z1) : x(x1), y(y1), z(y1) {}
+    T getX() { return x; }
+    T getY() { return y; }
+    T getZ() { return z; }
+    T sum() { return getX() + getY() + getZ(); }
+    bool operator==(MyPoint<T>& a) { return x == a.getX() && y == a.getY() && z == a.getZ();}
+    MyPoint<T>& operator = (const MyPoint<T> &a)                
+    {
+        x = a.getX();
+        y = a.getY();
+        z = a.getZ();
+        return *this;
+    }
+
+};
+int main()
+{
+    MyPoint<int> a(3, 5, 4), b(4, 5, 4), c(2, 6, 22);
+    if(a == c)
+        cout << "a equals c" << endl;
+    else
+        cout << "a not equals c" << endl;
+    if(a == b)
+        cout << "a equals b" << endl;
+    else
+        cout << "a not equals b" << endl;
+    return 0;
+}

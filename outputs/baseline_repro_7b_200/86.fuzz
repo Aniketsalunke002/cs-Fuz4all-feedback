@@ -1,0 +1,8 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+    auto c = 1;
+    if (true == c) {
+        c >>= c;
+    }
+    std::cout << c << std::endl;
+}

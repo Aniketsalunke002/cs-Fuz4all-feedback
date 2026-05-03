@@ -1,0 +1,23 @@
+#include <iostream>
+
+int main ()
+{
+    int a=444;
+    int *b=&a;
+    std::cout << "the value of the integer is " << a << std::endl;
+    std::cout << "setting value of the integer..." << std::endl;
+    a=333;
+    *b=222;
+    std::cout << "the value of the integer is now " << a << std::endl;
+    return 0;
+}
+//  
+// #include <iostream>
+// int *modify (int *pointer)
+// {
+//     int *pointer2=pointer;
+//     int *pointer3=pointer2;
+//     std::cout << "&pointer: " << pointer << std::endl;
+//     std::cout << "&pointer2: " << pointer2 << std::endl;
+//     std::cout << "&pointer3: " << pointer3 << std::endl;
+//     std::cout << "*pointer: " << *pointer << std::endl;

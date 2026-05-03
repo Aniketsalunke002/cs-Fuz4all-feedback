@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+double PI = 3.141593;
+int main()
+{
+	cout<<"Hello, World! I am a mutated program! ";
+	cout << "My mutation method was to increase PI constant. "<< (PI+10000.0)<<"\n";
+	return 0; 
+}
+ 
+#include <iostream>
+int main()
+{
+	int* ptr = new int(10);
+	int value = *ptr;
+	cout<<value<<endl;
+	ptr = nullptr;
+	return 0;
+
+}

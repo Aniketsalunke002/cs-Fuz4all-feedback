@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    int a[5]   = {0, 1, 2, 3, 4};
+    char* p   = "Hello, World!\n";
+    float* ptr = 1.2;
+    (*ptr)++;
+    (*p)++;
+    std::cout << a[4] << " " << p[2] << " " << ptr[0];
+}
+#include <iostream>
+#include <string>
+
+int length(const std::string &str) {
+    int result {0};
+    for(const auto &c: str) (void) ++result;
+    return (result);
+}
+
+void main() {
+    std::string s;
+    std::cin>>s;
+    std::cout<<length(s);
+}
+//

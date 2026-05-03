@@ -1,0 +1,7 @@
+#include <iostream>
+
+int main () {
+	char a[10] = "hello, world";
+	std::cout << a << std::endl;
+	return 0;
+}

@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+class Car {
+private:
+  int wheels;
+
+public:
+  Car(int wheels = 0) {
+    this->wheels = wheels;
+  }
+  int getWheels() {
+    return wheels;
+  }
+};
+Car car;
+static int wheels = 4;
+Car car1(4);
+int main() {
+  car.getWheels();
+  car = Car(3);
+  return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+#define CONST const
+
+class car {
+private:
+  const static int N_PASSENGERS = 2;
+};
+int main() {
+  CONST int passengers = car::N_PASSENGERS;
+  car car1;
+  car1.N_PASSENGERS;
+  return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+#define DEBUG true
+
+const int N = 10;
+const int N = 20;
+const int N = 10;
+const int N = 20;
+
+int N = 5;
+
+int n = 5;
+
+int main() {
+  return 0;
+}

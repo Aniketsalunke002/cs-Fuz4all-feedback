@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+    cout << sizeof(char) << '\n';
+    cout << sizeof(int) << '\n';
+    cout << sizeof(short) << '\n';
+    cout << sizeof(long) << '\n';
+    cout << sizeof(long long) << '\n';
+    return 0;
+}
+// 
+// ## Compiler flags
+// 
+// ## Compile and run the code
+// 
+// ## How to debug a C++ program

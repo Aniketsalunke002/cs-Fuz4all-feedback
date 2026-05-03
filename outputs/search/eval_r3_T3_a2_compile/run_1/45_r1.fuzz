@@ -1,0 +1,39 @@
+#include <iostream>
+
+#include <limits>
+int main(void) {
+   float myarray[10];
+
+   myarray[7] = std::numeric_limits<float>::epsilon();
+   myarray[8] = std::numeric_limits<float>::min();
+   myarray[9] = std::numeric_limits<float>::max();
+
+   std::cout << myarray[0] << " " << myarray[1] << " " << myarray[2] << " " << myarray[3] << " " << myarray[4] << " " << myarray[5] << " " << myarray[6] << " " << myarray[7] << " " << myarray[8] << " " << myarray[9] << std::endl;
+
+}
+
+//
+// #include <iostream>
+// int main(void) {
+//    int myarray[10];
+//     
+//  
+//  
+//  
+//  
+//  
+//  
+//    
+//    myarray[7] = std::numeric_limits<float>::epsilon();
+//    myarray[8] = std::numeric_limits<float>::min();
+//    myarray[9] = std::numeric_limits<float>::max();
+// 
+//    
+//    std::cout << myarray[0] << " " << myarray[1] << " " << myarray[2] << " " << myarray[3] << " " << myarray[4] << " " << myarray[5] << " " << myarray[6] << " " << myarray[7] << " " << myarray[8] << " " << myarray[9] << std::endl;
+//    
+// 
+//    
+// }
+#include <iostream>
+#include <limits>
+int main(void

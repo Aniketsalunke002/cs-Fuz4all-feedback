@@ -1,0 +1,8 @@
+#include <iostream>
+int main()
+{
+    int** int_pointer = new int*[1];
+    delete []int_pointer;  
+    int_pointer = nullptr;
+    return 0;
+}

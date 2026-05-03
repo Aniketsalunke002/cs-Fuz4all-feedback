@@ -1,0 +1,9 @@
+#include <iostream>
+
+#include <cmath>
+int main()
+{
+    std::cout << std::pow(int{1},int{1}) << '\n';
+    std::cout << std::pow(long double{3},int{3}) << '\n';
+    std::cout << std::pow(double{5},int{5}) << '\n';
+}

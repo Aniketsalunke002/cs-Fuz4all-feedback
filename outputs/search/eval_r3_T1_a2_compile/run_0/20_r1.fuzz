@@ -1,0 +1,22 @@
+#include <iostream>
+
+namespace namespace_world
+{
+    void hello()
+    {
+        std::cout << "Hello world" << std::endl;
+    }
+}
+namespace namespace_earth
+{
+    using hello_world = namespace_world::hello;
+    void hello()
+    {
+        std::cout << "Hello earth" << std::endl;
+    }
+}
+int main()
+{
+    namespace_earth::hello();
+    return 0;
+}

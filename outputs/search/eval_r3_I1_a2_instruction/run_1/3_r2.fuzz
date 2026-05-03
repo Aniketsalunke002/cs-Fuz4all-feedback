@@ -1,0 +1,43 @@
+#include <iostream>
+
+#include "point.hpp"
+
+struct PointInLine : public point, public virtual Line {
+    PointInLine(const Point& pt, const Line& l) : point(pt), Line(l) { }
+    PointInLine(const x_point& x_pt, const y_point& y_pt) : point(x_pt, y_pt) { }
+    PointInLine(const Point& pt) = default;
+    PointInLine(const int& xcoord, const int& ycoord) : point(xcoord, ycoord) { }
+};
+
+ 
+void test1() {
+    PointInLine myline(0, 0);
+}
+
+ 
+void test2() {
+    PointInLine * myPointerOfLine = new PointInLine(0, 0);
+    Point * myPointerToPoint = (new PointInLine(0, 0))->getPointAddress();
+    Point & myReferenceToPoint = (new PointInLine(0, 0))->getPointReference();
+}
+
+ 
+void test3(PointInLine line) { }
+
+ 
+class TestPointInLine : public PointInLine, public Line { };
+
+ 
+void test5() {
+    PointInLine line1(Point(0,0));
+    PointInLine line2 = Line(Point(0,0));
+}
+
+int main() {
+    test1();
+    test2();
+    test3(PointInLine(2, 3));
+    test5();
+
+    return 0;
+}

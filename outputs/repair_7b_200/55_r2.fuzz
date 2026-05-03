@@ -1,0 +1,5 @@
+#include <iostream>
+
+template <typename T> struct A{
+    int value = 123;
+    A<T>

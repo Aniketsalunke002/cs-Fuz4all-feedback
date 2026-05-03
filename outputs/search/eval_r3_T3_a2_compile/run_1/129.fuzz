@@ -1,0 +1,8 @@
+#include <iostream>
+void function() {
+	std::cout << "function() is called." << std::endl;
+}
+int main() {
+	int array[11];
+	function();
+}

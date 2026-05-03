@@ -1,0 +1,16 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+  using namespace std;
+  constexpr int k = 42;
+  static_assert(k==42, "[error]: This program will not compile!");
+  return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char* argv[]) {
+  using namespace std;
+  int i=0;
+  while constexpr ((i++)) 
+    cout<<"I like pizza"<<endl;
+  return 0;
+}

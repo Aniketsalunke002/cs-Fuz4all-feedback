@@ -1,0 +1,30 @@
+#include <iostream>
+
+#include <string>
+#include <fstream>
+using namespace std;
+int main()
+{
+     
+     fstream file;
+     string filename1="data.dat";
+     string file2="data1.dat";
+      
+     file.open(filename1,ios::app);
+     if(file.is_open())
+     {
+     	string str;
+     	cout<<"\nFile is Opened";
+     	cout<<"\nWrite anything or ENTER";
+     	
+     	 
+     	cin>>str;
+     	 
+     	file<<str<<endl<<endl;
+     }
+     
+     fstream file1;
+     file1.open(file2,ios::out | ios::in );
+     
+     if(file1.is_open())
+     {

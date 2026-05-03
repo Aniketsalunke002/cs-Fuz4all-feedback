@@ -1,0 +1,9 @@
+#include <iostream>
+
+#include "cell.hpp"
+
+int main(int argc, char *argv[]) {
+    cell<int> -> f += 1;
+    std::cout << cell<int> -> c << '\n';
+    std::cout << cell<int> -> f << '\n';
+}

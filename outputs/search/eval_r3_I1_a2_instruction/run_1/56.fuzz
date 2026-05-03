@@ -1,0 +1,4 @@
+#include <iostream>
+#include <span>
+#include <string>
+void foo_2(std::span<char,20>){}

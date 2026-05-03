@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[])
+{
+	int* px = new int[100];
+    int i;
+	for (i = 0; i < 100; i++)
+	{
+		px[i] = i;
+	}
+	for(i = 0; i < 100; i++)
+	{
+		cout << px[i] <<'' ;
+	}
+	cout << endl;
+	for(i = 90; i < 100; i++)
+	{
+		px[i] *= 2;
+	}
+	for(i = 0; i < 100; i++)
+	{
+		cout << px[i] <<'' ;
+	}
+	delete [] px;
+	return 0;
+}
+ 
+#include <iostream>
+#include <cmath>
+#include <cstdlib>
+using namespace std;
+
+ 
+void multiplytbl(int n)
+{
+    int i, j;
+     
+    cout << "\n\t*** Multiplication Table of " << n << " ***\n";
+
+     
+    for (i = 2; i <= n; i++)
+    {
+        for (j = 1; j <= n; j++)
+            cout << j << "\t" << i << "\t=" << i * j << endl;
+    }
+}
+
+ 
+int main(int argc, char *argv[])
+{
+    int c, d;
+    cout << "\n\nSelect operation : " << "\n1. multiply\n2. division\n3. exit\n" <<
+        endl;
+        cin >> c;
+        switch (c)
+        {
+        case 1:
+            int *num_1 = new int;
+            int *num_2 = new int;
+            cout << "Please enter two numbers : \n";
+            cout << "num_1 : ";
+            cin >> *num_1;
+            cout << "num_2 : ";
+            cin >> *num_2;
+            cout << "The multiplication result = " << *num_1 << '*' << *num_2 <<
+                '=' << *num_1 * *num_2 << endl;
+        break;
+        case 2:
+            int *num_3 = new int;
+            int *num_4 = new int;
+            cout << "Please enter two numbers : \n";
+            cout << "num_3 : ";
+            cin >> *num_3;
+            cout << "num_4 : ";
+            cin >> *num_4;
+            cout << "The multiplication result = " << *num_3 << '/' << *num_4 <<
+                '=' << *num_3 / *num_4 << endl;
+        break;
+        case 3:
+            cout << "Bye bye..." << endl;
+        break;
+        default:
+            cout << "Error, Operation is not valid" << endl;
+            
+        break;
+    }
+    return 0;
+}

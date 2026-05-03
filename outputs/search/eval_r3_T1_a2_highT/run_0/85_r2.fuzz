@@ -1,0 +1,19 @@
+#include <iostream>
+
+void __VERIFIER_assert(int cond){}
+void __VERIFIER_assume(int cond){}
+int main(){
+    int a = 0;
+    int b = 0;
+    std::cin>>a;
+    std::cin>>b;
+    if(a == 0 && b == 0){
+        __VERIFIER_assert(a==b);
+        __VERIFIER_assert(b > 0);
+        __VERIFIER_assume(a == b);
+    }
+    else if(a > 0 && b > 0){
+        __VERIFIER_assert(a > b);
+    }
+    return 0;
+}

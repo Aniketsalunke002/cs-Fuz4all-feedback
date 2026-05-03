@@ -1,0 +1,12 @@
+#include <iostream>
+#include <vector>
+int main()
+{
+    class A {
+    public:
+        int i;
+    };
+    std::vector<A> a;
+    std::vector<A>::iterator iter = a.begin();
+    iter->i++;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+#include <memory>
+int foo (){}
+int main ()
+{
+	auto autoarr = std::make_unique<int[]>(10);
+	auto autocpp = new int[10];
+	char charr[sizeof(foo())];
+	return 0;
+}

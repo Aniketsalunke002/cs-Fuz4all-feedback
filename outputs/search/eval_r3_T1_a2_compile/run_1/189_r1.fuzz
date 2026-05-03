@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+
+int mult(int x, int y);
+int main(){
+    int a,b;
+    
+    cin >> a;
+    cin >> b;
+    
+    cout << mult(a,b);
+    
+    return 0;
+}
+
+int mult(int x, int y) {
+	return (x*y);
+}

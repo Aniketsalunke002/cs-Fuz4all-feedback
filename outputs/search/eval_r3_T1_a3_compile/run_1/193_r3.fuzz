@@ -1,0 +1,18 @@
+#include <iostream>
+
+using namespace std;
+
+int main(void) 
+{
+    map<int, int> m;
+    {
+        int i = 0, j = 0, k = 0, a = 0, b = 0, l, sum;
+
+        a = m[i + j + k];
+        b = m[j + k];
+        a < b? l = a : l = b;
+        sum = l;
+        cout<<sum<<endl;
+    }
+    return 0;
+}

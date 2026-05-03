@@ -1,0 +1,43 @@
+#include <iostream>
+
+
+class Complex{
+    private:
+        float real;
+        float imaginary;
+    public:
+        void set_real_number(float real_number)
+        {
+            real = real_number;
+        }
+        void set_image_number(float image_number)
+        {
+            imaginary= image_number;
+        }
+        void set_real_imaginary(float real_number,float image_number)
+        {
+            imaginary = image_number;
+            real = real_number;
+        }
+        float get_real_number(void)
+        {
+            return real;
+        }
+        float get_image_number(void)
+        {
+            return imaginary;
+        }
+        Complex* return_self(void)
+        {
+            return this;
+        }
+};
+int main()
+{
+    Complex *number_1 = new Complex;
+    Complex *number_2 = new Complex;
+    number_1->set_real_imaginary(2,22);
+    std::cout << "The real number is: " << number_1->get_real_number() <<'\n'<<"The imaginary number is: "<<number_1->get_image_number() <<'\n'<<*number_1->return_self()<<" "<<number_1 <<'\n';
+    number_2->set_real_imaginary(3,33);
+    std::cout << "The real number is: " << number_2->get_real_number() <<'\n'<<"The imaginary number is: "<<number_2->get_image_number() <<'\n'<<*number_2->return_self()<<" "<<number_2 <<'\n';
+}

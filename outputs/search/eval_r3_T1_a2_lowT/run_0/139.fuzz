@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n, m;
+    int b = 1,p;
+    int c=1;
+    cin>>n;
+    cin>>m;
+    if((m<=n) && (n>=1) )
+    {
+        if(n==m)
+        {
+            cout<<1<<endl;
+             
+            while(c<=n)
+            {
+                b=b+1;
+                c++;
+            }
+        }
+        else
+        {
+            if((n/m)==(n/m))
+            {
+                p=n-(n-(c-1)*(m-1));
+                while(p>0)
+                {
+                    b=b+1;
+                    p=p-((m-1));
+                }
+            }
+            if((n/m)==(n/m))
+            {
+                p=n-(n-(c-1)*(m-1));
+                while(p>0)
+                {
+                    b=b+1; 
+                    p=p-((m-1));
+                }
+                cout<<b<<endl;
+            }
+        }
+    }
+    else 
+    {
+        cout<<"-1"<<endl;
+    }
+    return 0;
+}

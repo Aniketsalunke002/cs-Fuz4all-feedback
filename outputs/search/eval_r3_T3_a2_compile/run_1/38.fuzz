@@ -1,0 +1,12 @@
+#include <iostream>
+
+int main (void)
+{
+	A temp0;
+	A temp1(temp0);
+	
+	A temp;
+	temp=temp1;
+
+	return 0;
+}

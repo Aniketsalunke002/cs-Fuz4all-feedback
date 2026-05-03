@@ -1,0 +1,23 @@
+#include <iostream>
+#include <list>
+#include <algorithm>
+#include <memory>
+using namespace std;
+int main()
+{
+    std::allocator<int> alloc{};
+    auto p = std::allocator_traits<decltype(alloc)>::allocate(alloc, 5);
+    std::allocator_traits<decltype(alloc)>::deallocate(alloc, p, 5);
+}
+ 
+#include <iostream>
+#include <list>
+#include <algorithm>
+#include <vector>
+#include <memory>
+using namespace std;
+int main()
+{
+    vector<int> v{1,2,3,4,5,6,7,8,9,10};
+    auto  it = find(v.begin(), v.end(),5);
+}

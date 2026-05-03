@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+}<commit_msg>change name space to cpl<commit_after>#include <iostream>
+using namespace cpl;
+int main()
+{
+}
+#include <iostream>
+using namespace cpl;
+int main() {
+}

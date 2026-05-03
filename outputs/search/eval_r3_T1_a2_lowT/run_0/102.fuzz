@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main()
+{
+    std::cout << "please enter a number";
+    int a = 0;
+
+    std::cin >> a;
+    if ((a>=20)&&(a<=40))
+    {std::cout << "success";}
+    else
+    {
+        std::cout << "fail";}
+    }

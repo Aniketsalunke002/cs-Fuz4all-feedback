@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+	{
+		char x = '0';
+		std::cout << x;
+		std::cout << x;
+	}
+}

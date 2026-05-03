@@ -1,0 +1,12 @@
+#include <iostream>
+#include <mutex>
+int main(void) {
+    std::mutex mtx;
+    while (1) {
+        std::unique_lock<std::mutex> lk(mtx);
+        lk.release();
+         
+        mtx.lock();
+    }
+    return 0;
+}

@@ -1,0 +1,11 @@
+#include <iostream>
+
+class foo { private: int value = 0; };
+int main() {
+    foo x, y;
+    x.value = 4;
+    y.value = 8;
+    std::cout << ((x.value - 5) / 3) * ((y.value - 11) / 4);
+}
+
+// The same program as above, but with a minor modification

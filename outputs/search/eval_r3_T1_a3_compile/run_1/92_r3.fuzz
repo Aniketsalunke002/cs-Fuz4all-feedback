@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+class MyClass
+{
+public:
+	friend void operator+(MyClass obj1);
+	void fun(void)
+	{
+
+	}
+	friend void  operator-(MyClass obj1);
+};
+void operator+(MyClass obj1)
+{
+	cout << "Hello World";
+}
+void operator-(MyClass obj2)
+{
+	cout << "Hello World";
+}
+int main()
+{
+	MyClass a, b;
+	a = a + b;
+	b = a - b;
+	return 0;
+}

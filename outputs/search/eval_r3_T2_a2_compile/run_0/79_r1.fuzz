@@ -1,0 +1,14 @@
+#include <iostream>
+
+
+int main(int argc, char** argv) {
+    int a = 14;
+    int b = 5;
+    if (a > b) {
+        int c = 3;
+    } else {
+        int c = 4;
+    }
+    int d = a + b + c;
+    std::cout << d;
+}

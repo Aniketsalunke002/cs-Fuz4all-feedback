@@ -1,0 +1,6 @@
+#include <iostream>
+int main()
+{
+    std::unique_ptr<int> u{new int{5}};
+    std::cout<<*u<<'\n';
+}

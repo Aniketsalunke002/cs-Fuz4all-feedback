@@ -1,0 +1,49 @@
+#include <iostream>
+
+using namespace std;
+
+int main ()
+{
+    char *p = new char("a");
+    cout << *p << endl;
+    *p = 223;
+
+    char **pp = new char*;
+    *pp = new char("b");
+    cout << **pp << endl;
+
+    double ***ppp = new double***;
+    *ppp = new double**[5];
+    ***ppp = new double*[4];
+    **ppp = new double[3];
+    **(**ppp) = 1.0;
+    **(***ppp)[1] = 2.0;
+    **(**(***ppp)) = 3.0;
+
+    cout << **(**(**ppp)) << endl << *(**(**ppp)) << endl
+         << (**(**(***ppp)))[1] << endl << **(**(***ppp)) << endl
+         << *(**(**(***ppp))) << endl << ***ppp << endl
+         << **ppp << endl
+         << p << endl << pp << endl << ppp;
+
+    char ***pss = pp;
+    pss = new char**[3];
+    *pss = new char*[2];
+    **pss = new char("c");
+    **(*pss) = "c";
+    delete *pss;
+    pss = new char**[3];
+    *pss = new char*[2];
+    **pss = new char("d");
+    **(*pss) = "d";
+
+    cout << **(**pss) << endl << *(**(**pss)) << endl << *pss << endl << pss
+         << endl << pp << endl << ppp << endl 
+         << pss << endl << p << endl << pp << endl << ppp;
+
+    p = new char("b");
+    cout << *p << endl;
+    delete p;
+
+    return 0;
+}

@@ -1,0 +1,5 @@
+#include <iostream>
+void f(){
+    double x=15.0;
+    std::cout<<x<<" is equal to "<<++x+x--<<"\n";
+}

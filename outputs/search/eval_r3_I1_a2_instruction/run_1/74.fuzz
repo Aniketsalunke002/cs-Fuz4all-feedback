@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i{1};
+	float a[5], *p;
+	a[0] = 5;
+	a[1] = 7;
+	p = &(a[0]);
+	while(i<7)
+	{
+		a[i] = 28;
+		cout << p[i] << endl;
+		i++;
+	}
+	return 0;
+}

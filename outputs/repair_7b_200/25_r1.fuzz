@@ -1,0 +1,8 @@
+#include <iostream>
+
+void foo() {
+  #if 0
+  double y = sin(42.0);
+  #endif
+  std::cout << "Hello world!\n";
+}

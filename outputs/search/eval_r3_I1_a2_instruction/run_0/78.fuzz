@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int arr [15] = { 0, -1, 2, 3, 2, 8, 4, 7, 4, 10, 13, 14, 12, 45 };
+    cout << "Arr: ";
+    for (auto i: arr) cout <<i<<" ";
+    cout << "\n";
+    for (auto i = 0; i < 15; i++) {
+        for (auto j = i + 1; j < 15; j++) {
+            if (arr[i] == arr[j]) {
+                cout <<arr[i]<< " " <<"arr[i]: "<< arr[i] << " arr[J]: " << arr[j]<< "\n";
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    cout << "\n";
+    cout << "Arr: ";
+    for (auto i: arr) cout <<i<<" ";
+    return 0;
+}

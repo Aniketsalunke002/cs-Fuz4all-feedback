@@ -1,0 +1,21 @@
+#include <iostream>
+#include <cstdlib>
+class M1 {
+	public:
+		static int f1() {
+			return rand();
+		};
+		static int f2() {
+			return rand();
+		};
+		static int f3() {
+			return rand();
+		};
+};
+int main()
+{
+	std::cout << M1::f1();
+	std::cout << M1::f2();
+	std::cout << M1::f3();
+	return 0;
+}

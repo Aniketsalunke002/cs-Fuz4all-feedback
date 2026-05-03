@@ -1,0 +1,15 @@
+#include <iostream>
+ void __VERIFIER_assume(int cond) {
+  if(!(cond)) {
+     ERROR: goto ERROR;
+  }
+}
+#define MAX 32767
+int main() {
+  short x;
+  std::cin >> x;
+  __VERIFIER_assume(x >= 0 && x <= MAX);
+  x += 3;
+  std::cout << x << '\n';
+  return 0;
+}

@@ -1,0 +1,12 @@
+#include <iostream>
+int main() {
+    int* ptr;
+    int ary[6] = {i};
+    ptr = new int (i*i);
+    if (*ptr == (i*i))
+    {
+        std::cout << "OK" << '\n';
+    }
+    delete[] ptr;
+    return 0;
+}

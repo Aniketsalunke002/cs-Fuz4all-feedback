@@ -1,0 +1,10 @@
+#include <iostream>
+int main() {
+    int num = 100;
+    ++num;
+    int val = 5%num*num; 
+    val--;
+    ++val;
+    std::cout << val << std::endl;  
+    return 0;
+}

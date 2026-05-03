@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(){
+enum my_color {red, green, blue};
+my_color mycolor;
+mycolor=red;
+cout<<"in my color is "<<mycolor<<endl;
+cout<<cin.get()<<endl;
+}

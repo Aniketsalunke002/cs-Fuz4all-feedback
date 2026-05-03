@@ -1,0 +1,13 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+int main()
+{
+   std:: string name = "your name";
+   std::ofstream output("input.txt");
+   output << name << std::endl;
+   output.close();
+	return EXIT_SUCCESS;
+}
+
+

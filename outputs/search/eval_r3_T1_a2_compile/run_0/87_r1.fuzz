@@ -1,0 +1,29 @@
+#include <iostream>
+
+ #include <string.h>
+using namespace std;
+ int main()
+ {
+     char n[15];
+     char c;
+     cout<< "Enter the name: ";
+     cin>>n;
+     for(int i =0 ; i<strlen(n); i++){
+
+         if(n[i]=='v')
+         { if(i>0 && (n[i-1]=='a'|| n[i-1]=='e'|| n[i-1]=='I'|| n[i-1]=='u'|| n[i-1]=='o'||n[i-1]=='A'||n[i-1]=='E'||n[i-1]=='I'||n[i-1]=='U'||n[i-1]=='O'))
+         {
+             cout<<"not aviable";
+         }
+         else
+         {
+             cout<<"available";
+         }
+         break;
+         }
+          else
+         {cout<< ""<<n[i];}
+
+     }
+     return 0;
+ }

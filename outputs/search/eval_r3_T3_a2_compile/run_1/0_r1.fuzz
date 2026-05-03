@@ -1,0 +1,23 @@
+#include <iostream>
+
+
+#include <vector>
+#include <map>
+#include <set>
+
+#include "complex_stuff.hpp"
+
+int main(int argc, char *argv[]) 
+{
+  std::vector<double> v{1, 2};
+
+  auto vc = cplx{cplx{1.0}, cplx{2.0}};
+
+  std::map<int, cplx> m;
+  for(int i = 0; i < 10; ++i) {
+    m.insert(std::make_pair(i, cplx{i, -i}));
+    std::cout << m.at(i) << std::endl;
+  } 
+
+  return 0;
+}

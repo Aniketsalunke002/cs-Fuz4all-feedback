@@ -1,0 +1,13 @@
+#include <iostream>
+
+template<typename... Types>
+void print(const Types&... vals)
+{
+    std::cout << sizeof...(Types) << std::endl;
+}
+int main(void)
+{
+    auto str = "Hello";
+    auto x = print("1111",444.4,121315, str);  
+    return 0;
+}

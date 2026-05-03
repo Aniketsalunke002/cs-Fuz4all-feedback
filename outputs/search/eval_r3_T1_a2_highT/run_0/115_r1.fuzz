@@ -1,0 +1,5 @@
+#include <iostream>
+#if! __has_include ("")
+#include <cstdio>  // Note the inclusion of <cstdio> rather than <iostream>
+printf("Hi World")
+#else  // note the brackets to define conditionally included block

@@ -1,0 +1,36 @@
+#include <iostream>
+
+int main() {
+  int a;
+  int *b = &a;
+  for (int c = 0; c < 10 * 1024; c++)
+    if (c % 2 == 1) {
+      b[c / 2 - 1] = c * c;
+      if (b[c / 2 + 1019] < c - 5) std::cout << b[c / 2 - 1] << " " 
+                                         << b[c / 2 + 1019];
+    }
+  return 0;
+}
+
+class foo {
+  int &a;
+public:
+  foo(int &ref) : a(ref) {}
+  int getTheVal() { return a; }
+};
+
+class bar : public foo {
+  int val;
+public:
+  bar(int &ref):foo(ref), val(0) {}
+  void doWhatYouWant() {
+    int x = val;
+    a = 0;
+    val = x;
+  }
+};
+
+foo f(a);
+f.getTheVal();  
+return 0;
+}

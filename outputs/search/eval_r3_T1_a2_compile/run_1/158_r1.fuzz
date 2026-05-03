@@ -1,0 +1,9 @@
+#include <iostream>
+ 
+using std; 
+int main(){
+   int o[10];
+   o[33] = 34;
+   return o[9];
+}
+// Compiler works with the above code successfully.

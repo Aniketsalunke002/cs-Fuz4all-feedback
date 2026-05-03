@@ -1,0 +1,16 @@
+#include <iostream>
+
+class Foo {
+ public:
+  Foo() {}
+  bool operator()(const char* p) {
+    std::cout << p << "called" << std::endl;
+    return true;
+  }
+};
+int main() {
+  bool f = false;
+  Foo g;
+  g(f);
+  return 0;
+}

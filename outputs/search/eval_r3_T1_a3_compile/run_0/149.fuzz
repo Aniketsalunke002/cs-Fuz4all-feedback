@@ -1,0 +1,101 @@
+#include <iostream>
+using std::endl; 
+struct Base {
+    int a;
+    Base& operator++()
+    {
+        return *this;
+    }
+};
+struct Derived : public Base {
+    int b;
+};
+int main()
+{
+    Derived d;
+    Base& pb = d;
+    pb.a = 20;
+    ++pb;  
+    std::cout << d.a << "\t" << d.b << endl; 
+    return 0;
+}
+ 
+class Outer {
+    class Inner 
+    {
+        int i;
+        int j;
+        static int staticInner;
+        public:
+            Inner(int, int): i(j), j(i) {}
+            int func(Outer &outer, int t)
+            {
+                return staticInner + t;
+            }
+    };
+    Inner data;
+    public:
+        Outer(int i, int j) : data(i, j) {}
+        Inner& getInner(int t)
+        {
+            return data.func(*this, t);
+        }
+        int member()
+        {
+            return data.staticInner;
+        }
+}; 
+Outer::Inner::int Outer::Inner::staticInner = 200;
+int main()
+{
+    Outer outer(100, 1000);
+    int data = outer.getInner(10).j + outer.getInner(100).i;
+    std::cout << "result: " << data << endl;  
+    std::cout << "member: " << outer.member() << endl;  
+    return 0;
+}
+ 
+#include <iostream>
+using std::endl; 
+
+struct C01 {
+    static int staticData;
+    double nonStaticData;
+    constexpr int constantData()
+    {
+        return 100;
+    }
+};
+int main()
+{
+    constexpr C01 c = {1.0, 1, 10};
+    const C01* p = &c;
+    constexpr C01 c1 = *p;
+    std::cout << c.staticData << "\n";
+    std::cout << c.constantData() << "\n";
+    std::cout << c1.constantData() << "\n";
+    std::cout << C01::staticData << std::endl;
+    C01::staticData = 100;
+    std::cout << C01::staticData << std::endl;
+    return 0;
+}
+ 
+#include <iostream>
+using std::endl;
+int count; 
+count = "Cats!";  
+ 
+#include <iostream>
+using std::endl;
+int main()
+{
+    double x = 0.9;
+    float fx = 3.14;
+    int y = reinterpret_cast<int&>(x);
+    int fx1 = reinterpret_cast<int&>(fx);
+    std::cout << y << endl;  
+    std::cout << fx1 << endl;  
+    return 0;
+}
+/*
+Exercise 12.6

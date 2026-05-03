@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int arr [15] = {0};
+    int i;
+    int j;
+    int j1;
+    int j2;
+    int j3;
+    int duble_check;
+    j1 = 1;
+    j2 = 2;
+    for (j3 = 3; j3 < 15; j3++) {
+        if (arr[j] == arr[j1] || arr[j] == arr[j2] || arr[j1] == arr[j2]) {
+            duble_check = arr[j];
+            if (duble_check == arr[j1] && duble_check == arr[j2]) {
+                cout <<arr[j]<< " ";
+            }
+        }
+        if (j1 >= j2) {
+            j2++;
+            j3--;
+        } else {
+            j1++;
+            j2++;
+            j3--;
+        }
+    }
+    return 0;
+}

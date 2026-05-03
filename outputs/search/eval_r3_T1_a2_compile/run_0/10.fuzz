@@ -1,0 +1,15 @@
+#include <iostream>
+int main() {
+   int a = 25, b = 30;
+   if (a < b) {
+      a = b;
+   }
+   else if (a > b) {
+      b = a;
+   }
+   else {
+      b = a;
+   }
+   std::cout << "a = " << a << " b = " << b << std::endl;
+   return 1;
+}

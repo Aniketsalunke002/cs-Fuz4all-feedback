@@ -1,0 +1,26 @@
+#include <iostream>
+int main()
+{
+    int x(1);
+    struct test{
+        int (*fun)(int &);
+        int &y;
+    };
+    test x1 = {
+        [](int &yy){
+            yy += 2;
+            return 12;
+        }, x
+    };
+    int result;
+    auto y = std::move (x1.fun);
+    result = y(x1.y);
+    std::cout << result << std::endl;
+    std::cout << x << std::endl;
+     
+}
+ 
+#include <iostream>
+struct student{    
+    int id;  
+    char name[256];

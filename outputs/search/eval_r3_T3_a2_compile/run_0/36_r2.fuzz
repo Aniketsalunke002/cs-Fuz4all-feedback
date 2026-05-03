@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    char* s1 = new char[96];
+    for(int i = 0; i < 96; ++i)
+        s1[i] = static_cast<char>('a' + i);
+    delete[] s1;
+    return 0;
+}
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i = 2 + 2;
+    int* p = new int[3];
+    *p = 1;
+    p = new int[x? 3 : 4];
+    return 0;
+}
+#include <iostream>
+using namespace std;
+int main()
+{
+    int i = 1 + 2;
+    int* p = new int[3];
+    *p = 1;
+    p = new int[x? 3 : 4];
+    return 0;
+}

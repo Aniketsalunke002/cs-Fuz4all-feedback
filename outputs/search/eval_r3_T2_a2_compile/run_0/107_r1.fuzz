@@ -1,0 +1,43 @@
+#include <iostream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+namespace MyNamespace
+{
+  int foo(int a, int b, int c) {
+    while(a<b)
+        b--;
+    int tmp2 = 1;
+    while(tmp2<b)
+    {
+        while(a<b)
+            b--;
+        if (a/b==c/b)
+        {
+            tmp2 = b;
+        }
+        else if (a/b>c/b)
+        {
+            tmp2++;
+        }
+        else if (a/b<c/b)
+        {
+            b--;
+        }
+    }
+    while(a!= b)
+        b--;
+    return b;
+  }
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7, c;
+    while(cin >> c)
+    {
+        a = b;
+        b=c;
+    }
+    cout << MyNamespace::foo(a, b, c) << endl;
+}

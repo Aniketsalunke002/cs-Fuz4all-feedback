@@ -1,0 +1,45 @@
+#include <iostream>
+
+using namespace std;
+class A
+{
+	private:
+     	int iField1;
+     	int iField2;
+    public:
+    	A():iField1(777){iField2=999;}
+	A(int b):iField1(b){iField2=1;cout<<"default ctor used"<<endl;}
+	A(A &r): iField1(r.iField1),iField2(r.iField2-1){cout<<iField1<<' '<<iField2<<endl;}
+	template<class T> A& operator=(T b)
+	{
+		iField2=b;
+		return *this;
+	}
+};
+
+template<class T> A f(T& param)
+{
+	return param;
+}
+
+#include <iostream>
+using namespace std;
+class A
+{
+	private:
+     	int iField1;
+     	int iField2;
+    public:
+    	A():iField1(777){iField2=999;}
+	A(int b):iField1(b){iField2=1;cout<<"default ctor used"<<endl;}
+	A(A &r): iField1(r.iField1),iField2(r.iField2-1){cout<<iField1<<' '<<iField2<<endl;}
+	template<class T> A& operator=(T&b,int c)
+	{
+		iField2=b.iField2+c;
+	}
+};
+
+template<class T> A f(T& param,int c)
+{
+	return param=c;
+}

@@ -1,0 +1,8 @@
+#include <iostream>
+
+
+int main() {
+    A* a = malloc(sizeof(A));
+    std::cout << sizeof(A) << std::endl;
+    return 0;
+}

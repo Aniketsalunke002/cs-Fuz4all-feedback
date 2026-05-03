@@ -1,0 +1,137 @@
+#include <iostream>
+using namespace std;
+class scoreboard
+{
+    public:
+        void print_scoreboard()
+        {
+            cout << "Scoreboard" << endl
+            << "Score" << '\t'
+            << "Name" << '\t'
+            << "Time" << endl;
+        }
+};
+
+class player
+{
+    public:
+        player()
+        {
+            score = 0;
+            time = 0;
+        }
+        int get_score() const
+        {
+            return score;
+        }
+        void set_score(int num)
+        {
+            score = num;
+        }
+        double get_time() const
+        {
+            return time;
+        }
+        void set_time(double sec)
+        {
+            time = sec;
+        }
+        void print_player()
+        {
+            time += 1;
+            cout << endl
+            << "<Player " << i << ">" << '\t'
+            << score << '\t'
+            << time << endl;
+        }
+        int score;
+        double time;
+};
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+class player;
+
+class scoreboard
+{
+    public:
+        friend void print_player()
+        {
+            time += 1;
+            cout << endl
+            << "<Player " << i << ">" << '\t'
+            << score << '\t'
+            << time << endl;
+        }
+        friend bool operator<(const scoreboard& lhs, const scoreboard& rhs)
+        {
+            time += 1;
+            return (lhs.get_score() < rhs.get_score());
+        }
+        friend bool operator>=(const scoreboard& lhs,const scoreboard& rhs)
+        {
+            time += 1;
+            return (lhs.get_score() >= rhs.get_score());
+        }
+        scoreboard(int score):score(score)
+        {
+            time = 0;
+        }
+        void print_scoreboard()
+        {
+            cout << "Scoreboard" << endl
+            << "Score" << '\t'
+            << "Name" << '\t'
+            << "Time" << endl;
+        }
+        virtual void set_score(int score);
+        int get_score() const
+        {
+            return score;
+        }
+        int score;
+        int time;
+};
+ 
+#include <iostream>
+#include <string>
+class player
+{
+    public:
+        virtual player *clone() = 0;
+        string &getName();
+        player & setName(const string &name);
+        int getScore() const;
+        player &setScore(int score);
+    protected:
+    private:
+        string name;
+        int score;
+};
+
+class playerOne : public player
+{
+    public:
+        void increaseScore(int score);
+        void increaseTime

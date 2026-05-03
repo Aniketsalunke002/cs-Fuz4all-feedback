@@ -1,0 +1,18 @@
+#include <iostream>
+double sum(std::initializer_list<int> l)
+{
+    double total = 0.0;
+    for(const int i : l){
+        total += i;
+    }
+    return total;
+}
+int main(void)
+{
+    std::cout<<sum({1,3,10})<<std::endl;
+    std::cout<<sum({0,1,2,3,4,5,6,7,8,0})<<std::endl;
+    std::cout<<sum({-1,-2,-3,-4,-5,-6})<<std::endl;
+    std::cout<<sum({})<<std::endl;
+    std::cout<<sum({})<<std::endl;
+    std::cout<<sum({-2, -5, 7, 14, 20, 42})<<std::endl;
+}

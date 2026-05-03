@@ -1,0 +1,62 @@
+#include <iostream>
+
+using namespace std;
+#include <bits/stdc++.h>
+using namespace std;
+template<typename T>
+struct node {
+	T value;
+	node<T>* next;
+};
+template<typename T>
+void push_back(node<T>** head_ref,T new_data)
+{
+	node<T>* new_node = new node<T>;
+	new_node->value = new_data;
+	new_node->next = NULL;
+	node<T>* last = *head_ref;
+	if (*head_ref == NULL)
+	{
+		*head_ref = new_node;
+		return;
+	}
+	while (last->next!=NULL)
+		last = last->next;
+	last->next = new_node;
+}
+template<typename T>
+void reverse_nodes(node<T>** head_ref) {
+	node<T>* first = *head_ref;
+	node<T>* second = NULL;
+	node<T>* third = NULL;
+	while (first) {
+		third = second;
+		second = first;
+		first = first->next;
+		second->next = third;
+	}
+	*head_ref = second;
+}
+template<typename T>
+void print_list(node<T>* n)
+{
+	while (n!=NULL)
+	{
+		cout << n->value << " ";
+		n = n->next;
+	}
+	cout << endl;
+}
+int main(int argc, char const *argv[])
+{
+	node<int>* head = NULL;
+	push_back(&head,6);
+    push_back(&head,5);
+    push_back(&head,4);
+    push_back(&head,3);
+    push_back(&head,2);
+    push_back(&head,1);
+	reverse_nodes(&head);
+	print_list(head);
+    return 0;
+}

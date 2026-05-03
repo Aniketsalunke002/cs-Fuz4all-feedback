@@ -1,0 +1,6 @@
+#include <iostream>
+int main2(){
+bool a=0;
+std::cout << __builtin_expect(a,1) << "\\n";
+return  __builtin_expect(a,0);
+}

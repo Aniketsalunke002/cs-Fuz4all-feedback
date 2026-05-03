@@ -1,0 +1,12 @@
+#include <iostream>
+int foo() const
+{
+    std::cout << "foo" << std::endl;
+}
+int main()
+{
+    int (*p)() const = foo;
+    (*p)();  
+    std::cout << (void*)p << std::endl;
+    return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int a, b;
+    int max {2147483647}, min {-2147483648};
+    std::cout << "Please enter a and b:" << std::endl;
+    std::cin >> a >> b;
+    std::cout << "The value of a is" << a << "and the value of b is" << b << std::endl;
+    if (a + b > max || a + b < min) {
+        cout << "We cannot carry out this operation";
+    } else {
+        cout << "The result of the sum is" << a + b << endl;
+    }
+}

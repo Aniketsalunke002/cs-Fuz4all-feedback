@@ -1,0 +1,11 @@
+#include <iostream>
+using std::cout; using std::endl;
+int main () {
+    int a1[] = { 01, 02, 03, 04, 05, 06, 07, 06 };
+
+    for (unsigned int i = 0; i < 512; i++) {
+        if (a1[i] < 0 || a1[i] > 256) return 1;
+        if (a1[i]) return 2;
+    }
+    return 0;
+}

@@ -1,0 +1,43 @@
+#include <iostream>
+
+#include <memory>
+
+class C {
+  void* memory_;   
+public:
+  C() : memory_(malloc(sizeof(C))) {}
+};
+
+std::auto_ptr<C> createCpp() {   }
+
+int main() {
+  std::auto_ptr<C> p(createCpp());
+  return 0;
+}
+#include <iostream>
+#include <memory>
+
+class C {
+  void* memory_;   
+public:
+  C() : memory_(malloc(sizeof(C))) {}
+  ~C() { free(memory_); }
+};
+
+std::auto_ptr<C> createCpp() {   }
+
+int main() {
+  std::auto_ptr<C> p(createCpp());
+  return 0;
+}
+#include <iostream>
+#include <memory>
+
+class C {
+  void* memory_;   
+public:
+  C() : memory_(malloc(sizeof(C))) {}
+  ~C() { free(memory_); }
+};
+
+std::auto_ptr<C> createCpp() {   }

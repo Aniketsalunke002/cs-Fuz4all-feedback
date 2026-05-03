@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main(int argc, char* argv[]) {
+	int a;
+	cout << "enter int (1): \n";
+	cin >> a;
+	if (a > 1) 
+		a++;
+	if (a > 1) 
+		a--;
+
+	cout << "int: " << a << endl; 
+	return 0;
+}
+ 
+ 
+ 
+
+ 
+ 

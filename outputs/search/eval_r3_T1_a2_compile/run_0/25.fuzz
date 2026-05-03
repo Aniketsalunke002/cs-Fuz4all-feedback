@@ -1,0 +1,12 @@
+#include <iostream>
+namespace namespace_world {
+	void hello() {
+		std::cout << "Hello woll" << std::endl;
+	}
+}
+int main() {
+	namespace_world::hello();
+	 
+	namespace_world::hello();
+	return 0;
+}

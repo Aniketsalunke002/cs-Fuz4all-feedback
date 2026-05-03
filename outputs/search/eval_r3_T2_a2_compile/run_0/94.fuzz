@@ -1,0 +1,24 @@
+#include <iostream>
+using std::cout;
+using std::endl;
+class Foo {
+public:
+    int getFoo(int a, int b) const {
+        return 6;
+    }
+    void setResult(int a) {
+        foo = a;
+    }
+    int getResult() {
+        return foo;
+    }
+private:
+    int foo;
+};
+int main(int argc, char** argv)
+{
+    Foo obj;
+    obj.setResult(obj.getFoo(12, 10));
+    cout << obj.getResult() << endl;
+}
+

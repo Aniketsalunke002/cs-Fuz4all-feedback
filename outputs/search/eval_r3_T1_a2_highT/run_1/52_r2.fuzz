@@ -1,0 +1,46 @@
+#include <iostream>
+
+struct cell {
+	bool alive;
+	cell() : alive(false){}
+};
+
+class game {
+	cell *cells;
+	unsigned size;
+	int get_mut() {
+		int mut;
+		std::cin >> mut;
+		std::cin.get();
+		return mut;
+	}
+
+public:
+	game(unsigned newsize) :
+		cells(new cell[newsize]),
+		size(newsize/2) {
+
+	}
+
+	~game() {
+		delete[] cells;
+	}
+
+	cell &get(unsigned x,unsigned y) {
+		return (x<size)&&(y<size)? cells[(x+y)*2+(y&y)] : cells[0];
+	}
+	int get_mut();
+};
+
+int game::get_mut() {
+	int mut;
+	std::cout << "please enter mutation: ";
+	std::cin >> mut;
+	std::cin.get();
+
+	return mut;
+}
+
+int main() {
+	unsigned size;
+	std::cout << "please enter the size of the game

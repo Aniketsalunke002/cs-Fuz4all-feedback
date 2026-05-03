@@ -1,0 +1,6 @@
+#include <iostream>
+int main(int argc, char **argv) {
+    int counter = 1, step = -100;
+
+    while (counter < 100) {
+        

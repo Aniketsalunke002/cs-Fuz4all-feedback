@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double val; 
+    cout << "How much it your monthly wage: ";
+    cin >> val; 
+
+    if (val <= 0) {
+        cout << "Invalid entry...quitting";
+    }
+    else if (val > 10000){
+        cout << "Great Job";
+    }
+    else if (val >= 5001 && val <= 9999) {
+        cout << "Not bad ";
+    }
+    else if (val >= 9001 && val <= 19999) {
+        cout << "Still good!";
+    }
+    else if (val >= 19001 && val <= 29999) {
+        cout << "Excellent but still a little wage";
+    }
+    else {
+        cout << "No wonder you didn't get the offer, bummer";
+    }
+}
+
+
+
+

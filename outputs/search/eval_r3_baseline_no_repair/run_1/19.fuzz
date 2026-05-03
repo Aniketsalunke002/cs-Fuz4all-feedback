@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main()
+{	double a;
+	a = 0x12345678 + 1;
+	cout << "a=" <<  a << endl;
+	a += 10;
+	cout << "a=" << a << endl;
+	a -= 25;
+	cout << "a=" << a << endl;
+	a *= 10;
+	cout << "a=" << a << endl;
+	a /= 25 * 10;
+	cout << "a=" << a << endl;
+	cout << 1.2 + 2.5 * 0.25 << endl;
+	cout << (1.2 + 2.5 - 5.7) / 4.2 << endl;
+	return 0;
+}

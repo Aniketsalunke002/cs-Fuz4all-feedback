@@ -1,0 +1,22 @@
+#include <iostream>
+int main()
+{
+    int a = 3;
+    a = a + 2;
+    a = a - 1;
+    std::cout << a << std::endl;
+}
+ 
+ 
+#include <iostream>
+int main()
+{
+    int a = 3;
+    std::cout << a << std::endl;
+}
+```
+
+<!-- section start -->
+<!-- attr: { id:'', class:'slide-section', showInPresentation:true, hasScriptWrapper:true } -->
+# Conclusions
+##  The C++ Programming Language

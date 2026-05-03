@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a;
+	cout << "enter first int: \n";
+	cin >> a;
+	int* p = &a;
+	*p = *p | 1;
+	cout << "First int: " << a << endl;  
+	char c;
+	cout << "Enter char: \n";
+	cin >> c;
+	*p = *p + static_cast<int>(static_cast<char>(c) + static_cast<char>(c));
+	c = static_cast<char>(*p);
+	cout << "char * char: " << c << endl;
+	float d;
+	cout << "Enter int: \n";
+	cin >> d;
+	*p = *p + static_cast<int>(static_cast<long>(static_cast<double>(d)));
+	cout << "int * double: " << a << endl; 
+	uint32_t u32;
+	cout << "Input uint32: \n";
+	cin >> u32;
+	uint32_t* u32p = &u32;
+	*u32p *= 2;
+	cout << u32 << endl;  
+	return 0;
+}

@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+
+class C{
+public:
+    int x{5};
+};
+
+class CD:public C
+{
+public:
+    void F(int y){
+        x = y;
+        this->x = 7;
+    }
+    bool operator ==(const CD& rhs)
+    {
+        return ((this->x == rhs.x) && CD::x == rhs.CD::x);
+    }
+    bool operator!=(const CD& rhs)
+    {
+        return!(this->x == rhs.x || CD::x == rhs.CD::x);
+    }
+};
+
+int main()
+{
+    CD A{3};
+    int y{4};
+    A.F(y);
+    cout<<A.x<<endl;
+
+    cout<< (A == A)? "true" : "false"<<endl;
+    cout<< (A!= CD(3))? "true" : "false"<<endl;
+    return 0;
+}

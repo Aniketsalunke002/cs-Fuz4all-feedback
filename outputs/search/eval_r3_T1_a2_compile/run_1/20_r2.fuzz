@@ -1,0 +1,45 @@
+#include <iostream>
+
+void print_numbers(const std::initializer_list<int>& i_list){
+    for(auto i = i_list.begin(); i!= i_list.end(); i++){
+        std::cout << *i << " ";
+    }std::cout << std::endl;
+}
+int mutate(std::initializer_list<int>& i_list){
+    int i = i_list.size() - 1;
+    while(i >= 0){
+        --i;
+        i_list.push_back(i_list[i]);
+        i_list.pop_back();
+    }return i_list.size();
+}
+int main()
+{
+    std::initializer_list<int> list {23,67,4,9,76,1};
+    print_numbers(list);
+    int size = mutate(list);
+    std::cout << size;
+    print_numbers(list);
+}
+// Output:
+// 67 1 4 76 9 23 0
+// 10
+// 67 1 4 76 9 23 0
+//
+#include <iostream>
+void print_numbers(const std::initializer_list<int>& i_list){
+    for(auto i = i_list.begin(); i!= i_list.end(); i++){
+        std::cout << *i << " ";
+    }std::cout << std::endl;
+}
+int mutate(std::initializer_list<int>& i_list){
+    int i = i_list.size() - 1;
+    while(i >= 0){
+        --i;
+        i_list.push_back(i_list[i]);
+        i_list.pop_back();
+    }return i_list.size();
+}
+int main()
+{
+    std::initializer_list<int> list {23,

@@ -1,0 +1,5 @@
+#include <iostream>
+int main(){ 
+	int var1(10);
+	std::cout<<var1+10<<std::endl;
+}

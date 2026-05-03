@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std; 
+int foo()
+{
+  cout << "foo.cpp (mutated) source code in foo" << endl;
+  return 1;
+}
+int main() {
+  cout << "foo.cpp source code in main" << endl;
+  foo();
+  return 0;
+}

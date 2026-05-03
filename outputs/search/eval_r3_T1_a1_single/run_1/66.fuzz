@@ -1,0 +1,29 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+	int age = 29;
+	string favfoods = "pizza, cocktails, milk sandwich, and chips";
+	cout << "Why Hello Bamboo!" << endl;
+	cout << "Babies are called \"Dad-balls\"!" << endl;
+	cout << "Babies are fun to play with!" << endl;
+	cout << "Babies are fun to have fun with!" << endl;
+	cout << "Babies are so fat!" << endl;
+	cout << "A baby can talk until it cries!" << endl;
+	cout << "A baby can talk until it cries in \"Baboons\"" << endl;
+	cout << "A baby can talk forever!" << endl;
+	cout << "Babies need a \"cozy spot\"" << endl;
+	cout << "Babies need a new \"cozy spot\"" << endl;
+	cout << "I love " << favfoods << "!" << endl;
+	cout << age++ << " years old" << endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+	cout << "Howdy Bamboo!" << endl;
+	return 0;
+}

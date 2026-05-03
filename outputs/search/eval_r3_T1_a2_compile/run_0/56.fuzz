@@ -1,0 +1,12 @@
+#include <iostream>
+ using namespace std; 
+int main() 
+{ 
+       double pi, radius; 
+       cout << "Enter Radius of Circle : "; 
+       cin >> radius; 
+       double area; 
+       area = pi * radius * radius; 
+       cout << "Area of Circle  : " << area ; 
+       return 0; 
+}

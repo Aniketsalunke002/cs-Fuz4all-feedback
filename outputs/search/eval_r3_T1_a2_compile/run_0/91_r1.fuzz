@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+int main(){
+     int n;
+      cout<< "Enter the n : \n ";
+      cin>> n;
+      if( n >= 20){
+           cout<<endl<< "YES\n";
+       }
+       else {
+           cout<<"NO \n";
+       }
+   return 0;
+}
+//  
+// #include <iostream>
+// using namespace std;
+// int main(){
+//      int start, end;
+//      cout<<"Enter the  start time in seconds : ";
+//      cin>>start;
+//      cout<<endl<<"Enter the  end time in seconds : ";
+//      cin>>end;
+//      cout<<"It has taken "<<endl<<(end-start)<<endl<<"seconds since start to finish";
+//      return 0;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// int main(){
+//      int year, rem,rem2;
+//      cout<<"Enter the year :";
+//      cin>>year;
+//      rem = year%4;
+//      rem2 = year%100;
+//      rem2 = rem2%400;
+//     if( rem == 0){
+//         if(rem2 ==0)
+//         {cout<<" It is a leap year";}
+//         else
+//         {cout<<"It is not a leap year";}
+//     }
+//     else{cout<<"It is not a leap year";}
+//     return 0;
+// }

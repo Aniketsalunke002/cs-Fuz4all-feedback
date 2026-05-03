@@ -1,0 +1,74 @@
+#include <iostream>
+using std::cout; using std::endl;
+int main () {
+    char c1, c2;
+    short s1, s2;
+    int i1, i2, i3;
+    float f1, f2;
+    int a1[7];
+    int* pa1=&a1[0];
+    a1[5]=1;
+    a1[6]=2;
+    a1[1]=7;
+}
+ 
+#include <iostream>
+#include <string>
+using std::cout; using std::endl;
+using std::string;
+
+class A{
+public:
+    void printA () {
+        cout << "class A" << endl;
+    }
+};
+
+class B{
+public:
+    virtual void printB () = 0;
+};
+
+void printD (double){
+    cout << "double" << endl;
+}
+
+class C:public A, public B
+{
+public:
+    void printC () {
+        cout << "class C" << endl;
+    }
+
+    void printB () {
+        cout << "class B" << endl;
+    }
+};
+void printString (string s){
+    cout << &s << endl;
+}
+
+void printArray (int *pa, int n){
+    for (int i = 0; i < n; i ++) {
+        std::cout << *(pa + i) << endl;
+    }
+}
+
+int main () {
+    C c1;
+    c1.printA();
+    c1.printB();
+    c1.printC();
+    B b1;
+    b1.printB();
+    printD(1);
+    printD(1.0f);
+    printString("world");
+    printArray(a1, 4);
+}
+ 
+     
+     
+     
+     
+     

@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main() {
+    int a[3] = {1, 2, 3};
+    int b = a[2];
+    std::cout << b << std::endl;
+    b++;
+    std::cout << a[2] << std::endl;
+    return 0;
+}

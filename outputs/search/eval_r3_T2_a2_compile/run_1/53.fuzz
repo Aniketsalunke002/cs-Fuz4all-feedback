@@ -1,0 +1,16 @@
+#include <iostream>
+int main()
+{
+    std::cout << 10 <<'' << 30 <<'' << 50 << '\n';
+}
+ 
+#include <iostream>
+#include <string>
+std::string greeting{"Hello"};
+void print(const std::string& v) { std::cout << v << '\n'; }
+
+int main()
+{
+    print("World");
+    print(greeting);
+}

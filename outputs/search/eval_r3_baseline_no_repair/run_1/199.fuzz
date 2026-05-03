@@ -1,0 +1,13 @@
+#include <iostream>
+using namespace std;
+int main() {
+ int m = 13;
+ float f = 1.2;
+ cout << 3 +3*3*3 ;
+ cout << 3 +3*3/3 ;
+ cout << 3 +3*3*f*f ;
+ cout << 3 +3*3*m*f ;
+ cout << f +f +3*m*f ;
+ cout << 3 +f +f +f +f*f*f + f ;
+ return 0;
+}

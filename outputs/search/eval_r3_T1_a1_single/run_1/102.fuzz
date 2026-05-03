@@ -1,0 +1,40 @@
+#include <iostream>
+using namespace std;
+class Point {
+public:
+	Point(int,int,int,int);
+	virtual ~Point();
+	int x;
+	int y;
+	int z;
+	int w;
+};
+Point::Point(int val1,int val2,int val3,int val4):x(val1),y(val2),z(val3),w(val4)
+{
+}
+Point::~Point()
+{
+}
+class Point2 : public Point
+{
+public:
+	Point2(int,int,int,int);
+	void printPoint();
+	virtual ~Point2();
+};
+Point2::Point2(int val1,int val2,int val3,int val4):Point(val1,val2,val3,val4)
+{
+}
+void Point2::printPoint()
+{
+	cout << " x = " << x << " y = " << y << " z = " << z << " w = " << w << endl;
+}
+Point2::~Point2()
+{
+}
+int main()
+{
+	Point2 p(4,7,1,2);
+	p.printPoint();
+	return 0;
+}

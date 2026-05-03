@@ -1,0 +1,53 @@
+#include <iostream>
+
+
+
+struct Car{};
+
+class Foo
+{
+public:
+	 
+	 
+	 
+	Foo(const Foo &rhs) : bar((const Car *) rhs.bar)
+	{
+
+	}
+
+
+	void SetBar(const Car * bar)
+	{
+		this->bar = bar;
+	}
+
+	const Car * GetBar() const
+	{
+		return this->bar;
+	}
+
+private:
+	const Car *bar;
+};
+
+
+int main()
+{
+
+	Foo f1;
+	Foo f2;
+
+	Car * c1 = new Car;
+	Car * c2 = new Car;
+
+	c1->name = "Toyota";
+	c2->name = "Honda";
+
+	f1.SetBar(c1);
+	f2.SetBar(c2);
+
+	std::cout << f1.GetBar()->name << std::endl;
+	std::cout << f2.GetBar()->name;
+
+	return 0;
+}

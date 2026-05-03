@@ -1,0 +1,25 @@
+#include <iostream>
+
+struct Node {
+    Node *next;
+    int val;
+    Node(int val) :val(val) {
+        next = nullptr;
+    }
+    Node* getNext() {
+        return next;
+    }
+    int getVal() {
+        return val;
+    }
+};
+int main(void) {
+    Node *p = new Node(99);  
+    Node *ptr = new Node(*p->val);
+    p->next = ptr;
+    std::cout << ptr->getVal() << '\n';
+    std::cout << p->val << '\n';
+    delete p;
+    delete ptr;
+    return 0;
+}

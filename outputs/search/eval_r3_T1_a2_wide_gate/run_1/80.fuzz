@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+int main (int argc, char **argv){
+    std::string my_string = "Hello world!!!";
+    std::string my_size = std::string("Hello world!!!").size();
+    std::cout << "New program size is : " <<  my_size << std::endl;
+
+    for(size_t i = 0; i < my_size; i++){
+      if (i < my_size){
+        std::cout << "New string is : " << my_string[i];
+      }
+      else{
+       std::cout << my_string[i];
+      }
+    }
+    std::cout << std::endl;
+   }
+ 
+#include <iostream>
+#include <string>
+int main (int argc, char **argv){
+  std::string my_string = "Hello world!!!";
+  for(auto &i: my_string){
+    if(i >= 'a' && i <= 'z'){
+      i = i - 32;
+    }
+  std::cout << i;
+  }
+  std::cout << my_string << std::endl;
+}

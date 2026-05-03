@@ -1,0 +1,35 @@
+#include <iostream>
+
+#include <map>
+#include <unordered_map>
+#include <functional>
+
+template <typename Map, typename MapIterator>
+void move_insert(Map &map, MapIterator it)
+{
+    std::unordered_map<typename Map::key_type, typename Map::mapped_type> umap;
+    std::map<typename Map::key_type, typename Map::mapped_type> m;
+
+    std::function< void (MapIterator && ) const > fn = [&] (MapIterator it)
+    {
+        umap.emplace_hint(umap.end(), it.first, it.second);
+        m.insert(std::move(*it));
+    };
+
+    fn(std::move(it));
+
+    std::for_each(umap.begin(), umap.end(), [](const auto &m){std::cout << m.first << " " << m.second << std::endl;});
+    std::for_each(m.begin(), m.end(), [](const auto &m){std::cout << m.first << " " << m.second << std::endl;});
+}
+
+int main(int argc, char *argv[])
+{
+    std::map<int, std::string> map;
+    map.insert(std::make_pair(0, "zero"));
+    map.insert(std::make_pair(1, "one"));
+    map.insert(std::make_pair(2, "two"));
+
+    move_insert(map, std::make_move_iterator(map.find(0)));
+
+    return 0;
+}

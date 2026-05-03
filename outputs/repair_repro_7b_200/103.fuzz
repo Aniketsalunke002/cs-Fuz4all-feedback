@@ -1,0 +1,12 @@
+#include <iostream>
+int array[3]{10,20,30};
+int& array_ref(int i)
+{
+    return array[i];
+}
+int main(void) {
+    std::cout << array[1] << std::endl;
+    array_ref(1) = 100;
+    std::cout << array[1] << std::endl;
+    return 0;
+}

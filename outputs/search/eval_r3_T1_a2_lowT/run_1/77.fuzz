@@ -1,0 +1,73 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    double value = 0;
+    double epsilon = 0.000001;
+    bool flag = true;
+    while (flag)
+    {
+        cout << "Please input num of years:";
+        cin >> value;
+        if (value < 0)
+        {
+            cout << "Invalid Input";
+            continue;
+        }
+        flag = false;
+    }
+    cout << "Years passed: " << value << "\n"
+         << "Earth rotation time: " << value / (3652422.6) << " s\n";
+}
+ 
+#include <iostream>
+using namespace std;
+int main(int argc, char** argv)
+{
+    int a, b, c;
+    cout << "Please input numbers:";
+    char end[2] = "\0";
+    cin.getline(end, 2);
+    string strA;
+    getline(cin, strA);
+    stringstream buffer(strA);
+    buffer >> a;
+    b = a;
+    char ch;
+    cout << "Please input operator:";
+    cin >> ch;
+    while (ch!='=')
+    {
+        c = 0;
+        buffer >> c;
+        switch (ch)
+        {
+        case '+':
+            b += c;
+            break;
+        case '-':
+            b -= c;
+            break;
+        case '*':
+            b *= c;
+            break;
+        case '/':
+            b /= c;
+            break;
+        default:
+            cout << "Operater error" << endl;
+            b = 0;
+            break;
+        }
+        cout << "Please input numbers:";
+        cin >> ch;
+    }
+    string strB;
+    strB.append(1, ch);
+    strB.append(1, '\0');
+    getline(cin, strB);
+    stringstream out(strB);
+    out << b << endl;
+    return 0;
+}
+ 

@@ -1,0 +1,12 @@
+#include <iostream>
+void printSquareOfNumber(int num)
+{
+    if(num > 0)
+    {
+        std::cout<<num<<std::endl;
+        std::cout<<num*num<<std::endl;
+    }
+}
+int main()
+{
+    printSquareOfNumber(30);

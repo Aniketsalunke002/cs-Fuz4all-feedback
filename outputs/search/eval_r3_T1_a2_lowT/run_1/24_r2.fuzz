@@ -1,0 +1,15 @@
+#include <iostream>
+
+class myclass{
+public :
+    myclass(void):_i(0){}
+    myclass(const myclass& t):_i(t._i){
+        std::cout << "copy constructor called" <<std::endl;
+    }
+    int _i;
+};
+int main(int argc, char** argv){
+    std::shared_ptr<myclass> ptr_x(new myclass());
+    std::shared_ptr<myclass> ptr_y(ptr_x);
+    ptr_x->_i = 10;
+}

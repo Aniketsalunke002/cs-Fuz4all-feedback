@@ -1,0 +1,19 @@
+#include <iostream>
+
+int main(int argc, char * argv[]) {
+  int i = 1;
+  std::cout << i << std::endl;
+  i += 1;
+  std::cout << i << std::endl;
+}
+ 
+#include <iostream>
+int main(int argc, char * argv[]) {
+  int i = 1;
+  if (i == 2) {
+    i += 1;
+  } else {
+    i -= 1;
+  }
+  std::cout << i << std::endl;
+}

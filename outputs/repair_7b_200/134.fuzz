@@ -1,0 +1,33 @@
+#include <iostream>
+int main()
+{
+    int a = 3;
+    a = 1;
+    std::cout << a << std::endl;
+}
+ 
+#include <iostream>
+
+class exampleclass
+{
+  public:
+    int m_int;
+    std::string m_string;
+};
+
+class exampleclass2
+{
+  public:
+    int m_int;
+    std::string m_sting;
+};
+
+int main()
+{
+    exampleclass var_1;
+    exampleclass2 var_2;
+
+    var_1.m_int = 1;
+    var_1.m_string = "test";
+    var_2.m_int = 2;
+    var_2.m_sting = "

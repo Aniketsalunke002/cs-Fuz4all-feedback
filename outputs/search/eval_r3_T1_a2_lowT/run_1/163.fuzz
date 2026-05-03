@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() {
+	typedef unsigned short word;
+	word w = 0x1234;
+	w += 1;
+	cout << w << endl;	
+}

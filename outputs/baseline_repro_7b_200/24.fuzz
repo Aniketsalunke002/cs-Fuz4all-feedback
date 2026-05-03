@@ -1,0 +1,17 @@
+#include <iostream>
+using std::cout;
+int main() {
+	return [] {};
+};
+ 
+#include <iostream>
+using std::cout;
+int main() {
+	return static_cast<int *([] {});>(nullptr);
+}
+ 
+#include <iostream>
+using std::cout;
+int main(void) {
+	return ({}());
+}

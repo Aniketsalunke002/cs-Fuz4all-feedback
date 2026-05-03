@@ -1,0 +1,14 @@
+#include <iostream>
+int main() {
+    int a,b;
+    a = 7;
+    b = a+1;
+    std::cout << a << '+' << b << '=' << a + b << std::endl;
+     
+    b = a*3;
+    std::cout << a << '*' << b << '=' << a * b << std::endl;
+    int c;
+    c = b*5;
+    std::cout << b << '*' << c << '=' << b * c << std::endl;
+    a = c/5;
+    std::cout

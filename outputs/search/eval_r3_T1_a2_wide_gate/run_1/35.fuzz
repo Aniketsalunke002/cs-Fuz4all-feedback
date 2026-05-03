@@ -1,0 +1,36 @@
+#include <iostream>
+using namespace std;
+void doTest() {
+	int x = 10;
+	int y = 10;
+	int &z = x;
+	if (y == ++x) {
+		std::cout << z + y << std::endl;
+	} else std::cout << "Hello world!" << std::endl;
+}
+int main() {
+	doTest();
+	return 0;
+}
+ 
+#include <iostream>
+class Bla {
+public:
+	Bla() {
+		cout << "Bla" << endl;
+	}
+};
+void foo(int x) {
+}
+void doTest() {
+	int x = 10;
+	int y = 10;
+	int &z = x;
+	foo(x);
+	Bla bl;
+	int &v = x;
+	foo(v);
+	if (y == ++x) {
+	} else {
+	}
+}

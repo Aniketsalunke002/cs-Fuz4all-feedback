@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int main(){
+  char* mycar="volvo";
+  int value=5;
+  mycar= "toyota";
+  value=10;
+  cout<<"my car is "<<mycar<<" and my value is "<<value<<endl;
+}

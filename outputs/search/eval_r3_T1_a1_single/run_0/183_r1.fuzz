@@ -1,0 +1,8 @@
+#include <iostream>
+
+int main() {
+  for (int a = 0; a < 10 * 1024; a++) if (a % 2 == 1) std::cout << a / 2;
+  return 0;
+}
+
+// #include

@@ -1,0 +1,30 @@
+#include <iostream>
+
+
+using namespace std;
+
+class X
+{
+    class Y
+    {
+        class Z
+        {
+        public:
+            int i;
+        };
+
+    public:
+        static Z Z_Var;
+    };
+
+public:
+    int j;
+
+public:
+    friend class Y;
+};
+
+int main(){
+    X *a = new X();
+    a->X::Y::Z x;
+}

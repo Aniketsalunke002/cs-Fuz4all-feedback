@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int z[5];
+    char j[] = {'A', 'M'};
+    int x = 0, y = 0;
+    for (z[0] = 'A', z[1] = 'Z', z[2] = '0', z[3] = '1', z[4] = '9'; x < 2; x++)
+    {
+        for (y = 0; y < 3; y += x % 2 == 0? 1 : -1)
+        {
+            cout << z[y] << endl;
+        }
+    }
+    do
+    {
+        cout << "Do, " << z << endl;
+    }
+    while (j[0] <= 'Z');
+    return 0;
+}

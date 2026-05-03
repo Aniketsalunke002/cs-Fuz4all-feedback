@@ -1,0 +1,10 @@
+The C++ code must compile without errors using g++. If compilation fails, make the smallest change possible.
+
+Program:
+#include <iostream>
+#include <string>
+using namespace std;
+int main(void)
+ 
+{
+    print_string("hello", "world");

@@ -1,0 +1,49 @@
+#include <iostream>
+
+int main() {
+  int x, y, z;
+  for (z = 0; z < 2; z++) {
+    std::cin >> x >> y;
+    if (z!= 0) {
+      std::cout << " " << x << " " << y;
+    } else {
+      std::cout << x << " " << y;
+    }
+  }
+  std::cout << std::endl;
+}
+//  
+//  
+//  
+//  
+// struct Point3d {
+//   double x, y, z;
+// };
+// 
+//  
+//  
+//  
+// int *p = 12;        
+// Point3d *q = {1, 2, 3};     
+// int arr1[4] = 1, 2, 3, 4;  
+// Point3d arr2[4] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}, {10, 11, 12}};    
+//                                                           
+// typedef int arrTyp[12];        
+// void main() {
+//   float a, b;     
+//   char c, d, e;   
+//   Point3d p, r;   
+//   Point3d q;      
+//   std::cin >> a >> b;
+//   std::cout << a + b << std::endl;
+//   std::cin >> c >> d;
+//   std::cout << c + d << "\n";
+// }
+#include <iostream>
+int main() {
+  int x, y, z;
+  for (z = 0; z < 2; z++) {
+    std::cin >> x >> y;
+    if (z!= 0) {
+      std::cout << " " << x << " " << y;
+    } else {

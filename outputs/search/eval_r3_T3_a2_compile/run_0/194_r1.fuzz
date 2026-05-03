@@ -1,0 +1,41 @@
+#include <iostream>
+
+using namespace std;
+#ifdef FOO
+#define FOO1 FOO
+#endif
+#define FOO2 FOO
+int main()
+{
+	cout << "foo.cpp source code in main" << endl;
+#ifdef FOO1
+	cout << "FOO1 is defined" << endl;
+#elif FOO2
+	cout << "FOO2 is defined" << endl;
+#endif
+	return 0;
+}
+#ifndef FOO
+#define FOO
+#endif
+#ifndef USE_BOOST
+	#include <memory>
+#else
+	#include <boost/smart_ptr.hpp>
+#endif
+#ifdef HAVE_STD_SHARED_PTR
+	typedef std::shared_ptr<char> MySharedPtr;
+#else
+	typedef boost::shared_ptr<char> MySharedPtr;
+#endif
+int main()
+{
+	
+#ifdef FOO1
+	cout << "FOO1 is defined" << endl;
+#elif FOO2
+	cout << "FOO2 is defined" << endl;
+#endif
+
+	return 0;
+}

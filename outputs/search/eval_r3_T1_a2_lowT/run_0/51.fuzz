@@ -1,0 +1,10 @@
+#include <iostream>
+void do_it()
+{
+    std::sync_with_stdio(false);
+}
+int main()
+{
+    do_it();
+    std::cout << std::cout.sync_with_stdio(0) << std::endl;
+}

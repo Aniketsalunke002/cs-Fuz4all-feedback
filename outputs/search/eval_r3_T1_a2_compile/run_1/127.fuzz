@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int main (){
+    int num = 27;
+    cout<<num;
+    cout<<(new int)(num + 2);
+    num += 14;
+    cout<<num*(new int)(num + 1 + 2);
+    num *= 4;
+    cout<<(num / 2)<<endl;
+    num /= 64;
+    cout<<(3+2+num)<<"\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main(){
+    int a;
+    int result;
+    int x = 5;
+    cout << x*24 << "\n";
+    result = a*5;
+    cout << result + 15 << "\n";
+    x += 7;
+    cout << 3 + 2 + x << "\n";
+    return 0;
+}

@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+#include <string>
+using namespace std;
+#define foo(t) cout << t << "\n"
+#if defined(__GNUG__) && (defined(__EXCEPTIONS) || defined(__EXCEPTIONS__))
+int main(int argc, char**argv) throw( string ) {
+#elif defined(__GNUC__) &&!defined(__EXCEPTIONS)
+int main(int argc, char**argv)  {
+#else
+int main(int argc, char**argv,...) {
+#endif
+    int x1 = (argc == 1);
+    int x2 = (argc >= 1);
+    int x3 = (argc <= 1);
+    int x4 = (argc > 1);
+    int x5 = (argc < 1);
+    int x6 = (! argc);
+    foo("x1 = " << x1);
+    foo("x2 = " << x2);
+    foo("x3 = " << x3);
+    foo("x4 = " << x4);
+    foo("x5 = " << x5);
+    foo("x5 = " << x6);
+    foo("x8 = " << "foobar");
+    foo("x8 = " << 123);
+    return 0;
+}

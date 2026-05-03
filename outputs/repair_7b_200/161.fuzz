@@ -1,0 +1,25 @@
+#include <iostream>
+int main()
+{
+    std::cout << std::endl;
+}
+ 
+#include <iostream>
+#include <map>
+int main()
+{
+    std::map<std::string, std::string> x;
+}
+ 
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main(int argc, char const *argv[]) {
+    printf("Please enter a character: ");
+    char c;
+    scanf("%c", &c);
+    printf("You entered [%c]\n", c);
+}
+ 
+#include <stdlib.h>
+int main(int argc, char const

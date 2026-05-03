@@ -1,0 +1,10 @@
+#include <iostream>
+
+#include <math.h>
+
+double a = 5;
+
+int main() {
+	double b = sqrt(2);
+	std::cout << a << std::endl;
+}

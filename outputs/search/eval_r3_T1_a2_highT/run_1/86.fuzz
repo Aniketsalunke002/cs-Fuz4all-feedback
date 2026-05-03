@@ -1,0 +1,51 @@
+#include <iostream>
+#include <vector>
+#include <set>
+#include <algorithm>
+#include <cstdlib>
+class Individual;
+std::set<Individual *> Individuals;
+class Individual{
+public:
+	Individual(){
+		f=0;
+	}
+	Individual(bool flag){
+		if(flag){
+			f = 0;
+		}
+		else{
+			f = 1;
+		}
+	}
+	int fitness(){
+		return f;
+	}
+private:
+	int f;
+};
+int main() 
+{
+	bool s = (std::rand()%2);
+	bool s1 = (std::rand()%2);
+	Individual *p1 = new Individual(s);
+	Individual *p2 = new Individual(s1);
+	Individual *p3 = new Individual(s);
+	Individuals.insert(p1);
+	Individuals.insert(p2);
+	Individuals.insert(p3);
+	s = (s == 0)? 1 : 0;
+	s1 = (s1 == 0)? 1 : 0;
+	*((char*)&p1) = (char)(s);
+	*((char*)&p2) = (char)(s1);
+	*((char*)&p3) = (char)(s);
+	Individuals.erase(p2);
+	p1 = nullptr;
+	p2 = nullptr;
+	p3 = nullptr;
+	std::cout << "Printing p1 " << (char)s << '\n' << '\n';
+	std::cout << "Printing p2 " << (char)s1 << '\n';
+	std::cout << "Printing p3 " << (char)s << '\n';
+	std::cout << "Individuals = " << Individuals.size() << '\n';
+	return 0;
+}

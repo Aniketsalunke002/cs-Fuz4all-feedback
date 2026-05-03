@@ -1,0 +1,21 @@
+#include <iostream>
+
+
+int main() {
+    int a=444,b=a,c=777,d=c,e=d;
+
+    b=2222;
+    d=3333333;
+    e=a;
+    c=b;
+    if(a+1 == c)
+    {
+        if(d+1 == b)
+        {
+
+        }
+    }
+
+    std::cout << "the value of the integer after some manipulation is " << a << std::endl;
+    return 0;
+}

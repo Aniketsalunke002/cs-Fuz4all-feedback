@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char *argv[]) {
+	int a = 10;
+	int const *b = &a;
+	int c = *b + 20;
+	cout << c << endl;
+	a = 20;
+	return 0;
+}

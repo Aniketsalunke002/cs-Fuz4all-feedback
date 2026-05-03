@@ -1,0 +1,26 @@
+#include <iostream>
+int main()
+{
+    int a = 5;
+    a = 7;
+    std::cout << a;
+}
+ 
+#include <iostream>
+void do_it(std::istream& in)
+{
+    std::istream::sentry sentry(in);
+    do
+    {
+         
+    }
+    while (in);
+    exit(0);
+}
+int main()
+{
+    for (char c; std::cin >> c; )
+        ;
+    do_it(std::cin);
+    std::cout << std::cin.rdbuf();
+}

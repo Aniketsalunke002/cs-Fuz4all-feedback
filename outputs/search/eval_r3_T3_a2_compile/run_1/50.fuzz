@@ -1,0 +1,10 @@
+#include <iostream>
+template<typename... Types>
+void print(const Types&... vals);
+
+int main(void)
+{
+	print(1,'a','b','c','d','e');
+	return 0;
+}
+ 

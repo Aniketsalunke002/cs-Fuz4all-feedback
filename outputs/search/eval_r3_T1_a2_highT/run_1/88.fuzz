@@ -1,0 +1,80 @@
+#include <iostream>
+#include <vector>
+#include <set>
+#include <algorithm>
+#include <cstdlib>
+class Individual;
+std::set<Individual *> Individuals;
+class Individual{
+	public:
+	Individual(){
+		f=0;
+	}
+	Individual(bool flag){
+		if(flag){
+			f = 0;
+		}
+		else{
+			f = 1;
+		}
+	}
+	int fitness(){
+		return f;
+	}
+	bool isMutation(){
+		if(std::rand()%100 <= 50){
+			return true;
+		}
+		return false;
+	}
+	char mutation(){
+		if(std::rand()%2 == 0){
+			if(f == 0){
+				f = 1;
+			}
+			else{
+				f = 0;
+			}
+		}
+		return f;
+	}
+	int crossover(const Individual &a) const {
+		if(f == a.fitness()){
+			if(std::rand()%2 == 0){
+				if(f == 0){
+					f = 1;
+				}
+				else{
+					f = 0;
+				}
+			}
+		}
+			return f;
+	}
+private:
+	int f;
+};
+int main()
+{
+	bool s = (std::rand()%2);
+	bool s1 = (std::rand()%2);
+	Individual *ind = new Individual(s);
+	Individual *ind1 = new Individual(s1);
+	Individuals.insert(ind);
+	Individuals.insert(ind1);
+	s = (s == 0)? 1 : 0;
+	s1 = (s1 == 0)? 1 : 0;
+	*((char*)&ind) = (char)(s);
+	*((char*)&ind1) = (char)(s1);
+	Individuals.erase(ind1);
+	ind = nullptr;
+	ind1 = nullptr;
+	for(auto itr : Individuals)
+	{
+		if(std::rand()%10 == 0)
+		{
+			itr->mutation();
+		}
+	}
+	std::cout << "Printing p1 " << (char)s << '\n';
+	std::cout << "Printing p2 " << (

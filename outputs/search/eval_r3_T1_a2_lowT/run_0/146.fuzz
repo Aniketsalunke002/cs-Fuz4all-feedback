@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int n1 = 0,n2 =1,n,i = 100;
+    cout<<n1<<" "<<n2<<" ";
+    while(i >= 1)
+    {
+        n = n1+n2;
+        cout<<n<<" ";
+        n1 = n2;
+        n2 = n;
+        i--;
+    }
+    cout<<endl;
+    return 0;
+}

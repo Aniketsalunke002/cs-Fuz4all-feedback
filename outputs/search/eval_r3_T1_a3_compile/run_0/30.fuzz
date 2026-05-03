@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string string1("ABCDEFGHTLO");
+    reverse(string1.begin(), string1.end());
+    cout << string1;
+    cout << count(string1.begin(), string1.end(), 'D');
+    cout << *find(string1.begin(), string1.end(), 'E');
+    return 0;
+}

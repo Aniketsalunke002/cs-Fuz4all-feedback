@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+class A
+{
+    private:
+    	int iField1;
+    	int iField2;
+    public:
+	A():iField1(777){iField2=1000;}
+	A(const A &r): iField1(r.iField1-10),iField2(r.iField2-3){cout<<iField1<<' '<<iField2<<endl;}
+	A& operator=(const A&r)
+	{
+		iField1=r.iField1;
+		iField2=r.iField2+4;
+		r.iField2=r.iField2-3;
+		return *this;
+	}
+};
+int main()
+{
+	A one, two(one);
+    	one=two;
+    	return 0;
+}
+

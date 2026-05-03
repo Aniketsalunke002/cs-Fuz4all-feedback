@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+  
+int main() {
+   vector<int> v;
+  int x = 1;
+  int i = 2;
+  v.push_back(x);
+  v.at(0) = i;
+  cout << x << " " << i << endl;
+}

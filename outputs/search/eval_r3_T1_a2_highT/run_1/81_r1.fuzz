@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main()
+{
+	int i = 3;
+	int &x = i;
+	x = 5;
+	std::cout << x << '\n';
+
+	// Comment line below to enable compiler error.
+	x = 5;
+
+	return 0;
+}

@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+class FooClass {
+public:
+    FooClass() {}
+    void foofunc(string foo) {
+        foo = foo + ": foo";
+    }
+    friend string foofuncfunc(string foo) {
+        return foo + "!";
+    }
+};
+int main(int argc, char* argv[]) {
+    string bar("1");
+    cout << foofuncfunc(bar);
+    return 0;
+}

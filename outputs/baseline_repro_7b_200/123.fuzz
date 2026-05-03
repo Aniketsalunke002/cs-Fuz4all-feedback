@@ -1,0 +1,10 @@
+#include <iostream>
+int main(int argc, char* argv[]) {
+  static_assert(false, "[error]: This program will compile!");
+  return 0;
+}
+```
+
+
+
+

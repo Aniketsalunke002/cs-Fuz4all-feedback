@@ -1,0 +1,42 @@
+#include <iostream>
+#include <vector>
+#include <set>
+#include <algorithm>
+class Mutant;
+std::set<Mutant *> Mutants;
+class Human;
+std::set<Human*> Humans;
+class Mutant: public Human
+{
+public:
+	Mutant() {
+		Mutants.insert(this);
+	}
+	double calcFitness() {
+	
+	}
+	bool operator<(const Mutant &other) {
+	
+	
+	}
+};
+class Human {
+protected:
+	double fitness;
+	double fame = 0;
+public:
+	Human() {
+		Humans.insert(this);
+	}
+	virtual double calcFitness() {  }   
+};
+int main()
+{
+	std::vector<Mutant *> mutants;
+	for (auto i : Mutants) {
+		if (i->fame < 0.95) {
+			mutants.push_back(i);
+		}
+	}
+	return 0;
+}

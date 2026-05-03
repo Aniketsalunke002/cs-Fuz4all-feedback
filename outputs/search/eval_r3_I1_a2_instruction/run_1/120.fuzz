@@ -1,0 +1,13 @@
+#include <iostream>
+int main()
+{
+    std::string* str = nullptr;
+    str = new std::string{ "<NAME> 1"};
+    std::cout << *str << '\n';
+    *str = *str + " test";
+    std::cout << *str << '\n';
+    delete str;
+    str = nullptr;
+    return 0;
+    
+}

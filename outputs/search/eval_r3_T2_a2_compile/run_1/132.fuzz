@@ -1,0 +1,10 @@
+#include <iostream>
+#include <iterator>
+namespace fuzz {
+    void mutate(std::vector<int>& data) {
+        std::iterator_traits<std::vector<int>::iterator>::reference iRef = data[data.size() / 3];
+        *iRef = 0;
+    }
+}
+void test(String& s) {
+}

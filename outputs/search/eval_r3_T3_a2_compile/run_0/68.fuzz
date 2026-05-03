@@ -1,0 +1,58 @@
+#include <iostream>
+int main() {
+    int i=0, j=0;
+    j = (i = j) + (i + j);
+    return 0;
+};
+
+ 
+#include <iostream>
+#include <fstream>
+#include <string.h>
+std::string str;
+std::ifstream in;
+int main() {
+    in.open("in.txt",std::ios::in);
+    in >> str;
+    puts((*str).c_str());
+};
+
+ 
+#include <iostream>
+class A
+{
+public:
+    static int x;
+    virtual void f() const {
+        x++;
+    }
+};
+int A::x = 2;
+int main()
+{
+    A *a1 = new A;
+    a1->f();
+    a1->f();
+    a1->f();
+    A *a2 = new A;
+    a2->f();
+    delete a1;
+    a1 = nullptr;
+    a2->f();
+    delete a2;
+    return 0;
+};
+
+ 
+#include <iostream>
+int main()
+{
+    int i=0;
+    std::cout << "Please enter your name: ";
+    std::cin >> i;
+    std::cout << i << "\n";
+
+
+};
+
+ 

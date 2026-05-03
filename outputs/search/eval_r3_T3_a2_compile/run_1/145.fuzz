@@ -1,0 +1,15 @@
+#include <iostream>
+class X
+{ 
+  public:
+    constexpr static int x = 10; 
+};
+#define MUTE
+constexpr int X::x;
+MUTE X::x = 20;
+int main()
+{ 
+ std::cout << X::x << '\n'; 
+}
+ 
+ 

@@ -1,0 +1,8 @@
+#include <iostream>
+  int main(int argc, char** argv[]) {
+    std::cout << "a" << std::endl;
+    return 0;
+  }
+#undef EVAL1
+#ifndef EVAL1
+#endif

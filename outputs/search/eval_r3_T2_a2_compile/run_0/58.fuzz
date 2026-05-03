@@ -1,0 +1,8 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main(int argc, char** argv)
+{
+    cin >> x;
+    cout << (x % 3 == 2? "YES" : "NO") << endl;
+}

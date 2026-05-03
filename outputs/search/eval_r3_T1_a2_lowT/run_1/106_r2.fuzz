@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main(int argc, char *argv[]) {
+    for (size_t i = 1; i < argc; i++) {
+        if (strcmp(argv[i], "a") == 0) {
+            std::cout << "Hello World" << std::endl;
+        } else if (strcmp(argv[i], "0x1234") == 0) {
+            std::cout << "Nice" << std::endl;
+        } else {
+            std::cout << atoi(argv[i]) << std::endl;
+        }
+    }
+}

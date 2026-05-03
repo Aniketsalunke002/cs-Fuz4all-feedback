@@ -1,0 +1,10 @@
+#include <iostream>
+#include <string>
+template<typename T>
+void print_string(T a, T b) {
+  std::cout << a << " " << b << std::endl;
+}
+
+main() {
+  print_string("A", "B");
+}

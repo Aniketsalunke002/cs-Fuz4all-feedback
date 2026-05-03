@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+struct Point {
+	Point(int,int);
+	~Point();
+	int x;
+	int y;
+};
+Point::Point(int val1,int val2):x(val1),y(val2)
+{
+}
+Point::~Point()
+{
+}
+int main()
+{
+	Point *p = new Point(12,10);
+	cout << "address of p (start, after constructor): " << &p << " " << p << endl;
+	cout << " address of point (start, end): " << (&p->x) << " "<< (&p->x)+1 << endl;
+	for(int i = 0; i < 20; i++)
+		p->x = (i+1) * 30;
+	Point *q = new Point(13,10);
+	cout << "address of p: " << p << endl;
+	cout << "address of q: " << q << endl;
+	 
+	 
+	p = new Point(121,300);
+	cout << "address of p: " << p << endl;
+	return 0;
+}

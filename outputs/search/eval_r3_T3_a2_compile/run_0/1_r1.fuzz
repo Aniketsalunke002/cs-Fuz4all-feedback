@@ -1,0 +1,25 @@
+#include <iostream>
+
+
+template<typename T>
+class ClsForShort
+{
+  private: T priv_a;
+
+  public: T publ_a;
+
+   
+  void nonpubl_method()
+  {
+    publ_a = priv_a;
+    std::cout << publ_a << std::endl;
+  }
+};
+
+int main(int argc, char *argv[])
+{
+  ClsForShort<int> obj;
+  obj.nonpubl_method();
+
+  return 0;
+}

@@ -1,0 +1,27 @@
+#include <iostream>
+class mutator
+{
+public:
+	char* m;
+	char& r;
+	char a;
+	mutator(char* p, char& r1, char a1)
+		:m(p), r(r1), a(a1) {}
+	~mutator() {
+		a++;
+		if (a % 2 == 0) {
+			r++;
+		}
+		*m = a;
+	}
+};
+int main(void)
+{
+	char c = 'c';
+	char& r = c;
+	char a = '*';
+	mutator mtr(&c, r, a);
+	std::cout << c << std::endl;
+	std::cout << a << std::endl;
+	return 0;
+}

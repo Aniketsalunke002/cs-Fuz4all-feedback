@@ -1,0 +1,23 @@
+#include <iostream>
+int main() {
+    std::cout << "Mutant: Hello, World!" << std::endl;
+    return 0;
+}
+ 
+#include "error.h"  
+void test() {
+  throw ERROR_CODE;  
+}
+
+int main() {
+  try {
+     test();
+  }
+  catch (...) {
+    printf("caught error!\n");
+  }
+  return 0;
+}
+
+```
+

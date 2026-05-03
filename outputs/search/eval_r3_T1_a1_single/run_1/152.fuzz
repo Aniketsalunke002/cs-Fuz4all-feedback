@@ -1,0 +1,6 @@
+#include <iostream>
+using namespace std;
+int main()
+{    char* foo = new char[4];
+  char** bar = new char[4][2];
+}

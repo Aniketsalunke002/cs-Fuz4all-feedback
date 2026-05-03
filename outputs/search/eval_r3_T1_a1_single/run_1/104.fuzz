@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+class Point {
+public:
+	Point(int,int,int,int);
+	~Point();
+	int x;
+	int y;
+	int z;
+	int w;
+};
+Point::Point(int val1,int val2,int val3,int val4):x(val1),y(val2),z(val3),w(val4)
+{
+}
+Point::~Point()
+{
+}
+int main()
+{
+	Point p(4,7,1,2);
+	while (1)
+	{
+		p.x = 5;
+		p.y = 6;
+		p.z = 7;
+		p.w =8;
+	}
+	return 0;
+}

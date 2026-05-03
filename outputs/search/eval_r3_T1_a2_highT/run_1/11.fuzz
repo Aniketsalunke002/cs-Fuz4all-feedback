@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main(void)
+{
+	int i = 31;
+	int j = 38;
+	int &l = j;
+	i = 39;
+	cout << "i = " << i << "; j = " << j << "; l = " << l <<  endl;
+	cout << "i = \"const\" " << i << endl;
+    return 0;
+}

@@ -1,0 +1,68 @@
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+class A {
+    public:
+        A() {
+        cout << "construct A" << endl;
+    }
+};
+A a;
+class B {
+    public:
+        B() {
+        cout << "construct B" << endl;
+    }
+};
+B b;
+int main(int argc, char** argv)
+{
+    A a2;
+    A a3(a);
+    B b3;
+    a = B();
+    a = a2;
+    b = B();
+    a3 = B(a3);
+    }
+ 
+#include <vector>
+#include <algorithm>
+using std::cin;
+using std::cout;
+using std::endl;
+using std::vector;
+class A {
+    int *x;
+    int n;
+    public:
+    A(int a = 1, int b = 0) {
+        x = new int[a];
+        n = a;
+        cout << "construct A" << endl;
+        for(int i=0; i < a; i++) {
+            x[i] = b;
+        }
+        cout << "A constructed" << endl;
+    }
+    ~A() {
+        cout << "destruct A" << endl;
+        delete[] x;
+        x = NULL; n = 0;
+    }
+    void print() {
+        for(int i=0; i < n; i++)
+            cout << x[i] <<'';
+        cout << endl;
+    }
+};
+int main(int argc, char** argv)
+{
+    A a;
+    a.print();
+    a.x[1] = 2;
+    a.print();
+    A b(4, 9);
+    b.print();
+}

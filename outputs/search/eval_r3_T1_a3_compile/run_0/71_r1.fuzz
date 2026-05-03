@@ -1,0 +1,14 @@
+#include <iostream>
+
+#include <string>
+
+using namespace std;
+
+int main() {
+  double theta = -5 * log(1 / 5);
+  cout << "2^" << theta << " = " << exp(theta) << endl;
+  cout << "sqrt(7) = " << sqrt(7) << endl;
+  double x = cos(theta * 3.14159265358979323846);
+  cout << "sin^2(" << 0.5 * x << ") = " << (sin(0.5 * x) * sin(0.5 * x)) << endl;
+  return 0;
+}

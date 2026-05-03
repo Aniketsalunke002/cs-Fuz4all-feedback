@@ -1,0 +1,54 @@
+#include <iostream>
+class Sum {
+public:
+    Sum(int i) : i_(i) {}
+    int operator()() const { return calc(i_); }
+    int calc(int i1) {
+        int c = 1;
+        for(int i = 0; i!= i1; i++) c += i;
+        return c;
+    }
+private:
+    int i_;
+};
+int main(int argc, char **argv) {
+    int sum = 0;
+    std::cout << "input: ";
+    for (int i=0;i<9;++i) {
+        std::cout << i << " ";
+        sum += Sum(i)();
+    }
+    std::cout << "sum=" << sum << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char **argv) {
+    int sum = 0;
+    Sum sumfun = [](int i1) -> int {
+            int c = 1;
+            for(int i = 0; i!= i1; i++) c += i;
+            return c;
+        };
+    std::cout << "input: ";
+    for (int i = 0; i < 9; ++i) {
+        std::cout << i << " ";
+        sum += sumfun(i);
+    }
+    std::cout << "sum=" << sum << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char **argv) {
+    int sum = 0;
+    Sum sumfun(0);
+    std::cout << "input: ";
+    for(int i = 0; i < 9; ++i) {
+        std::cout << i << " ";
+        sum += sumfun[i];
+    }
+    std::cout << "sum=" << sum << "\n";
+    return 0;
+}
+```

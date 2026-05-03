@@ -1,0 +1,13 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+  int i=0,j=0;
+  void (*fn) () = [&i, &j]{
+    i+=1;
+    j+=1;
+    cout << i << " " << j << endl;
+  };
+  fn();
+  return 0;
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+int getint();
+template<typename T> inline void edit_and_save(T elements);
+template <> inline void edit_and_save(int elements) {
+  int value = getint();
+  static int original = -1;
+  if (original < 0) original = elements;
+  std::cout << original << " -> " << elements << " (" << value << ")\n";
+  elements += value;
+  std::cout << elements << "\n";
+  edit_and_save(elements);
+}
+int main(int argc, char **argv) {
+  int elements = 3;
+  edit_and_save(elements);
+  return 0;
+}

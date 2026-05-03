@@ -1,0 +1,37 @@
+#include <iostream>
+
+using namespace std;
+int main( int argc, char **argv ){
+ double a[8];
+ double b[8];
+ for( int i = 0 ; i < 8 ; ++i )
+  b[i] = 2.5 % a[i] / 1.1e2 << ( a[i] - b[i] );
+ cout << *(b+0) << endl << *(b+1) << endl;
+}
+// #include <iostream>
+// using namespace std;
+// int main( int argc, char **argv ){
+//  int a[8];
+//  int *b;
+//  b = 2 % a / 11 << ( a - b );
+//  cout << b;
+// }
+//  
+// #include <iostream>
+// using namespace std;
+// enum fruit {APPLE = 1, ORANGE};
+// int main( int argc, char **argv ){
+//  fruit a;
+//  cin >> a;
+//  int n = a;
+//  cout << n;
+// }
+#include <iostream>
+using namespace std;
+int main( int argc, char **argv ){
+ int a[8];
+ int b[8];
+ for( int i = 0 ; i < 8 ; ++i )
+  b[i] = 2 % a[i] / 11 << ( a[i] - b[i] );
+ cout << *(b+0) << endl << *(b+1) << endl;
+}

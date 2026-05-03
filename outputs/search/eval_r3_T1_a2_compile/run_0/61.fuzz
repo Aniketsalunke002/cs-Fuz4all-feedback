@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    double pi, angle, length;
+    pi = 3.14;
+    length = 10.5;
+    int volume;
+    angle = 1.0;
+    volume = pi * angle * (length / 3);
+    cout << "Volume = " << volume << endl;
+    return 0;
+}
+ 
+ 

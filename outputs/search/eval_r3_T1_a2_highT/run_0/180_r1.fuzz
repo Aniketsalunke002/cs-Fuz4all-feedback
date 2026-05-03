@@ -1,0 +1,12 @@
+#include <iostream>
+
+using namespace std;
+int main()
+{
+    int **ptr = NULL;
+    int ***ptr2 = &ptr;
+    ptr = ptr2;
+    ptr = new int *[10]()();
+    cout << ptr[0][0];
+    return 0;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char** argv)
+{
+    int k, n;
+    cin >> k >> n;
+    cout << k * n;
+}
+// Now the compiler should be able to compile the code.

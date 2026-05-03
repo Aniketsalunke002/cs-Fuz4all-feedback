@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() {
+	double * d = new double[200];
+	d[100] = 3.14;
+	cout << d[100] << endl;
+	delete []d;
+}

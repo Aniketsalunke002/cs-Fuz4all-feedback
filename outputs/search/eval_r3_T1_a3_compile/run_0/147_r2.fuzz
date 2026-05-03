@@ -1,0 +1,29 @@
+#include <iostream>
+
+using std::endl;
+struct Base
+{
+    Base* operator++()
+    {
+        std::cout << "non-member ++" << std::endl;
+        return this;
+    }
+};
+struct Derived : public Base
+{
+    Derived* operator++()
+    {
+        std::cout << "inherited ++" << std::endl;
+        return this;
+    }
+};
+int main()
+{
+    Derived d;
+    Derived* pd = &d;
+    Base* pb = ++pd;
+    std::cout << d.a << "\t" << d.b << endl;
+    pb = pd++;
+    std::cout << d.a << "\t" << d.b << endl;
+    return 0;
+}

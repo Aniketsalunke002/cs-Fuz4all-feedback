@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+class A{
+public:
+    int c;
+    A(A& obj) : A() {
+        this->c = obj.c;
+    }
+    A& operator=(A& obj) {
+        this->c = obj.c;
+    }
+    A(A& obj) :c(obj.c){
+        cout<<"\nMove constructor called"<<endl;
+    }
+    A(int obj) : A() {
+        this->c = obj;
+    }
+};
+
+int main() {
+
+    A a(2);
+    A b(a);
+    b = a;
+    cout<<"The value of c in B: "<<b.c<<endl;
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+	int a, b;
+	cin >> a;
+	
+	cout << "Value of b: " << b << endl;
+	b = a + 1;
+	cout << "value of b after adding 1: " << b << endl;
+}

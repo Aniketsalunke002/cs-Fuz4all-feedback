@@ -1,0 +1,18 @@
+#include <iostream>
+void foo(char *str)
+{
+    str[0] = 't';
+    str[1] = 'e';
+    str[2] ='s';
+    str[3] = 't';
+}
+int main()
+{
+    char *a = new char[5];
+    delete []a;
+    a[0] = 't';
+    a[1] = 'e';
+    a[2] ='s';
+    a[3] = 't';
+    std::cout << a << std::endl;
+}

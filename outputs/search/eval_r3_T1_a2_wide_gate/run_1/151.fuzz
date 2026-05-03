@@ -1,0 +1,8 @@
+#include <iostream>
+#include <exception>
+using namespace std;
+int main( int argc, char **argv ){
+  std::exception_ptr e;
+  throw 1;
+}
+

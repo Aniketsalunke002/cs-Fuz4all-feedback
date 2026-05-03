@@ -1,0 +1,6 @@
+#include <iostream>
+
+int main() {
+    std::cout << std::ios_base::sync_with_stdio(false) << std::cin << '\n';
+    return 0;
+}

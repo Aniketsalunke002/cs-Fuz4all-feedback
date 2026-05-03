@@ -1,0 +1,18 @@
+#include <iostream>
+template<typename T>
+T *get_array(int size)
+{
+    return new T[size];
+}
+int main()
+{
+    auto arr = get_array<char>(96);
+    char *str = "abcdefghijklmnopqrstuvwxyz";
+    for(int i = 0; i < 96; ++i)
+    {
+        arr[i] = str[i];
+        std::cout << arr[i] << " ";
+    }
+    delete[] arr;
+    return 0;
+}

@@ -1,0 +1,15 @@
+#include <iostream>
+
+#include <cstdlib>
+
+int main() {
+    int* ptr;
+    int ary[6] = {1};
+    //int i = 1;
+    ptr = new int(ary[1]);
+    if (*ptr == (ary[1])) {
+        std::cout << "OK" << '\n';
+    }
+    delete[] ptr;
+    return 0;
+}

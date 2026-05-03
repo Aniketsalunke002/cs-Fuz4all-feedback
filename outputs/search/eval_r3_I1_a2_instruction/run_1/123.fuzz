@@ -1,0 +1,121 @@
+#include <iostream>
+int main()
+{
+    {
+        std::string* str = nullptr;
+        str = new std::string{ "<NAME>" };
+        str->append(" Hello!");
+        std::cout << *str << '\n';
+        delete str;
+        str = nullptr;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+#include <memory>
+std::shared_ptr<int> f(std::weak_ptr<int> input){
+    auto p = input.lock();
+    if(p==nullptr){
+        std::cout << "Weak Pointer Expired" << '\n';
+    }
+    return input;
+}
+int main()
+{
+    std::shared_ptr<int> a = std::make_shared<int>(5);
+    int b = 5;
+    std::shared_ptr<int> c = std::make_shared<int, decltype(&f), &f>(&b, &f);
+    std::cout << *c << '\n';
+    return 0;
+}
+ 
+#include <iostream>
+#include <memory>
+class ptr
+{
+public:
+    ptr& operator=(const ptr& p){
+        int** pointer = (int**)new char[sizeof(int*)];
+        *pointer = m_pointer;
+        m_pointer = p;
+        delete pointer;
+        return *this;
+    }
+    ptr(const ptr& p){
+        m_pointer = p;
+    }
+    ptr(){
+        m_pointer = nullptr;
+    }
+    ~ptr(){
+        delete m_pointer;
+    }
+    ptr(ptr&& p){
+        m_pointer = p.m_pointer;
+        p.m_pointer = nullptr;
+    }
+private:
+    int** m_pointer;
+};
+int main()
+{
+    ptr a{{new int(5)}};
+    ptr b(a);
+    std::cout << *b.m_pointer << '\n';
+    return 0;
+}
+ 
+#include <iostream>
+#include <memory>
+class Student{
+    public:
+    Student(const Student& p){
+        std::cout << p.name << ", " << p.id << std::endl;
+    }
+    Student(Student&& p){
+        std::cout << p.name << ", " << p.id << std::endl;
+    }
+    Student(const char *p_name, const char *p_id){
+        name = p_name;
+        id = p_id;
+        std::cout << p_name << ", " << p_id << std::endl;
+    }
+    ~Student(){}
+    private :
+    std::string name;
+    std::string id;
+};
+int main(){
+    std::make_shared<Student>("<NAME>", "13009294");
+    std::make_shared<Student>(std::move(Student("<NAME>", "27G2092348")));
+    return 0;
+}
+ 
+#include <iostream>
+#include <cstring>
+#include <memory>
+class A{
+    public:
+    A(){
+        m_pointer->b = m_pointer.get();
+    }
+    private :
+    std::shared_ptr<A> m_pointer;
+};
+class B{
+    public:
+    B(){
+        memset(m_msg, 0, sizeof(m_msg));
+        strncpy(m_msg, "Hello", sizeof(m_msg));
+    }
+    private :
+    std::string m_msg[1];
+    char m_c[255];
+};
+int main(){
+    std::shared_ptr<A> a = std::make_shared<A>();
+    auto b = std::make_shared<B>();
+    std::cout << a->m_pointer->m_pointer->m_message << '\n';
+    std::cout << strlen(a->m_pointer->m_ptr->m_msg) << '\n';
+}

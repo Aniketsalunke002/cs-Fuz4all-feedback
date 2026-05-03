@@ -1,0 +1,9 @@
+#include <iostream>
+#include <list>
+#include <algorithm>
+using namespace std;
+int main()
+{
+    list<char> v = {'c','b','a'};
+    auto it = lower_bound(v.begin(), v.end(), 'a');
+}

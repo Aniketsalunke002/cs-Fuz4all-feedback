@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+void func(char *&foo)
+{
+     func(foo);
+     foo +=  " bar";
+}
+int main()
+{
+    char *s;
+    func(s);
+    cout << s << endl;
+    return 0;
+}
+```

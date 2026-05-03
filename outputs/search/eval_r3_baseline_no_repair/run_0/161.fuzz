@@ -1,0 +1,53 @@
+#include <iostream>
+#include <string>
+#include <cstring>
+#include <utility>
+
+std::string mutateMe() {
+    std::string x = std::string("abcdef");
+    std::strtoll(&x.at(4),NULL,16);
+    return x;
+}
+std::string testmutateMe(std::string x) {
+    std::strtoll(&x.at(4),NULL,16);
+    return x;
+}
+int main(int argc, char **argv) {
+    std::string s = mutateMe();
+    std::cout << "initial: " << s << '\n';
+    std::cout << "after mutateMe: " << mutateMe() << '\n';
+    std::cout << "after test1 mutateMe: " << testmutateMe(s) << '\n';
+    std::cout << "after test2 mutateMe: " << testmutateMe(s) << '\n';
+    return 0;
+}
+ 
+#include <iostream>
+int main(int argc, char **argv) {
+    int a = 0;
+    int b = ~a;  
+    std::cout << ~b << std::endl;
+    return 0;
+}
+ 
+ 
+ 
+ 
+ 
+ 
+#include <iostream>  
+#include <string>
+using namespace std;
+ 
+int main1() {
+  static bool flag;
+  cout << flag << endl;
+  flag =!flag;
+  cout << "main1:" << flag << endl;
+}
+ 
+int main2() {
+  static const double pi = 3.1415926535897932384626;
+  cout << pi << endl;
+  return 0;
+}
+

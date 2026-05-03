@@ -1,0 +1,9 @@
+#include <iostream>
+#include <thread>
+int main(){
+    int a = 0;
+    auto b = [&a](){ *a = 42; };
+    std::thread t(b);
+    t.join();
+    return *a;
+}

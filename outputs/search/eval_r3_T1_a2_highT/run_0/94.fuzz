@@ -1,0 +1,6 @@
+#include <iostream>
+ void __VERIFIER_assert(bool cond) {
+  if(!cond) {
+      ERROR: goto ERROR;
+  }
+ }

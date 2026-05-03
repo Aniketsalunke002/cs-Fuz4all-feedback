@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main(){
+   int a = 6;
+   if((a + 3) * (a + 2) < a + 1){
+        cout << "a";
+   }
+   cout << "\n";
+   return 0;
+}

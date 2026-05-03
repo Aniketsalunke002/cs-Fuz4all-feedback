@@ -1,0 +1,18 @@
+#include <iostream>
+class A2 {
+public:
+    int id;
+    
+    inline void setid(int id) {
+        this->id = id;
+    }
+    
+};
+int main2() {
+    std::cout<<"Start!!\n";
+    A2 obj(101);
+    obj.setid(202);
+    std::cout<<obj.id<<std::endl;
+    std::cout<<"End!!\n";
+    return 0;
+}

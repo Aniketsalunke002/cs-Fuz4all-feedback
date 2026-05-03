@@ -1,0 +1,9 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main()
+{
+    int i=(int)std::string("1")[0] ^ (int)std::string("7")[1];
+    cout << i << endl;
+    return 0;
+}

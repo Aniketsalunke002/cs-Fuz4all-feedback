@@ -1,0 +1,49 @@
+#include <iostream>
+
+using std::endl;
+class Square {
+public:
+    Square() {
+        a = 5;
+    }
+
+    int a;
+};
+class Cube {
+public:
+
+    Cube(Square s) {
+        b = s.a * s.a * s.a;
+    }
+
+    Square s;
+    Cube(int x, int y) {
+        s.a = x;
+        b = s.a * s.a * s.a;
+    }
+
+    int b;
+};
+int main() {
+    Cube m(10);  
+    Cube n(m.s.a, m.s.a);  
+    std::cout << m.b << endl;
+    std::cout << n.b << endl;
+    return 0;
+}
+// #include <iostream>
+// using std::endl;
+// class Base {
+// public:
+//     int data;
+// 
+//     ~Base() { std::cout << "~Base() invoked" << endl; }
+// };
+// class Derived : public Base {
+// public:
+//     ~Derived() { std::cout << "~Derived() invoked" << endl; }
+// };
+// int main() {
+//     Base b;
+//     Derived d;
+//

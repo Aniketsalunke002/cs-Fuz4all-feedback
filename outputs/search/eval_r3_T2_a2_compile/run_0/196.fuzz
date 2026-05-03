@@ -1,0 +1,98 @@
+#include <iostream>
+std::istream& operator>>(std::istream& in, int& data) {
+    in >> data;
+    return in;
+}
+std::ostream& operator<<(std::istream& in, int& data) {
+    in << data;
+    return in;
+}
+int main() {
+    int input;
+    std::cin >> input;
+    input += input;
+    std::cout << input;
+}
+```
+
+* **(28) 512B+3B**
+```c++
+ 
+class Memoir {
+public:
+  int get(int cur, int target) {
+    if (cur == target)
+      return 1;
+    if (cur < 0 || target == 0)
+      return 0;
+    if (memo[cur][target])
+      return memo[cur][target];
+    return memo[cur][target] = get(cur, target - cur) + get(cur - 1, target);
+  }
+
+private:
+  int memo[205][205];
+};
+```
+
+* **(29) 512B**
+```c++
+ 
+class Memoir {
+public:
+  int get(int cur, int target) {
+    if (cur == target)
+      return 1;
+    if (cur < 0 || target == 0)
+      return 0;
+    if (memo[cur][target])
+      return memo[cur][target];
+    int tmp = get(cur, target - cur) + get(cur - 1, target);
+    memo[cur][target] = tmp % 10;
+    return memo[cur][target];
+  }
+
+private:
+  int memo[205][205];
+};
+```
+
+* **(30) 512B**
+```c++
+ 
+class Memoir {
+public:
+  int get(int cur, int target) {
+    if (cur == target)
+      return cur;
+    if (cur < 0 || target == 0)
+      return 0;
+    if (memo[cur][target]) {
+      return memo[cur][target];
+    } else {
+        int l = cur % target == 0
+                  ? cur / target
+                   : get(cur, target - (cur % target));
+        memo[cur][target] = 10 * l + (cur / target);
+        return memo[cur][target];
+    }
+  }
+
+private:
+  int memo[205][205];
+};
+```
+
+## 3.11
+
+```c++
+#include <iostream>
+#include <algorithm>
+
+void main() {
+  int n = 0;
+  std::cin >> n;
+  int number;
+  std::cin >> number;
+  int min = number;
+  int max = number

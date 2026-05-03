@@ -1,0 +1,36 @@
+#include <iostream>
+
+using namespace std;
+auto f(int i, unsigned j) {
+  auto fn = [&i, j]() mutable {
+    i+=1;
+    ++j;
+    cout << i << " " << j << endl;
+  };
+  return fn;
+}
+int main() {
+  int i=0,j=0;
+  auto fn = f(i, j);
+  fn();
+  return 0;
+}
+//  
+//  
+// #include <fstream>
+// using namespace std;
+// ifstream fin;
+// string filename;
+// int main() {
+//   cout << "Please enter a filename: ";
+//   cin >> filename;
+//   fin.open(filename);
+//   while (fin.good())
+//     cout << fin.get() << flush;
+//   return 0;
+// }
+//  
+// Compiles without errors and outputs the contents of the file.
+// Compared to the previous two examples, the main difference is that
+// here, the fuzzing engine can capture values of variables, which
+// is necessary for the correctness of the example.

@@ -1,0 +1,27 @@
+#include <iostream>
+
+#include <cstdio>
+using namespace std;
+int foo(int a, int b)
+{
+    while ((a <= b) && (c!= 9))
+    {
+        b--;
+    }
+    return (b - a)/(b + a);
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7, c;
+    while(scanf(" %d", &c) && c!= EOF)
+    {
+        if (c!= b)
+        {
+            if (c!= a)
+            {
+                a = b = c;
+            }
+        }        
+    }
+    printf("%d\n", foo(a, b));
+}

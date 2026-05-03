@@ -1,0 +1,23 @@
+#include <iostream>
+
+
+class Object
+{
+public:
+    virtual ~Object() = default;
+};
+
+class Number1 : public Object
+{
+};
+
+class Number2 : public Object
+{
+};
+
+ 
+ 
+ 
+ 
+ 
+ 

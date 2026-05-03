@@ -1,0 +1,10 @@
+#include <iostream>
+
+int main()
+{
+    std::string a;
+    std::cin>>a;
+    std::cout<<a<<"\n";
+    std::cout<<"the length is "<<a.length()<<"\n";
+    std::cout<<"the length is "<<a.len()<<"\n";
+}

@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+int main(int argc, char** argv)
+{
+    cout << argc << " ";
+#ifdef TEST_COMPILER
+    int a;
+    (void)argc;
+    assert(a == 0);
+    cout << "end of main";
+#else
+    int a[] = {1, 2, 3, 4};
+    cout << "end of main";
+#endif
+    return 0;
+}

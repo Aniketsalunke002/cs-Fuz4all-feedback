@@ -1,0 +1,18 @@
+#include <iostream>
+#include <memory>
+template<typename T>
+std::unique_ptr<T*[]> get_array(int size)
+{
+     auto p = std::make_unique<T*[]>(size);
+     return p;
+}
+int main()
+{
+     auto arr = get_array<char>(512);
+     char *str = "abcdefghijklmnopqrstuvwxyz";
+     for(int i = 0; i < 512; ++i)
+     {
+          arr[i] = &str[i];
+     }
+     return 0;
+}

@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() {
+    string str = "my str", str2("Hello!");
+    str = str + str2;
+    cout << str;
+    return 0;
+}

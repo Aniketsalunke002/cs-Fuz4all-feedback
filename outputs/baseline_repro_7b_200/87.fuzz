@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+#include <chrono>
+
+int main(int argc, char* argv[]) {
+    auto t_a = std::chrono::high_resolution_clock::time_point::min();
+    auto t_b = std::chrono::high_resolution_clock::time_point::max();
+    std::vector<std::chrono::high_resolution_clock::time_point> times(1000);
+
+    for (auto& time : times) {
+        time = std::chrono::high_resolution_clock::now() + std::chrono::microseconds(10);
+    }
+
+    std::sort(std::execution::par_unseq, times.begin(), times.end(),
+        [=](auto a, auto b) { return a < b; });
+
+    static_assert((t_a < times.front() && times.back() < t_b),
+        "Times are not in expected bounds");
+}

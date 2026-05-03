@@ -1,0 +1,52 @@
+#include <iostream>
+
+template<typename T>
+void f(T& x) { x++; }
+int main()
+{
+  int a = 5;
+  f(a);
+  std::cout << a << std::endl;
+  return 0;
+}
+// 
+// #include <iostream>
+// #include <vector>
+// #include <cmath>
+// #include <algorithm>
+// #include <fstream>
+// 
+// int main()
+// {
+//   std::cout << std::abs(-2) << std::endl;
+//   std::cout << std::pow(10, 2) << std::endl;
+//   std::vector<int> v{1, 2, 3}; 
+//   std::sort(v.begin(), v.end());
+//   std::cout << v[1] << std::endl;
+//   std::vector<char> w{'a', 'b', 'c'} ; 
+//   std::sort(w.begin(), w.end());
+//   std::cout << w[1] << std::endl;
+// 
+//   std::ofstream outfile("temp.txt");
+//   outfile << "Hello World" << std::endl;  
+//   outfile << "This is a different line";
+//   outfile << std::endl;
+//   outfile.close(); 
+// 
+//   return 0;
+// }
+// 
+// #include <iostream>
+// #include <string>
+// 
+// int main()
+// {
+//   int x;
+//   std::cin >> x;
+//   std::cout << x << std::endl;
+//   std::string y;
+//   std::cin >> y;
+//   std::cout << y << std::endl;
+// 
+//   return 0;
+// }

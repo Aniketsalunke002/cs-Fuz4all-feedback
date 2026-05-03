@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() {
+    double x = 13.37;
+    for(int i = 0; i < 10; i++)
+        cout << x++ << " ";
+    cout << endl;
+}

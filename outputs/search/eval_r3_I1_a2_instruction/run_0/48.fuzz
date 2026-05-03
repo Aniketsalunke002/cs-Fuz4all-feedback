@@ -1,0 +1,13 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main(int argc, char **argv) {
+    cout << "This program is the same as in the previous lesson.";
+    cout << "I've added std::vector<int> x;.";
+    vector <int> x;
+    cout << "I've added x[23] = 23;";
+    x[23] = 23;
+    cout << x[23] << endl;
+}
+

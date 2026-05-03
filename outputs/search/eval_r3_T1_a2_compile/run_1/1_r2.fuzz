@@ -1,0 +1,41 @@
+#include <iostream>
+
+#include <memory>
+#include <string>
+using namespace std;
+class A
+{
+	string m_data;
+public:
+	A(const string& data) 
+		: m_data{ data? data : "empty" }
+	{
+	}
+	void print() const { cout << m_data << endl; }
+};
+void print(const A& a) { a.print(); }
+class B
+{
+	int m_a = 0;
+public:
+	B(const A& a) : m_a { 1 } { cout << "create B from " << a.m_data << endl; }
+	void print() const { cout << "print B of "	<< m_a << endl; }
+};
+void print(const B& b) { b.print(); }
+int main()
+{
+	A a{ "" };
+	cout << "** print(const A&) invoked" << endl;
+	print(a);
+	cout << "** create 10 B on the stack" << endl;
+	{
+		auto b0 = B(a);
+		auto b1 = B(a);
+		auto b2 = B(a);
+		auto b3 = B(a);
+		auto b4 = B(a);
+		auto b5 = B(a);
+	}
+	cout << "** create 10 B heaped" << endl;
+	{
+		unique_ptr

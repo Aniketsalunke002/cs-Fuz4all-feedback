@@ -1,0 +1,14 @@
+#include <iostream>
+#include <vector>
+int main() {
+	bool flag = 0;
+	std::vector<char> v(flag + 1);
+	if (flag > 0) {
+		v.push_back('0');
+		std::cout << v[flag - 1];
+	}
+	{
+		char x = v[0];
+		std::cout << x;
+	}
+}

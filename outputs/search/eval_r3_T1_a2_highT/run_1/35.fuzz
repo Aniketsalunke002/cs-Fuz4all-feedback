@@ -1,0 +1,17 @@
+#include <iostream>
+#include <complex>
+#include <cmath>
+int main() {
+	double a;
+	std::complex<double> z;
+	std::cout << "Enter a: ";
+	std::cin >> a;
+	z = a + std::complex<double>(0, 1);
+	for(int n = 1; n <= 20; n += 1){
+		z = std::pow(z,a);
+		if(std::abs(z) > 20.0001)
+			break;
+		std::cout <<  std::fixed << z << std::endl;
+	}
+	return 0;
+}

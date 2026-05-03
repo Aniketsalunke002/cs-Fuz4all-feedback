@@ -1,0 +1,38 @@
+#include <iostream>
+
+using namespace std;
+
+template <typename T>
+class complex {
+	T real, img;
+
+public:
+	void operator += (complex x) {
+		real += x.real;
+		img += x.img;
+	}
+
+	complex operator - (complex x) {
+		complex z;
+		z.real = real - x.real;
+		z.img = img - x.img;
+		return z;
+	}
+
+	void display() {
+		cout << "real = " << real << " "
+			<< "img = " << img << endl;
+	}
+};
+
+int main() {
+	complex<int> c1, c2, result;
+	c1.real = 5;
+	c1.img = 5;
+	c2.real = 10;
+	c2.img = 10;
+	result = c1 + c2;
+	result -= c2;
+	result.display();
+	return 0;
+}

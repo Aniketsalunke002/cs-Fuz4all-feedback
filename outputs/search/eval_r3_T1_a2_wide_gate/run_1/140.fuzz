@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+
+  struct Element {
+    int value;
+    Element() : value(0) {};
+    Element(int arg) : value(arg) {}
+  };
+
+  struct Compare{
+    bool operator()(const Element& e1, const Element& e2) const
+      {return e1.value < e2.value;}
+  };
+
+  int main(int argc, char **argv)
+  {
+    std::vector<Element> vector;
+    for(auto i = 1; i < 1000; ++i) {
+      vector.push_back(Element(i));
+    }
+     
+    for(auto& e : vector) e.value = -e.value;
+    std::stable_sort(vector.begin(), vector.end(), Compare());
+
+     
+    for(auto& e : vector) e.value = -e.value;
+    std::sort(vector.begin(), vector.end(), Compare());
+  }
+  ```
+</details>
+<details>
+  <summary>2.9.3: Demonstrate and explain the difference between using a vector as a stack vs. a queue</summary>
+

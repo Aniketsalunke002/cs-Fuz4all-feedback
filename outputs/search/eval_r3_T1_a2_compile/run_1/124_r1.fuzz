@@ -1,0 +1,22 @@
+#include <iostream>
+
+using namespace std;
+class num {
+    int n;
+    
+    public:
+    num(int a): n{a} {
+    };
+    int get() {
+        return n;
+    }
+    int get(int k) {
+        return n+k;
+    }
+};
+int main (){
+    num n(5);
+    cout<<n.get()<<endl;
+    cout<<n.get(5)<<endl;
+    return 0;
+    }

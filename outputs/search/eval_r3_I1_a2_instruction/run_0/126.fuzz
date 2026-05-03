@@ -1,0 +1,11 @@
+#include <iostream>
+  using namespace std;
+  int sum(int n) {
+    int x=1,i;
+    for(i=1;i<=n;i++) x=x+5;
+    return x;
+  }
+  int main(int argc, char** argv) {
+  cout << sum(10);
+  return 0;
+}

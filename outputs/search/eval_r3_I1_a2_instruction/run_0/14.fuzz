@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char**argv) {
+    int n, a = 100, b = 20, c = 210, d = 21;
+    int z = 1;
+    cout << a << endl;
+    cout << b << endl;
+    z = a;
+    a += b;
+    z = a;
+    cout << z << endl;
+    a = 20;
+    z = a;
+    c -= d;
+    z = c;
+    cout << z;
+    return 0;
+}

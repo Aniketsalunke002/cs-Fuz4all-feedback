@@ -1,0 +1,99 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int a;
+    int result;
+    int x = 5;
+    cout << x*24 << "\n";
+    result = 5*a;
+    cout << result + 15 << "\n";
+    x += 7;
+    cout << 3 + 2 + x << "\n";
+    result = 7*result;
+    cout << result << "\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+struct Person {
+    int age;
+    float height;
+};
+int main(){
+    Person bob;
+    bob.age = 36;
+    bob.height = 170;
+    cout << bob.age << "cm height " << bob.height << "cm\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+struct Person {
+    int age;
+    float height;  
+};
+int main(){
+    int b  = 67;
+    Person bob;
+    bob.age = 36,
+    bob.height = 170.0;
+    cout << bob.age << "cm height " << bob.height << "cm\n";
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+
+ 
+ 
+#include <complex>
+
+int main()
+{
+    std::complex<double> a(std::complex<double>(0.0, 1.0)) + std::complex<double>(0.0, 1.0);
+    std::complex<double> b(2.0,0.0);
+    std::complex<double> c = a/(a*b*b*b);
+
+    std::cout << c << '\n';
+
+     
+    return 0;
+
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

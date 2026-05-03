@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int i = 13;
+    cout << "The value of i is " << i << endl;
+    for (i = 6; i > 0; i--) {
+        cout << i << " bottles of beer on the wall, " << i << " bottles of beer.\nTake one down, pass it around, ";
+        cout << "nobody bought it.\n" << i << " bottles of beer on the wall.\n";
+    }
+    return 0;
+}
+

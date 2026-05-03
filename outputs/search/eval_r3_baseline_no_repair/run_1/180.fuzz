@@ -1,0 +1,12 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+int main() {
+ cout << "Mutant: Hello, World!" << endl;
+ vector<int> x;
+ int a= 5;
+ x.push_back(a);
+ int b = x.size();
+ cout << a << " " << b << endl;
+ return 0;
+}

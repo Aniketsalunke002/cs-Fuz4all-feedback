@@ -1,0 +1,24 @@
+#include <iostream>
+
+double A()
+{
+    return 2.0;
+}
+
+double B()
+{
+    return A()+2.0;
+}
+
+void F()
+{   
+    double t;
+    t=B()+2.0;
+    std::cout << t <<std::endl;
+}
+
+int main()
+{
+    F();
+    return 0;
+}

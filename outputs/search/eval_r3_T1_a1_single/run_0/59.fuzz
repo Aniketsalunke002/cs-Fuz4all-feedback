@@ -1,0 +1,7 @@
+#include <iostream>
+std::ostream &print(std::ostream &os) {
+	return os << "hello world!";
+}
+int main() {
+  std::cout << print;
+}

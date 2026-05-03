@@ -1,0 +1,30 @@
+#include <iostream>
+#include <algorithm>
+int main() {
+	int mutant_1 = 100;
+	std::for_each(mutant_1, mutant_1 + 50, [](int i) {mutant_1 += i;});
+	std::cout << mutant_1 << std::endl;
+	return 0;
+}
+ 
+int get(int i) {
+	return i / 0;
+}
+ 
+#include <algorithm>
+#include <iostream>
+struct X {
+	X& operator()(const X& a);
+};
+int main() {
+	int m1 = 5;
+	int m2 = 10;
+	int m3 = 20;
+	X fx;
+
+	m1 = m1 & 26;
+	m1 = fx((m1 & 26) | 10);
+	m2 = std::max(m2, (m1 + (m1 + 16.9850284075e+20)));
+	m3 = std::min(m3, (m1 + (m1 + 16.9850284075e+20)));
+	return 0;
+}

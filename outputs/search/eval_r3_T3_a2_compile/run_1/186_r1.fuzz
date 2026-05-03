@@ -1,0 +1,65 @@
+#include <iostream>
+
+class A
+{
+    public:
+        A():val("HOLA")
+        {}
+        A(const std::string& val_):val(val_)
+        {}
+        auto& getVal()
+        {
+            return val;
+        }
+        void setValue(const std::string& val_)
+        {
+            val = val_;
+        }
+    private:
+        std::string val;
+};
+int main(int argc, char *argv[])
+{
+    A object("QUE TAL");
+    std::cout << *object.getVal();  
+//    *object.getValPtr() = "HOLA";  
+//    std::cout << *object.getValPtr();  
+    return 0;
+}
+#include <iostream>
+class A
+{
+    public:
+        A(const std::string& val_):val(val_)
+        {}
+        auto& getVal()
+        {
+            return val;
+        }
+    private:
+        std::string val;
+};
+void print_A(const A& object)
+{
+    std::cout << object.getVal();
+}
+int main(int argc, char *argv[])
+{
+//    print_A(A("HOLA"));
+    print_A(A("QUE TAL"));
+    return 0;
+}
+#include <iostream>
+class UnProtected
+{
+    public:  
+    UnProtected():var("Hello UnProtected")
+    {}
+    UnProtected(const std::string& val_):var(val_)
+    {}
+    void print()
+    {
+        std::cout << var;
+    }
+    private:
+    std::string var

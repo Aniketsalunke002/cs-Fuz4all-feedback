@@ -1,0 +1,129 @@
+#include <iostream>
+class Test
+{
+    bool do_something(char c)
+    {
+        return c % 2 == 0;
+    }
+    bool do_something(int i)
+    {
+        return i % 2 == 0;
+    }
+};
+int main()
+{
+    if(do_something('a'))
+        std::cout << "It's a odd char" << std::endl;
+
+    if(do_something(3))
+        std::cout << "It's a odd int" << std::endl;
+    else
+        std::cout << "It's an even int" << std::endl;
+}
+ 
+#include <iostream>
+class C
+{
+    int a, b;
+    virtual C* foo() { return this; }
+    virtual void bar()
+    {
+        C &a = foo()->a;
+        C &b = foo()->b;
+        C &c = *this;
+        c.a = 10;
+        c.b = 12;
+        a = 15;
+        b = 16;
+
+        C c1; c1.a = 10, c1.b = 11;
+        C c2 = c1; c2.a = 20;
+        C c3(c1); c3.a = 30;
+        if (c1.a == 10 && c1.b == 11 && c2.a == 20 && c3.a == 30
+          && c1.foo()->a == 10 && c1.foo()->b == 11 && c2.foo()->a == 20 && c3.foo()->a == 30)
+            std::cout << "Inheritance worked" << std::endl;
+        else
+            std::cout << "Inheritance is broken" << std::endl;
+    }
+};
+int main()
+{
+    C c;
+    c.bar();
+}
+
+ 
+ 
+ 
+ 
+#include <iostream>
+#include <set>
+
+
+class ReadLine 
+{
+public:
+    std::string line;
+    static ReadLine& GetInstance()
+    {
+        static ReadLine reader;
+        return reader;
+    }
+    ~ReadLine() {}
+    void Read()
+    {
+        std::string temp;
+        std::getline(std::cin, temp);
+        if(temp.find_first_not_of("\n ")!= std::string::npos)
+            line.append(temp+1);
+    }
+    std::set<std::string> GetWords() 
+    {
+        std::set<std::string> words;
+        for(auto x : line)
+        {
+            if(x =='' || x == '\r' || x == '\n')
+            {
+                if(x == '\n')
+                {
+                    SetWordsInSet(words);
+                    Read();
+                }
+                if(x =='')
+                {
+                    words.insert(" ");
+                }
+            }
+            else
+            {
+                words.insert(std::string(1,x));
+            }
+        }
+        SetWordsInSet(words);
+
+        words.erase("");
+        return words;
+    }
+private: 
+    void SetWordsInSet(std::set<std::string>& words)
+    {
+        for(auto it = words.begin(); it!= words.end(); it++)
+        {
+            for(; it!= words.end() && it->length() < 2; it++)
+            {
+                if(it+1!= words.end())
+                    words.erase(it);
+                else break;
+            }
+        }
+    }
+};
+#define INPUT_SIZE 100000000000ull
+#define TRIALS 1000000
+int main()
+{
+    ReadLine& reader = ReadLine::GetInstance();
+
+    std::cout << "Reading " << TRIALS << " lines." << std::endl;
+
+    int counter =

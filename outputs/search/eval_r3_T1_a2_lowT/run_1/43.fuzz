@@ -1,0 +1,15 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main(int argc, char** argv)
+{
+    char s;
+    while (cin >> s)
+    {
+        cout << s;
+        file.put(s);
+    }
+    cout << "Finished";
+    return 0;
+}

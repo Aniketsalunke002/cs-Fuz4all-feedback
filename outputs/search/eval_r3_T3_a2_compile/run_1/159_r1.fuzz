@@ -1,0 +1,53 @@
+#include <iostream>
+
+template <typename T>
+int main(T argc, T * argv[]) {
+  T i = 1;
+  std::cout << i << '\n';
+  i += 1;
+  std::cout << i << '\n';
+}
+template int main<int>(int, int*);
+
+// #include <iostream>
+// int main(int argc, char * argv[]) {
+//   int i = 1;
+//   std::cout << i << '\n';
+//   i += 1;
+//   std::cout << i << '\n';
+// }
+//  
+// #include <iostream>
+// int main(int argc, char * argv[]) {
+//   int i = 1;
+//   if (i == 2) {
+//     i += 1;
+//   } else {
+//     i -= 1;
+//   }
+//    std::cout << i << '\n';
+// }
+#include <iostream>
+template <typename T>
+int main(T argc, T * argv[]) {
+  T i = 1;
+  std::cout << i << '\n';
+  i += 1;
+  std::cout << i << '\n';
+}
+template int main<int>(int, int*);
+
+// #include <iostream>
+// int main(int argc, char * argv[]) {
+//   int i = 1;
+//   std::cout << i << '\n';
+//   i += 1;
+//   std::cout << i << '\n';
+// }
+//  
+// #include <iostream>
+// int main(int argc, char * argv[]) {
+//   int i = 1;
+//   if (i == 2) {
+//     i += 1;
+//   } else {

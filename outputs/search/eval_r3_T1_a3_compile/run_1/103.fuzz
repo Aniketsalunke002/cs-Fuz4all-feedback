@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+void fun2(int &c) {
+	int a = 5, b = 12;
+	c = 30;
+	return;
+}
+int main(int argc, char* argv[]) {
+	int c = 5, d = 12;
+	cout << c << endl;
+	cout << d << endl;
+	fun2(c);
+	cout << c << endl;
+	cout << d << endl;
+	return 0;
+}
+ 

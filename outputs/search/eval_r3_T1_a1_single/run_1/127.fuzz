@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+int j=5,i,k=10;
+i=j;
+j=15;
+cout<<j/i;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+int j=5,i=1;
+j=j=i=10;
+cout<<j;
+}
+

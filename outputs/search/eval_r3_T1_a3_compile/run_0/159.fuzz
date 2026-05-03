@@ -1,0 +1,115 @@
+#include <iostream>
+#include <list>
+using std::list;
+using std::endl;
+class P {
+public:
+    virtual std::string &get_name() = 0;
+    virtual void set_name(std::string s) = 0;
+};
+class Student : public P {
+    std::string name;
+public:
+    std::string &get_name() override {
+        return name;
+    }
+    void set_name(std::string s) override {
+        name = s;
+    }
+};
+class College : public P {
+    std::list<P *> list;
+public:
+    void add(P *p) {
+        list.push_back(p);
+    }
+    std::string &get_name() override {
+        Student *stu = dynamic_cast<Student *>(list.back());
+        return stu->get_name();
+    }
+    void set_name(std::string s) override {
+        Student *stu = dynamic_cast<Student *>(list.back());
+        stu->set_name(s);
+    }
+};
+int main() {
+    College c;
+    c.add(new Student{"David"});
+    c.set_name("Mia");
+    std::cout << c.get_name() << std::endl;
+}
+ 
+#include <iostream>
+#include <string>
+using std::cout;
+using std::endl;
+namespace mylib {
+extern float Pi;
+namespace ns1 {
+#define FOO { static float x=3.14; cout<<"In ns1::x "<<x<<endl;}
+float X=4.0, Y=8.0;
+using namespace std;
+class A {
+    float x, y;
+    float z;
+    public:
+        A(float a=X, float b=Y, float c=X+Y) : x{a}, y{b}, z{a+b} {
+            FOO
+        }
+        void Display() { cout<<x<<','; cout<<y<<','; cout<<z<<endl; }
+};
+class B {
+    friend float Pi, X, Y, A::x, A::y, A::z;
+    A private_a;
+    public:
+        void Display() { private_a.Display(); }
+        B() : private_a{1, 2} {
+        }
+};
+float Pi=3.14, X=11.123, Y=1.456;
+}
+namespace ns2 {
+float Y;
+class B {
+public:
+    B(float a=4.0) : Pi(a) {}
+    void Display() { cout<<Pi<<endl; }
+private:
+    float Pi;
+};
+namespace ns3 {
+    float Y=12.34;
+    }
+}
+}
+int main()
+{
+    mylib::ns1::B();
+    mylib::ns2::B();
+    mylib::ns1::A();
+}
+ 
+#include <iostream>
+using std::cout;
+using std::cin;
+using std::endl;
+using std::getline;
+class ListItem {
+public:
+    int value;
+    ListItem<T> *previous;
+    ListItem<T> *next;
+public:
+    ListItem() {
+        previous = next = nullptr;
+    }
+    ListItem<T>(const T &t, ListItem *prev) {
+        value = t;
+        previous = prev;
+        next = prev->next;
+        previous->next = next->previous = this;
+    }
+    void insertBefore(ListItem *p) {
+        this->previous = p->previous;
+        this->next = p;
+        this->previous->next =

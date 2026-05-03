@@ -1,0 +1,31 @@
+#include <iostream>
+
+#include <vector>
+#include <set>
+#include <algorithm>
+#include <cstdlib>
+#include <cstring>
+
+class Gene;
+std::set<Gene *> Genes;
+std::vector<Gene *> Generation;
+class Gene{
+public:
+	Gene(bool c0,bool c1,int a_x, int a_y,int g,int i,int b){
+		c[0] = c0;
+		c[1] = c1;
+		a = a_x;
+		b = a_y;
+		generation = g;
+		id = i;
+		fitnessScore = b;
+	}
+	bool operator ==(Gene &b){
+		if(c[0] == b.c[0]&& c[1] = b.c[1]&& a == b.a&& b.b== b.a&&generation == b.generation&&id==b.id&&fitnessScore==b.fitnessScore){
+			return true;
+		}
+		return false;
+	}
+	Gene mutated(){
+		Gene *a1;
+		a1 = new Gene(c[0],c[1], a,b,

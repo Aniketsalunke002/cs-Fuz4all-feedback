@@ -1,0 +1,17 @@
+#include <iostream>
+int main() {
+  int c;
+  long x;
+  std::cin >> c >> x;
+  do {
+     int __tmp_invariant_var_1680;
+     if (x >= 0)
+       __tmp_invariant_var_1680 = 1;
+     else
+       __tmp_invariant_var_1680 = 0;
+     __VERIFIER_assume(__tmp_invariant_var_1680);
+     x = (x + 1) / 2;
+   }
+   while (c > 0);
+  std::cout << abs(x);
+ }

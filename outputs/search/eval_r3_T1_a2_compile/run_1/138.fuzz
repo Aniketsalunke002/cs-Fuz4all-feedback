@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int a;
+    int x = 5;
+    int result = a * 5;
+    int y = result + x;
+    result = 3 + y;
+    printf("%d\n", result);
+    int sum = (result*x)*x;
+    printf("%d\n", sum);
+    if((result*5)!= sum)
+        return 0;
+    printf("test complete\n");
+    return 0;
+}
+ 
+int global = 0;
+int x = global;
+void foo() {
+    int i = x;
+}
+int main() {
+   global = 23;
+    foo();
+    return 0;
+}

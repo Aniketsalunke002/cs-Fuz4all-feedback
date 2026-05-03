@@ -1,0 +1,85 @@
+#include <iostream>
+using namespace std;
+int main() {
+  cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+  int x, z, s;
+  string q;
+  queue<pair<int, int>> A;
+  cin >> x;
+  for (int i = 0; i < x; i++) {
+    cin >> z >> s >> q;
+    if (q == "left") {
+      A.push({s, z});
+    } else if (q == "right") {
+      if (A.empty()) break;
+      pair<int, int> tamp = A.front();
+      A.pop();
+      A.push({tamp.first - s, tamp.second});
+    }
+  }
+  while (!A.empty()) {
+    cout << A.front().first << " " << A.front().second << "\n";
+    A.pop();
+  }
+  return 0;
+}
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int n, m;
+  cin >> n >> m;
+  vector<set<int>> a(n + 5, set<int>());
+  vector<set<int>> b(n + 5, set<int>());
+  for (int i = 0; i < m; i++) {
+    int k, t;
+    cin >> k >> t;
+    while (k--) {
+      int e, j;
+      cin >> e >> j;
+      a[e].insert(j);
+    }
+    while (t--) {
+      int e, j;
+      cin >> e >> j;
+      b[e].insert(j);
+    }
+  }
+  for (int i = 1; i <= n; i++) {
+    if (a[i].size() > 1) continue;
+    cout << i << " " << *a[i].begin() << "\n";
+    return 0;
+  }
+  for (int i = 1; i <= n; i++) {
+    if (b[i].size() > 1) continue;
+    cout << i << " " << *b[i].begin() << "\n";
+    return 0;
+  }
+}
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  int a, b, c, d;
+  cin >> a >> b;
+  cin >> c >> d;
+  if ((a > c && b < d) || (a < c && b > d)) cout << "no intersection" << endl;
+  else if ((a > c && b > d) && abs(a - c) > abs(b - d)) cout << "horizontal" << endl;
+  else if ((a < c && b < d) && abs(a - c) > abs(b - d)) cout << "horizontal" << endl;
+  else if ((a > c && b < d) && abs(a - c) < abs(b - d)) cout << "vertical" << endl;
+  else if ((a < c && b > d) && abs(a - c) < abs(b - d)) cout << "vertical" << endl;
+}
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+  unordered_map<int, vector<tuple<size_t, size_t, size_t>>> mp;
+  int n;
+  cin >> n;
+  vector<int> v(n);
+  for (int i = 0; i < n; i++)
+    cin >> v[i], mp[v[i]].emplace_back(size_t(i), 0, 1);
+  for (int i = 0; i < n; i++) {
+    for (auto i : mp[v[i]][0]) {
+      mp[v[i]][0].first += i;
+      mp[v[i]][0].second++;
+    }
+    sort(begin(mp[v[

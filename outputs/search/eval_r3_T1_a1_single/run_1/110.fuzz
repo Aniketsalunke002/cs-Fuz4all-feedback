@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+#include <math.h>
+double myPI = 3.1415;
+int main()
+{
+double x1,y1,z1;
+cin>>x1>>y1>>z1;
+double t = (x1+y1+z1)/2;
+t = sqrt(t);
+t = t - (x1*x1+y1*y1+z1*z1);
+cout<<myPI*t<<" "<<myPI*t*t*t/3<<endl;
+return 0;
+}
+

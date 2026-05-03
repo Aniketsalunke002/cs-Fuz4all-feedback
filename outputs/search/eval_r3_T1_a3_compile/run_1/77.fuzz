@@ -1,0 +1,6 @@
+#include <iostream>
+using namespace std;
+int main(int argc, char* argv[]) {
+	int a = 5, b = 12, tmp;
+	swap(a, b);
+}

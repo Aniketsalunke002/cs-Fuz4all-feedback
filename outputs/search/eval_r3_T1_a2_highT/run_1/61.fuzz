@@ -1,0 +1,17 @@
+#include <iostream>
+int main() {
+	std::string line;
+	while (true) {
+		std::getline(std::cin, line);
+		if (!std::cin) {
+			std::cerr << "Got error: '" << std::cin.rdstate() << "'" << std::endl;
+			break;
+		} else {
+			for (unsigned int i=0;i<line.size();++i) {
+				line.at(i) += line.at(i);
+			}
+		}
+		std::cout << line << std::endl;
+	}
+	return 0;
+}

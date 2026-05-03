@@ -1,0 +1,46 @@
+#include <iostream>
+
+using namespace std;
+class Point {
+public:
+	Point(int,int,int,int);
+	virtual ~Point();
+	int x;
+	int y;
+	int z;
+	int w;
+	Point& operator++();
+	void printPoint();
+};
+Point::Point(int val1,int val2,int val3,int val4):x(val1),y(val2),z(val3),w(val4)
+{
+}
+Point::~Point()
+{
+}
+Point& Point::operator++()
+{
+	this->x++;
+	return *this;
+};
+void Point::printPoint()
+{
+	cout << this->x << " " << this->y << " " << this->z << " " << this->w << endl;
+}
+Point addOne(Point p)
+{
+	cout << "The coordinates before adding 1 are:" << endl;
+	p.printPoint();
+	p++;
+	cout << "The coordinates are:" << endl;
+	return p;
+}
+int main()
+{
+	Point p1(1,1,1,1);
+	Point p2 = p1;
+	addOne(p1);
+	p1.printPoint();
+	addOne(p2);
+	p2.printPoint();
+}

@@ -1,0 +1,115 @@
+#include <iostream>
+using namespace std;
+union A
+{
+    int iField;
+    float fField;
+};
+int main()
+{
+    float f = 0;
+    A one = { f };
+    cout << &f << "; " << f << endl;
+    cout << &one.fField << "; " << one.fField << endl;
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class A
+{
+    public:
+        int iField;
+};
+class B : public A
+{
+    public:
+        float fField;
+};
+int main()
+{
+    union U
+    {
+        int iData, iSize;     
+        float fData;
+        short sData[50];
+    };
+    float f = 0;
+    U u;
+    u.fData = f;
+    cout << "f = " << u.fData << endl;
+    double d = 0;
+    u.fData = d;
+    cout << "d = " << u.fData << endl;
+    unsigned short us = 0;
+    u.sData[0] = us;
+    cout << "us = " << u.sData[0] << endl;
+    return 0;
+}
+ 
+#include <iostream>
+class A
+{
+};
+class B
+{
+    public:
+        A *aPtr;
+};
+class C
+{
+    public:
+        B b;
+};
+int main()
+{
+    C c;
+    A *aPtr = &c;
+    cout << *aPtr << endl;
+    A a;
+    void *voidPtr = &a;  
+    cout << *(A*)voidPtr << endl;
+    return 0;
+}
+#include <iostream>
+#include <cmath>
+class Point
+{
+    public:
+        double x, y;
+        Point(double _x = 0, double _y = 0) : x(_x), y(_y) {};
+        static int count;
+        ~Point() { count--; }
+        double distance(Point& p1) { return sqrt((x - p1.x)*(x - p1.x) + (y - p1.y)*(y - p1.y)); }
+};
+const int N = 3;
+int Point::count = 0;
+double minDistance(Point *A, Point *B)
+{
+    double d = 0;
+    for (int i = 0; i < N; ++i)
+    {
+        d = min(d, A[i].distance(*(B + i)));
+    }
+    return d;
+}
+int main()
+{
+    Point *p = new Point[N];
+    Point::count = 0;
+    p[0].x = 1;
+    p[0].y = 2;
+
+    p[1].x = 10;
+    p[1].y = 20;
+
+    p[2].x = 3;
+    p[2].y = 4;
+
+    cout << "Distance is " << minDistance(p, p + 3) << endl;
+    cout << Point::count << endl;
+    Point d(*p);
+    cout << "Distance is " << d.distance(*p) << endl;
+    cout << Point::count << endl;
+    return 0;
+}

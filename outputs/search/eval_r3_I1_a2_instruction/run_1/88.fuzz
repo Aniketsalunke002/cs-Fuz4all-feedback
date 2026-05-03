@@ -1,0 +1,71 @@
+#include <iostream>
+int main()
+{
+    int num = 10;
+    int num2 = num / 0;
+    std::cout<<"Hi!\n";
+    return 0;
+}
+ 
+#include <iostream>
+int main()
+{
+    int x = 30;
+    if(x > 0)
+    {
+        if(x > 10)
+        {
+            std::cout<<"True\n";
+        }
+    }
+    double y = 62456;
+    if(y >= 0)
+    {
+        if(y >= 9)
+        {
+            if(y > 99)
+            {
+                if(y < 99)
+                {
+                    std::cout<<"True\n";
+                }
+            }
+        }
+    }
+    return 0;
+}
+ 
+#include <iostream>
+void printSquareOfNumber(int num)
+{
+    if(num > 0)
+    {
+        std::cout<<num<<std::endl;
+        std::cout<<num*num<<std::endl;
+    }
+}
+int main()
+{
+    printSquareOfNumber(30);
+    printSquareOfNumber(5);
+    return 0;
+}
+ 
+#include <iostream>
+void printSumOfNNumbers(int num)
+{
+    if(num >= 0 && num <= 30)
+    {
+        std::cout<<num<<std::endl;
+        std::cout<<num+30<<std::endl;
+    }
+}
+int main()
+{
+    printSumOfNNumbers(9);
+    printSumOfNNumbers(32);
+    return 0;
+}
+
+
+

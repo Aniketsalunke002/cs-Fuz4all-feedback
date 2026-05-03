@@ -1,0 +1,49 @@
+#include <iostream>
+class A1 {
+        public:
+            virtual void print() {}
+            void say() { std::cout << "hi" <<std::endl; }
+};
+
+
+class B1 : public A1 {
+        private:
+            int a;
+        public:
+            void print()  { std::cout << "hi" <<std::endl; }
+
+};
+int main(void) {
+    A1 a;
+    a.say();
+ 
+    B1 b;
+    b.say();
+     
+    return 0;
+}
+class MyClass2
+{
+    private:
+        int a;
+    public:
+        int b = 0;
+        void foo() { a = b; }
+         int a = 42;
+        MyClass2() : a(42) { a = 13; }
+};
+
+
+
+ 
+class Animal {
+public:
+    Animal(std::string name) : mName(name), mFoodCount(0) {}
+    std::string mName;
+    int mFoodCount;
+};
+
+int main(void) {
+    Animal myAnimal{"Bob"};
+    return 0;
+}

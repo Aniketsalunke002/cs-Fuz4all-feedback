@@ -1,0 +1,26 @@
+#include <iostream>
+
+namespace std {
+using namespace std;
+}
+int main()
+{
+	using namespace std;
+	cout << "Hello Bamboo" << endl;
+	return 0;
+}
+// </pre>
+// 
+// 
+// <h5>Python</h5>
+// <pre class="prettyprint">
+#__author__ = "aniket"
+import sys
+sys.path.append('bamboo-artifact/lib')
+import bamboo
+
+def main():
+    print "Hello Bamboo"
+
+bamboo.main()
+// </pre>

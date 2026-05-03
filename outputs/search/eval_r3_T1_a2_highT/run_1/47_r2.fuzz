@@ -1,0 +1,16 @@
+#include <iostream>
+
+#include <fstream>
+int main() {
+
+	// char name[32];
+	// std::cin >> name;
+
+	char* chars = new char[32];
+	std::cin >> chars;
+
+	std::ofstream file(chars, std::ios::out);
+	file << "A sample of fuzzer generated input\n";
+	file.close();
+	delete[] chars;
+}

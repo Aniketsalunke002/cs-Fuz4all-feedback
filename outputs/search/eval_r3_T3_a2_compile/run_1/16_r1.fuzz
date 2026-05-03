@@ -1,0 +1,19 @@
+#include <iostream>
+
+using namespace std;
+struct A
+{
+    int iField;
+    A(): iField{777} {  }
+    A(const A &r): iField{r.iField+1} {  }
+};
+int main ()
+{
+    A one, two{one};
+    cout << "Size of one:  " << sizeof(one) << endl;
+    cout << "Size of two:  " << sizeof(two) << endl;
+    return 0;
+}
+// Program output:
+// Size of one:  4
+// Size of two:  4

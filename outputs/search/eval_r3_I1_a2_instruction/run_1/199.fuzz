@@ -1,0 +1,13 @@
+#include <iostream>
+
+struct Foo {
+  public:
+    int a() { return 1;}
+    int b() { return 2;}
+};
+int main(int argc, char *argv[]) {
+  Foo f;
+  int c = f.b() + f.a();
+  printf("The sum of a() and b() is %d", c);
+  return 0;
+}

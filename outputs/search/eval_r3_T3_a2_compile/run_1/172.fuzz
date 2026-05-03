@@ -1,0 +1,29 @@
+#include <iostream>
+class A
+{
+public:
+    A(int val_)
+    :val(val_)
+    {}
+    int getVal()
+    {
+        return val;
+    }
+    void setValue(int val_)
+    {
+        val = val_;
+    }
+    A(const A &src)
+    :val(src.val)
+    {}
+private:
+    int val;
+};
+int main(int argc, char *argv[])
+{
+    A object{100};
+    std::cout << object.getVal();
+    object.setValue(200);
+    std::cout << object.getVal();
+    return 0;
+}

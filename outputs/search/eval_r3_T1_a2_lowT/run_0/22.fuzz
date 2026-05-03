@@ -1,0 +1,28 @@
+#include <iostream>
+int main()
+{
+    try
+    {
+        throw std::cout;
+    }
+    catch (...)
+    {
+        
+    }
+}
+ 
+#include <iostream>
+int main()
+{
+    int x = [](){ throw 'h'; }();
+    char c = -1;
+    try
+    {
+        c = (char)x;
+    }
+    catch (const char& err)
+    {
+        c = err;
+    }
+    std::cout << "c = " << c << "\n";
+}

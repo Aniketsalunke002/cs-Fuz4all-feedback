@@ -1,0 +1,11 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+   int a=1,b=2,c=5;
+   if(a==a)
+       cout<<"a="<<b<<" ";
+   else if(b==b)
+       cout<<"b="<<c<<" ";
+   return 0;
+}

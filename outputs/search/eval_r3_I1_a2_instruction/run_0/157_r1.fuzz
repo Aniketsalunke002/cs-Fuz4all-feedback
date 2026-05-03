@@ -1,0 +1,23 @@
+#include <iostream>
+  typedef void (__cdecl *func_t) ();
+  void __stdcall test() {
+    unsigned int* p = new unsigned int;
+    *p = 0x60b0000;
+    char* str = (char*)(*p);
+    str[0] = 0;
+  }
+  int main(int argc, char** argv) {
+    char buf[0x500];
+    typedef int (__stdcall *func2_t) (size_t, char*, const char*, va_list);
+    {
+       
+      func2_t func = (func2_t)(size_t)(*(int*)(buf + 4));
+      func(0, buf, "abc", buf);
+    }
+    if (buf[0]!= 0) {
+      puts("success");
+    } else {
+      puts("fail");
+    }
+    return 0;
+  }

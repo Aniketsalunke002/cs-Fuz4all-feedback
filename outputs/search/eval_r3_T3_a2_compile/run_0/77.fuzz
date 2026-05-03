@@ -1,0 +1,19 @@
+#include <iostream>
+template<class T>
+void f(T& t);
+int main()
+{
+  int a = 5;
+  f(a);
+  std::cout << a << std::endl;
+  return 0;
+}
+#include <vector>
+template<class T>
+std::vector<T> add(const std::vector<T>& v1, const std::vector<T>& v2)
+{
+  std::vector<T> result(v1.size() + v2.size());
+  std::copy(v1.begin(), v1.end(), result.begin());
+  std::copy(v2.begin(), v2.end(), result.begin() + v1.size());
+  return result;
+}

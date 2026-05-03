@@ -1,0 +1,9 @@
+#include <iostream>
+
+
+void test() {
+ 
+  const Point point1(3, 4);
+ 
+  std::cout << "point1 x: " << point1.x << '\n';
+}

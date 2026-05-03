@@ -1,0 +1,51 @@
+#include <iostream>
+int main() {
+    int i;
+    std::cin >> i;
+    std::cout << i+i+i;
+    return 0;
+}
+ 
+using namespace std;
+#include <iostream>
+struct time {
+    int hour;
+    int minute;
+    double second;
+    friend ostream &operator<<(ostream &os, const time &t) {
+        os << t.hour << ":" << t.minute << ":" << t.second;
+        return os;
+    }
+};
+ 
+struct Clock {
+    int mins;
+    void addMin(int n) {
+        mins += n;
+        mins %= 1440;
+    }
+     
+    time getTime() {
+        time t;
+        t.hour = mins / 60;
+        t.minute = mins - t.hour * 60;
+        t.second = mins / 1440.0;  
+        return t;
+    }
+};
+
+int main(){
+    int h;
+    cin >> h;
+    Clock c;
+    c.addMin(30);
+    c.addMin(120);
+    c.addMin(60);
+    c.addMin(70);
+    c.addMin(11);
+    c.addMin(5);
+    c.addMin(14);
+    time t = c.getTime();
+    cout << t.hour << ":" << t.minute << ":" << t.second;
+    return 0;
+}

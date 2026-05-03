@@ -1,0 +1,19 @@
+#include <iostream>
+int main(int argc, char* argv[])
+{
+    short n_bytes, i1, i2;
+    short* x1, *x2;
+    short a = 10;
+    std::cout << "sizeof(x1)==" << sizeof(x1) << std::endl;
+    std::cin >> n_bytes;
+    x1 = (short*)  new short[n_bytes];
+    for (i1=0; i1<n_bytes; i1++)
+    {
+        x1[i1] = i1;
+    }
+     
+    std::cout << "x1=" << x1[i1] + a << std::endl;
+    delete [] x1;
+    std::cout << "Done" << std::endl;
+    return 0;
+}

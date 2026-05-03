@@ -1,0 +1,20 @@
+#include <iostream>
+int i = 0;
+int main(void) {
+    std::cout << "Hello world" << i++ << std::endl;
+}
+ 
+#include <iostream>
+int i = 1, j = -1, k = 0;
+#include <map>
+int f(int i) {
+    return i;
+}
+std::map<std::string, std::function<int(int)>> ops = {
+     {"+", [](int i) {return i+1;} },
+     {"-", [](int i) {return i-1;} },
+ };
+
+int main(void) {
+    std::cout << f(j--) << ops["-"](i++) << std::endl;
+}

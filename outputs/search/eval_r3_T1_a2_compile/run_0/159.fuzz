@@ -1,0 +1,8 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int i = 4;
+    int j = ++i * 3;
+    cout << "The value of i is " << i << ", the value of j is" << j << endl;
+    return 0;
+}

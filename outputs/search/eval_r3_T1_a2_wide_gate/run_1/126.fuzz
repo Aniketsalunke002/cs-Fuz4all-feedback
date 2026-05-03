@@ -1,0 +1,13 @@
+#include <iostream>
+int main( int argc, char **argv ){
+std::cout << "\n\t    This program makes a lot of copies.\n\n";
+}
+
+
+#include <iostream>
+#include <vector>
+int main( int argc, char **argv ){
+  std::vector<int> v1 ( 5, 3);
+  std::vector<int> v2 ( 10, 2);
+  std::cout << "\t    This program makes a lot of copies.\n\n";
+}

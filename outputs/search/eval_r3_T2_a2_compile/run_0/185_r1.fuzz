@@ -1,0 +1,10 @@
+#include <iostream>
+
+namespace Foo {
+  using namespace std;
+  typedef Foo2 Foo;
+}
+int main() {
+  Foo::Foo f;
+  return 0;
+}

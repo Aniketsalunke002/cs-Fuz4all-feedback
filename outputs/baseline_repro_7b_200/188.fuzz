@@ -1,0 +1,8 @@
+#include <iostream>
+int main()
+{
+int x = 30/5;
+if (!( (x > 7) && (x <= 15) )) {
+ x++; } 
+return 1;
+}

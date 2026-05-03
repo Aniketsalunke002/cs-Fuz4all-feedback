@@ -1,0 +1,14 @@
+#include <iostream>
+int main()
+{
+    std::string* str = nullptr;
+    str = new std::string{ "Hello" };
+    std::cout << "BEFORE\n";
+    std::cout << *str << '\n';
+    str[1] = 'H';
+    std::cout << "AFTER\n";
+    std::cout << *str << '\n';
+    delete str;
+    str = nullptr;
+    return 0;
+}

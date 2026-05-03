@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int arr[50];
+    arr[0] = 0;
+    for (int i = 1; i < 50; ++i)
+    {
+        arr[i] = arr[0];
+        cout << arr[i] << endl;
+    }
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a = 4, b = 5, c = 1;
+    int d = 7, e = 1;
+    int bak = e;
+    int *ch = &e;
+    *ch = *ch + a;
+    int  ch2 = *ch + d;
+    int *temp = &a;
+    int *temp2 = &b;
+    *temp = *temp - *temp2;
+    int *temp3 = &c;
+    int *temp4 = &d;
+    *temp2 = *temp2 - *temp4;
+    c = 4;
+    cout << *temp3 - c << endl;
+}

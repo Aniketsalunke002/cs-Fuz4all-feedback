@@ -1,0 +1,35 @@
+#include <iostream>
+
+using namespace std;
+class Node {
+public:
+   int val;
+};
+class ListNode {
+public:
+   int val;
+   Node* next;
+};
+class LinkedList {
+private:
+   ListNode* head;
+public:
+   int getVal() {
+      return head->val;
+   }
+   ListNode* getTail() {
+      return head->next;
+   }
+   LinkedList() {
+      head = new ListNode;
+      head->val = 0;
+      head->next = nullptr;
+   }
+};
+int main(int argc, char** argv) {
+   LinkedList* list = new LinkedList();
+   cout << "Value of 0th node is " << list->getVal() << endl;
+   list->head = nullptr;
+   cout << "Value of 0th node is " << list->getVal() << endl;
+   return 0;
+}

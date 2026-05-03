@@ -1,0 +1,136 @@
+#include <iostream>
+using namespace std;
+class test
+{
+	int a,b,c;
+	public:
+	test():a(2),b(7),c(9){}
+	bool ret()
+	{
+		switch(a+b+c)
+		{
+			case 10: return true;
+			default: return false;
+		}
+	}
+};
+int main()
+{
+	test obj;
+	cout<<obj.ret()<<endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class test
+{
+	int a,b,c;
+	public:
+	test():a(3),b(10),c(20){}
+	bool ret()
+	{
+		return a&&b&&c;
+	}
+	
+};
+int main()
+{
+	test obj;
+	cout<<obj.ret()<<endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class testa
+{
+	int a,b,c;
+	public:
+	testa():a(20),b(70),c(90){}
+	virtual testa obj()
+	{
+		return *this;
+	}
+};
+class testb: public testa
+{
+	public:
+	testb():testa(){}
+	testa obj()
+	{
+		return *this;
+	}
+	int ret()
+	{
+		cout<<"The return was ";
+		switch(a+b+c)
+		{
+			case 300: return 0;
+			default: return 1;
+		}	
+	}
+};
+int main()
+{
+	testb obj;
+	cout<<obj.obj().ret()<<endl;
+	return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+class testa_base
+{
+	public:
+	testa_base()
+	{
+	}
+	~testa_base()
+	{
+	}
+};
+class testb_base{
+	int a,b,c;
+	public:
+	testb_base():a(20),b(70),c(90){}
+	virtual ~testb_base()
+	{
+	}
+};
+class test: public testb_base
+,testa_base
+{
+	private:int d,e,f;
+	public:
+	test():a(20),b(20),c(20){}   
+	test(testb_base base):a(base.a),b(base.b),c(base.c){}  
+	~test (){}
+};
+int main()
+{
+	test obj(obj);
+	delete &obj;
+}
+ 
+#include <iostream>
+using namespace std;
+class testa
+{
+	int a,b,c;
+	public:
+	testa():a(20),b(70),c(90){}
+	testa &obj()
+	{
+		return *this;
+	}
+	int &ret(int &c)
+	{
+		return c;
+	}
+};
+int main()
+{
+	testa obj;
+	int d=0;
+	cout<<

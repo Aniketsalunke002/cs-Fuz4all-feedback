@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int mutatedVersion(int a, int b) {
+    int c=a+b;
+    void *x = (void *) &c;
+    while (x)
+    {
+      cout<<((int *)x)[0]<<endl;
+      x = (*((void **)x)) ;
+    }
+}
+int main() {
+  int a=4,b=5;
+  mutatedVersion(a,b);
+  cout<<6<<endl;
+}

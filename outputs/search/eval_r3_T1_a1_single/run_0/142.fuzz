@@ -1,0 +1,8 @@
+#include <iostream>
+int main() {
+  short int* pi;
+  short int q;
+label:
+  std::cout << pi[q] * pi[q];
+  return 0;
+}

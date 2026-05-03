@@ -1,0 +1,15 @@
+#include <iostream>
+
+using namespace std;
+const double pi = 4.0 / 3.0 * atan2((sqrt(5.0)), 1.0) + pi;
+#if defined ANOTHER_CONST
+int main() {
+  cout << "2^(-5) = " << pow(1.0 / 5, -5.0) << endl;
+  cout << "sin(" << 12 * pi / 3 << ") = " << sin(12 * pi / 3) << endl;
+#else
+  int main() {
+#endif
+    cout << "2^(-5) = " << pow(1.0 / 5, -5.0) << endl;
+    cout << "sin(" << 12 * pi / 3 << ") = " << sin(12 * pi / 3) << endl;
+    return 0;
+  }

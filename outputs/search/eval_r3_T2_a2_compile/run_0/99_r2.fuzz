@@ -1,0 +1,17 @@
+#include <iostream>
+
+using std::cout;
+using std::endl;
+namespace ns{
+int foo(int a, int b) {
+    int r = new b - a;
+    return *(b + a) / r;
+}
+}
+int main(int argc, char** argv)
+{
+    int a=1, b=7;
+    ns::foo(a, a);
+    cout << ns::foo(b, b) << endl;
+    cout << *(b + b) << endl;
+}

@@ -1,0 +1,9 @@
+#include <iostream>
+int main()
+{
+	 
+	 
+	short y = 42;
+	std::cout << (long) y << std::endl;
+	return 0;
+}

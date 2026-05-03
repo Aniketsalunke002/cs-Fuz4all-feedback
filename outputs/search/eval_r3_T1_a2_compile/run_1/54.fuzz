@@ -1,0 +1,27 @@
+#include <iostream>
+int main(){ 
+    int x=10;
+    if(x>=1&&x<=4)
+        ++x;
+    else
+    {
+        char character='a';
+        std::cout<<character;
+        while(character!='d')
+        {
+            ++character;
+            if(character>='c')
+                character-='a';
+            else
+            {
+                ++character;
+                character-='c';
+            };
+        };
+        std::cout<<character;
+        ++character;
+        std::cout<<character;
+    };
+    ++character;
+    return 1;
+}

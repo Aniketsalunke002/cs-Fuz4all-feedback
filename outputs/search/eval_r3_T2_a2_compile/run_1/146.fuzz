@@ -1,0 +1,85 @@
+#include <iostream>
+int main() {
+    int a[10][10], b[10][2];
+    for (auto i = 0; i < 10; i++)
+        for (auto j = 0; j < 10; j++)
+            a[i][j] = (int) ((i - j)*(i - j));
+    for (auto i = 0; i < 10; i++) {
+        for (auto j = 0; j < 2; j++)
+            b[i][j] = a[i][j];
+    }
+    return 0;
+}
+ 
+int new_array = []int{3,4,5};
+int new_array = [new]int[3]{3,4,5};
+int new_array[new]int{3,4,5};
+int new_array[new]int[3]{3,4,5};
+int main() {
+    int new_array = []int {3, 4, 5};
+    int new_array = [new]int[3]{3, 4, 5};
+    int new_array[new]int {3, 4, 5};
+    int new_array[new]int[3]{3, 4, 5};
+}
+ 
+#include <iostream>
+void foo_1(int arg[2]) {
+    arg[0] = 10;
+    arg[1] = 20;
+}
+void foo_2(int (&arg)[2]) {
+    arg[0] = 10;
+    arg[1] = 20;
+}
+void foo_3(int (& arg)[2]) {
+    arg[0] = 10;
+    arg[1] = 20;
+}
+void foo_4(int(&arg)[new]) {
+    arg[0] = 10;
+    arg[1] = 20;
+}
+void foo_5(int(&&arg)[2]) {
+    arg[0] = 10;
+    arg[1] = 20;
+}
+
+void foo_6(int(&& arg)[2]) {
+    arg[0] = 10;
+    arg[1] = 20;
+}
+void foo_7(int((&&arg))[2]) {
+    arg[0] = 10;
+    arg[1] = 20;
+}
+void foo_8(int(&& arg)[new]) {
+    arg[0] = 10;
+    arg[1] = 20;
+}
+
+void bar(int &arg) {
+    ++arg;
+}
+
+int main() {
+    int arg_1[2], arg_2[2], arg_3[2], arg_4[2], arg_5[2], arg_6[2], arg_7[2];
+    foo_1(arg_1);
+    foo_2(arg_2);
+    foo_3(arg_3);
+    foo_4(arg_4);
+    foo_5(arg_5);
+    foo_6(arg_6);
+    foo_7(arg_7);
+    foo_8(arg_1);
+    bar(arg_1);
+}
+ 
+int main() {
+    int arr_1d[100];
+    int *arr_2d = new int[100];
+    int ** arr_3d = new int*[10];
+    int (*arr_4d)[10];
+}
+ 
+void func(int (& arg)[100]) {}
+void func_1(

@@ -1,0 +1,27 @@
+#include <iostream>
+
+#include <algorithm>
+#include <map>
+#include <vector>
+
+using namespace std;
+
+struct A {
+  vector<int> vec;
+  map<int,int> m;
+};
+
+A::A(A& a) {
+  vec = a.vec;
+  m = a.m;
+}
+
+int main(int argc, char *argv[]) {
+  using AA = A;
+  A a;
+
+  sort(a.vec.begin(),a.vec.end());
+  sort(a.m.begin(),a.m.end());
+
+  A b(a);
+}

@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+int main() {
+  double n = 0.1;
+  while (1) {
+    n += n * 1.275 + 3.8125;
+    cout << n << 'n';
+  }
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+  for (int i = 0; i < 5; i++) {
+    int n = 0;
+    n += 1 + n;
+    n += 1 + n;
+    n += 1 + n + n;
+    cout << n << 'n';
+  }
+}
+ 
+#include <iostream>
+#include <string.>
+using namespace std;
+int main() {
+  char a[100];
+  cout << "NASA";
+  strcpy(a, "IS A");
+  strcat(a, " BEST STUDY A");
+  strcat(a, "CADEMY");
+  cout << a;
+}
+ 
+#include <iostream>
+using namespace std;
+int main() {
+  char x = '1';
+  int j = 2;
+  for (char i = 'a'; i < 'p'; i += 1) {
+    if (j < 10) {
+      cout << x << j << i << i << i << i << i << j << i << i << 1 << i << 'n';
+    } else {
+      cout << "n";
+    }
+    j += 2;
+    x++;
+  }
+}

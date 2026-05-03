@@ -1,0 +1,20 @@
+#include <iostream>
+int main() { 
+  std::ios::hex;
+  for (int a = 0; a < 100 * 1024; a += 1)
+    std::cout << a;
+  return 0;
+}
+ 
+#include <iostream>
+int main() {
+  int a;
+  int b = 1000;
+  std::cin >> a;
+  int c = 53;
+
+  std::cout << "The sum of " << a << " and " << b << " is " << a + b << '\n';
+  std::cout << "The multiply of " << a << " and " << c << " is " << a  * c << '\n';
+
+  return 0;
+}

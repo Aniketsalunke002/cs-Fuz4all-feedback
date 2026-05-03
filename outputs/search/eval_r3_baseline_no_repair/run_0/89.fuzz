@@ -1,0 +1,9 @@
+#include <iostream>
+int main(int argc, char **argv) {
+    int i = f(argc);
+    i = argc + 1;
+    std::cout << i << std::endl;
+}
+ 
+ 
+ 

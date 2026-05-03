@@ -1,0 +1,23 @@
+#include <iostream>
+class A {
+public:
+    void b() {};
+};
+int main() {
+    A* a = new A;
+    a->b();
+    return 0;
+}
+ 
+#include <iostream>
+#include <cmath>
+#include <random>
+
+int main() {
+    std::random_device rd;
+    std::default_random_engine engine(rd());
+    std::uniform_int_distribution<int> dist{2, 2.5 * std::pow(10, 7)};
+    auto n = dist(engine);
+    for (int i = 2; i < n; i++) {
+        int count = 0;
+        for (int j = 2; j < std::ceil(std::sqrt(std

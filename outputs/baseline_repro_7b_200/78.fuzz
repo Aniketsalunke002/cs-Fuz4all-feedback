@@ -1,0 +1,14 @@
+#include <iostream>
+class Parent {
+public: 
+    virtual void func() = 0; 
+};
+class Child: public Parent {
+public: 
+    void func() { std::cout << "Child func" << std::endl; } 
+};
+int main(int argc, char* argv[]) {
+    Parent *p = new Child();
+    p->func();
+    delete p;
+}

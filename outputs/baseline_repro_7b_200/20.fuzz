@@ -1,0 +1,22 @@
+#include <iostream>
+#include <exception>
+using std::cout;
+int main(void) {
+	return 0;
+	std::cin << std::runtime_error{};
+}
+ 
+#include <cmath>
+int main(void) {
+	return 0;
+	(int) sqrt;
+}
+ 
+ 
+ 
+
+ 
+
+#else
+	#error Compiler not supported
+#endif

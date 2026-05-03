@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int i = 10;
+	while (--i)
+		if (--i)
+			while (--i);
+	
+	while (--i) cout << i << " ";
+	
+	cout << "\n";
+	
+	return 0;
+}

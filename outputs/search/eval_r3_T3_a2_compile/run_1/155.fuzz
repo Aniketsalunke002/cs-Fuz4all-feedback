@@ -1,0 +1,13 @@
+#include <iostream>
+void increase(int i) {
+  i += 1;
+}
+int main(int argc, char * argv[]) {
+  int i = 1;
+  std::cout << i << '\n';
+  increase(i);
+  std::cout << i << '\n';
+}
+ 
+
+

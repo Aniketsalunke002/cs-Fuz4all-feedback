@@ -1,0 +1,43 @@
+#include <iostream>
+
+using std::cin;
+using std::cout;
+using std::endl;
+int main() {
+    cout << "Enter at most 5 numbers: " << endl;
+    int sum = 0, number = 0, max = 0;
+    while ((cin >> number) && (sum < 5)) {
+        sum += 2;
+        if (sum > max) {
+            max = sum;
+        }
+    }
+    cout << sum << endl;
+    cout << "Maximum sum in this example was " << max << endl;
+}
+
+// </pre>
+// <p>Together, these examples create a short program that contains 4 new  C++ features: decltype, typedef, initializer_list, and auto. You may not use these three features unless you know exactly how they work.</p>
+// 
+// </div>
+#include <iostream>
+using std::cin;
+using std::cout;
+using std::endl;
+int main() {
+    cout << "Enter at most 5 numbers: " << endl;
+    int sum = 0, number = 0, max = 0;
+    while ((cin >> number) && (sum < 5)) {
+        sum += 2;
+        if (sum > max) {
+            max = sum;
+        }
+    }
+    cout << sum << endl;
+    cout << "Maximum sum in this example was " << max << endl;
+}
+
+// </pre>
+// <p>Together, these examples create a short program that contains 4 new  C++ features: decltype, typedef, initializer_list, and auto. You may not use these three features unless you know exactly how they work.</p>
+// 
+// </div>

@@ -1,0 +1,10 @@
+#include <iostream>
+
+#ifndef TEST
+#define TEST 1
+#endif
+#if TEST
+int main(int argc, char** argv) {
+  std::cout << "hi";
+}
+#endif

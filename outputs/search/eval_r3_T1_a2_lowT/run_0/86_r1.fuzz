@@ -1,0 +1,9 @@
+#include <iostream>
+
+#if 0
+int main()
+{
+    short y = 30;
+    std::cout << y << std::endl;
+}
+#endif

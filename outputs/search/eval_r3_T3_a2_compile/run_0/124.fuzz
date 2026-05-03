@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	float x,y;
+	cin>>y>>x;
+	cout<<x+y<<"\n";
+	cout<<y*x<<"\n";
+	cout<<y/x<<"\n";
+	cout<<x/y<<"\n";
+	return 0;
+}

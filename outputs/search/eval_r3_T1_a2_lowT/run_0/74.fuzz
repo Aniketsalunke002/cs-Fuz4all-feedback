@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main()
+{
+    std::cout << "Hello";
+    std::cout << "world";
+}
+ 
+#include <stdio.h>
+int main()
+{
+    printf("Hello world!\n");
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    int count = 5;
+    while (count)
+    {
+        cout << 'L';
+        count--;
+    }
+    cout << '\n';
+    count = 10;
+    while (count--)
+        cout << 'O';
+    return 0;
+}

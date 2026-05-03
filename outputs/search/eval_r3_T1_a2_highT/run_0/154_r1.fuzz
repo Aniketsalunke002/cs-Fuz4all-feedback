@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+  int n = 0;
+  if (n < 4) {
+    int b1 = 1;
+    cout << "3";
+    n++;
+    if (n >= 3) b1 = 0;
+    if (b1) goto L1;
+    cout << "4";
+  } else {
+    int b2 = 1;
+    cout << "4";
+    n++;
+    if (3 <= n) b2 = 0;
+    if (b2) goto L1;
+    cout << "3";
+  }
+L1:
+  cout << endl;
+  if (n < 8) {
+    int b4 = 1;
+    cout << "4";
+    n++;
+    if (7 <= n) b4 = 0;
+    if (b4) goto L7;
+    cout << "3";
+  } else {
+    int b3 = 1;
+    cout << "3";
+    n++;
+    if (n >= 8) b3 = 0;
+    if (b3) goto L7;
+    cout << "4";
+  }
+L7:
+  cout << endl;
+  if (n < 12) {
+    int b5 = 1;
+    cout << "2";
+    n++;
+    if (n >= 11) b5 = 0;
+    if (b5) goto L13;
+    cout << "4";
+  } else {
+    int b6 = 1;
+    cout << "4";
+    n++;
+    if (n >= 12) b6 = 0;
+    if (b6) goto L13;
+    cout << "2";
+  }
+L13:
+  cout << endl;
+  return 0;
+}

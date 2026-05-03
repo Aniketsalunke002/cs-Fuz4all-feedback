@@ -1,0 +1,30 @@
+#include <iostream>
+
+#include <cstdio>
+#include <functional>
+template <typename T>
+class my
+{
+  public:
+template <typename F>
+my(T t, F f) : m(t), f(f) { };
+void operator()() { (m.*f)(); }
+
+T m;
+F f;
+};
+
+int main()
+{
+int x=1;
+my<int> foo(&x,&int::sin);
+foo();
+}
+
+int main() {
+std::function<int(int,int)> sum = [](int a,int b){return a+b;};
+std::function<int(int,int)> sub = [](int a,int b){return a-b;};
+cout<< sub(10,15);
+cout<< sub(5,15);
+}
+//

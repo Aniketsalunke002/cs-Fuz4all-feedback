@@ -1,0 +1,25 @@
+#include <iostream>
+
+#include <stdio.h>
+using namespace std;
+
+class A { // A
+public:
+    A(int x) { printf("A(int x) %d\n", x); }
+};
+
+class B : public A { // B
+public:
+    B(int x) : A(x) { printf("B(int x) %d\n", x); }
+};
+
+class C : public A { // C
+public:
+    C(int x) : A(x) { printf("C(int x) %d\n", x); }
+};
+
+int main() {
+    B b(10);
+    C c(20);
+    return 0;
+}

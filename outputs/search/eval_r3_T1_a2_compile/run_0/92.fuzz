@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int n,a;
+    cout << "Enter the numbers " << endl;
+    cin >> n; 
+    for( a=1; a<=n ; a+=2)
+        cout << a;
+    cout << endl;
+}

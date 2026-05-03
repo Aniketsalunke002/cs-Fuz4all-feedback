@@ -1,0 +1,24 @@
+#include <iostream>
+
+   using namespace std;
+   long add(long x,long y);   
+   double add(double x,double y);   
+   int main()
+   {
+        int a=2,b=3;
+        int num1,num2;
+        double num3,num4;
+        cin>>num1;
+        cin>>num2;
+        cin>>num3;
+        cin>>num4;
+        cout<<add(num2,num1)+num3+num4<<endl;
+   }
+   long add(long x,long y)
+   {
+       return x+y;   
+   }
+   double add(double x,double y)
+   {
+       return x+y;  
+   }

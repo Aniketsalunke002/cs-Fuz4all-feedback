@@ -1,0 +1,6 @@
+#include <iostream>
+int c;
+int main()
+{std::cout << c << std::endl;}
+ 
+I used a "while" loop because "do-while" loops require a conditional expression whereas I need to count until it is equal to "0".

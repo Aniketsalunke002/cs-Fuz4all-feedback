@@ -1,0 +1,10 @@
+#include <iostream>
+int main() {
+  char* p = new char[10];
+  std::cout << std::string(p);
+  std::cout << " \n";
+  delete p;
+  return 0;
+}
+
+ 

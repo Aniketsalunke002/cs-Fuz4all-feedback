@@ -1,0 +1,10 @@
+#include <iostream>
+int main() {
+    int a=0;
+    int b=1;
+    for (int i=1; i<=4; i=i+2) {
+        a = b;
+        b = b -1;
+        std::cout << i << ':' << a << '+' << b << '=' << a + b << std::endl;
+    }
+}

@@ -1,0 +1,16 @@
+#include <iostream>
+
+namespace mutator {
+    void mutate(char*& str) {
+        for (int i = 0; i < str.length(); ++i) {
+            fuzz::mutate(str, i);
+        }
+    }
+}
+int main() {
+    char str[15];
+    strcpy(str, "I am an ordinary string");
+    mutator::mutate(str);
+    std::cout << str << "\n";
+    return 0;
+}

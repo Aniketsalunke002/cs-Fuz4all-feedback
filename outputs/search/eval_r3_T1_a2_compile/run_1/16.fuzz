@@ -1,0 +1,13 @@
+#include <iostream>
+
+int main(void)
+{
+    int a = -5;
+    int b = -4;
+    int c = 2;
+    int d = 5;
+    std::cout<<a-(b/c)*42;
+    std::cout<<(a+b)*6;
+}
+ 
+ 

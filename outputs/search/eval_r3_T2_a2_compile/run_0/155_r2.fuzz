@@ -1,0 +1,44 @@
+#include <iostream>
+
+#include <iomanip>
+using namespace std;
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main() {
+  int i = 0;
+  int n = 0;
+  int o = 0;
+  int p = 0;
+  int r = 0;
+  int y = 0;
+  int x = 0;
+  int k = 0;
+  int h = 0;
+  int l = 0;
+  int e = 0;
+  int m = 0;
+  int q = 0;
+  int a = 0;
+  int k1 = 0;
+  int o1 = 0;
+  int sum = (i + n + o + p + r + y + x + k + h + l + e + m + q);
+  int sum1 = (i + n + o + p + r + y + x + k + h + l + e + m + q);
+  int sum2 = (i + n + o + p + r + y + x + k + h + l + e + m + q);
+
+  {
+  }
+  cout << k1 << endl;
+  {
+    cout << a << endl;
+  }
+  cout << o1 << endl;
+  if (sum > sum2 && sum == sum1)
+    cout << "10" << endl;
+  else {
+    cout << "0" << endl;
+  }
+  return 0;
+}

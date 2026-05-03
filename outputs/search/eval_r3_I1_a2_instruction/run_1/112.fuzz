@@ -1,0 +1,12 @@
+#include <iostream>
+struct A {
+public:
+    int i;
+
+    A(int x) : i{x} {}
+};
+int main()
+{
+    A* a = new A(5);
+    std::cout<<a->i<<'\n';
+}

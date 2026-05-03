@@ -1,0 +1,7 @@
+#include <iostream>
+int mutate_mutant() {
+    return -42;
+}
+int main(int argc, char *argv[]) {
+    std::cout << mutate_mutant() << std::endl;
+}

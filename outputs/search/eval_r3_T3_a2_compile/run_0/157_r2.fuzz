@@ -1,0 +1,11 @@
+#include <iostream>
+
+using namespace std;
+template<typename T1, typename T2>
+T1 product(T1 a, T2 b) {
+  return a * b;
+}
+int main() {
+  cout << product<int, int>(2, 3) << "\n";
+  return 0;
+}

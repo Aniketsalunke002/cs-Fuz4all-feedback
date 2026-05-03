@@ -1,0 +1,7 @@
+#include <iostream>
+using A = int;  
+int main()
+{
+    A a{3};
+    std::cout << a << std::endl;
+}

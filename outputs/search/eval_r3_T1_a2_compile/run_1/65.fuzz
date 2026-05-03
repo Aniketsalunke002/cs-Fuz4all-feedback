@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string.h>
+#include <stdio.h>
+#include <cctype>
+using namespace std;
+bool IsPalindrome(char word[])
+{
+    int index=0;
+    
+    while (word[index]!=NULL)
+    {
+        if (!isalnum(word[index]))
+        {
+            index=index+1;
+            continue; 
+        }
+        if(tolower(word[index])!=tolower(word[strlen(word)-1-index]))
+            return false;
+        index++;
+    }
+    return true;
+    
+}
+int main()
+{
+    char word[100]="adadaa";
+    cout<< IsPalindrome(word);
+
+   return 0;
+}

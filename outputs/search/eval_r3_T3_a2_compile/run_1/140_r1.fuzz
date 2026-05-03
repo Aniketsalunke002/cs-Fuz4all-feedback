@@ -1,0 +1,11 @@
+#include <iostream>
+
+template <typename T>
+void func() {
+  std::cout << "func" << std::endl;
+}
+template void func<double>();
+template void func<int>();
+int main() {
+  func<double>();
+}

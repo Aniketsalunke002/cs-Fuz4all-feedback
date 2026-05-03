@@ -1,0 +1,17 @@
+#include <iostream>
+
+namespace fuzzer {
+int main() {
+    double d [16];
+        for (int i = 0; i < 16; i++)
+        { 
+            double l = (double) i;
+            double j = -1 * l * l;
+            if (j == -1.0 * l * l)  
+            {
+                std::cout << "OK" << '\n';
+            }
+        }
+        return 0;
+    }
+}

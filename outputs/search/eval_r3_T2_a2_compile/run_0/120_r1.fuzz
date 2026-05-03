@@ -1,0 +1,9 @@
+#include <iostream>
+
+
+int main() {
+  int c, d;
+  std::cin >> c >> d;
+  std::cout << 12 * c + 13 << std::endl;
+  return 0;
+}

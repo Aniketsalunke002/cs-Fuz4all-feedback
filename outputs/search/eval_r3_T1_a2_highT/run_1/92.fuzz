@@ -1,0 +1,9 @@
+#include <iostream>
+using namespace std;
+int findMax(int arr[], int numElements)
+{
+    int max = arr[0];
+    for(int i = 1; i < numElements; ++i)
+        if (max < arr[i]) max = arr[i];
+    return max;
+}

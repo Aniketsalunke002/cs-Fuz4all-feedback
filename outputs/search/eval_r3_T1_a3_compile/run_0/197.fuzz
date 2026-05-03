@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+    enum days{Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday};
+    enum days day;
+    day=days::Monday;
+    cout << "Today's day is "<< day+1 << endl;
+    return 0;
+}

@@ -1,0 +1,111 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+  int tab[5] = {};
+   
+
+  for (int i=0; (i<3 && tab[i] == 0); i++){
+     cout << i << " ";
+  }
+
+  for (int i=tab.size()-1; -1 < i && tab[i] == 0; i--){
+    cout << i << " ";
+   }
+  int counter = 0;
+  for (int i=0; tab[i] <= tab[i+1]; i++){
+    if(tab[i] == 0 || tab[i] == 1)
+    {
+      counter = tab[i];
+      tab[i] = 1;
+      tab[i+counter+1] = 0;
+      counter++;
+    }
+  }
+
+  for(int i=0; i<tab.size(); i++)
+  {
+    cout <<tab[i]<< " ";
+  }
+
+return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+struct Date
+{
+    int month;
+    int day;
+    int year;
+    Date()
+    {
+        month= year = 0;
+        day = 0;
+    }
+    void readData()
+    {
+        cin >> year >> month >> day;
+    }
+    bool isBetween(const Date& other)
+    {
+        return ((year > other.year && month >= other.month) ||
+        (year == other.year && month >= other.month) && day >= other.day);
+    }
+};
+void printDate(const Date& date)
+{
+    cout << date.year << "/" << date.month << "/" << date.day << endl;
+}
+int main()
+{
+    Date date, other;
+    date.readData();
+    printDate(date);
+
+    do
+    {
+        other.readData();
+    } while (!date.isBetween(other));
+
+    cout << "yes" << endl;
+
+    return 0;
+}
+ 
+#include <iostream>
+using namespace std;
+#define MAXNCHAR 0x100
+#define MAXNARG 0x10
+ 
+ 
+int f(int a,int b,int c,int args...)
+{
+  int sum=a+b+c;
+    if (MAXNARG >= 4){
+    int arg;
+    while (MAXNARG >= 4 && (arg = args++)) sum+=arg;
+    }
+
+  return sum;
+}
+int main()
+{
+  cout << f(1,2,3) << " ";
+  cout << f(1,2,3,4) << " ";
+  cout << f(1,2,3,4,5) << " ";
+  cout << f(1,2,3,4,5,6) << " ";
+  cout << f(1,2,3,4,5,6,7) << " ";
+
+  return 0;
+}
+ 
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+    int * ptr;
+    free(ptr);
+    int count=0;
+    cout << sizeof

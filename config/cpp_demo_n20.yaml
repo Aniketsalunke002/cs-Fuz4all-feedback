@@ -1,0 +1,43 @@
+# Reduced-scale BASELINE config (no repair) for the demo.
+# Same model + prompt as cpp_demo.yaml, but with num=20 so a full
+# end-to-end run completes in ~30-45 seconds on an RTX 5000.
+# Used by scripts/demo.sh and the README's "Reduced-scale reproduction" section.
+
+fuzzing:
+  output_folder: outputs/demo_baseline
+  num: 20
+  total_time: 1
+  log_level: 3
+  otf: true
+  resume: false
+  evaluate: false
+  use_hand_written_prompt: false
+  no_input_prompt: true
+  prompt_strategy: 2
+
+target:
+  language: cpp
+  path_documentation: config/documentation/cpp/cpp_23.md
+  path_example_code:
+  trigger_to_generate_input: "/* Please create a very short program which uses new C++ features in a complex way */"
+  input_hint: "#include <iostream>"
+  path_hand_written_prompt:
+  target_string: ""
+
+llm:
+  temperature: 1
+  batch_size: 4
+  device: cuda
+  model_name: bigcode/starcoderbase-7b
+  max_length: 1024
+
+ollama:
+  model_name: ollama/starcoder
+  temperature: 0.7
+  batch_size: 20
+  max_length: 512
+  device: gpu
+  additional_params:
+    top_k: 50
+    top_p: 0.95
+    repetition_penalty: 1.2

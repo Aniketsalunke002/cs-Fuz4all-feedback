@@ -1,0 +1,26 @@
+#include <iostream>
+int mutant1() {
+	int a = -1;
+	char c = 'a';
+	return a;
+}
+int mutant2() {
+	int a = 80;
+	if (a >= 80) {
+	return a;
+	}
+	else {
+		if (a == 0) {
+			return 0;
+		}
+		else {
+			if (a > 0) {
+				return a;
+			}
+			else {
+				return 0;
+			}
+
+		}
+	}
+}
