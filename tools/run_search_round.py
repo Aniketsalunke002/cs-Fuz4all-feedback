@@ -146,7 +146,7 @@ def main():
         f.write("Please propose the next round of candidate configs in the same JSON format.\n")
         f.write("Format: a JSON array of objects with \"name\", \"gen\", and \"repair\" keys.\n")
         f.write("\"gen\" can override llm/fuzzing; \"repair\" can override repair section.\n")
-        f.write("Save as candidates/round_02.json (or next number).\n")
+        f.write("Save as candidates/round_NN.json (use the next free round number).\n")
 
     print(f"Wrote {next_md}")
 

@@ -4,7 +4,7 @@
 # --------------------------------------------------------------------------- #
 # Configuration of the overall fuzzing setup
 fuzzing:
-  output_folder: ../fastd/fuzzall/FuzzAll/experiment/full_run/cpp/run
+  output_folder: outputs/cpp_repair_demo
   num: 200
   max_llm_calls: 500
   total_time: 1

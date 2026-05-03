@@ -3,11 +3,26 @@
 Course project for **CS7602 / CS8602: Using AI to Explore a Security Research Problem**.  
 Built on top of [Fuzz4All (ICSE '24)](https://arxiv.org/abs/2308.04748) by Xia et al.
 
-This repository extends Fuzz4All with:
+This repo adds:
 
-- an **error-guided repair stage** for failed C++ generations,
-- a **structured evaluator** for fixed candidate scoring,
-- and an **AI-driven search harness** for exploring repair-policy configurations.
+- an **error-guided repair** pass for failed C++ generations,
+- a small **evaluator** for scoring fixed candidates,
+- and a **search harness** to try different repair-policy settings.
+
+### Start here
+
+- **Small demo (1B, N = 50):** [Installation and reduced-scale demo](#installation-and-reduced-scale-demo-1b-n--50). Follow **Steps 1–9** as written. Steps marked **Optional** (HPC, PyTorch pin, Hugging Face) can be skipped if your machine is already set up.
+- **Main numbers (no GPU needed to read them):** [Recorded 7B full-scale results](#recorded-7b-full-scale-results-main-run), i.e. the saved `metrics.json` files under `outputs/`.
+- **Repo layout:** [Repository structure](#repository-structure).
+
+### Table of contents
+
+1. [Overview](#overview) ([Limitations](#limitations))
+2. [Installation and reduced-scale demo (1B, N = 50)](#installation-and-reduced-scale-demo-1b-n--50)
+3. [Notes for the live N=50 table](#notes-for-the-live-n50-table)
+4. [Recorded 7B full-scale results (main run)](#recorded-7b-full-scale-results-main-run)
+5. [Repository structure](#repository-structure)
+6. [References](#references)
 
 ---
 
@@ -15,127 +30,66 @@ This repository extends Fuzz4All with:
 
 ### What problem does this solve?
 
-LLM-based fuzzers discard every generated program that fails to compile.  
-This project asks:
+LLM fuzzers usually throw away anything that does not compile.
 
-> Can compiler feedback (`stderr`) be used as a repair signal to recover partially-correct programs instead of throwing them away?
+> Can we use compiler output (`stderr`) as a hint to fix near-miss programs instead of dropping them?
 
-In this project, the answer is **yes**: compiler diagnostics can be turned into useful repair signals that increase the number of compilable fuzzing inputs.
+**Yes**, at least in our setup: feeding `g++` errors back into the model bumps how many generated programs compile.
 
 ### Why this matters for security
 
-Compiler fuzzing is a practical path to surfacing security-relevant failures such as:
+Compiler fuzzing is one way to shake out ICEs, miscompiles, and other bugs that matter for toolchains.
 
-- internal compiler errors,
-- miscompiles,
-- and bugs that block deeper downstream testing.
+If more generations compile, more of them can go through later checks. Repair is basically “try to salvage the compile failures” so you get more usable inputs per batch.
 
-If more generated programs compile successfully, more inputs reach later fuzzing oracles.  
-The repair stage therefore improves fuzzing throughput by turning near-miss generations into usable test cases.
+### Limitations
 
-### Main run vs runnable demo
+- **Repair** uses compiler errors so the generated file is more likely to pass our usual compile check (`g++ -c`, **C++23**). Nothing is linked or run for that test.
 
-- **Report-scale / main quantitative result:** **StarCoderBase-7B**, **N = 200** programs per condition (baseline vs repair). Pre-recorded outputs live under `outputs/baseline_repro_7b_200/` and `outputs/repair_repro_7b_200/` (and an earlier midterm pair under `outputs/baseline_7b_200/`, `outputs/repair_7b_200/`). This is the run the write-up and tables below are anchored on.
-- **README walkthrough (lighter reproduction):** **StarCoderBase-1B**, **N = 50**. A **7B × N = 20** path exists in config (`cpp_demo_n20.yaml`, etc.) but shipping full **7B × N = 20** run artefacts made the repo too large, so this document gives **copy-paste steps for 1B @ N = 50** instead—enough VRAM and time for a class demo or TA check, while the **7B @ N = 200** folders remain the primary evidence pack.
-
-**Headline numbers (final 7B repro, N = 200, C++23, `g++ -c`):**
-
-
-| Metric                | Baseline | + Repair  | Δ          |
-| --------------------- | -------- | --------- | ---------- |
-| `valid_rate`          | 0.595    | **0.800** | **+0.205** |
-| `unique_valid_rate`   | 0.490    | **0.655** | **+0.165** |
-| `repair_success_rate` | —        | 0.535     | —          |
-
-
-Source: `outputs/baseline_repro_7b_200/metrics.json`, `outputs/repair_repro_7b_200/metrics.json`.
-
----
-
-## Repository structure
-
-The course asks for a repository with **code + README**, including the **evaluator**, **AI search scripts**, and **configuration** (prompts, config files, etc.). Here is how this submission maps to that:
-
-
-| Expectation                 | Where it lives in this repo                                                                                                                                                                                      |
-| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Evaluator**               | `tools/evaluate_candidate.py` (fixed-budget evaluation); compile/validation logic in `Fuzz4All/target/` and repair scoring in `Fuzz4All/repair/repair.py`. See `docs/COURSE_PROJECT.md` for metrics and options. |
-| **AI search scripts**       | `tools/run_search_round.py` (search harness); repair-policy **candidates** in `candidates/` (JSON → materialized YAML under `candidates/materialized/`); search logs and prompts in `outputs/search/`.           |
-| **Configuration & prompts** | YAML **configs** under `config/` (baseline, repair, smoke, demo variants); **prompts** under `prompts/repair/` (templates `T1.txt`–`T6.txt`).                                                                    |
-
-
-```text
-fuzz4all-cs-final/
-├── Fuzz4All/
-│   ├── fuzz.py                      # main fuzzing loop (with repair hook)
-│   ├── make_target.py
-│   ├── model.py
-│   ├── repair/
-│   │   └── repair.py                # repair stage + RepairConfig + templates
-│   ├── target/
-│   │   ├── target.py                # ValidationResult, CompileStatus
-│   │   └── CPP/
-│   │       └── CPP.py               # g++ -c compile-only oracle
-│   └── util/
-├── prompts/
-│   └── repair/
-│       └── T1.txt … T6.txt          # completion-style repair templates
-├── tools/
-│   ├── evaluate_candidate.py        # fixed-budget evaluator
-│   └── run_search_round.py          # AI-driven search harness
-├── scripts/
-│   └── demo.sh                      # reproduction (N=20, 7B)
-├── config/
-│   ├── cpp_demo.yaml                # baseline       (N = 200, 7B)
-│   ├── cpp_repair_demo.yaml         # repair         (N = 200, 7B)
-│   ├── cpp_demo_n20.yaml            # baseline       (N = 20,  7B)
-│   ├── cpp_repair_demo_n20.yaml     # repair         (N = 20,  7B)
-│   ├── cpp_smoke.yaml               # 1B smoke       (pipeline check)
-│   ├── cpp_repair_smoke.yaml
-│   ├── cpp_smoke_n50.yaml           # HPC / README demo (N = 50, 1B)
-│   ├── cpp_repair_smoke_n50.yaml
-│   ├── ablation/                    # upstream Fuzz4All ablation configs
-│   ├── targeted/
-│   ├── full_run/
-│   └── documentation/               # per-language prompt docs (upstream)
-├── candidates/
-│   ├── round_01.json
-│   ├── round_02.json
-│   └── materialized/                # YAMLs materialized from candidate JSON
-├── docs/
-│   ├── COURSE_PROJECT.md            # extension docs (metrics, options)
-│   └── DEMO_EXECUTION.md            # copy-paste HPC demo (same steps as README walkthrough)
-├── outputs/                         # main: *_repro_7b_200/ (7B N=200); demo: baseline_n50_1b/, repair_n50_1b/; search/, eval_smoke/
-├── README.md                        # this file
-├── README_artifact.md               # original ICSE '24 artifact instructions
-├── requirements.txt
-└── setup.py
-```
+**Semantic correctness:** A program can compile and still be wrong or meaningless. This project does **not** measure semantic correctness: nothing in the pipeline checks “does it mean or do the right thing.” That is a **limitation** of compile-only fuzzing and compile-only repair. Metrics such as `valid_rate` and repair counts only reflect **compiler success**, not correctness of behavior or meaning.
 
 ---
 
 ## Installation and reduced-scale demo (1B, N = 50)
 
-The **main numbers** for this project come from **7B, N = 200** (see **Recorded 7B full-scale results** below). The steps in *this* section are a **smaller, repo-friendly** way to exercise the same pipeline end-to-end: **StarCoderBase-1B** and **N = 50**, so you do not need a 7B-class GPU block or multi-hour runs to verify repair behaviour. 
+This walkthrough is **StarCoderBase-1B**, **N = 50** (lighter than the **7B @ N = 200** run in [Recorded 7B full-scale results](#recorded-7b-full-scale-results-main-run)).
 
-Because the project uses local models on GPU, run this on a **CUDA-enabled NVIDIA GPU** when possible. CPU-only is usually too slow to be practical.
+Use a machine with an **NVIDIA GPU** and **CUDA** if you can. **CPU-only** is usually too slow to be practical for this demo.
 
-I recommend:
+Typical setups:
 
-- a **GPU-enabled university HPC node**, or
-- a **Linux machine with a suitable NVIDIA GPU**.
+- a GPU node on campus HPC, or
+- a Linux box with a decent NVIDIA card.
+
+**C++compiler (`g++`):** The demo calls `g++` as the compile oracle (`--target "$(command -v g++)"`). Check:
+
+```bash
+command -v g++ && g++ --version
+```
+
+If `g++` is missing, install a toolchain (pick one that matches your OS):
+
+```bash
+# Debian / Ubuntu
+sudo apt update && sudo apt install -y build-essential
+
+# RHEL / Fedora (dnf)
+sudo dnf install -y gcc-c++
+```
+
+On **HPC**, compilers are often provided via modules (names vary by site), e.g. `module avail gcc` then `module load <gcc-module>` before re-running the check.
 
 These instructions start with an optional HPC allocation step; **skip Step 1** if you already have a GPU machine.
 
-**This walkthrough’s setting:** baseline vs repair at **N = 50** with `**bigcode/starcoderbase-1b`**, then a comparison table (steps 7–9).
+**This walkthrough:** baseline vs repair at **N = 50** with `bigcode/starcoderbase-1b`, then the comparison table in steps 7–9.
 
----
+**Optional: Step 1, HPC only (Slurm / GPU node)**
 
 ### 1. (HPC only) Get a compute node
 
 The login node is shared and slow. Reserve a workstation first.
 
-1. SSH into your cluster or HPC Your prompt will look like `<user>@zap-fe-1` or similar.
+1. SSH into your cluster or HPC. Your prompt will look like `<user>@zap-fe-1` or similar.
 2. (Recommended) Start a `tmux` session so an SSH disconnect does **not** kill your work:
   ```bash
    tmux new -s fuzzdemo
@@ -145,9 +99,9 @@ The login node is shared and slow. Reserve a workstation first.
   ```bash
   salloc -N1 -n24
   ```
-  Wait until you see `salloc: Granted job allocation` and the prompt switches to a workstation hostname (e.g. `ws-l1-001`). **Do not run anything heavy until you see this.**
+   Wait until you see `salloc: Granted job allocation` and the prompt switches to a workstation hostname (e.g. `ws-l1-001`). **Do not run anything heavy until you see this.**
 4. Confirm the GPU:
-  Note the **Driver Version** and **CUDA Version** lines from the header — you will use the CUDA number in step 4. You should also see your GPU listed (e.g. `NVIDIA RTX 5000 Ada Generation`, 32 GB).
+  Note **Driver Version** and **CUDA Version** in the header (you’ll match PyTorch to that later). You should see your GPU name, e.g. `NVIDIA RTX 5000 Ada Generation`, 32 GB.
 
 If you are on a personal Linux machine that already has `g++` and an NVIDIA GPU, skip this section.
 
@@ -170,8 +124,7 @@ The project pins older packages (e.g. `pandas==2.0.3`) that fail on Python **3.1
    python --version
    which python
   ```
-   You must see **Python 3.10.x** and a path under `.../envs/fuzz4all/...`.
-   Then re-run step 3.
+   You should see **Python 3.10.x** and a path under `.../envs/fuzz4all/...`. If not, you are not in the env; go back to step 2.
 
 ---
 
@@ -179,9 +132,9 @@ The project pins older packages (e.g. `pandas==2.0.3`) that fail on Python **3.1
 
 Run inside the activated `fuzz4all` env, from the **repo root**:
 
-1. Go to the repo:
+1. Go to the repo root (where `setup.py` lives):
   ```bash
-   cd /path/to/your/fuzz4all-cs-final or You should already be in root folder
+   cd /path/to/fuzz4all-cs-final
   ```
 2. Upgrade packaging tools (prevents the `pkg_resources` / `Failed to build pandas` errors):
   ```bash
@@ -202,11 +155,13 @@ Run inside the activated `fuzz4all` env, from the **repo root**:
 
 ---
 
+**Optional: Step 4, GPU-matching PyTorch (CUDA)**
+
 ### 4. Install a GPU-matching PyTorch (CUDA 12.x)
 
 The `torch` from `requirements.txt` may not match the lab’s NVIDIA driver and you will see **The NVIDIA driver on your system is too old** at runtime. Replace it with the CUDA build that matches `nvidia-smi`.
 
-1. Uninstall whatever version was installed by `requirements.txt`: if it does not match your driver
+1. Uninstall the PyTorch packages that `requirements.txt` already installed so you can replace them with a build that matches your GPU driver:
   ```bash
    pip uninstall -y torch torchvision torchaudio
   ```
@@ -214,19 +169,21 @@ The `torch` from `requirements.txt` may not match the lab’s NVIDIA driver and 
   ```bash
    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
   ```
-   If your `nvidia-smi` shows a different CUDA (e.g. 11.8), use the matching index from [pytorch.org/get-started/locally](https://pytorch.org/get-started/locally/) — for CUDA 11.8: `--index-url https://download.pytorch.org/whl/cu118`.
+   If `nvidia-smi` shows a different CUDA (e.g. 11.8), use the wheel index from [pytorch.org/get-started/locally](https://pytorch.org/get-started/locally/). Example for 11.8: `--index-url https://download.pytorch.org/whl/cu118`.
 3. Verify CUDA is visible inside Python:
   ```bash
    python -c "import torch; print(torch.__version__); print('cuda:', torch.cuda.is_available()); print(torch.cuda.get_device_name(0))"
   ```
-   You should see something like:
-   If `cuda: False`, fix this **before** the fuzz runs (you would otherwise crash mid-run).
+   You should see three lines similar to:
+   (Exact version and GPU name will match your machine.) If the second line is `cuda: False`, fix this **before** the fuzz runs or the job will fail once it hits the GPU.
 
 ---
 
-### 5. Hugging Face — account, gated model, token, terminal login
+**Optional: Step 5, Hugging Face (gated 1B model)**
 
-The model `**bigcode/starcoderbase-1b`** is **gated**: you must have an account, accept the licence on the model page, and use a token that can read gated repositories.
+### 5. Hugging Face: account, model access, token, terminal
+
+`bigcode/starcoderbase-1b` is **gated**. You need a Hugging Face account, click through the licence on the model page, and use a token that can read gated repos.
 
 #### 5a. Browser steps
 
@@ -237,7 +194,7 @@ The model `**bigcode/starcoderbase-1b`** is **gated**: you must have an account,
 5. Open [https://huggingface.co/settings/tokens](https://huggingface.co/settings/tokens) → **Create new token**.
   - Choose **Classic** (not Fine-grained).
   - Permission: **Read**.
-  - Click create, then **copy** the full `hf_…` string. *It is shown only once — keep it somewhere safe for now.*
+  - Click create, then **copy** the full `hf_…` string. *You only see it once; stash it somewhere safe.*
 
 > Why classic Read? Fine-grained tokens often report `canReadGatedRepos: false` and silently fail to download `starcoderbase-1b`.
 
@@ -247,11 +204,11 @@ The model `**bigcode/starcoderbase-1b`** is **gated**: you must have an account,
   ```bash
    pip install -U "huggingface_hub[cli]"
   ```
-2. Set the token in this shell; run the following command:
+2. Set the token in this shell. Run:
   ```bash
    read -s HF_TOKEN && export HF_TOKEN
   ```
-   After `read -s HF_TOKEN && export HF_TOKEN`, press enter and then paste the **full** `hf_...` token below  and press **Enter**. Nothing will appear while pasting (that is normal).
+   After you press **Enter**, the shell waits at a silent prompt: paste the **full** `hf_...` token there, then press **Enter** again. Nothing appears while you paste (normal for `read -s`).
 3. Confirm the variable is set and looks reasonable:
   ```bash
    echo ${#HF_TOKEN}
@@ -268,13 +225,13 @@ The model `**bigcode/starcoderbase-1b`** is **gated**: you must have an account,
   ```
    On success it prints a path under `~/.cache/huggingface/...`. If you see **401/403** here, repeat **5a step 4** (accept on the model page) and **5a step 5** (Classic Read token).
 
-> The token is **per-session**: if you open a new terminal, run `read -s HF_TOKEN && export HF_TOKEN` again.
+> The token is **per shell**. New terminal = run `read -s HF_TOKEN && export HF_TOKEN` again.
 
 ---
 
 ### 6. Confirm the N=50 configs
 
-The two configs ship with the repo at `**num: 50`**. Verify before running:
+The two configs should already say `num: 50`. Double-check:
 
 ```bash
 grep '^  num:' config/cpp_smoke_n50.yaml config/cpp_repair_smoke_n50.yaml
@@ -306,7 +263,7 @@ python Fuzz4All/fuzz.py --config config/cpp_smoke_n50.yaml main_with_config \
 What to look for:
 
 - A progress bar that reaches **50/50** at the end.
-- The folder `**outputs/baseline_n50_1b/`** contains `metrics.json`, `records.jsonl`, and `*.fuzz` files.
+- Under `outputs/baseline_n50_1b/` you should see `metrics.json`, `records.jsonl`, and `*.fuzz` files.
 
 ---
 
@@ -325,8 +282,8 @@ python Fuzz4All/fuzz.py --config config/cpp_repair_smoke_n50.yaml main_with_conf
 What to look for:
 
 - Progress reaches **50/50**.
-- `outputs/repair_n50_1b/` additionally contains `**repair_cache.json`** and accepted `*_r1.fuzz` / `*_r2.fuzz` files (the repaired programs).
-- It is normal for this to take **longer** than baseline — repair calls the LLM again per failed compile.
+- `outputs/repair_n50_1b/` should also have `repair_cache.json` and accepted `*_r1.fuzz` / `*_r2.fuzz` files.
+- Repair runs slower than baseline because failed compiles trigger extra model calls.
 
 ---
 
@@ -385,52 +342,109 @@ print()
 PY
 ```
 
-You will get a table with `baseline`, `repair`, and `delta` columns plus a one-line summary of `delta valid_rate`, `repair_success`, and the count of `*_r*.fuzz` files written.
+You should see a small table (`baseline`, `repair`, `delta`) plus a short line with `delta valid_rate`, `repair_success`, and how many `*_r*.fuzz` files landed on disk.
 
 ---
 
-### 10. Inspecting the main 7B, N = 200 results (no GPU needed)
+### Notes for the live N=50 table
 
-The **primary** baseline vs repair comparison for this project is **StarCoderBase-7B** at **N = 200** (pre-recorded under `outputs/baseline_repro_7b_200/` and `outputs/repair_repro_7b_200/`). Steps 7–9 above are the **1B @ N = 50** runnable demo; they are **not** the main statistical run, but they exercise the same repair machinery on cheaper hardware.
+- The 1B model is random and N=50 is tiny, so one run can show a negative Δ `valid_rate` by luck. For a quick “is repair actually firing?” check, look for `repair_attempted_count > 0`, `repair_success_count > 0`, and `*_r*.fuzz` under `outputs/repair_n50_1b/`.
+- The **serious** comparison is still **7B, N = 200** below (`baseline_repro_7b_200` vs `repair_repro_7b_200`).
 
-7B @ N = 200 needs substantial VRAM and time (on the order of **~28 GB** and **~1.5 h** per full fuzz on our hardware; **15B** is even heavier). **N = 200** means **one** fuzz job of 200 programs per condition, not 30 repeated jobs; the CLI default **`--batch_size 30`** only caps how many candidates each **`generate()`** call returns, and repair can add extra LLM calls per failure (typically `max_attempts: 2` in the YAML config).
+---
+
+## Recorded 7B full-scale results (main run)
+
+These folders are **7B @ N = 200**. Steps 7–9 above are **1B @ N = 50** (same pipeline, smaller model and budget).
+
+The comparison we care about is **StarCoderBase-7B**, **N = 200**, in `outputs/baseline_repro_7b_200/` and `outputs/repair_repro_7b_200/`. A full 7B fuzz needs a lot of VRAM and time (roughly **~28 GB** and **~1.5 h** per condition on our box). **N = 200** is one fuzz job of 200 programs per side. `**--batch_size`** only limits how many candidates each `generate()` returns; repair can stack more model calls on top when compiles fail (we used `max_attempts: 2` in YAML).
+
+**Inspect pre-recorded metrics (no GPU needed):**
 
 ```bash
 python -m json.tool outputs/baseline_repro_7b_200/metrics.json
 python -m json.tool outputs/repair_repro_7b_200/metrics.json
 ```
 
-When reading those files, focus on **`valid_rate`**, **`unique_valid_rate`**, and **`repair_success_rate`**.
+Main fields to peek at: `valid_rate`, `unique_valid_rate`, `repair_success_rate`.
+
+
+| Run                                                                                                                                           | `valid_rate` (base → repair) | `unique_valid_rate` (base → repair) | `repair_success_rate` |
+| --------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------- | --------------------- |
+| Midterm: `[outputs/baseline_7b_200/](outputs/baseline_7b_200)`, `[outputs/repair_7b_200/](outputs/repair_7b_200)`                             | 0.605 → **0.735** (Δ +0.130) | 0.485 → **0.690** (Δ +0.205)        | 0.459                 |
+| Final repro: `[outputs/baseline_repro_7b_200/](outputs/baseline_repro_7b_200)`, `[outputs/repair_repro_7b_200/](outputs/repair_repro_7b_200)` | 0.595 → **0.800** (Δ +0.205) | 0.490 → **0.655** (Δ +0.165)        | 0.535                 |
+
+
+Both runs move the same way (Δ `valid_rate` about +0.13 to +0.21), so the bump is not a one-off fluke.
+
+Each output folder has `metrics.json`, `records.jsonl` (per gen / repair try), raw `*.fuzz`, repaired `*_r1.fuzz` / `*_r2.fuzz` when accepted, and `repair_cache.json` (dedupe by error signature).
 
 ---
 
-### Notes for the live N=50 table
+## Repository structure
 
-- The 1B model is **stochastic** and N=50 is small. A single live run can show **Δ valid_rate < 0** by chance; what proves the repair stage is working in **any** run is `repair_attempted_count > 0`, `repair_success_count > 0`, and the `*_r*.fuzz` files written under `outputs/repair_n50_1b/`.
-- **Report-scale evidence** for the project is the **7B, N = 200** metrics in **step 10** and the **Recorded 7B full-scale results** section (`baseline_repro_7b_200` vs `repair_repro_7b_200`).
-
----
-
-## Recorded 7B full-scale results (main run)
-
-Pre-recorded **7B @ N = 200** outputs—the same setting as the headline table in **Overview**.
+The assignment wants **code + README**, plus evaluator, search bits, and configs. Rough map:
 
 
-| Run                                                                                                                                            | `valid_rate` (base → repair) | `unique_valid_rate` (base → repair) | `repair_success_rate` |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- | ----------------------------------- | --------------------- |
-| Midterm — `[outputs/baseline_7b_200/](outputs/baseline_7b_200)`, `[outputs/repair_7b_200/](outputs/repair_7b_200)`                             | 0.605 → **0.735** (Δ +0.130) | 0.485 → **0.690** (Δ +0.205)        | 0.459                 |
-| Final repro — `[outputs/baseline_repro_7b_200/](outputs/baseline_repro_7b_200)`, `[outputs/repair_repro_7b_200/](outputs/repair_repro_7b_200)` | 0.595 → **0.800** (Δ +0.205) | 0.490 → **0.655** (Δ +0.165)        | 0.535                 |
+| Expectation                 | Where it lives in this repo                                                                                                                                                                                      |
+| --------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Evaluator**               | `tools/evaluate_candidate.py` (fixed-budget evaluation); compile/validation logic in `Fuzz4All/target/` and repair scoring in `Fuzz4All/repair/repair.py`. See `docs/COURSE_PROJECT.md` for metrics and options. |
+| **Search scripts**          | `tools/run_search_round.py` (search harness); repair-policy **candidates** in `candidates/` (JSON files and materialized YAML under `candidates/materialized/`); search logs and prompts in `outputs/search/`.   |
+| **Configuration & prompts** | YAML **configs** under `config/` (baseline, repair, smoke, demo variants); **prompts** under `prompts/repair/` (templates `T1.txt`–`T6.txt`).                                                                    |
 
 
-Both runs land in the same direction with similar magnitude (Δ `valid_rate` between +0.130 and +0.205) — the repair gain is real, not a single-run artefact.
-
-Each output folder contains: `metrics.json`, `records.jsonl` (one row per generation and per repair attempt), the original `*.fuzz` files, the accepted repair files (`*_r1.fuzz`, `*_r2.fuzz`), and `repair_cache.json` (signature → cached repair).
+```text
+fuzz4all-cs-final/
+├── Fuzz4All/
+│   ├── fuzz.py                      # main fuzzing loop (with repair hook)
+│   ├── make_target.py
+│   ├── model.py
+│   ├── repair/
+│   │   └── repair.py                # repair stage + RepairConfig + templates
+│   ├── target/
+│   │   ├── target.py                # ValidationResult, CompileStatus
+│   │   └── CPP/
+│   │       └── CPP.py               # g++ -c compile-only oracle
+│   └── util/
+├── prompts/
+│   └── repair/
+│       └── T1.txt … T6.txt          # completion-style repair templates
+├── tools/
+│   ├── evaluate_candidate.py        # fixed-budget evaluator
+│   └── run_search_round.py          # search harness for repair configs
+├── scripts/
+│   └── demo.sh                      # reproduction (N=20, 7B)
+├── config/
+│   ├── cpp_demo.yaml                # baseline       (N = 200, 7B)
+│   ├── cpp_repair_demo.yaml         # repair         (N = 200, 7B)
+│   ├── cpp_demo_n20.yaml            # baseline       (N = 20,  7B)
+│   ├── cpp_repair_demo_n20.yaml     # repair         (N = 20,  7B)
+│   ├── cpp_smoke.yaml               # 1B smoke       (pipeline check)
+│   ├── cpp_repair_smoke.yaml
+│   ├── cpp_smoke_n50.yaml           # HPC / README demo (N = 50, 1B)
+│   ├── cpp_repair_smoke_n50.yaml
+│   ├── ablation/                    # upstream Fuzz4All ablation configs
+│   ├── targeted/
+│   ├── full_run/
+│   └── documentation/               # per-language prompt docs (upstream)
+├── candidates/
+│   ├── round_01.json
+│   ├── round_03.json                # main 7B search grid (`r3_*` candidates)
+│   └── materialized/                # YAMLs materialized from candidate JSON
+├── docs/
+│   └── COURSE_PROJECT.md            # extension docs (metrics, options)
+├── outputs/                         # pre-recorded fuzz/search runs (paths used in this README)
+├── README.md                        # this file
+├── README_artifact.md               # original ICSE '24 artifact instructions
+├── requirements.txt
+└── setup.py
+```
 
 ---
 
 ## References
 
-- Original paper: [Fuzz4All: Universal Fuzzing with Large Language Models — arXiv:2308.04748](https://arxiv.org/abs/2308.04748)
+- Original paper: [Fuzz4All: Universal Fuzzing with Large Language Models (arXiv:2308.04748)](https://arxiv.org/abs/2308.04748)
 - Original artifact: [Zenodo 10456883](https://doi.org/10.5281/zenodo.10456883)
 - Course-extension docs: [docs/COURSE_PROJECT.md](docs/COURSE_PROJECT.md)
 

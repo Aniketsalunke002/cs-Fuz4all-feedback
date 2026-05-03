@@ -104,7 +104,7 @@ python tools/run_search_round.py --round candidates/round_01.json --budget_progr
   - Sample failure signature clusters
   - Instructions for an AI to propose the next round in the same JSON format
 
-You can copy `next_prompt.md` into ChatGPT/Cursor and paste the next round JSON back (e.g. `candidates/round_02.json`). No paid API is called from the code.
+You can copy `next_prompt.md` into ChatGPT/Cursor and paste the next round JSON back (e.g. `candidates/round_03.json`). No paid API is called from the code.
 
 ## Safety and resource limits
 

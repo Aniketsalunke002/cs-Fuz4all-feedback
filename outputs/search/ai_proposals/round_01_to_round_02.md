@@ -1,5 +1,9 @@
 # AI proposal — round 1 → round 2
 
+> **Note:** `candidates/round_02.json` is no longer in the repository (only
+> `round_01.json` and `round_03.json` are). The exact JSON that was committed as
+> `round_02.json` remains reproduced in this document.
+
 We used Claude (Anthropic's LLM) as the proposal engine in the AI search loop.
 After each round, the evaluator summarized ranked candidate metrics and common
 failure signatures, and the LLM proposed the next batch of repair-policy
@@ -69,7 +73,7 @@ Claude was given the round-1 summary above and the candidate JSON schema
 `error_gate`, `temperature`). It proposed a 9-candidate batch designed to
 ablate the four knobs in repair policy that round 1 had not touched.
 
-### Proposed candidates — `candidates/round_02.json`
+### Proposed candidates — round-2 JSON (was committed as `round_02.json`, now only here)
 
 ```json
 [
@@ -105,9 +109,11 @@ token budget; this is documented at the bottom of this file.)
 
 ## 3. Outcome — round-2 evaluation
 
-`tools/run_search_round.py --round candidates/round_02.json --base_config config/cpp_repair_smoke.yaml`
+Historically,  
+`tools/run_search_round.py --round candidates/round_02.json --base_config config/cpp_repair_smoke.yaml`  
 ran the fixed evaluator on every proposed candidate and appended one row per
-candidate to [`outputs/search/search_log.jsonl`](../search_log.jsonl).
+candidate to `search_log.jsonl` (those `c4_*`–`c13_*` rows were later removed
+from the log shipped in this repo; round 1 and the main `r3_*` grid remain).
 
 ### Round-2 results (1B model, 30-program budget per candidate, `repeats=1`)
 

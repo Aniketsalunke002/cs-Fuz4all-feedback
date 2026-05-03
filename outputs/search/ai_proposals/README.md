@@ -9,10 +9,12 @@ We used Claude (Anthropic's LLM) as the proposal engine in the AI search loop.
 After each round, the evaluator summarized ranked candidate metrics and common
 failure signatures, and the LLM proposed the next batch of repair-policy
 configurations within the fixed candidate schema. These proposed configurations
-were then evaluated automatically under the same fixed evaluator. Across two
-rounds, we evaluated 12 candidates in total; the AI-proposed second-round
-ablations helped validate the repair-policy choices underlying the 7B headline
-result.
+were then evaluated automatically under the same fixed evaluator. An
+intermediate AI-proposed round informed ablations; the **reported 7B search
+grid** is `candidates/round_03.json` (`r3_*` names) with artefacts under
+`outputs/search/eval_r3_*/`. The file `candidates/round_02.json` is no longer
+shipped (to avoid confusion with that main grid); the narrative and proposed
+JSON for that step remain in `round_01_to_round_02.md` below.
 
 ## Loop shape
 
@@ -40,15 +42,15 @@ else is automated.
 
 | File | What it records |
 |---|---|
-| `round_01_to_round_02.md` | Full transition between round 1 and round 2: the round-1 evaluator summary fed to the LLM, the LLM-proposed `round_02.json`, and the round-2 outcome. |
+| `round_01_to_round_02.md` | Full transition between round 1 and round 2: the round-1 evaluator summary fed to the LLM, the LLM-proposed second-round JSON (same content that used to live in `round_02.json`), and the round-2 outcome. |
 
 ## Provenance
 
 - Round-1 candidates (3): hand-written at midterm to sanity-check the harness — see
   [`candidates/round_01.json`](../../../candidates/round_01.json).
-- Round-2 candidates (9): proposed by Claude after round 1 — see
-  [`candidates/round_02.json`](../../../candidates/round_02.json) and the transition
-  document `round_01_to_round_02.md`.
-- Per-candidate metrics for all 12 candidates: appended to
+- Round-2 candidates (9): proposed by Claude after round 1 — documented in
+  `round_01_to_round_02.md` (the JSON spec is inlined there; it is not committed
+  as `round_02.json` anymore).
+- Per-candidate metrics: round 1 (`c1`–`c3`) plus the main 7B grid (`r3_*`) in
   [`outputs/search/search_log.jsonl`](../search_log.jsonl).
 - Latest evaluator feedback: [`outputs/search/next_prompt.md`](../next_prompt.md).

@@ -4,7 +4,7 @@
 # Configuration of the overall fuzzing setup
 fuzzing:
   # where to store the results (relative to the where you are calling fuzz.py)
-  output_folder: ../fastd/fuzzall/FuzzAll/experiment/full_run/cpp/run
+  output_folder: outputs/fuzz_run
   # number of fuzzing iterations
   num: 1000000
   # total fuzzing time in hours

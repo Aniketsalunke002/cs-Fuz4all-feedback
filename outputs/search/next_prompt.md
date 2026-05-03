@@ -43,4 +43,4 @@
 Please propose the next round of candidate configs in the same JSON format.
 Format: a JSON array of objects with "name", "gen", and "repair" keys.
 "gen" can override llm/fuzzing; "repair" can override repair section.
-Save as candidates/round_02.json (or next number).
+Save as candidates/round_NN.json (use the next free round number).
